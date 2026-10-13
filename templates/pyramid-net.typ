@@ -14,7 +14,7 @@
   #for pts in ((a,e,h),(b,f,e),(c,g,f),(d,h,g)) {
    path(pts,close:true,fill:palette.primary.lighten(92%),stroke:none)
  }
- #path((e,f,g,h),close:true,fill:palette.primary.lighten(85%),stroke:none)
+ #path((e,f,g,h),close:true,fill:palette.geometry-tint,stroke:none)
  #for pts in ((e,a,h),(f,b,e),(g,c,f),(h,d,g)) {
    path(pts,stroke:(paint:palette.primary,thickness:edge-width,dash:"dashed"))
  }
@@ -37,6 +37,10 @@
  #let t=project(-base/2,-base/2,0)
  #path((p,q,s),close:true,fill:palette.primary.lighten(92%),stroke:edge-width+palette.primary)
  #path((q,r,s),close:true,fill:palette.primary.lighten(83%),stroke:edge-width+palette.primary)
+ // Translucent base uses the same tint as EFGH in the net.
+ #path((p,q,r,t),close:true,fill:palette.geometry-tint.transparentize(20%),stroke:none)
+ #path((p,q,r),stroke:edge-width+palette.primary)
+ #path((q,s),stroke:edge-width+palette.primary)
  #path((p,t,r),stroke:(paint:palette.primary,thickness:edge-width,dash:"dashed"))
  #path((p,r),stroke:(paint:palette.primary,thickness:edge-width,dash:"dashed"))
  #path((t,s),stroke:(paint:palette.primary,thickness:edge-width,dash:"dashed"))

@@ -23,7 +23,7 @@
 #let exam-cover(organization, title, code, duration: 90, subject: "Toán",
   status: none, note: none, organization-size: 12pt) = {
   set par(justify: false, leading: 0.45em)
-  grid(columns: (0.9fr, 1.25fr), column-gutter: 6mm, align: center + top,
+  grid(columns: (1fr, 1.15fr), column-gutter: 6mm, align: center + top,
     [
       #text(size: organization-size, weight: "bold", fill: palette.primary, organization)
       #linebreak()
@@ -40,14 +40,15 @@
     ],
   )
   v(4mm)
-  grid(columns: (1.5fr, 1fr), column-gutter: 8mm, align: horizon,
-    grid(columns: (auto, 1fr), column-gutter: 2mm, row-gutter: 2mm,
-      strong[Họ, tên thí sinh:], repeat[.], strong[Số báo danh:], repeat[.]),
-    block(width: 100%, fill: palette.box-fill, stroke: 0.6pt + palette.primary,
-      radius: 2mm, inset: 2mm,
-      align(center, text(weight: "bold", fill: palette.primary)[Mã đề: #code])))
+  grid(columns: (1.2fr, 1fr), column-gutter: 8mm, align: horizon,
+    grid(columns: (32mm, 1fr), column-gutter: 2mm, row-gutter: 2mm, align:bottom,
+      [Họ, tên thí sinh:], line(length:100%,stroke:(paint:palette.ink,thickness:0.7pt,dash:"dotted")),
+      [Số báo danh:], line(length:100%,stroke:(paint:palette.ink,thickness:0.7pt,dash:"dotted"))),
+    block(width: 100%, fill: palette.box-fill, stroke: 0.9pt + palette.primary,
+      radius: 2mm, inset: (x:3mm,y:3mm),
+      align(center, text(size:14pt,weight: "bold", fill: palette.primary)[Mã đề: #code])))
   v(3mm)
-  line(length: 100%, stroke: 0.8pt + palette.primary)
+  line(length: 100%, stroke: 1.2pt + palette.primary)
 }
 
 #let exam-section(number, title, instruction: []) = block(width: 100%, sticky: true,
@@ -71,8 +72,8 @@
     }
     #if answers.len() > 0 { v(3mm); choices(answers, columns: columns, label-color: palette.exam-blue) }
   ]
-  block(width: 100%, breakable: ending == none and not keep-together, sticky: variant == "dap-an" and ending != none,
-    above: exam-style.question-gap, below: 0pt)[
+  block(width: 100%, breakable: not keep-together and (ending == none or variant != "de-cach"), sticky: false,
+    above: if variant == "de" {4mm} else {exam-style.question-gap}, below: 0pt)[
     #prompt
     #if variant == "de-cach" { writing-space(writing-lines) }
   ]
@@ -85,7 +86,7 @@
         align(center, text(weight: "bold", style: "italic", fill: palette.primary)[Lời giải]))
       #solution
     ]
-    if ending == none { answer } else { block(width: 100%, breakable: false, sticky: true, above: 8mm, answer) }
+    answer
   }
   if ending != none {
     if variant != "de-cach" { v(1fr) }
@@ -102,4 +103,14 @@
   #note
 ]
 
-#let exam-figure(body) = block(width: 100%, breakable: false, above: 2.5mm, below: 3mm, align(center, body))
+#let exam-figure(body, size:100%) = block(width: 100%, breakable: false, above: 2mm, below: 2mm, align(center, scale(x:size,y:size,reflow:true,body)))
+
+#let exam-source(ai:false) = block(width:100%,above:3mm)[
+  #set text(size:10pt)
+  #set par(justify:false)
+  Nguồn đề: TOANMATH.com.
+  #if ai {[
+    #linebreak() Đề thi được gõ lại từ ảnh chụp, không phải bản chính thức từ đơn vị ra đề.
+    #linebreak() Lời giải chi tiết do AI thực hiện, chỉ mang tính chất tham khảo, không thay thế đáp án chính thức.
+  ]}
+]

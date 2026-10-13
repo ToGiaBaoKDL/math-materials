@@ -181,3 +181,7 @@ python3 scripts/mathtype.py assets/sources/2026-10-13/buoi-11-bai-toan-thuc-te-o
 ```
 
 Buổi 11 dùng `templates/lesson.typ`, 8 câu minh họa và 14 câu tự luyện. Mapping số câu nguồn, vai trò từng hình và các lỗi nguồn đã sửa được lưu trong manifest. Các bài dùng chung mô hình hình học tại `figures/models.typ`; ảnh 600 dpi do build tạo từ mô hình để giữ nét ổn định trên trình đọc PDF. `formula-rows` trình bày các phương trình độc lập trên từng hàng; `formula` dùng cho một biểu thức dài cần ngắt. Với câu dài, `exercise(..., keep-together:false)` giữ đề bài cùng hình và lựa chọn, cho phép phần a–d sang trang, đồng thời giữ tiêu đề lời giải với phần đầu lời giải.
+
+### Màu bổ trợ cho hình khối
+
+Mỗi hình dùng tối đa hai màu chính: đỏ thương hiệu cho khung/cạnh và đường dựng; teal trầm `#267D8D` cho quả cầu, đường tròn hoặc đối tượng cong cần phân biệt. Mặt tô dùng sắc nhạt cùng họ màu (`#E5F1EC`); chữ, trục và nền phụ dùng đen/xám trung tính. Nét thấy và nét khuất của cùng đối tượng giữ cùng màu, phân biệt bằng nét liền/đứt. Chỉ thêm màu khi giúp đọc hình; không tô xen kẽ cạnh hoặc áp dụng teal cho mọi hình.

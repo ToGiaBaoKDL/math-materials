@@ -1,5 +1,7 @@
 #let palette = (
   primary: rgb("#B51F36"),
+  geometry-secondary: rgb("#267D8D"),
+  geometry-tint: rgb("#E5F1EC"),
   exam-blue: rgb("#245474"),
   heading: rgb("#C00000"),
   box-fill: rgb("#FDF8F8"),
@@ -98,7 +100,7 @@
 )
 
 #let lesson-style = (
-  leading: 0.85em,
+  leading: 0.92em,
   margin: (x: 12mm, top: 24mm, bottom: 22mm),
   body-size: 14pt,
   title-size: 24pt,
@@ -123,6 +125,7 @@
   formula-gap: 3mm,
   formula-row-gap: 3mm,
   solution-gap: 6mm,
+  solution-heading-gap: 5mm,
   branding: (
     badge: [DXT],
     header: [THẦY ĐỖ XUÂN THẮNG - CHUYÊN LUYỆN THI MÔN TOÁN THPT 10.11.12 - TỐT NGHIỆP, HSA, TSA],
@@ -132,7 +135,7 @@
 
 #let exam-style = (
   margin: (x: 12mm, top: 16mm, bottom: 18mm),
-  body-size: 13pt, leading: 0.76em, question-gap: 6mm,
+  body-size: 12.5pt, leading: 0.76em, question-gap: 5mm,
   section-gap: 5mm, statement-gap: 4mm,
 )
 

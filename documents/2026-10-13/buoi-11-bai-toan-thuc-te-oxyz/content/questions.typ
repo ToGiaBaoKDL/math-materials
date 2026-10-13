@@ -22,9 +22,10 @@
 #exercise(
 1, [Một máy bay $M$ đang cất cánh từ phi trường với hệ toạ độ không gian $O x y z$ được thiết lập như hình vẽ dưới đây. Cho biết $M$ là vị trí của máy bay và $O M = 14 "," hat(N O B) = 32 ° "," hat(M O C) = 65 °$. Tìm toạ độ điểm $M$
 
-#fig("flight-departure")],
+#fig("flight-departure",width:if variant=="dap-an" {82mm} else {none})],
 variant:variant,
 keep-together:false,
+flow-stem:variant=="dap-an",
 source-id:"bai-hoc-1",
 writing-lines:6,
 solution:solutions.at("bai-hoc-1")
@@ -36,6 +37,7 @@ solution:solutions.at("bai-hoc-1")
 #fig("cable")],
 variant:variant,
 keep-together:false,
+flow-stem:variant=="dap-an",
 source-id:"bai-hoc-2",
 writing-lines:6,
 solution:solutions.at("bai-hoc-2")

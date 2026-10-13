@@ -28,7 +28,7 @@
  #fig(graph(x => -x*x*x+1.5*x*x+2*x - 1,xrange:(-2.1,3),yrange:(-2.5,4)))
  Mệnh đề nào sau đây đúng],answers:([$a>0;b<0;c<0;d>0$],[$a<0;b>0;c<0;d<0$],[$a<0;b<0;c>0;d<0$],[$a<0;b>0;c>0;d<0$]),columns:2)
  let option-graph = graph.with(width:65mm,height:65mm,origin-offset:(1.5mm,-2.5mm))
- q(12,[Hàm số $y=(2+2x)/(2+x)$ có đồ thị là hình vẽ nào sau đây? Hãy chọn câu trả lời đúng.],columns:2,keep-together:true,
+ q(12,[Hàm số $y=(2+2x)/(2+x)$ có đồ thị là hình vẽ nào sau đây? Hãy chọn câu trả lời đúng.],columns:2,keep-together:false,
  answers:(
  [#option-graph(x=>2 - 1/(x+1),xrange:(-4,4),yrange:(-2,6),breaks:(-1,),xticks:(-2,-1,1),yticks:(1,2),asymptotes:(((-1,-2),(-1,6)),((-4,2),(4,2))))],
  [#option-graph(x=>2 - 2/(x+2),xrange:(-6,3),yrange:(-2,6),breaks:(-2,),xticks:(-3,-2,-1,1),yticks:(1,2,4),guides:((-3,4),),asymptotes:(((-2,-2),(-2,6)),((-6,2),(3,2))))],

@@ -342,7 +342,20 @@
     "figures": "21 diagrams generated at 600 dpi from reusable Typst models; three source photos retained. Original source figures mapped individually.",
     "numbering": "Examples 1–8; practice restarts at 1–14.",
     "math": "Selectable native Typst expressions; decimal commas are atomic strings; display-style fractions.",
-    "layout": "Shared lesson template; long section captions fitted to banner; independent equation rows; breakable long prompts with grouped solution heading and closing steps."
+    "layout": "Shared lesson template; long section captions fitted to banner; independent equation rows; breakable long prompts with grouped solution heading and closing steps.",
+    "layout_revision": {
+      "leading": "0.85em → 0.92em",
+      "solution_heading_gap": "5mm",
+      "figures": "Flight diagrams 103mm; aircraft photos 82mm; separated roof projections; repositioned angular, vertex and sphere labels; cabin photo 70mm with shared caption row.",
+      "answer_opening": "Vertical single-column prompts restored. First flight figure 82mm to fit below its prompt on page 1. Flexible stem pagination only for first two examples.",
+      "sphere": "84×86mm canvas; clear r label, 1.1pt radius arrow, visible center; rear equator dashed, front solid; 20cm floor projection dashed.",
+      "solution_paragraphs": "3.5mm above/below solution paragraphs to preserve spacing across grouped blocks; plain a–d verdict prefixes.",
+      "figure_spacing": "5mm above figures; coordinate P relocated inside roof with leader, y offset from edges, I marked with dot, D displaced from circle; motion canvas padded above D.",
+      "ending": "Bottom-aligned HẾT using remaining page space.",
+      "compact_statement": "Only de: figures at 80%, padding 3mm above/2mm below; 11 pages. Answer and writing figure sizes retained.",
+      "labels_latest": "Shifted warehouse F inside front face, D upper-left; cable 30° adjacent to arc."
+    },
+    "geometry_color": "Selected spherical/circular objects: teal #267D8D with pale mint fill; frame/construction stays red; neutral walls/text/axes. Maximum two main hues per figure."
   },
   "variants": {
     "de": {
@@ -833,98 +846,42 @@
   "outputs": {
     "de": {
       "pdf": "assets/targets/2026-10-13/buoi-11-bai-toan-thuc-te-oxyz/de.pdf",
-      "pages": 13,
-      "bytes": 1597878,
-      "sha256": "6fab4f1a5a8b1f160de2effe1787a6c7e03abb1ac195aad3b8f71d85dbe550f2",
-      "previews": [
-        "assets/targets/2026-10-13/buoi-11-bai-toan-thuc-te-oxyz/previews/de/page-01.png",
-        "assets/targets/2026-10-13/buoi-11-bai-toan-thuc-te-oxyz/previews/de/page-02.png",
-        "assets/targets/2026-10-13/buoi-11-bai-toan-thuc-te-oxyz/previews/de/page-03.png",
-        "assets/targets/2026-10-13/buoi-11-bai-toan-thuc-te-oxyz/previews/de/page-04.png",
-        "assets/targets/2026-10-13/buoi-11-bai-toan-thuc-te-oxyz/previews/de/page-05.png",
-        "assets/targets/2026-10-13/buoi-11-bai-toan-thuc-te-oxyz/previews/de/page-06.png",
-        "assets/targets/2026-10-13/buoi-11-bai-toan-thuc-te-oxyz/previews/de/page-07.png",
-        "assets/targets/2026-10-13/buoi-11-bai-toan-thuc-te-oxyz/previews/de/page-08.png",
-        "assets/targets/2026-10-13/buoi-11-bai-toan-thuc-te-oxyz/previews/de/page-09.png",
-        "assets/targets/2026-10-13/buoi-11-bai-toan-thuc-te-oxyz/previews/de/page-10.png",
-        "assets/targets/2026-10-13/buoi-11-bai-toan-thuc-te-oxyz/previews/de/page-11.png",
-        "assets/targets/2026-10-13/buoi-11-bai-toan-thuc-te-oxyz/previews/de/page-12.png",
-        "assets/targets/2026-10-13/buoi-11-bai-toan-thuc-te-oxyz/previews/de/page-13.png"
-      ]
+      "pages": 11,
+      "bytes": 1658341,
+      "sha256": "2b1df4558ceb556820a46b122afa05f195e99ab8f14e133660c5e5e4765288d7"
     },
     "de-cach": {
       "pdf": "assets/targets/2026-10-13/buoi-11-bai-toan-thuc-te-oxyz/de-cach.pdf",
-      "pages": 21,
-      "bytes": 1626187,
-      "sha256": "f828c96257b8c8092d7003ebabf45869e416e8245ef59044aa2a8dd078d7ac3c",
-      "previews": [
-        "assets/targets/2026-10-13/buoi-11-bai-toan-thuc-te-oxyz/previews/de-cach/page-01.png",
-        "assets/targets/2026-10-13/buoi-11-bai-toan-thuc-te-oxyz/previews/de-cach/page-02.png",
-        "assets/targets/2026-10-13/buoi-11-bai-toan-thuc-te-oxyz/previews/de-cach/page-03.png",
-        "assets/targets/2026-10-13/buoi-11-bai-toan-thuc-te-oxyz/previews/de-cach/page-04.png",
-        "assets/targets/2026-10-13/buoi-11-bai-toan-thuc-te-oxyz/previews/de-cach/page-05.png",
-        "assets/targets/2026-10-13/buoi-11-bai-toan-thuc-te-oxyz/previews/de-cach/page-06.png",
-        "assets/targets/2026-10-13/buoi-11-bai-toan-thuc-te-oxyz/previews/de-cach/page-07.png",
-        "assets/targets/2026-10-13/buoi-11-bai-toan-thuc-te-oxyz/previews/de-cach/page-08.png",
-        "assets/targets/2026-10-13/buoi-11-bai-toan-thuc-te-oxyz/previews/de-cach/page-09.png",
-        "assets/targets/2026-10-13/buoi-11-bai-toan-thuc-te-oxyz/previews/de-cach/page-10.png",
-        "assets/targets/2026-10-13/buoi-11-bai-toan-thuc-te-oxyz/previews/de-cach/page-11.png",
-        "assets/targets/2026-10-13/buoi-11-bai-toan-thuc-te-oxyz/previews/de-cach/page-12.png",
-        "assets/targets/2026-10-13/buoi-11-bai-toan-thuc-te-oxyz/previews/de-cach/page-13.png",
-        "assets/targets/2026-10-13/buoi-11-bai-toan-thuc-te-oxyz/previews/de-cach/page-14.png",
-        "assets/targets/2026-10-13/buoi-11-bai-toan-thuc-te-oxyz/previews/de-cach/page-15.png",
-        "assets/targets/2026-10-13/buoi-11-bai-toan-thuc-te-oxyz/previews/de-cach/page-16.png",
-        "assets/targets/2026-10-13/buoi-11-bai-toan-thuc-te-oxyz/previews/de-cach/page-17.png",
-        "assets/targets/2026-10-13/buoi-11-bai-toan-thuc-te-oxyz/previews/de-cach/page-18.png",
-        "assets/targets/2026-10-13/buoi-11-bai-toan-thuc-te-oxyz/previews/de-cach/page-19.png",
-        "assets/targets/2026-10-13/buoi-11-bai-toan-thuc-te-oxyz/previews/de-cach/page-20.png",
-        "assets/targets/2026-10-13/buoi-11-bai-toan-thuc-te-oxyz/previews/de-cach/page-21.png"
-      ]
+      "pages": 22,
+      "bytes": 1691325,
+      "sha256": "75640d5cfd5b86ecffec9261cd7f5d1812cf41c9a8e70a39f9d313862a0b90b1"
     },
     "dap-an": {
       "pdf": "assets/targets/2026-10-13/buoi-11-bai-toan-thuc-te-oxyz/dap-an.pdf",
-      "pages": 22,
-      "bytes": 2294900,
-      "sha256": "9b2117d76576ad750478c807792dd01091f1a73da69c5945b5b4dcaf52de18d3",
-      "previews": [
-        "assets/targets/2026-10-13/buoi-11-bai-toan-thuc-te-oxyz/previews/dap-an/page-01.png",
-        "assets/targets/2026-10-13/buoi-11-bai-toan-thuc-te-oxyz/previews/dap-an/page-02.png",
-        "assets/targets/2026-10-13/buoi-11-bai-toan-thuc-te-oxyz/previews/dap-an/page-03.png",
-        "assets/targets/2026-10-13/buoi-11-bai-toan-thuc-te-oxyz/previews/dap-an/page-04.png",
-        "assets/targets/2026-10-13/buoi-11-bai-toan-thuc-te-oxyz/previews/dap-an/page-05.png",
-        "assets/targets/2026-10-13/buoi-11-bai-toan-thuc-te-oxyz/previews/dap-an/page-06.png",
-        "assets/targets/2026-10-13/buoi-11-bai-toan-thuc-te-oxyz/previews/dap-an/page-07.png",
-        "assets/targets/2026-10-13/buoi-11-bai-toan-thuc-te-oxyz/previews/dap-an/page-08.png",
-        "assets/targets/2026-10-13/buoi-11-bai-toan-thuc-te-oxyz/previews/dap-an/page-09.png",
-        "assets/targets/2026-10-13/buoi-11-bai-toan-thuc-te-oxyz/previews/dap-an/page-10.png",
-        "assets/targets/2026-10-13/buoi-11-bai-toan-thuc-te-oxyz/previews/dap-an/page-11.png",
-        "assets/targets/2026-10-13/buoi-11-bai-toan-thuc-te-oxyz/previews/dap-an/page-12.png",
-        "assets/targets/2026-10-13/buoi-11-bai-toan-thuc-te-oxyz/previews/dap-an/page-13.png",
-        "assets/targets/2026-10-13/buoi-11-bai-toan-thuc-te-oxyz/previews/dap-an/page-14.png",
-        "assets/targets/2026-10-13/buoi-11-bai-toan-thuc-te-oxyz/previews/dap-an/page-15.png",
-        "assets/targets/2026-10-13/buoi-11-bai-toan-thuc-te-oxyz/previews/dap-an/page-16.png",
-        "assets/targets/2026-10-13/buoi-11-bai-toan-thuc-te-oxyz/previews/dap-an/page-17.png",
-        "assets/targets/2026-10-13/buoi-11-bai-toan-thuc-te-oxyz/previews/dap-an/page-18.png",
-        "assets/targets/2026-10-13/buoi-11-bai-toan-thuc-te-oxyz/previews/dap-an/page-19.png",
-        "assets/targets/2026-10-13/buoi-11-bai-toan-thuc-te-oxyz/previews/dap-an/page-20.png",
-        "assets/targets/2026-10-13/buoi-11-bai-toan-thuc-te-oxyz/previews/dap-an/page-21.png",
-        "assets/targets/2026-10-13/buoi-11-bai-toan-thuc-te-oxyz/previews/dap-an/page-22.png"
-      ]
+      "pages": 23,
+      "bytes": 2381125,
+      "sha256": "a119864e7bbb0acd9c68fd055d6fc50d28963e6cff042441eed589f16ac76687"
     }
   },
   "qa": {
     "build": "All three variants compiled successfully.",
     "pages": {
-      "de": 13,
-      "de-cach": 21,
-      "dap-an": 22
+      "de": 11,
+      "de-cach": 22,
+      "dap-an": 23
     },
     "content": "22 questions and 22 DXT tags in each variant; 22 solution headings in writing and answer variants; none in statement-only variant.",
-    "visual_review": "Reviewed all 56 final rendered pages for layout, diagrams, page breaks and writing space. No blank trailing page.",
+    "visual_review": "Reviewed all 58 updated PDF pages as contact sheets; enlarged cable solution page and figure sheets checked for labels, spacing, roof projections and cabin captions.",
     "math": "519 source MathType expressions decoded and compared with their referenced WMF previews; native Typst math compiled. Verified source corrections recorded in source_corrections.",
     "fonts": "Embedded Times New Roman text and New Computer Modern math.",
-    "regression": "Existing Buoi 10 lesson compiled successfully with the shared lesson template changes.",
-    "limitations": "Original DOCX could not be exported by LibreOffice in this environment; source pagination was not compared. Text, tables, equation objects and source figure assets were reviewed."
+    "regression": "Buoi 10 compiled successfully against updated lesson spacing.",
+    "limitations": "Original DOCX could not be exported by LibreOffice in this environment; source pagination was not compared. Text, tables, equation objects and source figure assets were reviewed.",
+    "compile": "passed",
+    "review_status": "passed",
+    "text_bounds": "All extracted words inside page bounds; 22 questions and DXT tags per variant.",
+    "opening_layout": "Reviewed vertical opening pages and enlarged sphere figure; checked 22 questions per variant. Remaining exercises retain prior stem grouping.",
+    "latest_review": "Reviewed all 11 statement pages and enlarged shifted warehouse/cable figures; verified 22 questions in all variants.",
+    "latest_color_review": "Compiled all variants and visually inspected the five modified geometry models as a contact sheet. Geometry, labels and output page counts retained."
   },
   "source_corrections": [
     {

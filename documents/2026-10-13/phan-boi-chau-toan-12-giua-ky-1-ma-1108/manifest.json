@@ -29,7 +29,7 @@
   },
   "qa": {
     "compile": "passed",
-    "review_status": "pending",
+    "review_status": "passed",
     "toolchain": "typst 0.15.1 (9dfd3a08)",
     "automated": {
       "de": {
@@ -56,20 +56,26 @@
     "source_checksum": "unchanged",
     "reviewed_date": "2026-10-13",
     "reproducible_build": "Previously validated build path; not rerun for this design revision.",
-    "design_revision": "Lesson-style full-bleed ruby branding; teacher centered in header area to the right of logo; footer contacts and folio centered vertically in the same red bar, using visible text bounds."
+    "design_revision": "Lesson-style full-bleed ruby branding; teacher centered in header area to the right of logo; footer contacts and folio centered vertically in the same red bar, using visible text bounds.",
+    "latest_review": "Reviewed page contact sheets for all variants, enlarged covers, final writing pages and targeted NBK question 8 answer figure. Verified 22 questions, TOANMATH credit and text bounds in every PDF.",
+    "pages": {
+      "de": 7,
+      "de-cach": 12
+    },
+    "latest_color_review": "Shared net and folded pyramid inspected as enlarged renders; all document variants rebuilt."
   },
   "outputs": {
     "de": {
       "pdf": "assets/targets/2026-10-13/phan-boi-chau-toan-12-giua-ky-1-ma-1108/de.pdf",
       "pages": 7,
-      "bytes": 802599,
-      "sha256": "a1471b0e55f7343b1e6374350139d420e0b29bd8e576f8bf44b21e721dc82fbf"
+      "bytes": 810014,
+      "sha256": "6166dce52af5eb17957a7d57e58fa95a0a494485766d4030af3e4a881949b1a8"
     },
     "de-cach": {
       "pdf": "assets/targets/2026-10-13/phan-boi-chau-toan-12-giua-ky-1-ma-1108/de-cach.pdf",
-      "pages": 13,
-      "bytes": 817570,
-      "sha256": "6bc0ad065d9f6473476e6747a9797d5bac07719714f69a1647e481b886bfdd4f"
+      "pages": 12,
+      "bytes": 822250,
+      "sha256": "15658caa90579b3009f30a29fd0d9baa9cb651e1833ffda06e5fd427e0a00101"
     }
   },
   "metadata": {
@@ -165,7 +171,18 @@
       ],
       "tank": "Light fill, solid silhouette, fine dashed equator, complete hidden box edges occluded by ball"
     },
-    "branding": "templates/exam-branding.typ; logo-original.png; assets/branding/icons/*.svg"
+    "branding": "templates/exam-branding.typ; logo-original.png; assets/branding/icons/*.svg",
+    "exam_revision": {
+      "header": "Thầy Đỗ Xuân Thắng - Luyện Thi 9+ Toán 10.11.12; 11.5pt",
+      "footer": "Facebook & TikTok icons with ampersand",
+      "cover": "Organization/title 12pt, same red; plain candidate labels; aligned dotted lines; larger code box; 1.2pt separator",
+      "body": "12.5pt; leading 0.95em, NBK answer 1.0em",
+      "figures": "Full original size by default. Only NBK I.8 answer figure at 88% to keep it on the question page.",
+      "pagination": "Choices/solutions may continue on next page; final writing question remains together.",
+      "credits": "TOANMATH in all variants; original AI and unofficial-transcription notice restored in NBK answers."
+    },
+    "geometry_color": "Selected spherical/circular objects: teal #267D8D with pale mint fill; frame/construction stays red; neutral walls/text/axes. Maximum two main hues per figure.",
+    "net_colors": "Mint/teal base EFGH matches the folded pyramid base; pale red lateral faces; red edges preserved, hidden edges dashed. At most two main hues."
   },
   "figure_renders": [
     {

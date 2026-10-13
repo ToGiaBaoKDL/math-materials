@@ -17,7 +17,7 @@
  q(6,[Hệ bất phương trình nào dưới đây là hệ bất phương trình bậc nhất hai ẩn?],answers:([$cases(y>=0,x+y z>=-1)$],[$cases(x^2+y^2>=0,x+2y<4)$],[$cases(x+z>=0,x-y< -1)$],[$cases(x>=0,x+y<1)$]))
  q(7,[Cho cấp số nhân $(u_n)$ với $u_1=-1/2$, $u_7=-32$. Công bội của cấp số nhân đã cho bằng:],answers:([$q=plus.minus 1$],[$q=plus.minus 4$],[$q=plus.minus 2$],[$q=plus.minus 1/2$]))
  q(8,[Cho hàm số $y=f(x)$ có đồ thị như hình vẽ bên dưới:
- #fig(graph(x=>x*x*x - 3*x,xrange:(-2.3,2.3),yrange:(-3,3),xticks:(-1,1),yticks:(-2,2),guides:((-1,2),(1,-2))))
+ #fig(graph(x=>x*x*x - 3*x,xrange:(-2.3,2.3),yrange:(-3,3),xticks:(-1,1),yticks:(-2,2),guides:((-1,2),(1,-2))),size:if variant=="dap-an" {88%} else {100%})
  Hàm số đã cho đạt cực đại tại:],answers:([$x=-2$],[$x=-1$],[$x=1$],[$x=2$]))
  q(9,[Cho hàm số $y=f(x)$ liên tục trên $[-1;4]$ và có đồ thị như hình vẽ. Hiệu của giá trị lớn nhất và giá trị nhỏ nhất của hàm số $y=f(x)$ trên đoạn $[-1;4]$ bằng:
  #fig(graph(x=>if x < -1 or x > 4 {100} else if x<=3 {(x - 1)*(x - 1) - 1} else {-3*x+12},xrange:(-1.7,4.6),yrange:(-1.8,3.8),xticks:(-1,1,3,4),yticks:(-1,3),guides:((-1,3),(1,-1),(3,3))))],answers:([$4$],[$3$],[$-1$],[$2$]))

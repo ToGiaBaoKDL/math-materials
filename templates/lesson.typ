@@ -187,7 +187,7 @@
 ]
 
 #let exercise(number, body, answers: (), statements: (), solution: [],
-  variant: "de", writing-lines: 6, source-id: none, keep-together: true) = {
+  variant: "de", writing-lines: 6, source-id: none, keep-together: true, flow-stem: false) = {
   let stem = [
     #if source-id != none {
       context [#metadata((id: source-id, page: counter(page).get().first())) <exercise-location>]
@@ -197,7 +197,7 @@
     #if answers.len()>0 {v(rhythm.answers);choices(answers)}
   ]
   let prompt = [
-    #if keep-together {stem} else {block(width:100%,breakable:false,above:0pt,below:0pt,stem)}
+    #if keep-together or flow-stem {stem} else {block(width:100%,breakable:false,above:0pt,below:0pt,stem)}
     #if statements.len()>0 {
       block(width:100%,above:lesson-style.statement-before,below:0pt,
         grid(columns:(1fr,),row-gutter:lesson-style.statement-gap,
@@ -216,7 +216,7 @@
   }
   if variant == "dap-an" {
     let heading = block(width:100%,sticky:true,above:if keep-together {lesson-style.solution-gap} else {0pt},
-      below:lesson-style.paragraph-gap,
+      below:lesson-style.solution-heading-gap,
       align(center,text(style:"italic",weight:document-style.emphasis,
         fill:palette.primary)[Lời giải]))
     if keep-together {
@@ -227,7 +227,7 @@
       let parts=solution.fields().at("children",default:(solution,))
         .filter(it=>repr(it.func()) != "space")
       if parts.len()>0 {
-        block(width:100%,breakable:false,above:lesson-style.solution-gap)[#heading#parts.first()]
+        block(width:100%,breakable:false,above:lesson-style.solution-gap)[#heading#v(lesson-style.solution-heading-gap, weak: true)#parts.first()]
         if parts.len()>2 {
           for part in parts.slice(1,calc.max(1,parts.len()-2)) {part}
           block(width:100%,breakable:false)[#parts.at(-2)#parts.last()]

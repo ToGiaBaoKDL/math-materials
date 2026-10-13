@@ -1,10 +1,14 @@
-#import "/templates/lesson.typ": paragraph,formula-rows as formula,theory-box
+#import "/templates/lesson.typ": formula-rows as formula,theory-box
 #import "../figures.typ": fig
+
+#let paragraph(body) = block(width:100%, above:3.5mm, below:3.5mm, body)
 
 #let solutions=(
 "bai-hoc-1":[
+ #block(breakable:false)[
  #paragraph[Trong tam giác vuông $O C M$, ta có:]
  #formula(($O C=O M cos 65°=14 cos 65°≈"5,9"$,$O N=C M=O M sin 65°=14 sin 65°≈"12,7"$,))
+ ]
  #paragraph[Hình chữ nhật $O A N B$ cho $O A=B N$ và $O B=A N$. Do đó:]
  #formula(($O A=O N sin 32°≈"6,7"$,$O B=O N cos 32°≈"10,8"$,))
  #paragraph[Vì $O C M N$ là hình chữ nhật nên $arrow(O M)=arrow(O A)+arrow(O B)+arrow(O C)$. Vậy $M("6,7";"10,8";"5,9")$.]
@@ -31,11 +35,11 @@
   #paragraph[d) Tính $F G$, $G Q$; diện tích hai mái là $2 F G⋅G Q$.]
  ]
  #fig("shifted-warehouse-solution")
- #paragraph[*a) Sai.* Ta có $O D=A D-O A=6$, $y_T=frac(A B,2)=3$, $Q T=7$. Suy ra $Q(-6;3;7)$.]
- #paragraph[*b) Đúng.* Vì $C(-6;6;0)$ nên $arrow(O C)=(-6;6;0)$.]
- #paragraph[*c) Đúng.* Ta có $K(0;0;5)$, $F(2;6;5)$, $G(-6;6;5)$. Trung điểm $L$ của $F G$ là $L(-2;6;5)$.]
+ #paragraph[a) Sai. Ta có $O D=A D-O A=6$, $y_T=frac(A B,2)=3$, $Q T=7$. Suy ra $Q(-6;3;7)$.]
+ #paragraph[b) Đúng. Vì $C(-6;6;0)$ nên $arrow(O C)=(-6;6;0)$.]
+ #paragraph[c) Đúng. Ta có $K(0;0;5)$, $F(2;6;5)$, $G(-6;6;5)$. Trung điểm $L$ của $F G$ là $L(-2;6;5)$.]
  #formula(($K L=sqrt((-2)^2+6^2)=2 sqrt(10)$,$O K+K L=5+2 sqrt(10) quad ("m")$,))
- #paragraph[*d) Sai.* Các kích thước của một mái là:]
+ #paragraph[d) Sai. Các kích thước của một mái là:]
  #formula(($F G=8$,$G Q=sqrt((3-6)^2+(7-5)^2)=sqrt(13)$,))
  #paragraph[Diện tích hai mái nhà bằng $2⋅8 sqrt(13)=16 sqrt(13)$ m². Chi phí mua tôn, làm tròn đến hàng nghìn, là:]
  #formula(($16 sqrt(13)⋅130000≈7 thin 499 thin 547$,$≈7 thin 500 thin 000 quad "(đồng)"$,))
@@ -73,10 +77,10 @@
  #paragraph[Chọn *C*.]
 ],
 "tu-luyen-2":[
- #paragraph[*a) Đúng.* Điểm $D∈O y$, $A D=7$ nên $D(0;7;0)$.]
- #paragraph[*b) Đúng.* Các điểm $C$, $D$ có cùng tung độ bằng $7$.]
- #paragraph[*c) Sai.* Ta có $D'(0;7;"3,5")$ và $C'(6;7;"3,5")$, do đó $arrow(C'D')=(-6;0;0)$.]
- #paragraph[*d) Sai.* Trung điểm của $A'C'$ có tọa độ:]
+ #paragraph[a) Đúng. Điểm $D∈O y$, $A D=7$ nên $D(0;7;0)$.]
+ #paragraph[b) Đúng. Các điểm $C$, $D$ có cùng tung độ bằng $7$.]
+ #paragraph[c) Sai. Ta có $D'(0;7;"3,5")$ và $C'(6;7;"3,5")$, do đó $arrow(C'D')=(-6;0;0)$.]
+ #paragraph[d) Sai. Trung điểm của $A'C'$ có tọa độ:]
  #formula(($(frac(0+6,2);frac(0+7,2);frac("3,5"+"3,5",2))$,$=(3;"3,5";"3,5")$,))
  #paragraph[Bóng đèn cách trần nhà $"0,5"$ m nên có tọa độ $(3;"3,5";3)$.]
 ],
@@ -95,11 +99,11 @@
  #paragraph[Vậy $M("6,72";"10,76";"5,92")$.]
 ],
 "tu-luyen-5":[
- #paragraph[*a) Đúng.* Nền nhà là hình chữ nhật $O A B C$, nên $x_A=x_B=4$. Vì $A∈O x$ nên $A(4;0;0)$.]
+ #paragraph[a) Đúng. Nền nhà là hình chữ nhật $O A B C$, nên $x_A=x_B=4$. Vì $A∈O x$ nên $A(4;0;0)$.]
  #paragraph[Tường nhà là hình chữ nhật $O C H E$, suy ra $y_H=y_C=5$, $z_H=z_E=3$. Do $H∈(O y z)$ nên $H(0;5;3)$. Tương tự $F(4;0;3)$.]
- #paragraph[*b) Sai.* Ta có $arrow(A H)=(-4;5;3)$ và $arrow(A F)=(0;0;3)$.]
- #paragraph[*c) Sai.* $arrow(A H)⋅arrow(A F)=(-4)⋅0+5⋅0+3⋅3=9$.]
- #paragraph[*d) Đúng.* Mặt phẳng $(O z x)$ vuông góc với hai mặt $(F G Q P)$ và $(F G H E)$, nên $angle P F E$ là góc phẳng của góc nhị diện cần tìm.]
+ #paragraph[b) Sai. Ta có $arrow(A H)=(-4;5;3)$ và $arrow(A F)=(0;0;3)$.]
+ #paragraph[c) Sai. $arrow(A H)⋅arrow(A F)=(-4)⋅0+5⋅0+3⋅3=9$.]
+ #paragraph[d) Đúng. Mặt phẳng $(O z x)$ vuông góc với hai mặt $(F G Q P)$ và $(F G H E)$, nên $angle P F E$ là góc phẳng của góc nhị diện cần tìm.]
  #formula(($arrow(F P)=(-2;0;1), quad arrow(F E)=(-4;0;0)$,$cos angle P F E=frac(arrow(F P)⋅arrow(F E),abs(arrow(F P)) abs(arrow(F E)))$,$=frac(8,4sqrt(5))=frac(2sqrt(5),5)$,))
  #paragraph[Suy ra $angle P F E≈"26,6"°$.]
 ],
@@ -111,11 +115,11 @@
 ],
 "tu-luyen-7":[
  #fig("warehouse-solution")
- #paragraph[*a) Đúng.* Ta có $A(4;0;0)$, $B(4;6;0)$, $C(0;6;0)$ và $H(0;6;5)$. Hai điểm $P$, $Q$ cùng hoành độ, cao độ; $P Q=A B=6$ nên $arrow(P Q)=(0;6;0)$.]
- #paragraph[*b) Sai.* Điểm $G$ có tọa độ $(4;6;5)$.]
- #paragraph[*c) Đúng.* Gọi $I$ là trung điểm $E F$. Tam giác $E F P$ cân tại $P$ nên $P I⊥E F$. Vì $Q G⊥F G$ và $H G⊥F G$, góc nhị diện $[Q,F G,H]$ có góc phẳng $angle Q G H=45°$.]
+ #paragraph[a) Đúng. Ta có $A(4;0;0)$, $B(4;6;0)$, $C(0;6;0)$ và $H(0;6;5)$. Hai điểm $P$, $Q$ cùng hoành độ, cao độ; $P Q=A B=6$ nên $arrow(P Q)=(0;6;0)$.]
+ #paragraph[b) Sai. Điểm $G$ có tọa độ $(4;6;5)$.]
+ #paragraph[c) Đúng. Gọi $I$ là trung điểm $E F$. Tam giác $E F P$ cân tại $P$ nên $P I⊥E F$. Vì $Q G⊥F G$ và $H G⊥F G$, góc nhị diện $[Q,F G,H]$ có góc phẳng $angle Q G H=45°$.]
  #paragraph[Suy ra $angle P F E=45°$, tam giác $E F P$ vuông cân tại $P$. Do đó $P I=frac(E F,2)=2$ m. Chiều cao kho hàng là $P I+F A=2+5=7$ m.]
- #paragraph[*d) Đúng.* Gọi $M$ là trung điểm $G Q$, vị trí camera. Tam giác $Q H G$ vuông cân tại $Q$ cho $H Q=Q G=frac(4,sqrt(2))=2sqrt(2)$ m và $Q M=sqrt(2)$ m.]
+ #paragraph[d) Đúng. Gọi $M$ là trung điểm $G Q$, vị trí camera. Tam giác $Q H G$ vuông cân tại $Q$ cho $H Q=Q G=frac(4,sqrt(2))=2sqrt(2)$ m và $Q M=sqrt(2)$ m.]
  #formula(($H M=sqrt(H Q^2+Q M^2)=sqrt(10) quad ("m")$,$O E+E H+H M=5+6+sqrt(10)=11+sqrt(10) quad ("m")$,))
 ],
 "tu-luyen-8":[
@@ -128,8 +132,8 @@
  #formula(($d=2r=90-30sqrt(3)≈38 quad ("cm")$,))
 ],
 "tu-luyen-9":[
- #paragraph[*a)* Đổi $400$ m $="0,4"$ km. Trục $O x$ hướng Nam, $O y$ hướng Đông nên khinh khí cầu có tọa độ $(5;10;"0,4")$.]
- #paragraph[*b)* Khoảng cách đến điểm xuất phát bằng:]
+ #paragraph[a) Đổi $400$ m $="0,4"$ km. Trục $O x$ hướng Nam, $O y$ hướng Đông nên khinh khí cầu có tọa độ $(5;10;"0,4")$.]
+ #paragraph[b) Khoảng cách đến điểm xuất phát bằng:]
  #formula(($sqrt(5^2+10^2+("0,4")^2)≈"11,2" quad ("km")$,))
 ],
 "tu-luyen-10":[
