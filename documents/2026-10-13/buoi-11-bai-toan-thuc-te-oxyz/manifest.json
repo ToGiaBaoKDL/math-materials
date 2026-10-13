@@ -374,7 +374,9 @@
     "latest_answer_figures": "Practice 1 and hanging-ball prompt/solution enlarged exactly 5% relative to previous sizes, including explicit answer overrides. Warehouse y label moved closer, I moved below/right clear of edges.",
     "practice_one_figure_scale": "Additional 5% increase for prompt and solution relative to previous sizes: default 104.7375mm; answer prompt override 70.56mm and solution 66.15mm, before variant scale.",
     "practice_one_solution_size": "Solution figure only increased 10% from 66.15mm to 72.765mm before variant scaling; prompt unchanged.",
-    "practice_five_seven_size": "Practice 5 and 7 figures enlarged 15%: default warehouse figures 115mm, answer prompt overrides 94.3mm and 101.2mm, practice 7 solution 115mm before variant scale."
+    "practice_five_seven_size": "Practice 5 and 7 figures enlarged 15%: default warehouse figures 115mm, answer prompt overrides 94.3mm and 101.2mm, practice 7 solution 115mm before variant scale.",
+    "writing_intro": "de-cach theory uses 12pt/0.5em, question 1 follows on page 1. Questions 2 and 3 share page 2 with compact figures and 3/4 minimum lines; remaining body space still ruled before footer.",
+    "writing_allocation": "Per-question minimum 3–8 lines according to solution length; extra rules still fill unused body area, clipped with 3mm bottom reserve. Short prompts remain with writing space; long true/false tables permit writing continuation."
   },
   "variants": {
     "de": {
@@ -871,9 +873,9 @@
     },
     "de-cach": {
       "pdf": "assets/targets/2026-10-13/buoi-11-bai-toan-thuc-te-oxyz/de-cach.pdf",
-      "pages": 23,
-      "bytes": 1560398,
-      "sha256": "b0d4c5ae35d268ee6ec1c54b275f643715120bc90c87e27adeb2cf6eace7ffb4"
+      "pages": 20,
+      "bytes": 1556860,
+      "sha256": "57e5677509f15c252de4cfb3d5cc61e9a7909d095716e54542ea5eab221df192"
     },
     "dap-an": {
       "pdf": "assets/targets/2026-10-13/buoi-11-bai-toan-thuc-te-oxyz/dap-an.pdf",
@@ -887,7 +889,7 @@
     "pages": {
       "de": 13,
       "dap-an": 22,
-      "de-cach": 23
+      "de-cach": 20
     },
     "content": "22 questions and 22 DXT tags in each variant; 22 solution headings in writing and answer variants; none in statement-only variant.",
     "visual_review": "Reviewed all 58 updated PDF pages as contact sheets; enlarged cable solution page and figure sheets checked for labels, spacing, roof projections and cabin captions.",
@@ -899,7 +901,7 @@
     "review_status": "passed",
     "text_bounds": "All extracted words inside page bounds; 22 questions and DXT tags per variant.",
     "opening_layout": "Reviewed vertical opening pages and enlarged sphere figure; checked 22 questions per variant. Remaining exercises retain prior stem grouping.",
-    "latest_review": "All three variants compiled after practice 5/7 figure enlargement; 22 questions retained in each.",
+    "latest_review": "First writing page visually checked with question 1 below theory; page 2 visually checked with questions 2/3, five writing lines each and footer clearance. All variants rebuilt.",
     "latest_color_review": "Compiled all variants and visually inspected the five modified geometry models as a contact sheet. Geometry, labels and output page counts retained."
   },
   "source_corrections": [

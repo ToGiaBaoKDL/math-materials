@@ -1,12 +1,13 @@
 #import "/templates/lesson.typ": exercise,paragraph,lesson-section,theory-box
 #import "solutions.typ": solutions
 #import "../figures.typ": fig
-#import "/templates/writing.typ": final-writing-space
 
 #let questions(variant)=[
 #lesson-section([XÁC ĐỊNH TỌA ĐỘ ĐIỂM – VECTƠ TRONG MÔ HÌNH KHÔNG GIAN], number:1,above:0pt)
 
 #theory-box(title:[Phương pháp])[
+#set text(size:if variant=="de-cach" {12pt} else {14pt})
+#set par(leading:if variant=="de-cach" {0.5em} else {0.92em})
 
 #paragraph[Để giải quyết bài toán tọa độ trong mô hình không gian, cần nắm hai kỹ năng sau:]
 
@@ -17,29 +18,30 @@
 #paragraph[*2. Kết hợp quan hệ hình học.* Khai thác vuông góc, song song để tính vectơ, góc, chiều cao, diện tích và thể tích. Không nên phụ thuộc quá mức vào tọa độ khi cách giải hình học ngắn gọn hơn.]
 ]
 
-#if variant=="de-cach" {final-writing-space()}
 
 #exercise(
 1, [Một máy bay $M$ đang cất cánh từ phi trường với hệ toạ độ không gian $O x y z$ được thiết lập như hình vẽ dưới đây. Cho biết $M$ là vị trí của máy bay và $O M = 14 "," hat(N O B) = 32 ° "," hat(M O C) = 65 °$. Tìm toạ độ điểm $M$
 
-#fig("flight-departure",width:if variant=="dap-an" {70mm} else {none})],
+#fig("flight-departure",width:if variant=="dap-an" {70mm} else if variant=="de-cach" {52mm} else {none})],
 variant:variant,
+fill-writing-page:true,
 keep-together:false,
 flow-stem:variant=="dap-an",
 source-id:"bai-hoc-1",
-writing-lines:6,
+writing-lines:3,
 solution:solutions.at("bai-hoc-1")
 )
 
 #exercise(
 2, [Một chiếc xe đang kéo căng sợi dây cáp $A B$ trong công trường xây dựng, trên đó đã thiết lập hệ toạ độ $O x y z$ như Hình với độ dài đơn vị trên các trục tọa độ bằng $1 m$. Tìm được tọa độ của vectơ $arrow(A B) = lr(( a ; b ; c ))$, khi đó $a + c = ?$
 
-#fig("cable",width:if variant=="dap-an" {72mm} else {none})],
+#fig("cable",width:if variant=="dap-an" {72mm} else if variant=="de-cach" {48mm} else {none})],
 variant:variant,
+fill-writing-page:true,
 keep-together:false,
 flow-stem:variant=="dap-an",
 source-id:"bai-hoc-2",
-writing-lines:6,
+writing-lines:3,
 solution:solutions.at("bai-hoc-2")
 )
 
@@ -47,11 +49,12 @@ solution:solutions.at("bai-hoc-2")
 3, [Một ngôi nhà gồm hai phần. Phần thân nhà dạng hình hộp chữ nhật $A B C D . O M N K$ có chiều dài 1200 cm, chiều rộng 900 cm, chiều cao 450 cm. Phần mái nhà dạng hình chóp S.ABCD có các cạnh bên bằng nhau và cùng tạo với mặt đáy một góc $α$ có $tan α = frac(1, 5)$. Chọn hệ trục toạ độ Oxyz sao cho M thuộc tia Ox, K thuộc tia Oy, A thuộc tia Oz (như hình vẽ).
 
 Biết $S lr(( a ; b ; c ))$ (đơn vị của a, b, c là centimet). Tính giá trị của biểu thức $P = a + b + c$
-#fig("roof-house",width:if variant=="dap-an" {78mm} else {none})],
+#fig("roof-house",width:if variant=="dap-an" {78mm} else if variant=="de-cach" {48mm} else {none})],
 variant:variant,
+fill-writing-page:true,
 keep-together:false,
 source-id:"bai-hoc-3",
-writing-lines:6,
+writing-lines:4,
 solution:solutions.at("bai-hoc-3")
 )
 
@@ -60,10 +63,11 @@ solution:solutions.at("bai-hoc-3")
 
 #fig("shifted-warehouse")],
 variant:variant,
+fill-writing-page:true,
 keep-together:false,
 source-id:"bai-hoc-4",
 statement-table:true,
-writing-lines:4,
+writing-lines:8,
 solution:solutions.at("bai-hoc-4"),
 statements:([a) Toạ độ điểm $Q$ là $lr(( - 6 ; 3 ; 5 ))$.],[b) Véc tơ $arrow(O C)$ có toạ độ là $lr(( - 6 ; 6 ; 0 ))$.],[c) Người ta muốn lắp camera quan sát trong nhà kho tại vị trí trung điểm của FG và đầu thu dữ liệu đặt tại vị trí $O$. Người ta thiết kế đường dây cáp nối từ $O$ đến $K$ sau đó nối thẳng đến camera. Độ dài đoạn cáp nối tối thiểu bằng $5 + 2 sqrt(10) "m"$.],[d) Mái nhà được lợp bằng tôn Hoa Sen, giá tiền mỗi mét vuông tôn là 130.000 đồng. Số tiền cần bỏ ra để mua tôn lợp mái nhà là 3.750.000 đồng (không kể hao phí do việc cắt và ghép các miếng tôn, làm tròn kết quả đến hàng nghìn).],)
 )
@@ -75,9 +79,10 @@ statements:([a) Toạ độ điểm $Q$ là $lr(( - 6 ; 3 ; 5 ))$.],[b) Véc tơ
 
 ],
 variant:variant,
+fill-writing-page:true,
 keep-together:false,
 source-id:"bai-hoc-5",
-writing-lines:6,
+writing-lines:4,
 solution:solutions.at("bai-hoc-5")
 )
 
@@ -86,9 +91,10 @@ solution:solutions.at("bai-hoc-5")
 
 ],
 variant:variant,
+fill-writing-page:true,
 keep-together:false,
 source-id:"bai-hoc-6",
-writing-lines:6,
+writing-lines:7,
 solution:solutions.at("bai-hoc-6")
 )
 
@@ -97,9 +103,10 @@ solution:solutions.at("bai-hoc-6")
 
 #fig("motion-half")],
 variant:variant,
+fill-writing-page:true,
 keep-together:false,
 source-id:"bai-hoc-7",
-writing-lines:6,
+writing-lines:5,
 solution:solutions.at("bai-hoc-7")
 )
 
@@ -108,9 +115,10 @@ solution:solutions.at("bai-hoc-7")
 
 #fig("aircraft-us")],
 variant:variant,
+fill-writing-page:true,
 keep-together:false,
 source-id:"bai-hoc-8",
-writing-lines:6,
+writing-lines:5,
 solution:solutions.at("bai-hoc-8")
 )
 
@@ -121,9 +129,10 @@ solution:solutions.at("bai-hoc-8")
 
 #fig("room-simple",width:if variant=="dap-an" {70.56mm} else {none})],
 variant:variant,
+fill-writing-page:true,
 keep-together:false,
 source-id:"tu-luyen-1",
-writing-lines:6,
+writing-lines:3,
 solution:solutions.at("tu-luyen-1"),
 answers:([$lr(( 4 ; 4 ; 4 ))$],[$lr(( 4 ; 3 ; 4 ))$],[$lr(( 4 ; 3 ; 3 ))$],[$lr(( 4 ; 5 ; 4 ))$],)
 )
@@ -133,10 +142,11 @@ answers:([$lr(( 4 ; 4 ; 4 ))$],[$lr(( 4 ; 3 ; 4 ))$],[$lr(( 4 ; 3 ; 3 ))$],[$lr(
 
 #fig("room-hanging")],
 variant:variant,
+fill-writing-page:true,
 keep-together:false,
 source-id:"tu-luyen-2",
 statement-table:true,
-writing-lines:4,
+writing-lines:5,
 solution:solutions.at("tu-luyen-2"),
 statements:([a) Điểm $D$ có toạ độ là $lr(( 0 ; 7 ; 0 ))$],[b) Các điểm C, D có tung độ bằng nhau],[c) Vectơ $arrow(C' D')$ có tọa độ $lr(( 6 ; 0 ; 0 ))$],[d) Bóng đèn nằm tại vị trí có tọa độ $lr(( 3 ; "3,5" ; "3,5" ))$],)
 )
@@ -146,9 +156,10 @@ statements:([a) Điểm $D$ có toạ độ là $lr(( 0 ; 7 ; 0 ))$],[b) Các đ
 
 #fig("flight-airport",width:if variant=="dap-an" {85mm} else {none})],
 variant:variant,
+fill-writing-page:true,
 keep-together:false,
 source-id:"tu-luyen-3",
-writing-lines:6,
+writing-lines:5,
 solution:solutions.at("tu-luyen-3"),
 answers:([$M lr(( "37,2" ; "14,7" ; "30,1" ))$],[$M lr(( "14,7" ; "37,2" ; "30,1" ))$],[$M lr(( "30,1" ; "14,7" ; "37,2" ))$],[$M lr(( "14,7" ; "30,1" ; "37,2" ))$],)
 )
@@ -158,9 +169,10 @@ answers:([$M lr(( "37,2" ; "14,7" ; "30,1" ))$],[$M lr(( "14,7" ; "37,2" ; "30,1
 
 #fig("flight-departure")],
 variant:variant,
+fill-writing-page:true,
 keep-together:false,
 source-id:"tu-luyen-4",
-writing-lines:6,
+writing-lines:5,
 solution:solutions.at("tu-luyen-4")
 )
 
@@ -170,10 +182,11 @@ solution:solutions.at("tu-luyen-4")
 Xét tính đúng sai của các mệnh đề sau:
 #fig("warehouse-coordinates",width:if variant=="dap-an" {94.3mm} else {none})],
 variant:variant,
+fill-writing-page:true,
 keep-together:false,
 source-id:"tu-luyen-5",
 statement-table:true,
-writing-lines:4,
+writing-lines:7,
 solution:solutions.at("tu-luyen-5"),
 statements:([a) Tọa độ điểm $A$ là $( 4 ; 0 ; 0 )$.],[b) Tọa độ $arrow(A H) = lr(( 4 ; 5 ; 3 ))$],[c) $arrow(A H) . arrow(A F) = 3$],[d) Góc dốc của mái nhà, tức là số đo của góc nhị diện có cạnh là đường thẳng $F G$, hai mặt lần lượt là $( F G Q P )$ và $( F G H E )$ bằng $"26,6" ^(°)$ (làm tròn kết quả đến hàng phần mười của độ)],)
 )
@@ -183,9 +196,10 @@ statements:([a) Tọa độ điểm $A$ là $( 4 ; 0 ; 0 )$.],[b) Tọa độ $a
 
 #fig("cabin")],
 variant:variant,
+fill-writing-page:true,
 keep-together:false,
 source-id:"tu-luyen-6",
-writing-lines:6,
+writing-lines:5,
 solution:solutions.at("tu-luyen-6")
 )
 
@@ -194,10 +208,11 @@ solution:solutions.at("tu-luyen-6")
 
 #fig("warehouse",width:if variant=="dap-an" {101.2mm} else {none})],
 variant:variant,
+fill-writing-page:true,
 keep-together:false,
 source-id:"tu-luyen-7",
 statement-table:true,
-writing-lines:4,
+writing-lines:8,
 solution:solutions.at("tu-luyen-7"),
 statements:([a) Tọa độ của $arrow(P Q)$ là $lr(( 0 ; 6 ; 0 )) .$],[b) Tọa độ của điểm $G$ là $lr(( 6 ; 4 ; 5 )) .$],[c) Chiều cao kho hàng tức là khoảng cách từ nóc nhà (điểm cao nhất của nóc nhà) và sàn nhà bằng $7 m .$],[d) Người ta muốn lắp camera quan sát trong nhà kho tại vị trí trung điểm của $G Q$ và đầu thu dữ liệu đặt tại vị trí $O .$ Người ta thiết kế đường dây cáp nối từ $O$ đến $E$ rồi từ $E$ đến $H$, sau đó từ $H$ đến camera. Độ dài đoạn cáp nối tối thiểu bằng $11 + sqrt(10)$ m.],)
 )
@@ -207,9 +222,10 @@ statements:([a) Tọa độ của $arrow(P Q)$ là $lr(( 0 ; 6 ; 0 )) .$],[b) T�
 
 #fig("hanging-ball",width:if variant=="dap-an" {73.5mm} else {none})],
 variant:variant,
+fill-writing-page:true,
 keep-together:false,
 source-id:"tu-luyen-8",
-writing-lines:6,
+writing-lines:7,
 solution:solutions.at("tu-luyen-8")
 )
 
@@ -219,6 +235,7 @@ solution:solutions.at("tu-luyen-8")
 Chọn hệ trục tọa độ $O x y z$, với gốc đặt tại điểm xuất phát của khinh khí cầu, mặt phẳng $lr(( O x y ))$ trùng với mặt đất, trục $O x$ hướng về phía Nam, trục $O y$ hướng về phía Đông, trục $O z$ hướng thẳng đứng lên trời, đơn vị đo lấy theo kilômét (xem hình vẽ).
 #fig("balloon",width:if variant=="dap-an" {80mm} else {none})],
 variant:variant,
+fill-writing-page:true,
 keep-together:false,
 source-id:"tu-luyen-9",
 writing-lines:4,
@@ -231,9 +248,10 @@ statements:([a) Tìm tọa độ của chiếc khinh khí cầu đối với h�
 
 ],
 variant:variant,
+fill-writing-page:true,
 keep-together:false,
 source-id:"tu-luyen-10",
-writing-lines:6,
+writing-lines:7,
 solution:solutions.at("tu-luyen-10")
 )
 
@@ -243,6 +261,7 @@ solution:solutions.at("tu-luyen-10")
 Trên mặt đất, người ta xác định được một vị trí sao cho tổng khoảng cách từ vị trí đó đến hai chiếc flycam ngắn nhất. Hỏi khoảng cách từ điểm xuất phát đến vị trí đó bằng bao nhiêu mét?
 #fig("drones")],
 variant:variant,
+fill-writing-page:true,
 keep-together:false,
 source-id:"tu-luyen-11",
 writing-lines:6,
@@ -254,9 +273,10 @@ solution:solutions.at("tu-luyen-11")
 
 #fig("velocity")],
 variant:variant,
+fill-writing-page:true,
 keep-together:false,
 source-id:"tu-luyen-12",
-writing-lines:6,
+writing-lines:4,
 solution:solutions.at("tu-luyen-12")
 )
 
@@ -265,9 +285,10 @@ solution:solutions.at("tu-luyen-12")
 
 #fig("motion-full")],
 variant:variant,
+fill-writing-page:true,
 keep-together:false,
 source-id:"tu-luyen-13",
-writing-lines:6,
+writing-lines:5,
 solution:solutions.at("tu-luyen-13")
 )
 
@@ -276,9 +297,10 @@ solution:solutions.at("tu-luyen-13")
 
 #fig("aircraft-radar",width:if variant=="dap-an" {62mm} else {none})],
 variant:variant,
+fill-writing-page:true,
 keep-together:false,
 source-id:"tu-luyen-14",
-writing-lines:6,
+writing-lines:5,
 solution:solutions.at("tu-luyen-14")
 )
 ]

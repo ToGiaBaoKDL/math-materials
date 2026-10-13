@@ -187,7 +187,7 @@
 ]
 
 #let exercise(number, body, answers: (), statements: (), solution: [],
-  variant: "de", writing-lines: 6, source-id: none, keep-together: true, flow-stem: false, statement-table: false) = {
+  variant: "de", writing-lines: 6, fill-writing-page: true, source-id: none, keep-together: true, flow-stem: false, statement-table: false) = {
   let stem = [
     #if source-id != none {
       context [#metadata((id: source-id, page: counter(page).get().first())) <exercise-location>]
@@ -216,11 +216,11 @@
     }
   ]
   if variant == "de-cach" {
-    block(width: 100%, breakable: false, above: rhythm.question, below: 0pt)[
-      #prompt
+    block(width: 100%, breakable: statement-table, above: rhythm.question, below: 0pt)[
+      #block(width:100%,breakable:false,sticky:true,prompt)
       #writing-space(writing-lines)
     ]
-    final-writing-space()
+    if fill-writing-page {final-writing-space()}
   } else {
     block(width: 100%, breakable: variant != "dap-an" and not keep-together, sticky: false,
       above: rhythm.question, below: 0pt,

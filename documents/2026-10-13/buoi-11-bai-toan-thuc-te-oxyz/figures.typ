@@ -3,7 +3,7 @@
 #let compact = sys.inputs.at("variant", default:"de") == "de"
 #let answer-scale=if sys.inputs.at("variant",default:"de")=="dap-an" {0.9025} else if sys.inputs.at("variant",default:"de")=="de-cach" {0.95} else {1}
 #let figure-scale(name)=answer-scale * (if ("roof-house","roof-house-solution").contains(name) {100%} else if compact {84%} else {105%})
-#let fig(name, width:none)=block(width:100%,breakable:false,above:if name=="velocity" {8mm} else if compact {3mm} else {5mm},below:if compact {2mm} else {4mm},align(center,scale(x:figure-scale(name),y:figure-scale(name),reflow:true,{
+#let fig(name, width:none)=block(width:100%,breakable:false,above:if sys.inputs.at("variant",default:"de")=="de-cach" and ("cable","roof-house","flight-departure").contains(name) {2mm} else if name=="velocity" {8mm} else if compact {3mm} else {5mm},below:if compact {2mm} else {4mm},align(center,scale(x:figure-scale(name),y:figure-scale(name),reflow:true,{
  if name=="aircraft-us" {image("figures/aircraft-us.jpg",width:if width==none {82mm} else {width})}
  else if name=="aircraft-radar" {image("figures/aircraft-radar.jpg",width:if width==none {82mm} else {width})}
  else if name=="cabin" {grid(columns:(70mm,90mm),column-gutter:5mm,row-gutter:2mm,align:horizon,
