@@ -1,2 +1,5 @@
 __pycache__/
 *.pyc
+
+# Generated PDFs and page previews; recreate with make build / make preview.
+/assets/targets/

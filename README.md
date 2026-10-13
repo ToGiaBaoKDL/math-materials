@@ -162,3 +162,11 @@ Chỉ hoàn tất khi compile không lỗi, văn bản có thể chọn/tìm ki�
 Các hình cần hiển thị nét ổn định giữa trình đọc PDF có thể khai báo `figure_renders` trong manifest: `entry`, `output` (tương đối với thư mục tài liệu), `inputs`, `ppi`. Build dựng ảnh 600 dpi từ mã Typst trước khi biên dịch PDF; mã hình vector vẫn là nguồn chỉnh sửa. NBK áp dụng cho hình vuông tô màu và hình khai triển khay thóc.
 
 Header/footer đề thi dùng chung nằm ở `templates/exam-branding.typ`: logo DXT gốc và tên thầy ở đầu trang; website, Facebook/TikTok và mã đề/số trang ở chân trang. Dùng chung hình thức chuyên đề ôn từ `templates/branding.typ`: thanh đỏ sát mép, mảng chéo, viền xanh chuyển sắc và đường trắng; nội dung riêng của đề thi, biểu tượng liên hệ 4 mm. Biểu tượng vector nằm tại `assets/branding/icons/`. Số trang dưới tên trường lấy tự động theo từng bản PDF.
+
+### Generated files and Git
+
+`assets/targets/` contains generated PDFs and page previews and is ignored by Git. Keep source PDFs in `assets/sources/` and reference assets in `assets/references/` under version control.
+
+Use `make build` to recreate PDFs; use `make preview DOC=phan-boi-chau` (or another document selector) when reviewing layout, clipping, labels and pagination. Previews are useful local debugging artifacts and do not need to be committed.
+
+To remove previously tracked outputs from GitHub while retaining local files, run `git rm -r --cached assets/targets`, commit the removal together with `.gitignore`, then push the branch. This removes files from the current branch, not from earlier commits.
