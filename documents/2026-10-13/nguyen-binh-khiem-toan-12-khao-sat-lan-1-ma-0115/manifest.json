@@ -1,0 +1,250 @@
+{
+  "id": "nguyen-binh-khiem-toan-12-khao-sat-lan-1-ma-0115",
+  "received_date": "2026-10-13",
+  "status": "ready",
+  "template": "exam",
+  "sources": [
+    {
+      "path": "assets/sources/2026-10-13/nguyen-binh-khiem-toan-12-khao-sat-lan-1-ma-0115/source.pdf",
+      "original_name": "de-khao-sat-toan-12-lan-1-nam-2026-2027-truong-thpt-nguyen-binh-khiem-gia-lai.pdf",
+      "bytes": 488375,
+      "sha256": "c1d1ef22b10c98fd8cc3825005ae5552554d662333aff5ebea8a885158f271d7",
+      "pages": 14
+    }
+  ],
+  "reference": "assets/references/phu-tho-exam/manifest.json",
+  "variants": {
+    "de": {
+      "filename": "de.pdf",
+      "inputs": {
+        "variant": "de"
+      }
+    },
+    "de-cach": {
+      "filename": "de-cach.pdf",
+      "inputs": {
+        "variant": "de-cach"
+      }
+    },
+    "dap-an": {
+      "filename": "dap-an.pdf",
+      "inputs": {
+        "variant": "dap-an"
+      }
+    }
+  },
+  "qa": {
+    "compile": "passed",
+    "review_status": "reviewed",
+    "toolchain": "typst 0.15.1 (9dfd3a08)",
+    "automated": {
+      "de": {
+        "pages": 5,
+        "questions": 22,
+        "text_bounds": "passed",
+        "sha256": "passed",
+        "preview_count": "passed",
+        "fonts_embedded": "passed",
+        "ending_near_page_bottom": "passed"
+      },
+      "de-cach": {
+        "pages": 11,
+        "questions": 22,
+        "text_bounds": "passed",
+        "sha256": "passed",
+        "preview_count": "passed",
+        "fonts_embedded": "passed",
+        "ending_near_page_bottom": "passed"
+      },
+      "dap-an": {
+        "pages": 9,
+        "questions": 22,
+        "text_bounds": "passed",
+        "sha256": "passed",
+        "preview_count": "passed",
+        "fonts_embedded": "passed",
+        "ending_near_page_bottom": "passed"
+      }
+    },
+    "visual_review": "Checked expanded square image: all four italic vertex labels fit within the image. Inspected final answer page: Question III.6, full solution and bottom ending share page 9. Rebuilt three variants and verified 22 questions, preview counts and checksums.",
+    "source_review": "Questions and figure labels compared against source pages; source solution text checked for the supplied answer variant.",
+    "source_checksum": "unchanged",
+    "reviewed_date": "2026-10-13",
+    "reproducible_build": "Previously validated build path; not rerun for this design revision.",
+    "design_revision": "Expanded square image canvas to 54 by 51 mm without scaling the 40 mm square; keep final answer prompt with solution and ending."
+  },
+  "outputs": {
+    "de": {
+      "pdf": "assets/targets/2026-10-13/nguyen-binh-khiem-toan-12-khao-sat-lan-1-ma-0115/de.pdf",
+      "pages": 5,
+      "bytes": 417209,
+      "sha256": "06c78062cd5b2f639a23027b2c870870e1128bf49c22d2e8d25973f7c535e210",
+      "previews": [
+        "assets/targets/2026-10-13/nguyen-binh-khiem-toan-12-khao-sat-lan-1-ma-0115/previews/de/page-01.png",
+        "assets/targets/2026-10-13/nguyen-binh-khiem-toan-12-khao-sat-lan-1-ma-0115/previews/de/page-02.png",
+        "assets/targets/2026-10-13/nguyen-binh-khiem-toan-12-khao-sat-lan-1-ma-0115/previews/de/page-03.png",
+        "assets/targets/2026-10-13/nguyen-binh-khiem-toan-12-khao-sat-lan-1-ma-0115/previews/de/page-04.png",
+        "assets/targets/2026-10-13/nguyen-binh-khiem-toan-12-khao-sat-lan-1-ma-0115/previews/de/page-05.png"
+      ]
+    },
+    "de-cach": {
+      "pdf": "assets/targets/2026-10-13/nguyen-binh-khiem-toan-12-khao-sat-lan-1-ma-0115/de-cach.pdf",
+      "pages": 11,
+      "bytes": 434547,
+      "sha256": "5e35bdbc34da5451dd3e71957609be1e4b7a2b426229aff7e67b9a871ff36fc9",
+      "previews": [
+        "assets/targets/2026-10-13/nguyen-binh-khiem-toan-12-khao-sat-lan-1-ma-0115/previews/de-cach/page-01.png",
+        "assets/targets/2026-10-13/nguyen-binh-khiem-toan-12-khao-sat-lan-1-ma-0115/previews/de-cach/page-02.png",
+        "assets/targets/2026-10-13/nguyen-binh-khiem-toan-12-khao-sat-lan-1-ma-0115/previews/de-cach/page-03.png",
+        "assets/targets/2026-10-13/nguyen-binh-khiem-toan-12-khao-sat-lan-1-ma-0115/previews/de-cach/page-04.png",
+        "assets/targets/2026-10-13/nguyen-binh-khiem-toan-12-khao-sat-lan-1-ma-0115/previews/de-cach/page-05.png",
+        "assets/targets/2026-10-13/nguyen-binh-khiem-toan-12-khao-sat-lan-1-ma-0115/previews/de-cach/page-06.png",
+        "assets/targets/2026-10-13/nguyen-binh-khiem-toan-12-khao-sat-lan-1-ma-0115/previews/de-cach/page-07.png",
+        "assets/targets/2026-10-13/nguyen-binh-khiem-toan-12-khao-sat-lan-1-ma-0115/previews/de-cach/page-08.png",
+        "assets/targets/2026-10-13/nguyen-binh-khiem-toan-12-khao-sat-lan-1-ma-0115/previews/de-cach/page-09.png",
+        "assets/targets/2026-10-13/nguyen-binh-khiem-toan-12-khao-sat-lan-1-ma-0115/previews/de-cach/page-10.png",
+        "assets/targets/2026-10-13/nguyen-binh-khiem-toan-12-khao-sat-lan-1-ma-0115/previews/de-cach/page-11.png"
+      ]
+    },
+    "dap-an": {
+      "pdf": "assets/targets/2026-10-13/nguyen-binh-khiem-toan-12-khao-sat-lan-1-ma-0115/dap-an.pdf",
+      "pages": 9,
+      "bytes": 505104,
+      "sha256": "ed18cbdcbc45e73828b866ddfb37c62b04ea7dea470f2442bbb6875d941ad436",
+      "previews": [
+        "assets/targets/2026-10-13/nguyen-binh-khiem-toan-12-khao-sat-lan-1-ma-0115/previews/dap-an/page-01.png",
+        "assets/targets/2026-10-13/nguyen-binh-khiem-toan-12-khao-sat-lan-1-ma-0115/previews/dap-an/page-02.png",
+        "assets/targets/2026-10-13/nguyen-binh-khiem-toan-12-khao-sat-lan-1-ma-0115/previews/dap-an/page-03.png",
+        "assets/targets/2026-10-13/nguyen-binh-khiem-toan-12-khao-sat-lan-1-ma-0115/previews/dap-an/page-04.png",
+        "assets/targets/2026-10-13/nguyen-binh-khiem-toan-12-khao-sat-lan-1-ma-0115/previews/dap-an/page-05.png",
+        "assets/targets/2026-10-13/nguyen-binh-khiem-toan-12-khao-sat-lan-1-ma-0115/previews/dap-an/page-06.png",
+        "assets/targets/2026-10-13/nguyen-binh-khiem-toan-12-khao-sat-lan-1-ma-0115/previews/dap-an/page-07.png",
+        "assets/targets/2026-10-13/nguyen-binh-khiem-toan-12-khao-sat-lan-1-ma-0115/previews/dap-an/page-08.png",
+        "assets/targets/2026-10-13/nguyen-binh-khiem-toan-12-khao-sat-lan-1-ma-0115/previews/dap-an/page-09.png"
+      ]
+    }
+  },
+  "metadata": {
+    "subject": "Toán 12",
+    "school_year": "2026–2027",
+    "duration_minutes": 90,
+    "exam_code": "0115"
+  },
+  "scope": {
+    "questions": {
+      "I": 12,
+      "II": 4,
+      "III": 6
+    },
+    "source_question_pages": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "has_solutions": true,
+    "source_solution_pages": [
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13
+    ],
+    "excluded": "Source attribution heading and final publisher disclaimer omitted from output at user request."
+  },
+  "source_notes": [
+    "Cover says 4 pages, but questions occupy PDF pages 1–5. Output folio uses actual generated page count.",
+    "Solution reasoning and answers transcribed from pages 6–13; wording condensed without removing mathematical steps."
+  ],
+  "mapping": [
+    {
+      "section": "I",
+      "questions": "1–12",
+      "source_pages": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "section": "II",
+      "questions": "1–4",
+      "source_pages": [
+        3,
+        4
+      ]
+    },
+    {
+      "section": "III",
+      "questions": "1–6",
+      "source_pages": [
+        4,
+        5
+      ]
+    }
+  ],
+  "figure_assets": [
+    {
+      "path": "documents/2026-10-13/nguyen-binh-khiem-toan-12-khao-sat-lan-1-ma-0115/figures/rice-mill.png",
+      "source_page": 3,
+      "role": "Photograph of rice mill, cropped from source; diagrams and graphs are native vectors."
+    }
+  ],
+  "implementation": {
+    "entry": "documents/2026-10-13/nguyen-binh-khiem-toan-12-khao-sat-lan-1-ma-0115/main.typ",
+    "template": "templates/exam.typ",
+    "reference": "assets/references/phu-tho-exam/page-01.jpg",
+    "body_font": "Times New Roman",
+    "math_font": "New Computer Modern Math",
+    "body_size_pt": 13,
+    "question_prefix": "ruby red",
+    "section_and_choice_labels": "navy",
+    "figures": "Graphs remain vector. Square and hopper net use 600 dpi embedded images generated from figures/geometry.typ for stable low-zoom edge rendering. Rice mill is the source photograph.",
+    "writing_space": "Shared minimum ruled lines plus fractional fill of remaining page height.",
+    "design_refinements": {
+      "leading_em": 0.76,
+      "statement_gap_mm": 4,
+      "graph_mm": [
+        70,
+        48
+      ],
+      "graph_choice_mm": [
+        65,
+        42
+      ],
+      "graph_label_pt": 10,
+      "arrows": "Unit-vector arrowheads aligned with line direction",
+      "labels": "Offset outside axes, drawn last with clear backing; origin avoids nearby negative tick",
+      "tables": "Rose header and navy labels, unified grid strokes",
+      "geometry": "1.5 pt model edges rendered to 600 dpi images for the square and hopper net.",
+      "ending": "Bottom of final content page, above examination notes and folio",
+      "question_gap_mm": 6,
+      "statement_before_mm": 5,
+      "pagination": "Figures and tables stay intact; final answer prompt, solution and ending stay together.",
+      "answer_leading_em": 0.95,
+      "solution_gap_mm": 8
+    }
+  },
+  "figure_renders": [
+    {
+      "entry": "figures/render.typ",
+      "output": "figures/generated/net.png",
+      "inputs": {
+        "figure": "net"
+      },
+      "ppi": 600
+    },
+    {
+      "entry": "figures/render.typ",
+      "output": "figures/generated/square.png",
+      "inputs": {
+        "figure": "square"
+      },
+      "ppi": 600
+    }
+  ]
+}

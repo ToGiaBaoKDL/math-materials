@@ -1,0 +1,645 @@
+{
+  "id": "buoi-10-min-max-oxyz",
+  "received_date": "2026-10-12",
+  "title": "BUỔI 10: MIN – MAX OXYZ",
+  "status": "implementing",
+  "source_url": "https://docs.google.com/document/d/1SohLGhLtn684qb8PZB4m_8GgjGKJFGXT/edit",
+  "sources": [
+    {
+      "kind": "source",
+      "original_name": "BUỔI 10 - MIN - MAX OXYZ.docx",
+      "path": "assets/sources/2026-10-12/buoi-10-min-max-oxyz/source.docx",
+      "bytes": 985438,
+      "sha256": "f4f540aefce7b94ca77d2517d9794c337c7089789f61b10e3a87b50bb0872424"
+    }
+  ],
+  "references": [
+    {
+      "kind": "reference",
+      "original_name": "KHÓA TH - BUỔI 1 - TÍNH ĐƠN ĐIỆU CỦA HÀM SỐ - ĐỀ.pdf",
+      "path": "assets/references/buoi-10-min-max-oxyz/de.pdf",
+      "bytes": 1055882,
+      "sha256": "2ce4d9e994a4a5efe9a2587eb2d165e7008c95e21504c57e3dceb877978d788e"
+    },
+    {
+      "kind": "reference",
+      "original_name": "KHÓA TH - BUỔI 1 - TÍNH ĐƠN ĐIỆU CỦA HÀM SỐ - ĐỀ CÁCH.pdf",
+      "path": "assets/references/buoi-10-min-max-oxyz/de-cach.pdf",
+      "bytes": 1155857,
+      "sha256": "46537440f75dab526fb20327a81fc174d4967a3e16f2fefa10fe342d79405c8f"
+    }
+  ],
+  "variants": {
+    "de": {
+      "description": "Theory/methods and questions from source, no worked solutions.",
+      "filename": "de.pdf",
+      "inputs": {
+        "variant": "de"
+      }
+    },
+    "de-cach": {
+      "description": "Same content as de, with ruled writing space for solutions.",
+      "filename": "de-cach.pdf",
+      "inputs": {
+        "variant": "de-cach"
+      }
+    },
+    "dap-an": {
+      "description": "Theory/methods, questions and source answers/worked solutions.",
+      "filename": "dap-an.pdf",
+      "inputs": {
+        "variant": "dap-an"
+      }
+    }
+  },
+  "implementation": {
+    "template": "A4; 14pt Times New Roman, FreeSerif symbol fallback; 12mm side/24mm top/22mm bottom margins; shared DXT header/footer.",
+    "content_policy": "Retain actual source order and optional theory; no fixed document structure or invented content.",
+    "math_format_reference": "https://docs.wiris.com/en_US/mathtype-mtef-v5-mathtype-40-and-later",
+    "layout_revision": "9Slide section headings on white green-outlined ribbons; rounded dark-green badges; #FDF8F8 method boxes with full ruby borders; problems outside boxes.",
+    "reference_review": "Viewed de reference pages 1–2; adopted spacious separation, section badge and framed hierarchy, retaining repository fonts and palette.",
+    "figure_revision": "Opened reflection planes using consistent projection; Oxy/Oyz placed inside a lower-left corner arc; shifted reflection construction clear of that arc. Balloon projection separates balloon B from z-axis; direction and distance labels offset from axes and projection lines. Follow-up: reduced corner arc radius from 20mm to 15mm and repositioned its label; extended reflection pairs symmetrically (illustration heights 26/28), with 68mm frames to contain lower point labels.",
+    "footer_revision": "19mm total height, 11mm bar; 8mm tab rise and 5.3mm diagonal run; Noto Sans Bold caption and regular folio.",
+    "heading_image": {
+      "reference": "assets/references/dxt-brand-template/conventions.jpg",
+      "usage": "Shared native lesson-heading component, supplied convention fonts; actual course/title/subject supplied from main.typ."
+    },
+    "writing_space": "Each exercise retains its minimum 7mm ruled lines; fractional ruled blocks share the unused height equally among exercises on each page, including the final page.",
+    "math_revision": "Apply display style directly to fractions as well as equations; replace nested matrix in balloon system with cases; encode decimal numerals as single math text atoms; normalize practice question 14 coordinate separators.",
+    "heading_spacing": "Shared lesson-heading, no image cropping; existing outer spacing retained.",
+    "balloon_source_check": {
+      "source": "DOCX paragraph 176 and embedded word/media/image383.jpeg at paragraph 179 (zero-based XML body paragraph indices)",
+      "mapping": {
+        "A": "3 km East (y), 2 km South (x), height 0.5 km (z)",
+        "B": "1 km North (-x), 1 km West (-y), height 0.3 km (z)"
+      },
+      "revision": "Flatten North–South projected angle from 38.7 to 33.0 degrees to horizontal; label both 1km ground segments with short leaders; place 0.5km alongside the upper vertical height segment; move North label clear of balloon A."
+    },
+    "edge_strips": "Header thin green rule: 0.45mm, accent darkened 20%, opaque left to transparent right. Pale red header strip remains right-to-left. Footer green edge and white rule unchanged.",
+    "band_heights": "Header 20mm (bar 10.5mm, badge 16mm); footer 19mm (bar 11mm), both increased 2mm. Header diagonal slope approximately preserved; footer rise/cut unchanged. Lesson top/bottom margins 24/22mm preserve clearance.",
+    "header_text": "Header title increased from 9.6pt to 10.1pt; branded title right inset 4mm to allow larger text on one line.",
+    "question_tag": "Câu n: in black; [DXT] immediately following in bright red #E60012 across all three variants.",
+    "theory_pagination": "Dạng 2 title, problem and method kept together in an unbreakable block.",
+    "plane_colors": "Alternating pale mint and sand fills with ruby outlines.",
+    "solution_spacing": "Red solution headings, 6mm separation from question.",
+    "heading_sizes": "Arial Bold course 20.5pt; 9Slide lesson title 25pt; 9Slide subtitle 11.5pt.",
+    "fonts": "Body Times New Roman; math New Computer Modern Math; header/footer Noto Sans Bold and regular folio; course Arial Bold; lesson title and section badges/captions #9Slide02 Tieu de dai; subtitle #9Slide02 Noi dung dai. Bundled 9Slide fonts loaded via --font-path assets/fonts.",
+    "section_banner": "Reference-style green hexagonal badges (1, 2, A, B), white pointed ribbons with green border, ruby bold captions, short green top tab and green dashed continuation.",
+    "section_caption": "User-supplied #9Slide02 Tieu de dai Bold, #C00000, no synthetic stroke.",
+    "section_badge": "Dark green #006B18 fill; corners rounded over 22% of adjacent edges using quadratic-equivalent cubic curves. 2pt border gradient from pale #E9F8E9 top-left to darker #8FC398 bottom-right (45deg).",
+    "brand_source_of_truth": "assets/references/dxt-brand-template/manifest.json",
+    "line_spacing": "Lesson body leading 0.85em (was 0.65em), paragraph gap 3.5mm, statement grid gap 4.5mm, explicit 3.5mm before a–d statements. Writing rules remain 7mm."
+  },
+  "content_mapping": [
+    {
+      "id": "bai-hoc-1",
+      "chapter": "bai-hoc",
+      "number": 1,
+      "question_paragraph": 27,
+      "statement_paragraphs": [],
+      "solution_paragraphs": [
+        30,
+        31,
+        32,
+        33,
+        34
+      ],
+      "writing_lines": 8,
+      "choices_paragraph": 28
+    },
+    {
+      "id": "bai-hoc-2",
+      "chapter": "bai-hoc",
+      "number": 2,
+      "question_paragraph": 35,
+      "statement_paragraphs": [],
+      "solution_paragraphs": [
+        38,
+        39,
+        40,
+        41,
+        42,
+        43
+      ],
+      "writing_lines": 8,
+      "choices_paragraph": 36
+    },
+    {
+      "id": "bai-hoc-3",
+      "chapter": "bai-hoc",
+      "number": 3,
+      "question_paragraph": 44,
+      "statement_paragraphs": [],
+      "solution_paragraphs": [
+        47,
+        48
+      ],
+      "writing_lines": 6,
+      "choices_paragraph": 45
+    },
+    {
+      "id": "bai-hoc-4",
+      "chapter": "bai-hoc",
+      "number": 4,
+      "question_paragraph": 49,
+      "statement_paragraphs": [],
+      "solution_paragraphs": [
+        52,
+        53,
+        54
+      ],
+      "writing_lines": 6,
+      "choices_paragraph": 50
+    },
+    {
+      "id": "bai-hoc-5",
+      "chapter": "bai-hoc",
+      "number": 5,
+      "question_paragraph": 55,
+      "statement_paragraphs": [],
+      "solution_paragraphs": [
+        58
+      ],
+      "writing_lines": 6,
+      "choices_paragraph": 56
+    },
+    {
+      "id": "bai-hoc-6",
+      "chapter": "bai-hoc",
+      "number": 6,
+      "question_paragraph": 79,
+      "statement_paragraphs": [],
+      "solution_paragraphs": [
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89
+      ],
+      "writing_lines": 10,
+      "choices_paragraph": 80
+    },
+    {
+      "id": "tu-luyen-1",
+      "chapter": "tu-luyen",
+      "number": 1,
+      "question_paragraph": 92,
+      "statement_paragraphs": [],
+      "solution_paragraphs": [
+        94,
+        95,
+        96,
+        97,
+        98
+      ],
+      "writing_lines": 8,
+      "choices_paragraph": null
+    },
+    {
+      "id": "tu-luyen-2",
+      "chapter": "tu-luyen",
+      "number": 2,
+      "question_paragraph": 99,
+      "statement_paragraphs": [],
+      "solution_paragraphs": [
+        102,
+        103,
+        104,
+        105
+      ],
+      "writing_lines": 6,
+      "choices_paragraph": 100
+    },
+    {
+      "id": "tu-luyen-3",
+      "chapter": "tu-luyen",
+      "number": 3,
+      "question_paragraph": 106,
+      "statement_paragraphs": [],
+      "solution_paragraphs": [
+        109,
+        110,
+        111,
+        112
+      ],
+      "writing_lines": 6,
+      "choices_paragraph": 107
+    },
+    {
+      "id": "tu-luyen-4",
+      "chapter": "tu-luyen",
+      "number": 4,
+      "question_paragraph": 113,
+      "statement_paragraphs": [],
+      "solution_paragraphs": [
+        115,
+        116,
+        117,
+        118,
+        119,
+        120
+      ],
+      "writing_lines": 8,
+      "choices_paragraph": null
+    },
+    {
+      "id": "tu-luyen-5",
+      "chapter": "tu-luyen",
+      "number": 5,
+      "question_paragraph": 121,
+      "statement_paragraphs": [],
+      "solution_paragraphs": [
+        124,
+        125,
+        126,
+        127,
+        128
+      ],
+      "writing_lines": 8,
+      "choices_paragraph": 122
+    },
+    {
+      "id": "tu-luyen-6",
+      "chapter": "tu-luyen",
+      "number": 6,
+      "question_paragraph": 129,
+      "statement_paragraphs": [],
+      "solution_paragraphs": [
+        132,
+        133,
+        134,
+        135,
+        136,
+        137
+      ],
+      "writing_lines": 8,
+      "choices_paragraph": 130
+    },
+    {
+      "id": "tu-luyen-7",
+      "chapter": "tu-luyen",
+      "number": 7,
+      "question_paragraph": 138,
+      "statement_paragraphs": [],
+      "solution_paragraphs": [
+        140,
+        141,
+        142,
+        143,
+        144,
+        145,
+        146,
+        147,
+        148,
+        149,
+        150,
+        151
+      ],
+      "writing_lines": 11,
+      "choices_paragraph": null
+    },
+    {
+      "id": "tu-luyen-8",
+      "chapter": "tu-luyen",
+      "number": 8,
+      "question_paragraph": 152,
+      "statement_paragraphs": [],
+      "solution_paragraphs": [
+        154,
+        155,
+        156,
+        157,
+        158,
+        159,
+        160,
+        161,
+        162,
+        163
+      ],
+      "writing_lines": 10,
+      "choices_paragraph": null
+    },
+    {
+      "id": "tu-luyen-9",
+      "chapter": "tu-luyen",
+      "number": 9,
+      "question_paragraph": 164,
+      "statement_paragraphs": [],
+      "solution_paragraphs": [
+        167,
+        168,
+        169,
+        170,
+        171,
+        172,
+        173,
+        174,
+        175
+      ],
+      "writing_lines": 10,
+      "choices_paragraph": 165
+    },
+    {
+      "id": "tu-luyen-10",
+      "chapter": "tu-luyen",
+      "number": 10,
+      "question_paragraph": 176,
+      "statement_paragraphs": [],
+      "solution_paragraphs": [
+        178,
+        179,
+        180,
+        181,
+        182,
+        183,
+        184,
+        185,
+        186,
+        187,
+        188,
+        189
+      ],
+      "writing_lines": 11,
+      "choices_paragraph": null
+    },
+    {
+      "id": "tu-luyen-11",
+      "chapter": "tu-luyen",
+      "number": 11,
+      "question_paragraph": 191,
+      "statement_paragraphs": [
+        192,
+        193,
+        194,
+        195
+      ],
+      "solution_paragraphs": [
+        197,
+        198,
+        199,
+        200,
+        201,
+        202,
+        203,
+        204,
+        205
+      ],
+      "writing_lines": 14,
+      "choices_paragraph": null
+    },
+    {
+      "id": "tu-luyen-12",
+      "chapter": "tu-luyen",
+      "number": 12,
+      "question_paragraph": 206,
+      "statement_paragraphs": [
+        207,
+        208,
+        209,
+        210
+      ],
+      "solution_paragraphs": [
+        212,
+        213,
+        214,
+        215,
+        216,
+        217,
+        218,
+        219,
+        220,
+        221,
+        222,
+        223,
+        224,
+        225,
+        226,
+        227
+      ],
+      "writing_lines": 14,
+      "choices_paragraph": null
+    },
+    {
+      "id": "tu-luyen-13",
+      "chapter": "tu-luyen",
+      "number": 13,
+      "question_paragraph": 228,
+      "statement_paragraphs": [
+        229,
+        230,
+        231,
+        232
+      ],
+      "solution_paragraphs": [
+        234,
+        235,
+        236,
+        237,
+        238,
+        239,
+        240,
+        241,
+        242,
+        243,
+        244
+      ],
+      "writing_lines": 14,
+      "choices_paragraph": null
+    },
+    {
+      "id": "tu-luyen-14",
+      "chapter": "tu-luyen",
+      "number": 14,
+      "question_paragraph": 245,
+      "statement_paragraphs": [
+        246,
+        247,
+        248,
+        249
+      ],
+      "solution_paragraphs": [
+        251,
+        252,
+        253,
+        254,
+        255,
+        256,
+        257,
+        258,
+        259,
+        260,
+        261,
+        262,
+        263,
+        264,
+        265,
+        266,
+        267,
+        268,
+        269,
+        270,
+        271
+      ],
+      "writing_lines": 14,
+      "choices_paragraph": null
+    },
+    {
+      "id": "tu-luyen-15",
+      "chapter": "tu-luyen",
+      "number": 15,
+      "question_paragraph": 272,
+      "statement_paragraphs": [
+        273,
+        274,
+        275,
+        276
+      ],
+      "solution_paragraphs": [
+        278,
+        279,
+        280,
+        281,
+        282,
+        283,
+        284,
+        285,
+        286,
+        287,
+        288,
+        289,
+        290,
+        291,
+        292,
+        293,
+        294,
+        295,
+        296,
+        297,
+        298,
+        299
+      ],
+      "writing_lines": 14,
+      "choices_paragraph": null
+    }
+  ],
+  "source_summary": {
+    "theory_sections": 2,
+    "example_questions": 6,
+    "practice_questions": 15,
+    "true_false_questions": 5,
+    "math_objects": 640,
+    "illustrations": 4
+  },
+  "review_notes": [
+    "Preserve numbering: examples 1–6; practice restarts at 1 and continues through 15.",
+    "Source text and worked solutions include apparent typos/inconsistencies; retained as source, not independently corrected. In particular practice Q12 has differing intermediate and final coordinates.",
+    "DOCX contains 537 OLE MathType equations and 103 standalone WMF equations. MTEF structures decoded to native Typst math; WMF duplicates used for cross-checking only.",
+    "The theory illustration appears in every variant; the other three source illustrations belong to worked solutions and appear only in dap-an."
+  ],
+  "outputs": {
+    "de": {
+      "pdf": "assets/targets/2026-10-12/buoi-10-min-max-oxyz/de.pdf",
+      "pages": 9,
+      "bytes": 498293,
+      "sha256": "0658e8377587130fbb0e6ba5c0e1dd6d93d7ed3d03133751b89cff7e316fa75d",
+      "previews": [
+        "assets/targets/2026-10-12/buoi-10-min-max-oxyz/previews/de/page-01.png",
+        "assets/targets/2026-10-12/buoi-10-min-max-oxyz/previews/de/page-02.png",
+        "assets/targets/2026-10-12/buoi-10-min-max-oxyz/previews/de/page-03.png",
+        "assets/targets/2026-10-12/buoi-10-min-max-oxyz/previews/de/page-04.png",
+        "assets/targets/2026-10-12/buoi-10-min-max-oxyz/previews/de/page-05.png",
+        "assets/targets/2026-10-12/buoi-10-min-max-oxyz/previews/de/page-06.png",
+        "assets/targets/2026-10-12/buoi-10-min-max-oxyz/previews/de/page-07.png",
+        "assets/targets/2026-10-12/buoi-10-min-max-oxyz/previews/de/page-08.png",
+        "assets/targets/2026-10-12/buoi-10-min-max-oxyz/previews/de/page-09.png"
+      ]
+    },
+    "de-cach": {
+      "pdf": "assets/targets/2026-10-12/buoi-10-min-max-oxyz/de-cach.pdf",
+      "pages": 17,
+      "bytes": 521489,
+      "sha256": "8d589537972a05f3248db5a3d9cb1dcce94e865b9a0e0cf004031b07c3d4834f",
+      "previews": [
+        "assets/targets/2026-10-12/buoi-10-min-max-oxyz/previews/de-cach/page-01.png",
+        "assets/targets/2026-10-12/buoi-10-min-max-oxyz/previews/de-cach/page-02.png",
+        "assets/targets/2026-10-12/buoi-10-min-max-oxyz/previews/de-cach/page-03.png",
+        "assets/targets/2026-10-12/buoi-10-min-max-oxyz/previews/de-cach/page-04.png",
+        "assets/targets/2026-10-12/buoi-10-min-max-oxyz/previews/de-cach/page-05.png",
+        "assets/targets/2026-10-12/buoi-10-min-max-oxyz/previews/de-cach/page-06.png",
+        "assets/targets/2026-10-12/buoi-10-min-max-oxyz/previews/de-cach/page-07.png",
+        "assets/targets/2026-10-12/buoi-10-min-max-oxyz/previews/de-cach/page-08.png",
+        "assets/targets/2026-10-12/buoi-10-min-max-oxyz/previews/de-cach/page-09.png",
+        "assets/targets/2026-10-12/buoi-10-min-max-oxyz/previews/de-cach/page-10.png",
+        "assets/targets/2026-10-12/buoi-10-min-max-oxyz/previews/de-cach/page-11.png",
+        "assets/targets/2026-10-12/buoi-10-min-max-oxyz/previews/de-cach/page-12.png",
+        "assets/targets/2026-10-12/buoi-10-min-max-oxyz/previews/de-cach/page-13.png",
+        "assets/targets/2026-10-12/buoi-10-min-max-oxyz/previews/de-cach/page-14.png",
+        "assets/targets/2026-10-12/buoi-10-min-max-oxyz/previews/de-cach/page-15.png",
+        "assets/targets/2026-10-12/buoi-10-min-max-oxyz/previews/de-cach/page-16.png",
+        "assets/targets/2026-10-12/buoi-10-min-max-oxyz/previews/de-cach/page-17.png"
+      ]
+    },
+    "dap-an": {
+      "pdf": "assets/targets/2026-10-12/buoi-10-min-max-oxyz/dap-an.pdf",
+      "pages": 21,
+      "bytes": 764261,
+      "sha256": "f07f329c37431bb51a5428e67bbba8c79633c471dec46a013d21d424cdb339aa",
+      "previews": [
+        "assets/targets/2026-10-12/buoi-10-min-max-oxyz/previews/dap-an/page-01.png",
+        "assets/targets/2026-10-12/buoi-10-min-max-oxyz/previews/dap-an/page-02.png",
+        "assets/targets/2026-10-12/buoi-10-min-max-oxyz/previews/dap-an/page-03.png",
+        "assets/targets/2026-10-12/buoi-10-min-max-oxyz/previews/dap-an/page-04.png",
+        "assets/targets/2026-10-12/buoi-10-min-max-oxyz/previews/dap-an/page-05.png",
+        "assets/targets/2026-10-12/buoi-10-min-max-oxyz/previews/dap-an/page-06.png",
+        "assets/targets/2026-10-12/buoi-10-min-max-oxyz/previews/dap-an/page-07.png",
+        "assets/targets/2026-10-12/buoi-10-min-max-oxyz/previews/dap-an/page-08.png",
+        "assets/targets/2026-10-12/buoi-10-min-max-oxyz/previews/dap-an/page-09.png",
+        "assets/targets/2026-10-12/buoi-10-min-max-oxyz/previews/dap-an/page-10.png",
+        "assets/targets/2026-10-12/buoi-10-min-max-oxyz/previews/dap-an/page-11.png",
+        "assets/targets/2026-10-12/buoi-10-min-max-oxyz/previews/dap-an/page-12.png",
+        "assets/targets/2026-10-12/buoi-10-min-max-oxyz/previews/dap-an/page-13.png",
+        "assets/targets/2026-10-12/buoi-10-min-max-oxyz/previews/dap-an/page-14.png",
+        "assets/targets/2026-10-12/buoi-10-min-max-oxyz/previews/dap-an/page-15.png",
+        "assets/targets/2026-10-12/buoi-10-min-max-oxyz/previews/dap-an/page-16.png",
+        "assets/targets/2026-10-12/buoi-10-min-max-oxyz/previews/dap-an/page-17.png",
+        "assets/targets/2026-10-12/buoi-10-min-max-oxyz/previews/dap-an/page-18.png",
+        "assets/targets/2026-10-12/buoi-10-min-max-oxyz/previews/dap-an/page-19.png",
+        "assets/targets/2026-10-12/buoi-10-min-max-oxyz/previews/dap-an/page-20.png",
+        "assets/targets/2026-10-12/buoi-10-min-max-oxyz/previews/dap-an/page-21.png"
+      ]
+    }
+  },
+  "qa": {
+    "compile": "passed",
+    "review_status": "pending",
+    "layout_checks": {
+      "de": {
+        "pages": 9,
+        "question_count": 21,
+        "text_within_page": true,
+        "preview_pages": 9
+      },
+      "de-cach": {
+        "pages": 17,
+        "question_count": 21,
+        "text_within_page": true,
+        "preview_pages": 17
+      },
+      "dap-an": {
+        "pages": 21,
+        "question_count": 21,
+        "text_within_page": true,
+        "preview_pages": 21
+      }
+    },
+    "visual_review": "Rebuilt all three variants with only a–d statement spacing increased from 4 to 4.5mm. Inspected question 14 crop; verified 21 questions per variant and unchanged page counts 9/17/21.",
+    "source_checksum": "unchanged",
+    "content_review": "Corrected reported Vietnamese typos, point-list punctuation, accidental display math, missing coordinate separator in example 6 and missing plus before final coefficient in theory. Full mathematical validation of source solutions is outside this layout/copy-edit pass.",
+    "tool_version": "typst 0.15.1 (9dfd3a08)",
+    "asset_reorganization": "Font filenames normalized; duplicate uploads removed only after checksum verification; obsolete visuals archived. Rebuilt all three PDFs and previews; verified 21 questions, embedded 9Slide and unchanged page counts. Layout code unchanged from prior visual review.",
+    "template_refactor_regression": "Build passed; all three variants retain 21 questions and page counts 9/17/21."
+  }
+}

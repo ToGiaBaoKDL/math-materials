@@ -1,0 +1,230 @@
+{
+  "id": "phan-boi-chau-toan-12-giua-ky-1-ma-1108",
+  "received_date": "2026-10-13",
+  "status": "ready",
+  "template": "exam",
+  "sources": [
+    {
+      "path": "assets/sources/2026-10-13/phan-boi-chau-toan-12-giua-ky-1-ma-1108/source.pdf",
+      "original_name": "de-giua-ky-1-toan-12-nam-2026-2027-truong-thpt-phan-boi-chau-ha-noi (4).pdf",
+      "bytes": 1888440,
+      "sha256": "43e652be04342e8ef926faa43b21e6303c4bee772b72daf8a568dc39a692cbd7",
+      "pages": 6
+    }
+  ],
+  "reference": "assets/references/phu-tho-exam/manifest.json",
+  "variants": {
+    "de": {
+      "filename": "de.pdf",
+      "inputs": {
+        "variant": "de"
+      }
+    },
+    "de-cach": {
+      "filename": "de-cach.pdf",
+      "inputs": {
+        "variant": "de-cach"
+      }
+    }
+  },
+  "qa": {
+    "compile": "passed",
+    "review_status": "reviewed",
+    "toolchain": "typst 0.15.1 (9dfd3a08)",
+    "automated": {
+      "de": {
+        "pages": 7,
+        "questions": 22,
+        "text_bounds": "passed",
+        "sha256": "passed",
+        "preview_count": "passed"
+      },
+      "de-cach": {
+        "pages": 13,
+        "questions": 22,
+        "text_bounds": "passed",
+        "sha256": "passed",
+        "preview_count": "passed"
+      }
+    },
+    "visual_review": "Axis-label revision: inspected Q12 grid at small zoom and Q4; increased tick-label offsets, selected side opposite guide lines, moved labels away from asymptotes and roots, and placed Q12 origin labels in the clear upper-right quadrant. Both variants rebuilt, question counts and checksums verified.",
+    "source_review": "Questions and figure labels compared against source pages; source solution text checked for the supplied answer variant.",
+    "source_checksum": "unchanged",
+    "reviewed_date": "2026-10-13",
+    "reproducible_build": "Previously validated build path; not rerun for this design revision.",
+    "design_revision": "Square 65 mm graph choices; Q1 equal axis scale with solid asymptotes and added -1 label; axis ticks throughout; double window border; oblique tank with ball clear of front vertical edge; coordinate-derived LED points H(3,2), I(3,1); oblique square pyramid with dashed base diagonal."
+  },
+  "outputs": {
+    "de": {
+      "pdf": "assets/targets/2026-10-13/phan-boi-chau-toan-12-giua-ky-1-ma-1108/de.pdf",
+      "pages": 7,
+      "bytes": 601298,
+      "sha256": "5b1dfc912067003b2aa17ceb970617e889b6e04c56e7509a9b74bc547cc2fd48",
+      "previews": [
+        "assets/targets/2026-10-13/phan-boi-chau-toan-12-giua-ky-1-ma-1108/previews/de/page-01.png",
+        "assets/targets/2026-10-13/phan-boi-chau-toan-12-giua-ky-1-ma-1108/previews/de/page-02.png",
+        "assets/targets/2026-10-13/phan-boi-chau-toan-12-giua-ky-1-ma-1108/previews/de/page-03.png",
+        "assets/targets/2026-10-13/phan-boi-chau-toan-12-giua-ky-1-ma-1108/previews/de/page-04.png",
+        "assets/targets/2026-10-13/phan-boi-chau-toan-12-giua-ky-1-ma-1108/previews/de/page-05.png",
+        "assets/targets/2026-10-13/phan-boi-chau-toan-12-giua-ky-1-ma-1108/previews/de/page-06.png",
+        "assets/targets/2026-10-13/phan-boi-chau-toan-12-giua-ky-1-ma-1108/previews/de/page-07.png"
+      ]
+    },
+    "de-cach": {
+      "pdf": "assets/targets/2026-10-13/phan-boi-chau-toan-12-giua-ky-1-ma-1108/de-cach.pdf",
+      "pages": 13,
+      "bytes": 609116,
+      "sha256": "3c3e31115c9eb986f4e2227557e0db749d667d29c95cae1d1d30a8b0afda7319",
+      "previews": [
+        "assets/targets/2026-10-13/phan-boi-chau-toan-12-giua-ky-1-ma-1108/previews/de-cach/page-01.png",
+        "assets/targets/2026-10-13/phan-boi-chau-toan-12-giua-ky-1-ma-1108/previews/de-cach/page-02.png",
+        "assets/targets/2026-10-13/phan-boi-chau-toan-12-giua-ky-1-ma-1108/previews/de-cach/page-03.png",
+        "assets/targets/2026-10-13/phan-boi-chau-toan-12-giua-ky-1-ma-1108/previews/de-cach/page-04.png",
+        "assets/targets/2026-10-13/phan-boi-chau-toan-12-giua-ky-1-ma-1108/previews/de-cach/page-05.png",
+        "assets/targets/2026-10-13/phan-boi-chau-toan-12-giua-ky-1-ma-1108/previews/de-cach/page-06.png",
+        "assets/targets/2026-10-13/phan-boi-chau-toan-12-giua-ky-1-ma-1108/previews/de-cach/page-07.png",
+        "assets/targets/2026-10-13/phan-boi-chau-toan-12-giua-ky-1-ma-1108/previews/de-cach/page-08.png",
+        "assets/targets/2026-10-13/phan-boi-chau-toan-12-giua-ky-1-ma-1108/previews/de-cach/page-09.png",
+        "assets/targets/2026-10-13/phan-boi-chau-toan-12-giua-ky-1-ma-1108/previews/de-cach/page-10.png",
+        "assets/targets/2026-10-13/phan-boi-chau-toan-12-giua-ky-1-ma-1108/previews/de-cach/page-11.png",
+        "assets/targets/2026-10-13/phan-boi-chau-toan-12-giua-ky-1-ma-1108/previews/de-cach/page-12.png",
+        "assets/targets/2026-10-13/phan-boi-chau-toan-12-giua-ky-1-ma-1108/previews/de-cach/page-13.png"
+      ]
+    }
+  },
+  "metadata": {
+    "subject": "Toán 12",
+    "school_year": "2026–2027",
+    "duration_minutes": 90,
+    "exam_code": "1108"
+  },
+  "scope": {
+    "questions": {
+      "I": 12,
+      "II": 4,
+      "III": 6
+    },
+    "source_question_pages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "has_solutions": false
+  },
+  "source_notes": [
+    "No answers or solutions supplied: only de and de-cach variants are produced.",
+    "I.4 option C (x=1) and II.3 volume 33150 preserved as printed.",
+    "I.12 C is a schematic distractor: preserve both marked asymptotes and the source guide (-3,3); branches drawn independently to retain the original shape and axis intercepts.",
+    "Cube/sphere illustration uses a valid member of the tangency family, with no inferred radius added as a label."
+  ],
+  "mapping": [
+    {
+      "section": "I",
+      "questions": "1–12",
+      "source_pages": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "section": "II",
+      "questions": "1–4",
+      "source_pages": [
+        3,
+        4
+      ]
+    },
+    {
+      "section": "III",
+      "questions": "1–6",
+      "source_pages": [
+        4,
+        5,
+        6
+      ]
+    }
+  ],
+  "implementation": {
+    "entry": "documents/2026-10-13/phan-boi-chau-toan-12-giua-ky-1-ma-1108/main.typ",
+    "template": "templates/exam.typ",
+    "reference": "assets/references/phu-tho-exam/page-01.jpg",
+    "body_font": "Times New Roman",
+    "math_font": "New Computer Modern Math",
+    "body_size_pt": 13,
+    "question_prefix": "ruby red",
+    "section_and_choice_labels": "navy",
+    "figures": "Five geometry illustrations generated at 600 dpi from figures/geometry.typ; graphs and variation tables remain vector.",
+    "writing_space": "Shared minimum ruled lines plus fractional fill of remaining page height.",
+    "design_refinements": {
+      "leading_em": 0.95,
+      "statement_gap_mm": 4,
+      "graph_mm": [
+        70,
+        48
+      ],
+      "graph_choice_mm": [
+        65,
+        65
+      ],
+      "graph_label_pt": 10,
+      "arrows": "Unit-vector arrowheads aligned with line direction",
+      "labels": "2.5 mm tick clearance, 4 mm for negative y labels, side chosen opposite guides, asymptote/root offsets, configurable origin offset.",
+      "tables": "Rose header and navy labels, unified grid strokes",
+      "geometry": "600 dpi geometry: double window border, oblique tank and square pyramid, LED radius derived from source coordinates",
+      "ending": "Bottom of final page above notes and folio",
+      "question_gap_mm": 6,
+      "statement_before_mm": 5,
+      "pagination": "Questions may span pages; figures and variation tables do not split",
+      "graph_first_mm": [
+        76,
+        92
+      ]
+    }
+  },
+  "figure_renders": [
+    {
+      "entry": "figures/render.typ",
+      "output": "figures/generated/window.png",
+      "inputs": {
+        "figure": "window"
+      },
+      "ppi": 600
+    },
+    {
+      "entry": "figures/render.typ",
+      "output": "figures/generated/tank.png",
+      "inputs": {
+        "figure": "tank"
+      },
+      "ppi": 600
+    },
+    {
+      "entry": "figures/render.typ",
+      "output": "figures/generated/led.png",
+      "inputs": {
+        "figure": "led"
+      },
+      "ppi": 600
+    },
+    {
+      "entry": "figures/render.typ",
+      "output": "figures/generated/spheres.png",
+      "inputs": {
+        "figure": "spheres"
+      },
+      "ppi": 600
+    },
+    {
+      "entry": "figures/render.typ",
+      "output": "figures/generated/pyramid.png",
+      "inputs": {
+        "figure": "pyramid"
+      },
+      "ppi": 600
+    }
+  ]
+}

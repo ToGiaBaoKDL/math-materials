@@ -1,0 +1,12 @@
+{
+  "id": "phu-tho-exam",
+  "received_date": "2026-10-13",
+  "status": "active",
+  "source": {
+    "original_name": "2aOboR4bSUGXIm4K3RhAGmeTcYrMY5QEBkxFIIiG.jpg",
+    "path": "assets/references/phu-tho-exam/page-01.jpg",
+    "sha256": "5c15ddb34926bfccd8f7b2bfa9434bff8ec3686850baec332013bdd12a8a52f2"
+  },
+  "scope": "Exam layout reference only; red question prefixes, navy section captions and answer labels, serif cover, pale pink table header, simple folio. Use actual exam metadata, never copy Phu Tho text.",
+  "superseded": "Old Phu Tho sources, targets and implementation removed at user request; only new reference image retained."
+}
