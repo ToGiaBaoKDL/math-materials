@@ -135,6 +135,7 @@ make preview                              # Build và render tất cả trang
 make build DOC=phan-boi-chau               # Chọn bằng đoạn tên duy nhất
 make preview DOC=nguyen-binh-khiem VARIANT=dap-an
 make build DOC=buoi-10 VARIANT=de-cach
+make build DOC=buoi-11                    # Bài giảng: 3 bản đề / dòng viết / đáp án
 make help
 
 # Cũng chấp nhận ID đầy đủ; DOCUMENT là alias tương thích của DOC
@@ -170,3 +171,13 @@ Header/footer đề thi dùng chung nằm ở `templates/exam-branding.typ`: log
 Use `make build` to recreate PDFs; use `make preview DOC=phan-boi-chau` (or another document selector) when reviewing layout, clipping, labels and pagination. Previews are useful local debugging artifacts and do not need to be committed.
 
 To remove previously tracked outputs from GitHub while retaining local files, run `git rm -r --cached assets/targets`, commit the removal together with `.gitignore`, then push the branch. This removes files from the current branch, not from earlier commits.
+
+### Nhập công thức MathType
+
+`scripts/mathtype.py` giải mã công thức OLE MathType sang biểu thức Typst và so sánh với WMF xem trước trong DOCX. Cần thư viện Python `olefile` (Ubuntu: `python3-olefile`). Script dừng khi gặp cấu trúc chưa hỗ trợ, dữ liệu chưa đọc hết hoặc công thức lệch với preview; file JSON kiểm tra có thể lưu trong `/tmp`.
+
+```sh
+python3 scripts/mathtype.py assets/sources/2026-10-13/buoi-11-bai-toan-thuc-te-oxyz/source.docx /tmp/buoi-11-equations.json
+```
+
+Buổi 11 dùng `templates/lesson.typ`, 8 câu minh họa và 14 câu tự luyện. Mapping số câu nguồn, vai trò từng hình và các lỗi nguồn đã sửa được lưu trong manifest. Các bài dùng chung mô hình hình học tại `figures/models.typ`; ảnh 600 dpi do build tạo từ mô hình để giữ nét ổn định trên trình đọc PDF. `formula-rows` trình bày các phương trình độc lập trên từng hàng; `formula` dùng cho một biểu thức dài cần ngắt. Với câu dài, `exercise(..., keep-together:false)` giữ đề bài cùng hình và lựa chọn, cho phép phần a–d sang trang, đồng thời giữ tiêu đề lời giải với phần đầu lời giải.

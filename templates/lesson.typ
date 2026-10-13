@@ -83,11 +83,14 @@
     let green = rgb("#008A16")
     let edge = green.lighten(30%)
     let mark = if number != none { str(number) } else { badge }
-    let caption = text(font: fonts.section, size: lesson-style.section-size,
+    let raw-caption = text(font: fonts.section, size: lesson-style.section-size,
       weight: "bold", fill: palette.heading,
       if number == none { title } else { [DẠNG #number: #title] })
     let start = if mark == none { 4mm } else { 17mm }
     let banner-left = if mark == none { 0mm } else { 6mm }
+    let caption = text(font: fonts.section, size: lesson-style.section-size * calc.min(1, (size.width - 12mm - start - 6mm)/measure(raw-caption).width),
+      weight: "bold", fill: palette.heading,
+      if number == none { title } else { [DẠNG #number: #title] })
     let banner-width = calc.min(size.width - 12mm, start + measure(caption).width + 6mm)
     grid(columns: (auto, 1fr), column-gutter: 4mm, align: horizon,
       block(width: banner-width, height: 12mm)[
@@ -176,22 +179,29 @@
     ..rows.map(row => math.equation(block: true, numbering: none, row)))
 }))
 
+// Independent equations occupy separate rows; formula() instead wraps one long derivation.
+#let formula-rows(rows) = block(width:100%,breakable:false,above:lesson-style.formula-gap,below:lesson-style.formula-gap)[
+  #show math.equation.where(block:true): set block(above:0pt,below:0pt)
+  #grid(columns:(1fr,),row-gutter:lesson-style.formula-row-gap,
+    ..rows.map(row=>block(width:100%,breakable:false,math.equation(block:true,numbering:none,row.body))))
+]
+
 #let exercise(number, body, answers: (), statements: (), solution: [],
-  variant: "de", writing-lines: 6, source-id: none) = {
-  let prompt = [
+  variant: "de", writing-lines: 6, source-id: none, keep-together: true) = {
+  let stem = [
     #if source-id != none {
       context [#metadata((id: source-id, page: counter(page).get().first())) <exercise-location>]
     }
     #text(weight: document-style.emphasis, fill: palette.ink)[Câu #number:]
     #text(weight: document-style.emphasis, fill: palette.question-tag)[\[DXT\]] #body
-    #if statements.len() > 0 {
-      block(width: 100%, above: lesson-style.statement-before, below: 0pt,
-        grid(columns: (1fr,), row-gutter: lesson-style.statement-gap,
-          ..statements.map(statement => block(width: 100%, above: 0pt, below: 0pt, statement))))
-    }
-    #if answers.len() > 0 {
-      v(rhythm.answers)
-      choices(answers)
+    #if answers.len()>0 {v(rhythm.answers);choices(answers)}
+  ]
+  let prompt = [
+    #if keep-together {stem} else {block(width:100%,breakable:false,above:0pt,below:0pt,stem)}
+    #if statements.len()>0 {
+      block(width:100%,above:lesson-style.statement-before,below:0pt,
+        grid(columns:(1fr,),row-gutter:lesson-style.statement-gap,
+          ..statements.map(statement=>block(width:100%,above:0pt,below:0pt,statement))))
     }
   ]
   if variant == "de-cach" {
@@ -201,15 +211,28 @@
     ]
     final-writing-space()
   } else {
-    block(width: 100%, breakable: false, sticky: variant == "dap-an",
+    block(width: 100%, breakable: not keep-together, sticky: variant == "dap-an" and keep-together,
       above: rhythm.question, below: 0pt, prompt)
   }
   if variant == "dap-an" {
-    block(width: 100%, sticky: true, above: lesson-style.solution-gap,
-      below: lesson-style.paragraph-gap,
-      align(center, text(style: "italic", weight: document-style.emphasis,
-        fill: palette.primary)[Lời giải]))
-    solution
+    let heading = block(width:100%,sticky:true,above:if keep-together {lesson-style.solution-gap} else {0pt},
+      below:lesson-style.paragraph-gap,
+      align(center,text(style:"italic",weight:document-style.emphasis,
+        fill:palette.primary)[Lời giải]))
+    if keep-together {
+      heading
+      solution
+    } else {
+      // Discard inter-block whitespace so the heading attaches to real content.
+      let parts=solution.fields().at("children",default:(solution,))
+        .filter(it=>repr(it.func()) != "space")
+      if parts.len()>0 {
+        block(width:100%,breakable:false,above:lesson-style.solution-gap)[#heading#parts.first()]
+        if parts.len()>2 {
+          for part in parts.slice(1,calc.max(1,parts.len()-2)) {part}
+          block(width:100%,breakable:false)[#parts.at(-2)#parts.last()]
+        } else if parts.len()==2 {parts.last()}
+      } else {heading}
+    }
   }
 }
-

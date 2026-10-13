@@ -1,7 +1,7 @@
 {
   "id": "buoi-11-bai-toan-thuc-te-oxyz",
   "received_date": "2026-10-13",
-  "status": "source-reviewed-pending-formula-verification",
+  "status": "completed",
   "template": "lesson",
   "sources": [
     {
@@ -41,15 +41,16 @@
       "ole_objects": 519,
       "wmf_previews": 459,
       "omml_equations": 0,
-      "status": "Pending full MathType decoding and formula verification; no numerical transcription inferred from missing text."
+      "status": "All 519 used OLE equations decoded; all 519 referenced WMF preview pairs matched; all 519 expressions compiled in a Typst measurement document.",
+      "decoder": "scripts/mathtype.py",
+      "empty_equations": 1
     },
     "page_review": "LibreOffice PDF conversion failed in this environment; source page count and paginated review not yet verified.",
     "notes": [
-      "Use lesson template, not exam template.",
-      "Source question numbers are not consecutive; preserve mapping before any output renumbering.",
-      "Repeated Đáp án: Đáp án: prefixes occur in source.",
-      "Separate statement diagrams from solution-only constructions.",
-      "Check source Câu 60 time-ratio wording against its 30-minute and 10-minute data before transcription."
+      "Numbered examples 1–8 and practice 1–14; original question numbers retained in content_mapping.",
+      "Source duplicate answer prefixes removed; question variants contain no source solutions.",
+      "Statement-only and solution-only figures remain distinct.",
+      "Verified source errors corrected with user authorization; see source_corrections."
     ]
   },
   "mapping": [
@@ -334,6 +335,702 @@
   "implementation": {
     "template": "templates/lesson.typ",
     "reference": "assets/references/dxt-brand-template",
-    "stage": "Source intake only; no main.typ or output PDFs created."
+    "stage": "Native Typst content, reusable geometry models and three lesson variants.",
+    "body_font": "Times New Roman",
+    "math_font": "New Computer Modern Math",
+    "body_size_pt": 14,
+    "figures": "21 diagrams generated at 600 dpi from reusable Typst models; three source photos retained. Original source figures mapped individually.",
+    "numbering": "Examples 1–8; practice restarts at 1–14.",
+    "math": "Selectable native Typst expressions; decimal commas are atomic strings; display-style fractions.",
+    "layout": "Shared lesson template; long section captions fitted to banner; independent equation rows; breakable long prompts with grouped solution heading and closing steps."
+  },
+  "variants": {
+    "de": {
+      "filename": "de.pdf",
+      "inputs": {
+        "variant": "de"
+      }
+    },
+    "de-cach": {
+      "filename": "de-cach.pdf",
+      "inputs": {
+        "variant": "de-cach"
+      }
+    },
+    "dap-an": {
+      "filename": "dap-an.pdf",
+      "inputs": {
+        "variant": "dap-an"
+      }
+    }
+  },
+  "content_mapping": [
+    {
+      "id": "bai-hoc-1",
+      "number": 1,
+      "source_number": 3,
+      "source_paragraph": 7,
+      "statement_paragraphs": [],
+      "extra_paragraphs": [],
+      "choice_paragraphs": [],
+      "figures": [
+        "flight-departure"
+      ]
+    },
+    {
+      "id": "bai-hoc-2",
+      "number": 2,
+      "source_number": 13,
+      "source_paragraph": 14,
+      "statement_paragraphs": [],
+      "extra_paragraphs": [],
+      "choice_paragraphs": [],
+      "figures": [
+        "cable"
+      ]
+    },
+    {
+      "id": "bai-hoc-3",
+      "number": 3,
+      "source_number": 6,
+      "source_paragraph": 19,
+      "statement_paragraphs": [],
+      "extra_paragraphs": [
+        21
+      ],
+      "choice_paragraphs": [],
+      "figures": [
+        "roof-house"
+      ]
+    },
+    {
+      "id": "bai-hoc-4",
+      "number": 4,
+      "source_number": 7,
+      "source_paragraph": 34,
+      "statement_paragraphs": [
+        40,
+        44,
+        48,
+        52
+      ],
+      "extra_paragraphs": [],
+      "choice_paragraphs": [],
+      "figures": [
+        "shifted-warehouse"
+      ]
+    },
+    {
+      "id": "bai-hoc-5",
+      "number": 5,
+      "source_number": 52,
+      "source_paragraph": 103,
+      "statement_paragraphs": [],
+      "extra_paragraphs": [],
+      "choice_paragraphs": [],
+      "figures": []
+    },
+    {
+      "id": "bai-hoc-6",
+      "number": 6,
+      "source_number": 50,
+      "source_paragraph": 114,
+      "statement_paragraphs": [],
+      "extra_paragraphs": [],
+      "choice_paragraphs": [],
+      "figures": []
+    },
+    {
+      "id": "bai-hoc-7",
+      "number": 7,
+      "source_number": 58,
+      "source_paragraph": 130,
+      "statement_paragraphs": [],
+      "extra_paragraphs": [],
+      "choice_paragraphs": [],
+      "figures": [
+        "motion-half"
+      ]
+    },
+    {
+      "id": "bai-hoc-8",
+      "number": 8,
+      "source_number": 60,
+      "source_paragraph": 138,
+      "statement_paragraphs": [],
+      "extra_paragraphs": [],
+      "choice_paragraphs": [],
+      "figures": [
+        "aircraft-us"
+      ]
+    },
+    {
+      "id": "tu-luyen-1",
+      "number": 1,
+      "source_number": 16,
+      "source_paragraph": 150,
+      "statement_paragraphs": [],
+      "extra_paragraphs": [],
+      "choice_paragraphs": [
+        152
+      ],
+      "figures": [
+        "room-simple"
+      ]
+    },
+    {
+      "id": "tu-luyen-2",
+      "number": 2,
+      "source_number": 5,
+      "source_paragraph": 161,
+      "statement_paragraphs": [
+        167,
+        171,
+        175,
+        179
+      ],
+      "extra_paragraphs": [],
+      "choice_paragraphs": [],
+      "figures": [
+        "room-hanging"
+      ]
+    },
+    {
+      "id": "tu-luyen-3",
+      "number": 3,
+      "source_number": 4,
+      "source_paragraph": 213,
+      "statement_paragraphs": [],
+      "extra_paragraphs": [],
+      "choice_paragraphs": [
+        214,
+        215
+      ],
+      "figures": [
+        "flight-airport"
+      ]
+    },
+    {
+      "id": "tu-luyen-4",
+      "number": 4,
+      "source_number": 19,
+      "source_paragraph": 224,
+      "statement_paragraphs": [],
+      "extra_paragraphs": [],
+      "choice_paragraphs": [],
+      "figures": [
+        "flight-departure"
+      ]
+    },
+    {
+      "id": "tu-luyen-5",
+      "number": 5,
+      "source_number": 15,
+      "source_paragraph": 234,
+      "statement_paragraphs": [
+        237,
+        238,
+        239,
+        240
+      ],
+      "extra_paragraphs": [
+        236
+      ],
+      "choice_paragraphs": [],
+      "figures": [
+        "warehouse-coordinates"
+      ]
+    },
+    {
+      "id": "tu-luyen-6",
+      "number": 6,
+      "source_number": 11,
+      "source_paragraph": 254,
+      "statement_paragraphs": [],
+      "extra_paragraphs": [],
+      "choice_paragraphs": [],
+      "figures": [
+        "cabin"
+      ]
+    },
+    {
+      "id": "tu-luyen-7",
+      "number": 7,
+      "source_number": 8,
+      "source_paragraph": 274,
+      "statement_paragraphs": [
+        281,
+        285,
+        289,
+        293
+      ],
+      "extra_paragraphs": [],
+      "choice_paragraphs": [],
+      "figures": [
+        "warehouse"
+      ]
+    },
+    {
+      "id": "tu-luyen-8",
+      "number": 8,
+      "source_number": 12,
+      "source_paragraph": 335,
+      "statement_paragraphs": [],
+      "extra_paragraphs": [],
+      "choice_paragraphs": [],
+      "figures": [
+        "hanging-ball"
+      ]
+    },
+    {
+      "id": "tu-luyen-9",
+      "number": 9,
+      "source_number": 61,
+      "source_paragraph": 348,
+      "statement_paragraphs": [
+        350,
+        351
+      ],
+      "extra_paragraphs": [
+        349
+      ],
+      "choice_paragraphs": [],
+      "figures": [
+        "balloon"
+      ]
+    },
+    {
+      "id": "tu-luyen-10",
+      "number": 10,
+      "source_number": 51,
+      "source_paragraph": 356,
+      "statement_paragraphs": [],
+      "extra_paragraphs": [],
+      "choice_paragraphs": [],
+      "figures": []
+    },
+    {
+      "id": "tu-luyen-11",
+      "number": 11,
+      "source_number": 53,
+      "source_paragraph": 375,
+      "statement_paragraphs": [],
+      "extra_paragraphs": [
+        377
+      ],
+      "choice_paragraphs": [],
+      "figures": [
+        "drones"
+      ]
+    },
+    {
+      "id": "tu-luyen-12",
+      "number": 12,
+      "source_number": 56,
+      "source_paragraph": 392,
+      "statement_paragraphs": [],
+      "extra_paragraphs": [],
+      "choice_paragraphs": [],
+      "figures": [
+        "velocity"
+      ]
+    },
+    {
+      "id": "tu-luyen-13",
+      "number": 13,
+      "source_number": 55,
+      "source_paragraph": 398,
+      "statement_paragraphs": [],
+      "extra_paragraphs": [],
+      "choice_paragraphs": [],
+      "figures": [
+        "motion-full"
+      ]
+    },
+    {
+      "id": "tu-luyen-14",
+      "number": 14,
+      "source_number": 59,
+      "source_paragraph": 405,
+      "statement_paragraphs": [],
+      "extra_paragraphs": [],
+      "choice_paragraphs": [],
+      "figures": [
+        "aircraft-radar"
+      ]
+    }
+  ],
+  "figure_renders": [
+    {
+      "entry": "figures/render.typ",
+      "output": "figures/generated/flight-departure.png",
+      "inputs": {
+        "figure": "flight-departure"
+      },
+      "ppi": 600
+    },
+    {
+      "entry": "figures/render.typ",
+      "output": "figures/generated/flight-airport.png",
+      "inputs": {
+        "figure": "flight-airport"
+      },
+      "ppi": 600
+    },
+    {
+      "entry": "figures/render.typ",
+      "output": "figures/generated/cable.png",
+      "inputs": {
+        "figure": "cable"
+      },
+      "ppi": 600
+    },
+    {
+      "entry": "figures/render.typ",
+      "output": "figures/generated/roof-house.png",
+      "inputs": {
+        "figure": "roof-house"
+      },
+      "ppi": 600
+    },
+    {
+      "entry": "figures/render.typ",
+      "output": "figures/generated/roof-house-solution.png",
+      "inputs": {
+        "figure": "roof-house-solution"
+      },
+      "ppi": 600
+    },
+    {
+      "entry": "figures/render.typ",
+      "output": "figures/generated/shifted-warehouse.png",
+      "inputs": {
+        "figure": "shifted-warehouse"
+      },
+      "ppi": 600
+    },
+    {
+      "entry": "figures/render.typ",
+      "output": "figures/generated/shifted-warehouse-solution.png",
+      "inputs": {
+        "figure": "shifted-warehouse-solution"
+      },
+      "ppi": 600
+    },
+    {
+      "entry": "figures/render.typ",
+      "output": "figures/generated/motion-half.png",
+      "inputs": {
+        "figure": "motion-half"
+      },
+      "ppi": 600
+    },
+    {
+      "entry": "figures/render.typ",
+      "output": "figures/generated/motion-full.png",
+      "inputs": {
+        "figure": "motion-full"
+      },
+      "ppi": 600
+    },
+    {
+      "entry": "figures/render.typ",
+      "output": "figures/generated/room-simple.png",
+      "inputs": {
+        "figure": "room-simple"
+      },
+      "ppi": 600
+    },
+    {
+      "entry": "figures/render.typ",
+      "output": "figures/generated/room-simple-solution.png",
+      "inputs": {
+        "figure": "room-simple-solution"
+      },
+      "ppi": 600
+    },
+    {
+      "entry": "figures/render.typ",
+      "output": "figures/generated/room-hanging.png",
+      "inputs": {
+        "figure": "room-hanging"
+      },
+      "ppi": 600
+    },
+    {
+      "entry": "figures/render.typ",
+      "output": "figures/generated/warehouse-coordinates.png",
+      "inputs": {
+        "figure": "warehouse-coordinates"
+      },
+      "ppi": 600
+    },
+    {
+      "entry": "figures/render.typ",
+      "output": "figures/generated/warehouse.png",
+      "inputs": {
+        "figure": "warehouse"
+      },
+      "ppi": 600
+    },
+    {
+      "entry": "figures/render.typ",
+      "output": "figures/generated/warehouse-solution.png",
+      "inputs": {
+        "figure": "warehouse-solution"
+      },
+      "ppi": 600
+    },
+    {
+      "entry": "figures/render.typ",
+      "output": "figures/generated/cabin.png",
+      "inputs": {
+        "figure": "cabin"
+      },
+      "ppi": 600
+    },
+    {
+      "entry": "figures/render.typ",
+      "output": "figures/generated/hanging-ball.png",
+      "inputs": {
+        "figure": "hanging-ball"
+      },
+      "ppi": 600
+    },
+    {
+      "entry": "figures/render.typ",
+      "output": "figures/generated/hanging-ball-solution.png",
+      "inputs": {
+        "figure": "hanging-ball-solution"
+      },
+      "ppi": 600
+    },
+    {
+      "entry": "figures/render.typ",
+      "output": "figures/generated/balloon.png",
+      "inputs": {
+        "figure": "balloon"
+      },
+      "ppi": 600
+    },
+    {
+      "entry": "figures/render.typ",
+      "output": "figures/generated/drones.png",
+      "inputs": {
+        "figure": "drones"
+      },
+      "ppi": 600
+    },
+    {
+      "entry": "figures/render.typ",
+      "output": "figures/generated/velocity.png",
+      "inputs": {
+        "figure": "velocity"
+      },
+      "ppi": 600
+    }
+  ],
+  "outputs": {
+    "de": {
+      "pdf": "assets/targets/2026-10-13/buoi-11-bai-toan-thuc-te-oxyz/de.pdf",
+      "pages": 13,
+      "bytes": 1597878,
+      "sha256": "6fab4f1a5a8b1f160de2effe1787a6c7e03abb1ac195aad3b8f71d85dbe550f2",
+      "previews": [
+        "assets/targets/2026-10-13/buoi-11-bai-toan-thuc-te-oxyz/previews/de/page-01.png",
+        "assets/targets/2026-10-13/buoi-11-bai-toan-thuc-te-oxyz/previews/de/page-02.png",
+        "assets/targets/2026-10-13/buoi-11-bai-toan-thuc-te-oxyz/previews/de/page-03.png",
+        "assets/targets/2026-10-13/buoi-11-bai-toan-thuc-te-oxyz/previews/de/page-04.png",
+        "assets/targets/2026-10-13/buoi-11-bai-toan-thuc-te-oxyz/previews/de/page-05.png",
+        "assets/targets/2026-10-13/buoi-11-bai-toan-thuc-te-oxyz/previews/de/page-06.png",
+        "assets/targets/2026-10-13/buoi-11-bai-toan-thuc-te-oxyz/previews/de/page-07.png",
+        "assets/targets/2026-10-13/buoi-11-bai-toan-thuc-te-oxyz/previews/de/page-08.png",
+        "assets/targets/2026-10-13/buoi-11-bai-toan-thuc-te-oxyz/previews/de/page-09.png",
+        "assets/targets/2026-10-13/buoi-11-bai-toan-thuc-te-oxyz/previews/de/page-10.png",
+        "assets/targets/2026-10-13/buoi-11-bai-toan-thuc-te-oxyz/previews/de/page-11.png",
+        "assets/targets/2026-10-13/buoi-11-bai-toan-thuc-te-oxyz/previews/de/page-12.png",
+        "assets/targets/2026-10-13/buoi-11-bai-toan-thuc-te-oxyz/previews/de/page-13.png"
+      ]
+    },
+    "de-cach": {
+      "pdf": "assets/targets/2026-10-13/buoi-11-bai-toan-thuc-te-oxyz/de-cach.pdf",
+      "pages": 21,
+      "bytes": 1626187,
+      "sha256": "f828c96257b8c8092d7003ebabf45869e416e8245ef59044aa2a8dd078d7ac3c",
+      "previews": [
+        "assets/targets/2026-10-13/buoi-11-bai-toan-thuc-te-oxyz/previews/de-cach/page-01.png",
+        "assets/targets/2026-10-13/buoi-11-bai-toan-thuc-te-oxyz/previews/de-cach/page-02.png",
+        "assets/targets/2026-10-13/buoi-11-bai-toan-thuc-te-oxyz/previews/de-cach/page-03.png",
+        "assets/targets/2026-10-13/buoi-11-bai-toan-thuc-te-oxyz/previews/de-cach/page-04.png",
+        "assets/targets/2026-10-13/buoi-11-bai-toan-thuc-te-oxyz/previews/de-cach/page-05.png",
+        "assets/targets/2026-10-13/buoi-11-bai-toan-thuc-te-oxyz/previews/de-cach/page-06.png",
+        "assets/targets/2026-10-13/buoi-11-bai-toan-thuc-te-oxyz/previews/de-cach/page-07.png",
+        "assets/targets/2026-10-13/buoi-11-bai-toan-thuc-te-oxyz/previews/de-cach/page-08.png",
+        "assets/targets/2026-10-13/buoi-11-bai-toan-thuc-te-oxyz/previews/de-cach/page-09.png",
+        "assets/targets/2026-10-13/buoi-11-bai-toan-thuc-te-oxyz/previews/de-cach/page-10.png",
+        "assets/targets/2026-10-13/buoi-11-bai-toan-thuc-te-oxyz/previews/de-cach/page-11.png",
+        "assets/targets/2026-10-13/buoi-11-bai-toan-thuc-te-oxyz/previews/de-cach/page-12.png",
+        "assets/targets/2026-10-13/buoi-11-bai-toan-thuc-te-oxyz/previews/de-cach/page-13.png",
+        "assets/targets/2026-10-13/buoi-11-bai-toan-thuc-te-oxyz/previews/de-cach/page-14.png",
+        "assets/targets/2026-10-13/buoi-11-bai-toan-thuc-te-oxyz/previews/de-cach/page-15.png",
+        "assets/targets/2026-10-13/buoi-11-bai-toan-thuc-te-oxyz/previews/de-cach/page-16.png",
+        "assets/targets/2026-10-13/buoi-11-bai-toan-thuc-te-oxyz/previews/de-cach/page-17.png",
+        "assets/targets/2026-10-13/buoi-11-bai-toan-thuc-te-oxyz/previews/de-cach/page-18.png",
+        "assets/targets/2026-10-13/buoi-11-bai-toan-thuc-te-oxyz/previews/de-cach/page-19.png",
+        "assets/targets/2026-10-13/buoi-11-bai-toan-thuc-te-oxyz/previews/de-cach/page-20.png",
+        "assets/targets/2026-10-13/buoi-11-bai-toan-thuc-te-oxyz/previews/de-cach/page-21.png"
+      ]
+    },
+    "dap-an": {
+      "pdf": "assets/targets/2026-10-13/buoi-11-bai-toan-thuc-te-oxyz/dap-an.pdf",
+      "pages": 22,
+      "bytes": 2294900,
+      "sha256": "9b2117d76576ad750478c807792dd01091f1a73da69c5945b5b4dcaf52de18d3",
+      "previews": [
+        "assets/targets/2026-10-13/buoi-11-bai-toan-thuc-te-oxyz/previews/dap-an/page-01.png",
+        "assets/targets/2026-10-13/buoi-11-bai-toan-thuc-te-oxyz/previews/dap-an/page-02.png",
+        "assets/targets/2026-10-13/buoi-11-bai-toan-thuc-te-oxyz/previews/dap-an/page-03.png",
+        "assets/targets/2026-10-13/buoi-11-bai-toan-thuc-te-oxyz/previews/dap-an/page-04.png",
+        "assets/targets/2026-10-13/buoi-11-bai-toan-thuc-te-oxyz/previews/dap-an/page-05.png",
+        "assets/targets/2026-10-13/buoi-11-bai-toan-thuc-te-oxyz/previews/dap-an/page-06.png",
+        "assets/targets/2026-10-13/buoi-11-bai-toan-thuc-te-oxyz/previews/dap-an/page-07.png",
+        "assets/targets/2026-10-13/buoi-11-bai-toan-thuc-te-oxyz/previews/dap-an/page-08.png",
+        "assets/targets/2026-10-13/buoi-11-bai-toan-thuc-te-oxyz/previews/dap-an/page-09.png",
+        "assets/targets/2026-10-13/buoi-11-bai-toan-thuc-te-oxyz/previews/dap-an/page-10.png",
+        "assets/targets/2026-10-13/buoi-11-bai-toan-thuc-te-oxyz/previews/dap-an/page-11.png",
+        "assets/targets/2026-10-13/buoi-11-bai-toan-thuc-te-oxyz/previews/dap-an/page-12.png",
+        "assets/targets/2026-10-13/buoi-11-bai-toan-thuc-te-oxyz/previews/dap-an/page-13.png",
+        "assets/targets/2026-10-13/buoi-11-bai-toan-thuc-te-oxyz/previews/dap-an/page-14.png",
+        "assets/targets/2026-10-13/buoi-11-bai-toan-thuc-te-oxyz/previews/dap-an/page-15.png",
+        "assets/targets/2026-10-13/buoi-11-bai-toan-thuc-te-oxyz/previews/dap-an/page-16.png",
+        "assets/targets/2026-10-13/buoi-11-bai-toan-thuc-te-oxyz/previews/dap-an/page-17.png",
+        "assets/targets/2026-10-13/buoi-11-bai-toan-thuc-te-oxyz/previews/dap-an/page-18.png",
+        "assets/targets/2026-10-13/buoi-11-bai-toan-thuc-te-oxyz/previews/dap-an/page-19.png",
+        "assets/targets/2026-10-13/buoi-11-bai-toan-thuc-te-oxyz/previews/dap-an/page-20.png",
+        "assets/targets/2026-10-13/buoi-11-bai-toan-thuc-te-oxyz/previews/dap-an/page-21.png",
+        "assets/targets/2026-10-13/buoi-11-bai-toan-thuc-te-oxyz/previews/dap-an/page-22.png"
+      ]
+    }
+  },
+  "qa": {
+    "build": "All three variants compiled successfully.",
+    "pages": {
+      "de": 13,
+      "de-cach": 21,
+      "dap-an": 22
+    },
+    "content": "22 questions and 22 DXT tags in each variant; 22 solution headings in writing and answer variants; none in statement-only variant.",
+    "visual_review": "Reviewed all 56 final rendered pages for layout, diagrams, page breaks and writing space. No blank trailing page.",
+    "math": "519 source MathType expressions decoded and compared with their referenced WMF previews; native Typst math compiled. Verified source corrections recorded in source_corrections.",
+    "fonts": "Embedded Times New Roman text and New Computer Modern math.",
+    "regression": "Existing Buoi 10 lesson compiled successfully with the shared lesson template changes.",
+    "limitations": "Original DOCX could not be exported by LibreOffice in this environment; source pagination was not compared. Text, tables, equation objects and source figure assets were reviewed."
+  },
+  "source_corrections": [
+    {
+      "id": "bai-hoc-1",
+      "source": "ON=CN; OB≈6,7; misplaced vector dot",
+      "correction": "ON=CM; OB≈10,8 and OA≈6,7; consistent vector sum",
+      "verification": "Projection using OM=14, angle MOC=65°, angle NOB=32°."
+    },
+    {
+      "id": "bai-hoc-2",
+      "source": "a+c=2,5",
+      "correction": "a+c=−2,5",
+      "verification": "a=15/2, c=−10."
+    },
+    {
+      "id": "bai-hoc-3",
+      "source": "Blank angle symbol; missing root index in source MathType",
+      "correction": "Restore alpha; square root of 900²+1200²",
+      "verification": "The source states tan alpha=1/5 and BD=1500."
+    },
+    {
+      "id": "bai-hoc-4",
+      "source": "Uses OH for projected y-distance, confusing roof vertex H",
+      "correction": "Use y_T=AB/2=3",
+      "verification": "O-to-M horizontal projection in the source construction."
+    },
+    {
+      "id": "bai-hoc-6",
+      "source": "B=(−22;−27;3), M=(5;0;0), OA=5 km",
+      "correction": "B=(−27;−22;3), M=(3;2;0), OM=sqrt(13)≈3,61 km; collinearity with B prime",
+      "verification": "Ox north and Oy west; B is 27 km south and 22 km east. Intersect A + (2/5)(B prime − A) with z=0."
+    },
+    {
+      "id": "bai-hoc-8",
+      "source": "Calls N the position after the next 10 minutes",
+      "correction": "N is position after 30 minutes from M; Q is after 40 minutes",
+      "verification": "MQ=4NQ, N=(1300;750;15,5)."
+    },
+    {
+      "id": "tu-luyen-2",
+      "source": "Overbar used as vector, missing equality, A prime C instead of A prime C prime",
+      "correction": "Vector C prime D prime=(−6;0;0); midpoint of A prime C prime",
+      "verification": "Coordinates in statement and source calculation."
+    },
+    {
+      "id": "tu-luyen-3",
+      "source": "Angle OMH=48° in solution",
+      "correction": "Angle HOM=48°",
+      "verification": "Angle between OH and OM is specified at O."
+    },
+    {
+      "id": "tu-luyen-6",
+      "source": "Overbars used for vectors; prematurely rounded intermediate length",
+      "correction": "Native vector arrows, keep c=60sqrt(29) until rounding a+b+c",
+      "verification": "450+240+60sqrt(29) rounds to 1013."
+    },
+    {
+      "id": "tu-luyen-7",
+      "source": "Cable route ends at H although camera is midpoint of GQ",
+      "correction": "Explicitly continue from H to camera M in statement d",
+      "verification": "Source solution and diagram use OE+EH+HM=11+sqrt(10)."
+    },
+    {
+      "id": "tu-luyen-8",
+      "source": "Roots written 40±15sqrt(3), inconsistent with equation and final answer",
+      "correction": "Roots 45±15sqrt(3); reject root placing center above suspension point; diameter 90−30sqrt(3)≈38 cm",
+      "verification": "2r²−180r+2700=0; smaller root≈19,019 cm."
+    },
+    {
+      "id": "tu-luyen-9",
+      "source": "Missing launch point after “tại điểm”",
+      "correction": "Restore O, the origin defined by the following paragraph",
+      "verification": "Source coordinate axes and origin definition."
+    }
+  ],
+  "editorial_policy": {
+    "authorized_by_user": "Correct verified source errors and record them in manifest.",
+    "theory": "Same two skills, phrasing condensed without dropping mathematical content.",
+    "false_statements": "Intentional false propositions and distractor options preserved."
+  },
+  "figure_mapping": {
+    "image6.png": "flight-departure",
+    "image20.png": "cable",
+    "image25.png": "roof-house",
+    "image29.png": "roof-house-solution",
+    "image42.jpg": "shifted-warehouse",
+    "image60.png": "shifted-warehouse-solution",
+    "image126.png": "motion-half",
+    "image144.jpeg": "aircraft-us.jpg",
+    "image161.png": "room-simple",
+    "image166.png": "room-simple-solution",
+    "image183.jpg": "room-hanging",
+    "image216.png": "flight-airport",
+    "image233.png": "flight-departure",
+    "image246.png": "warehouse-coordinates",
+    "image297.jpg": "wooden-cabins.jpg",
+    "image298.png": "cabin",
+    "image325.png": "warehouse",
+    "image338.png": "warehouse-solution",
+    "image376.png": "hanging-ball",
+    "image384.png": "hanging-ball-solution",
+    "image404.jpeg": "Decorative photo replaced by the accompanying balloon model",
+    "image405.png": "balloon",
+    "image438.png": "drones",
+    "image453.png": "velocity",
+    "image459.png": "motion-full",
+    "image477.jpeg": "aircraft-radar.jpg"
   }
 }
