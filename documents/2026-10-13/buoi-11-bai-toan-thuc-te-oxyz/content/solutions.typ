@@ -20,12 +20,12 @@
  #formula(($arrow(A B)=(frac(15,2);frac(15 sqrt(3),2);-10)$,$a+c=frac(15,2)-10=-"2,5"$,))
 ],
 "bai-hoc-3":[
- #fig("roof-house-solution")
+ #fig("roof-house-solution",width:70mm)
  #paragraph[Gọi $I$ là tâm hình chữ nhật $A B C D$, $H$ là tâm hình chữ nhật $O K N M$. Các cạnh bên của mái bằng nhau nên $S I⊥(A B C D)$.]
- #formula(($B D=sqrt(900^2+1200^2)=1500$,$I D=frac(B D,2)=750$,))
+ #paragraph[$B D=sqrt(900^2+1200^2)=1500$, suy ra $I D=frac(B D,2)=750$.]
  #paragraph[Góc giữa $S D$ với mặt đáy là $angle S D I$. Vì $tan angle S D I=frac(1,5)$ nên $S I=frac(1,5)I D=150$.]
  #paragraph[Theo hệ trục đã chọn, $H(450;600;0)$ và $S H=I H+S I=450+150=600$.]
- #formula(($S(450;600;600)$,$P=a+b+c=450+600+600=1650$,))
+ #paragraph[Vậy $S(450;600;600)$ và $P=a+b+c=1650$.]
 ],
 "bai-hoc-4":[
  #theory-box(title:[Phương pháp],breakable:false)[
@@ -34,7 +34,7 @@
   #paragraph[c) Tìm tọa độ trung điểm $L$ của $F G$, rồi tính $O K+K L$.]
   #paragraph[d) Tính $F G$, $G Q$; diện tích hai mái là $2 F G⋅G Q$.]
  ]
- #fig("shifted-warehouse-solution")
+ #fig("shifted-warehouse-solution",width:92mm)
  #paragraph[a) Sai. Ta có $O D=A D-O A=6$, $y_T=frac(A B,2)=3$, $Q T=7$. Suy ra $Q(-6;3;7)$.]
  #paragraph[b) Đúng. Vì $C(-6;6;0)$ nên $arrow(O C)=(-6;6;0)$.]
  #paragraph[c) Đúng. Ta có $K(0;0;5)$, $F(2;6;5)$, $G(-6;6;5)$. Trung điểm $L$ của $F G$ là $L(-2;6;5)$.]
@@ -71,10 +71,9 @@
  #paragraph[Suy ra $x=1300$, $y=750$, $z="15,5"$. Vậy $N(1300;750;"15,5")$.]
 ],
 "tu-luyen-1":[
- #fig("room-simple-solution")
+ #fig("room-simple-solution",width:72.765mm)
  #paragraph[Đặt tên các điểm như hình. Ta có $O'(0;0;3)$ và $B'(8;6;3)$. Điểm treo đèn $I$ ở chính giữa trần nhà nên là trung điểm của đường chéo $O'B'$.]
- #formula(($I(frac(0+8,2);frac(0+6,2);frac(3+3,2))$,$=I(4;3;3)$,))
- #paragraph[Chọn *C*.]
+ #paragraph[Suy ra $I(frac(0+8,2);frac(0+6,2);frac(3+3,2))=I(4;3;3)$. Chọn *C*.]
 ],
 "tu-luyen-2":[
  #paragraph[a) Đúng. Điểm $D∈O y$, $A D=7$ nên $D(0;7;0)$.]
@@ -104,8 +103,7 @@
  #paragraph[b) Sai. Ta có $arrow(A H)=(-4;5;3)$ và $arrow(A F)=(0;0;3)$.]
  #paragraph[c) Sai. $arrow(A H)⋅arrow(A F)=(-4)⋅0+5⋅0+3⋅3=9$.]
  #paragraph[d) Đúng. Mặt phẳng $(O z x)$ vuông góc với hai mặt $(F G Q P)$ và $(F G H E)$, nên $angle P F E$ là góc phẳng của góc nhị diện cần tìm.]
- #formula(($arrow(F P)=(-2;0;1), quad arrow(F E)=(-4;0;0)$,$cos angle P F E=frac(arrow(F P)⋅arrow(F E),abs(arrow(F P)) abs(arrow(F E)))$,$=frac(8,4sqrt(5))=frac(2sqrt(5),5)$,))
- #paragraph[Suy ra $angle P F E≈"26,6"°$.]
+ #paragraph[Ta có $arrow(F P)=(-2;0;1)$, $arrow(F E)=(-4;0;0)$, nên $cos angle P F E=frac(8,4sqrt(5))=frac(2sqrt(5),5)$. Suy ra $angle P F E≈"26,6"°$.]
 ],
 "tu-luyen-6":[
  #paragraph[Vì $A'(240;450;0)$ nên $A'A=450$ cm và $A'O'=240$ cm. Do đó $a=450$, $b=240$.]
@@ -114,7 +112,7 @@
  #paragraph[Vậy $a+b+c=450+240+60sqrt(29)≈1013$.]
 ],
 "tu-luyen-7":[
- #fig("warehouse-solution")
+ #fig("warehouse-solution",width:115mm)
  #paragraph[a) Đúng. Ta có $A(4;0;0)$, $B(4;6;0)$, $C(0;6;0)$ và $H(0;6;5)$. Hai điểm $P$, $Q$ cùng hoành độ, cao độ; $P Q=A B=6$ nên $arrow(P Q)=(0;6;0)$.]
  #paragraph[b) Sai. Điểm $G$ có tọa độ $(4;6;5)$.]
  #paragraph[c) Đúng. Gọi $I$ là trung điểm $E F$. Tam giác $E F P$ cân tại $P$ nên $P I⊥E F$. Vì $Q G⊥F G$ và $H G⊥F G$, góc nhị diện $[Q,F G,H]$ có góc phẳng $angle Q G H=45°$.]
@@ -123,7 +121,7 @@
  #formula(($H M=sqrt(H Q^2+Q M^2)=sqrt(10) quad ("m")$,$O E+E H+H M=5+6+sqrt(10)=11+sqrt(10) quad ("m")$,))
 ],
 "tu-luyen-8":[
- #fig("hanging-ball-solution")
+ #fig("hanging-ball-solution",width:65.1mm)
  #paragraph[Gọi $I$ là tâm quả cầu, $D$ là điểm thấp nhất. Vì quả cầu tiếp xúc với hai tường vuông góc nên khoảng cách từ $I$ đến giao tuyến của hai tường là $I K=r sqrt(2)$.]
  #paragraph[Ta có $D E=H O=20$, $B K=80-20-r=60-r$. Dây treo ngắn nhất nối $B$ với mặt cầu nên $B$, $A$, $I$ thẳng hàng và $I B=r+30$.]
  #paragraph[Áp dụng định lý Pythagore trong tam giác vuông $B I K$:]
@@ -159,7 +157,7 @@
  #paragraph[Máy bay giữ nguyên vận tốc và hướng bay, hai khoảng thời gian $A B$ và $B D$ đều là 10 phút, nên:]
  #formula(($arrow(B D)=arrow(A B)=(140;50;1)$,))
  #paragraph[Mặt khác $arrow(B D)=(x-940;y-550;z-8)$, do đó:]
- #formula(($cases(x-940=140,y-550=50,z-8=1)$,$⇒cases(x=1080,y=600,z=9)$,))
+ #formula(($cases(x-940=140,y-550=50,z-8=1) ⇒ cases(x=1080,y=600,z=9)$,))
  #paragraph[Vậy $D(1080;600;9)$ và $x+y+z=1689$.]
 ],
 "tu-luyen-14":[

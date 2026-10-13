@@ -35,7 +35,7 @@
   #align(right, text(font: fonts.course, size: 11pt, style: "italic")[\- #author -])
 ]
 
-#let lesson(title, body, variant: "de", branding: lesson-style.branding, heading-image: none, heading-content: none, heading-top-trim: lesson-style.heading-top-trim) = {
+#let lesson(title, body, variant: "de", branding: lesson-style.branding, heading-image: none, heading-content: none, header-content: none, heading-top-trim: lesson-style.heading-top-trim) = {
   assert(("de", "de-cach", "dap-an").contains(variant), message: "Unknown lesson variant")
   set document(title: title)
   set text(font: fonts.body, size: lesson-style.body-size, fill: palette.ink, lang: "vi", overhang: false)
@@ -50,8 +50,8 @@
     background: context {
       let number = counter(page).get().first()
       let total = counter(page).final().first()
-      place(top + left, running-head(branding.badge, branding.header,
-        branded: true, margin: lesson-style.margin))
+      place(top + left, if header-content != none {header-content} else {running-head(branding.badge, branding.header,
+        branded: true, margin: lesson-style.margin)})
       place(bottom + left, running-foot(branding.footer, number, total,
         margin: lesson-style.margin))
     },
@@ -187,7 +187,7 @@
 ]
 
 #let exercise(number, body, answers: (), statements: (), solution: [],
-  variant: "de", writing-lines: 6, source-id: none, keep-together: true, flow-stem: false) = {
+  variant: "de", writing-lines: 6, source-id: none, keep-together: true, flow-stem: false, statement-table: false) = {
   let stem = [
     #if source-id != none {
       context [#metadata((id: source-id, page: counter(page).get().first())) <exercise-location>]
@@ -200,8 +200,19 @@
     #if keep-together or flow-stem {stem} else {block(width:100%,breakable:false,above:0pt,below:0pt,stem)}
     #if statements.len()>0 {
       block(width:100%,above:lesson-style.statement-before,below:0pt,
-        grid(columns:(1fr,),row-gutter:lesson-style.statement-gap,
-          ..statements.map(statement=>block(width:100%,above:0pt,below:0pt,statement))))
+        if statement-table {
+          set text(size:12.5pt)
+          table(columns:(1fr,17mm,17mm),inset:(x:2.5mm,y:2.5mm),stroke:0.6pt+palette.primary,
+            align:(x,y)=>if x==0 {left+top} else {center+horizon},
+            fill:(x,y)=>if y==0 {palette.primary.lighten(91%)} else {none},
+            table.header(..([Mệnh đề],[Đúng],[Sai]).map(t=>text(fill:palette.primary,weight:"bold",t))),
+            ..statements.map(s=>(block(width:100%,breakable:false,above:0pt,below:0pt)[
+              #set text(top-edge:"bounds",bottom-edge:"bounds")
+              #set par(justify:false,leading:0.65em,spacing:0pt)
+              #s
+            ],[],[])).flatten())
+        } else {grid(columns:(1fr,),row-gutter:lesson-style.statement-gap,
+          ..statements.map(statement=>block(width:100%,above:0pt,below:0pt,statement)))})
     }
   ]
   if variant == "de-cach" {

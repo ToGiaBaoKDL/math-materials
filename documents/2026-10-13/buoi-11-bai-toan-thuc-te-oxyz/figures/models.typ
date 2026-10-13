@@ -6,11 +6,17 @@
 #let path = draw-path.with(stroke:edge)
 #let label(p,t,dx:0mm,dy:0mm,width:12mm) = draw-label(p,t,dx:dx,dy:dy,width:width)
 #let dot(p) = place(top+left,dx:p.at(0)-0.55mm,dy:p.at(1)-0.55mm,circle(radius:0.55mm,fill:palette.primary,stroke:none))
-#let axes(p,x,y,z,y-offset:(2mm,2mm))={
+#let axes(p,x,y,z,y-offset:(2mm,2mm),starts:none,dashed-y:false)={
  for (v,t,dx,dy) in ((x,[$x$],-2mm,2mm),(y,[$y$],2mm,2mm),(z,[$z$],-2mm,-2mm)) {
-  arrow-line(p,v,color:palette.ink,thickness:0.65pt)
+  let start=if starts==none {p} else {starts.at(if v==x {0} else if v==y {1} else {2})}
+  arrow-line(start,v,color:palette.ink,thickness:0.65pt,dash:if v==y and dashed-y {"dashed"} else {"solid"})
   label(v,t,dx:if v==y {y-offset.at(0)} else {dx},dy:if v==y {y-offset.at(1)} else {dy})
  }
+}
+#let right-mark(p,a,b)={
+ let unit(v)={let d=calc.sqrt((v.at(0)/1mm)*(v.at(0)/1mm)+(v.at(1)/1mm)*(v.at(1)/1mm));(v.at(0)/d,v.at(1)/d)}
+ let u=unit((a.at(0)-p.at(0),a.at(1)-p.at(1)));let v=unit((b.at(0)-p.at(0),b.at(1)-p.at(1)))
+ path(((p.at(0)+2*u.at(0),p.at(1)+2*u.at(1)),(p.at(0)+2*u.at(0)+2*v.at(0),p.at(1)+2*u.at(1)+2*v.at(1)),(p.at(0)+2*v.at(0),p.at(1)+2*v.at(1))),stroke:0.6pt+palette.ink)
 }
 #let flight(kind:"departure") = block(width:92mm,height:73mm)[
  #let o=(24mm,42mm)
@@ -24,21 +30,22 @@
  #path((o,n),stroke:hidden)
  #path((a,n,b),stroke:hidden)
  #path((n,m,c),stroke:hidden)
- #for (p,t,dx,dy) in ((o,[$O$],-3mm,-3mm),(m,[$M$],3mm,-2mm),(n,if kind=="airport" {[$H$]} else {[$N$]},3mm,3mm),(a,[$A$],-1mm,4mm),(b,[$B$],0mm,4mm),(c,[$C$],-3mm,0mm)) {label(p,t,dx:dx,dy:dy)}
- #dot(m)
+ #for (p,t,dx,dy) in ((o,[$O$],-3mm,-3mm),(m,[$M$],3mm,-2mm),(n,if kind=="airport" {[$H$]} else {[$N$]},3mm,3mm),(a,[$A$],-3mm,-3mm),(b,[$B$],0mm,4mm),(c,[$C$],-3mm,0mm)) {label(p,t,dx:dx,dy:dy)}
+ #for pt in (o,m,n,a,b,c) {dot(pt)}
+ #right-mark(a,o,n); #right-mark(b,o,n); #right-mark(c,o,m)
  #let arc(a,b,r)=smooth(t=>(o.at(0)+r*calc.cos(t),o.at(1)+r*calc.sin(t)),
   t=>(-r*calc.sin(t),r*calc.cos(t)),a,b,stroke:0.55pt+palette.primary)
  #if kind=="airport" {
   arc(24.2deg,125.8deg,6mm)
   arc(-29.9deg,24.2deg,12mm)
-  label((26.5mm,53mm),[$64°$])
-  label((42mm,40mm),[$48°$])
+  label((26mm,51mm),text(size:9pt)[$64°$])
+  label((40mm,40mm),text(size:9pt)[$48°$])
   label((46mm,26mm),[$50$])
  } else {
   arc(-90deg,-29.9deg,8mm)
-  arc(0deg,24.2deg,17mm)
-  label((30.5mm,30.7mm),[$65°$])
-  label((48mm,47.2mm),[$32°$])
+  arc(0deg,24.2deg,10mm)
+  label((29mm,33mm),text(size:9pt)[$65°$])
+  label((37mm,44.5mm),text(size:9pt)[$32°$])
   label((48mm,26mm),[$14$])
  }
 ]
@@ -49,7 +56,9 @@
  #axes(o,(10mm,58.5mm),(81mm,42mm),(28mm,3mm))
  #path((a,b)); #path((o,b))
  #path(((16mm,53mm),b,(76mm,42mm)),stroke:hidden)
+ #for pt in (o,a,b,(16mm,53mm),(76mm,42mm)) {dot(pt)}
  #label(a,[$A$],dx:-3mm)
+ #dot(o)
  #label(o,[$O$],dx:-3mm,dy:-3mm)
  #label(b,[$B$],dx:3mm,dy:3mm)
  #label((16mm,53mm),[$K$],dx:-3mm)
@@ -64,22 +73,23 @@
  #let depth=if kind=="coordinates" {5} else {6}
  #let wall=if kind=="coordinates" {3} else {5}
  #let ridge=if kind=="coordinates" {4} else {7}
- #let p(x,y,z)=(24mm+9mm*x+18mm*y/depth,83mm - 28mm*y/depth - 32.5mm*z/wall)
+ #let p(x,y,z)=(24mm+11mm*x+18mm*y/depth,83mm - 28mm*y/depth - 32.5mm*z/wall)
  #let pts=(O:p(0,0,0),A:p(4,0,0),B:p(4,depth,0),C:p(0,depth,0),E:p(0,0,wall),F:p(4,0,wall),G:p(4,depth,wall),H:p(0,depth,wall),P:p(2,0,ridge),Q:p(2,depth,ridge))
- #path((pts.E,pts.P,pts.Q,pts.H),close:true,fill:lesson-style.plane-mint,stroke:none)
+ #path((pts.E,pts.P,pts.Q,pts.H),close:true,fill:lesson-style.plane-sand,stroke:none)
  #path((pts.P,pts.F,pts.G,pts.Q),close:true,fill:lesson-style.plane-sand,stroke:none)
  #path((pts.O,pts.C,pts.B),stroke:hidden)
  #path((pts.C,pts.H),stroke:hidden)
  #path((pts.H,pts.G),stroke:hidden)
  #path((pts.O,pts.A,pts.B,pts.G,pts.Q,pts.H,pts.E),close:true)
  #path((pts.E,pts.P,pts.F,pts.A)); #path((pts.F,pts.G)); #path((pts.P,pts.Q)); #path((pts.E,pts.F))
- #axes(pts.O,p(5.5,0,0),p(0,1.25*depth,0),p(0,0,1.8*wall),y-offset:(5mm,4mm))
+ #axes(pts.O,p(5.5,0,0),p(0,1.4*depth,0),p(0,0,2*wall),y-offset:(2.5mm,2mm),starts:(pts.O,pts.C,pts.O),dashed-y:true)
  #let names=if kind=="coordinates" {
   (O:[$O(0;0;0)$],B:[$B(4;5;0)$],E:[$E(0;0;3)$],G:[$G(4;5;3)$],P:[$P(2;0;4)$],Q:[$Q(2;5;4)$])
  } else {(:)}
  #for (name,pos) in pts {
+  dot(pos);
   let label-body=names.at(name,default:eval("$"+name+"$",mode:"markup"))
-  let dx=if name=="E" {if kind=="coordinates" {-9mm} else {-3mm}} else if ("B","G").contains(name) {if kind=="coordinates" {9mm} else {3mm}} else if name=="P" {if kind=="coordinates" {14mm} else {-3mm}} else {0mm}
+  let dx=if name=="E" {if kind=="coordinates" {-9mm} else {-3mm}} else if ("B","G").contains(name) {if kind=="coordinates" {9mm} else {3mm}} else if name=="P" {if kind=="coordinates" {14mm} else {-7mm}} else {0mm}
   let dy=if name=="P" and kind=="coordinates" {-2mm} else if ("O","A","B","C").contains(name) {4mm} else if ("P","Q").contains(name) {-4mm} else {-3mm}
   if name=="P" and kind=="coordinates" {path((pos,(pos.at(0)+5mm,pos.at(1)-2mm)),stroke:0.45pt+palette.ink)}
   label(pos,label-body,dx:dx,dy:dy,width:30mm)
@@ -89,46 +99,56 @@
   path((pts.E,pts.H,m),stroke:hidden)
   path((pts.P,p(2,0,5)),stroke:hidden)
   dot(m);label(m,[$M$],dx:4mm,dy:-1mm)
-  dot(p(2,0,5));label(p(2,0,5),[$I$],dx:-4mm,dy:-3mm)
+  dot(p(2,0,5));label(p(2,0,5),[$I$],dx:3mm,dy:3mm)
  }
 ]
-#let shifted-warehouse(solution:false) = block(width:100mm,height:94mm)[
- #let p(x,y,z)=(32mm-3mm*x+6mm*y,78mm+4mm*x - 6mm*z)
+#let shifted-warehouse(solution:false) = block(width:112mm,height:103mm)[
+ #let p(x,y,z)=(32mm-3mm*x+7.3mm*y,78mm+4mm*x - 6mm*z)
  #let pts=(O:p(0,0,0),A:p(2,0,0),B:p(2,6,0),C:p(-6,6,0),D:p(-6,0,0),E:p(2,0,5),F:p(2,6,5),G:p(-6,6,5),H:p(-6,0,5),P:p(2,3,7),Q:p(-6,3,7),T:p(-6,3,0),K:p(0,0,5))
- #path((pts.E,pts.P,pts.Q,pts.H),close:true,fill:lesson-style.plane-mint,stroke:none)
+ #path((pts.E,pts.P,pts.Q,pts.H),close:true,fill:lesson-style.plane-sand,stroke:none)
  #path((pts.P,pts.F,pts.G,pts.Q),close:true,fill:lesson-style.plane-sand,stroke:none)
  #path((pts.O,pts.D,pts.C),stroke:hidden); #path((pts.D,pts.H),stroke:hidden); #path((pts.H,pts.G),stroke:hidden)
  #path((pts.A,pts.B,pts.C,pts.G,pts.Q,pts.H,pts.E),close:true)
  #path((pts.E,pts.P,pts.F,pts.B)); #path((pts.F,pts.G)); #path((pts.P,pts.Q)); #path((pts.E,pts.F)); #path((pts.Q,pts.T),stroke:hidden)
- #axes(pts.O,p(5,0,0),p(0,9,0),p(0,0,9))
+ #path((pts.O,pts.K),stroke:hidden)
+ #path((pts.O,pts.A),stroke:hidden)
+ #path((pts.O,p(0,6,0)),stroke:hidden)
+ #axes(pts.O,p(4.5,0,0),p(0,9,0),p(0,0,10),starts:(pts.A,p(0,6,0),pts.K))
  #for (name,pos) in pts {
+  dot(pos);
   label(pos,eval("$"+name+"$",mode:"markup"),dx:if name=="F" {-4mm} else if name=="D" {-4mm} else if ("E","K","O").contains(name) {-3mm} else if ("G","C").contains(name) {3mm} else {0mm},dy:if name=="F" {5mm} else if name=="D" {-4mm} else if ("A","B","T").contains(name) {4mm} else {-3mm})
  }
  #if solution {
   let l=p(-2,6,5)
-  path((pts.O,pts.K,l),stroke:hidden);dot(l);label(l,[$L$],dy:-3mm)
+  path((pts.K,l),stroke:hidden);dot(l);label(l,[$L$],dy:-3mm)
   path((pts.T,p(0,3,0)),stroke:hidden)
   path((pts.C,p(0,6,0)),stroke:hidden)
-  label(p(0,3,0),[$M$],dy:4mm);label(p(0,6,0),[$N$],dy:4mm)
+  dot(p(0,3,0));dot(p(0,6,0));label(p(0,3,0),[$M$],dy:4mm);label(p(0,6,0),[$N$],dy:4mm)
  }
 ]
-#let roof-house(solution:false) = block(width:98mm,height:75mm)[
+#let roof-house(solution:false) = block(width:98mm,height:79mm,inset:(top:4mm))[
  #let p(x,y,z)=(28mm-17mm*x+48mm*y,51mm+13mm*x - 41mm*z)
- #let pts=(O:p(0,0,0),M:p(1,0,0),N:p(1,1,0),K:p(0,1,0),A:p(0,0,0.75),B:p(1,0,0.75),C:p(1,1,0.75),D:p(0,1,0.75),S:p(0.5,0.5,1))
+ #let pts=(O:p(0,0,0),M:p(1,0,0),N:p(1,1,0),K:p(0,1,0),A:p(0,0,0.75),B:p(1,0,0.75),C:p(1,1,0.75),D:p(0,1,0.75),S:(35.5mm,9.12mm))
  #path((pts.B,pts.C,pts.S),close:true,fill:lesson-style.plane-sand,stroke:none)
- #path((pts.C,pts.D,pts.S),close:true,fill:lesson-style.plane-mint,stroke:none)
+ #path((pts.C,pts.D,pts.S),close:true,fill:lesson-style.plane-sand,stroke:none)
  #path((pts.M,pts.O,pts.K),stroke:hidden); #path((pts.O,pts.A),stroke:hidden); #path((pts.B,pts.A,pts.D),stroke:hidden); #path((pts.A,pts.S),stroke:hidden)
  #path((pts.M,pts.N,pts.K,pts.D,pts.S,pts.B),close:true)
  #path((pts.B,pts.C,pts.D)); #path((pts.S,pts.C)); #path((pts.C,pts.N))
- #axes(pts.O,p(1.3,0,0),p(0,1.28,0),p(0,0,1.16))
- #for (name,pos) in pts {label(pos,eval("$"+name+"$",mode:"markup"),dx:if ("A","B","M","O").contains(name) {-3mm} else {3mm},dy:if ("N","K").contains(name) {3mm} else {-2mm})}
+ #axes(pts.O,p(1.3,0,0),p(0,1.28,0),p(0,0,1.24),starts:(pts.M,pts.K,pts.A))
+ #for (name,pos) in pts {
+  dot(pos);label(pos,eval("$"+name+"$",mode:"markup"),dx:if name=="A" {4mm} else if ("B","M","O").contains(name) {-3mm} else {3mm},dy:if name=="A" {3mm} else if name=="C" {4mm} else if ("N","K").contains(name) {3mm} else {-2mm})}
  #label(p(1,0.5,0),[1200 cm],dy:5mm,width:25mm)
  #label(p(0.5,1,0),[900 cm],dx:7mm,dy:4mm,width:22mm)
  #label(p(0,1,0.4),[450 cm],dx:10mm,width:22mm)
  #if solution {
   let i=p(0.5,0.5,0.75);let h=p(0.5,0.5,0)
-  path((pts.B,pts.D),stroke:hidden);path((pts.S,h),stroke:hidden)
-  dot(i);dot(h);label(i,[$I$],dx:3mm);label(h,[$H$],dx:3mm)
+  path((pts.B,pts.D),stroke:hidden);path((pts.M,pts.K),stroke:hidden);path((pts.S,h),stroke:hidden)
+  let d=pts.D
+  let a=calc.atan2((pts.S.at(0)-d.at(0))/1mm,(pts.S.at(1)-d.at(1))/1mm);let b=calc.atan2((pts.B.at(0)-d.at(0))/1mm,(pts.B.at(1)-d.at(1))/1mm)
+  let arc-p(t)=(d.at(0)+7mm*calc.cos(t),d.at(1)+7mm*calc.sin(t))
+  path((d,arc-p(a),arc-p(180deg),arc-p(b)),close:true,fill:palette.primary.lighten(65%),stroke:none)
+  smooth(arc-p,t=>(-7mm*calc.sin(t),7mm*calc.cos(t)),b,if a < b {a+360deg} else {a},stroke:1.3pt+palette.primary)
+  dot(i);dot(h);label(i,[$I$],dx:4mm,dy:3mm);label(h,[$H$],dx:2mm,dy:4mm)
  }
 ]
 #let room(kind:"simple",solution:false) = block(width:95mm,height:66mm)[
@@ -138,11 +158,12 @@
  #path((vs.at(1),vs.at(0),vs.at(3)),stroke:hidden);#path((vs.at(0),vs.at(4)),stroke:hidden)
  #path((vs.at(1),vs.at(2),vs.at(3),vs.at(7),vs.at(4),vs.at(5)),close:true)
  #path((vs.at(5),vs.at(6),vs.at(7)));#path((vs.at(2),vs.at(6)))
- #axes(vs.at(0),p(1.25,0,0),p(0,1.22,0),p(0,0,1.32))
+ #axes(vs.at(0),p(1.25,0,0),p(0,1.22,0),p(0,0,1.32),starts:(vs.at(1),vs.at(3),vs.at(4)))
+ #for pt in vs {dot(pt)}
  #let named=kind=="hanging" or solution
  #if named {
   let names=if kind=="hanging" {("A","B","C","D","A'","B'","C'","D'")} else {("O","A","B","C","O'","A'","B'","C'")}
-  for (j,name) in names.enumerate() {label(vs.at(j),eval("$"+name+"$",mode:"markup"),dx:if (0,1,4,5).contains(j) {-3mm} else {3mm},dy:if j < 4 {3mm} else {-2mm})}
+  for (j,name) in names.enumerate() {label(vs.at(j),eval("$"+name+"$",mode:"markup"),dx:if (0,1,4,5).contains(j) {-3mm} else {3mm},dy:if j==0 {-4mm} else if j==1 {-3mm} else if j==6 {4mm} else if j < 4 {3mm} else {-3mm})}
   path((vs.at(4),vs.at(6)),stroke:hidden);path((vs.at(5),vs.at(7)),stroke:hidden)
  }
  #let ceiling=p(0.5,0.5,1)
@@ -163,10 +184,13 @@
  #path((a,b,bb,aa),close:true,fill:lesson-style.plane-sand,stroke:none)
  #path((a,o,oo),stroke:hidden);#path((o,b),stroke:hidden)
  #path((a,aa,oo,bb,b),close:true);#path((bb,aa))
- #axes(o,p(1.35,0,0),p(0,1.25,0),p(0,0,1.22))
+ #let roof-crossing=(o.at(0),b.at(1))
+ #path((o,roof-crossing),stroke:hidden)
+ #axes(o,p(1.35,0,0),p(0,1.25,0),p(0,0,1.22),starts:(a,oo,roof-crossing))
+ #for pt in (o,a,b,oo,aa,bb) {dot(pt)}
  #for (pos,t,dy) in ((o,[$O$],-3mm),(a,[$A$],3mm),(b,[$B$],-3mm),(oo,[$O'$],3mm),(aa,[$A'$],3mm),(bb,[$B'$],-3mm)) {label(pos,t,dx:if pos==o {4mm} else if pos==oo {3mm} else {0mm},dy:if pos==o {-4mm} else if pos==oo {4mm} else {dy})}
 ]
-#let hanging-ball(solution:false) = block(width:84mm,height:86mm)[
+#let hanging-ball(solution:false) = block(width:94mm,height:92mm,inset:(top:4mm,left:4mm))[
  #if solution {
   let i=(24mm,42mm);let b=(57mm,7mm);let k=(57mm,42mm)
   let d=(24mm,58mm);let e=(24mm,71mm);let h=(57mm,58mm);let o=(57mm,71mm)
@@ -182,7 +206,7 @@
   let o=(39mm,62mm)
   path(((8mm,16mm),(39mm,7mm),(39mm,62mm),(8mm,72mm)),close:true,fill:rgb("#F0F2F2"),stroke:none)
   path(((39mm,7mm),(69mm,21mm),(69mm,76mm),(39mm,62mm)),close:true,fill:rgb("#E4E8E8"),stroke:none)
-  axes(o,(5mm,73mm),(70mm,77mm),(39mm,5mm))
+  axes(o,(2mm,74mm),(77mm,80mm),(39mm,1mm))
   let c=(32mm,43mm);let r=13mm
   place(top+left,dx:c.at(0)-r,dy:c.at(1)-r,circle(radius:r,fill:palette.geometry-tint,stroke:1.1pt+palette.geometry-secondary))
   smooth(t=>(32mm+r*calc.cos(t),43mm+4mm*calc.sin(t)),t=>(-r*calc.sin(t),4mm*calc.cos(t)),180deg,360deg,stroke:(paint:palette.geometry-secondary,thickness:1.1pt,dash:"dashed"))
@@ -194,7 +218,7 @@
   path(((32mm,56mm),(32mm,68mm)),stroke:hidden)
   path(((30.5mm,68mm),(33.5mm,68mm)),stroke:0.7pt+palette.ink)
   label((22mm,63mm),[20 cm],width:20mm)
-  label(o,[$O$],dx:5mm,dy:-3mm)
+  dot(o);label(o,[$O$],dx:5mm,dy:-3mm)
   dot(c)
   arrow-line(c,(23mm,34mm),color:palette.geometry-secondary,thickness:1.1pt,tip:1.6mm)
   label((31mm,34mm),[$r$])
@@ -207,6 +231,7 @@
  #place(top+left,dx:54mm,dy:7mm,ellipse(width:12mm,height:14mm,fill:lesson-style.plane-sand,stroke:edge))
  #path(((56mm,19mm),(58mm,23mm),(62mm,23mm),(64mm,19mm)))
  #path(((58mm,23mm),(58mm,25mm),(62mm,25mm),(62mm,23mm)),close:true)
+ #dot(o)
  #label(o,[$O$],dx:-3mm,dy:-3mm)
  #label((8mm,61mm),[Nam],dx:-1mm,dy:5mm,width:18mm)
  #label((88mm,40mm),[Đông],dy:6mm,width:18mm)
@@ -214,13 +239,14 @@
  #label((71mm,52mm),[5 km],width:20mm)
  #label((67mm,32mm),[0,4 km],width:20mm)
 ]
-#let drones() = block(width:100mm,height:70mm)[
+#let drones() = block(width:116mm,height:70mm)[
  #let o=(49mm,43mm);#let a=(76mm,35mm);#let b=(20mm,12mm)
- #axes(o,(13mm,66mm),(92mm,43mm),(49mm,3mm))
- #path((a,(76mm,58mm),(25mm,58mm)),stroke:hidden)
- #path(((76mm,58mm),(95mm,43mm)),stroke:hidden)
- #path((b,(20mm,31mm),(67mm,31mm)),stroke:hidden)
- #path(((20mm,31mm),(3mm,43mm)),stroke:hidden)
+ #path(((0.5mm,43mm),o,(71mm,24.26mm)),stroke:0.65pt+palette.ink)
+ #axes(o,(22mm,66mm),(106mm,43mm),(49mm,3mm))
+ #path((a,(76mm,58mm),(31.39mm,58mm)),stroke:hidden)
+ #path(((76mm,58mm),(93.61mm,43mm)),stroke:hidden)
+ #path((b,(20mm,31mm),(63.09mm,31mm)),stroke:hidden)
+ #path(((20mm,31mm),(5.91mm,43mm)),stroke:hidden)
  #for (c,t) in ((a,[$A$]),(b,[$B$])) {
   dot(c);label(c,t,dx:3mm,dy:3mm)
   path(((c.at(0)-3mm,c.at(1)-3mm),(c.at(0)+3mm,c.at(1)-7mm)),stroke:0.7pt+palette.ink)
@@ -229,19 +255,24 @@
    place(top+left,dx:c.at(0)+dx - 1.5mm,dy:c.at(1)+dy - 0.5mm,ellipse(width:3mm,height:1mm,stroke:0.5pt+palette.ink))
   }}
  }
- #label(o,[$O$],dx:-3mm,dy:3mm)
+ #dot(o)
+ #label(o,[$O$],dx:3mm,dy:4mm)
 ]
 #let motion(last:"C",ratio:0.5) = block(width:95mm,height:36mm)[
  #let a=(8mm,29mm);#let b=(44mm,20mm)
+ #place(top+left,dx:0mm,dy:12mm,image("airplane.svg",width:15mm))
  #let c=(44mm+36mm*ratio,20mm - 9mm*ratio)
  #arrow-line(a,(89mm,8.75mm),color:palette.primary,thickness:1.1pt)
  #for (p,t) in ((a,[$A$]),(b,[$B$]),(c,eval("$"+last+"$",mode:"markup"))) {dot(p);label(p,t,dy:-4mm)}
 ]
-#let velocity() = block(width:95mm,height:34mm)[
- #arrow-line((9mm,10mm),(31mm,6mm),color:palette.primary,thickness:1.1pt)
- #arrow-line((9mm,29mm),(75mm,17mm),color:palette.primary,thickness:1.1pt)
- #label((5mm,10mm),[$A$],dx:-1mm)
- #label((5mm,29mm),[$B$],dx:-1mm)
- #label((22mm,4mm),[$arrow(a)$])
- #label((48mm,18mm),[$arrow(b)$])
+#let velocity() = block(width:95mm,height:47mm)[
+ #place(top+left,dx:1mm,dy:0mm,image("airplane.svg",width:14mm))
+ #place(top+left,dx:1mm,dy:23mm,image("airplane.svg",width:14mm))
+ #arrow-line((10mm,15mm),(34mm,10mm),color:palette.primary,thickness:1.1pt)
+ #arrow-line((10mm,39mm),(77mm,25mm),color:palette.primary,thickness:1.1pt)
+ #dot((10mm,15mm));#dot((10mm,39mm))
+ #label((10mm,15mm),[$A$],dx:-4mm,dy:1mm)
+ #label((10mm,39mm),[$B$],dx:-4mm,dy:1mm)
+ #label((27mm,8mm),[$arrow(a)$])
+ #label((49mm,27mm),[$arrow(b)$])
 ]

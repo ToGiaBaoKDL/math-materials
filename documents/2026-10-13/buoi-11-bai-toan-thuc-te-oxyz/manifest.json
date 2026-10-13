@@ -356,8 +356,25 @@
       "labels_latest": "Shifted warehouse F inside front face, D upper-left; cable 30° adjacent to arc."
     },
     "geometry_color": "Selected spherical/circular objects: teal #267D8D with pale mint fill; frame/construction stays red; neutral walls/text/axes. Maximum two main hues per figure.",
-    "running_matter": "Restored lesson-specific DXT running-head/running-foot from branding.typ, original branded bands and lesson captions. Margins top 24mm/bottom 22mm. Exam-only style isolated in exam-branding.typ.",
-    "answer_frame": "dap-an only: complete question including figures/options in rounded red 0.7pt frame, 2mm radius, 3.5mm inset, pale fill. Solution outside."
+    "running_matter": "Buoi 11 opts into independent lesson-red-header (regular red text, 1pt red rule); branded lesson footer retained. Exam and other lesson headers unaffected.",
+    "answer_frame": "dap-an only: complete question including figures/options in rounded red 0.7pt frame, 2mm radius, 3.5mm inset, pale fill. Solution outside.",
+    "figure_revision": "Source DOCX media reviewed: flight right-angle marks and smaller nearby angles; point dots; hidden coordinate-axis segments preserved; roof S raised, MK and highlighted SDB added; labels moved clear; SVG airplane in motion figures. Lesson question 4 uses a true/false table. README conventions recorded.",
+    "roof_figure_size": "112mm in all variants (reduced from 120mm); other figure groups enlarged uniformly 5%, including photographs and cabin pair.",
+    "shifted_warehouse_axes": "KO hidden segment restored in shared prompt/solution; x-axis endpoint and label fully inside expanded 103mm figure height.",
+    "cabin_axis": "Oz dashed from O to projected roof boundary BB-prime; solid arrow only above roof.",
+    "warehouse_width": "Warehouse family (coordinates, prompt and solution): front width increased from 36mm to 44mm in projection; height and label sizes unchanged. P label shifted clear of hidden edge.",
+    "true_false_tables": "bai-hoc-4 and tu-luyen-2,5,7 use statement/true/false tables; tu-luyen-9 remains open-ended subquestions.",
+    "drone_axes": "Ox rotated counterclockwise about O; projection feet recalculated to keep parallel guides; icon and O label clear.",
+    "true_false_table_style": "17mm centered True/False columns, 2.5mm cell padding, pale red header with bold red labels.",
+    "house_ball_revision": "Warehouse Oy arrow dashed while inside house; roof faces unified sand; shifted warehouse widened using y projection 7.3mm/unit and 112mm display, hidden OA/Oy segments restored. House Oz extended; ball diagrams 88mm with extended axes and label padding.",
+    "latest_layout": "Answer figures scaled 95% relative to prior sizes; velocity figure gets two SVG aircraft and 8mm top spacing. True/false cells use contained blocks, top alignment, 12.5pt text and 0.65em leading to fit long rows.",
+    "figure_variant_scale": "Additional 5% reduction relative to previous output in dap-an and de-cach; cumulative multipliers 0.9025 and 0.95 respectively. de unchanged.",
+    "answer_pagination": "Targeted answer-only prompt figure widths: q1 70mm, q2 72mm, q3 78mm before variant scaling. Solution roof 70mm and warehouse 92mm. Short q3 calculations set inline to keep complete solution on one page; no global figure reduction.",
+    "practice_pagination": "Targeted answer-only smaller figures in practice 3,5,7,8,9,14; compact equivalent calculations in 5 and 13; solution figures 7/8 reduced individually.",
+    "latest_answer_figures": "Practice 1 and hanging-ball prompt/solution enlarged exactly 5% relative to previous sizes, including explicit answer overrides. Warehouse y label moved closer, I moved below/right clear of edges.",
+    "practice_one_figure_scale": "Additional 5% increase for prompt and solution relative to previous sizes: default 104.7375mm; answer prompt override 70.56mm and solution 66.15mm, before variant scale.",
+    "practice_one_solution_size": "Solution figure only increased 10% from 66.15mm to 72.765mm before variant scaling; prompt unchanged.",
+    "practice_five_seven_size": "Practice 5 and 7 figures enlarged 15%: default warehouse figures 115mm, answer prompt overrides 94.3mm and 101.2mm, practice 7 solution 115mm before variant scale."
   },
   "variants": {
     "de": {
@@ -848,29 +865,29 @@
   "outputs": {
     "de": {
       "pdf": "assets/targets/2026-10-13/buoi-11-bai-toan-thuc-te-oxyz/de.pdf",
-      "pages": 11,
-      "bytes": 1658341,
-      "sha256": "2b1df4558ceb556820a46b122afa05f195e99ab8f14e133660c5e5e4765288d7"
+      "pages": 13,
+      "bytes": 1532843,
+      "sha256": "fd8cabb111584d126dabb450f0337ce9ba162837bff1f3df10d7033c50ded876"
     },
     "de-cach": {
       "pdf": "assets/targets/2026-10-13/buoi-11-bai-toan-thuc-te-oxyz/de-cach.pdf",
-      "pages": 22,
-      "bytes": 1691325,
-      "sha256": "75640d5cfd5b86ecffec9261cd7f5d1812cf41c9a8e70a39f9d313862a0b90b1"
+      "pages": 23,
+      "bytes": 1560398,
+      "sha256": "b0d4c5ae35d268ee6ec1c54b275f643715120bc90c87e27adeb2cf6eace7ffb4"
     },
     "dap-an": {
       "pdf": "assets/targets/2026-10-13/buoi-11-bai-toan-thuc-te-oxyz/dap-an.pdf",
-      "pages": 25,
-      "bytes": 2387532,
-      "sha256": "e661d7f2fdf428ee4bf8960f9614bf936325301ad449ceb694405972fb1c15aa"
+      "pages": 22,
+      "bytes": 2271586,
+      "sha256": "b11fb3d3cd3ad70191678f8e92e8485dcc9c39f8374f97b6fc49cf9b2cd70c95"
     }
   },
   "qa": {
     "build": "All three variants compiled successfully.",
     "pages": {
-      "de": 11,
-      "de-cach": 21,
-      "dap-an": 23
+      "de": 13,
+      "dap-an": 22,
+      "de-cach": 23
     },
     "content": "22 questions and 22 DXT tags in each variant; 22 solution headings in writing and answer variants; none in statement-only variant.",
     "visual_review": "Reviewed all 58 updated PDF pages as contact sheets; enlarged cable solution page and figure sheets checked for labels, spacing, roof projections and cabin captions.",
@@ -882,7 +899,7 @@
     "review_status": "passed",
     "text_bounds": "All extracted words inside page bounds; 22 questions and DXT tags per variant.",
     "opening_layout": "Reviewed vertical opening pages and enlarged sphere figure; checked 22 questions per variant. Remaining exercises retain prior stem grouping.",
-    "latest_review": "All variants rebuilt after restoring original lesson branding and margins. Buoi 11 answer first page visually checked; exam running matter isolated without style changes.",
+    "latest_review": "All three variants compiled after practice 5/7 figure enlargement; 22 questions retained in each.",
     "latest_color_review": "Compiled all variants and visually inspected the five modified geometry models as a contact sheet. Geometry, labels and output page counts retained."
   },
   "source_corrections": [

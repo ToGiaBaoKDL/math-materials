@@ -57,7 +57,7 @@
     "reviewed_date": "2026-10-13",
     "reproducible_build": "Previously validated build path; not rerun for this design revision.",
     "design_revision": "Lesson-style full-bleed ruby branding; teacher centered in header area to the right of logo; footer contacts and folio centered vertically in the same red bar, using visible text bounds.",
-    "latest_review": "All variants compiled after header stroke adjustment to 1pt. Prior layout and content reviews retained.",
+    "latest_review": "All exam variants compiled after increasing body text to 12pt; output page counts refreshed.",
     "pages": {
       "de": 7,
       "de-cach": 12
@@ -68,14 +68,14 @@
     "de": {
       "pdf": "assets/targets/2026-10-13/phan-boi-chau-toan-12-giua-ky-1-ma-1108/de.pdf",
       "pages": 7,
-      "bytes": 637881,
-      "sha256": "5f4fb3daa8376941142c6bfc06bf56d1f72fc7a66996548e8f3d4e46fd3f3e70"
+      "bytes": 637309,
+      "sha256": "7fcc966cde531c2d68177a89688a96abadb5dea51ed9df1c53fd3128f6220955"
     },
     "de-cach": {
       "pdf": "assets/targets/2026-10-13/phan-boi-chau-toan-12-giua-ky-1-ma-1108/de-cach.pdf",
       "pages": 12,
-      "bytes": 647284,
-      "sha256": "13907066c31ee47e4b99f16105f821246a1ba9c3b2eb784e4750318679679fd0"
+      "bytes": 646897,
+      "sha256": "1f48b74304b6062af1340c11f3e4e7c95d100ef2904e08d2c41c514bb1a203a2"
     }
   },
   "metadata": {
@@ -183,7 +183,7 @@
     },
     "geometry_color": "Selected spherical/circular objects: teal #267D8D with pale mint fill; frame/construction stays red; neutral walls/text/axes. Maximum two main hues per figure.",
     "net_colors": "Mint/teal base EFGH matches the folded pyramid base; pale red lateral faces; red edges preserved, hidden edges dashed. At most two main hues.",
-    "running_matter": "Regular red header 11pt and footer 9.5pt; solid header rule 1pt, gap 0.7mm. No footer rule. Exam footer retains black SVG website, Facebook & TikTok icons.",
+    "running_matter": "Optically balanced exam typography: Times New Roman body 12pt; Noto Sans header/footer 11pt via separate shared theme tokens. Header close to 1pt red rule.",
     "answer_frame": "dap-an only: complete question including figures/options in rounded red 0.7pt frame, 2mm radius, 3.5mm inset, pale fill. Solution outside.",
     "cover_leading": "0.65em for organization, school and exam title block (increased from 0.45em).",
     "cover_rule": "Dashed primary-red separator, 0.9pt matching exam-code box border. Header solid 1pt."

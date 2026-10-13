@@ -188,4 +188,14 @@ Mỗi hình dùng tối đa hai màu chính: đỏ thương hiệu cho khung/c�
 
 ### Header/footer và khung đáp án hiện hành
 
-Header/footer **chỉ dành cho đề thi** dùng chữ đỏ, nét thường, không nền màu hay logo DXT; footer đề thi giữ icon SVG website, Facebook và TikTok màu đen, dấu & giữa hai mạng xã hội. Header 11 pt, footer 9,5 pt. Header căn trái “Thầy Đỗ Xuân Thắng”, căn phải “Luyện thi 9+ Toán THPT 10.11.12”, cách đường kẻ đỏ 1 pt bên dưới 0,7 mm. Footer không có đường kẻ, giữ nội dung và số trang căn theo hai lề. Bản `dap-an` của bài giảng và đề thi đặt toàn bộ đề bài/hình/lựa chọn trong khung đỏ bo góc, nền hồng rất nhẹ; lời giải nằm ngoài. Mẫu: `assets/references/dxt-brand-template/answer-frame-reference.png`. Đề thi dùng `exam-branding.typ`; tài liệu bồi dưỡng giữ header/footer DXT riêng trong `branding.typ`, với lề trên 24 mm, dưới 22 mm. Khung đáp án vẫn áp dụng cho cả hai loại tài liệu.
+Header/footer **chỉ dành cho đề thi** dùng chữ đỏ, nét thường, không nền màu hay logo DXT; footer đề thi giữ icon SVG website, Facebook và TikTok màu đen, dấu & giữa hai mạng xã hội. Quy ước đề thi: cỡ chữ nội dung cân bằng thị giác với header/footer. Với bộ font hiện tại, nội dung Times New Roman dùng 12 pt (`exam-style.body-size`), header/footer Noto Sans dùng 11 pt (`exam-style.running-size`); không ép cùng số pt vì hai font có kích thước nhìn khác nhau. Áp dụng cho PBC, NBK và các đề thi mới. Header căn trái “Thầy Đỗ Xuân Thắng”, căn phải “Luyện thi 9+ Toán THPT 10.11.12”, đặt sát đường kẻ đỏ 1 pt bên dưới. Footer không có đường kẻ, giữ nội dung và số trang căn theo hai lề. Bản `dap-an` của bài giảng và đề thi đặt toàn bộ đề bài/hình/lựa chọn trong khung đỏ bo góc, nền hồng rất nhẹ; lời giải nằm ngoài. Mẫu: `assets/references/dxt-brand-template/answer-frame-reference.png`. Đề thi dùng `exam-branding.typ`; tài liệu bồi dưỡng giữ header/footer DXT riêng trong `branding.typ`, với lề trên 24 mm, dưới 22 mm. Khung đáp án vẫn áp dụng cho cả hai loại tài liệu.
+
+### Quy ước nhãn và điểm trong hình học
+
+- Đánh dấu các điểm được đặt tên bằng chấm tròn vừa phải (bán kính khoảng 0,55 mm ở kích thước thiết kế), đồng nhất trong hình.
+- Nhãn góc nhỏ hơn nhãn điểm (khoảng 9 pt so với 11 pt), nằm trong miền góc, gần đỉnh và sát cung góc; không đè cạnh hoặc cung.
+- Nhãn điểm cách đường ít nhất một khoảng nhìn rõ; không dùng nền trắng để che mất cạnh. Kiểm tra cả hình đề và hình lời giải ở kích thước in.
+- Cạnh khuất trùng trục toạ độ vẫn giữ nét đứt; chỉ vẽ trục nét liền ở đoạn không khuất và phần kéo dài ra ngoài hình.
+- Thêm ký hiệu vuông góc tại chân hình chiếu theo dữ kiện; giữ đầy đủ đường phụ, góc nhấn theo hình nguồn.
+
+Buổi 11 chọn header chữ đỏ, đường kẻ 1 pt qua `templates/lesson-branding.typ`; footer vẫn là mẫu bài giảng DXT. Tuỳ chọn `header-content` giữ mẫu này độc lập với header/footer đề thi và các bài giảng khác. Các câu Đúng/Sai của Buổi 11 (bài học 4; tự luyện 2, 5, 7) dùng bảng Mệnh đề / Đúng / Sai trong mọi bản xuất.

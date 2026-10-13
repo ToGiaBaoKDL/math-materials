@@ -59,14 +59,14 @@
 }
 
 // Construct the arrowhead from a unit vector, independent of angle conventions.
-#let arrow-line(start, end, color: palette.primary, thickness: figure-style.edge-width, tip: 1.7mm) = {
+#let arrow-line(start, end, color: palette.primary, thickness: figure-style.edge-width, tip: 1.7mm, dash: "solid") = {
   let dx = end.at(0) - start.at(0)
   let dy = end.at(1) - start.at(1)
   let length = calc.sqrt(calc.pow(dx / 1mm, 2) + calc.pow(dy / 1mm, 2)) * 1mm
   let ux = dx / length
   let uy = dy / length
   let base = (end.at(0) - tip * ux, end.at(1) - tip * uy)
-  place(top + left, line(start: start, end: base, stroke: thickness + color))
+  place(top + left, line(start: start, end: base, stroke: (paint:color,thickness:thickness,dash:dash)))
   place(top + left, polygon(end,
     (base.at(0) - tip * 0.36 * uy, base.at(1) + tip * 0.36 * ux),
     (base.at(0) + tip * 0.36 * uy, base.at(1) - tip * 0.36 * ux),

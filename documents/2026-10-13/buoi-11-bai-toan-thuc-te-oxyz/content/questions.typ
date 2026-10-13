@@ -22,7 +22,7 @@
 #exercise(
 1, [Một máy bay $M$ đang cất cánh từ phi trường với hệ toạ độ không gian $O x y z$ được thiết lập như hình vẽ dưới đây. Cho biết $M$ là vị trí của máy bay và $O M = 14 "," hat(N O B) = 32 ° "," hat(M O C) = 65 °$. Tìm toạ độ điểm $M$
 
-#fig("flight-departure",width:if variant=="dap-an" {82mm} else {none})],
+#fig("flight-departure",width:if variant=="dap-an" {70mm} else {none})],
 variant:variant,
 keep-together:false,
 flow-stem:variant=="dap-an",
@@ -34,7 +34,7 @@ solution:solutions.at("bai-hoc-1")
 #exercise(
 2, [Một chiếc xe đang kéo căng sợi dây cáp $A B$ trong công trường xây dựng, trên đó đã thiết lập hệ toạ độ $O x y z$ như Hình với độ dài đơn vị trên các trục tọa độ bằng $1 m$. Tìm được tọa độ của vectơ $arrow(A B) = lr(( a ; b ; c ))$, khi đó $a + c = ?$
 
-#fig("cable")],
+#fig("cable",width:if variant=="dap-an" {72mm} else {none})],
 variant:variant,
 keep-together:false,
 flow-stem:variant=="dap-an",
@@ -47,7 +47,7 @@ solution:solutions.at("bai-hoc-2")
 3, [Một ngôi nhà gồm hai phần. Phần thân nhà dạng hình hộp chữ nhật $A B C D . O M N K$ có chiều dài 1200 cm, chiều rộng 900 cm, chiều cao 450 cm. Phần mái nhà dạng hình chóp S.ABCD có các cạnh bên bằng nhau và cùng tạo với mặt đáy một góc $α$ có $tan α = frac(1, 5)$. Chọn hệ trục toạ độ Oxyz sao cho M thuộc tia Ox, K thuộc tia Oy, A thuộc tia Oz (như hình vẽ).
 
 Biết $S lr(( a ; b ; c ))$ (đơn vị của a, b, c là centimet). Tính giá trị của biểu thức $P = a + b + c$
-#fig("roof-house")],
+#fig("roof-house",width:if variant=="dap-an" {78mm} else {none})],
 variant:variant,
 keep-together:false,
 source-id:"bai-hoc-3",
@@ -62,6 +62,7 @@ solution:solutions.at("bai-hoc-3")
 variant:variant,
 keep-together:false,
 source-id:"bai-hoc-4",
+statement-table:true,
 writing-lines:4,
 solution:solutions.at("bai-hoc-4"),
 statements:([a) Toạ độ điểm $Q$ là $lr(( - 6 ; 3 ; 5 ))$.],[b) Véc tơ $arrow(O C)$ có toạ độ là $lr(( - 6 ; 6 ; 0 ))$.],[c) Người ta muốn lắp camera quan sát trong nhà kho tại vị trí trung điểm của FG và đầu thu dữ liệu đặt tại vị trí $O$. Người ta thiết kế đường dây cáp nối từ $O$ đến $K$ sau đó nối thẳng đến camera. Độ dài đoạn cáp nối tối thiểu bằng $5 + 2 sqrt(10) "m"$.],[d) Mái nhà được lợp bằng tôn Hoa Sen, giá tiền mỗi mét vuông tôn là 130.000 đồng. Số tiền cần bỏ ra để mua tôn lợp mái nhà là 3.750.000 đồng (không kể hao phí do việc cắt và ghép các miếng tôn, làm tròn kết quả đến hàng nghìn).],)
@@ -118,7 +119,7 @@ solution:solutions.at("bai-hoc-8")
 #exercise(
 1, [Một phòng học có thiết kế dạng hình hộp chữ nhật với chiều dài là $8 m$, chiều rộng là $6 m$ và chiều cao là $3 m$. Một chiếc đèn được treo tại chính giữa trần nhà của phòng học. Xét hệ trục toạ độ $O x y z$ có gốc $O$ trùng với một góc phòng và mặt phẳng $( O x y )$ trùng với mặt sàn, đơn vị đo được lấy theo mét. Hãy tìm toạ độ của điểm treo đèn.
 
-#fig("room-simple")],
+#fig("room-simple",width:if variant=="dap-an" {70.56mm} else {none})],
 variant:variant,
 keep-together:false,
 source-id:"tu-luyen-1",
@@ -134,6 +135,7 @@ answers:([$lr(( 4 ; 4 ; 4 ))$],[$lr(( 4 ; 3 ; 4 ))$],[$lr(( 4 ; 3 ; 3 ))$],[$lr(
 variant:variant,
 keep-together:false,
 source-id:"tu-luyen-2",
+statement-table:true,
 writing-lines:4,
 solution:solutions.at("tu-luyen-2"),
 statements:([a) Điểm $D$ có toạ độ là $lr(( 0 ; 7 ; 0 ))$],[b) Các điểm C, D có tung độ bằng nhau],[c) Vectơ $arrow(C' D')$ có tọa độ $lr(( 6 ; 0 ; 0 ))$],[d) Bóng đèn nằm tại vị trí có tọa độ $lr(( 3 ; "3,5" ; "3,5" ))$],)
@@ -142,7 +144,7 @@ statements:([a) Điểm $D$ có toạ độ là $lr(( 0 ; 7 ; 0 ))$],[b) Các đ
 #exercise(
 3, [Ở một sân bay, vị trí của máy bay được xác định bởi điểm $M$ trong không gian $O x y z$ như hình bên. Gọi $H$  là hình chiếu vuông góc của $M$ xuống mặt phẳng $lr(( O x y ))$. Cho biết $O M = 50$, $lr(( arrow(i) ; arrow(O H) )) = 64 °$, $lr(( arrow(O H) "," arrow(O M) )) = 48 °$. Tìm toạ độ của điểm $M$.
 
-#fig("flight-airport")],
+#fig("flight-airport",width:if variant=="dap-an" {85mm} else {none})],
 variant:variant,
 keep-together:false,
 source-id:"tu-luyen-3",
@@ -166,10 +168,11 @@ solution:solutions.at("tu-luyen-4")
 5, [Hình minh hoạ sơ đồ một ngôi nhà trong hệ trục tọa độ $O x y z$, trong đó nền nhà, bốn bức tường và hai mái nhà đều là hình chữ nhật.
 
 Xét tính đúng sai của các mệnh đề sau:
-#fig("warehouse-coordinates")],
+#fig("warehouse-coordinates",width:if variant=="dap-an" {94.3mm} else {none})],
 variant:variant,
 keep-together:false,
 source-id:"tu-luyen-5",
+statement-table:true,
 writing-lines:4,
 solution:solutions.at("tu-luyen-5"),
 statements:([a) Tọa độ điểm $A$ là $( 4 ; 0 ; 0 )$.],[b) Tọa độ $arrow(A H) = lr(( 4 ; 5 ; 3 ))$],[c) $arrow(A H) . arrow(A F) = 3$],[d) Góc dốc của mái nhà, tức là số đo của góc nhị diện có cạnh là đường thẳng $F G$, hai mặt lần lượt là $( F G Q P )$ và $( F G H E )$ bằng $"26,6" ^(°)$ (làm tròn kết quả đến hàng phần mười của độ)],)
@@ -189,10 +192,11 @@ solution:solutions.at("tu-luyen-6")
 #exercise(
 7, [Một kho chứa hàng có dạng hình lăng trụ đứng $O A F P E C B G Q H$ với $O A F E$ là hình chữ nhật với $E F P$ là tam giác cân tại $P .$ Biết $O A = 4 m ; A B = 6 m ; H C = 5 ;$ độ dốc của mái nhà, tức là số đo góc nhị diện $lr([ Q "," F G "," H ])$ bằng $45 ° .$ Người ta mô hình hóa nhà kho bằng cách chọn hệ trục tọa độ tương ứng như hình vẽ dưới đây (đơn vị trên mỗi trục là $1 m$).
 
-#fig("warehouse")],
+#fig("warehouse",width:if variant=="dap-an" {101.2mm} else {none})],
 variant:variant,
 keep-together:false,
 source-id:"tu-luyen-7",
+statement-table:true,
 writing-lines:4,
 solution:solutions.at("tu-luyen-7"),
 statements:([a) Tọa độ của $arrow(P Q)$ là $lr(( 0 ; 6 ; 0 )) .$],[b) Tọa độ của điểm $G$ là $lr(( 6 ; 4 ; 5 )) .$],[c) Chiều cao kho hàng tức là khoảng cách từ nóc nhà (điểm cao nhất của nóc nhà) và sàn nhà bằng $7 m .$],[d) Người ta muốn lắp camera quan sát trong nhà kho tại vị trí trung điểm của $G Q$ và đầu thu dữ liệu đặt tại vị trí $O .$ Người ta thiết kế đường dây cáp nối từ $O$ đến $E$ rồi từ $E$ đến $H$, sau đó từ $H$ đến camera. Độ dài đoạn cáp nối tối thiểu bằng $11 + sqrt(10)$ m.],)
@@ -201,7 +205,7 @@ statements:([a) Tọa độ của $arrow(P Q)$ là $lr(( 0 ; 6 ; 0 )) .$],[b) T�
 #exercise(
 8, [Một quả bóng hình cầu có bán kính $r$ đang được treo trong một góc của tường nhà (hai bờ tường vuông góc với nhau). Một điểm $B$ cố định nằm trên mép hai bờ tường và cách mặt đất $80$ cm, sợi dây treo quả bóng có độ dài $A B = 30$ cm và đây cũng là độ dài ngắn nhất nối điểm $B$ với mặt xung quanh của quả bóng. Biết rằng quả bóng tiếp xúc với hai bên bờ tường và điểm thấp nhất của quả bóng cách mặt đất $20$ cm. Hỏi quả bóng có đường kính là bao nhiêu cm? (Kết quả làm tròn đến hàng đơn vị)
 
-#fig("hanging-ball")],
+#fig("hanging-ball",width:if variant=="dap-an" {73.5mm} else {none})],
 variant:variant,
 keep-together:false,
 source-id:"tu-luyen-8",
@@ -213,7 +217,7 @@ solution:solutions.at("tu-luyen-8")
 9, [Một chiếc khinh khí cầu bay lên tại điểm $O$. Sau một thời gian bay, chiếc khinh khí cầu cách điểm xuất phát về phía Đông $10 lr(( "km" ))$ và về phía Nam $5 lr(( "km" ))$, đồng thời cách mặt đất $400 lr(( m ))$.
 
 Chọn hệ trục tọa độ $O x y z$, với gốc đặt tại điểm xuất phát của khinh khí cầu, mặt phẳng $lr(( O x y ))$ trùng với mặt đất, trục $O x$ hướng về phía Nam, trục $O y$ hướng về phía Đông, trục $O z$ hướng thẳng đứng lên trời, đơn vị đo lấy theo kilômét (xem hình vẽ).
-#fig("balloon")],
+#fig("balloon",width:if variant=="dap-an" {80mm} else {none})],
 variant:variant,
 keep-together:false,
 source-id:"tu-luyen-9",
@@ -270,7 +274,7 @@ solution:solutions.at("tu-luyen-13")
 #exercise(
 14, [Trong không gian chọn hệ trục tọa độ cho trước, đơn vị đo lấy kilômét, ra đa phát hiện một máy bay chiến đấu của Nga di chuyển với vận tốc và hướng không đổi từ điểm $M lr(( 500 ; 200 ; 8 ))$ đến điểm $N lr(( 800 ; 300 ; 10 ))$ trong 20 phút. Nếu máy bay tiếp tục giữ nguyên vận tốc và hướng bay thì tọa độ của máy bay sau 5 phút tiếp theo bằng bao nhiêu?
 
-#fig("aircraft-radar")],
+#fig("aircraft-radar",width:if variant=="dap-an" {62mm} else {none})],
 variant:variant,
 keep-together:false,
 source-id:"tu-luyen-14",
