@@ -355,7 +355,9 @@
       "compact_statement": "Only de: figures at 80%, padding 3mm above/2mm below; 11 pages. Answer and writing figure sizes retained.",
       "labels_latest": "Shifted warehouse F inside front face, D upper-left; cable 30° adjacent to arc."
     },
-    "geometry_color": "Selected spherical/circular objects: teal #267D8D with pale mint fill; frame/construction stays red; neutral walls/text/axes. Maximum two main hues per figure."
+    "geometry_color": "Selected spherical/circular objects: teal #267D8D with pale mint fill; frame/construction stays red; neutral walls/text/axes. Maximum two main hues per figure.",
+    "running_matter": "Restored lesson-specific DXT running-head/running-foot from branding.typ, original branded bands and lesson captions. Margins top 24mm/bottom 22mm. Exam-only style isolated in exam-branding.typ.",
+    "answer_frame": "dap-an only: complete question including figures/options in rounded red 0.7pt frame, 2mm radius, 3.5mm inset, pale fill. Solution outside."
   },
   "variants": {
     "de": {
@@ -858,16 +860,16 @@
     },
     "dap-an": {
       "pdf": "assets/targets/2026-10-13/buoi-11-bai-toan-thuc-te-oxyz/dap-an.pdf",
-      "pages": 23,
-      "bytes": 2381125,
-      "sha256": "a119864e7bbb0acd9c68fd055d6fc50d28963e6cff042441eed589f16ac76687"
+      "pages": 25,
+      "bytes": 2387532,
+      "sha256": "e661d7f2fdf428ee4bf8960f9614bf936325301ad449ceb694405972fb1c15aa"
     }
   },
   "qa": {
     "build": "All three variants compiled successfully.",
     "pages": {
       "de": 11,
-      "de-cach": 22,
+      "de-cach": 21,
       "dap-an": 23
     },
     "content": "22 questions and 22 DXT tags in each variant; 22 solution headings in writing and answer variants; none in statement-only variant.",
@@ -880,7 +882,7 @@
     "review_status": "passed",
     "text_bounds": "All extracted words inside page bounds; 22 questions and DXT tags per variant.",
     "opening_layout": "Reviewed vertical opening pages and enlarged sphere figure; checked 22 questions per variant. Remaining exercises retain prior stem grouping.",
-    "latest_review": "Reviewed all 11 statement pages and enlarged shifted warehouse/cable figures; verified 22 questions in all variants.",
+    "latest_review": "All variants rebuilt after restoring original lesson branding and margins. Buoi 11 answer first page visually checked; exam running matter isolated without style changes.",
     "latest_color_review": "Compiled all variants and visually inspected the five modified geometry models as a contact sheet. Geometry, labels and output page counts retained."
   },
   "source_corrections": [

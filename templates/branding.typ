@@ -119,4 +119,3 @@
           text(size: folio-size, top-edge: "bounds", bottom-edge: "bounds", if folio == none { [Trang #number/#total] } else { folio }))))
     ]
 })
-

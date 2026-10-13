@@ -22,7 +22,7 @@
 
 #let exam-cover(organization, title, code, duration: 90, subject: "Toán",
   status: none, note: none, organization-size: 12pt) = {
-  set par(justify: false, leading: 0.45em)
+  set par(justify: false, leading: 0.65em)
   grid(columns: (1fr, 1.15fr), column-gutter: 6mm, align: center + top,
     [
       #text(size: organization-size, weight: "bold", fill: palette.primary, organization)
@@ -48,7 +48,7 @@
       radius: 2mm, inset: (x:3mm,y:3mm),
       align(center, text(size:14pt,weight: "bold", fill: palette.primary)[Mã đề: #code])))
   v(3mm)
-  line(length: 100%, stroke: 1.2pt + palette.primary)
+  line(length: 100%, stroke: (paint: palette.primary, thickness: 0.9pt, dash: "dashed"))
 }
 
 #let exam-section(number, title, instruction: []) = block(width: 100%, sticky: true,
@@ -72,8 +72,11 @@
     }
     #if answers.len() > 0 { v(3mm); choices(answers, columns: columns, label-color: palette.exam-blue) }
   ]
-  block(width: 100%, breakable: not keep-together and (ending == none or variant != "de-cach"), sticky: false,
-    above: if variant == "de" {4mm} else {exam-style.question-gap}, below: 0pt)[
+  block(width: 100%, breakable: variant != "dap-an" and not keep-together and (ending == none or variant != "de-cach"), sticky: false,
+    above: if variant == "de" {4mm} else {exam-style.question-gap}, below: 0pt,
+    stroke:if variant=="dap-an" {0.7pt+palette.primary} else {none},
+    fill:if variant=="dap-an" {palette.box-fill} else {none},
+    radius:2mm,inset:if variant=="dap-an" {3.5mm} else {0pt})[
     #prompt
     #if variant == "de-cach" { writing-space(writing-lines) }
   ]

@@ -211,8 +211,11 @@
     ]
     final-writing-space()
   } else {
-    block(width: 100%, breakable: not keep-together, sticky: variant == "dap-an" and keep-together,
-      above: rhythm.question, below: 0pt, prompt)
+    block(width: 100%, breakable: variant != "dap-an" and not keep-together, sticky: false,
+      above: rhythm.question, below: 0pt,
+      stroke:if variant=="dap-an" {0.7pt+palette.primary} else {none},
+      fill:if variant=="dap-an" {palette.box-fill} else {none},
+      radius:2mm,inset:if variant=="dap-an" {3.5mm} else {0pt},prompt)
   }
   if variant == "dap-an" {
     let heading = block(width:100%,sticky:true,above:if keep-together {lesson-style.solution-gap} else {0pt},

@@ -185,3 +185,7 @@ Buổi 11 dùng `templates/lesson.typ`, 8 câu minh họa và 14 câu tự luy�
 ### Màu bổ trợ cho hình khối
 
 Mỗi hình dùng tối đa hai màu chính: đỏ thương hiệu cho khung/cạnh và đường dựng; teal trầm `#267D8D` cho quả cầu, đường tròn hoặc đối tượng cong cần phân biệt. Mặt tô dùng sắc nhạt cùng họ màu (`#E5F1EC`); chữ, trục và nền phụ dùng đen/xám trung tính. Nét thấy và nét khuất của cùng đối tượng giữ cùng màu, phân biệt bằng nét liền/đứt. Chỉ thêm màu khi giúp đọc hình; không tô xen kẽ cạnh hoặc áp dụng teal cho mọi hình.
+
+### Header/footer và khung đáp án hiện hành
+
+Header/footer **chỉ dành cho đề thi** dùng chữ đỏ, nét thường, không nền màu hay logo DXT; footer đề thi giữ icon SVG website, Facebook và TikTok màu đen, dấu & giữa hai mạng xã hội. Header 11 pt, footer 9,5 pt. Header căn trái “Thầy Đỗ Xuân Thắng”, căn phải “Luyện thi 9+ Toán THPT 10.11.12”, cách đường kẻ đỏ 1 pt bên dưới 0,7 mm. Footer không có đường kẻ, giữ nội dung và số trang căn theo hai lề. Bản `dap-an` của bài giảng và đề thi đặt toàn bộ đề bài/hình/lựa chọn trong khung đỏ bo góc, nền hồng rất nhẹ; lời giải nằm ngoài. Mẫu: `assets/references/dxt-brand-template/answer-frame-reference.png`. Đề thi dùng `exam-branding.typ`; tài liệu bồi dưỡng giữ header/footer DXT riêng trong `branding.typ`, với lề trên 24 mm, dưới 22 mm. Khung đáp án vẫn áp dụng cho cả hai loại tài liệu.

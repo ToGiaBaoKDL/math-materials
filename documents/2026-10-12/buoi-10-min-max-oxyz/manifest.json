@@ -88,7 +88,9 @@
     "section_caption": "User-supplied #9Slide02 Tieu de dai Bold, #C00000, no synthetic stroke.",
     "section_badge": "Dark green #006B18 fill; corners rounded over 22% of adjacent edges using quadratic-equivalent cubic curves. 2pt border gradient from pale #E9F8E9 top-left to darker #8FC398 bottom-right (45deg).",
     "brand_source_of_truth": "assets/references/dxt-brand-template/manifest.json",
-    "line_spacing": "Lesson body leading 0.85em (was 0.65em), paragraph gap 3.5mm, statement grid gap 4.5mm, explicit 3.5mm before a–d statements. Writing rules remain 7mm."
+    "line_spacing": "Lesson body leading 0.85em (was 0.65em), paragraph gap 3.5mm, statement grid gap 4.5mm, explicit 3.5mm before a–d statements. Writing rules remain 7mm.",
+    "running_matter": "Restored lesson-specific DXT running-head/running-foot from branding.typ, original branded bands and lesson captions. Margins top 24mm/bottom 22mm. Exam-only style isolated in exam-branding.typ.",
+    "answer_frame": "dap-an only: complete question including figures/options in rounded red 0.7pt frame, 2mm radius, 3.5mm inset, pale fill. Solution outside."
   },
   "content_mapping": [
     {
@@ -543,78 +545,25 @@
     "de": {
       "pdf": "assets/targets/2026-10-12/buoi-10-min-max-oxyz/de.pdf",
       "pages": 9,
-      "bytes": 498293,
-      "sha256": "0658e8377587130fbb0e6ba5c0e1dd6d93d7ed3d03133751b89cff7e316fa75d",
-      "previews": [
-        "assets/targets/2026-10-12/buoi-10-min-max-oxyz/previews/de/page-01.png",
-        "assets/targets/2026-10-12/buoi-10-min-max-oxyz/previews/de/page-02.png",
-        "assets/targets/2026-10-12/buoi-10-min-max-oxyz/previews/de/page-03.png",
-        "assets/targets/2026-10-12/buoi-10-min-max-oxyz/previews/de/page-04.png",
-        "assets/targets/2026-10-12/buoi-10-min-max-oxyz/previews/de/page-05.png",
-        "assets/targets/2026-10-12/buoi-10-min-max-oxyz/previews/de/page-06.png",
-        "assets/targets/2026-10-12/buoi-10-min-max-oxyz/previews/de/page-07.png",
-        "assets/targets/2026-10-12/buoi-10-min-max-oxyz/previews/de/page-08.png",
-        "assets/targets/2026-10-12/buoi-10-min-max-oxyz/previews/de/page-09.png"
-      ]
+      "bytes": 498316,
+      "sha256": "c42a7f8df2adb292f3e27dffaa4b3c52131f8a9287f20801babc078114611d4d"
     },
     "de-cach": {
       "pdf": "assets/targets/2026-10-12/buoi-10-min-max-oxyz/de-cach.pdf",
       "pages": 17,
-      "bytes": 521489,
-      "sha256": "8d589537972a05f3248db5a3d9cb1dcce94e865b9a0e0cf004031b07c3d4834f",
-      "previews": [
-        "assets/targets/2026-10-12/buoi-10-min-max-oxyz/previews/de-cach/page-01.png",
-        "assets/targets/2026-10-12/buoi-10-min-max-oxyz/previews/de-cach/page-02.png",
-        "assets/targets/2026-10-12/buoi-10-min-max-oxyz/previews/de-cach/page-03.png",
-        "assets/targets/2026-10-12/buoi-10-min-max-oxyz/previews/de-cach/page-04.png",
-        "assets/targets/2026-10-12/buoi-10-min-max-oxyz/previews/de-cach/page-05.png",
-        "assets/targets/2026-10-12/buoi-10-min-max-oxyz/previews/de-cach/page-06.png",
-        "assets/targets/2026-10-12/buoi-10-min-max-oxyz/previews/de-cach/page-07.png",
-        "assets/targets/2026-10-12/buoi-10-min-max-oxyz/previews/de-cach/page-08.png",
-        "assets/targets/2026-10-12/buoi-10-min-max-oxyz/previews/de-cach/page-09.png",
-        "assets/targets/2026-10-12/buoi-10-min-max-oxyz/previews/de-cach/page-10.png",
-        "assets/targets/2026-10-12/buoi-10-min-max-oxyz/previews/de-cach/page-11.png",
-        "assets/targets/2026-10-12/buoi-10-min-max-oxyz/previews/de-cach/page-12.png",
-        "assets/targets/2026-10-12/buoi-10-min-max-oxyz/previews/de-cach/page-13.png",
-        "assets/targets/2026-10-12/buoi-10-min-max-oxyz/previews/de-cach/page-14.png",
-        "assets/targets/2026-10-12/buoi-10-min-max-oxyz/previews/de-cach/page-15.png",
-        "assets/targets/2026-10-12/buoi-10-min-max-oxyz/previews/de-cach/page-16.png",
-        "assets/targets/2026-10-12/buoi-10-min-max-oxyz/previews/de-cach/page-17.png"
-      ]
+      "bytes": 521373,
+      "sha256": "50569c4cc944d7ebe3c0007adda8d5f9fa251eb4f35c86f0c5d05e578aa7d850"
     },
     "dap-an": {
       "pdf": "assets/targets/2026-10-12/buoi-10-min-max-oxyz/dap-an.pdf",
-      "pages": 21,
-      "bytes": 764261,
-      "sha256": "f07f329c37431bb51a5428e67bbba8c79633c471dec46a013d21d424cdb339aa",
-      "previews": [
-        "assets/targets/2026-10-12/buoi-10-min-max-oxyz/previews/dap-an/page-01.png",
-        "assets/targets/2026-10-12/buoi-10-min-max-oxyz/previews/dap-an/page-02.png",
-        "assets/targets/2026-10-12/buoi-10-min-max-oxyz/previews/dap-an/page-03.png",
-        "assets/targets/2026-10-12/buoi-10-min-max-oxyz/previews/dap-an/page-04.png",
-        "assets/targets/2026-10-12/buoi-10-min-max-oxyz/previews/dap-an/page-05.png",
-        "assets/targets/2026-10-12/buoi-10-min-max-oxyz/previews/dap-an/page-06.png",
-        "assets/targets/2026-10-12/buoi-10-min-max-oxyz/previews/dap-an/page-07.png",
-        "assets/targets/2026-10-12/buoi-10-min-max-oxyz/previews/dap-an/page-08.png",
-        "assets/targets/2026-10-12/buoi-10-min-max-oxyz/previews/dap-an/page-09.png",
-        "assets/targets/2026-10-12/buoi-10-min-max-oxyz/previews/dap-an/page-10.png",
-        "assets/targets/2026-10-12/buoi-10-min-max-oxyz/previews/dap-an/page-11.png",
-        "assets/targets/2026-10-12/buoi-10-min-max-oxyz/previews/dap-an/page-12.png",
-        "assets/targets/2026-10-12/buoi-10-min-max-oxyz/previews/dap-an/page-13.png",
-        "assets/targets/2026-10-12/buoi-10-min-max-oxyz/previews/dap-an/page-14.png",
-        "assets/targets/2026-10-12/buoi-10-min-max-oxyz/previews/dap-an/page-15.png",
-        "assets/targets/2026-10-12/buoi-10-min-max-oxyz/previews/dap-an/page-16.png",
-        "assets/targets/2026-10-12/buoi-10-min-max-oxyz/previews/dap-an/page-17.png",
-        "assets/targets/2026-10-12/buoi-10-min-max-oxyz/previews/dap-an/page-18.png",
-        "assets/targets/2026-10-12/buoi-10-min-max-oxyz/previews/dap-an/page-19.png",
-        "assets/targets/2026-10-12/buoi-10-min-max-oxyz/previews/dap-an/page-20.png",
-        "assets/targets/2026-10-12/buoi-10-min-max-oxyz/previews/dap-an/page-21.png"
-      ]
+      "pages": 22,
+      "bytes": 769098,
+      "sha256": "3af67493000f68bcbbd09af749652daac377b7c8bc9591e2ffa998954697e3df"
     }
   },
   "qa": {
     "compile": "passed",
-    "review_status": "pending",
+    "review_status": "passed",
     "layout_checks": {
       "de": {
         "pages": 9,
@@ -640,6 +589,12 @@
     "content_review": "Corrected reported Vietnamese typos, point-list punctuation, accidental display math, missing coordinate separator in example 6 and missing plus before final coefficient in theory. Full mathematical validation of source solutions is outside this layout/copy-edit pass.",
     "tool_version": "typst 0.15.1 (9dfd3a08)",
     "asset_reorganization": "Font filenames normalized; duplicate uploads removed only after checksum verification; obsolete visuals archived. Rebuilt all three PDFs and previews; verified 21 questions, embedded 9Slide and unchanged page counts. Layout code unchanged from prior visual review.",
-    "template_refactor_regression": "Build passed; all three variants retain 21 questions and page counts 9/17/21."
+    "template_refactor_regression": "Build passed; all three variants retain 21 questions and page counts 9/17/21.",
+    "latest_review": "All variants rebuilt after restoring original lesson branding and margins. Buoi 11 answer first page visually checked; exam running matter isolated without style changes.",
+    "pages": {
+      "de": 9,
+      "de-cach": 17,
+      "dap-an": 21
+    }
   }
 }

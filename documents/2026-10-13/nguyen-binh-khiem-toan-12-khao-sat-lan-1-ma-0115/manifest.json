@@ -72,11 +72,11 @@
     "reviewed_date": "2026-10-13",
     "reproducible_build": "Previously validated build path; not rerun for this design revision.",
     "design_revision": "Lesson-style full-bleed ruby branding; teacher centered in header area to the right of logo; footer contacts and folio centered vertically in the same red bar, using visible text bounds.",
-    "latest_review": "Blue user-supplied machine visually checked beside net on statement PDF page 3; all three variants compiled with 22 questions.",
+    "latest_review": "All variants compiled after header stroke adjustment to 1pt. Prior layout and content reviews retained.",
     "pages": {
       "de": 5,
       "de-cach": 10,
-      "dap-an": 8
+      "dap-an": 10
     },
     "latest_color_review": "Shared net and folded pyramid inspected as enlarged renders; all document variants rebuilt."
   },
@@ -84,20 +84,20 @@
     "de": {
       "pdf": "assets/targets/2026-10-13/nguyen-binh-khiem-toan-12-khao-sat-lan-1-ma-0115/de.pdf",
       "pages": 5,
-      "bytes": 532913,
-      "sha256": "e67bb2cbbee2db0c65cfaa6b18d1e290b958acdaae9f49acc0c90115c279e944"
+      "bytes": 1975998,
+      "sha256": "56fb27ad5e47c5d9a5b72c4499e3c6964aefd8387189f602b266c86986085c8a"
     },
     "de-cach": {
       "pdf": "assets/targets/2026-10-13/nguyen-binh-khiem-toan-12-khao-sat-lan-1-ma-0115/de-cach.pdf",
-      "pages": 10,
-      "bytes": 555293,
-      "sha256": "dc7a6f568416d5a865268ca81e6b9bb5656c9539138600e6afbe0bec84ffec60"
+      "pages": 11,
+      "bytes": 1997223,
+      "sha256": "a980a6330312330faa9844875898546d2ebde05d7f1555fed89efca7237a8b2f"
     },
     "dap-an": {
       "pdf": "assets/targets/2026-10-13/nguyen-binh-khiem-toan-12-khao-sat-lan-1-ma-0115/dap-an.pdf",
-      "pages": 8,
-      "bytes": 625539,
-      "sha256": "e125143a1f83b27237904a0e0997fcd015dd1e5a7ab97e21f9693963529b2ff2"
+      "pages": 10,
+      "bytes": 2071655,
+      "sha256": "e3ed223cadba8ab3d9ffc7464e31c6a4713e3c955cb7967cedf7a0700f929541"
     }
   },
   "metadata": {
@@ -165,10 +165,10 @@
   ],
   "figure_assets": [
     {
-      "path": "documents/2026-10-13/nguyen-binh-khiem-toan-12-khao-sat-lan-1-ma-0115/figures/rice-mill.jpg",
-      "original_name": "mayxatgao.jpg",
-      "sha256": "0c2f8d22ced9167f6b6b8a905e1c43acf2ecf8674f1b7762293be689b55aea1a",
-      "role": "User-supplied blue rice mill photograph, replacing source black machine; 58mm square frame centered next to net diagram."
+      "path": "documents/2026-10-13/nguyen-binh-khiem-toan-12-khao-sat-lan-1-ma-0115/figures/rice-mill.png",
+      "original_name": "Industrial Red and Gray Grain Mill.png",
+      "sha256": "ce26a8cf6ed99abe8e90084d463fb854e3ebc9af2c1ddc45e33b9291d880bffb",
+      "role": "User-provided red and gray grain mill, original transparent PNG preserved; proportional 54mm fit centered in 58mm square alongside net."
     }
   ],
   "implementation": {
@@ -215,8 +215,12 @@
       "pagination": "Choices/solutions may continue on next page; final writing question remains together.",
       "credits": "TOANMATH in all variants; original AI and unofficial-transcription notice restored in NBK answers."
     },
-    "rice_mill": "User-provided blue machine, original JPEG preserved, balanced 58mm photo beside 58.8×57.6mm net.",
-    "net_colors": "Mint/teal base EFGH matches the folded pyramid base; pale red lateral faces; red edges preserved, hidden edges dashed. At most two main hues."
+    "rice_mill": "Red and gray mill PNG; proportional 54mm fit centered in unchanged 58mm square beside net. Old rice-mill.jpg removed.",
+    "net_colors": "Mint/teal base EFGH matches the folded pyramid base; pale red lateral faces; red edges preserved, hidden edges dashed. At most two main hues.",
+    "running_matter": "Regular red header 11pt and footer 9.5pt; solid header rule 1pt, gap 0.7mm. No footer rule. Exam footer retains black SVG website, Facebook & TikTok icons.",
+    "answer_frame": "dap-an only: complete question including figures/options in rounded red 0.7pt frame, 2mm radius, 3.5mm inset, pale fill. Solution outside.",
+    "cover_leading": "0.65em for organization, school and exam title block (increased from 0.45em).",
+    "cover_rule": "Dashed primary-red separator, 0.9pt matching exam-code box border. Header solid 1pt."
   },
   "figure_renders": [
     {
