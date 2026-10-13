@@ -57,29 +57,61 @@
  #let vertices=((0,0,0),(1,0,0),(1,1,0),(0,1,0),(0,0,1),(1,0,1),(1,1,1),(0,1,1))
  #path((p(1,0,0),p(0,0,0),p(0,1,0)),stroke:hidden)
  #path((p(0,0,0),p(0,0,1)),stroke:hidden)
- #for v in vertices {
+ #let center=p(0.5,0.5,0.5)
+ #let corner-radius=0.37
+ // Keep tangency and containment: R + r = sqrt(3)/2 and R <= 1/2.
+ #let radius=(calc.sqrt(3)/2 - corner-radius)*30mm
+ // An octant is a solid bounded by three quarter-disks and a spherical surface.
+ // Its projected convex hull supplies the curved silhouette between those disks.
+ #let turn(a,b,c)=(b.at(0)-a.at(0))*(c.at(1)-a.at(1))-(b.at(1)-a.at(1))*(c.at(0)-a.at(0))
+ #let hull(points)={
+   let pts=points.sorted(key:q=>q.at(0)*10000+q.at(1))
+   let half(seq)={
+     let out=()
+     for q in seq {
+       while out.len()>=2 and turn(out.at(-2),out.last(),q)<=0 {let unused=out.pop()}
+       out.push(q)
+     }
+     out.slice(0,-1)
+   }
+   (half(pts)+half(pts.rev())).map(q=>(q.at(0)*1mm,q.at(1)*1mm))
+ }
+ #let octant(v)={
    let c=p(..v)
-   // Project the three circular arcs bounding the octant into the cube.
    let inward=v.map(t=>if t==0 {1} else {-1})
-   let r=calc.sqrt(3)/2 - 0.4
-   let samples=range(21).map(i=>i*90deg/20)
-   for (u,w) in ((0,1),(1,2),(2,0)) {
-     let pts=samples.map(t=>{
-       let a=v
-       a.at(u)+=r*inward.at(u)*calc.cos(t)
-       a.at(w)+=r*inward.at(w)*calc.sin(t)
-       p(..a)
-     })
-     path((c,)+pts,close:true,stroke:edge,fill:palette.primary.lighten(91%))
+   let r=corner-radius
+   let pts=((c.at(0)/1mm,c.at(1)/1mm),)
+   for i in range(19) {for j in range(19) {
+     let a=i*90deg/18
+     let b=j*90deg/18
+     let unit=(calc.sin(a)*calc.cos(b),calc.sin(a)*calc.sin(b),calc.cos(a))
+     let q=p(..range(3).map(k=>v.at(k)+r*inward.at(k)*unit.at(k)))
+     pts.push((q.at(0)/1mm,q.at(1)/1mm))
+   }}
+   path(hull(pts),close:true,fill:palette.primary.lighten(77%))
+   // Only the three outward-facing cube planes are visible to the viewer.
+   for (u,w,normal) in ((0,1,2),(1,2,0),(2,0,1)) {
+     if v.at(normal)==1 {
+       let arc=range(33).map(i=>{
+         let t=i*90deg/32
+         let a=v
+         a.at(u)+=r*inward.at(u)*calc.cos(t)
+         a.at(w)+=r*inward.at(w)*calc.sin(t)
+         p(..a)
+       })
+       path((c,)+arc,close:true,fill:palette.primary.lighten(if normal==2 {95%} else if normal==0 {89%} else {84%}))
+     }
    }
  }
- #let center=p(0.5,0.5,0.5)
- #let radius=0.4*30mm
- #place(top+left,dx:center.at(0)-radius,dy:center.at(1)-radius,circle(radius:radius,stroke:edge,fill:palette.primary.lighten(86%)))
+ #let depth(v)=0.47*v.at(0)+0.814*v.at(1)+0.342*v.at(2)
+ #let middle=depth((0.5,0.5,0.5))
+ #for v in vertices.sorted(key:depth).filter(v=>depth(v) < middle) {octant(v)}
+ #place(top+left,dx:center.at(0)-radius,dy:center.at(1)-radius,circle(radius:radius,stroke:edge,fill:palette.primary.lighten(92%)))
+ #for v in vertices.sorted(key:depth).filter(v=>depth(v) > middle) {octant(v)}
  #path((p(1,0,0),p(1,1,0),p(0,1,0),p(0,1,1),p(0,0,1),p(1,0,1)),close:true)
  #path((p(1,0,1),p(1,1,1),p(0,1,1)))
  #path((p(1,1,0),p(1,1,1)))
- #label(center,[$O_0$])
+ #draw-label(center,[$O_0$],dx:-5mm,dy:3mm)
  #place(top+left,dx:63mm,dy:0mm,block(width:60mm,height:68mm)[
    #for (i,v) in vertices.enumerate() {
      path((center,p(..v)),stroke:hidden)
@@ -89,6 +121,11 @@
    #path((p(1,1,0),p(1,1,1)))
    #path((p(1,0,0),p(0,0,0),p(0,1,0)),stroke:hidden)
    #path((p(0,0,0),p(0,0,1)),stroke:hidden)
+   // White-centered markers remain legible where several dashed segments meet.
+   #for point in vertices.map(v=>p(..v)) + (center,) {
+     place(top+left,dx:point.at(0)-0.85mm,dy:point.at(1)-0.85mm,
+       circle(radius:0.85mm,fill:white,stroke:0.85pt+palette.primary))
+   }
    #for (i,v) in vertices.enumerate() {
      label(p(..v),[$O_#(i+1)$],dy:if v.at(2)==1 {-3mm} else {3mm})
    }

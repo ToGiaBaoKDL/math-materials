@@ -66,62 +66,31 @@
         "preview_count": "passed"
       }
     },
-    "visual_review": "Inspected rendered first-page red branding. All variants checked for text bounds, contact text on every page, 22 questions, preview counts and checksums.",
+    "visual_review": "Inspected first-page previews of both exams for header/footer alignment. Checked every output for text bounds, branding, page counts, questions and checksums.",
     "source_review": "Questions and figure labels compared against source pages; source solution text checked for the supplied answer variant.",
     "source_checksum": "unchanged",
     "reviewed_date": "2026-10-13",
     "reproducible_build": "Previously validated build path; not rerun for this design revision.",
-    "design_revision": "Rounded ruby header/footer bands with white type; contact icons enlarged from 3 to 4 mm; teacher name 13 pt; footer 9.5 pt. Pagination retained."
+    "design_revision": "Lesson-style full-bleed ruby branding; teacher centered in header area to the right of logo; footer contacts and folio centered vertically in the same red bar, using visible text bounds."
   },
   "outputs": {
     "de": {
       "pdf": "assets/targets/2026-10-13/nguyen-binh-khiem-toan-12-khao-sat-lan-1-ma-0115/de.pdf",
       "pages": 5,
-      "bytes": 607342,
-      "sha256": "c2ef1f1590720f71c24371bab6267c3e3ee25c960e7ee7c04df362dfa3bde4aa",
-      "previews": [
-        "assets/targets/2026-10-13/nguyen-binh-khiem-toan-12-khao-sat-lan-1-ma-0115/previews/de/page-01.png",
-        "assets/targets/2026-10-13/nguyen-binh-khiem-toan-12-khao-sat-lan-1-ma-0115/previews/de/page-02.png",
-        "assets/targets/2026-10-13/nguyen-binh-khiem-toan-12-khao-sat-lan-1-ma-0115/previews/de/page-03.png",
-        "assets/targets/2026-10-13/nguyen-binh-khiem-toan-12-khao-sat-lan-1-ma-0115/previews/de/page-04.png",
-        "assets/targets/2026-10-13/nguyen-binh-khiem-toan-12-khao-sat-lan-1-ma-0115/previews/de/page-05.png"
-      ]
+      "bytes": 601524,
+      "sha256": "a50ced2602dc97ad14a6cd566d33949c5e9dc931776f3f892f363a6cce116dda"
     },
     "de-cach": {
       "pdf": "assets/targets/2026-10-13/nguyen-binh-khiem-toan-12-khao-sat-lan-1-ma-0115/de-cach.pdf",
       "pages": 11,
-      "bytes": 631194,
-      "sha256": "6360f73a7f275a806f18de7e18ce5c43f121156b0ffd3f0709b412ebed8a4189",
-      "previews": [
-        "assets/targets/2026-10-13/nguyen-binh-khiem-toan-12-khao-sat-lan-1-ma-0115/previews/de-cach/page-01.png",
-        "assets/targets/2026-10-13/nguyen-binh-khiem-toan-12-khao-sat-lan-1-ma-0115/previews/de-cach/page-02.png",
-        "assets/targets/2026-10-13/nguyen-binh-khiem-toan-12-khao-sat-lan-1-ma-0115/previews/de-cach/page-03.png",
-        "assets/targets/2026-10-13/nguyen-binh-khiem-toan-12-khao-sat-lan-1-ma-0115/previews/de-cach/page-04.png",
-        "assets/targets/2026-10-13/nguyen-binh-khiem-toan-12-khao-sat-lan-1-ma-0115/previews/de-cach/page-05.png",
-        "assets/targets/2026-10-13/nguyen-binh-khiem-toan-12-khao-sat-lan-1-ma-0115/previews/de-cach/page-06.png",
-        "assets/targets/2026-10-13/nguyen-binh-khiem-toan-12-khao-sat-lan-1-ma-0115/previews/de-cach/page-07.png",
-        "assets/targets/2026-10-13/nguyen-binh-khiem-toan-12-khao-sat-lan-1-ma-0115/previews/de-cach/page-08.png",
-        "assets/targets/2026-10-13/nguyen-binh-khiem-toan-12-khao-sat-lan-1-ma-0115/previews/de-cach/page-09.png",
-        "assets/targets/2026-10-13/nguyen-binh-khiem-toan-12-khao-sat-lan-1-ma-0115/previews/de-cach/page-10.png",
-        "assets/targets/2026-10-13/nguyen-binh-khiem-toan-12-khao-sat-lan-1-ma-0115/previews/de-cach/page-11.png"
-      ]
+      "bytes": 625898,
+      "sha256": "d79337bdc7e3cffe576249f56394d33647c437cd2493027793144a440e69a9ed"
     },
     "dap-an": {
       "pdf": "assets/targets/2026-10-13/nguyen-binh-khiem-toan-12-khao-sat-lan-1-ma-0115/dap-an.pdf",
       "pages": 9,
-      "bytes": 699843,
-      "sha256": "efc97d0cefe1babd529f1b2b28496dccd46f81bff873ab65f7b0b34c45ed8012",
-      "previews": [
-        "assets/targets/2026-10-13/nguyen-binh-khiem-toan-12-khao-sat-lan-1-ma-0115/previews/dap-an/page-01.png",
-        "assets/targets/2026-10-13/nguyen-binh-khiem-toan-12-khao-sat-lan-1-ma-0115/previews/dap-an/page-02.png",
-        "assets/targets/2026-10-13/nguyen-binh-khiem-toan-12-khao-sat-lan-1-ma-0115/previews/dap-an/page-03.png",
-        "assets/targets/2026-10-13/nguyen-binh-khiem-toan-12-khao-sat-lan-1-ma-0115/previews/dap-an/page-04.png",
-        "assets/targets/2026-10-13/nguyen-binh-khiem-toan-12-khao-sat-lan-1-ma-0115/previews/dap-an/page-05.png",
-        "assets/targets/2026-10-13/nguyen-binh-khiem-toan-12-khao-sat-lan-1-ma-0115/previews/dap-an/page-06.png",
-        "assets/targets/2026-10-13/nguyen-binh-khiem-toan-12-khao-sat-lan-1-ma-0115/previews/dap-an/page-07.png",
-        "assets/targets/2026-10-13/nguyen-binh-khiem-toan-12-khao-sat-lan-1-ma-0115/previews/dap-an/page-08.png",
-        "assets/targets/2026-10-13/nguyen-binh-khiem-toan-12-khao-sat-lan-1-ma-0115/previews/dap-an/page-09.png"
-      ]
+      "bytes": 694256,
+      "sha256": "cced4d3a4f89fd5cfdb8a0e920bd33d1beb97a19d8f3e1fc3a64def626ef1166"
     }
   },
   "metadata": {

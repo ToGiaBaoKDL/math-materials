@@ -12,7 +12,7 @@
   show math.equation.where(block: false): it => box(math.display(it))
   show math.frac: it => math.display(it)
   set par(justify: true, leading: leading, spacing: 2.5mm)
-  set page(paper: "a4", margin: (x:12mm,top:26mm,bottom:22mm),
+  set page(paper: "a4", margin: (x:12mm,top:18mm,bottom:16mm),
     background: context {
       place(top + left, exam-header())
       place(bottom + left, exam-footer(code))

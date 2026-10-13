@@ -33,7 +33,7 @@
     "toolchain": "typst 0.15.1 (9dfd3a08)",
     "automated": {
       "de": {
-        "pages": 8,
+        "pages": 7,
         "questions": 22,
         "text_bounds": "passed",
         "branding_every_page": "passed",
@@ -51,50 +51,25 @@
         "preview_count": "passed"
       }
     },
-    "visual_review": "Inspected rendered first-page red branding. All variants checked for text bounds, contact text on every page, 22 questions, preview counts and checksums.",
+    "visual_review": "Inspected first-page previews of both exams for header/footer alignment. Checked every output for text bounds, branding, page counts, questions and checksums.",
     "source_review": "Questions and figure labels compared against source pages; source solution text checked for the supplied answer variant.",
     "source_checksum": "unchanged",
     "reviewed_date": "2026-10-13",
     "reproducible_build": "Previously validated build path; not rerun for this design revision.",
-    "design_revision": "Rounded ruby header/footer bands with white type; contact icons enlarged from 3 to 4 mm; teacher name 13 pt; footer 9.5 pt. Pagination retained."
+    "design_revision": "Lesson-style full-bleed ruby branding; teacher centered in header area to the right of logo; footer contacts and folio centered vertically in the same red bar, using visible text bounds."
   },
   "outputs": {
     "de": {
       "pdf": "assets/targets/2026-10-13/phan-boi-chau-toan-12-giua-ky-1-ma-1108/de.pdf",
-      "pages": 8,
-      "bytes": 795387,
-      "sha256": "01a9fd5039cdafafa47c1fca05b92462ce551bef496cb51dd71282c8a86faac9",
-      "previews": [
-        "assets/targets/2026-10-13/phan-boi-chau-toan-12-giua-ky-1-ma-1108/previews/de/page-01.png",
-        "assets/targets/2026-10-13/phan-boi-chau-toan-12-giua-ky-1-ma-1108/previews/de/page-02.png",
-        "assets/targets/2026-10-13/phan-boi-chau-toan-12-giua-ky-1-ma-1108/previews/de/page-03.png",
-        "assets/targets/2026-10-13/phan-boi-chau-toan-12-giua-ky-1-ma-1108/previews/de/page-04.png",
-        "assets/targets/2026-10-13/phan-boi-chau-toan-12-giua-ky-1-ma-1108/previews/de/page-05.png",
-        "assets/targets/2026-10-13/phan-boi-chau-toan-12-giua-ky-1-ma-1108/previews/de/page-06.png",
-        "assets/targets/2026-10-13/phan-boi-chau-toan-12-giua-ky-1-ma-1108/previews/de/page-07.png",
-        "assets/targets/2026-10-13/phan-boi-chau-toan-12-giua-ky-1-ma-1108/previews/de/page-08.png"
-      ]
+      "pages": 7,
+      "bytes": 802599,
+      "sha256": "a1471b0e55f7343b1e6374350139d420e0b29bd8e576f8bf44b21e721dc82fbf"
     },
     "de-cach": {
       "pdf": "assets/targets/2026-10-13/phan-boi-chau-toan-12-giua-ky-1-ma-1108/de-cach.pdf",
       "pages": 13,
-      "bytes": 807783,
-      "sha256": "8516748b165b6d8f0af97772ab4866b97fae989b0e606fe8db2685a8ff7faad3",
-      "previews": [
-        "assets/targets/2026-10-13/phan-boi-chau-toan-12-giua-ky-1-ma-1108/previews/de-cach/page-01.png",
-        "assets/targets/2026-10-13/phan-boi-chau-toan-12-giua-ky-1-ma-1108/previews/de-cach/page-02.png",
-        "assets/targets/2026-10-13/phan-boi-chau-toan-12-giua-ky-1-ma-1108/previews/de-cach/page-03.png",
-        "assets/targets/2026-10-13/phan-boi-chau-toan-12-giua-ky-1-ma-1108/previews/de-cach/page-04.png",
-        "assets/targets/2026-10-13/phan-boi-chau-toan-12-giua-ky-1-ma-1108/previews/de-cach/page-05.png",
-        "assets/targets/2026-10-13/phan-boi-chau-toan-12-giua-ky-1-ma-1108/previews/de-cach/page-06.png",
-        "assets/targets/2026-10-13/phan-boi-chau-toan-12-giua-ky-1-ma-1108/previews/de-cach/page-07.png",
-        "assets/targets/2026-10-13/phan-boi-chau-toan-12-giua-ky-1-ma-1108/previews/de-cach/page-08.png",
-        "assets/targets/2026-10-13/phan-boi-chau-toan-12-giua-ky-1-ma-1108/previews/de-cach/page-09.png",
-        "assets/targets/2026-10-13/phan-boi-chau-toan-12-giua-ky-1-ma-1108/previews/de-cach/page-10.png",
-        "assets/targets/2026-10-13/phan-boi-chau-toan-12-giua-ky-1-ma-1108/previews/de-cach/page-11.png",
-        "assets/targets/2026-10-13/phan-boi-chau-toan-12-giua-ky-1-ma-1108/previews/de-cach/page-12.png",
-        "assets/targets/2026-10-13/phan-boi-chau-toan-12-giua-ky-1-ma-1108/previews/de-cach/page-13.png"
-      ]
+      "bytes": 817570,
+      "sha256": "6bc0ad065d9f6473476e6747a9797d5bac07719714f69a1647e481b886bfdd4f"
     }
   },
   "metadata": {

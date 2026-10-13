@@ -26,10 +26,10 @@
   }
 }
 
-#let running-head(badge, title, branded: false, title-align: left, size-override: none, margin: document-style.margin) = layout(size => {
+#let running-head(badge, title, branded: false, title-align: left, size-override: none, style: header-style, margin: document-style.margin) = layout(size => {
     set text(font: fonts.ui, weight: document-style.emphasis, fill: palette.paper)
     set par(justify: false, leading: 0pt)
-    let head = header-style
+    let head = style
     let inset = page-insets(margin)
     let cut = head.tab-width - head.tab-bottom
     let badge-top = (head.height - head.badge-diameter)/2
@@ -67,7 +67,8 @@
       #place(top + left, dx: head.badge-left, dy: badge-top, badge-display)
       #place(top + left, dx: title-left,
         block(width: title-width, height: head.bar-height,
-          align(title-align + horizon, fitted-label(title, title-width, title-size))))
+          align(title-align + horizon, text(top-edge: "bounds", bottom-edge: "bounds",
+            fitted-label(title, title-width, title-size)))))
       #for i in range(2) {
         let x = accent.left + i*accent.gap
         place(top + left, polygon(
@@ -113,9 +114,9 @@
         place(top + left, dx: rule-left, dy: bar-top + (foot.bar-height - foot.rule-height)/2,
           fading-rule(rule-right - rule-left, palette.paper, height: foot.rule-height))
       }
-      #place(top + right, dx: -inset.right,
-        block(width: folio-width, height: foot.height, align(right + horizon,
-          text(size: folio-size, if folio == none { [Trang #number/#total] } else { folio }))))
+      #place(top + right, dx: -inset.right, dy: bar-top,
+        block(width: folio-width, height: foot.bar-height, align(right + horizon,
+          text(size: folio-size, top-edge: "bounds", bottom-edge: "bounds", if folio == none { [Trang #number/#total] } else { folio }))))
     ]
 })
 
