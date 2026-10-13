@@ -26,7 +26,7 @@
   }
 }
 
-#let running-head(badge, title, branded: false, margin: document-style.margin) = layout(size => {
+#let running-head(badge, title, branded: false, title-align: left, size-override: none, margin: document-style.margin) = layout(size => {
     set text(font: fonts.ui, weight: document-style.emphasis, fill: palette.paper)
     set par(justify: false, leading: 0pt)
     let head = header-style
@@ -35,7 +35,7 @@
     let badge-top = (head.height - head.badge-diameter)/2
     let title-left = head.tab-width + head.title-gap
     let title-width = size.width - title-left - if branded { 4mm } else { inset.right }
-    let title-size = if branded { head.title-size } else { head.subject-title-size }
+    let title-size = if size-override != none { size-override } else if branded { head.title-size } else { head.subject-title-size }
     let accent = head.accents
     let accent-bottom = head.height - accent.bottom
     block(width: 100%, height: head.height)[
@@ -67,7 +67,7 @@
       #place(top + left, dx: head.badge-left, dy: badge-top, badge-display)
       #place(top + left, dx: title-left,
         block(width: title-width, height: head.bar-height,
-          align(left + horizon, fitted-label(title, title-width, title-size))))
+          align(title-align + horizon, fitted-label(title, title-width, title-size))))
       #for i in range(2) {
         let x = accent.left + i*accent.gap
         place(top + left, polygon(
@@ -83,13 +83,13 @@
     ]
 })
 
-#let running-foot(caption, number, total, margin: document-style.margin) = layout(size => {
+#let running-foot(caption, number, total, margin: document-style.margin, folio: none, folio-width: footer-style.folio-width, folio-size: footer-style.folio-size) = layout(size => {
     set text(font: fonts.ui, weight: document-style.weight, fill: palette.paper)
     set par(justify: false)
     let foot = footer-style
     let inset = page-insets(margin)
     let bar-top = foot.height - foot.bar-height
-    let folio-left = size.width - inset.right - foot.folio-width
+    let folio-left = size.width - inset.right - folio-width
     let caption-width = folio-left - foot.caption-left - 2 * foot.rule-gap
     let caption-label = fitted-label(caption, caption-width, foot.caption-size)
     let text-x = foot.caption-left
@@ -114,8 +114,8 @@
           fading-rule(rule-right - rule-left, palette.paper, height: foot.rule-height))
       }
       #place(top + right, dx: -inset.right,
-        block(width: foot.folio-width, height: foot.height, align(right + horizon,
-          text(size: foot.folio-size)[Trang #number/#total])))
+        block(width: folio-width, height: foot.height, align(right + horizon,
+          text(size: folio-size, if folio == none { [Trang #number/#total] } else { folio }))))
     ]
 })
 

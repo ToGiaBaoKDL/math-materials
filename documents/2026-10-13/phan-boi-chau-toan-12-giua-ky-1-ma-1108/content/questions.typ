@@ -5,14 +5,14 @@
  let q = exam-question.with(variant: variant)
  exam-section("I", [Câu trắc nghiệm nhiều phương án lựa chọn.], instruction: [(3 điểm) Thí sinh trả lời từ câu 1 đến câu 12. Mỗi câu hỏi thí sinh chỉ chọn một phương án.])
  q(1, [Đường cong dưới đây là đồ thị của hàm số nào
- #fig(graph(x => (x*x - 3*x+6)/(x - 1), xrange:(-5,7),yrange:(-8,7),breaks:(1,),xticks:(-4,-2,-1,1,2,4,6),yticks:(-6,-4,-2,2,4),guides:((-3,-6),(-1,-5),(3,3),(5,4)),asymptotes:(((1,-8),(1,7)),((-5,-7),(7,5))),width:76mm,height:92mm,asymptote-stroke:0.7pt+black))],
+ #fig(graph(x => (x*x - 3*x+6)/(x - 1), xrange:(-5,7),yrange:(-8,7),breaks:(1,),xticks:(-4,-2,-1,1,2,4,6),yticks:(-6,-4,-2,2,4),guides:((-3,-6),(-1,-5),(3,3),(5,4)),asymptotes:(((1,-8),(1,7)),((-5,-7),(7,5))),width:68mm,height:82mm,asymptote-stroke:0.7pt+black,y-label-side:left))],
  answers:([$y=(x^2 - 3x+6)/(x - 1)$],[$y=(2x+3)/(x - 1)$],[$y=(x^2-x+3)/(x - 1)$],[$y=-x^3+x^2 - 2x+1$]))
  q(2,[Phương trình đường thẳng đi qua hai điểm cực trị của đồ thị hàm số $y=(x^2 - 3x+6)/(x - 2)$ là],answers:([$y=2x - 3$],[$y=-2x+3$],[$y=2x+3$],[$y=x - 1$]))
  q(3,[Cho hàm số $y=f(x)$ có bảng biến thiên trên nửa khoảng $[-5;7)$ như sau:
  #fig(variation(([$-5$],[$1$],[$7$]),([$-$],[$+$]),([$6$],[$2$],[$9$]),(1,0,1),width:80mm,closed-right:true))
  Mệnh đề nào dưới đây đúng?],answers:([$min_([-5;7)) f(x)=6$],[$max_([-5;7)) f(x)=9$],[$min_([-5;7)) f(x)=2$],[$max_([-5;7)) f(x)=6$]))
  q(4,[Cho hàm số bậc bốn $y=f(x)$ có đồ thị là đường cong như hình bên.
- #fig(graph(x => x*x*x*x - 2*x*x - 1,xrange:(-2.2,2.2),yrange:(-2.5,2.2),xticks:(-2,-1,1,2),yticks:(-2,-1,1),asymptotes:(((-2.2,-0.5),(2.2,-0.5)),)))
+ #fig(graph(x => x*x*x*x - 2*x*x - 1,xrange:(-2.2,2.2),yrange:(-2.5,2.2),xticks:(-2,-1,1,2),yticks:(-2,-1,1),asymptotes:(((-2.2,-0.5),(2.2,-0.5)),),origin-offset:(-1.5mm,-1.5mm),y-label-offsets:("-1":(1.5mm,3mm))))
  Số nghiệm của phương trình $f(x)=-1/2$ là],answers:([$3$],[$2$],[$x=1$],[$4$]))
  q(5,[Giá trị lớn nhất của hàm số $f(x)=-x^3+3x$ trên đoạn $[0;2]$ bằng],answers:([$0$],[$-2$],[$4$],[$2$]))
  q(6,[Cho hàm số $y=f(x)$ có bảng biến thiên như sau

@@ -1,5 +1,6 @@
 #import "theme.typ": palette, fonts, exam-style, plot-style
 #import "components.typ": choices
+#import "exam-branding.typ": exam-header, exam-footer
 #import "writing.typ": writing-space, final-writing-space
 
 #let exam(title, code, body, variant: "de", leading: exam-style.leading) = {
@@ -11,10 +12,11 @@
   show math.equation.where(block: false): it => box(math.display(it))
   show math.frac: it => math.display(it)
   set par(justify: true, leading: leading, spacing: 2.5mm)
-  set page(paper: "a4", margin: exam-style.margin,
-    footer: context align(right, text(size: 10.5pt, fill: palette.primary)[
-      Mã đề thi #code – Trang #counter(page).display()/#counter(page).final().first()
-    ]))
+  set page(paper: "a4", margin: (x:12mm,top:26mm,bottom:22mm),
+    background: context {
+      place(top + left, exam-header())
+      place(bottom + left, exam-footer(code))
+    })
   body
 }
 
@@ -24,6 +26,8 @@
   grid(columns: (0.9fr, 1.25fr), column-gutter: 6mm, align: center + top,
     [
       #text(size: organization-size, weight: "bold", fill: palette.primary, organization)
+      #linebreak()
+      #context text(size:11pt,style:"italic")[(Đề thi gồm #counter(page).final().first() trang)]
       #if status != none { v(2mm); text(weight: "bold", fill: palette.exam-blue, status) }
       #if note != none { linebreak(); text(style: "italic", note) }
     ],

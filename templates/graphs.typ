@@ -4,14 +4,14 @@
 // Curves, guides and labels use the same mathematical coordinate map.
 #let graph(f, xrange: (-3, 3), yrange: (-4, 4),
   width: plot-style.width, height: plot-style.height,
-  breaks: (), xticks: (), yticks: (), guides: (), asymptotes: (), asymptote-stroke: plot-style.guide, origin-offset: (-1.5mm, 1.5mm), name: none) = {
+  breaks: (), xticks: (), yticks: (), guides: (), asymptotes: (), asymptote-stroke: plot-style.guide, origin-offset: (-1.5mm, 1.5mm), y-label-side: auto, y-label-offsets: (:), name: none) = {
   let pad = 6mm
   let p(x, y) = (
     pad + (x - xrange.first()) / (xrange.last() - xrange.first()) * (width - 2 * pad),
     pad + (yrange.last() - y) / (yrange.last() - yrange.first()) * (height - 2 * pad),
   )
-  let label(point, body, horizontal: center, vertical: top) = context {
-    let content = box(fill: white, inset: 0.5mm,
+  let label(point, body, horizontal: center, vertical: top, backing: white) = context {
+    let content = box(fill: backing, inset: 0.5mm,
       text(font: fonts.body, size: plot-style.label-size, body))
     let size = measure(content)
     let dx = if horizontal == right { -size.width } else if horizontal == center { -size.width / 2 } else { 0pt }
@@ -58,7 +58,7 @@
     #label((origin.at(0) - 1mm, pad - 0.5mm), [$y$], horizontal: right, vertical: bottom)
     #label((origin.at(0) + origin-offset.at(0), origin.at(1) + origin-offset.at(1)), [$O$],
       horizontal: if origin-offset.at(0) > 0mm { left } else { right },
-      vertical: if origin-offset.at(1) < 0mm { bottom } else { top })
+      vertical: if origin-offset.at(1) < 0mm { bottom } else { top }, backing: none)
     #for x in xticks {
       let at-break = breaks.contains(x)
       let above = if at-break { true } else { f(x) < 0 }
@@ -72,14 +72,22 @@
         vertical: if above { bottom } else { top })
     }
     #for y in yticks {
+      if y-label-offsets.keys().contains(str(y).replace("−", "-")) {
+        let offset = y-label-offsets.at(str(y).replace("−", "-"))
+        label((origin.at(0) + offset.at(0),p(0,y).at(1) + offset.at(1)),str(y),
+          horizontal: if offset.at(0) > 0mm { left } else { right },vertical:horizon,backing:none)
+        continue
+      }
       // Put labels opposite their horizontal guide/curve branch, beyond tick marks.
       let matching-guides = guides.filter(point => point.at(1) == y)
-      let right-side = if matching-guides.len() > 0 { matching-guides.first().at(0) < 0 } else { y < 0 }
+      let right-side = if y-label-side != auto { y-label-side == right } else if matching-guides.len() > 0 { matching-guides.first().at(0) < 0 } else { y < 0 }
+      let guide-on-side = matching-guides.any(point => (point.at(0) > 0) == right-side)
+      let below-guide = guide-on-side and y < 0
       let on-asymptote = asymptotes.any(pair => pair.at(0).at(1) == y and pair.at(1).at(1) == y)
       label((origin.at(0) + if right-side { if y < 0 { 4mm } else { 2.5mm } } else { -2.5mm },
-        p(0, y).at(1) - if on-asymptote { 1mm } else { 0mm }), str(y),
+        p(0, y).at(1) + if below-guide { 1mm } else if on-asymptote or guide-on-side { -1mm } else { 0mm }), str(y),
         horizontal: if right-side { left } else { right },
-        vertical: if on-asymptote { bottom } else { horizon })
+        vertical: if below-guide { top } else if on-asymptote or guide-on-side { bottom } else { horizon })
     }
     #if name != none {
       label(p(xrange.first(), yrange.first()), name, horizontal: left, vertical: bottom)

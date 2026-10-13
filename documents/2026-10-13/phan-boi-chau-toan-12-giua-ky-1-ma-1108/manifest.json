@@ -29,13 +29,15 @@
   },
   "qa": {
     "compile": "passed",
-    "review_status": "reviewed",
+    "review_status": "pending",
     "toolchain": "typst 0.15.1 (9dfd3a08)",
     "automated": {
       "de": {
-        "pages": 7,
+        "pages": 8,
         "questions": 22,
         "text_bounds": "passed",
+        "branding_every_page": "passed",
+        "cover_page_count": "passed",
         "sha256": "passed",
         "preview_count": "passed"
       },
@@ -43,23 +45,25 @@
         "pages": 13,
         "questions": 22,
         "text_bounds": "passed",
+        "branding_every_page": "passed",
+        "cover_page_count": "passed",
         "sha256": "passed",
         "preview_count": "passed"
       }
     },
-    "visual_review": "Axis-label revision: inspected Q12 grid at small zoom and Q4; increased tick-label offsets, selected side opposite guide lines, moved labels away from asymptotes and roots, and placed Q12 origin labels in the clear upper-right quadrant. Both variants rebuilt, question counts and checksums verified.",
+    "visual_review": "Inspected rendered first-page red branding. All variants checked for text bounds, contact text on every page, 22 questions, preview counts and checksums.",
     "source_review": "Questions and figure labels compared against source pages; source solution text checked for the supplied answer variant.",
     "source_checksum": "unchanged",
     "reviewed_date": "2026-10-13",
     "reproducible_build": "Previously validated build path; not rerun for this design revision.",
-    "design_revision": "Square 65 mm graph choices; Q1 equal axis scale with solid asymptotes and added -1 label; axis ticks throughout; double window border; oblique tank with ball clear of front vertical edge; coordinate-derived LED points H(3,2), I(3,1); oblique square pyramid with dashed base diagonal."
+    "design_revision": "Rounded ruby header/footer bands with white type; contact icons enlarged from 3 to 4 mm; teacher name 13 pt; footer 9.5 pt. Pagination retained."
   },
   "outputs": {
     "de": {
       "pdf": "assets/targets/2026-10-13/phan-boi-chau-toan-12-giua-ky-1-ma-1108/de.pdf",
-      "pages": 7,
-      "bytes": 601298,
-      "sha256": "5b1dfc912067003b2aa17ceb970617e889b6e04c56e7509a9b74bc547cc2fd48",
+      "pages": 8,
+      "bytes": 795387,
+      "sha256": "01a9fd5039cdafafa47c1fca05b92462ce551bef496cb51dd71282c8a86faac9",
       "previews": [
         "assets/targets/2026-10-13/phan-boi-chau-toan-12-giua-ky-1-ma-1108/previews/de/page-01.png",
         "assets/targets/2026-10-13/phan-boi-chau-toan-12-giua-ky-1-ma-1108/previews/de/page-02.png",
@@ -67,14 +71,15 @@
         "assets/targets/2026-10-13/phan-boi-chau-toan-12-giua-ky-1-ma-1108/previews/de/page-04.png",
         "assets/targets/2026-10-13/phan-boi-chau-toan-12-giua-ky-1-ma-1108/previews/de/page-05.png",
         "assets/targets/2026-10-13/phan-boi-chau-toan-12-giua-ky-1-ma-1108/previews/de/page-06.png",
-        "assets/targets/2026-10-13/phan-boi-chau-toan-12-giua-ky-1-ma-1108/previews/de/page-07.png"
+        "assets/targets/2026-10-13/phan-boi-chau-toan-12-giua-ky-1-ma-1108/previews/de/page-07.png",
+        "assets/targets/2026-10-13/phan-boi-chau-toan-12-giua-ky-1-ma-1108/previews/de/page-08.png"
       ]
     },
     "de-cach": {
       "pdf": "assets/targets/2026-10-13/phan-boi-chau-toan-12-giua-ky-1-ma-1108/de-cach.pdf",
       "pages": 13,
-      "bytes": 609116,
-      "sha256": "3c3e31115c9eb986f4e2227557e0db749d667d29c95cae1d1d30a8b0afda7319",
+      "bytes": 807783,
+      "sha256": "8516748b165b6d8f0af97772ab4866b97fae989b0e606fe8db2685a8ff7faad3",
       "previews": [
         "assets/targets/2026-10-13/phan-boi-chau-toan-12-giua-ky-1-ma-1108/previews/de-cach/page-01.png",
         "assets/targets/2026-10-13/phan-boi-chau-toan-12-giua-ky-1-ma-1108/previews/de-cach/page-02.png",
@@ -180,10 +185,12 @@
       "statement_before_mm": 5,
       "pagination": "Questions may span pages; figures and variation tables do not split",
       "graph_first_mm": [
-        76,
-        92
-      ]
-    }
+        68,
+        82
+      ],
+      "tank": "Light fill, solid silhouette, fine dashed equator, complete hidden box edges occluded by ball"
+    },
+    "branding": "templates/exam-branding.typ; logo-original.png; assets/branding/icons/*.svg"
   },
   "figure_renders": [
     {

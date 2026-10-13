@@ -35,50 +35,50 @@
   },
   "qa": {
     "compile": "passed",
-    "review_status": "reviewed",
+    "review_status": "pending",
     "toolchain": "typst 0.15.1 (9dfd3a08)",
     "automated": {
       "de": {
         "pages": 5,
         "questions": 22,
         "text_bounds": "passed",
+        "branding_every_page": "passed",
+        "cover_page_count": "passed",
         "sha256": "passed",
-        "preview_count": "passed",
-        "fonts_embedded": "passed",
-        "ending_near_page_bottom": "passed"
+        "preview_count": "passed"
       },
       "de-cach": {
         "pages": 11,
         "questions": 22,
         "text_bounds": "passed",
+        "branding_every_page": "passed",
+        "cover_page_count": "passed",
         "sha256": "passed",
-        "preview_count": "passed",
-        "fonts_embedded": "passed",
-        "ending_near_page_bottom": "passed"
+        "preview_count": "passed"
       },
       "dap-an": {
         "pages": 9,
         "questions": 22,
         "text_bounds": "passed",
+        "branding_every_page": "passed",
+        "cover_page_count": "passed",
         "sha256": "passed",
-        "preview_count": "passed",
-        "fonts_embedded": "passed",
-        "ending_near_page_bottom": "passed"
+        "preview_count": "passed"
       }
     },
-    "visual_review": "Checked expanded square image: all four italic vertex labels fit within the image. Inspected final answer page: Question III.6, full solution and bottom ending share page 9. Rebuilt three variants and verified 22 questions, preview counts and checksums.",
+    "visual_review": "Inspected rendered first-page red branding. All variants checked for text bounds, contact text on every page, 22 questions, preview counts and checksums.",
     "source_review": "Questions and figure labels compared against source pages; source solution text checked for the supplied answer variant.",
     "source_checksum": "unchanged",
     "reviewed_date": "2026-10-13",
     "reproducible_build": "Previously validated build path; not rerun for this design revision.",
-    "design_revision": "Expanded square image canvas to 54 by 51 mm without scaling the 40 mm square; keep final answer prompt with solution and ending."
+    "design_revision": "Rounded ruby header/footer bands with white type; contact icons enlarged from 3 to 4 mm; teacher name 13 pt; footer 9.5 pt. Pagination retained."
   },
   "outputs": {
     "de": {
       "pdf": "assets/targets/2026-10-13/nguyen-binh-khiem-toan-12-khao-sat-lan-1-ma-0115/de.pdf",
       "pages": 5,
-      "bytes": 417209,
-      "sha256": "06c78062cd5b2f639a23027b2c870870e1128bf49c22d2e8d25973f7c535e210",
+      "bytes": 607342,
+      "sha256": "c2ef1f1590720f71c24371bab6267c3e3ee25c960e7ee7c04df362dfa3bde4aa",
       "previews": [
         "assets/targets/2026-10-13/nguyen-binh-khiem-toan-12-khao-sat-lan-1-ma-0115/previews/de/page-01.png",
         "assets/targets/2026-10-13/nguyen-binh-khiem-toan-12-khao-sat-lan-1-ma-0115/previews/de/page-02.png",
@@ -90,8 +90,8 @@
     "de-cach": {
       "pdf": "assets/targets/2026-10-13/nguyen-binh-khiem-toan-12-khao-sat-lan-1-ma-0115/de-cach.pdf",
       "pages": 11,
-      "bytes": 434547,
-      "sha256": "5e35bdbc34da5451dd3e71957609be1e4b7a2b426229aff7e67b9a871ff36fc9",
+      "bytes": 631194,
+      "sha256": "6360f73a7f275a806f18de7e18ce5c43f121156b0ffd3f0709b412ebed8a4189",
       "previews": [
         "assets/targets/2026-10-13/nguyen-binh-khiem-toan-12-khao-sat-lan-1-ma-0115/previews/de-cach/page-01.png",
         "assets/targets/2026-10-13/nguyen-binh-khiem-toan-12-khao-sat-lan-1-ma-0115/previews/de-cach/page-02.png",
@@ -109,8 +109,8 @@
     "dap-an": {
       "pdf": "assets/targets/2026-10-13/nguyen-binh-khiem-toan-12-khao-sat-lan-1-ma-0115/dap-an.pdf",
       "pages": 9,
-      "bytes": 505104,
-      "sha256": "ed18cbdcbc45e73828b866ddfb37c62b04ea7dea470f2442bbb6875d941ad436",
+      "bytes": 699843,
+      "sha256": "efc97d0cefe1babd529f1b2b28496dccd46f81bff873ab65f7b0b34c45ed8012",
       "previews": [
         "assets/targets/2026-10-13/nguyen-binh-khiem-toan-12-khao-sat-lan-1-ma-0115/previews/dap-an/page-01.png",
         "assets/targets/2026-10-13/nguyen-binh-khiem-toan-12-khao-sat-lan-1-ma-0115/previews/dap-an/page-02.png",
@@ -227,7 +227,8 @@
       "pagination": "Figures and tables stay intact; final answer prompt, solution and ending stay together.",
       "answer_leading_em": 0.95,
       "solution_gap_mm": 8
-    }
+    },
+    "branding": "templates/exam-branding.typ; logo-original.png; assets/branding/icons/*.svg"
   },
   "figure_renders": [
     {

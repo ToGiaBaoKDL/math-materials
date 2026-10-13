@@ -23,12 +23,15 @@
 // Oblique projection: the rear direction is visible, while the ball stays clear of the front edge.
 #let tank() = block(width:70mm,height:58mm)[
  #let p(x,y,z)=(7mm+0.7mm*x+0.36mm*y,52mm-0.24mm*y - 0.42mm*z)
- #path((p(50,0,0),p(50,50,0),p(0,50,0)),stroke:hidden)
+ #path((p(0,0,0),p(0,50,0),p(50,50,0)),stroke:hidden)
  #path((p(0,50,0),p(0,50,80)),stroke:hidden)
  #let c=p(20,20,20)
  #let r=10mm
  #place(top+left,dx:c.at(0)-r,dy:c.at(1)-r,circle(radius:r,fill:palette.primary.lighten(90%),stroke:edge))
- #place(top+left,dx:c.at(0)-r,dy:c.at(1)-r/3,ellipse(width:2*r,height:2*r/3,stroke:hidden))
+ // A light dashed equator is a shape guide, not a seam on the ball.
+ #place(top+left,dx:c.at(0)-r,dy:c.at(1)-r/3,
+   ellipse(width:2*r,height:2*r/3,
+     stroke:(paint:palette.primary,thickness:0.7pt,dash:"dashed")))
  #path((p(0,0,0),p(50,0,0),p(50,50,0),p(50,50,80),p(0,50,80),p(0,0,80)),close:true)
  #path((p(0,0,80),p(50,0,80),p(50,50,80)))
  #path((p(50,0,0),p(50,0,80)))
