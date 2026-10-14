@@ -187,7 +187,7 @@
 ]
 
 #let exercise(number, body, answers: (), statements: (), solution: [],
-  variant: "de", writing-lines: 6, fill-writing-page: true, writing-keep-prompt: true, source-id: none, keep-together: true, flow-stem: false, statement-table: false) = {
+  variant: "de", writing-lines: 6, fill-writing-page: true, writing-keep-prompt: true, compact-statements: false, source-id: none, keep-together: true, flow-stem: false, statement-table: false) = {
   let stem = [
     #if source-id != none {
       context [#metadata((id: source-id, page: counter(page).get().first())) <exercise-location>]
@@ -202,7 +202,7 @@
       block(width:100%,above:lesson-style.statement-before,below:0pt,
         if statement-table {
           set text(size:12.5pt)
-          table(columns:(1fr,17mm,17mm),inset:(x:2.5mm,y:2.5mm),stroke:0.6pt+palette.primary,
+          table(columns:(1fr,17mm,17mm),inset:(x:2.5mm,y:if compact-statements {1.5mm} else {2.5mm}),stroke:0.6pt+palette.primary,
             align:(x,y)=>if x==0 {left+top} else {center+horizon},
             fill:(x,y)=>if y==0 {palette.primary.lighten(91%)} else {none},
             table.header(..([Mệnh đề],[Đúng],[Sai]).map(t=>text(fill:palette.primary,weight:"bold",t))),
@@ -216,7 +216,7 @@
     }
   ]
   if variant == "de-cach" {
-    block(width: 100%, breakable: statement-table or not writing-keep-prompt, above: rhythm.question, below: 0pt)[
+    block(width: 100%, breakable: not writing-keep-prompt, above: rhythm.question, below: 0pt)[
       #block(width:100%,breakable:statement-table and not writing-keep-prompt,sticky:writing-keep-prompt,prompt)
       #if not writing-keep-prompt {
         block(width:100%,breakable:false,writing-space(writing-lines))

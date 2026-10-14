@@ -3,7 +3,13 @@
 #import "../figures.typ": fig
 
 #let questions(variant)=[
-#let exercise=exercise.with(writing-keep-prompt:false)
+#let exercise=exercise.with(writing-keep-prompt:true,compact-statements:variant=="de-cach")
+#let illustrated(body,name,answer-width:none)=if variant=="de-cach" {
+ grid(columns:(1fr,90mm),column-gutter:5mm,align:top,
+  block[#set text(size:13pt) #set par(leading:0.6em,justify:false) #body],
+  fig(name,width:75mm))
+} else { [#body #fig(name,width:if variant=="dap-an" {answer-width} else {none})] }
+
 #lesson-section([XÁC ĐỊNH TỌA ĐỘ ĐIỂM – VECTƠ TRONG MÔ HÌNH KHÔNG GIAN], number:1,above:0pt)
 
 #theory-box(title:[Phương pháp])[
@@ -23,7 +29,7 @@
 #exercise(
 1, [Một máy bay $M$ đang cất cánh từ phi trường với hệ toạ độ không gian $O x y z$ được thiết lập như hình vẽ dưới đây. Cho biết $M$ là vị trí của máy bay và $O M = 14 "," hat(N O B) = 32 ° "," hat(M O C) = 65 °$. Tìm toạ độ điểm $M$
 
-#fig("flight-departure",width:if variant=="dap-an" {70mm} else {none})],
+#fig("flight-departure",width:if variant=="dap-an" {70mm} else if variant=="de-cach" {85mm} else {none})],
 variant:variant,
 fill-writing-page:true,
 keep-together:false,
@@ -36,7 +42,7 @@ solution:solutions.at("bai-hoc-1")
 #exercise(
 2, [Một chiếc xe đang kéo căng sợi dây cáp $A B$ trong công trường xây dựng, trên đó đã thiết lập hệ toạ độ $O x y z$ như Hình với độ dài đơn vị trên các trục tọa độ bằng $1 m$. Tìm được tọa độ của vectơ $arrow(A B) = lr(( a ; b ; c ))$, khi đó $a + c = ?$
 
-#fig("cable",width:if variant=="dap-an" {72mm} else {none})],
+#fig("cable",width:if variant=="dap-an" {72mm} else if variant=="de-cach" {78mm} else {none})],
 variant:variant,
 fill-writing-page:true,
 keep-together:false,
@@ -60,15 +66,13 @@ solution:solutions.at("bai-hoc-3")
 )
 
 #exercise(
-4, [Một kho chứa hàng có dạng hình lăng trụ đứng ABFPE.DCGQH với ABFE là hình chữ nhật và EFP là tam giác cân tại $P$. Gọi $T$ là trung điểm của $D C$. Các kích thước của kho chứa lần lượt là $A B = 6 "m" ; A E = 5 "m" ; A D = 8 "m" ; Q T = 7 "m"$. Người ta mô hình hoá nhà kho bằng cách chọn hệ trục toạ độ có gốc toạ độ là điểm $O$ thuộc đoạn AD sao cho $O A = 2 "m"$ và các trục toạ độ tương ứng như hình vẽ dưới đây. Khi đó:
-
-#fig("shifted-warehouse")],
+4, [#illustrated([Một kho chứa hàng có dạng hình lăng trụ đứng ABFPE.DCGQH với ABFE là hình chữ nhật và EFP là tam giác cân tại $P$. Gọi $T$ là trung điểm của $D C$. Các kích thước của kho chứa lần lượt là $A B = 6 "m" ; A E = 5 "m" ; A D = 8 "m" ; Q T = 7 "m"$. Người ta mô hình hoá nhà kho bằng cách chọn hệ trục toạ độ có gốc toạ độ là điểm $O$ thuộc đoạn AD sao cho $O A = 2 "m"$ và các trục toạ độ tương ứng như hình vẽ dưới đây. Khi đó:],"shifted-warehouse")],
 variant:variant,
 fill-writing-page:false,
 keep-together:false,
 source-id:"bai-hoc-4",
 statement-table:true,
-writing-lines:10,
+writing-lines:8,
 solution:solutions.at("bai-hoc-4"),
 statements:([a) Toạ độ điểm $Q$ là $lr(( - 6 ; 3 ; 5 ))$.],[b) Véc tơ $arrow(O C)$ có toạ độ là $lr(( - 6 ; 6 ; 0 ))$.],[c) Người ta muốn lắp camera quan sát trong nhà kho tại vị trí trung điểm của FG và đầu thu dữ liệu đặt tại vị trí $O$. Người ta thiết kế đường dây cáp nối từ $O$ đến $K$ sau đó nối thẳng đến camera. Độ dài đoạn cáp nối tối thiểu bằng $5 + 2 sqrt(10) "m"$.],[d) Mái nhà được lợp bằng tôn Hoa Sen, giá tiền mỗi mét vuông tôn là 130.000 đồng. Số tiền cần bỏ ra để mua tôn lợp mái nhà là 3.750.000 đồng (không kể hao phí do việc cắt và ghép các miếng tôn, làm tròn kết quả đến hàng nghìn).],)
 )
@@ -87,6 +91,7 @@ writing-lines:4,
 solution:solutions.at("bai-hoc-5")
 )
 
+#if variant=="de-cach" {pagebreak(weak:true)}
 #exercise(
 6, [Hai chiếc máy bay không người lái cùng bay lên từ một địa điểm. Sau một giờ bay, chiếc thứ nhất cách điểm xuất phát về phía bắc 23 km và về phía tây 18 km, đồng thời cách mặt đất 2 km. Chiếc thứ hai cách điểm xuất phát về phía đông 22 km và về phía nam 27 km , đồng thời cách mặt đất 3 km. Chọn hệ trục tọa độ Oxyz với gốc O đặt tại điểm xuất phát của hai chiếc máy bay, mặt phẳng $lr(( "Oxy" ))$ trùng với mặt đất sao cho trục Ox hướng về phía bắc, trục Oy hướng về phía tây và trục Oz hướng thẳng đứng lên trời, đơn vị đo lấy theo kilômét. Sau đúng một giờ bay, hai máy bay đó cùng bắn một mục tiêu di động trên mặt đất. Biết tổng khoảng cách từ mỗi máy bay đến mục tiêu là nhỏ nhất, lúc đó mục tiêu cách điểm xuất phát của hai máy bay bao nhiêu kilômét (kết quả làm tròn đến hàng phần trăm)?
 
@@ -99,27 +104,28 @@ writing-lines:7,
 solution:solutions.at("bai-hoc-6")
 )
 
+#if variant=="de-cach" {pagebreak(weak:true)}
 #exercise(
 7, [Trong không gian với một hệ trục toạ độ cho trước (đơn vị đo lấy theo kilômét), ra đa phát hiện một chiếc máy bay di chuyển với vận tốc và hướng không đổi từ điểm $A ( 800 ; 500 ; 7 )$ đến điểm $B ( 940 ; 550 ; 8 )$ trong 10 phút. Nếu máy bay tiếp tục giữ nguyên vận tốc và hướng bay thì toạ độ của máy bay sau 5 phút tiếp theo là gì?
 
-#fig("motion-half")],
+#fig("motion-half",width:if variant=="de-cach" {85mm} else {none})],
 variant:variant,
 fill-writing-page:true,
 keep-together:false,
 source-id:"bai-hoc-7",
-writing-lines:5,
+writing-lines:3,
 solution:solutions.at("bai-hoc-7")
 )
 
 #exercise(
 8, [Trong không gian chọn hệ trục tọa độ cho trước, đơn vị đo lấy kilômét, ra đa phát hiện một máy bay chiến đấu của Mỹ di chuyển với vận tốc và hướng không đổi từ điểm $M lr(( 1000 ; 600 ; 14 ))$ đến điểm $N$ trong 30 phút. Nếu máy bay tiếp tục giữ nguyên vận tốc và hướng bay thì tọa độ của máy bay sau 10 phút tiếp theo bằng $Q lr(( 1400 ; 800 ; 16 ))$. Xác định tọa độ vị trí điểm $N$.
 
-#fig("aircraft-us")],
+#fig("aircraft-us",width:if variant=="de-cach" {65mm} else {none})],
 variant:variant,
 fill-writing-page:true,
 keep-together:false,
 source-id:"bai-hoc-8",
-writing-lines:5,
+writing-lines:3,
 solution:solutions.at("bai-hoc-8")
 )
 
@@ -181,7 +187,7 @@ solution:solutions.at("tu-luyen-4")
 5, [Hình minh hoạ sơ đồ một ngôi nhà trong hệ trục tọa độ $O x y z$, trong đó nền nhà, bốn bức tường và hai mái nhà đều là hình chữ nhật.
 
 Xét tính đúng sai của các mệnh đề sau:
-#fig("warehouse-coordinates",width:if variant=="dap-an" {94.3mm} else {none})],
+#fig("warehouse-coordinates",width:if variant=="dap-an" {94.3mm} else if variant=="de-cach" {90mm} else {none})],
 variant:variant,
 fill-writing-page:false,
 keep-together:false,
@@ -205,9 +211,7 @@ solution:solutions.at("tu-luyen-6")
 )
 
 #exercise(
-7, [Một kho chứa hàng có dạng hình lăng trụ đứng $O A F P E C B G Q H$ với $O A F E$ là hình chữ nhật với $E F P$ là tam giác cân tại $P .$ Biết $O A = 4 m ; A B = 6 m ; H C = 5 ;$ độ dốc của mái nhà, tức là số đo góc nhị diện $lr([ Q "," F G "," H ])$ bằng $45 ° .$ Người ta mô hình hóa nhà kho bằng cách chọn hệ trục tọa độ tương ứng như hình vẽ dưới đây (đơn vị trên mỗi trục là $1 m$).
-
-#fig("warehouse",width:if variant=="dap-an" {101.2mm} else {none})],
+7, [#illustrated([Một kho chứa hàng có dạng hình lăng trụ đứng $O A F P E C B G Q H$ với $O A F E$ là hình chữ nhật với $E F P$ là tam giác cân tại $P .$ Biết $O A = 4 m ; A B = 6 m ; H C = 5 ;$ độ dốc của mái nhà, tức là số đo góc nhị diện $lr([ Q "," F G "," H ])$ bằng $45 ° .$ Người ta mô hình hóa nhà kho bằng cách chọn hệ trục tọa độ tương ứng như hình vẽ dưới đây (đơn vị trên mỗi trục là $1 m$).],"warehouse",answer-width:101.2mm)],
 variant:variant,
 fill-writing-page:false,
 keep-together:false,
@@ -277,19 +281,19 @@ variant:variant,
 fill-writing-page:true,
 keep-together:false,
 source-id:"tu-luyen-12",
-writing-lines:4,
+writing-lines:3,
 solution:solutions.at("tu-luyen-12")
 )
 
 #exercise(
 13, [Trong không gian với một hệ trục toạ độ cho trước (đơn vị đo lấy theo kilômét), ra đa phát hiện một chiếc máy bay di chuyển với vận tốc và hướng không đổi từ điểm $A ( 800 ; 500 ; 7 )$ đến điểm $B ( 940 ; 550 ; 8 )$ trong 10 phút. Nếu máy bay tiếp tục giữ nguyên vận tốc và hướng bay thì toạ độ của máy bay sau 10 phút tiếp theo $D lr(( x ; y ; z ))$ khi đó $x + y + z = ?$
 
-#fig("motion-full")],
+#fig("motion-full",width:if variant=="de-cach" {85mm} else {none})],
 variant:variant,
 fill-writing-page:true,
 keep-together:false,
 source-id:"tu-luyen-13",
-writing-lines:5,
+writing-lines:3,
 solution:solutions.at("tu-luyen-13")
 )
 
@@ -301,7 +305,7 @@ variant:variant,
 fill-writing-page:true,
 keep-together:false,
 source-id:"tu-luyen-14",
-writing-lines:5,
+writing-lines:3,
 solution:solutions.at("tu-luyen-14")
 )
 ]
