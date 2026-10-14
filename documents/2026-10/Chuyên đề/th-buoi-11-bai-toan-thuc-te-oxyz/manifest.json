@@ -376,7 +376,7 @@
     "practice_five_seven_size": "Practice 5 and 7 figures enlarged 15%: default warehouse figures 115mm, answer prompt overrides 94.3mm and 101.2mm, practice 7 solution 115mm before variant scale.",
     "writing_intro": "de-cach theory uses 12pt/0.5em, question 1 follows on page 1. Questions 2 and 3 share page 2 with compact figures and 3/4 minimum lines; remaining body space still ruled before footer.",
     "writing_allocation": "Per-question minimum 3–8 lines according to solution length; extra rules still fill unused body area, clipped with 3mm bottom reserve. Short prompts remain with writing space; long true/false tables permit writing continuation.",
-    "writing_layout": "Đề cách: hình lớn; đề và khối dòng viết được tách qua trang khi cần. Câu 4 phần bài học: 10 dòng; tự luyện Câu 2: tối thiểu 7 dòng và kẻ tiếp đến trước footer; Câu 5: 9 dòng, Câu 7: 10 dòng, Câu 8: tối thiểu 9 dòng, Câu 9: tối thiểu 6 dòng."
+    "writing_layout": "Livestream de-cach: each complete question and its writing lines kept on one page; ruled gap 9 mm. Long true/false questions use compact table padding and side-by-side stem/diagram where needed. Bài học 4: 8 minimum lines; tự luyện 2: 7, 5: 8, 7: 9, 8: 9, 9: 6. Short motion questions 7–8 and practice 12–13 share pages. Original branded DXT lesson header retained."
   },
   "variants": {
     "de": {
@@ -874,8 +874,8 @@
     "de-cach": {
       "pdf": "assets/targets/2026-10/Chuyên đề/th-buoi-11-bai-toan-thuc-te-oxyz/de-cach.pdf",
       "pages": 21,
-      "bytes": 1732797,
-      "sha256": "784c9cae153c2c0db19066a76091111831364532c67c8fdd37c7b5fa9143794c"
+      "bytes": 1732506,
+      "sha256": "ac9873db844ecc0f233330d63c1cd9880eaa79d7056fc393c4237aea035f3861"
     },
     "dap-an": {
       "pdf": "assets/targets/2026-10/Chuyên đề/th-buoi-11-bai-toan-thuc-te-oxyz/dap-an.pdf",
@@ -903,7 +903,7 @@
     "opening_layout": "Reviewed vertical opening pages and enlarged sphere figure; checked 22 questions per variant. Remaining exercises retain prior stem grouping.",
     "latest_review": "First writing page visually checked with question 1 below theory; page 2 visually checked with questions 2/3, five writing lines each and footer clearance. All variants rebuilt.",
     "latest_color_review": "Compiled all variants and visually inspected the five modified geometry models as a contact sheet. Geometry, labels and output page counts retained.",
-    "writing_layout_check": "Rebuilt de-cach: 20 pages, 22 question tags and 22 writing headings. Practice question 2 and its writing heading remain on page 9. No page-image review performed."
+    "writing_layout_check": "de-cach rebuilt: 21 pages, 22 question tags and 22 writing headings; per-page counts match. Minimum writing-line bottom estimates stay above the 779 pt body boundary. No page-image review performed."
   },
   "source_corrections": [
     {

@@ -28,7 +28,7 @@
   },
   "qa": {
     "compile": "passed",
-    "review_status": "passed",
+    "review_status": "pending",
     "toolchain": "typst 0.15.1 (9dfd3a08)",
     "automated": {
       "de": {
@@ -72,9 +72,9 @@
     },
     "de-cach": {
       "pdf": "assets/targets/2026-10/Đề thi/phan-boi-chau-toan-12-giua-ky-1-ma-1108/de-cach.pdf",
-      "pages": 12,
-      "bytes": 647465,
-      "sha256": "d037cd608e5a556772fe66baba22e52d7a45af9b30ac96bf5ec11c7763e58b98"
+      "pages": 13,
+      "bytes": 649164,
+      "sha256": "0ce3e5ea1a28acae099fb692579ddc6a96b07e2a17c1905f9e632eb142fe6642"
     }
   },
   "metadata": {

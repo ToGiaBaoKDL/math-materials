@@ -1,5 +1,5 @@
 #import "writing.typ": writing-space, final-writing-space
-#import "theme.typ": palette, fonts, rhythm, document-style, lesson-style, line-style
+#import "theme.typ": palette, fonts, rhythm, document-style, lesson-style, line-style, writing-style
 #import "branding.typ": running-head, running-foot
 #import "components.typ": choices
 
@@ -187,7 +187,7 @@
 ]
 
 #let exercise(number, body, answers: (), statements: (), solution: [],
-  variant: "de", writing-lines: 6, fill-writing-page: true, writing-keep-prompt: true, compact-statements: false, source-id: none, keep-together: true, flow-stem: false, statement-table: false) = {
+  variant: "de", writing-lines: 6, fill-writing-page: true, writing-keep-prompt: true, writing-single-page: false, compact-statements: false, writing-line-gap: writing-style.ruled-gap, source-id: none, keep-together: true, flow-stem: false, statement-table: false) = {
   let stem = [
     #if source-id != none {
       context [#metadata((id: source-id, page: counter(page).get().first())) <exercise-location>]
@@ -216,13 +216,13 @@
     }
   ]
   if variant == "de-cach" {
-    block(width: 100%, breakable: not writing-keep-prompt, above: rhythm.question, below: 0pt)[
+    block(width: 100%, breakable: not writing-single-page and (statement-table or not writing-keep-prompt), above: rhythm.question, below: 0pt)[
       #block(width:100%,breakable:statement-table and not writing-keep-prompt,sticky:writing-keep-prompt,prompt)
       #if not writing-keep-prompt {
-        block(width:100%,breakable:false,writing-space(writing-lines))
-      } else {writing-space(writing-lines)}
+        block(width:100%,breakable:false,writing-space(writing-lines,gap:writing-line-gap))
+      } else {writing-space(writing-lines,gap:writing-line-gap)}
     ]
-    if fill-writing-page {final-writing-space()}
+    if fill-writing-page {final-writing-space(gap:writing-line-gap)}
   } else {
     block(width: 100%, breakable: variant != "dap-an" and not keep-together, sticky: false,
       above: rhythm.question, below: 0pt,

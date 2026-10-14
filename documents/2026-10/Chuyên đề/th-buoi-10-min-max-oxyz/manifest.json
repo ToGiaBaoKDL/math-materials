@@ -533,8 +533,8 @@
     "de-cach": {
       "pdf": "assets/targets/2026-10/Chuyên đề/th-buoi-10-min-max-oxyz/de-cach.pdf",
       "pages": 17,
-      "bytes": 526583,
-      "sha256": "3bc99129500c3cf54422bceb5d2dcbdb1c8d9498c026d0622ba5a5fa53c7747f"
+      "bytes": 526243,
+      "sha256": "220146ecce9dd9fea938d1827f7d0fed67778c6f047a1c3882960f175a9ab862"
     },
     "dap-an": {
       "pdf": "assets/targets/2026-10/Chuyên đề/th-buoi-10-min-max-oxyz/dap-an.pdf",
@@ -545,7 +545,7 @@
   },
   "qa": {
     "compile": "passed",
-    "review_status": "passed",
+    "review_status": "pending",
     "layout_checks": {
       "de": {
         "pages": 9,

@@ -139,7 +139,7 @@
   section-gap: 5mm, statement-gap: 4mm,
 )
 
-#let writing-style = (solution-gap: 6mm, ruled-gap: 7mm, ruled-width: 0.4pt, ruled-opacity: 20%)
+#let writing-style = (solution-gap: 6mm, ruled-gap: 8mm, ruled-width: 0.4pt, ruled-opacity: 20%)
 
 #let plot-style = (
   width: 70mm, height: 48mm, label-size: 10pt,

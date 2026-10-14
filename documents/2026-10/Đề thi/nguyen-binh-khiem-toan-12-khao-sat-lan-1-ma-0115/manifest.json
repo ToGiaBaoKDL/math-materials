@@ -34,7 +34,7 @@
   },
   "qa": {
     "compile": "passed",
-    "review_status": "passed",
+    "review_status": "pending",
     "toolchain": "typst 0.15.1 (9dfd3a08)",
     "automated": {
       "de": {
@@ -88,9 +88,9 @@
     },
     "de-cach": {
       "pdf": "assets/targets/2026-10/Đề thi/nguyen-binh-khiem-toan-12-khao-sat-lan-1-ma-0115/de-cach.pdf",
-      "pages": 10,
-      "bytes": 1995870,
-      "sha256": "c5aa216bc84550cf8d6695b0dc1b4ffea2bab6e3242242736c5df3fab478cc14"
+      "pages": 11,
+      "bytes": 1997432,
+      "sha256": "a7d39adac3fbbf25abdbc4597f2eca524ff9b45262f4b291d7cc8e36725b7fd0"
     },
     "dap-an": {
       "pdf": "assets/targets/2026-10/Đề thi/nguyen-binh-khiem-toan-12-khao-sat-lan-1-ma-0115/dap-an.pdf",

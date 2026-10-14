@@ -3,7 +3,7 @@
 #import "../figures.typ": fig
 
 #let questions(variant)=[
-#let exercise=exercise.with(writing-keep-prompt:true,compact-statements:variant=="de-cach")
+#let exercise=exercise.with(writing-keep-prompt:true,writing-single-page:true,compact-statements:variant=="de-cach",writing-line-gap:9mm)
 #let illustrated(body,name,answer-width:none)=if variant=="de-cach" {
  grid(columns:(1fr,90mm),column-gutter:5mm,align:top,
   {set text(size:13pt); set par(leading:0.6em,justify:false); block(body)},
@@ -29,7 +29,7 @@
 #exercise(
 1, [Một máy bay $M$ đang cất cánh từ phi trường với hệ toạ độ không gian $O x y z$ được thiết lập như hình vẽ dưới đây. Cho biết $M$ là vị trí của máy bay và $O M = 14 "," hat(N O B) = 32 ° "," hat(M O C) = 65 °$. Tìm toạ độ điểm $M$
 
-#fig("flight-departure",width:if variant=="dap-an" {70mm} else if variant=="de-cach" {85mm} else {none})],
+#fig("flight-departure",width:if variant=="dap-an" {70mm} else if variant=="de-cach" {75mm} else {none})],
 variant:variant,
 fill-writing-page:true,
 keep-together:false,
@@ -42,7 +42,7 @@ solution:solutions.at("bai-hoc-1")
 #exercise(
 2, [Một chiếc xe đang kéo căng sợi dây cáp $A B$ trong công trường xây dựng, trên đó đã thiết lập hệ toạ độ $O x y z$ như Hình với độ dài đơn vị trên các trục tọa độ bằng $1 m$. Tìm được tọa độ của vectơ $arrow(A B) = lr(( a ; b ; c ))$, khi đó $a + c = ?$
 
-#fig("cable",width:if variant=="dap-an" {72mm} else if variant=="de-cach" {78mm} else {none})],
+#fig("cable",width:if variant=="dap-an" {72mm} else if variant=="de-cach" {65mm} else {none})],
 variant:variant,
 fill-writing-page:true,
 keep-together:false,
@@ -68,7 +68,7 @@ solution:solutions.at("bai-hoc-3")
 #exercise(
 4, [#illustrated([Một kho chứa hàng có dạng hình lăng trụ đứng ABFPE.DCGQH với ABFE là hình chữ nhật và EFP là tam giác cân tại $P$. Gọi $T$ là trung điểm của $D C$. Các kích thước của kho chứa lần lượt là $A B = 6 "m" ; A E = 5 "m" ; A D = 8 "m" ; Q T = 7 "m"$. Người ta mô hình hoá nhà kho bằng cách chọn hệ trục toạ độ có gốc toạ độ là điểm $O$ thuộc đoạn AD sao cho $O A = 2 "m"$ và các trục toạ độ tương ứng như hình vẽ dưới đây. Khi đó:],"shifted-warehouse")],
 variant:variant,
-fill-writing-page:false,
+fill-writing-page:true,
 keep-together:false,
 source-id:"bai-hoc-4",
 statement-table:true,
@@ -190,13 +190,13 @@ solution:solutions.at("tu-luyen-4")
 5, [Hình minh hoạ sơ đồ một ngôi nhà trong hệ trục tọa độ $O x y z$, trong đó nền nhà, bốn bức tường và hai mái nhà đều là hình chữ nhật.
 
 Xét tính đúng sai của các mệnh đề sau:
-#fig("warehouse-coordinates",width:if variant=="dap-an" {94.3mm} else if variant=="de-cach" {90mm} else {none})],
+#fig("warehouse-coordinates",width:if variant=="dap-an" {94.3mm} else if variant=="de-cach" {82mm} else {none})],
 variant:variant,
-fill-writing-page:false,
+fill-writing-page:true,
 keep-together:false,
 source-id:"tu-luyen-5",
 statement-table:true,
-writing-lines:9,
+writing-lines:8,
 solution:solutions.at("tu-luyen-5"),
 statements:([a) Tọa độ điểm $A$ là $( 4 ; 0 ; 0 )$.],[b) Tọa độ $arrow(A H) = lr(( 4 ; 5 ; 3 ))$],[c) $arrow(A H) . arrow(A F) = 3$],[d) Góc dốc của mái nhà, tức là số đo của góc nhị diện có cạnh là đường thẳng $F G$, hai mặt lần lượt là $( F G Q P )$ và $( F G H E )$ bằng $"26,6" ^(°)$ (làm tròn kết quả đến hàng phần mười của độ)],)
 )
@@ -216,11 +216,11 @@ solution:solutions.at("tu-luyen-6")
 #exercise(
 7, [#illustrated([Một kho chứa hàng có dạng hình lăng trụ đứng $O A F P E C B G Q H$ với $O A F E$ là hình chữ nhật với $E F P$ là tam giác cân tại $P .$ Biết $O A = 4 m ; A B = 6 m ; H C = 5 ;$ độ dốc của mái nhà, tức là số đo góc nhị diện $lr([ Q "," F G "," H ])$ bằng $45 ° .$ Người ta mô hình hóa nhà kho bằng cách chọn hệ trục tọa độ tương ứng như hình vẽ dưới đây (đơn vị trên mỗi trục là $1 m$).],"warehouse",answer-width:101.2mm)],
 variant:variant,
-fill-writing-page:false,
+fill-writing-page:true,
 keep-together:false,
 source-id:"tu-luyen-7",
 statement-table:true,
-writing-lines:10,
+writing-lines:9,
 solution:solutions.at("tu-luyen-7"),
 statements:([a) Tọa độ của $arrow(P Q)$ là $lr(( 0 ; 6 ; 0 )) .$],[b) Tọa độ của điểm $G$ là $lr(( 6 ; 4 ; 5 )) .$],[c) Chiều cao kho hàng tức là khoảng cách từ nóc nhà (điểm cao nhất của nóc nhà) và sàn nhà bằng $7 m .$],[d) Người ta muốn lắp camera quan sát trong nhà kho tại vị trí trung điểm của $G Q$ và đầu thu dữ liệu đặt tại vị trí $O .$ Người ta thiết kế đường dây cáp nối từ $O$ đến $E$ rồi từ $E$ đến $H$, sau đó từ $H$ đến camera. Độ dài đoạn cáp nối tối thiểu bằng $11 + sqrt(10)$ m.],)
 )
