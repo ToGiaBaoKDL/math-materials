@@ -375,7 +375,8 @@
     "practice_one_solution_size": "Solution figure only increased 10% from 66.15mm to 72.765mm before variant scaling; prompt unchanged.",
     "practice_five_seven_size": "Practice 5 and 7 figures enlarged 15%: default warehouse figures 115mm, answer prompt overrides 94.3mm and 101.2mm, practice 7 solution 115mm before variant scale.",
     "writing_intro": "de-cach theory uses 12pt/0.5em, question 1 follows on page 1. Questions 2 and 3 share page 2 with compact figures and 3/4 minimum lines; remaining body space still ruled before footer.",
-    "writing_allocation": "Per-question minimum 3–8 lines according to solution length; extra rules still fill unused body area, clipped with 3mm bottom reserve. Short prompts remain with writing space; long true/false tables permit writing continuation."
+    "writing_allocation": "Per-question minimum 3–8 lines according to solution length; extra rules still fill unused body area, clipped with 3mm bottom reserve. Short prompts remain with writing space; long true/false tables permit writing continuation.",
+    "writing_layout": "Đề cách: hình lớn; đề và khối dòng viết được tách qua trang khi cần. Câu 4 phần bài học: 10 dòng; tự luyện Câu 2: tối thiểu 7 dòng và kẻ tiếp đến trước footer; Câu 5: 9 dòng, Câu 7: 10 dòng, Câu 8: tối thiểu 9 dòng, Câu 9: tối thiểu 6 dòng."
   },
   "variants": {
     "de": {
@@ -873,8 +874,8 @@
     "de-cach": {
       "pdf": "assets/targets/2026-10/Chuyên đề/th-buoi-11-bai-toan-thuc-te-oxyz/de-cach.pdf",
       "pages": 20,
-      "bytes": 1556860,
-      "sha256": "57e5677509f15c252de4cfb3d5cc61e9a7909d095716e54542ea5eab221df192"
+      "bytes": 1556248,
+      "sha256": "1cba70340a9cbca980e4ee950e65c7177672e3993746446d5180543d8747987b"
     },
     "dap-an": {
       "pdf": "assets/targets/2026-10/Chuyên đề/th-buoi-11-bai-toan-thuc-te-oxyz/dap-an.pdf",
@@ -897,11 +898,12 @@
     "regression": "Buoi 10 compiled successfully against updated lesson spacing.",
     "limitations": "Original DOCX could not be exported by LibreOffice in this environment; source pagination was not compared. Text, tables, equation objects and source figure assets were reviewed.",
     "compile": "passed",
-    "review_status": "passed",
+    "review_status": "pending",
     "text_bounds": "All extracted words inside page bounds; 22 questions and DXT tags per variant.",
     "opening_layout": "Reviewed vertical opening pages and enlarged sphere figure; checked 22 questions per variant. Remaining exercises retain prior stem grouping.",
     "latest_review": "First writing page visually checked with question 1 below theory; page 2 visually checked with questions 2/3, five writing lines each and footer clearance. All variants rebuilt.",
-    "latest_color_review": "Compiled all variants and visually inspected the five modified geometry models as a contact sheet. Geometry, labels and output page counts retained."
+    "latest_color_review": "Compiled all variants and visually inspected the five modified geometry models as a contact sheet. Geometry, labels and output page counts retained.",
+    "writing_layout_check": "Rebuilt de-cach: 20 pages, 22 question tags and 22 writing headings. Practice question 2 and its writing heading remain on page 9. No page-image review performed."
   },
   "source_corrections": [
     {

@@ -187,7 +187,7 @@
 ]
 
 #let exercise(number, body, answers: (), statements: (), solution: [],
-  variant: "de", writing-lines: 6, fill-writing-page: true, source-id: none, keep-together: true, flow-stem: false, statement-table: false) = {
+  variant: "de", writing-lines: 6, fill-writing-page: true, writing-keep-prompt: true, source-id: none, keep-together: true, flow-stem: false, statement-table: false) = {
   let stem = [
     #if source-id != none {
       context [#metadata((id: source-id, page: counter(page).get().first())) <exercise-location>]
@@ -216,9 +216,11 @@
     }
   ]
   if variant == "de-cach" {
-    block(width: 100%, breakable: statement-table, above: rhythm.question, below: 0pt)[
-      #block(width:100%,breakable:false,sticky:true,prompt)
-      #writing-space(writing-lines)
+    block(width: 100%, breakable: statement-table or not writing-keep-prompt, above: rhythm.question, below: 0pt)[
+      #block(width:100%,breakable:statement-table and not writing-keep-prompt,sticky:writing-keep-prompt,prompt)
+      #if not writing-keep-prompt {
+        block(width:100%,breakable:false,writing-space(writing-lines))
+      } else {writing-space(writing-lines)}
     ]
     if fill-writing-page {final-writing-space()}
   } else {

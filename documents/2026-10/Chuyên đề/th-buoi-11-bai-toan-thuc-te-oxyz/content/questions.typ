@@ -3,6 +3,7 @@
 #import "../figures.typ": fig
 
 #let questions(variant)=[
+#let exercise=exercise.with(writing-keep-prompt:false)
 #lesson-section([XÁC ĐỊNH TỌA ĐỘ ĐIỂM – VECTƠ TRONG MÔ HÌNH KHÔNG GIAN], number:1,above:0pt)
 
 #theory-box(title:[Phương pháp])[
@@ -22,7 +23,7 @@
 #exercise(
 1, [Một máy bay $M$ đang cất cánh từ phi trường với hệ toạ độ không gian $O x y z$ được thiết lập như hình vẽ dưới đây. Cho biết $M$ là vị trí của máy bay và $O M = 14 "," hat(N O B) = 32 ° "," hat(M O C) = 65 °$. Tìm toạ độ điểm $M$
 
-#fig("flight-departure",width:if variant=="dap-an" {70mm} else if variant=="de-cach" {52mm} else {none})],
+#fig("flight-departure",width:if variant=="dap-an" {70mm} else {none})],
 variant:variant,
 fill-writing-page:true,
 keep-together:false,
@@ -35,7 +36,7 @@ solution:solutions.at("bai-hoc-1")
 #exercise(
 2, [Một chiếc xe đang kéo căng sợi dây cáp $A B$ trong công trường xây dựng, trên đó đã thiết lập hệ toạ độ $O x y z$ như Hình với độ dài đơn vị trên các trục tọa độ bằng $1 m$. Tìm được tọa độ của vectơ $arrow(A B) = lr(( a ; b ; c ))$, khi đó $a + c = ?$
 
-#fig("cable",width:if variant=="dap-an" {72mm} else if variant=="de-cach" {48mm} else {none})],
+#fig("cable",width:if variant=="dap-an" {72mm} else {none})],
 variant:variant,
 fill-writing-page:true,
 keep-together:false,
@@ -49,7 +50,7 @@ solution:solutions.at("bai-hoc-2")
 3, [Một ngôi nhà gồm hai phần. Phần thân nhà dạng hình hộp chữ nhật $A B C D . O M N K$ có chiều dài 1200 cm, chiều rộng 900 cm, chiều cao 450 cm. Phần mái nhà dạng hình chóp S.ABCD có các cạnh bên bằng nhau và cùng tạo với mặt đáy một góc $α$ có $tan α = frac(1, 5)$. Chọn hệ trục toạ độ Oxyz sao cho M thuộc tia Ox, K thuộc tia Oy, A thuộc tia Oz (như hình vẽ).
 
 Biết $S lr(( a ; b ; c ))$ (đơn vị của a, b, c là centimet). Tính giá trị của biểu thức $P = a + b + c$
-#fig("roof-house",width:if variant=="dap-an" {78mm} else if variant=="de-cach" {48mm} else {none})],
+#fig("roof-house",width:if variant=="dap-an" {78mm} else {none})],
 variant:variant,
 fill-writing-page:true,
 keep-together:false,
@@ -63,11 +64,11 @@ solution:solutions.at("bai-hoc-3")
 
 #fig("shifted-warehouse")],
 variant:variant,
-fill-writing-page:true,
+fill-writing-page:false,
 keep-together:false,
 source-id:"bai-hoc-4",
 statement-table:true,
-writing-lines:8,
+writing-lines:10,
 solution:solutions.at("bai-hoc-4"),
 statements:([a) Toạ độ điểm $Q$ là $lr(( - 6 ; 3 ; 5 ))$.],[b) Véc tơ $arrow(O C)$ có toạ độ là $lr(( - 6 ; 6 ; 0 ))$.],[c) Người ta muốn lắp camera quan sát trong nhà kho tại vị trí trung điểm của FG và đầu thu dữ liệu đặt tại vị trí $O$. Người ta thiết kế đường dây cáp nối từ $O$ đến $K$ sau đó nối thẳng đến camera. Độ dài đoạn cáp nối tối thiểu bằng $5 + 2 sqrt(10) "m"$.],[d) Mái nhà được lợp bằng tôn Hoa Sen, giá tiền mỗi mét vuông tôn là 130.000 đồng. Số tiền cần bỏ ra để mua tôn lợp mái nhà là 3.750.000 đồng (không kể hao phí do việc cắt và ghép các miếng tôn, làm tròn kết quả đến hàng nghìn).],)
 )
@@ -146,7 +147,7 @@ fill-writing-page:true,
 keep-together:false,
 source-id:"tu-luyen-2",
 statement-table:true,
-writing-lines:5,
+writing-lines:7,
 solution:solutions.at("tu-luyen-2"),
 statements:([a) Điểm $D$ có toạ độ là $lr(( 0 ; 7 ; 0 ))$],[b) Các điểm C, D có tung độ bằng nhau],[c) Vectơ $arrow(C' D')$ có tọa độ $lr(( 6 ; 0 ; 0 ))$],[d) Bóng đèn nằm tại vị trí có tọa độ $lr(( 3 ; "3,5" ; "3,5" ))$],)
 )
@@ -182,11 +183,11 @@ solution:solutions.at("tu-luyen-4")
 Xét tính đúng sai của các mệnh đề sau:
 #fig("warehouse-coordinates",width:if variant=="dap-an" {94.3mm} else {none})],
 variant:variant,
-fill-writing-page:true,
+fill-writing-page:false,
 keep-together:false,
 source-id:"tu-luyen-5",
 statement-table:true,
-writing-lines:7,
+writing-lines:9,
 solution:solutions.at("tu-luyen-5"),
 statements:([a) Tọa độ điểm $A$ là $( 4 ; 0 ; 0 )$.],[b) Tọa độ $arrow(A H) = lr(( 4 ; 5 ; 3 ))$],[c) $arrow(A H) . arrow(A F) = 3$],[d) Góc dốc của mái nhà, tức là số đo của góc nhị diện có cạnh là đường thẳng $F G$, hai mặt lần lượt là $( F G Q P )$ và $( F G H E )$ bằng $"26,6" ^(°)$ (làm tròn kết quả đến hàng phần mười của độ)],)
 )
@@ -208,11 +209,11 @@ solution:solutions.at("tu-luyen-6")
 
 #fig("warehouse",width:if variant=="dap-an" {101.2mm} else {none})],
 variant:variant,
-fill-writing-page:true,
+fill-writing-page:false,
 keep-together:false,
 source-id:"tu-luyen-7",
 statement-table:true,
-writing-lines:8,
+writing-lines:10,
 solution:solutions.at("tu-luyen-7"),
 statements:([a) Tọa độ của $arrow(P Q)$ là $lr(( 0 ; 6 ; 0 )) .$],[b) Tọa độ của điểm $G$ là $lr(( 6 ; 4 ; 5 )) .$],[c) Chiều cao kho hàng tức là khoảng cách từ nóc nhà (điểm cao nhất của nóc nhà) và sàn nhà bằng $7 m .$],[d) Người ta muốn lắp camera quan sát trong nhà kho tại vị trí trung điểm của $G Q$ và đầu thu dữ liệu đặt tại vị trí $O .$ Người ta thiết kế đường dây cáp nối từ $O$ đến $E$ rồi từ $E$ đến $H$, sau đó từ $H$ đến camera. Độ dài đoạn cáp nối tối thiểu bằng $11 + sqrt(10)$ m.],)
 )
@@ -225,7 +226,7 @@ variant:variant,
 fill-writing-page:true,
 keep-together:false,
 source-id:"tu-luyen-8",
-writing-lines:7,
+writing-lines:9,
 solution:solutions.at("tu-luyen-8")
 )
 
@@ -238,7 +239,7 @@ variant:variant,
 fill-writing-page:true,
 keep-together:false,
 source-id:"tu-luyen-9",
-writing-lines:4,
+writing-lines:6,
 solution:solutions.at("tu-luyen-9"),
 statements:([a) Tìm tọa độ của chiếc khinh khí cầu đối với hệ trục tọa độ đã chọn.],[b) Xác định khoảng cách của chiếc khinh khí cầu với vị trí tại điểm xuất phát của nó.],)
 )

@@ -43,7 +43,7 @@ def plan(document=None, variant=None, month=None, category=None):
                 raise ValueError(f'Invalid Drive filename: {filename}')
             if mapping['folder'] not in ('Đề thi', 'Chuyên đề'):
                 raise ValueError('Invalid Drive category')
-            destination = f"{mapping['folder']}/{filename}"
+            destination = f"{mapping['folder']}/{path.parent.name}/{filename}"
             if (month, destination) in destinations:
                 raise ValueError(f'Duplicate Drive destination: {destination}')
             destinations.add((month, destination))
@@ -91,15 +91,22 @@ def main():
             for month in sorted({month for _, month, _ in jobs}):
                 categories = {destination.split('/', 1)[0] for _, job_month, destination in jobs if job_month == month}
                 month_id = folder_id(remote, args.root_id, month)
-                folders[month] = {category: folder_id(remote, month_id, category)
-                                  for category in sorted(categories)}
+                category_folders = {category: folder_id(remote, month_id, category)
+                                    for category in sorted(categories)}
+                folders[month] = {}
+                documents = {destination.rsplit('/', 1)[0] for _, job_month, destination in jobs
+                             if job_month == month}
+                for document in sorted(documents):
+                    category, name = document.split('/', 1)
+                    folders[month][document] = folder_id(remote, category_folders[category], name)
         for pdf, month, destination in jobs:
             print(f'{pdf.relative_to(ROOT)} → {month}/{destination}', flush=True)
             if not args.dry_run:
-                category, filename = destination.split('/', 1)
+                document, filename = destination.rsplit('/', 1)
                 subprocess.run(['rclone', 'copyto', str(pdf), f'{remote}:{filename}',
-                                '--drive-root-folder-id', folders[month][category],
-                                '--contimeout', '15s', '--timeout', '60s', '--retries', '2'], check=True)
+                                '--drive-root-folder-id', folders[month][document],
+                                '--contimeout', '15s', '--timeout', '60s', '--retries', '1',
+                                '--low-level-retries', '1'], check=True)
     except (ValueError, KeyError, FileNotFoundError, subprocess.CalledProcessError) as error:
         parser.exit(1, f'Upload failed: {error}\n')
 
