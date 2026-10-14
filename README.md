@@ -165,16 +165,16 @@ Header/footer đề thi dùng chung nằm ở `templates/exam-branding.typ`: hea
 ```sh
 make upload MONTH=2026-10 CATEGORY="Chuyên đề" DRY_RUN=1  # Xem mapping; không kết nối/ghi Drive
 make upload MONTH=2026-10 CATEGORY="Chuyên đề"  # Upload cả nhóm
-make upload MONTH=2026-10 DOC=buoi-10            # Upload 3 PDF của một bài
+make upload MONTH=2026-10 DOC=buoi-10            # Upload PDF và file nguồn của một bài
 make upload MONTH=2026-10 DOC=buoi-11 VARIANT=dap-an
 make build DOC=buoi-11            # Dựng lại
 ```
 
-`make upload` đồng bộ một chiều các PDF đã build từ local lên Drive, dùng remote `dxt-gdrive` (đổi qua `REMOTE=...`). Folder cha của các tháng có ID `11EmKdVdsShhjyQpzlozlr8bEVDiThA8R`. Bắt buộc truyền `MONTH=YYYY-MM` để chọn tháng đích trên Drive. Script đọc Drive để lấy ID folder tháng và folder phân loại tương ứng; folder nào chưa có thì tạo rồi lấy ID để upload. Không cố định tháng hoặc ID folder tháng trong code. Nếu trùng tên folder cùng cấp thì dừng để tránh gửi sai nơi.
+`make upload` đồng bộ một chiều các PDF đã build và file nguồn từ local lên Drive, dùng remote `dxt-gdrive` (đổi qua `REMOTE=...`). Folder cha của các tháng có ID `11EmKdVdsShhjyQpzlozlr8bEVDiThA8R`. Bắt buộc truyền `MONTH=YYYY-MM` để chọn tháng đích trên Drive. Script đọc Drive để lấy ID folder tháng và folder phân loại tương ứng; folder nào chưa có thì tạo rồi lấy ID để upload. Không cố định tháng hoặc ID folder tháng trong code. Nếu trùng tên folder cùng cấp thì dừng để tránh gửi sai nơi.
 
 Local dùng `<YYYY-MM>/Chuyên đề/th-<document-id>/` (cả `documents`, `assets/sources`, `assets/targets`); folder tài liệu Đề thi không thêm `th-`. Tháng đích upload do `MONTH` quyết định, không đổi đường dẫn local hoặc ngày tiếp nhận trong manifest.
 
-Trong tháng đích đã chọn, không chọn bộ lọc tài liệu thì upload tất cả; `CATEGORY` chọn nhóm, `DOC` chọn bài, `VARIANT` chọn một PDF. `MONTH` chỉ chọn nơi nhận trên Drive, không lọc tháng nguồn local. Drive giữ cấu trúc folder giống local: `YYYY-MM/Chuyên đề/th-<document-id>/` hoặc `YYYY-MM/Đề thi/<document-id>/`; mỗi folder tài liệu chứa các PDF với tên hiển thị theo mapping. Script lấy ID folder tài liệu đã có hoặc tạo nếu thiếu. File cùng tên được cập nhật, file không đổi được bỏ qua; không xóa file khác trên Drive. Đây là copy có mapping tên, không phải `rclone sync --delete` hay đồng bộ hai chiều. Không tự upload khi build. Mỗi thao tác rclone chỉ thử một lần (`--retries 1 --low-level-retries 1`); gặp lỗi thì dừng, không tự retry. Upload kiểm tra toàn bộ PDF tồn tại và checksum khớp manifest trước khi chạy; hãy build lại sau khi sửa mã nguồn. `DRY_RUN=1` chỉ in mapping local, không kiểm tra kết nối Drive.
+Trong tháng đích đã chọn, không chọn bộ lọc tài liệu thì upload tất cả; `CATEGORY` chọn nhóm, `DOC` chọn bài, `VARIANT` chọn một PDF. `MONTH` chỉ chọn nơi nhận trên Drive, không lọc tháng nguồn local. Drive giữ cấu trúc folder giống local: `YYYY-MM/Chuyên đề/th-<document-id>/` hoặc `YYYY-MM/Đề thi/<document-id>/`; mỗi folder tài liệu chứa các PDF với tên hiển thị theo mapping và file nguồn có hậu tố ` - GỐC` (giữ đuôi `.pdf`/`.docx`). Script lấy ID folder tài liệu đã có hoặc tạo nếu thiếu. File cùng tên được cập nhật, file không đổi được bỏ qua; không xóa file khác trên Drive. Đây là copy có mapping tên, không phải `rclone sync --delete` hay đồng bộ hai chiều. Không tự upload khi build. Mỗi thao tác rclone chỉ thử một lần (`--retries 1 --low-level-retries 1`); gặp lỗi thì dừng, không tự retry. Upload kiểm tra toàn bộ PDF tồn tại và checksum khớp manifest trước khi chạy; hãy build lại sau khi sửa mã nguồn. `DRY_RUN=1` chỉ in mapping local, không kiểm tra kết nối Drive.
 
 Không cần lệnh clean: build ghi đè đầu ra hiện tại.
 
@@ -188,3 +188,46 @@ Tên local vẫn là `de.pdf`, `de-cach.pdf`, `dap-an.pdf`. Tên Drive được 
 `assets/targets/` được Git bỏ qua. Không còn lệnh preview hoặc ảnh preview trang; ảnh hình học do `figure_renders` dựng vẫn cần cho PDF. Nguồn nằm trong `assets/sources/`, tài nguyên nhận diện trong `assets/branding/`.
 
 Header/footer chuyên đề dùng mẫu DXT gốc trong `templates/branding.typ` (dải đỏ, logo, chữ trắng), áp dụng thống nhất cả đề, đề cách và đáp án. Header chữ đỏ với gạch ngang chỉ dùng cho đề thi.
+
+## Cập nhật Google Sheet sau khi duyệt
+
+Upload và ghi Sheet là hai lệnh riêng. `make upload` luôn gửi kèm `source.*` từ thư mục nguồn tương ứng, kể cả khi chọn một `VARIANT`; không thêm manifest nguồn. Tên file nguồn suy ra từ tên đề, thay ` - ĐỀ.pdf` bằng ` - GỐC` và đuôi file gốc. Ví dụ `KHÓA TH - BUỔI 10 - MIN - MAX HÌNH HỌC - GỐC.docx`.
+
+Dùng Google Sheets API và Drive API qua `google-api-python-client`, `google-auth-oauthlib`. `uv run` cài dependency khai báo ngay trong script vào môi trường riêng. Không cần thay Python của build/upload.
+
+Thiết lập một lần:
+
+1. Trong Google Cloud project của bạn, bật **Google Sheets API** và **Google Drive API**, tạo OAuth client loại **Desktop app**; tải JSON về `.secret/sheets-client.json`.
+2. Gmail dùng ghi Sheet cần quyền sửa Sheet và quyền đọc folder Drive chứa bộ file đã upload. Có thể dùng Gmail khác với remote rclone.
+3. Chạy `make sheets-auth CLIENT=.secret/sheets-client.json`, chọn đúng Gmail của bạn và cấp quyền. Token lưu riêng tại `.secret/sheets-token.json` (Git bỏ qua, quyền file 600). Lệnh ghi Sheet tự refresh khi cần; không tự mở trình duyệt đăng nhập.
+4. Nếu đã có service account được chia sẻ quyền sửa Sheet và đọc folder Drive, truyền `CREDENTIALS=.secret/<service-account>.json` trực tiếp, không cần `sheets-auth`.
+
+```sh
+# Upload/sửa nhiều lần; chưa ghi Sheet.
+make upload MONTH=2026-10 DOC=buoi-11
+
+# Chỉ chạy bước này khi bộ file đã được duyệt.
+make sheet MONTH=2026-10 DATE=2026-10-15 DOC=buoi-11 DRY_RUN=1
+make sheet MONTH=2026-10 DATE=2026-10-15 DOC=buoi-11
+make sheet MONTH=2026-10 DATE=2026-10-15 DOC=phan-boi-chau
+# Cả nhóm hoặc tất cả tài liệu:
+make sheet MONTH=2026-10 DATE=2026-10-15 CATEGORY="Chuyên đề"
+```
+
+`MONTH` là folder tháng đích trên Drive và khối tháng trên Sheet. `DATE` là ngày upload bạn muốn ghi, bắt buộc định dạng `YYYY-MM-DD`; không tự thay bằng ngày nhận hay ngày chạy lệnh. `DRY_RUN=1` của Sheet vẫn đọc Drive/Sheet để xác minh, chỉ không ghi Sheet. Đích mặc định: [sổ tài liệu](https://docs.google.com/spreadsheets/d/1q7giSA18z4UkTomn9xQBqrDgdjssXeUSDj4fTtVYOVs/edit), hai tab `Chuyên đề` và `Đề thi`.
+
+| Cột | Dòng đề | Dòng đáp án |
+|---|---|---|
+| A – Tháng | Dùng ô tháng đã gộp | Chung ô tháng |
+| B – Ngày/Tháng/Năm | `DATE`, hiển thị dd/mm/yyyy | Trống |
+| C – File gốc thầy gửi | Link `ĐỀ - GỐC` đến file nguồn đã upload | Trống |
+| D – Tiêu đề | Tên đề theo convention, bỏ `.pdf` | Tên đáp án theo convention, bỏ `.pdf` |
+| E – Link code tài liệu gốc | Link `Github` đến thư mục mã nguồn trên branch hiện tại của origin | Trống |
+| F – File pdf (ko cách) | Link `ĐỀ - KHÔNG CÁCH` | Link `ĐÁP ÁN` |
+| G – File pdf (cách) | Link `ĐỀ - CÁCH` | Trống |
+| H – Số trang/File ko cách | Số trang `de.pdf` | Số trang `dap-an.pdf` |
+| I – Thù lao | Không ghi | Không ghi |
+
+Script tìm đúng ID folder/file trên Drive theo cấu trúc và convention; đối chiếu MD5 với file local trước khi ghi. Bộ thiếu file hoặc khác nội dung sẽ dừng, cần upload lại trước. Số trang lấy trực tiếp từ PDF local đã kiểm tra. Link là chữ có hyperlink, không dùng công thức phụ thuộc locale, không thay quyền chia sẻ file.
+
+Tìm dòng cũ bằng tiêu đề hoặc link PDF trong đúng khối tháng; nếu chưa có thì dùng dòng trống. Các dòng tiêu đề Buổi 10 có sẵn được điền tiếp, không nhân đôi. Giữ định dạng, ô gộp tháng và cột thù lao hiện có. Nếu chưa có khối tháng thì tạo khối mới 30 dòng bên dưới, sao chép định dạng; khối đã đầy thì tự chèn đúng số dòng còn thiếu ở cuối khối, sao chép định dạng A:I và chiều cao dòng liền trước, mở rộng ô gộp tháng; các tháng phía dưới được đẩy xuống nguyên vẹn. Gửi toàn bộ cập nhật bằng một batch sau khi kiểm tra đủ; không tự retry. Nên push mã nguồn đã duyệt lên GitHub trước khi ghi Sheet để link code mở được đúng nội dung.
