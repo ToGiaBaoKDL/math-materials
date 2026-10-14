@@ -6,7 +6,7 @@
 #let exercise=exercise.with(writing-keep-prompt:true,compact-statements:variant=="de-cach")
 #let illustrated(body,name,answer-width:none)=if variant=="de-cach" {
  grid(columns:(1fr,90mm),column-gutter:5mm,align:top,
-  block[#set text(size:13pt) #set par(leading:0.6em,justify:false) #body],
+  {set text(size:13pt); set par(leading:0.6em,justify:false); block(body)},
   fig(name,width:75mm))
 } else { [#body #fig(name,width:if variant=="dap-an" {answer-width} else {none})] }
 
@@ -129,6 +129,7 @@ writing-lines:3,
 solution:solutions.at("bai-hoc-8")
 )
 
+#if variant=="de-cach" {pagebreak(weak:true)}
 #lesson-section([BÀI TẬP TỰ LUYỆN],badge:"A")
 
 #exercise(
@@ -158,6 +159,7 @@ solution:solutions.at("tu-luyen-2"),
 statements:([a) Điểm $D$ có toạ độ là $lr(( 0 ; 7 ; 0 ))$],[b) Các điểm C, D có tung độ bằng nhau],[c) Vectơ $arrow(C' D')$ có tọa độ $lr(( 6 ; 0 ; 0 ))$],[d) Bóng đèn nằm tại vị trí có tọa độ $lr(( 3 ; "3,5" ; "3,5" ))$],)
 )
 
+#if variant=="de-cach" {pagebreak(weak:true)}
 #exercise(
 3, [Ở một sân bay, vị trí của máy bay được xác định bởi điểm $M$ trong không gian $O x y z$ như hình bên. Gọi $H$  là hình chiếu vuông góc của $M$ xuống mặt phẳng $lr(( O x y ))$. Cho biết $O M = 50$, $lr(( arrow(i) ; arrow(O H) )) = 64 °$, $lr(( arrow(O H) "," arrow(O M) )) = 48 °$. Tìm toạ độ của điểm $M$.
 
@@ -183,6 +185,7 @@ writing-lines:5,
 solution:solutions.at("tu-luyen-4")
 )
 
+#if variant=="de-cach" {pagebreak(weak:true)}
 #exercise(
 5, [Hình minh hoạ sơ đồ một ngôi nhà trong hệ trục tọa độ $O x y z$, trong đó nền nhà, bốn bức tường và hai mái nhà đều là hình chữ nhật.
 
@@ -234,6 +237,7 @@ writing-lines:9,
 solution:solutions.at("tu-luyen-8")
 )
 
+#if variant=="de-cach" {pagebreak(weak:true)}
 #exercise(
 9, [Một chiếc khinh khí cầu bay lên tại điểm $O$. Sau một thời gian bay, chiếc khinh khí cầu cách điểm xuất phát về phía Đông $10 lr(( "km" ))$ và về phía Nam $5 lr(( "km" ))$, đồng thời cách mặt đất $400 lr(( m ))$.
 
@@ -248,6 +252,7 @@ solution:solutions.at("tu-luyen-9"),
 statements:([a) Tìm tọa độ của chiếc khinh khí cầu đối với hệ trục tọa độ đã chọn.],[b) Xác định khoảng cách của chiếc khinh khí cầu với vị trí tại điểm xuất phát của nó.],)
 )
 
+#if variant=="de-cach" {pagebreak(weak:true)}
 #exercise(
 10, [Hai chiếc khinh khí cầu bay lên từ cùng một địa điểm. Sau một thời gian chiếc thứ nhất cách điểm xuất phát 300 m về phía Nam và 100 m về phía Đông, đồng thời cách mặt đất 100 m. Chiếc thứ hai nằm cách điểm xuất phát 200 m về phía Bắc và 100 m về phía Tây, đồng thời cách mặt đất 50 m. Cùng thời điểm đó, một người đứng trên mặt đất quan sát thấy hai chiếc khinh khí cầu nói trên. Biết rằng, so với các vị trí quan sát trên mặt đất, vị trí người đứng có tổng khoảng cách đến hai chiếc khinh khí cầu là nhỏ nhất. Tính khoảng cách từ vị trí người quan sát đến địa điểm xuất phát của hai chiếc khinh khí cầu (kết quả làm tròn đến hàng đơn vị).
 
@@ -273,6 +278,7 @@ writing-lines:6,
 solution:solutions.at("tu-luyen-11")
 )
 
+#if variant=="de-cach" {pagebreak(weak:true)}
 #exercise(
 12, [Cho biết máy bay $A$ đang bay với vectơ vận tốc $arrow(a) = ( 300 ; 200 ; 400 )$ (đơn vị: km/h). Máy bay $B$ bay cùng hướng và có tốc độ gấp ba lần tốc độ của máy bay $A$. Tính tốc độ của máy bay $B$.
 
@@ -297,6 +303,7 @@ writing-lines:3,
 solution:solutions.at("tu-luyen-13")
 )
 
+#if variant=="de-cach" {pagebreak(weak:true)}
 #exercise(
 14, [Trong không gian chọn hệ trục tọa độ cho trước, đơn vị đo lấy kilômét, ra đa phát hiện một máy bay chiến đấu của Nga di chuyển với vận tốc và hướng không đổi từ điểm $M lr(( 500 ; 200 ; 8 ))$ đến điểm $N lr(( 800 ; 300 ; 10 ))$ trong 20 phút. Nếu máy bay tiếp tục giữ nguyên vận tốc và hướng bay thì tọa độ của máy bay sau 5 phút tiếp theo bằng bao nhiêu?
 
