@@ -25,7 +25,7 @@ description: "Kiểm tra và xuất bản PDF đề hoặc bài giảng Typst tr
 
 ## Xuất và ghi kết quả
 
-- Chạy lệnh build/preview của repo; kiểm tra số trang và mapping. Header/footer phải đúng nội dung, căn cùng trục và có khoảng trống với thân bài; mã đề/folio giữ đúng vị trí theo kiểu tài liệu. Xem mọi trang bị thay đổi, mở rộng kiểm tra khi lỗi hoặc thay đổi mới có ảnh hưởng khác.
+- Chạy lệnh build của repo; kiểm tra số trang và mapping. Header/footer phải đúng nội dung, căn cùng trục và có khoảng trống với thân bài; mã đề/folio giữ đúng vị trí theo kiểu tài liệu. Xem mọi trang bị thay đổi, mở rộng kiểm tra khi lỗi hoặc thay đổi mới có ảnh hưởng khác.
 - Khi có nhiều bản, kiểm tra cùng bộ câu, thứ tự và lý thuyết; chỉ bản đáp án có nội dung lời giải, bản có dòng viết có đủ dòng. Kiểm tra số trang riêng, hình xuất theo vai trò nguồn và preview đúng PDF của từng bản. Bản vừa build giữ review `pending` đến khi kiểm tra xong.
 - Khi cần xác nhận chất lượng xuất, dùng `pdfinfo`, `pdffonts`, `pdfimages -list` và `pdftotext`: font nhúng, văn bản chọn được, hình vector và nội dung nằm trong biên trang. Compile thành công chỉ xác nhận cú pháp.
 - Khi đổi font, kiểm tra dấu tiếng Việt ở đủ kiểu chữ trên bản render và text trích xuất. Font có hình dạng gần mẫu vẫn cần hỗ trợ đúng ký tự; ghi font thay thế và chỉ xác nhận cỡ/font gốc khi có bằng chứng.
@@ -33,4 +33,6 @@ description: "Kiểm tra và xuất bản PDF đề hoặc bài giảng Typst tr
 - Kiểm tra checksum nguồn để xác nhận file gốc được giữ. Cập nhật đường dẫn thực, số trang, byte và SHA-256 của PDF sau lần build cuối; preview phải thuộc đúng bản PDF đó.
 - Ghi riêng việc đã chạy, kiểm tra bằng mắt và điểm còn chưa rõ. Không ghi `passed` cho bước chưa làm hoặc mang kết quả cũ sang bản xuất đã thay đổi.
 
-Đầu ra là PDF và preview đã kiểm tra, manifest phản ánh đúng bản xuất, cùng lỗi còn ảnh hưởng đến phạm vi nếu có. Giữ ghi chú riêng của tài liệu trong manifest; không tạo báo cáo Markdown bổ sung.
+Đầu ra là PDF đã kiểm tra, manifest phản ánh đúng bản xuất, cùng lỗi còn ảnh hưởng đến phạm vi nếu có. Giữ ghi chú riêng của tài liệu trong manifest; không tạo báo cáo Markdown bổ sung.
+
+Không tạo ảnh preview trang hoặc dùng make preview. Mở PDF trực tiếp khi kiểm tra bố cục; figure_renders là tài nguyên hình của PDF, không phải preview trang.

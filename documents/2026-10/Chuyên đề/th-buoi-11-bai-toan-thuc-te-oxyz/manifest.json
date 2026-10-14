@@ -1,11 +1,11 @@
 {
-  "id": "buoi-11-bai-toan-thuc-te-oxyz",
+  "id": "th-buoi-11-bai-toan-thuc-te-oxyz",
   "received_date": "2026-10-13",
   "status": "completed",
   "template": "lesson",
   "sources": [
     {
-      "path": "assets/sources/2026-10-13/buoi-11-bai-toan-thuc-te-oxyz/source.docx",
+      "path": "assets/sources/2026-10/Chuyên đề/th-buoi-11-bai-toan-thuc-te-oxyz/source.docx",
       "original_name": "BUỔI 11 MỘT SỐ BÀI TOÁN THỰC TẾ OXYZ ĐIỂN HÌNH.docx",
       "bytes": 2012579,
       "sha256": "6d3c3c07854b2e44e2e4a188c38e06dfb37800b1c03bdd45e60bf76dc9d7a90a"
@@ -334,7 +334,6 @@
   ],
   "implementation": {
     "template": "templates/lesson.typ",
-    "reference": "assets/references/dxt-brand-template",
     "stage": "Native Typst content, reusable geometry models and three lesson variants.",
     "body_font": "Times New Roman",
     "math_font": "New Computer Modern Math",
@@ -866,19 +865,19 @@
   ],
   "outputs": {
     "de": {
-      "pdf": "assets/targets/2026-10-13/buoi-11-bai-toan-thuc-te-oxyz/de.pdf",
+      "pdf": "assets/targets/2026-10/Chuyên đề/th-buoi-11-bai-toan-thuc-te-oxyz/de.pdf",
       "pages": 13,
       "bytes": 1532843,
       "sha256": "fd8cabb111584d126dabb450f0337ce9ba162837bff1f3df10d7033c50ded876"
     },
     "de-cach": {
-      "pdf": "assets/targets/2026-10-13/buoi-11-bai-toan-thuc-te-oxyz/de-cach.pdf",
+      "pdf": "assets/targets/2026-10/Chuyên đề/th-buoi-11-bai-toan-thuc-te-oxyz/de-cach.pdf",
       "pages": 20,
       "bytes": 1556860,
       "sha256": "57e5677509f15c252de4cfb3d5cc61e9a7909d095716e54542ea5eab221df192"
     },
     "dap-an": {
-      "pdf": "assets/targets/2026-10-13/buoi-11-bai-toan-thuc-te-oxyz/dap-an.pdf",
+      "pdf": "assets/targets/2026-10/Chuyên đề/th-buoi-11-bai-toan-thuc-te-oxyz/dap-an.pdf",
       "pages": 22,
       "bytes": 2271586,
       "sha256": "b11fb3d3cd3ad70191678f8e92e8485dcc9c39f8374f97b6fc49cf9b2cd70c95"
@@ -1010,5 +1009,13 @@
     "image453.png": "velocity",
     "image459.png": "motion-full",
     "image477.jpeg": "aircraft-radar.jpg"
+  },
+  "drive": {
+    "folder": "Chuyên đề",
+    "filenames": {
+      "de": "KHÓA TH - BUỔI 11 - MỘT SỐ BÀI TOÁN THỰC TẾ OXYZ ĐIỂN HÌNH - ĐỀ.pdf",
+      "de-cach": "KHÓA TH - BUỔI 11 - MỘT SỐ BÀI TOÁN THỰC TẾ OXYZ ĐIỂN HÌNH - ĐỀ CÁCH.pdf",
+      "dap-an": "KHÓA TH - BUỔI 11 - MỘT SỐ BÀI TOÁN THỰC TẾ OXYZ ĐIỂN HÌNH - ĐÁP ÁN.pdf"
+    }
   }
 }

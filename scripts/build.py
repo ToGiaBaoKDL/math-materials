@@ -6,7 +6,6 @@ import re
 import subprocess
 from pathlib import Path
 from datetime import datetime, timezone
-from PIL import Image
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -20,24 +19,7 @@ def page_count(pdf):
     return int(re.search(r'^Pages:\s+(\d+)', info, re.MULTILINE)[1])
 
 
-def previews(pdf, folder):
-    folder.mkdir(parents=True, exist_ok=True)
-    for old in folder.glob('page-*.png'):
-        old.unlink()
-    # Supersampling avoids unequal pixel-snapping of equal-width vector edges.
-    run('pdftoppm', '-r', '432', '-png', str(pdf), str(folder / 'page'))
-    for image in sorted(folder.glob('page-*.png')):
-        number = int(image.stem.removeprefix('page-'))
-        destination = folder / f'page-{number:02}.png'
-        with Image.open(image) as rendered:
-            size = (round(rendered.width / 3), round(rendered.height / 3))
-            rendered.resize(size, Image.Resampling.LANCZOS if hasattr(Image, 'Resampling') else Image.LANCZOS).save(destination)
-        if image != destination:
-            image.unlink()
-    return [str(p.relative_to(ROOT)) for p in sorted(folder.glob('page-*.png'))]
-
-
-def build(entry, render=False, variant=None):
+def build(entry, variant=None):
     manifest_path = entry.with_name('manifest.json')
     manifest = json.loads(manifest_path.read_text())
     variants = manifest.get('variants', {'document': {'filename': 'document.pdf', 'inputs': {}}})
@@ -73,13 +55,6 @@ def build(entry, render=False, variant=None):
                   'bytes': len(data), 'sha256': hashlib.sha256(data).hexdigest()}
         previous = outputs.get(name, {})
         changed |= previous.get('sha256') != output['sha256']
-        if not render and previous.get('sha256') == output['sha256'] and 'previews' in previous:
-            output['previews'] = previous['previews']
-        if render:
-            folder = target / 'previews'
-            if 'variants' in manifest:
-                folder /= name
-            output['previews'] = previews(pdf, folder)
         outputs[name] = output
     if 'variants' in manifest:
         manifest['outputs'] = outputs
@@ -93,12 +68,11 @@ def build(entry, render=False, variant=None):
 
 def main():
     parser = argparse.ArgumentParser(description='Build Typst documents and variants declared in manifests.')
-    parser.add_argument('--document', help='Unique name fragment or YYYY-MM-DD/document-id; omit for all')
+    parser.add_argument('--document', help='Unique name fragment or YYYY-MM/category/document-id; omit for all')
     parser.add_argument('--variant', choices=['de', 'de-cach', 'dap-an'], help='Build one variant')
     parser.add_argument('--list', action='store_true', help='List documents and available variants')
-    parser.add_argument('--preview', action='store_true', help='Render pages as PNG')
     args = parser.parse_args()
-    entries = sorted((ROOT / 'documents').glob('*/*/main.typ'))
+    entries = sorted((ROOT / 'documents').glob('*/*/*/main.typ'))
     if args.document:
         entries = [e for e in entries if args.document in str(e.parent.relative_to(ROOT / 'documents'))]
         if len(entries) != 1:
@@ -116,7 +90,7 @@ def main():
         parser.error('No documents found.')
     try:
         for entry in entries:
-            build(entry, render=args.preview, variant=args.variant)
+            build(entry, variant=args.variant)
     except FileNotFoundError as error:
         parser.exit(1, f'Missing build tool: {error.filename}\n')
     except subprocess.CalledProcessError as error:

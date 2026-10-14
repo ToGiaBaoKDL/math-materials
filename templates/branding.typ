@@ -54,7 +54,7 @@
       #place(top + left, dx: head.badge-left, dy: badge-top,
         circle(radius: head.badge-diameter/2, fill: palette.paper, stroke: none))
       #let badge-display = if branded {
-        image("/assets/references/dxt-brand-template/logo-original.png", width: head.badge-diameter, height: head.badge-diameter, fit: "contain")
+        image("/assets/branding/logo-original.png", width: head.badge-diameter, height: head.badge-diameter, fit: "contain")
       } else {
         block(width: head.badge-diameter, height: head.badge-diameter, align(center + horizon)[
           #box(width: head.subject-width)[

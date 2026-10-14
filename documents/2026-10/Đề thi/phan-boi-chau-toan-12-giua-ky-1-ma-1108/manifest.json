@@ -1,18 +1,17 @@
 {
-  "id": "nguyen-binh-khiem-toan-12-khao-sat-lan-1-ma-0115",
+  "id": "phan-boi-chau-toan-12-giua-ky-1-ma-1108",
   "received_date": "2026-10-13",
   "status": "ready",
   "template": "exam",
   "sources": [
     {
-      "path": "assets/sources/2026-10-13/nguyen-binh-khiem-toan-12-khao-sat-lan-1-ma-0115/source.pdf",
-      "original_name": "de-khao-sat-toan-12-lan-1-nam-2026-2027-truong-thpt-nguyen-binh-khiem-gia-lai.pdf",
-      "bytes": 488375,
-      "sha256": "c1d1ef22b10c98fd8cc3825005ae5552554d662333aff5ebea8a885158f271d7",
-      "pages": 14
+      "path": "assets/sources/2026-10/Đề thi/phan-boi-chau-toan-12-giua-ky-1-ma-1108/source.pdf",
+      "original_name": "de-giua-ky-1-toan-12-nam-2026-2027-truong-thpt-phan-boi-chau-ha-noi (4).pdf",
+      "bytes": 1888440,
+      "sha256": "43e652be04342e8ef926faa43b21e6303c4bee772b72daf8a568dc39a692cbd7",
+      "pages": 6
     }
   ],
-  "reference": "assets/references/phu-tho-exam/manifest.json",
   "variants": {
     "de": {
       "filename": "de.pdf",
@@ -25,12 +24,6 @@
       "inputs": {
         "variant": "de-cach"
       }
-    },
-    "dap-an": {
-      "filename": "dap-an.pdf",
-      "inputs": {
-        "variant": "dap-an"
-      }
     }
   },
   "qa": {
@@ -39,7 +32,7 @@
     "toolchain": "typst 0.15.1 (9dfd3a08)",
     "automated": {
       "de": {
-        "pages": 5,
+        "pages": 7,
         "questions": 22,
         "text_bounds": "passed",
         "branding_every_page": "passed",
@@ -48,16 +41,7 @@
         "preview_count": "passed"
       },
       "de-cach": {
-        "pages": 11,
-        "questions": 22,
-        "text_bounds": "passed",
-        "branding_every_page": "passed",
-        "cover_page_count": "passed",
-        "sha256": "passed",
-        "preview_count": "passed"
-      },
-      "dap-an": {
-        "pages": 9,
+        "pages": 13,
         "questions": 22,
         "text_bounds": "passed",
         "branding_every_page": "passed",
@@ -74,37 +58,30 @@
     "design_revision": "Lesson-style full-bleed ruby branding; teacher centered in header area to the right of logo; footer contacts and folio centered vertically in the same red bar, using visible text bounds.",
     "latest_review": "All exam variants compiled after increasing body text to 12pt; output page counts refreshed.",
     "pages": {
-      "de": 5,
-      "dap-an": 9,
-      "de-cach": 10
+      "de": 7,
+      "de-cach": 12
     },
     "latest_color_review": "Shared net and folded pyramid inspected as enlarged renders; all document variants rebuilt."
   },
   "outputs": {
     "de": {
-      "pdf": "assets/targets/2026-10-13/nguyen-binh-khiem-toan-12-khao-sat-lan-1-ma-0115/de.pdf",
-      "pages": 5,
-      "bytes": 1975991,
-      "sha256": "e810e67c04ef3f6e33a8c81f7b99dc8275d1c79ed9238f33b9277b852e22fbd0"
+      "pdf": "assets/targets/2026-10/Đề thi/phan-boi-chau-toan-12-giua-ky-1-ma-1108/de.pdf",
+      "pages": 7,
+      "bytes": 637309,
+      "sha256": "7fcc966cde531c2d68177a89688a96abadb5dea51ed9df1c53fd3128f6220955"
     },
     "de-cach": {
-      "pdf": "assets/targets/2026-10-13/nguyen-binh-khiem-toan-12-khao-sat-lan-1-ma-0115/de-cach.pdf",
-      "pages": 10,
-      "bytes": 1995320,
-      "sha256": "aebe0f672619447ed2e1df30901ab69e6bb11ff85ed2b8ac7e40ad918dd66117"
-    },
-    "dap-an": {
-      "pdf": "assets/targets/2026-10-13/nguyen-binh-khiem-toan-12-khao-sat-lan-1-ma-0115/dap-an.pdf",
-      "pages": 9,
-      "bytes": 2069272,
-      "sha256": "005a052f0dcdbae980e690cb6fe09267cded308f0404c6a4b7c47278152fd164"
+      "pdf": "assets/targets/2026-10/Đề thi/phan-boi-chau-toan-12-giua-ky-1-ma-1108/de-cach.pdf",
+      "pages": 12,
+      "bytes": 647465,
+      "sha256": "d037cd608e5a556772fe66baba22e52d7a45af9b30ac96bf5ec11c7763e58b98"
     }
   },
   "metadata": {
     "subject": "Toán 12",
     "school_year": "2026–2027",
     "duration_minutes": 90,
-    "exam_code": "0115"
+    "exam_code": "1108"
   },
   "scope": {
     "questions": {
@@ -117,24 +94,16 @@
       2,
       3,
       4,
-      5
+      5,
+      6
     ],
-    "has_solutions": true,
-    "source_solution_pages": [
-      6,
-      7,
-      8,
-      9,
-      10,
-      11,
-      12,
-      13
-    ],
-    "excluded": "Source attribution heading and final publisher disclaimer omitted from output at user request."
+    "has_solutions": false
   },
   "source_notes": [
-    "Cover says 4 pages, but questions occupy PDF pages 1–5. Output folio uses actual generated page count.",
-    "Solution reasoning and answers transcribed from pages 6–13; wording condensed without removing mathematical steps."
+    "No answers or solutions supplied: only de and de-cach variants are produced.",
+    "I.4 option C (x=1) and II.3 volume 33150 preserved as printed.",
+    "I.12 C is a schematic distractor: preserve both marked asymptotes and the source guide (-3,3); branches drawn independently to retain the original shape and axis intercepts.",
+    "Cube/sphere illustration uses a valid member of the tangency family, with no inferred radius added as a label."
   ],
   "mapping": [
     {
@@ -159,31 +128,23 @@
       "questions": "1–6",
       "source_pages": [
         4,
-        5
+        5,
+        6
       ]
     }
   ],
-  "figure_assets": [
-    {
-      "path": "documents/2026-10-13/nguyen-binh-khiem-toan-12-khao-sat-lan-1-ma-0115/figures/rice-mill.png",
-      "original_name": "Industrial Red and Gray Grain Mill.png",
-      "sha256": "ce26a8cf6ed99abe8e90084d463fb854e3ebc9af2c1ddc45e33b9291d880bffb",
-      "role": "User-provided red and gray grain mill, original transparent PNG preserved; proportional 54mm fit centered in 58mm square alongside net."
-    }
-  ],
   "implementation": {
-    "entry": "documents/2026-10-13/nguyen-binh-khiem-toan-12-khao-sat-lan-1-ma-0115/main.typ",
+    "entry": "documents/2026-10/Đề thi/phan-boi-chau-toan-12-giua-ky-1-ma-1108/main.typ",
     "template": "templates/exam.typ",
-    "reference": "assets/references/phu-tho-exam/page-01.jpg",
     "body_font": "Times New Roman",
     "math_font": "New Computer Modern Math",
     "body_size_pt": 13,
     "question_prefix": "ruby red",
     "section_and_choice_labels": "navy",
-    "figures": "Graphs remain vector. Square and hopper net use 600 dpi embedded images generated from figures/geometry.typ for stable low-zoom edge rendering. Rice mill is the user-supplied replacement photograph.",
+    "figures": "Five geometry illustrations generated at 600 dpi from figures/geometry.typ; graphs and variation tables remain vector.",
     "writing_space": "Shared minimum ruled lines plus fractional fill of remaining page height.",
     "design_refinements": {
-      "leading_em": 0.76,
+      "leading_em": 0.95,
       "statement_gap_mm": 4,
       "graph_mm": [
         70,
@@ -191,19 +152,22 @@
       ],
       "graph_choice_mm": [
         65,
-        42
+        65
       ],
       "graph_label_pt": 10,
       "arrows": "Unit-vector arrowheads aligned with line direction",
-      "labels": "Offset outside axes, drawn last with clear backing; origin avoids nearby negative tick",
+      "labels": "2.5 mm tick clearance, 4 mm for negative y labels, side chosen opposite guides, asymptote/root offsets, configurable origin offset.",
       "tables": "Rose header and navy labels, unified grid strokes",
-      "geometry": "1.5 pt model edges rendered to 600 dpi images for the square and hopper net.",
-      "ending": "Bottom of final content page, above examination notes and folio",
+      "geometry": "600 dpi geometry: double window border, oblique tank and square pyramid, LED radius derived from source coordinates",
+      "ending": "Bottom of final page above notes and folio",
       "question_gap_mm": 6,
       "statement_before_mm": 5,
-      "pagination": "Figures and tables stay intact; final answer prompt, solution and ending stay together.",
-      "answer_leading_em": 0.95,
-      "solution_gap_mm": 8
+      "pagination": "Questions may span pages; figures and variation tables do not split",
+      "graph_first_mm": [
+        68,
+        82
+      ],
+      "tank": "Light fill, solid silhouette, fine dashed equator, complete hidden box edges occluded by ball"
     },
     "branding": "templates/exam-branding.typ; logo-original.png; assets/branding/icons/*.svg",
     "exam_revision": {
@@ -215,7 +179,7 @@
       "pagination": "Choices/solutions may continue on next page; final writing question remains together.",
       "credits": "TOANMATH in all variants; original AI and unofficial-transcription notice restored in NBK answers."
     },
-    "rice_mill": "Red and gray mill PNG; proportional 54mm fit centered in unchanged 58mm square beside net. Old rice-mill.jpg removed.",
+    "geometry_color": "Selected spherical/circular objects: teal #267D8D with pale mint fill; frame/construction stays red; neutral walls/text/axes. Maximum two main hues per figure.",
     "net_colors": "Mint/teal base EFGH matches the folded pyramid base; pale red lateral faces; red edges preserved, hidden edges dashed. At most two main hues.",
     "running_matter": "Optically balanced exam typography: Times New Roman body 12pt; Noto Sans header/footer 11pt via separate shared theme tokens. Header close to 1pt red rule.",
     "answer_frame": "dap-an only: complete question including figures/options in rounded red 0.7pt frame, 2mm radius, 3.5mm inset, pale fill. Solution outside.",
@@ -225,19 +189,50 @@
   "figure_renders": [
     {
       "entry": "figures/render.typ",
-      "output": "figures/generated/net.png",
+      "output": "figures/generated/window.png",
       "inputs": {
-        "figure": "net"
+        "figure": "window"
       },
       "ppi": 600
     },
     {
       "entry": "figures/render.typ",
-      "output": "figures/generated/square.png",
+      "output": "figures/generated/tank.png",
       "inputs": {
-        "figure": "square"
+        "figure": "tank"
+      },
+      "ppi": 600
+    },
+    {
+      "entry": "figures/render.typ",
+      "output": "figures/generated/led.png",
+      "inputs": {
+        "figure": "led"
+      },
+      "ppi": 600
+    },
+    {
+      "entry": "figures/render.typ",
+      "output": "figures/generated/spheres.png",
+      "inputs": {
+        "figure": "spheres"
+      },
+      "ppi": 600
+    },
+    {
+      "entry": "figures/render.typ",
+      "output": "figures/generated/pyramid.png",
+      "inputs": {
+        "figure": "pyramid"
       },
       "ppi": 600
     }
-  ]
+  ],
+  "drive": {
+    "folder": "Đề thi",
+    "filenames": {
+      "de": "PHAN-BOI-CHAU-TOAN-12-GIUA-KY-1-MA-1108 - ĐỀ.pdf",
+      "de-cach": "PHAN-BOI-CHAU-TOAN-12-GIUA-KY-1-MA-1108 - ĐỀ CÁCH.pdf"
+    }
+  }
 }

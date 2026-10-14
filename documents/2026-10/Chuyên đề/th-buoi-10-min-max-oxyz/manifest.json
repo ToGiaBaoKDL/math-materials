@@ -1,5 +1,5 @@
 {
-  "id": "buoi-10-min-max-oxyz",
+  "id": "th-buoi-10-min-max-oxyz",
   "received_date": "2026-10-12",
   "title": "BUỔI 10: MIN – MAX OXYZ",
   "status": "implementing",
@@ -8,25 +8,9 @@
     {
       "kind": "source",
       "original_name": "BUỔI 10 - MIN - MAX OXYZ.docx",
-      "path": "assets/sources/2026-10-12/buoi-10-min-max-oxyz/source.docx",
+      "path": "assets/sources/2026-10/Chuyên đề/th-buoi-10-min-max-oxyz/source.docx",
       "bytes": 985438,
       "sha256": "f4f540aefce7b94ca77d2517d9794c337c7089789f61b10e3a87b50bb0872424"
-    }
-  ],
-  "references": [
-    {
-      "kind": "reference",
-      "original_name": "KHÓA TH - BUỔI 1 - TÍNH ĐƠN ĐIỆU CỦA HÀM SỐ - ĐỀ.pdf",
-      "path": "assets/references/buoi-10-min-max-oxyz/de.pdf",
-      "bytes": 1055882,
-      "sha256": "2ce4d9e994a4a5efe9a2587eb2d165e7008c95e21504c57e3dceb877978d788e"
-    },
-    {
-      "kind": "reference",
-      "original_name": "KHÓA TH - BUỔI 1 - TÍNH ĐƠN ĐIỆU CỦA HÀM SỐ - ĐỀ CÁCH.pdf",
-      "path": "assets/references/buoi-10-min-max-oxyz/de-cach.pdf",
-      "bytes": 1155857,
-      "sha256": "46537440f75dab526fb20327a81fc174d4967a3e16f2fefa10fe342d79405c8f"
     }
   ],
   "variants": {
@@ -61,7 +45,6 @@
     "figure_revision": "Opened reflection planes using consistent projection; Oxy/Oyz placed inside a lower-left corner arc; shifted reflection construction clear of that arc. Balloon projection separates balloon B from z-axis; direction and distance labels offset from axes and projection lines. Follow-up: reduced corner arc radius from 20mm to 15mm and repositioned its label; extended reflection pairs symmetrically (illustration heights 26/28), with 68mm frames to contain lower point labels.",
     "footer_revision": "19mm total height, 11mm bar; 8mm tab rise and 5.3mm diagonal run; Noto Sans Bold caption and regular folio.",
     "heading_image": {
-      "reference": "assets/references/dxt-brand-template/conventions.jpg",
       "usage": "Shared native lesson-heading component, supplied convention fonts; actual course/title/subject supplied from main.typ."
     },
     "writing_space": "Each exercise retains its minimum 7mm ruled lines; fractional ruled blocks share the unused height equally among exercises on each page, including the final page.",
@@ -87,7 +70,6 @@
     "section_banner": "Reference-style green hexagonal badges (1, 2, A, B), white pointed ribbons with green border, ruby bold captions, short green top tab and green dashed continuation.",
     "section_caption": "User-supplied #9Slide02 Tieu de dai Bold, #C00000, no synthetic stroke.",
     "section_badge": "Dark green #006B18 fill; corners rounded over 22% of adjacent edges using quadratic-equivalent cubic curves. 2pt border gradient from pale #E9F8E9 top-left to darker #8FC398 bottom-right (45deg).",
-    "brand_source_of_truth": "assets/references/dxt-brand-template/manifest.json",
     "line_spacing": "Lesson body leading 0.85em (was 0.65em), paragraph gap 3.5mm, statement grid gap 4.5mm, explicit 3.5mm before a–d statements. Writing rules remain 7mm.",
     "running_matter": "Restored lesson-specific DXT running-head/running-foot from branding.typ, original branded bands and lesson captions. Margins top 24mm/bottom 22mm. Exam-only style isolated in exam-branding.typ.",
     "answer_frame": "dap-an only: complete question including figures/options in rounded red 0.7pt frame, 2mm radius, 3.5mm inset, pale fill. Solution outside."
@@ -543,19 +525,19 @@
   ],
   "outputs": {
     "de": {
-      "pdf": "assets/targets/2026-10-12/buoi-10-min-max-oxyz/de.pdf",
+      "pdf": "assets/targets/2026-10/Chuyên đề/th-buoi-10-min-max-oxyz/de.pdf",
       "pages": 9,
       "bytes": 498316,
       "sha256": "c42a7f8df2adb292f3e27dffaa4b3c52131f8a9287f20801babc078114611d4d"
     },
     "de-cach": {
-      "pdf": "assets/targets/2026-10-12/buoi-10-min-max-oxyz/de-cach.pdf",
+      "pdf": "assets/targets/2026-10/Chuyên đề/th-buoi-10-min-max-oxyz/de-cach.pdf",
       "pages": 17,
-      "bytes": 521373,
-      "sha256": "50569c4cc944d7ebe3c0007adda8d5f9fa251eb4f35c86f0c5d05e578aa7d850"
+      "bytes": 526583,
+      "sha256": "3bc99129500c3cf54422bceb5d2dcbdb1c8d9498c026d0622ba5a5fa53c7747f"
     },
     "dap-an": {
-      "pdf": "assets/targets/2026-10-12/buoi-10-min-max-oxyz/dap-an.pdf",
+      "pdf": "assets/targets/2026-10/Chuyên đề/th-buoi-10-min-max-oxyz/dap-an.pdf",
       "pages": 22,
       "bytes": 769098,
       "sha256": "3af67493000f68bcbbd09af749652daac377b7c8bc9591e2ffa998954697e3df"
@@ -568,20 +550,17 @@
       "de": {
         "pages": 9,
         "question_count": 21,
-        "text_within_page": true,
-        "preview_pages": 9
+        "text_within_page": true
       },
       "de-cach": {
         "pages": 17,
         "question_count": 21,
-        "text_within_page": true,
-        "preview_pages": 17
+        "text_within_page": true
       },
       "dap-an": {
         "pages": 21,
         "question_count": 21,
-        "text_within_page": true,
-        "preview_pages": 21
+        "text_within_page": true
       }
     },
     "visual_review": "Rebuilt all three variants with only a–d statement spacing increased from 4 to 4.5mm. Inspected question 14 crop; verified 21 questions per variant and unchanged page counts 9/17/21.",
@@ -595,6 +574,14 @@
       "de": 9,
       "de-cach": 17,
       "dap-an": 21
+    }
+  },
+  "drive": {
+    "folder": "Chuyên đề",
+    "filenames": {
+      "de": "KHÓA TH - BUỔI 10 - MIN - MAX HÌNH HỌC - ĐỀ.pdf",
+      "de-cach": "KHÓA TH - BUỔI 10 - MIN - MAX HÌNH HỌC - ĐỀ CÁCH.pdf",
+      "dap-an": "KHÓA TH - BUỔI 10 - MIN - MAX HÌNH HỌC - ĐÁP ÁN.pdf"
     }
   }
 }

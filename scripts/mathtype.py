@@ -1,8 +1,4 @@
 #!/usr/bin/env python3
-"""Strict decoder for the MathType records present in the lesson sources.
-
-Requires olefile. Unsupported records or mismatched previews fail explicitly.
-"""
 from pathlib import Path
 import json
 import re

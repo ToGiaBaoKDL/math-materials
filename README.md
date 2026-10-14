@@ -11,11 +11,9 @@ math-materials/
 ├── README.md
 ├── assets/
 │   ├── fonts/dxt/                         # Font 9Slide nguyên bản do người dùng cung cấp
-│   ├── sources/YYYY-MM-DD/<document-id>/   # DOCX/ảnh/PDF đầu vào
-│   ├── references/<reference-id>/          # Mẫu trình bày và bộ chuẩn DXT
-│   │   └── archive/                       # Mẫu cũ đã được thay thế, nếu có
-│   └── targets/YYYY-MM-DD/<document-id>/   # PDF và preview đầu ra
-├── documents/YYYY-MM-DD/<document-id>/
+│   ├── sources/YYYY-MM/<Đề thi|Chuyên đề>/<document-id>/   # DOCX/ảnh/PDF đầu vào
+│   └── targets/YYYY-MM/<Đề thi|Chuyên đề>/<document-id>/   # PDF đầu ra
+├── documents/YYYY-MM/<Đề thi|Chuyên đề>/<document-id>/
 │   ├── manifest.json                      # Mapping và trạng thái
 │   ├── main.typ                           # Mã nguồn tài liệu
 │   ├── content/                           # Chỉ tách khi tài liệu dài
@@ -38,21 +36,19 @@ Mỗi skill nằm trong `skills/<skill>/SKILL.md`, chỉ thêm tài nguyên khi 
 | [math-transcription](skills/math-transcription/SKILL.md) | Nội dung trong `main.typ`/`content/`; nguồn, metadata, phạm vi và mapping trong manifest | Nội dung đã đối chiếu với nguồn |
 | [typst-figures](skills/typst-figures/SKILL.md) | `templates/drawing.typ` và `figures/`: hàm vẽ, mô hình, phép chiếu, nét, nhãn và khung nội bộ | Hình vector và giới hạn phần hình thực |
 | [typst-layout](skills/typst-layout/SKILL.md) | `templates/theme.typ`, `components.typ`, `exam.typ`, `lesson.typ`; bố trí trong `main.typ`, thiết kế trong `implementation` | Template và trang trình bày nhất quán |
-| [typst-review](skills/typst-review/SKILL.md) | Build/preview và `scripts/build.py`, `assets/targets/`, `output`/`outputs` và `qa` trong manifest | PDF đã kiểm tra và metadata của bản xuất |
+| [typst-review](skills/typst-review/SKILL.md) | Build và `scripts/build.py`, `assets/targets/`, `output`/`outputs` và `qa` trong manifest | PDF đã kiểm tra và metadata của bản xuất |
 
 Trong file dùng chung, chỉnh đúng phần thuộc trách nhiệm của thao tác và giữ phần còn lại. Các skill triển khai kiểm tra phần mình sửa; review đối chiếu bản cuối và trả lỗi về đúng trách nhiệm.
 
 ## Ngày, tên và mapping
 
-- `YYYY-MM-DD` là ngày tiếp nhận tài liệu theo giờ Việt Nam; ngày thi/năm học lưu riêng trong metadata.
+- `YYYY-MM` là tháng tiếp nhận; phân loại `Đề thi` hoặc `Chuyên đề`. Ngày tiếp nhận đầy đủ vẫn lưu trong manifest.
 - `<document-id>` dùng chữ thường, không dấu, nối bằng `-`; chọn tên theo môn, lớp, chủ đề hoặc mã đề để phân biệt tài liệu.
-- Dùng cùng ngày và ID ở `sources`, `documents`, `targets`. Nhiều tài liệu trong một ngày dùng ID khác nhau.
+- Dùng cùng tháng, loại và ID ở `sources`, `documents`, `targets`. Nhiều tài liệu trong một tháng dùng ID khác nhau.
 - Trang nguồn đặt tên theo số trang thực: `page-01.jpg`, `page-02.jpg`, ... Không suy ra số trang từ thứ tự upload.
 - Ảnh bổ sung của cùng tài liệu đưa vào bộ đã có, dù nhận vào ngày khác; cập nhật manifest.
 - Bản xuất Google Docs lưu thành `source.docx`; URL và tên gốc nằm trong manifest. Nguồn nội dung và mẫu trình bày là hai vai trò riêng.
-- Mẫu trình bày nằm trực tiếp trong `references/<reference-id>/`, không có cấp ngày. Có thể đổi tên ngắn như `de.pdf`, `de-cach.pdf`; ghi tên gốc, checksum và phạm vi áp dụng trong manifest. Khi bỏ file mẫu theo yêu cầu, giữ thông tin xuất xứ với trạng thái đã bỏ và đường dẫn cũ, không ghi là file còn tồn tại.
 - Giữ nguyên nội dung nguồn. Bản xoay/cắt/tăng tương phản phục vụ đọc nguồn, nếu có, lưu riêng.
-- Một bản xuất dùng `document.pdf`, preview là `previews/page-01.png`, ... Khi cần nhiều bản theo nội dung, khai báo `variants` trong manifest; ví dụ `de.pdf`, `de-cach.pdf`, `dap-an.pdf`, với preview trong `previews/<variant>/page-01.png`. Số trang PDF/preview độc lập với số trang nguồn.
 - Nếu cần giữ nhiều bản PDF, dùng `document-v01.pdf`, `document-v02.pdf` và cập nhật mapping.
 
 Mỗi `manifest.json` lưu ID/ngày, metadata từ nguồn, tên file gốc, đường dẫn ảnh, số trang gốc, SHA-256, trạng thái xử lý và đường dẫn Typst/PDF. Đường dẫn tính từ gốc kho; phân biệt đường dẫn dự kiến với file đã tạo. Ghi điểm thiếu/mờ, kết quả kiểm tra và mapping theo câu/hình tại đây khi cần; không thêm trường rỗng hoặc file ghi chú riêng.
@@ -72,12 +68,13 @@ Mỗi `manifest.json` lưu ID/ngày, metadata từ nguồn, tên file gốc, đ�
 
 A4 dọc, lề cân đối, khoảng cách nhất quán, bố cục thoáng. Chọn phong cách theo yêu cầu và mẫu đã chốt cho từng tài liệu: đề thi gọn, rõ hoặc bài giảng sinh động với hình khối và màu nhấn. Mẫu tham khảo không thay thế nguồn nội dung.
 
-Bộ chuẩn DXT hiện hành nằm tại [assets/references/dxt-brand-template/manifest.json](assets/references/dxt-brand-template/manifest.json). [Ảnh convention gốc](assets/references/dxt-brand-template/conventions.jpg) là nguồn chuẩn cho font và bố cục; logo gốc và các font được lưu nguyên byte, kèm tên gốc và SHA-256. Các điều chỉnh trực tiếp được người dùng chốt sau đó có ưu tiên cao hơn ảnh mẫu. Tên khóa/buổi trong ảnh chỉ minh họa, không được chép vào nội dung bài khác.
+Quy ước DXT hiện hành được ghi dưới đây và trong các template. Logo dùng trong bài giảng nằm tại `assets/branding/logo-original.png`; thư mục tham khảo đã bỏ theo yêu cầu.
 
 | Thành phần | Font/quy ước chuẩn |
 |---|---|
 | Nội dung, câu hỏi | Times New Roman; FreeSerif chỉ dự phòng ký hiệu thiếu |
-| Header và slogan footer | Noto Sans Bold |
+| Header và slogan footer DXT (bài giảng) | Noto Sans Bold |
+| Header/footer chữ đỏ (đề thi, header Buổi 11) | Noto Sans Regular 11 pt |
 | Số trang | Noto Sans Regular |
 | Tên khóa học | Arial Bold |
 | Tên bài học | #9Slide02 Tieu de dai; nếu dài dùng Tieu de rat dai 01 rồi 02 |
@@ -95,7 +92,7 @@ Màu thân chữ đen, nền trắng; đỏ ruby `#B51F36` cho nhận diện/hea
 - **Đề thi:** thông tin đề/mã đề rõ, nhãn câu và đáp án dễ quét; lựa chọn 1/2/4 cột theo độ dài, bảng rõ; footer mã đề và số trang.
 - **Bài giảng:** mục rõ; khung định nghĩa, ví dụ, ghi nhớ; thêm không gian cho hình và chú thích, dùng sắc độ đỏ và khoảng trắng để phân cấp.
 
-Template bài học trong `lesson.typ` dùng thân chữ 14 pt, leading 0,85 em, cách đoạn 3,5 mm; các ý a–d cách nhau 4,5 mm và cách đề dẫn 3,5 mm; lề hai bên 12 mm, trên 24 mm, dưới 22 mm; tiêu đề buổi 9Slide 25 pt, tên khóa Arial Bold 20,5 pt; tiêu đề dạng 9Slide 13,5 pt màu đỏ #C00000 trong khung trắng viền xanh, kèm huy hiệu lục giác bo góc. `lesson-heading` trong `templates/lesson.typ` dựng phần đầu dùng chung; file tài liệu chỉ truyền tên khóa, buổi, chuyên đề và tác giả. Header/footer nhận diện có trên mọi trang, đánh số `Trang n/N` riêng cho từng bản xuất. Khoảng cách câu/đáp án dùng token của bài giảng; công thức nhiều tầng có khoảng trống riêng và được ngắt theo các bước biến đổi khi vượt chiều rộng. Đề bài toán nằm ngoài khung; hướng giải quyết và công thức cần nhớ dùng nền đỏ rất nhạt, viền đỏ đầy đủ bốn cạnh. Khoảng cách trên/dưới khung là 5/7 mm. Công thức trong câu dùng `$math$`; công thức đứng riêng do component `formula` dựng, có khoảng cách trên/dưới 3 mm, không cộng dồn với khoảng cách mặc định và giữ các dòng cùng trang.
+Template bài học trong `lesson.typ` dùng thân chữ 14 pt, leading 0,92 em (`lesson-style.leading`), cách đoạn 3,5 mm; các ý a–d cách nhau 4,5 mm và cách đề dẫn 3,5 mm; lề hai bên 12 mm, trên 24 mm, dưới 22 mm; tiêu đề buổi 9Slide 25 pt, tên khóa Arial Bold 20,5 pt; tiêu đề dạng 9Slide 13,5 pt màu đỏ #C00000 trong khung trắng viền xanh, kèm huy hiệu lục giác bo góc. `lesson-heading` trong `templates/lesson.typ` dựng phần đầu dùng chung; file tài liệu chỉ truyền tên khóa, buổi, chuyên đề và tác giả. Header/footer nhận diện có trên mọi trang, đánh số `Trang n/N` riêng cho từng bản xuất. Khoảng cách câu/đáp án dùng token của bài giảng; công thức nhiều tầng có khoảng trống riêng và được ngắt theo các bước biến đổi khi vượt chiều rộng. Đề bài toán nằm ngoài khung; hướng giải quyết và công thức cần nhớ dùng nền đỏ rất nhạt, viền đỏ đầy đủ bốn cạnh. Khoảng cách trên/dưới khung là 5/7 mm. Công thức trong câu dùng `$math$`; công thức đứng riêng do component `formula` dựng, có khoảng cách trên/dưới 3 mm, không cộng dồn với khoảng cách mặc định và giữ các dòng cùng trang.
 
 Khi được yêu cầu ba bản bài học, dùng chung nội dung Typst: `de` giữ lý thuyết/phương pháp và đề bài; `de-cach` thêm dòng ngang xám nhạt cách nhau 7 mm, giữ số dòng tối thiểu theo câu và chia đều phần trống dư của mỗi trang cho các vùng viết lời giải; `dap-an` thêm đáp án/lời giải trong nguồn. Cả ba giữ lý thuyết nếu nguồn có. Thứ tự mục, cách nhóm và số câu theo từng nguồn; không ép mọi DOCX vào cùng cấu trúc. Hình thuộc lời giải chỉ hiện ở bản có lời giải. Không tự tạo bảng đáp án hoặc lời giải chưa có trong nguồn.
 
@@ -105,16 +102,18 @@ Hai template có điểm vào riêng:
 |---|---|
 | `templates/lesson.typ` | Bài giảng: cover khóa học, tiêu đề dạng, lý thuyết, ba biến thể |
 | `templates/exam.typ` | Đề thi: cover hai cột, mã đề, phần I–III, câu hỏi, ba biến thể |
-| `templates/branding.typ` | Header/footer DXT cho bài giảng |
+| `templates/branding.typ` | Header/footer DXT cho bài giảng (dải đỏ ruby, logo, slogan, `Trang n/N`) |
+| `templates/lesson-branding.typ` | Header chữ đỏ tùy chọn cho bài giảng (`header-content: lesson-red-header()`) |
+| `templates/exam-branding.typ` | Header/footer chữ đỏ của đề thi, icon liên hệ, `Mã đề thi … – Trang n/N` |
 | `templates/theme.typ` | Font, màu và thông số riêng `lesson-style` / `exam-style` |
 | `templates/components.typ` | Lựa chọn tự chia 1/2/4 cột và component nội dung |
 | `templates/writing.typ` | Dòng trình bày tối thiểu và chia phần trống còn lại của trang |
 | `templates/drawing.typ`, `graphs.typ` | Nét, nhãn, đồ thị và bảng biến thiên vector |
 | `templates/pyramid-net.typ` | Mô hình khai triển/chóp vuông dùng ở hai đề hiện tại |
 
-**Template đề thi** theo [mẫu Phú Thọ mới](assets/references/phu-tho-exam/page-01.jpg): cover hai cột, tên đơn vị/kỳ thi đỏ ruby, đề mục và A–D xanh navy `#245474`, câu hỏi có nhãn đỏ đậm, thân chữ Times New Roman 13 pt, leading 0,76 em; các ý a–d cách nhau 4 mm. Bảng số liệu và bảng biến thiên có header hồng nhạt, nhãn xanh navy. Footer gọn bên phải trên mọi trang, ghi mã đề và số trang thực của bản xuất. Đồ thị mặc định 70 × 48 mm, nhãn 10 pt đặt ngoài trục và vẽ sau các đường dóng. Mũi tên dùng vector hướng chung; cạnh hình học liền/đứt giữ cùng tông đỏ và độ dày. Cụm HẾT căn giữa bằng hai nét ngang, gắn với nội dung cuối để tránh trang kết riêng. Không dùng dải header/footer DXT hay huy hiệu bài giảng cho đề thi. Nội dung/mã đề luôn lấy từ nguồn riêng, không chép từ ảnh Phú Thọ.
+**Template đề thi** theo mẫu Phú Thọ đã chốt: cover hai cột, tên đơn vị/kỳ thi đỏ ruby, đề mục và A–D xanh navy `#245474`, câu hỏi có nhãn đỏ đậm, thân chữ Times New Roman 12 pt (`exam-style.body-size`); lề hai bên 12 mm, trên 18 mm, dưới 16 mm (đặt trong `exam()`). Leading mặc định của template là 0,76 em (`exam-style.leading`); các đề hiện tại truyền `leading` trong `main.typ`: 0,95 em, riêng `dap-an` 1,0 em. Các ý a–d cách nhau 4 mm. Bảng số liệu và bảng biến thiên có header hồng nhạt, nhãn xanh navy. Footer trên mọi trang: liên hệ bên trái, mã đề và số trang thực của bản xuất bên phải. Đồ thị mặc định 70 × 48 mm, nhãn 10 pt đặt ngoài trục và vẽ sau các đường dóng. Mũi tên dùng vector hướng chung; cạnh hình học liền/đứt giữ cùng tông đỏ và độ dày. Cụm HẾT căn giữa bằng hai nét ngang, gắn với nội dung cuối để tránh trang kết riêng. Không dùng dải header/footer DXT hay huy hiệu bài giảng cho đề thi. Nội dung/mã đề luôn lấy từ nguồn riêng, không chép từ ảnh Phú Thọ.
 
-`main.typ` chọn template và truyền metadata; `content/questions.typ` giữ nội dung, `content/solutions.typ` giữ lời giải khi nguồn có. Các bản `de`, `de-cach`, `dap-an` dùng chung một tập câu hỏi; `de-cach` thêm dòng trình bày và `dap-an` thêm lời giải. Nguồn không có đáp án chỉ khai báo hai bản đầu trong manifest. Không thêm dòng ghi nguồn lời giải vào PDF; thông tin nguồn và phạm vi xử lý lưu trong manifest.
+`main.typ` chọn template và truyền metadata; `content/questions.typ` giữ nội dung, `content/solutions.typ` giữ lời giải khi nguồn có. Các bản `de`, `de-cach`, `dap-an` dùng chung một tập câu hỏi; `de-cach` thêm dòng trình bày và `dap-an` thêm lời giải. Nguồn không có đáp án chỉ khai báo hai bản đầu trong manifest. Theo yêu cầu đã chốt, `exam-source` in dòng “Nguồn đề: TOANMATH.com.” ở cuối mọi bản đề thi; `exam-source(ai: true)` thêm ghi chú đề gõ lại từ ảnh và lời giải do AI thực hiện (hiện chỉ dùng ở bản `dap-an` của NBK). Ngoài các dòng này, không thêm ghi chú nguồn/biên tập vào PDF; thông tin nguồn và phạm vi xử lý lưu trong manifest.
 
 Khoảng cách giữa câu hỏi, đáp án và các hàng/cột dùng token chung trong theme. Chừa khoảng trắng riêng giữa các câu, bên cạnh giãn dòng trong từng đoạn; cân lại phần đệm của hình và lề để giữ nhịp đọc thoáng. Ô đáp án tính đủ chiều cao thực của công thức, kể cả tử/mẫu và chỉ số; nhãn A–D căn cùng hàng và phần công thức có điểm bắt đầu thống nhất. Tích phân cần dấu lớn dùng `display(...)` trong công thức inline; kiểm tra cận và khoảng hở với các dòng, đáp án xung quanh. Khi tham khảo sách hoặc giáo trình, xem cả trang bài tập nhiều công thức và hình; ghi nguồn cùng quyết định thiết kế áp dụng vào manifest.
 
@@ -124,25 +123,23 @@ Mặt hình mặc định dùng sắc đỏ nhẹ hoặc các tông pastel đã 
 
 ## Build
 
-Cần Typst, Python 3 và Pillow (`python3-pil` trên Ubuntu), GNU Make, font Times New Roman/Arial/Noto Sans/FreeSerif và bộ 9Slide trong `assets/fonts/dxt/` và bộ công cụ Poppler (`pdfinfo`, `pdftoppm`, `pdftotext`). New Computer Modern Math được Typst cung cấp. Hình vector dùng các hàm vẽ gốc của Typst, không cần package bên ngoài.
+Cần Typst, Python 3, GNU Make, font Times New Roman/Arial/Noto Sans/FreeSerif và bộ 9Slide trong `assets/fonts/dxt/` và bộ công cụ Poppler (`pdfinfo`, `pdftotext`). New Computer Modern Math được Typst cung cấp. Hình vector dùng các hàm vẽ gốc của Typst, không cần package bên ngoài.
 
 Chạy từ gốc repo:
 
 ```sh
 make list                                 # Liệt kê tài liệu và biến thể
 make build                                # Build tất cả PDF
-make preview                              # Build và render tất cả trang
 make build DOC=phan-boi-chau               # Chọn bằng đoạn tên duy nhất
-make preview DOC=nguyen-binh-khiem VARIANT=dap-an
 make build DOC=buoi-10 VARIANT=de-cach
 make build DOC=buoi-11                    # Bài giảng: 3 bản đề / dòng viết / đáp án
 make help
 
 # Cũng chấp nhận ID đầy đủ; DOCUMENT là alias tương thích của DOC
-make build DOC=2026-10-13/phan-boi-chau-toan-12-giua-ky-1-ma-1108
+make build DOC="2026-10/Đề thi/phan-boi-chau-toan-12-giua-ky-1-ma-1108"
 ```
 
-Makefile gọi `scripts/build.py` với `--font-path assets/fonts`, tìm tài liệu theo `documents/<ngày>/<id>/main.typ`. Nếu manifest có `variants`, mỗi bản khai báo `filename` và `inputs` truyền vào Typst qua `sys.inputs`; nếu không, xuất `document.pdf`. Build cập nhật đường dẫn, số trang, byte và checksum trong `output` hoặc `outputs`; preview render từ PDF vừa xuất ở 432 dpi rồi thu về 144 dpi bằng Lanczos để hạn chế cạnh vector bị làm tròn thành số pixel khác nhau. Build cố định creation timestamp theo ngày tiếp nhận trong manifest để cùng mã nguồn/toolchain cho checksum ổn định. PDF dùng chuẩn 1.5, nhúng font và giữ văn bản có thể chọn/tìm kiếm. Khi PDF thay đổi, trạng thái review là `pending` cho đến khi bản xuất được đối chiếu; phiên bản công cụ và kết quả kiểm tra lưu trong manifest.
+Makefile gọi `scripts/build.py` với `--font-path assets/fonts`, tìm tài liệu theo `documents/<tháng>/<loại>/<id>/main.typ`. Nếu manifest có `variants`, mỗi bản khai báo `filename` và `inputs` truyền vào Typst qua `sys.inputs`; nếu không, xuất `document.pdf`. Build cập nhật đường dẫn, số trang, byte và checksum trong `output` hoặc `outputs`. Build cố định creation timestamp theo ngày tiếp nhận trong manifest để cùng mã nguồn/toolchain cho checksum ổn định. PDF dùng chuẩn 1.5, nhúng font và giữ văn bản có thể chọn/tìm kiếm. Khi PDF thay đổi, trạng thái review là `pending` cho đến khi bản xuất được đối chiếu; phiên bản công cụ và kết quả kiểm tra lưu trong manifest.
 
 ## Quy trình và tiêu chí hoàn tất
 
@@ -150,7 +147,7 @@ Makefile gọi `scripts/build.py` với `--font-path assets/fonts`, tìm tài li
 2. Gõ nội dung Typst, đối chiếu từng ký tự với nguồn, dựng hình từ dữ kiện toán học.
 3. Áp dụng template; kiểm tra bảng, lựa chọn, nhãn, khoảng cách, ngắt trang và header/footer.
 4. Compile với root là thư mục kho; ghi phiên bản Typst/package/font và lệnh build để có thể tái tạo PDF.
-5. Render PDF và xem từng trang; đối chiếu nội dung, công thức, hình, numbering và thông tin đề. Cập nhật mapping/trạng thái rồi xuất vào `targets`.
+5. Mở PDF và xem từng trang; đối chiếu nội dung, công thức, hình, numbering và thông tin đề. Cập nhật mapping/trạng thái rồi xuất vào `targets`.
 
 Chỉ hoàn tất khi compile không lỗi, văn bản có thể chọn/tìm kiếm, hình được dựng sạch, nội dung đúng và đủ trong phạm vi đã thống nhất, không còn điểm mờ chưa xử lý ảnh hưởng đến phạm vi đó. Các trang dùng cùng thiết kế; mã nguồn đủ gọn để tái sử dụng.
 
@@ -160,42 +157,33 @@ Chỉ hoàn tất khi compile không lỗi, văn bản có thể chọn/tìm ki�
 - [Typst: xuất PDF](https://typst.app/docs/reference/pdf/).
 - [CeTZ: vẽ hình trong Typst](https://cetz-package.github.io/).
 
-Các hình cần hiển thị nét ổn định giữa trình đọc PDF có thể khai báo `figure_renders` trong manifest: `entry`, `output` (tương đối với thư mục tài liệu), `inputs`, `ppi`. Build dựng ảnh 600 dpi từ mã Typst trước khi biên dịch PDF; mã hình vector vẫn là nguồn chỉnh sửa. NBK áp dụng cho hình vuông tô màu và hình khai triển khay thóc.
+Các hình cần hiển thị nét ổn định giữa trình đọc PDF có thể khai báo `figure_renders` trong manifest: `entry`, `output` (tương đối với thư mục tài liệu), `inputs`, `ppi`. Build dựng ảnh 600 dpi từ mã Typst trước khi biên dịch PDF; mã hình vector vẫn là nguồn chỉnh sửa. Áp dụng cho NBK (hình vuông tô màu, khay thóc), PBC (cửa sổ, téc nước, đèn led, quả cầu, chóp pyramid) và Buổi 11 (các mô hình không gian).
 
-Header/footer đề thi dùng chung nằm ở `templates/exam-branding.typ`: logo DXT gốc và tên thầy ở đầu trang; website, Facebook/TikTok và mã đề/số trang ở chân trang. Dùng chung hình thức chuyên đề ôn từ `templates/branding.typ`: thanh đỏ sát mép, mảng chéo, viền xanh chuyển sắc và đường trắng; nội dung riêng của đề thi, biểu tượng liên hệ 4 mm. Biểu tượng vector nằm tại `assets/branding/icons/`. Số trang dưới tên trường lấy tự động theo từng bản PDF.
+Header/footer đề thi dùng chung nằm ở `templates/exam-branding.typ`: header chữ đỏ thanh mảnh (Thầy Đỗ Xuân Thắng / Luyện thi 9+ Toán THPT 10.11.12), sát đường kẻ đỏ 1 pt; footer gồm icon website, Facebook, TikTok và mã đề thi, số trang tự động theo từng bản PDF. Không dùng dải đỏ hay logo DXT cho đề thi. Biểu tượng vector nằm tại `assets/branding/icons/`.
 
-### Generated files and Git
-
-`assets/targets/` contains generated PDFs and page previews and is ignored by Git. Keep source PDFs in `assets/sources/` and reference assets in `assets/references/` under version control.
-
-Use `make build` to recreate PDFs; use `make preview DOC=phan-boi-chau` (or another document selector) when reviewing layout, clipping, labels and pagination. Previews are useful local debugging artifacts and do not need to be committed.
-
-To remove previously tracked outputs from GitHub while retaining local files, run `git rm -r --cached assets/targets`, commit the removal together with `.gitignore`, then push the branch. This removes files from the current branch, not from earlier commits.
-
-### Nhập công thức MathType
-
-`scripts/mathtype.py` giải mã công thức OLE MathType sang biểu thức Typst và so sánh với WMF xem trước trong DOCX. Cần thư viện Python `olefile` (Ubuntu: `python3-olefile`). Script dừng khi gặp cấu trúc chưa hỗ trợ, dữ liệu chưa đọc hết hoặc công thức lệch với preview; file JSON kiểm tra có thể lưu trong `/tmp`.
+### Đồng bộ PDF lên Drive
 
 ```sh
-python3 scripts/mathtype.py assets/sources/2026-10-13/buoi-11-bai-toan-thuc-te-oxyz/source.docx /tmp/buoi-11-equations.json
+make upload MONTH=2026-10 CATEGORY="Chuyên đề" DRY_RUN=1  # Xem mapping; không kết nối/ghi Drive
+make upload MONTH=2026-10 CATEGORY="Chuyên đề"  # Upload cả nhóm
+make upload MONTH=2026-10 DOC=buoi-10            # Upload 3 PDF của một bài
+make upload MONTH=2026-10 DOC=buoi-11 VARIANT=dap-an
+make build DOC=buoi-11            # Dựng lại
 ```
 
-Buổi 11 dùng `templates/lesson.typ`, 8 câu minh họa và 14 câu tự luyện. Mapping số câu nguồn, vai trò từng hình và các lỗi nguồn đã sửa được lưu trong manifest. Các bài dùng chung mô hình hình học tại `figures/models.typ`; ảnh 600 dpi do build tạo từ mô hình để giữ nét ổn định trên trình đọc PDF. `formula-rows` trình bày các phương trình độc lập trên từng hàng; `formula` dùng cho một biểu thức dài cần ngắt. Với câu dài, `exercise(..., keep-together:false)` giữ đề bài cùng hình và lựa chọn, cho phép phần a–d sang trang, đồng thời giữ tiêu đề lời giải với phần đầu lời giải.
+`make upload` đồng bộ một chiều các PDF đã build từ local lên Drive, dùng remote `dxt-gdrive` (đổi qua `REMOTE=...`). Folder cha của các tháng có ID `11EmKdVdsShhjyQpzlozlr8bEVDiThA8R`. Bắt buộc truyền `MONTH=YYYY-MM` để chọn tháng đích trên Drive. Script đọc Drive để lấy ID folder tháng và folder phân loại tương ứng; folder nào chưa có thì tạo rồi lấy ID để upload. Không cố định tháng hoặc ID folder tháng trong code. Nếu trùng tên folder cùng cấp thì dừng để tránh gửi sai nơi.
 
-### Màu bổ trợ cho hình khối
+Local dùng `<YYYY-MM>/Chuyên đề/th-<document-id>/` (cả `documents`, `assets/sources`, `assets/targets`); folder tài liệu Đề thi không thêm `th-`. Tháng đích upload do `MONTH` quyết định, không đổi đường dẫn local hoặc ngày tiếp nhận trong manifest.
 
-Mỗi hình dùng tối đa hai màu chính: đỏ thương hiệu cho khung/cạnh và đường dựng; teal trầm `#267D8D` cho quả cầu, đường tròn hoặc đối tượng cong cần phân biệt. Mặt tô dùng sắc nhạt cùng họ màu (`#E5F1EC`); chữ, trục và nền phụ dùng đen/xám trung tính. Nét thấy và nét khuất của cùng đối tượng giữ cùng màu, phân biệt bằng nét liền/đứt. Chỉ thêm màu khi giúp đọc hình; không tô xen kẽ cạnh hoặc áp dụng teal cho mọi hình.
+Trong tháng đích đã chọn, không chọn bộ lọc tài liệu thì upload tất cả; `CATEGORY` chọn nhóm, `DOC` chọn bài, `VARIANT` chọn một PDF. `MONTH` chỉ chọn nơi nhận trên Drive, không lọc tháng nguồn local. Giữ cách đặt tên hiển thị trên Drive, không thêm thư mục slug của từng bài. File cùng tên được cập nhật, file không đổi được bỏ qua; không xóa file khác trên Drive. Đây là copy có mapping tên, không phải `rclone sync --delete` hay đồng bộ hai chiều. Không tự upload khi build. Upload kiểm tra toàn bộ PDF tồn tại và checksum khớp manifest trước khi chạy; hãy build lại sau khi sửa mã nguồn. `DRY_RUN=1` chỉ in mapping local, không kiểm tra kết nối Drive.
 
-### Header/footer và khung đáp án hiện hành
+Không cần lệnh clean: build ghi đè đầu ra hiện tại.
 
-Header/footer **chỉ dành cho đề thi** dùng chữ đỏ, nét thường, không nền màu hay logo DXT; footer đề thi giữ icon SVG website, Facebook và TikTok màu đen, dấu & giữa hai mạng xã hội. Quy ước đề thi: cỡ chữ nội dung cân bằng thị giác với header/footer. Với bộ font hiện tại, nội dung Times New Roman dùng 12 pt (`exam-style.body-size`), header/footer Noto Sans dùng 11 pt (`exam-style.running-size`); không ép cùng số pt vì hai font có kích thước nhìn khác nhau. Áp dụng cho PBC, NBK và các đề thi mới. Header căn trái “Thầy Đỗ Xuân Thắng”, căn phải “Luyện thi 9+ Toán THPT 10.11.12”, đặt sát đường kẻ đỏ 1 pt bên dưới. Footer không có đường kẻ, giữ nội dung và số trang căn theo hai lề. Bản `dap-an` của bài giảng và đề thi đặt toàn bộ đề bài/hình/lựa chọn trong khung đỏ bo góc, nền hồng rất nhẹ; lời giải nằm ngoài. Mẫu: `assets/references/dxt-brand-template/answer-frame-reference.png`. Đề thi dùng `exam-branding.typ`; tài liệu bồi dưỡng giữ header/footer DXT riêng trong `branding.typ`, với lề trên 24 mm, dưới 22 mm. Khung đáp án vẫn áp dụng cho cả hai loại tài liệu.
+Tên local vẫn là `de.pdf`, `de-cach.pdf`, `dap-an.pdf`. Tên Drive được khai báo tường minh trong `drive.filenames` của từng manifest. Ví dụ Buổi 10:
 
-### Quy ước nhãn và điểm trong hình học
+- `KHÓA TH - BUỔI 10 - MIN - MAX HÌNH HỌC - ĐỀ.pdf`
+- `KHÓA TH - BUỔI 10 - MIN - MAX HÌNH HỌC - ĐỀ CÁCH.pdf`
+- `KHÓA TH - BUỔI 10 - MIN - MAX HÌNH HỌC - ĐÁP ÁN.pdf`
 
-- Đánh dấu các điểm được đặt tên bằng chấm tròn vừa phải (bán kính khoảng 0,55 mm ở kích thước thiết kế), đồng nhất trong hình.
-- Nhãn góc nhỏ hơn nhãn điểm (khoảng 9 pt so với 11 pt), nằm trong miền góc, gần đỉnh và sát cung góc; không đè cạnh hoặc cung.
-- Nhãn điểm cách đường ít nhất một khoảng nhìn rõ; không dùng nền trắng để che mất cạnh. Kiểm tra cả hình đề và hình lời giải ở kích thước in.
-- Cạnh khuất trùng trục toạ độ vẫn giữ nét đứt; chỉ vẽ trục nét liền ở đoạn không khuất và phần kéo dài ra ngoài hình.
-- Thêm ký hiệu vuông góc tại chân hình chiếu theo dữ kiện; giữ đầy đủ đường phụ, góc nhấn theo hình nguồn.
 
-Buổi 11 chọn header chữ đỏ, đường kẻ 1 pt qua `templates/lesson-branding.typ`; footer vẫn là mẫu bài giảng DXT. Tuỳ chọn `header-content` giữ mẫu này độc lập với header/footer đề thi và các bài giảng khác. Các câu Đúng/Sai của Buổi 11 (bài học 4; tự luyện 2, 5, 7) dùng bảng Mệnh đề / Đúng / Sai trong mọi bản xuất.
+`assets/targets/` được Git bỏ qua. Không còn lệnh preview hoặc ảnh preview trang; ảnh hình học do `figure_renders` dựng vẫn cần cho PDF. Nguồn nằm trong `assets/sources/`, tài nguyên nhận diện trong `assets/branding/`.
