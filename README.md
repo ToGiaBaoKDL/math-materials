@@ -74,7 +74,7 @@ Quy ước DXT hiện hành được ghi dưới đây và trong các template. 
 |---|---|
 | Nội dung, câu hỏi | Times New Roman; FreeSerif chỉ dự phòng ký hiệu thiếu |
 | Header và slogan footer DXT (bài giảng) | Noto Sans Bold |
-| Header/footer chữ đỏ (đề thi, header Buổi 11) | Noto Sans Regular 11 pt |
+| Header/footer chữ đỏ (đề thi) | Noto Sans Regular 11 pt |
 | Số trang | Noto Sans Regular |
 | Tên khóa học | Arial Bold |
 | Tên bài học | #9Slide02 Tieu de dai; nếu dài dùng Tieu de rat dai 01 rồi 02 |
@@ -103,7 +103,6 @@ Hai template có điểm vào riêng:
 | `templates/lesson.typ` | Bài giảng: cover khóa học, tiêu đề dạng, lý thuyết, ba biến thể |
 | `templates/exam.typ` | Đề thi: cover hai cột, mã đề, phần I–III, câu hỏi, ba biến thể |
 | `templates/branding.typ` | Header/footer DXT cho bài giảng (dải đỏ ruby, logo, slogan, `Trang n/N`) |
-| `templates/lesson-branding.typ` | Header chữ đỏ tùy chọn cho bài giảng (`header-content: lesson-red-header()`) |
 | `templates/exam-branding.typ` | Header/footer chữ đỏ của đề thi, icon liên hệ, `Mã đề thi … – Trang n/N` |
 | `templates/theme.typ` | Font, màu và thông số riêng `lesson-style` / `exam-style` |
 | `templates/components.typ` | Lựa chọn tự chia 1/2/4 cột và component nội dung |
@@ -187,3 +186,5 @@ Tên local vẫn là `de.pdf`, `de-cach.pdf`, `dap-an.pdf`. Tên Drive được 
 
 
 `assets/targets/` được Git bỏ qua. Không còn lệnh preview hoặc ảnh preview trang; ảnh hình học do `figure_renders` dựng vẫn cần cho PDF. Nguồn nằm trong `assets/sources/`, tài nguyên nhận diện trong `assets/branding/`.
+
+Header/footer chuyên đề dùng mẫu DXT gốc trong `templates/branding.typ` (dải đỏ, logo, chữ trắng), áp dụng thống nhất cả đề, đề cách và đáp án. Header chữ đỏ với gạch ngang chỉ dùng cho đề thi.

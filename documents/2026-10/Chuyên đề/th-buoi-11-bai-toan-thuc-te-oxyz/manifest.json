@@ -355,7 +355,7 @@
       "labels_latest": "Shifted warehouse F inside front face, D upper-left; cable 30° adjacent to arc."
     },
     "geometry_color": "Selected spherical/circular objects: teal #267D8D with pale mint fill; frame/construction stays red; neutral walls/text/axes. Maximum two main hues per figure.",
-    "running_matter": "Buoi 11 opts into independent lesson-red-header (regular red text, 1pt red rule); branded lesson footer retained. Exam and other lesson headers unaffected.",
+    "running_matter": "All Buoi 11 variants use the original branded lesson header (DXT logo, ruby band, white title) and lesson footer from templates/branding.typ. Red text exam header is exclusive to exams.",
     "answer_frame": "dap-an only: complete question including figures/options in rounded red 0.7pt frame, 2mm radius, 3.5mm inset, pale fill. Solution outside.",
     "figure_revision": "Source DOCX media reviewed: flight right-angle marks and smaller nearby angles; point dots; hidden coordinate-axis segments preserved; roof S raised, MK and highlighted SDB added; labels moved clear; SVG airplane in motion figures. Lesson question 4 uses a true/false table. README conventions recorded.",
     "roof_figure_size": "112mm in all variants (reduced from 120mm); other figure groups enlarged uniformly 5%, including photographs and cabin pair.",
@@ -868,20 +868,20 @@
     "de": {
       "pdf": "assets/targets/2026-10/Chuyên đề/th-buoi-11-bai-toan-thuc-te-oxyz/de.pdf",
       "pages": 13,
-      "bytes": 1532843,
-      "sha256": "fd8cabb111584d126dabb450f0337ce9ba162837bff1f3df10d7033c50ded876"
+      "bytes": 1701833,
+      "sha256": "7079bda78e64df0606614b2679924a2d3713f8a41aea344231f9b05333ee805e"
     },
     "de-cach": {
       "pdf": "assets/targets/2026-10/Chuyên đề/th-buoi-11-bai-toan-thuc-te-oxyz/de-cach.pdf",
       "pages": 20,
-      "bytes": 1556248,
-      "sha256": "1cba70340a9cbca980e4ee950e65c7177672e3993746446d5180543d8747987b"
+      "bytes": 1727872,
+      "sha256": "8f772bbe0da7568255698032a867f4e0b39662fc76e32d4bd8d6d49d19fffed5"
     },
     "dap-an": {
       "pdf": "assets/targets/2026-10/Chuyên đề/th-buoi-11-bai-toan-thuc-te-oxyz/dap-an.pdf",
       "pages": 22,
-      "bytes": 2271586,
-      "sha256": "b11fb3d3cd3ad70191678f8e92e8485dcc9c39f8374f97b6fc49cf9b2cd70c95"
+      "bytes": 2444349,
+      "sha256": "f202428ad1d1815aab3dbe043770a484e9cd22ed46f7671e52c7e6924704688d"
     }
   },
   "qa": {

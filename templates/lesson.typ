@@ -35,7 +35,7 @@
   #align(right, text(font: fonts.course, size: 11pt, style: "italic")[\- #author -])
 ]
 
-#let lesson(title, body, variant: "de", branding: lesson-style.branding, heading-image: none, heading-content: none, header-content: none, heading-top-trim: lesson-style.heading-top-trim) = {
+#let lesson(title, body, variant: "de", branding: lesson-style.branding, heading-image: none, heading-content: none, heading-top-trim: lesson-style.heading-top-trim) = {
   assert(("de", "de-cach", "dap-an").contains(variant), message: "Unknown lesson variant")
   set document(title: title)
   set text(font: fonts.body, size: lesson-style.body-size, fill: palette.ink, lang: "vi", overhang: false)
@@ -50,8 +50,8 @@
     background: context {
       let number = counter(page).get().first()
       let total = counter(page).final().first()
-      place(top + left, if header-content != none {header-content} else {running-head(branding.badge, branding.header,
-        branded: true, margin: lesson-style.margin)})
+      place(top + left, running-head(branding.badge, branding.header,
+        branded: true, margin: lesson-style.margin))
       place(bottom + left, running-foot(branding.footer, number, total,
         margin: lesson-style.margin))
     },
