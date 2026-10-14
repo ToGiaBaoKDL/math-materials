@@ -204,6 +204,12 @@ def updates_for_sheet(sheet, month, records):
             'start': {'sheetId': sheet_id, 'rowIndex': target, 'columnIndex': 1},
             'rows': [{'values': values}], 'fields': 'userEnteredValue,textFormatRuns',
         }})
+        requests.append({'repeatCell': {
+            'range': {'sheetId': sheet_id, 'startRowIndex': target, 'endRowIndex': target + 1,
+                      'startColumnIndex': 3, 'endColumnIndex': 4},
+            'cell': {'userEnteredFormat': {'horizontalAlignment': 'LEFT'}},
+            'fields': 'userEnteredFormat.horizontalAlignment',
+        }})
         if values[0]:
             requests.append({'repeatCell': {
                 'range': {'sheetId': sheet_id, 'startRowIndex': target, 'endRowIndex': target + 1,
@@ -253,7 +259,7 @@ def main():
     parser.add_argument('--category', choices=['Đề thi', 'Chuyên đề'])
     parser.add_argument('--sheet-id', default=SPREADSHEET)
     parser.add_argument('--root-id', default=DRIVE_ROOT)
-    parser.add_argument('--credentials', type=Path, default=ROOT / '.secret/sheets-token.json')
+    parser.add_argument('--credentials', type=Path, default=ROOT / '.secret/dxt-sheets-token.json')
     parser.add_argument('--authorize', action='store_true')
     parser.add_argument('--client', type=Path)
     parser.add_argument('--dry-run', action='store_true', help='Read Drive and Sheet and print planned rows; do not write')

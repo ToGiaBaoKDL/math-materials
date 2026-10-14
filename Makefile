@@ -2,7 +2,7 @@
 
 DOC ?= $(DOCUMENT)
 REMOTE ?= dxt-gdrive
-CREDENTIALS ?= .secret/sheets-token.json
+CREDENTIALS ?= .secret/dxt-sheets-token.json
 ARGS = $(if $(DOC),--document "$(DOC)") $(if $(VARIANT),--variant "$(VARIANT)")
 
 build:

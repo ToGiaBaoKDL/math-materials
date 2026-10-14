@@ -197,10 +197,10 @@ Dùng Google Sheets API và Drive API qua `google-api-python-client`, `google-au
 
 Thiết lập một lần:
 
-1. Trong Google Cloud project của bạn, bật **Google Sheets API** và **Google Drive API**, tạo OAuth client loại **Desktop app**; tải JSON về `.secret/sheets-client.json`.
+1. Trong Google Cloud project của bạn, bật **Google Sheets API** và **Google Drive API**, tạo OAuth client loại **Desktop app**; tải JSON về `.secret/dxt-sheets-client.json`.
 2. Gmail dùng ghi Sheet cần quyền sửa Sheet và quyền đọc folder Drive chứa bộ file đã upload. Có thể dùng Gmail khác với remote rclone.
-3. Chạy `make sheets-auth CLIENT=.secret/sheets-client.json`, chọn đúng Gmail của bạn và cấp quyền. Token lưu riêng tại `.secret/sheets-token.json` (Git bỏ qua, quyền file 600). Lệnh ghi Sheet tự refresh khi cần; không tự mở trình duyệt đăng nhập.
-4. Nếu đã có service account được chia sẻ quyền sửa Sheet và đọc folder Drive, truyền `CREDENTIALS=.secret/<service-account>.json` trực tiếp, không cần `sheets-auth`.
+3. Chạy `make sheets-auth CLIENT=.secret/dxt-sheets-client.json`, chọn đúng Gmail của bạn và cấp quyền. Token lưu riêng tại `.secret/dxt-sheets-token.json` (Git bỏ qua, quyền file 600). Lệnh ghi Sheet tự refresh khi cần; không tự mở trình duyệt đăng nhập.
+4. Nếu đã có service account được chia sẻ quyền sửa Sheet và đọc folder Drive, truyền `CREDENTIALS=.secret/dxt-sheets-service-account.json` trực tiếp, không cần `sheets-auth`.
 
 ```sh
 # Upload/sửa nhiều lần; chưa ghi Sheet.
@@ -221,7 +221,7 @@ make sheet MONTH=2026-10 DATE=2026-10-15 CATEGORY="Chuyên đề"
 | A – Tháng | Dùng ô tháng đã gộp | Chung ô tháng |
 | B – Ngày/Tháng/Năm | `DATE`, hiển thị dd/mm/yyyy | Trống |
 | C – File gốc thầy gửi | Link `ĐỀ - GỐC` đến file nguồn đã upload | Trống |
-| D – Tiêu đề | Tên đề theo convention, bỏ `.pdf` | Tên đáp án theo convention, bỏ `.pdf` |
+| D – Tiêu đề | Tên đề theo convention, bỏ `.pdf`, căn trái | Tên đáp án theo convention, bỏ `.pdf`, căn trái |
 | E – Link code tài liệu gốc | Link `Github` đến thư mục mã nguồn trên branch hiện tại của origin | Trống |
 | F – File pdf (ko cách) | Link `ĐỀ - KHÔNG CÁCH` | Link `ĐÁP ÁN` |
 | G – File pdf (cách) | Link `ĐỀ - CÁCH` | Trống |
