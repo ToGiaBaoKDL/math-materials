@@ -187,7 +187,7 @@
 ]
 
 #let exercise(number, body, answers: (), statements: (), solution: [],
-  variant: "de", writing-lines: 6, fill-writing-page: true, writing-keep-prompt: true, writing-single-page: false, compact-statements: false, writing-line-gap: writing-style.ruled-gap, source-id: none, keep-together: true, flow-stem: false, statement-table: false) = {
+  variant: "de", writing-lines: 6, fill-writing-page: true, writing-keep-prompt: true, writing-single-page: false, compact-statements: false, writing-line-gap: writing-style.ruled-gap, source-id: none, keep-together: true, keep-solution-start: false, flow-stem: false, statement-table: false) = {
   let stem = [
     #if source-id != none {
       context [#metadata((id: source-id, page: counter(page).get().first())) <exercise-location>]
@@ -224,7 +224,7 @@
     ]
     if fill-writing-page {final-writing-space(gap:writing-line-gap)}
   } else {
-    block(width: 100%, breakable: variant != "dap-an" and not keep-together, sticky: false,
+    block(width: 100%, breakable: variant != "dap-an" and not keep-together, sticky: variant == "dap-an" and keep-solution-start,
       above: rhythm.question, below: 0pt,
       stroke:if variant=="dap-an" {0.7pt+palette.primary} else {none},
       fill:if variant=="dap-an" {palette.box-fill} else {none},
