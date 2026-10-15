@@ -2,7 +2,6 @@
 
 DOC ?= $(DOCUMENT)
 REMOTE ?= dxt-gdrive
-CREDENTIALS ?= .secret/dxt-sheets-token.json
 ARGS = $(if $(DOC),--document "$(DOC)") $(if $(VARIANT),--variant "$(VARIANT)")
 
 build:
@@ -12,10 +11,10 @@ upload:
 	python3 scripts/upload.py $(ARGS) --remote "$(REMOTE)" $(if $(MONTH),--month "$(MONTH)") $(if $(CATEGORY),--category "$(CATEGORY)") $(if $(filter 1 true,$(DRY_RUN)),--dry-run)
 
 sheet:
-	uv run scripts/sheets.py $(if $(DOC),--document "$(DOC)") $(if $(MONTH),--month "$(MONTH)") $(if $(DATE),--date "$(DATE)") $(if $(CATEGORY),--category "$(CATEGORY)") --credentials "$(CREDENTIALS)" $(if $(filter 1 true,$(DRY_RUN)),--dry-run)
+	uv run scripts/sheets.py $(if $(DOC),--document "$(DOC)") $(if $(MONTH),--month "$(MONTH)") $(if $(DATE),--date "$(DATE)") $(if $(CATEGORY),--category "$(CATEGORY)") $(if $(CREDENTIALS),--credentials "$(CREDENTIALS)") $(if $(filter 1 true,$(DRY_RUN)),--dry-run)
 
 sheets-auth:
-	uv run scripts/sheets.py --authorize $(if $(CLIENT),--client "$(CLIENT)") --credentials "$(CREDENTIALS)"
+	uv run scripts/sheets.py --authorize $(if $(CLIENT),--client "$(CLIENT)") $(if $(CREDENTIALS),--credentials "$(CREDENTIALS)")
 
 list:
 	python3 scripts/build.py --list

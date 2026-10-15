@@ -197,9 +197,9 @@ Dùng Google Sheets API và Drive API qua `google-api-python-client`, `google-au
 
 Thiết lập một lần:
 
-1. Trong Google Cloud project của bạn, bật **Google Sheets API** và **Google Drive API**, tạo OAuth client loại **Desktop app**; tải JSON về `.secret/dxt-sheets-client.json`.
+1. Trong Google Cloud project của bạn, bật **Google Sheets API** và **Google Drive API**, tạo OAuth client loại **Desktop app**; tải JSON về `.secret/dxt-toan-2027-client.json`.
 2. Gmail dùng ghi Sheet cần quyền sửa Sheet và quyền đọc folder Drive chứa bộ file đã upload. Có thể dùng Gmail khác với remote rclone.
-3. Chạy `make sheets-auth CLIENT=.secret/dxt-sheets-client.json`, chọn đúng Gmail của bạn và cấp quyền. Token lưu riêng tại `.secret/dxt-sheets-token.json` (Git bỏ qua, quyền file 600). Lệnh ghi Sheet tự refresh khi cần; không tự mở trình duyệt đăng nhập.
+3. Chạy `make sheets-auth CLIENT=.secret/dxt-toan-2027-client.json`, chọn đúng Gmail của bạn và cấp quyền. Token tự đặt tên theo email đăng nhập, ví dụ `.secret/togiabaode-token.json` với `togiabaode@gmail.com` (Git bỏ qua, quyền file 600). Lệnh ghi Sheet mặc định dùng `.secret/togiabaode-token.json`; chọn tài khoản khác bằng `CREDENTIALS=.secret/<tên>-token.json`. Email ngoài Gmail giữ cả tên miền trong tên file để tránh trùng. Có thể truyền `CREDENTIALS` khi đăng nhập để chọn tên riêng. Lệnh ghi Sheet tự refresh khi cần; không tự mở trình duyệt đăng nhập.
 4. Nếu đã có service account được chia sẻ quyền sửa Sheet và đọc folder Drive, truyền `CREDENTIALS=.secret/dxt-sheets-service-account.json` trực tiếp, không cần `sheets-auth`.
 
 ```sh

@@ -28,6 +28,14 @@ def credentials(path, client=None):
         from google_auth_oauthlib.flow import InstalledAppFlow
         flow = InstalledAppFlow.from_client_secrets_file(str(client), SCOPES)
         creds = flow.run_local_server(port=0)
+        if path is None:
+            from googleapiclient.discovery import build
+            user = build('drive', 'v3', credentials=creds, cache_discovery=False).about().get(
+                fields='user(emailAddress)').execute(num_retries=0)['user']
+            email = user['emailAddress'].lower()
+            name = email.removesuffix('@gmail.com')
+            name = re.sub(r'[^a-z0-9@._-]', '_', name)
+            path = ROOT / '.secret' / f'{name}-token.json'
     else:
         if not path.is_file():
             raise ValueError(f'Authorize first: make sheets-auth CLIENT=path/to/oauth-client.json CREDENTIALS={path}')
@@ -43,6 +51,8 @@ def credentials(path, client=None):
     path.touch(mode=0o600, exist_ok=True)
     path.chmod(0o600)
     path.write_text(creds.to_json() + '\n')
+    if client:
+        print(f'Sheets authorization saved to {path}')
     return creds
 
 
@@ -247,17 +257,14 @@ def main():
     parser.add_argument('--category', choices=['Đề thi', 'Chuyên đề'])
     parser.add_argument('--sheet-id', default=SPREADSHEET)
     parser.add_argument('--root-id', default=DRIVE_ROOT)
-    parser.add_argument('--credentials', type=Path, default=ROOT / '.secret/dxt-sheets-token.json')
+    parser.add_argument('--credentials', type=Path)
     parser.add_argument('--authorize', action='store_true')
-    parser.add_argument('--client', type=Path)
+    parser.add_argument('--client', type=Path, default=ROOT / '.secret/dxt-toan-2027-client.json')
     parser.add_argument('--dry-run', action='store_true', help='Read Drive and Sheet and print planned rows; do not write')
     args = parser.parse_args()
     try:
         if args.authorize:
-            if not args.client:
-                parser.error('--authorize requires --client (Desktop OAuth client JSON)')
             credentials(args.credentials, args.client)
-            print(f'Sheets authorization saved to {args.credentials}')
             return
         check_month(args.month)
         if not args.date or not re.fullmatch(r'[0-9]{4}-[0-9]{2}-[0-9]{2}', args.date):
@@ -266,7 +273,7 @@ def main():
         paths = documents(args.document, args.category)
         files = {p: document_files(p) for p in paths}
         from googleapiclient.discovery import build
-        creds = credentials(args.credentials)
+        creds = credentials(args.credentials or ROOT / '.secret/togiabaode-token.json')
         drive = Drive(build('drive', 'v3', credentials=creds, cache_discovery=False))
         sheets = build('sheets', 'v4', credentials=creds, cache_discovery=False).spreadsheets()
         month_id = drive.find(args.root_id, args.month, folder=True)['id']
