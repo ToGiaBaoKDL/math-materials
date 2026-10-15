@@ -6,7 +6,6 @@ import argparse
 import hashlib
 import json
 import re
-import subprocess
 import unicodedata
 from datetime import date
 from pathlib import Path
@@ -15,6 +14,7 @@ from urllib.parse import quote
 from build import ROOT, page_count
 from upload import DRIVE_ROOT, check_month, document_files, documents
 
+GITHUB = 'https://github.com/ToGiaBaoKDL/math-materials/tree/main'
 SPREADSHEET = '1q7giSA18z4UkTomn9xQBqrDgdjssXeUSDj4fTtVYOVs'
 SCOPES = ['https://www.googleapis.com/auth/spreadsheets', 'https://www.googleapis.com/auth/drive.readonly']
 
@@ -75,18 +75,6 @@ class Drive:
         return matches[0]
 
 
-def github_base():
-    remote = subprocess.check_output(['git', 'remote', 'get-url', 'origin'], cwd=ROOT, text=True).strip()
-    if remote.startswith('git@github.com:'):
-        remote = 'https://github.com/' + remote.split(':', 1)[1]
-    if not remote.startswith('https://github.com/'):
-        raise ValueError('origin must point to a GitHub repository.')
-    branch = subprocess.check_output(['git', 'branch', '--show-current'], cwd=ROOT, text=True).strip()
-    if not branch:
-        branch = subprocess.check_output(['git', 'rev-parse', 'HEAD'], cwd=ROOT, text=True).strip()
-    return remote.removesuffix('.git') + '/tree/' + quote(branch, safe='')
-
-
 def cell(value='', link=None):
     if value == '':
         return {}
@@ -96,7 +84,7 @@ def cell(value='', link=None):
     return result
 
 
-def document_rows(path, files, drive, month_id, uploaded_on, github):
+def document_rows(path, files, drive, month_id, uploaded_on):
     category = path.parent.parent.name
     category_id = drive.find(month_id, category, folder=True)['id']
     folder = drive.find(category_id, path.parent.name, folder=True)['id']
@@ -106,7 +94,7 @@ def document_rows(path, files, drive, month_id, uploaded_on, github):
         if remote.get('md5Checksum') != hashlib.md5(local.read_bytes()).hexdigest():
             raise ValueError(f'Drive differs from local: {filename}. Upload the approved files first.')
         links[key] = remote.get('webViewLink') or f"https://drive.google.com/file/d/{remote['id']}/view"
-    code = github + '/' + quote(str(path.parent.relative_to(ROOT)), safe='/')
+    code = GITHUB + '/' + quote(str(path.parent.relative_to(ROOT)), safe='/')
     serial = (uploaded_on - date(1899, 12, 30)).days
     title = files['de'][1].removesuffix('.pdf')
     rows = [(title, [cell(serial), cell('ĐỀ - GỐC', links['goc']), cell(title),
@@ -277,7 +265,6 @@ def main():
         uploaded_on = date.fromisoformat(args.date)
         paths = documents(args.document, args.category)
         files = {p: document_files(p) for p in paths}
-        github = github_base()
         from googleapiclient.discovery import build
         creds = credentials(args.credentials)
         drive = Drive(build('drive', 'v3', credentials=creds, cache_discovery=False))
@@ -286,7 +273,7 @@ def main():
         groups = {}
         for path in paths:
             groups.setdefault(path.parent.parent.name, []).extend(
-                document_rows(path, files[path], drive, month_id, uploaded_on, github))
+                document_rows(path, files[path], drive, month_id, uploaded_on))
         spreadsheet = sheets.get(
             spreadsheetId=args.sheet_id, ranges=[f"'{name}'!A:I" for name in groups],
             fields='sheets(properties,merges,data(startRow,rowMetadata(pixelSize),rowData(values(formattedValue,userEnteredValue,hyperlink))))',

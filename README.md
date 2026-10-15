@@ -222,7 +222,7 @@ make sheet MONTH=2026-10 DATE=2026-10-15 CATEGORY="Chuyên đề"
 | B – Ngày/Tháng/Năm | `DATE`, hiển thị dd/mm/yyyy | Trống |
 | C – File gốc thầy gửi | Link `ĐỀ - GỐC` đến file nguồn đã upload | Trống |
 | D – Tiêu đề | Tên đề theo convention, bỏ `.pdf`, căn trái | Tên đáp án theo convention, bỏ `.pdf`, căn trái |
-| E – Link code tài liệu gốc | Link `Github` đến thư mục mã nguồn trên branch hiện tại của origin | Trống |
+| E – Link code tài liệu gốc | Link `Github` đến thư mục mã nguồn trên nhánh `main` của `ToGiaBaoKDL/math-materials` | Trống |
 | F – File pdf (ko cách) | Link `ĐỀ - KHÔNG CÁCH` | Link `ĐÁP ÁN` |
 | G – File pdf (cách) | Link `ĐỀ - CÁCH` | Trống |
 | H – Số trang/File ko cách | Số trang `de.pdf` | Số trang `dap-an.pdf` |
