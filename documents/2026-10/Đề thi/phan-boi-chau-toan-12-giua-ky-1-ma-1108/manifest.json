@@ -1,7 +1,7 @@
 {
   "id": "phan-boi-chau-toan-12-giua-ky-1-ma-1108",
   "received_date": "2026-10-13",
-  "status": "ready",
+  "status": "implemented",
   "template": "exam",
   "sources": [
     {
@@ -10,6 +10,14 @@
       "bytes": 1888440,
       "sha256": "43e652be04342e8ef926faa43b21e6303c4bee772b72daf8a568dc39a692cbd7",
       "pages": 6
+    },
+    {
+      "path": "assets/sources/2026-10/Đề thi/phan-boi-chau-toan-12-giua-ky-1-ma-1108/answers.docx",
+      "original_name": "De-kiem-tra-giua-HK-1-Toan-12-THPT-Phan-Boi-Chau-nam-26-27.docx",
+      "role": "questions_and_detailed_solutions",
+      "received_date": "2026-10-16",
+      "bytes": 1042782,
+      "sha256": "2d98b250d431751d2487b82d3c32d8e5b827e333d7d2948dd43bbfbe30e12dfc"
     }
   ],
   "variants": {
@@ -23,6 +31,12 @@
       "filename": "de-cach.pdf",
       "inputs": {
         "variant": "de-cach"
+      }
+    },
+    "dap-an": {
+      "filename": "dap-an.pdf",
+      "inputs": {
+        "variant": "dap-an"
       }
     }
   },
@@ -48,6 +62,13 @@
         "cover_page_count": "passed",
         "sha256": "passed",
         "preview_count": "passed"
+      },
+      "dap-an": {
+        "pages": 16,
+        "questions": 22,
+        "solution_headings": 22,
+        "text_bounds": "passed",
+        "fonts_embedded": "passed"
       }
     },
     "visual_review": "Inspected first-page previews of both exams for header/footer alignment. Checked every output for text bounds, branding, page counts, questions and checksums.",
@@ -61,7 +82,9 @@
       "de": 7,
       "de-cach": 12
     },
-    "latest_color_review": "Shared net and folded pyramid inspected as enlarged renders; all document variants rebuilt."
+    "latest_color_review": "Shared net and folded pyramid inspected as enlarged renders; all document variants rebuilt.",
+    "solution_review": "22 source solutions and three answer-key tables transcribed. All 375 OLE formula objects decoded and matched to embedded preview streams. Exact expressions checked against worked steps; integer advertising optimization and water-volume computations independently recomputed.",
+    "review_limitations": "Full-page visual review of the new answer PDF remains pending; no page preview images generated."
   },
   "outputs": {
     "de": {
@@ -75,6 +98,12 @@
       "pages": 13,
       "bytes": 649164,
       "sha256": "0ce3e5ea1a28acae099fb692579ddc6a96b07e2a17c1905f9e632eb142fe6642"
+    },
+    "dap-an": {
+      "pdf": "assets/targets/2026-10/Đề thi/phan-boi-chau-toan-12-giua-ky-1-ma-1108/dap-an.pdf",
+      "pages": 16,
+      "bytes": 793858,
+      "sha256": "5902308deee744b859f495ad371f8e058f31e58dd57039be7df7c4750f5f090a"
     }
   },
   "metadata": {
@@ -97,10 +126,9 @@
       5,
       6
     ],
-    "has_solutions": false
+    "has_solutions": true
   },
   "source_notes": [
-    "No answers or solutions supplied: only de and de-cach variants are produced.",
     "I.4 option C (x=1) and II.3 volume 33150 preserved as printed.",
     "I.12 C is a schematic distractor: preserve both marked asymptotes and the source guide (-3,3); branches drawn independently to retain the original shape and axis intercepts.",
     "Cube/sphere illustration uses a valid member of the tangency family, with no inferred radius added as a label."
@@ -232,7 +260,152 @@
     "folder": "Đề thi",
     "filenames": {
       "de": "PHAN-BOI-CHAU-TOAN-12-GIUA-KY-1-MA-1108 - ĐỀ.pdf",
-      "de-cach": "PHAN-BOI-CHAU-TOAN-12-GIUA-KY-1-MA-1108 - ĐỀ CÁCH.pdf"
+      "de-cach": "PHAN-BOI-CHAU-TOAN-12-GIUA-KY-1-MA-1108 - ĐỀ CÁCH.pdf",
+      "dap-an": "PHAN-BOI-CHAU-TOAN-12-GIUA-KY-1-MA-1108 - ĐÁP ÁN.pdf"
     }
-  }
+  },
+  "solution_mapping": [
+    {
+      "section": "I",
+      "number": 1,
+      "source_paragraph": 82,
+      "source_end_exclusive": 91
+    },
+    {
+      "section": "I",
+      "number": 2,
+      "source_paragraph": 91,
+      "source_end_exclusive": 99
+    },
+    {
+      "section": "I",
+      "number": 3,
+      "source_paragraph": 99,
+      "source_end_exclusive": 103
+    },
+    {
+      "section": "I",
+      "number": 4,
+      "source_paragraph": 103,
+      "source_end_exclusive": 109
+    },
+    {
+      "section": "I",
+      "number": 5,
+      "source_paragraph": 109,
+      "source_end_exclusive": 116
+    },
+    {
+      "section": "I",
+      "number": 6,
+      "source_paragraph": 116,
+      "source_end_exclusive": 120
+    },
+    {
+      "section": "I",
+      "number": 7,
+      "source_paragraph": 120,
+      "source_end_exclusive": 125
+    },
+    {
+      "section": "I",
+      "number": 8,
+      "source_paragraph": 125,
+      "source_end_exclusive": 130
+    },
+    {
+      "section": "I",
+      "number": 9,
+      "source_paragraph": 130,
+      "source_end_exclusive": 137
+    },
+    {
+      "section": "I",
+      "number": 10,
+      "source_paragraph": 137,
+      "source_end_exclusive": 142
+    },
+    {
+      "section": "I",
+      "number": 11,
+      "source_paragraph": 142,
+      "source_end_exclusive": 152
+    },
+    {
+      "section": "I",
+      "number": 12,
+      "source_paragraph": 152,
+      "source_end_exclusive": 163
+    },
+    {
+      "section": "II",
+      "number": 1,
+      "source_paragraph": 163,
+      "source_end_exclusive": 197
+    },
+    {
+      "section": "II",
+      "number": 2,
+      "source_paragraph": 197,
+      "source_end_exclusive": 216
+    },
+    {
+      "section": "II",
+      "number": 3,
+      "source_paragraph": 216,
+      "source_end_exclusive": 240
+    },
+    {
+      "section": "II",
+      "number": 4,
+      "source_paragraph": 240,
+      "source_end_exclusive": 259
+    },
+    {
+      "section": "III",
+      "number": 1,
+      "source_paragraph": 259,
+      "source_end_exclusive": 269
+    },
+    {
+      "section": "III",
+      "number": 2,
+      "source_paragraph": 269,
+      "source_end_exclusive": 279
+    },
+    {
+      "section": "III",
+      "number": 3,
+      "source_paragraph": 279,
+      "source_end_exclusive": 293
+    },
+    {
+      "section": "III",
+      "number": 4,
+      "source_paragraph": 293,
+      "source_end_exclusive": 304
+    },
+    {
+      "section": "III",
+      "number": 5,
+      "source_paragraph": 304,
+      "source_end_exclusive": 315
+    },
+    {
+      "section": "III",
+      "number": 6,
+      "source_paragraph": 315,
+      "source_end_exclusive": 328
+    }
+  ],
+  "source_review_notes": [
+    {
+      "id": "II-1-d",
+      "note": "Source explicitly treats integer product count: n=815 gives x≈34.062874 million, so d is False; retained."
+    },
+    {
+      "id": "II-3-a",
+      "note": "Source marks True after rounding t≈47.923460 to 48 minutes, although the statement does not explicitly authorize rounding. Source answer retained; ambiguity flagged for author review."
+    }
+  ]
 }
