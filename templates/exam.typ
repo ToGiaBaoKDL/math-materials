@@ -21,9 +21,9 @@
 }
 
 #let exam-cover(organization, title, code, duration: 90, subject: "Toán",
-  status: none, note: none, organization-size: 12pt, pages: none) = {
+  status: none, note: none, organization-size: 12pt, title-size: 12pt, duration-size: 12pt, heading-columns: (1fr, 1.15fr), pages: none) = {
   set par(justify: false, leading: 0.65em)
-  grid(columns: (1fr, 1.15fr), column-gutter: 6mm, align: center + top,
+  grid(columns: heading-columns, column-gutter: 6mm, align: center + top,
     [
       #text(size: organization-size, weight: "bold", fill: palette.primary, organization)
       #linebreak()
@@ -32,14 +32,21 @@
       #if note != none { linebreak(); text(style: "italic", note) }
     ],
     [
-      #text(size: 12pt, weight: "bold", fill: palette.primary, title)
+      #text(size: title-size, weight: "bold", fill: palette.primary, title)
       #linebreak()
       #text(weight: "bold", fill: palette.exam-blue)[Môn thi: #subject]
       #linebreak()
-      #text(size: 12pt, style: "italic")[Thời gian làm bài: #duration phút, không kể thời gian phát đề]
+      #text(size: duration-size, style: "italic")[Thời gian làm bài: #duration phút, không kể thời gian phát đề]
     ],
   )
   v(4mm)
+  if code == none {
+    grid(columns: (1fr, 1fr), column-gutter: 8mm, align: bottom,
+      grid(columns: (auto, 1fr), column-gutter: 2mm, align: bottom,
+        [Họ, tên thí sinh:], line(length:100%,stroke:(paint:palette.ink,thickness:0.7pt,dash:"dotted"))),
+      grid(columns: (auto, 1fr), column-gutter: 2mm, align: bottom,
+        [Số báo danh:], line(length:100%,stroke:(paint:palette.ink,thickness:0.7pt,dash:"dotted"))))
+  } else {
   grid(columns: (1.2fr, 1fr), column-gutter: 8mm, align: horizon,
     grid(columns: (32mm, 1fr), column-gutter: 2mm, row-gutter: 2mm, align:bottom,
       [Họ, tên thí sinh:], line(length:100%,stroke:(paint:palette.ink,thickness:0.7pt,dash:"dotted")),
@@ -47,6 +54,7 @@
     if code == none { [] } else {block(width: 100%, fill: rgb("#F1D8DE"), stroke: 0.9pt + palette.primary,
       radius: 2mm, inset: (x:3mm,y:3mm),
       align(center, text(size:14pt,weight: "bold", fill: palette.primary)[Mã đề: #code]))})
+  }
   v(3mm)
   line(length: 100%, stroke: (paint: palette.primary, thickness: 0.9pt, dash: "dashed"))
 }

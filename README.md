@@ -248,7 +248,7 @@ Có thể phối xanh dương `#0077C8`–cam `#C45A00` thay đỏ trong một h
 
 ### Bản đề gộp đáp án
 
-Tài liệu có thể khai báo variant `de-dap-an` trong manifest: file local `de-dap-an.pdf`, tên Drive kết thúc ` - ĐỀ + ĐÁP ÁN.pdf`. Bộ Nguyễn Khuyến – Lê Thánh Tông có `de`, `dap-an`, `de-dap-an`, không có `de-cach`. Bản gộp dùng chung nội dung, nối phần đáp án từ trang mới, bỏ header/footer trên phần đáp án; số trang toàn file được tính liên tục. Bản đáp án riêng vẫn có header/footer đề thi. Nguồn không ghi mã đề thì không tự đặt mã đề.
+Tài liệu có thể khai báo variant `de-dap-an` trong manifest: file local `de-dap-an.pdf`, tên Drive kết thúc ` - ĐỀ + ĐÁP ÁN.pdf`. Bộ Nguyễn Khuyến – Lê Thánh Tông có `de`, `dap-an`, `de-dap-an`, không có `de-cach`. Bản gộp dùng chung nội dung, nối phần đáp án từ trang mới và dùng header/footer chung xuyên suốt; số trang toàn file được tính liên tục. Câu hỏi được phép nối qua trang, không ép nguyên câu nằm trên một trang. Bản đáp án riêng vẫn có header/footer đề thi. Nguồn không ghi mã đề thì không tự đặt mã đề.
 
 ```bash
 make build DOC=nguyen-khuyen

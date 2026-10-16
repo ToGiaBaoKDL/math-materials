@@ -42,7 +42,7 @@
       "de_pages": 6,
       "dap_an_pages": 5,
       "combined_pages": 11,
-      "combined_answer_branding": "absent",
+      "combined_answer_branding": "shared_header_footer_every_page_passed",
       "upload_mapping": "dry_run_passed",
       "sheet_combined_row": "mock_passed",
       "sheet_repeat_update": "mock_passed_no_duplicate_fee_preserved"
@@ -62,6 +62,12 @@
         "text_within_page": "passed",
         "fonts_embedded": "passed"
       }
+    },
+    "latest_layout_revision": "Removed whole-question keep-together constraint. Combined PDF uses common header/footer throughout; verified branding and continuous page numbers on every page. Full-page visual review pending.",
+    "pages": {
+      "de": 6,
+      "dap-an": 5,
+      "de-dap-an": 11
     }
   },
   "source_issues": [
@@ -102,25 +108,25 @@
     "de": {
       "pdf": "assets/targets/2026-10/Đề thi/nguyen-khuyen-le-thanh-tong-toan-12-kiem-tra-thang-10/de.pdf",
       "pages": 6,
-      "bytes": 248162,
-      "sha256": "94fe67e771217932b9f5a9977ea6414e93f39ecf676e9fce1a9a84224c5e1524"
+      "bytes": 247920,
+      "sha256": "1a68f90cd437effc110985bb1dfd224eb3f3c0c169aa2a70f4ba7112a3441950"
     },
     "dap-an": {
       "pdf": "assets/targets/2026-10/Đề thi/nguyen-khuyen-le-thanh-tong-toan-12-kiem-tra-thang-10/dap-an.pdf",
       "pages": 5,
-      "bytes": 227908,
-      "sha256": "63447dacf5ad3221d3232c2f10730dd6cbb0d0aef1630a154447382acc39b3e8"
+      "bytes": 228006,
+      "sha256": "5b970f163f660955ce8e0ffa9751767e883196f785421bbfc2ae4a3fef75d862"
     },
     "de-dap-an": {
       "pdf": "assets/targets/2026-10/Đề thi/nguyen-khuyen-le-thanh-tong-toan-12-kiem-tra-thang-10/de-dap-an.pdf",
       "pages": 11,
-      "bytes": 380988,
-      "sha256": "0032c71fe0cd48b16eb255675c8a3d11c37771d51903c56b959c967840efb3b2"
+      "bytes": 384889,
+      "sha256": "54b7295d689b0c5c09eba4a5a4daa408e58087ebf0ca5c43c32d53bf39d8d279"
     }
   },
   "implementation": {
     "content": "Shared questions, source answer key and detailed solutions; native Typst math, tables and six figures. No fabricated exam code.",
-    "variants": "de: questions; dap-an: answer key and solutions; de-dap-an: questions then answers on a new page without answer header/footer.",
+    "variants": "de: flowing questions allowed across pages; dap-an: answer key and solutions; de-dap-an: questions then answers on a new page with shared continuous header/footer and pagination.",
     "palette": "Shared saturated blue/orange/yellow figure palette; existing purple graph style; exam branding.",
     "sheet": "One combined row; F=ĐỀ + ĐÁP ÁN, G blank, H=combined PDF page count."
   }
