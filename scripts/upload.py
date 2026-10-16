@@ -75,7 +75,7 @@ def plan(document=None, variant=None, month=None, category=None):
 
 def folder_id(remote, parent_id, name):
     flags = ['--drive-root-folder-id', parent_id,
-             '--contimeout', '10s', '--timeout', '30s', '--retries', '1',
+             '--contimeout', '10s', '--timeout', '30s', '--retries', '3', '--tpslimit', '3', '--tpslimit-burst', '1',
              '--low-level-retries', '1']
     def lookup():
         folders = json.loads(subprocess.check_output(
@@ -127,7 +127,7 @@ def main():
                 document, filename = destination.rsplit('/', 1)
                 subprocess.run(['rclone', 'copyto', str(pdf), f'{remote}:{filename}',
                                 '--drive-root-folder-id', folders[month][document],
-                                '--checksum', '--contimeout', '15s', '--timeout', '60s', '--retries', '1',
+                                '--checksum', '--contimeout', '15s', '--timeout', '60s', '--retries', '3', '--tpslimit', '3', '--tpslimit-burst', '1',
                                 '--low-level-retries', '1'], check=True)
     except (ValueError, KeyError, FileNotFoundError, subprocess.CalledProcessError) as error:
         parser.exit(1, f'Upload failed: {error}\n')

@@ -204,8 +204,8 @@
           set text(size:12.5pt)
           table(columns:(1fr,17mm,17mm),inset:(x:2.5mm,y:if compact-statements {1.5mm} else {2.5mm}),stroke:0.6pt+palette.primary,
             align:(x,y)=>if x==0 {left+top} else {center+horizon},
-            fill:(x,y)=>if y==0 {palette.primary.lighten(91%)} else {none},
-            table.header(..([Mệnh đề],[Đúng],[Sai]).map(t=>text(fill:palette.primary,weight:"bold",t))),
+            fill:(x,y)=>if y==0 {palette.primary} else {none},
+            table.header(..([Mệnh đề],[Đúng],[Sai]).map(t=>text(fill:white,weight:"bold",t))),
             ..statements.map(s=>(block(width:100%,breakable:false,above:0pt,below:0pt)[
               #set text(top-edge:"bounds",bottom-edge:"bounds")
               #set par(justify:false,leading:0.65em,spacing:0pt)

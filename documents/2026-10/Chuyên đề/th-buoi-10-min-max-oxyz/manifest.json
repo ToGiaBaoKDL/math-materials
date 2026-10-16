@@ -527,20 +527,20 @@
     "de": {
       "pdf": "assets/targets/2026-10/Chuyên đề/th-buoi-10-min-max-oxyz/de.pdf",
       "pages": 9,
-      "bytes": 498316,
-      "sha256": "c42a7f8df2adb292f3e27dffaa4b3c52131f8a9287f20801babc078114611d4d"
+      "bytes": 498302,
+      "sha256": "454f507c40b98e645b2c363dddabead8e497c4357b72eeae830decd37d7817d5"
     },
     "de-cach": {
       "pdf": "assets/targets/2026-10/Chuyên đề/th-buoi-10-min-max-oxyz/de-cach.pdf",
       "pages": 17,
-      "bytes": 526243,
-      "sha256": "220146ecce9dd9fea938d1827f7d0fed67778c6f047a1c3882960f175a9ab862"
+      "bytes": 526207,
+      "sha256": "0fed022792c6c23797dcf8ff810af3864716c2ef5d4096261674e3f50e1aa37a"
     },
     "dap-an": {
       "pdf": "assets/targets/2026-10/Chuyên đề/th-buoi-10-min-max-oxyz/dap-an.pdf",
       "pages": 22,
-      "bytes": 769098,
-      "sha256": "3af67493000f68bcbbd09af749652daac377b7c8bc9591e2ffa998954697e3df"
+      "bytes": 769064,
+      "sha256": "31e6a93db705bac14a47675db11d2bbca5e7946de48e23516829163c75f7bd72"
     }
   },
   "qa": {
