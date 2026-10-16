@@ -2,6 +2,12 @@
   primary: rgb("#A80F2D"),
   geometry-secondary: rgb("#12647A"),
   geometry-tint: rgb("#B9DDE3"),
+  geometry-blue: rgb("#0077C8"),
+  geometry-orange: rgb("#C45A00"),
+  geometry-yellow: rgb("#FFD43B"),
+  geometry-purple: rgb("#58118C"),
+  geometry-green: rgb("#17623E"),
+  geometry-amber: rgb("#945000"),
   exam-blue: rgb("#245474"),
   heading: rgb("#C00000"),
   box-fill: rgb("#FDF8F8"),
@@ -143,7 +149,7 @@
 
 #let exam-style = (
   margin: (x: 12mm, top: 16mm, bottom: 18mm),
-  body-size: 12pt, running-size: 11pt, leading: 0.76em, question-gap: 5mm,
+  body-size: 12pt, running-size: 11pt, running-weight: 400, running-stroke: 0.12pt, leading: 0.76em, question-gap: 5mm,
   section-gap: 5mm, statement-gap: 4mm,
 )
 

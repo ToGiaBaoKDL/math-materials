@@ -2,8 +2,6 @@
 #import "/templates/theme.typ": exam-palette as palette
 #import "/templates/pyramid-net.typ": pyramid-net
 #let edge = 1.2pt + palette.primary
-#let curved-edge = 1.2pt + palette.geometry-secondary
-#let curved-hidden = (paint:palette.geometry-secondary,thickness:1.2pt,dash:"dashed")
 #let hidden = (paint:palette.primary,thickness:1.2pt,dash:"dashed")
 #let path = draw-path.with(stroke:edge)
 #let smooth = draw-smooth.with(stroke:edge)
@@ -11,6 +9,9 @@
 #let pyramid() = pyramid-net(side: [6 dm],edge-width:1.2pt)
 
 #let window() = block(width:45mm,height:45mm)[
+ #path(((7mm,38mm),(7mm,19mm),(37mm,19mm),(37mm,38mm)),close:true,stroke:none,fill:palette.geometry-yellow.lighten(22%))
+ #smooth(t=>(22mm+15mm*calc.cos(t*1rad),19mm - 15mm*calc.sin(t*1rad)),
+   t=>(-15mm*calc.sin(t*1rad),-15mm*calc.cos(t*1rad)),0,calc.pi,stroke:none,fill:palette.geometry-yellow,close:true)
  #for inset in (0mm,0.8mm) {
   let radius = 15mm - inset
   path(((7mm+inset,38mm - inset),(7mm+inset,19mm),(37mm - inset,19mm),(37mm - inset,38mm - inset)),close:true,stroke:0.65pt+palette.primary)
@@ -29,11 +30,11 @@
  #path((p(0,50,0),p(0,50,80)),stroke:hidden)
  #let c=p(20,20,20)
  #let r=10mm
- #place(top+left,dx:c.at(0)-r,dy:c.at(1)-r,circle(radius:r,fill:palette.geometry-tint,stroke:curved-edge))
+ #place(top+left,dx:c.at(0)-r,dy:c.at(1)-r,circle(radius:r,fill:palette.geometry-blue.lighten(52%),stroke:1.2pt+palette.geometry-blue))
  // A light dashed equator is a shape guide, not a seam on the ball.
  #place(top+left,dx:c.at(0)-r,dy:c.at(1)-r/3,
    ellipse(width:2*r,height:2*r/3,
-     stroke:(paint:palette.geometry-secondary,thickness:0.7pt,dash:"dashed")))
+     stroke:(paint:palette.geometry-blue,thickness:1pt,dash:"dashed")))
  #path((p(0,0,0),p(50,0,0),p(50,50,0),p(50,50,80),p(0,50,80),p(0,0,80)),close:true)
  #path((p(0,0,80),p(50,0,80),p(50,50,80)))
  #path((p(50,0,0),p(50,0,80)))
@@ -41,14 +42,15 @@
 
 #let led() = block(width:78mm,height:55mm)[
  #let p(x,y)=(10mm+9mm*x,45mm-9mm*y)
+ #path((p(0,0),p(0,4),p(6,4),p(6,0)),close:true,stroke:none,fill:palette.geometry-blue.lighten(80%))
  #arrow-line(p(0,-0.3),p(0,4.8),color:palette.ink,thickness:0.6pt)
  #arrow-line(p(-0.6,0),p(7.3,0),color:palette.ink,thickness:0.6pt)
- #path((p(0,0),p(0,4),p(6,4),p(6,0)),close:true)
+ #path((p(0,0),p(0,4),p(6,4),p(6,0)),close:true,stroke:1.2pt+palette.geometry-blue)
  #let i=p(3,1)
  #let h=p(3,2)
- #place(top+left,dx:i.at(0)-9mm,dy:i.at(1)-9mm,circle(radius:9mm,stroke:curved-edge))
- #path((i,h),stroke:curved-hidden)
- #for point in (i,h) {place(top+left,dx:point.at(0)-0.5mm,dy:point.at(1)-0.5mm,circle(radius:0.5mm,fill:palette.primary,stroke:none))}
+ #place(top+left,dx:i.at(0)-9mm,dy:i.at(1)-9mm,circle(radius:9mm,stroke:1.2pt+palette.geometry-orange,fill:palette.geometry-orange.lighten(40%)))
+ #path((i,h),stroke:(paint:palette.geometry-orange,thickness:1.2pt,dash:"dashed"))
+ #for point in (i,h) {place(top+left,dx:point.at(0)-0.5mm,dy:point.at(1)-0.5mm,circle(radius:0.5mm,fill:palette.geometry-orange,stroke:none))}
  #for (point,t,dx,dy) in ((p(0,0),[$A$],-3mm,4mm),(p(0,4),[$B$],-3mm,0mm),(p(6,4),[$C$],3mm,-3mm),(p(6,0),[$D$],3mm,4mm),(h,[$H$],3mm,-3mm),(i,[$I$],4mm,0mm),(p(7.3,0),[$x$],0mm,4mm),(p(0,4.8),[$y$],-3mm,0mm)) {label(point,t,dx:dx,dy:dy)}
 ]
 
@@ -90,7 +92,7 @@
      let q=p(..range(3).map(k=>v.at(k)+r*inward.at(k)*unit.at(k)))
      pts.push((q.at(0)/1mm,q.at(1)/1mm))
    }}
-   path(hull(pts),close:true,stroke:curved-edge,fill:palette.geometry-secondary.lighten(55%))
+   path(hull(pts),close:true,stroke:1.2pt+palette.geometry-purple,fill:palette.geometry-purple.lighten(55%))
    // Only the three outward-facing cube planes are visible to the viewer.
    for (u,w,normal) in ((0,1,2),(1,2,0),(2,0,1)) {
      if v.at(normal)==1 {
@@ -101,14 +103,14 @@
          a.at(w)+=r*inward.at(w)*calc.sin(t)
          p(..a)
        })
-       path((c,)+arc,close:true,stroke:curved-edge,fill:palette.geometry-secondary.lighten(if normal==2 {82%} else if normal==0 {68%} else {55%}))
+       path((c,)+arc,close:true,stroke:1.2pt+palette.geometry-purple,fill:palette.geometry-purple.lighten(if normal==2 {82%} else if normal==0 {68%} else {55%}))
      }
    }
  }
  #let depth(v)=0.47*v.at(0)+0.814*v.at(1)+0.342*v.at(2)
  #let middle=depth((0.5,0.5,0.5))
  #for v in vertices.sorted(key:depth).filter(v=>depth(v) < middle) {octant(v)}
- #place(top+left,dx:center.at(0)-radius,dy:center.at(1)-radius,circle(radius:radius,stroke:curved-edge,fill:palette.geometry-tint))
+ #place(top+left,dx:center.at(0)-radius,dy:center.at(1)-radius,circle(radius:radius,stroke:1.2pt+palette.geometry-purple,fill:palette.geometry-purple.lighten(85%)))
  #for v in vertices.sorted(key:depth).filter(v=>depth(v) > middle) {octant(v)}
  #path((p(1,0,0),p(1,1,0),p(0,1,0),p(0,1,1),p(0,0,1),p(1,0,1)),close:true)
  #path((p(1,0,1),p(1,1,1),p(0,1,1)))
@@ -116,7 +118,7 @@
  #draw-label(center,[$O_0$],dx:-5mm,dy:3mm)
  #place(top+left,dx:63mm,dy:0mm,block(width:60mm,height:68mm)[
    #for (i,v) in vertices.enumerate() {
-     path((center,p(..v)),stroke:(paint:rgb("#163A5F"),thickness:1.45pt,dash:"dashed"))
+     path((center,p(..v)),stroke:(paint:palette.geometry-purple,thickness:1.45pt,dash:"dashed"))
    }
    #path((p(1,0,0),p(1,1,0),p(0,1,0),p(0,1,1),p(0,0,1),p(1,0,1)),close:true)
    #path((p(1,0,1),p(1,1,1),p(0,1,1)))
@@ -126,7 +128,7 @@
    // White-centered markers remain legible where several dashed segments meet.
    #for point in vertices.map(v=>p(..v)) + (center,) {
      place(top+left,dx:point.at(0)-0.85mm,dy:point.at(1)-0.85mm,
-       circle(radius:0.85mm,fill:white,stroke:0.85pt+palette.geometry-secondary))
+       circle(radius:0.85mm,fill:white,stroke:0.85pt+palette.geometry-purple))
    }
    #for (i,v) in vertices.enumerate() {
      label(p(..v),[$O_#(i+1)$],dy:if v.at(2)==1 {-3mm} else {3mm})

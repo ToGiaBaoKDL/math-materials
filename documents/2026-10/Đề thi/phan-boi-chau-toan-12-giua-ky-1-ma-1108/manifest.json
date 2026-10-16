@@ -90,20 +90,20 @@
     "de": {
       "pdf": "assets/targets/2026-10/Đề thi/phan-boi-chau-toan-12-giua-ky-1-ma-1108/de.pdf",
       "pages": 7,
-      "bytes": 641979,
-      "sha256": "e8990b508ae1d7f4a5cf18464806ae44498d8856bd0fa3ff553fd8b52a8788df"
+      "bytes": 645606,
+      "sha256": "ac48a446a58fdef6a18106008f0e0de92ca295a4dd71b8c6e07e16bad9be3ae1"
     },
     "de-cach": {
       "pdf": "assets/targets/2026-10/Đề thi/phan-boi-chau-toan-12-giua-ky-1-ma-1108/de-cach.pdf",
       "pages": 13,
-      "bytes": 653825,
-      "sha256": "1cc38a02ea8ee987480c8e9717914aa9472ec5dac38bff3a20f8e9603d5c0e42"
+      "bytes": 657569,
+      "sha256": "397141734e93e9d18e79f7151511ad0aaba7f5695988e3bb4f3794064730ad79"
     },
     "dap-an": {
       "pdf": "assets/targets/2026-10/Đề thi/phan-boi-chau-toan-12-giua-ky-1-ma-1108/dap-an.pdf",
       "pages": 16,
-      "bytes": 798565,
-      "sha256": "2a56a29956c43df5eafcf64d3e31c71d5f8feeebddce6610caa36c6debf77678"
+      "bytes": 802392,
+      "sha256": "6dd3e79f003f468c9874e4c6d4251c572353d73e426e6eca53837ca401f10d3c"
     }
   },
   "metadata": {

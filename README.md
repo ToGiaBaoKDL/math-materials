@@ -234,10 +234,14 @@ Tìm dòng cũ bằng tiêu đề hoặc link PDF trong đúng khối tháng; n�
 
 ### Màu đề thi hiện hành
 
-Đề thi dùng `exam-palette` riêng trong `templates/theme.typ`: đỏ đậm `#A80F2D`, xanh `#12647A`, nền mặt hình `#B9DDE3`. Header bảng số liệu dùng nền đỏ đậm, chữ trắng. Ô mã đề và bảng biến thiên dùng nền hồng nhạt `#F1D8DE`, chữ đỏ đậm/đen. Đường cong đồ thị dùng tím đậm `#58118C`, nét 1,5 pt; nét đứt nối tâm cầu dùng xanh navy `#163A5F`, nét 1,45 pt. Hình phối đỏ–xanh với sắc độ mặt đủ rõ, nhãn đen và nét khuất giữ đúng hình học. Áp dụng cho mọi biến thể PBC/NBK; không thay palette chuyên đề.
+Đề thi dùng `exam-palette` riêng trong `templates/theme.typ`: đỏ đậm `#A80F2D`, xanh `#12647A`, nền mặt hình `#B9DDE3`. Header bảng số liệu dùng nền đỏ đậm, chữ trắng. Ô mã đề và bảng biến thiên dùng nền hồng nhạt `#F1D8DE`, chữ đỏ đậm/đen. Đường cong đồ thị dùng tím đậm `#58118C`, nét 1,5 pt; nét đứt nối tâm cầu dùng xanh navy `#163A5F`, nét 1,45 pt. Hình phối đỏ với một màu phụ trong convention chung, sắc độ mặt đủ rõ, nhãn đen và nét khuất giữ đúng hình học. Áp dụng cho mọi biến thể PBC/NBK; giữ cấu trúc nhận diện chuyên đề.
 
 Chuyên đề dùng cùng độ đậm màu nhận diện: đỏ `#A80F2D`, xanh `#12647A`, nền hình `#B9DDE3`; header bảng đúng/sai đỏ đậm chữ trắng. Header/footer vẫn giữ cấu trúc DXT riêng của chuyên đề.
 
 ### Kiểm tra Python
 
 Chạy `make check` để kiểm tra Ruff, định dạng và type bằng Pyright cho toàn bộ `scripts/`. Chạy `make format` để sửa các lỗi lint tự động an toàn và định dạng code. `uv run` cài nhóm dependency `dev` trong `pyproject.toml`; các dependency Google API và OLE giúp Pyright kiểm tra đúng thư viện mà script dùng.
+
+Convention màu hình dùng chung cho đề thi và chuyên đề: mỗi hình tối đa hai màu chính, phối đỏ ruby `#A80F2D` với một màu xanh `#12647A`, tím đậm `#58118C`, xanh lá đậm `#17623E` hoặc hổ phách đậm `#945000` theo vai trò hình. Dùng token `palette.geometry-*`; nét chính phải đậm, vùng tô dùng sắc nhạt cùng tông và nằm dưới nét. Không luân phiên màu tùy tiện giữa các cạnh; các bản đề, đề cách và đáp án dùng cùng màu cho cùng hình. Header/footer riêng đề thi dùng font regular với stroke chữ 0,12 pt cùng màu để đậm vừa, nằm giữa regular và bold, giữ nguyên cỡ chữ và cấu trúc chuyên đề.
+
+Có thể phối xanh dương `#0077C8`–cam `#C45A00` thay đỏ trong một hình; vàng sáng `#FFD43B` dùng cho vùng tô nổi bật. Nền màu giữ độ bão hòa rõ, tránh nhạt xám; nét viền đậm cùng tông, nhãn đen.
