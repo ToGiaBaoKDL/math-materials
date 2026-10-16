@@ -1,0 +1,127 @@
+{
+  "id": "nguyen-khuyen-le-thanh-tong-toan-12-kiem-tra-thang-10",
+  "received_date": "2026-10-17",
+  "status": "implemented",
+  "template": "exam",
+  "sources": [
+    {
+      "path": "assets/sources/2026-10/Đề thi/nguyen-khuyen-le-thanh-tong-toan-12-kiem-tra-thang-10/source.pdf",
+      "original_name": "de-kiem-tra-toan-12-thang-10-nam-2026-truong-nguyen-khuyen-le-thanh-tong-tp-hcm-2.pdf",
+      "bytes": 580360,
+      "sha256": "675ac4ac76b2de3ddcc4127738543fabdd81650511e9ffd8da6f8cc8ae450f40",
+      "pages": 16
+    }
+  ],
+  "scope": {
+    "questions": 22,
+    "question_pages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "answer_pages": [
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ]
+  },
+  "qa": {
+    "review_status": "pending",
+    "compile": "passed",
+    "automated": {
+      "questions": 22,
+      "de_pages": 6,
+      "dap_an_pages": 5,
+      "combined_pages": 11,
+      "combined_answer_branding": "absent",
+      "upload_mapping": "dry_run_passed",
+      "sheet_combined_row": "mock_passed",
+      "sheet_repeat_update": "mock_passed_no_duplicate_fee_preserved"
+    },
+    "visual_review": "Inspected all six standalone figure renders against extracted source images; fixed wrapped 25 cm label and room height label position. Full-page PDF visual review pending.",
+    "source_review": "Question text and source solutions compared through PDF text extraction; all eight embedded source images inspected. Source I.9 continuity ambiguity retained in source_issues.",
+    "pdf_checks": {
+      "de": {
+        "text_within_page": "passed",
+        "fonts_embedded": "passed"
+      },
+      "dap-an": {
+        "text_within_page": "passed",
+        "fonts_embedded": "passed"
+      },
+      "de-dap-an": {
+        "text_within_page": "passed",
+        "fonts_embedded": "passed"
+      }
+    }
+  },
+  "source_issues": [
+    {
+      "question": "I.9",
+      "issue": "The rational expression is undefined at x=1; the source implicitly intends a continuous extension. Preserve question wording and record this ambiguity."
+    }
+  ],
+  "variants": {
+    "de": {
+      "filename": "de.pdf",
+      "inputs": {
+        "variant": "de"
+      }
+    },
+    "dap-an": {
+      "filename": "dap-an.pdf",
+      "inputs": {
+        "variant": "dap-an"
+      }
+    },
+    "de-dap-an": {
+      "filename": "de-dap-an.pdf",
+      "inputs": {
+        "variant": "de-dap-an"
+      }
+    }
+  },
+  "drive": {
+    "folder": "Đề thi",
+    "filenames": {
+      "de": "NGUYEN-KHUYEN-LE-THANH-TONG-TOAN-12-KIEM-TRA-THANG-10 - ĐỀ.pdf",
+      "dap-an": "NGUYEN-KHUYEN-LE-THANH-TONG-TOAN-12-KIEM-TRA-THANG-10 - ĐÁP ÁN.pdf",
+      "de-dap-an": "NGUYEN-KHUYEN-LE-THANH-TONG-TOAN-12-KIEM-TRA-THANG-10 - ĐỀ + ĐÁP ÁN.pdf"
+    }
+  },
+  "outputs": {
+    "de": {
+      "pdf": "assets/targets/2026-10/Đề thi/nguyen-khuyen-le-thanh-tong-toan-12-kiem-tra-thang-10/de.pdf",
+      "pages": 6,
+      "bytes": 248162,
+      "sha256": "94fe67e771217932b9f5a9977ea6414e93f39ecf676e9fce1a9a84224c5e1524"
+    },
+    "dap-an": {
+      "pdf": "assets/targets/2026-10/Đề thi/nguyen-khuyen-le-thanh-tong-toan-12-kiem-tra-thang-10/dap-an.pdf",
+      "pages": 5,
+      "bytes": 227908,
+      "sha256": "63447dacf5ad3221d3232c2f10730dd6cbb0d0aef1630a154447382acc39b3e8"
+    },
+    "de-dap-an": {
+      "pdf": "assets/targets/2026-10/Đề thi/nguyen-khuyen-le-thanh-tong-toan-12-kiem-tra-thang-10/de-dap-an.pdf",
+      "pages": 11,
+      "bytes": 380988,
+      "sha256": "0032c71fe0cd48b16eb255675c8a3d11c37771d51903c56b959c967840efb3b2"
+    }
+  },
+  "implementation": {
+    "content": "Shared questions, source answer key and detailed solutions; native Typst math, tables and six figures. No fabricated exam code.",
+    "variants": "de: questions; dap-an: answer key and solutions; de-dap-an: questions then answers on a new page without answer header/footer.",
+    "palette": "Shared saturated blue/orange/yellow figure palette; existing purple graph style; exam branding.",
+    "sheet": "One combined row; F=ĐỀ + ĐÁP ÁN, G blank, H=combined PDF page count."
+  }
+}

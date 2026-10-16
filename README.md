@@ -245,3 +245,16 @@ Chạy `make check` để kiểm tra Ruff, định dạng và type bằng Pyrigh
 Convention màu hình dùng chung cho đề thi và chuyên đề: mỗi hình tối đa hai màu chính, phối đỏ ruby `#A80F2D` với một màu xanh `#12647A`, tím đậm `#58118C`, xanh lá đậm `#17623E` hoặc hổ phách đậm `#945000` theo vai trò hình. Dùng token `palette.geometry-*`; nét chính phải đậm, vùng tô dùng sắc nhạt cùng tông và nằm dưới nét. Không luân phiên màu tùy tiện giữa các cạnh; các bản đề, đề cách và đáp án dùng cùng màu cho cùng hình. Header/footer riêng đề thi dùng font regular với stroke chữ 0,12 pt cùng màu để đậm vừa, nằm giữa regular và bold, giữ nguyên cỡ chữ và cấu trúc chuyên đề.
 
 Có thể phối xanh dương `#0077C8`–cam `#C45A00` thay đỏ trong một hình; vàng sáng `#FFD43B` dùng cho vùng tô nổi bật. Nền màu giữ độ bão hòa rõ, tránh nhạt xám; nét viền đậm cùng tông, nhãn đen.
+
+### Bản đề gộp đáp án
+
+Tài liệu có thể khai báo variant `de-dap-an` trong manifest: file local `de-dap-an.pdf`, tên Drive kết thúc ` - ĐỀ + ĐÁP ÁN.pdf`. Bộ Nguyễn Khuyến – Lê Thánh Tông có `de`, `dap-an`, `de-dap-an`, không có `de-cach`. Bản gộp dùng chung nội dung, nối phần đáp án từ trang mới, bỏ header/footer trên phần đáp án; số trang toàn file được tính liên tục. Bản đáp án riêng vẫn có header/footer đề thi. Nguồn không ghi mã đề thì không tự đặt mã đề.
+
+```bash
+make build DOC=nguyen-khuyen
+make upload DRIVE_MONTH=2026-10 DOC=nguyen-khuyen
+make upload DRIVE_MONTH=2026-10 DOC=nguyen-khuyen VARIANT=de-dap-an
+make sheet DRIVE_MONTH=2026-10 DATE=2026-10-17 DOC=nguyen-khuyen
+```
+
+Upload toàn bộ khi không chọn variant; chọn một variant vẫn kèm file gốc. Sheets ưu tiên `de-dap-an` khi manifest có bản này: một dòng, tên kết thúc `ĐỀ + ĐÁP ÁN`, link cột F ghi `ĐỀ + ĐÁP ÁN`, cột G (file cách) trống, cột H là tổng trang bản gộp; không thêm dòng đáp án riêng. Các tài liệu cũ giữ quy tắc đề/đáp án hai dòng. Cập nhật lại vẫn khớp theo tiêu đề hoặc URL PDF trong cùng tháng. Upload và ghi Sheets là hai lệnh riêng; chỉ ghi Sheets sau khi duyệt và upload đủ bộ.

@@ -4,7 +4,7 @@
 // Curves, guides and labels use the same mathematical coordinate map.
 #let graph(f, xrange: (-3, 3), yrange: (-4, 4),
   width: plot-style.width, height: plot-style.height,
-  breaks: (), xticks: (), yticks: (), guides: (), asymptotes: (), asymptote-stroke: plot-style.guide, origin-offset: (-1.5mm, 1.5mm), y-label-side: auto, y-label-offsets: (:), name: none) = {
+  breaks: (), points: (), xticks: (), yticks: (), guides: (), asymptotes: (), asymptote-stroke: plot-style.guide, origin-offset: (-1.5mm, 1.5mm), y-label-side: auto, y-label-offsets: (:), name: none) = {
   let pad = 6mm
   let p(x, y) = (
     pad + (x - xrange.first()) / (xrange.last() - xrange.first()) * (width - 2 * pad),
@@ -52,6 +52,10 @@
     #for y in yticks {
       let q = p(0, y)
       place(top + left, line(start:(q.at(0)-0.7mm,q.at(1)),end:(q.at(0)+0.7mm,q.at(1)),stroke:0.55pt+palette.ink))
+    }
+    #for point in points {
+      let q = p(..point)
+      place(top + left, dx:q.at(0)-0.5mm, dy:q.at(1)-0.5mm, circle(radius:0.5mm,fill:palette.ink,stroke:none))
     }
     // Label plates are last, so guides can never run through a digit.
     #label((width - pad + 0.5mm, origin.at(1)), [$x$], horizontal: left)

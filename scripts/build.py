@@ -95,7 +95,7 @@ def build(entry, variant=None):
 def main():
     parser = argparse.ArgumentParser(description="Build Typst documents and variants declared in manifests.")
     parser.add_argument("--document", help="Unique name fragment or YYYY-MM/category/document-id; omit for all")
-    parser.add_argument("--variant", choices=["de", "de-cach", "dap-an"], help="Build one variant")
+    parser.add_argument("--variant", choices=["de", "de-cach", "dap-an", "de-dap-an"], help="Build one variant")
     parser.add_argument("--list", action="store_true", help="List documents and available variants")
     args = parser.parse_args()
     entries = sorted((ROOT / "documents").glob("*/*/*/main.typ"))

@@ -4,7 +4,7 @@
 #import "writing.typ": writing-space, final-writing-space
 
 #let exam(title, code, body, variant: "de", leading: exam-style.leading) = {
-  assert(("de", "de-cach", "dap-an").contains(variant), message: "Unknown exam variant")
+  assert(("de", "de-cach", "dap-an", "de-dap-an").contains(variant), message: "Unknown exam variant")
   set document(title: title)
   set text(font: fonts.body, size: exam-style.body-size, lang: "vi", fill: palette.ink)
   show strong: set text(weight: "bold")
@@ -21,13 +21,13 @@
 }
 
 #let exam-cover(organization, title, code, duration: 90, subject: "Toán",
-  status: none, note: none, organization-size: 12pt) = {
+  status: none, note: none, organization-size: 12pt, pages: none) = {
   set par(justify: false, leading: 0.65em)
   grid(columns: (1fr, 1.15fr), column-gutter: 6mm, align: center + top,
     [
       #text(size: organization-size, weight: "bold", fill: palette.primary, organization)
       #linebreak()
-      #context text(size:11pt,style:"italic")[(Đề thi gồm #counter(page).final().first() trang)]
+      #context text(size:11pt,style:"italic")[(Đề thi gồm #(if pages == none {counter(page).final().first()} else {pages}) trang)]
       #if status != none { v(2mm); text(weight: "bold", fill: palette.exam-blue, status) }
       #if note != none { linebreak(); text(style: "italic", note) }
     ],
@@ -44,9 +44,9 @@
     grid(columns: (32mm, 1fr), column-gutter: 2mm, row-gutter: 2mm, align:bottom,
       [Họ, tên thí sinh:], line(length:100%,stroke:(paint:palette.ink,thickness:0.7pt,dash:"dotted")),
       [Số báo danh:], line(length:100%,stroke:(paint:palette.ink,thickness:0.7pt,dash:"dotted"))),
-    block(width: 100%, fill: rgb("#F1D8DE"), stroke: 0.9pt + palette.primary,
+    if code == none { [] } else {block(width: 100%, fill: rgb("#F1D8DE"), stroke: 0.9pt + palette.primary,
       radius: 2mm, inset: (x:3mm,y:3mm),
-      align(center, text(size:14pt,weight: "bold", fill: palette.primary)[Mã đề: #code])))
+      align(center, text(size:14pt,weight: "bold", fill: palette.primary)[Mã đề: #code]))})
   v(3mm)
   line(length: 100%, stroke: (paint: palette.primary, thickness: 0.9pt, dash: "dashed"))
 }
@@ -63,12 +63,18 @@
   table.header(..header.map(it => text(weight: "bold", fill: white, it))), ..cells.pos())
 
 #let exam-question(number, body, answers: (), statements: (), solution: [],
-  variant: "de", writing-lines: 6, columns: auto, ending: none, keep-together: false) = {
+  variant: "de", writing-lines: 6, columns: auto, ending: none, keep-together: false, statements-table: false) = {
   let prompt = [
     #text(weight: "bold", fill: palette.primary)[Câu #number.] #body
     #if statements.len() > 0 {
-      block(above: 5mm, below: 0pt, grid(columns: (1fr,), row-gutter: exam-style.statement-gap,
-        ..statements.enumerate().map(((i, it)) => [#("abcd".at(i))) #it])))
+      if statements-table {
+        block(above: 3mm, below: 0pt, exam-table(columns: (1fr, 13mm, 13mm),
+          header: ([Mệnh đề], [Đúng], [Sai]),
+          ..statements.enumerate().map(((i, it)) => (align(left)[#("abcd".at(i))) #it], [], [])).flatten()))
+      } else {
+        block(above: 5mm, below: 0pt, grid(columns: (1fr,), row-gutter: exam-style.statement-gap,
+          ..statements.enumerate().map(((i, it)) => [#("abcd".at(i))) #it])))
+      }
     }
     #if answers.len() > 0 { v(3mm); choices(answers, columns: columns, label-color: palette.exam-blue) }
   ]

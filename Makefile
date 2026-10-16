@@ -5,10 +5,10 @@ REMOTE ?= dxt-gdrive
 ARGS = $(if $(DOC),--document "$(DOC)") $(if $(VARIANT),--variant "$(VARIANT)")
 
 build:
-	python3 scripts/build.py $(ARGS)
+	uv run python scripts/build.py $(ARGS)
 
 upload:
-	python3 scripts/upload.py $(ARGS) --remote "$(REMOTE)" $(if $(DRIVE_MONTH),--drive-month "$(DRIVE_MONTH)") $(if $(CATEGORY),--category "$(CATEGORY)") $(if $(filter 1 true,$(DRY_RUN)),--dry-run)
+	uv run python scripts/upload.py $(ARGS) --remote "$(REMOTE)" $(if $(DRIVE_MONTH),--drive-month "$(DRIVE_MONTH)") $(if $(CATEGORY),--category "$(CATEGORY)") $(if $(filter 1 true,$(DRY_RUN)),--dry-run)
 
 sheet:
 	uv run scripts/sheets.py $(if $(DRIVE_MONTH),--drive-month "$(DRIVE_MONTH)") $(if $(DOC),--document "$(DOC)") $(if $(DATE),--date "$(DATE)") $(if $(CATEGORY),--category "$(CATEGORY)") $(if $(CREDENTIALS),--credentials "$(CREDENTIALS)") $(if $(filter 1 true,$(DRY_RUN)),--dry-run)
@@ -17,7 +17,7 @@ sheets-auth:
 	uv run scripts/sheets.py --authorize $(if $(CLIENT),--client "$(CLIENT)") $(if $(CREDENTIALS),--credentials "$(CREDENTIALS)")
 
 list:
-	python3 scripts/build.py --list
+	uv run python scripts/build.py --list
 
 check:
 	uv run ruff check scripts

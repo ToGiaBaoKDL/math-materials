@@ -29,5 +29,5 @@
     box(width:3mm,align(center)[|]),
     contact-icon("facebook"),[\&],
     contact-icon("tiktok"),[toanthaythangdxt])
-  plain-footer(contacts,[Mã đề thi #code – Trang #number/#total])
+  plain-footer(contacts,[#if code != none {[Mã đề thi #code – ]}Trang #number/#total])
 }

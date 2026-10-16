@@ -123,7 +123,8 @@ def document_rows(path, files, drive, month_id, uploaded_on):
         links[key] = remote.get("webViewLink") or f"https://drive.google.com/file/d/{remote['id']}/view"
     code = GITHUB + "/" + quote(str(path.parent.relative_to(ROOT)), safe="/")
     serial = (uploaded_on - date(1899, 12, 30)).days
-    title = files["de"][1].removesuffix(".pdf")
+    primary = "de-dap-an" if "de-dap-an" in files else "de"
+    title = files[primary][1].removesuffix(".pdf")
     rows = [
         (
             title,
@@ -132,13 +133,13 @@ def document_rows(path, files, drive, month_id, uploaded_on):
                 cell("ĐỀ - GỐC", links["goc"]),
                 cell(title),
                 cell("Github", code),
-                cell("ĐỀ - KHÔNG CÁCH", links["de"]),
-                cell("ĐỀ - CÁCH", links["de-cach"]),
-                cell(page_count(files["de"][0])),
+                cell("ĐỀ + ĐÁP ÁN" if primary == "de-dap-an" else "ĐỀ - KHÔNG CÁCH", links[primary]),
+                cell("ĐỀ - CÁCH", links["de-cach"]) if "de-cach" in links and primary == "de" else cell(),
+                cell(page_count(files[primary][0])),
             ],
         )
     ]
-    if "dap-an" in files:
+    if "dap-an" in files and primary != "de-dap-an":
         title = files["dap-an"][1].removesuffix(".pdf")
         rows.append(
             (

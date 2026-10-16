@@ -1,13 +1,19 @@
-#import "/templates/exam.typ": exam-table
+#import "/templates/exam.typ": exam-section, exam-table
+#import "/templates/theme.typ": exam-palette as palette
 #let answer-key() = block(width:100%,breakable:false,above:5mm,below:5mm)[
- #align(center,strong[ĐÁP ÁN])
- #v(2mm)
- #exam-table(columns:13,header:([Câu],..range(1,13).map(n=>[#n])),[Đáp án],..("A","A","C","B","D","B","C","A","B","A","D","B").map(x=>[#x]))
- #v(3mm)
- #grid(columns:(1fr,1fr),column-gutter:6mm,
- exam-table(columns:5,header:([Câu],[a],[b],[c],[d]),
- [1],[Đ],[S],[Đ],[S], [2],[Đ],[Đ],[S],[Đ], [3],[Đ],[Đ],[Đ],[S], [4],[Đ],[S],[Đ],[Đ]),
- exam-table(columns:2,header:([Câu],[Đáp số]),[1],[0,68],[2],[513],[3],[2],[4],[9],[5],[7],[6],[7,3]))
+ #align(center,text(weight:"bold",fill:palette.primary,size:15pt)[BẢNG ĐÁP ÁN])
+ #exam-section("I",[CÂU TRẮC NGHIỆM NHIỀU PHƯƠNG ÁN LỰA CHỌN.])
+ #exam-table(columns:12,header:range(1,13).map(n=>[Câu #n]),
+   ..("A","A","C","B","D","B","C","A","B","A","D","B").map(x=>[#x]))
+ #exam-section("II",[CÂU TRẮC NGHIỆM ĐÚNG SAI.])
+ #exam-table(columns:5,header:([Ý],[Câu 1],[Câu 2],[Câu 3],[Câu 4]),
+   [a)],[Đ],[Đ],[Đ],[Đ],
+   [b)],[S],[Đ],[Đ],[S],
+   [c)],[Đ],[S],[Đ],[Đ],
+   [d)],[S],[Đ],[S],[Đ])
+ #exam-section("III",[CÂU TRẮC NGHIỆM TRẢ LỜI NGẮN.])
+ #exam-table(columns:6,header:range(1,7).map(n=>[Câu #n]),
+   [0,68],[513],[2],[9],[7],[7,3])
 ]
 #let solutions = (
 [

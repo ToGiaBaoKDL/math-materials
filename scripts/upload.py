@@ -114,7 +114,7 @@ def folder_id(remote, parent_id, name):
 def main():
     parser = argparse.ArgumentParser(description="Upload PDFs and original source to their month/category on Drive.")
     parser.add_argument("--document")
-    parser.add_argument("--variant", choices=["de", "de-cach", "dap-an"])
+    parser.add_argument("--variant", choices=["de", "de-cach", "dap-an", "de-dap-an"])
     parser.add_argument("--remote", default="dxt-gdrive")
     parser.add_argument("--root-id", default=DRIVE_ROOT)
     parser.add_argument("--drive-month", required=True, help="Destination Drive month in YYYY-MM format")
