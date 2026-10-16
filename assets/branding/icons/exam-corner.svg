@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 90 50">
+  <defs>
+    <linearGradient id="stripe" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#F7B7BE"/><stop offset="1" stop-color="#D42C43"/>
+    </linearGradient>
+    <linearGradient id="corner" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#F0243B"/><stop offset="1" stop-color="#BA0F2C"/>
+    </linearGradient>
+  </defs>
+  <path d="M3 49 16 33H28L15 49Z" fill="url(#stripe)"/>
+  <path d="M25 49 38 33H50L37 49Z" fill="url(#stripe)"/>
+  <path d="M47 49 89 2V39Q89 49 79 49Z" fill="url(#corner)"/>
+</svg>

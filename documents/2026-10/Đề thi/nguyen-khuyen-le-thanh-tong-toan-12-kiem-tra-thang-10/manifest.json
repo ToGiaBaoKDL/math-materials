@@ -68,6 +68,12 @@
       "de": 6,
       "dap-an": 5,
       "de-dap-an": 11
+    },
+    "heading_revision": {
+      "design": "Body 12.5pt; original exam-section format restored. Noto Sans cover, aligned page count/duration/note, 17mm clock, 1pt border; title fitted without automatic line wrap.",
+      "checks": "All variants compiled; text bounds checked; standalone heading visually inspected.",
+      "full_page_visual_review": "pending",
+      "spacing_update": "Both cells vertically centered; shared heading font size; left leading 0.7em/right 1em; information gaps 3mm/4mm; clock text gutter 5mm. All variants rebuilt; standalone heading visually inspected."
     }
   },
   "source_issues": [
@@ -108,20 +114,20 @@
     "de": {
       "pdf": "assets/targets/2026-10/Đề thi/nguyen-khuyen-le-thanh-tong-toan-12-kiem-tra-thang-10/de.pdf",
       "pages": 6,
-      "bytes": 247920,
-      "sha256": "1a68f90cd437effc110985bb1dfd224eb3f3c0c169aa2a70f4ba7112a3441950"
+      "bytes": 250869,
+      "sha256": "576390a800cd0e290ee25a938cc7a3aa08aa35c6ae1d8a19d27ac47f353a5561"
     },
     "dap-an": {
       "pdf": "assets/targets/2026-10/Đề thi/nguyen-khuyen-le-thanh-tong-toan-12-kiem-tra-thang-10/dap-an.pdf",
       "pages": 5,
-      "bytes": 228006,
-      "sha256": "5b970f163f660955ce8e0ffa9751767e883196f785421bbfc2ae4a3fef75d862"
+      "bytes": 229013,
+      "sha256": "a91b94a3636a1820ccc07e5f74836bc23fa1452bd38ec2777d7994fc3eaa38d9"
     },
     "de-dap-an": {
       "pdf": "assets/targets/2026-10/Đề thi/nguyen-khuyen-le-thanh-tong-toan-12-kiem-tra-thang-10/de-dap-an.pdf",
       "pages": 11,
-      "bytes": 384889,
-      "sha256": "54b7295d689b0c5c09eba4a5a4daa408e58087ebf0ca5c43c32d53bf39d8d279"
+      "bytes": 402426,
+      "sha256": "b7711c905ba992fa7ff320336039c363f47238a112ca0608c7c6a7d8a01d0f3b"
     }
   },
   "implementation": {

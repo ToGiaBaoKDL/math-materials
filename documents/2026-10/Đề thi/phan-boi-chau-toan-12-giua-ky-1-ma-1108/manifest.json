@@ -84,26 +84,32 @@
     },
     "latest_color_review": "All three variants rebuilt; 22 question labels in each and all text within page bounds. Sphere figure inspected. Full-page visual review remains pending.",
     "solution_review": "22 source solutions and three answer-key tables transcribed. All 375 OLE formula objects decoded and matched to embedded preview streams. Exact expressions checked against worked steps; integer advertising optimization and water-volume computations independently recomputed.",
-    "review_limitations": "Full-page visual review of the new answer PDF remains pending; no page preview images generated."
+    "review_limitations": "Full-page visual review of the new answer PDF remains pending; no page preview images generated.",
+    "heading_revision": {
+      "design": "Body 12.5pt; original exam-section format restored. Noto Sans cover, aligned page count/duration/note, 17mm clock, 1pt border; title fitted without automatic line wrap.",
+      "checks": "All variants compiled; text bounds checked; standalone heading visually inspected.",
+      "full_page_visual_review": "pending",
+      "spacing_update": "Both cells vertically centered; shared heading font size; left leading 0.7em/right 1em; information gaps 3mm/4mm; clock text gutter 5mm. All variants rebuilt; standalone heading visually inspected."
+    }
   },
   "outputs": {
     "de": {
       "pdf": "assets/targets/2026-10/Đề thi/phan-boi-chau-toan-12-giua-ky-1-ma-1108/de.pdf",
       "pages": 7,
-      "bytes": 645606,
-      "sha256": "ac48a446a58fdef6a18106008f0e0de92ca295a4dd71b8c6e07e16bad9be3ae1"
+      "bytes": 646090,
+      "sha256": "27d6703489df46556a2d3d257b0a4f6338de0ec84f0c9cfad65166a50562a770"
     },
     "de-cach": {
       "pdf": "assets/targets/2026-10/Đề thi/phan-boi-chau-toan-12-giua-ky-1-ma-1108/de-cach.pdf",
       "pages": 13,
-      "bytes": 657569,
-      "sha256": "397141734e93e9d18e79f7151511ad0aaba7f5695988e3bb4f3794064730ad79"
+      "bytes": 657570,
+      "sha256": "d795251e44deb3856fd7c983ea660e5f82271bc1e7e61d6db0aa4017b2926269"
     },
     "dap-an": {
       "pdf": "assets/targets/2026-10/Đề thi/phan-boi-chau-toan-12-giua-ky-1-ma-1108/dap-an.pdf",
       "pages": 16,
-      "bytes": 801885,
-      "sha256": "a04713819bdfdf97793c4a6e8d49f7564dc15fad8494328434d844f7113d3af3"
+      "bytes": 807101,
+      "sha256": "c72d66bb57d2d6fce714ae24e07027fd1be208fdb5248b8518da75dc934f373f"
     }
   },
   "metadata": {

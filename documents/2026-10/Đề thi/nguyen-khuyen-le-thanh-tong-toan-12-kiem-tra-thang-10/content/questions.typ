@@ -37,5 +37,5 @@
  q(5,[Cho hình vuông $A B C D$ có độ dài cạnh bằng $1$. Cung $A C$ là một phần tư đường tròn tâm $D$, bán kính $A D$. Giả sử $P$ là điểm thay đổi trên cung $A C$ ($P$ khác $A$ và $C$). Tiếp tuyến tại điểm $P$ của cung $A C$ cắt các đoạn thẳng $A B,B C$ theo thứ tự tại các điểm $M,N$. Diện tích lớn nhất của tam giác $B M N$ bằng bao nhiêu (kết quả làm tròn đến hàng phần trăm)?
  #fig(tangent-square(),size:95%)])
  q(6,[Có bao nhiêu cách chọn sáu số từ mười số nguyên $2,3,...,11$ và điền vào các ô của hình dưới đây (mỗi ô chỉ điền đúng một số) sao cho tổng các số ở mỗi hàng (kể cả hàng có một ô) bằng nhau?
- #fig(staircase(),size:95%)])
+ #fig(staircase(),size:114%)])
 }

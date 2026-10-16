@@ -34,6 +34,7 @@
  #let p(x,y,z)=(9mm+5.8mm*x+8.6mm*y,39mm+2.6mm*x - 3.2mm*y - 7mm*z)
  #let a=p(1.6,2.3,4); #let h=p(1.6,2.3,0)
  #let m=p(2.9,3,0); #let b=p(2.9,3,-3.5)
+ #path((m,b),stroke:stroke)
  #path((p(0,0,-0.35),p(5.5,0,-0.35),p(5.5,5,-0.35),p(5.5,5,0),p(5.5,0,0),p(0,0,0)),close:true,stroke:stroke,fill:ink.lighten(70%))
  #path((p(0,0,0),p(5.5,0,0),p(5.5,5,0),p(0,5,0)),close:true,stroke:stroke,fill:ink.lighten(90%))
  #let cuboid(x,y,w,d,height)={
@@ -47,9 +48,12 @@
  #cuboid(0.15,2.05,0.65,0.65,0.6)
  #cuboid(2.4,4.2,0.9,0.75,1.5)
  #cuboid(3.7,4.15,1.2,0.7,0.85)
+ // MB meets the lower front edge at x=5.5 in the projected floor.
+ #let floor-exit=p(5.5,(m.at(0)-9mm-5.8mm*5.5)/8.6mm,-0.35)
+ #path((m,floor-exit),stroke:dashed)
  #path((a,h,m),stroke:dashed)
  #path(((h.at(0),h.at(1)-2mm),(h.at(0)+2mm,h.at(1)-2mm),(h.at(0)+2mm,h.at(1))),stroke:0.6pt+ink)
- #path((a,m,b),stroke:stroke)
+ #path((a,m),stroke:stroke)
  #for point in (m,b) {
   place(top+left,dx:point.at(0)-3mm,dy:point.at(1)-0.5mm,ellipse(width:6mm,height:2.5mm,fill:ink.lighten(70%),stroke:stroke))
   place(top+left,dx:point.at(0)-3mm,dy:point.at(1)-1.5mm,ellipse(width:6mm,height:2.5mm,fill:white,stroke:stroke))

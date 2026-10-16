@@ -77,26 +77,32 @@
       "dap-an": 9,
       "de-cach": 10
     },
-    "latest_color_review": "All three variants rebuilt; 22 question labels in each and all text within page bounds. Sphere figure inspected. Full-page visual review remains pending."
+    "latest_color_review": "All three variants rebuilt; 22 question labels in each and all text within page bounds. Sphere figure inspected. Full-page visual review remains pending.",
+    "heading_revision": {
+      "design": "Body 12.5pt; original exam-section format restored. Noto Sans cover, aligned page count/duration/note, 17mm clock, 1pt border; title fitted without automatic line wrap.",
+      "checks": "All variants compiled; text bounds checked; standalone heading visually inspected.",
+      "full_page_visual_review": "pending",
+      "spacing_update": "Both cells vertically centered; shared heading font size; left leading 0.7em/right 1em; information gaps 3mm/4mm; clock text gutter 5mm. All variants rebuilt; standalone heading visually inspected."
+    }
   },
   "outputs": {
     "de": {
       "pdf": "assets/targets/2026-10/Đề thi/nguyen-binh-khiem-toan-12-khao-sat-lan-1-ma-0115/de.pdf",
       "pages": 5,
-      "bytes": 1976170,
-      "sha256": "aab0ce621a24fb1bc0e6937e298c5ecd9216133b7ff036dd6ae74e2c35cc5bf4"
+      "bytes": 1990716,
+      "sha256": "6b7befdec295973555dff10b49f8d792ddb551cfa0be519ef79d60788d05028f"
     },
     "de-cach": {
       "pdf": "assets/targets/2026-10/Đề thi/nguyen-binh-khiem-toan-12-khao-sat-lan-1-ma-0115/de-cach.pdf",
       "pages": 11,
-      "bytes": 1997732,
-      "sha256": "4f57d70b48e4b5a4267c702c9c60ae5fd8fc9119399fcb03d4b6cba0bef3141b"
+      "bytes": 2012232,
+      "sha256": "8282aff66d58f80d547bb6ca2b2502e2fb9c8c05e98eba10003854234598ff29"
     },
     "dap-an": {
       "pdf": "assets/targets/2026-10/Đề thi/nguyen-binh-khiem-toan-12-khao-sat-lan-1-ma-0115/dap-an.pdf",
-      "pages": 9,
-      "bytes": 2069561,
-      "sha256": "ad60b3c828fb0fa2aad5c1c645c60cde56391d308ef0cd7e55f52d53f5d8daa7"
+      "pages": 10,
+      "bytes": 2087220,
+      "sha256": "671556139008ac8ba49911ecbbaf52ae80e6adaf4d086d2e854bae5963df50fe"
     }
   },
   "metadata": {

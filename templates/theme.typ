@@ -149,7 +149,7 @@
 
 #let exam-style = (
   margin: (x: 12mm, top: 16mm, bottom: 18mm),
-  body-size: 12pt, running-size: 11pt, running-weight: 400, running-stroke: 0.12pt, leading: 0.76em, question-gap: 5mm,
+  body-size: 12.5pt, running-size: 11pt, running-weight: 400, running-stroke: 0.12pt, leading: 0.76em, question-gap: 5mm,
   section-gap: 5mm, statement-gap: 4mm,
 )
 

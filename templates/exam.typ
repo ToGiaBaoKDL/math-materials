@@ -20,43 +20,67 @@
   body
 }
 
-#let exam-cover(organization, title, code, duration: 90, subject: "Toán",
-  status: none, note: none, organization-size: 12pt, title-size: 12pt, duration-size: 12pt, heading-columns: (1fr, 1.15fr), pages: none) = {
-  set par(justify: false, leading: 0.65em)
-  grid(columns: heading-columns, column-gutter: 6mm, align: center + top,
-    [
-      #text(size: organization-size, weight: "bold", fill: palette.primary, organization)
-      #linebreak()
-      #context text(size:11pt,style:"italic")[(Đề thi gồm #(if pages == none {counter(page).final().first()} else {pages}) trang)]
-      #if status != none { v(2mm); text(weight: "bold", fill: palette.exam-blue, status) }
-      #if note != none { linebreak(); text(style: "italic", note) }
-    ],
-    [
-      #text(size: title-size, weight: "bold", fill: palette.primary, title)
-      #linebreak()
-      #text(weight: "bold", fill: palette.exam-blue)[Môn thi: #subject]
-      #linebreak()
-      #text(size: duration-size, style: "italic")[Thời gian làm bài: #duration phút, không kể thời gian phát đề]
-    ],
-  )
+#let exam-cover(organization, title, code, duration: 90, subject: "Toán", grade: "12",
+  status: none, note: none, organization-size: 12pt, title-size: 12pt, duration-size: 12pt, pages: none) = {
+  set par(justify: false, leading: 0.55em)
+  let green = rgb("#08752B")
+  block(width: 100%, breakable: false, radius: 3mm, stroke: 1pt + palette.primary,
+    fill: white, inset: (x: 4mm, y: 4mm))[
+    #set text(font: fonts.ui, size: 10.5pt)
+    #set par(spacing: 1mm, leading: 0.7em)
+    #layout(space => {
+      let base-size = calc.min(organization-size, title-size)
+      let heading-width = calc.max(
+        measure(text(size: base-size, weight: "bold", organization)).width,
+        measure(text(size: base-size, weight: "bold", title)).width)
+      let heading-size = base-size * calc.min(1, (space.width / 2 - 8mm) / heading-width)
+      [#table(columns: (1fr, 1fr), stroke: none, inset: (x: 4mm, y: 1mm), align: horizon,
+      table.cell(align: top + center, stroke: (right: 0.6pt + rgb("#E4B7C0")))[
+        #text(size: heading-size, weight: "bold", fill: green, organization)
+      ],
+      table.cell(align: top)[
+        #set par(leading: 1em)
+        #text(size: heading-size, weight: "bold", fill: palette.primary, title)
+      ],
+      table.cell(stroke: (right: 0.6pt + rgb("#E4B7C0")))[
+        #align(center)[
+          #if status != none { text(weight: "bold", fill: green, status); v(2mm) }
+          #line(length: 100%, stroke: 0.5pt + rgb("#E4B7C0"))
+        ]
+        #v(3mm)
+        #grid(columns: (17mm, 1fr), column-gutter: 7mm, align: horizon,
+          image("/assets/branding/icons/clock.svg", width: 17mm),
+          [#context text(weight: "bold")[Đề thi gồm #(if pages == none {counter(page).final().first()} else {pages}) trang]
+           #v(3mm)
+           #text(size: 10pt, weight: "bold")[Thời gian làm bài: #text(fill: palette.primary)[#duration phút]]
+           #v(3mm)
+           #text(size: 9.5pt, style: "italic")[(Không kể thời gian phát đề)]])
+      ],
+      [
+        #set par(leading: 1em)
+        *Môn:* #subject
+        #v(4mm)
+        *Khối:* #grade
+        #if note != none { v(4mm); text(size: 10.5pt, style: "italic", note) }
+        #if code != none {
+          v(4mm)
+          block(fill: rgb("#F8E4E8"), radius: 1mm, inset: (x: 3mm, y: 1.5mm))[
+            *Mã đề:* #text(weight: "bold", fill: palette.primary, code)
+          ]
+        }
+      ])]
+    })
+    #place(bottom + right, dx: 4mm, dy: 4mm,
+      image("/assets/branding/icons/exam-corner.svg", width: 27mm))
+  ]
   v(4mm)
-  if code == none {
-    grid(columns: (1fr, 1fr), column-gutter: 8mm, align: bottom,
-      grid(columns: (auto, 1fr), column-gutter: 2mm, align: bottom,
-        [Họ, tên thí sinh:], line(length:100%,stroke:(paint:palette.ink,thickness:0.7pt,dash:"dotted"))),
-      grid(columns: (auto, 1fr), column-gutter: 2mm, align: bottom,
-        [Số báo danh:], line(length:100%,stroke:(paint:palette.ink,thickness:0.7pt,dash:"dotted"))))
-  } else {
-  grid(columns: (1.2fr, 1fr), column-gutter: 8mm, align: horizon,
-    grid(columns: (32mm, 1fr), column-gutter: 2mm, row-gutter: 2mm, align:bottom,
-      [Họ, tên thí sinh:], line(length:100%,stroke:(paint:palette.ink,thickness:0.7pt,dash:"dotted")),
-      [Số báo danh:], line(length:100%,stroke:(paint:palette.ink,thickness:0.7pt,dash:"dotted"))),
-    if code == none { [] } else {block(width: 100%, fill: rgb("#F1D8DE"), stroke: 0.9pt + palette.primary,
-      radius: 2mm, inset: (x:3mm,y:3mm),
-      align(center, text(size:14pt,weight: "bold", fill: palette.primary)[Mã đề: #code]))})
-  }
+  grid(columns: (1fr, 1fr), column-gutter: 8mm, align: bottom,
+    grid(columns: (auto, 1fr), column-gutter: 2mm, align: bottom,
+      [Họ, tên thí sinh:], line(length: 100%, stroke: (paint: palette.ink, thickness: 0.7pt, dash: "dotted"))),
+    grid(columns: (auto, 1fr), column-gutter: 2mm, align: bottom,
+      [Số báo danh:], line(length: 100%, stroke: (paint: palette.ink, thickness: 0.7pt, dash: "dotted"))))
   v(3mm)
-  line(length: 100%, stroke: (paint: palette.primary, thickness: 0.9pt, dash: "dashed"))
+  line(length: 100%, stroke: (paint: palette.primary, thickness: 1.2pt, dash: "dashed"))
 }
 
 #let exam-section(number, title, instruction: []) = block(width: 100%, sticky: true,
