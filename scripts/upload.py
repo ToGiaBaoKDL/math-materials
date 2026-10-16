@@ -24,7 +24,7 @@ def documents(document=None, category=None):
 
 def check_month(month):
     if not month or not re.fullmatch(r'[0-9]{4}-(0[1-9]|1[0-2])', month) or month.startswith('0000'):
-        raise ValueError('MONTH is required in YYYY-MM format, e.g. MONTH=2026-10')
+        raise ValueError('DRIVE_MONTH is required in YYYY-MM format, e.g. DRIVE_MONTH=2026-10')
     return month
 
 
@@ -101,12 +101,12 @@ def main():
     parser.add_argument('--variant', choices=['de', 'de-cach', 'dap-an'])
     parser.add_argument('--remote', default='dxt-gdrive')
     parser.add_argument('--root-id', default=DRIVE_ROOT)
-    parser.add_argument('--month', required=True, help='Destination Drive month in YYYY-MM format')
+    parser.add_argument('--drive-month', required=True, help='Destination Drive month in YYYY-MM format')
     parser.add_argument('--category', choices=['Đề thi', 'Chuyên đề'])
     parser.add_argument('--dry-run', action='store_true', help='Show mapping locally without contacting Drive')
     args = parser.parse_args()
     try:
-        jobs = plan(args.document, args.variant, args.month, args.category)
+        jobs = plan(args.document, args.variant, args.drive_month, args.category)
         remote = args.remote.rstrip(':')
         folders = {}
         if not args.dry_run:

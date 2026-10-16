@@ -163,18 +163,18 @@ Header/footer đề thi dùng chung nằm ở `templates/exam-branding.typ`: hea
 ### Đồng bộ PDF lên Drive
 
 ```sh
-make upload MONTH=2026-10 CATEGORY="Chuyên đề" DRY_RUN=1  # Xem mapping; không kết nối/ghi Drive
-make upload MONTH=2026-10 CATEGORY="Chuyên đề"  # Upload cả nhóm
-make upload MONTH=2026-10 DOC=buoi-10            # Upload PDF và file nguồn của một bài
-make upload MONTH=2026-10 DOC=buoi-11 VARIANT=dap-an
+make upload DRIVE_MONTH=2026-10 CATEGORY="Chuyên đề" DRY_RUN=1  # Xem mapping; không kết nối/ghi Drive
+make upload DRIVE_MONTH=2026-10 CATEGORY="Chuyên đề"  # Upload cả nhóm
+make upload DRIVE_MONTH=2026-10 DOC=buoi-10            # Upload PDF và file nguồn của một bài
+make upload DRIVE_MONTH=2026-10 DOC=buoi-11 VARIANT=dap-an
 make build DOC=buoi-11            # Dựng lại
 ```
 
-`make upload` đồng bộ một chiều các PDF đã build và file nguồn từ local lên Drive, dùng remote `dxt-gdrive` (đổi qua `REMOTE=...`). Folder cha của các tháng có ID `11EmKdVdsShhjyQpzlozlr8bEVDiThA8R`. Bắt buộc truyền `MONTH=YYYY-MM` để chọn tháng đích trên Drive. Script đọc Drive để lấy ID folder tháng và folder phân loại tương ứng; folder nào chưa có thì tạo rồi lấy ID để upload. Không cố định tháng hoặc ID folder tháng trong code. Nếu trùng tên folder cùng cấp thì dừng để tránh gửi sai nơi.
+`make upload` đồng bộ một chiều các PDF đã build và file nguồn từ local lên Drive, dùng remote `dxt-gdrive` (đổi qua `REMOTE=...`). Folder cha của các tháng có ID `11EmKdVdsShhjyQpzlozlr8bEVDiThA8R`. Bắt buộc truyền `DRIVE_MONTH=YYYY-MM` để chọn tháng đích trên Drive. Script đọc Drive để lấy ID folder tháng và folder phân loại tương ứng; folder nào chưa có thì tạo rồi lấy ID để upload. Không cố định tháng hoặc ID folder tháng trong code. Nếu trùng tên folder cùng cấp thì dừng để tránh gửi sai nơi.
 
-Local dùng `<YYYY-MM>/Chuyên đề/th-<document-id>/` (cả `documents`, `assets/sources`, `assets/targets`); folder tài liệu Đề thi không thêm `th-`. Tháng đích upload do `MONTH` quyết định, không đổi đường dẫn local hoặc ngày tiếp nhận trong manifest.
+Local dùng `<YYYY-MM>/Chuyên đề/th-<document-id>/` (cả `documents`, `assets/sources`, `assets/targets`); folder tài liệu Đề thi không thêm `th-`. Tháng đích upload do `DRIVE_MONTH` quyết định, không đổi đường dẫn local hoặc ngày tiếp nhận trong manifest.
 
-Trong tháng đích đã chọn, không chọn bộ lọc tài liệu thì upload tất cả; `CATEGORY` chọn nhóm, `DOC` chọn bài, `VARIANT` chọn một PDF. `MONTH` chỉ chọn nơi nhận trên Drive, không lọc tháng nguồn local. Drive giữ cấu trúc folder giống local: `YYYY-MM/Chuyên đề/th-<document-id>/` hoặc `YYYY-MM/Đề thi/<document-id>/`; mỗi folder tài liệu chứa các PDF với tên hiển thị theo mapping và file nguồn có hậu tố ` - GỐC` (giữ đuôi `.pdf`/`.docx`). Script lấy ID folder tài liệu đã có hoặc tạo nếu thiếu. File cùng tên được cập nhật, file không đổi được bỏ qua; không xóa file khác trên Drive. Đây là copy có mapping tên, không phải `rclone sync --delete` hay đồng bộ hai chiều. Không tự upload khi build. Các lệnh rclone dùng `--tpslimit 3 --tpslimit-burst 1 --retries 3`; giữ `--low-level-retries 1`. Rclone được phép thử lại ở cấp thao tác, tối đa 3 lần chạy; script không thêm vòng lặp retry riêng. Upload kiểm tra toàn bộ PDF tồn tại và checksum khớp manifest trước khi chạy; hãy build lại sau khi sửa mã nguồn. `DRY_RUN=1` chỉ in mapping local, không kiểm tra kết nối Drive.
+Trong tháng đích đã chọn, không chọn bộ lọc tài liệu thì upload tất cả; `CATEGORY` chọn nhóm, `DOC` chọn bài, `VARIANT` chọn một PDF. `DRIVE_MONTH` chỉ chọn nơi nhận trên Drive, không lọc tháng nguồn local. Drive giữ cấu trúc folder giống local: `YYYY-MM/Chuyên đề/th-<document-id>/` hoặc `YYYY-MM/Đề thi/<document-id>/`; mỗi folder tài liệu chứa các PDF với tên hiển thị theo mapping và file nguồn có hậu tố ` - GỐC` (giữ đuôi `.pdf`/`.docx`). Script lấy ID folder tài liệu đã có hoặc tạo nếu thiếu. File cùng tên được cập nhật, file không đổi được bỏ qua; không xóa file khác trên Drive. Đây là copy có mapping tên, không phải `rclone sync --delete` hay đồng bộ hai chiều. Không tự upload khi build. Các lệnh rclone dùng `--tpslimit 3 --tpslimit-burst 1 --retries 3`; giữ `--low-level-retries 1`. Rclone được phép thử lại ở cấp thao tác, tối đa 3 lần chạy; script không thêm vòng lặp retry riêng. Upload kiểm tra toàn bộ PDF tồn tại và checksum khớp manifest trước khi chạy; hãy build lại sau khi sửa mã nguồn. `DRY_RUN=1` chỉ in mapping local, không kiểm tra kết nối Drive.
 
 Không cần lệnh clean: build ghi đè đầu ra hiện tại.
 
@@ -204,17 +204,17 @@ Thiết lập một lần:
 
 ```sh
 # Upload/sửa nhiều lần; chưa ghi Sheet.
-make upload MONTH=2026-10 DOC=buoi-11
+make upload DRIVE_MONTH=2026-10 DOC=buoi-11
 
 # Chỉ chạy bước này khi bộ file đã được duyệt.
-make sheet MONTH=2026-10 DATE=2026-10-15 DOC=buoi-11 DRY_RUN=1
-make sheet MONTH=2026-10 DATE=2026-10-15 DOC=buoi-11
-make sheet MONTH=2026-10 DATE=2026-10-15 DOC=phan-boi-chau
+make sheet DRIVE_MONTH=2026-10 DATE=2026-10-15 DOC=buoi-11 DRY_RUN=1
+make sheet DRIVE_MONTH=2026-10 DATE=2026-10-15 DOC=buoi-11
+make sheet DRIVE_MONTH=2026-10 DATE=2026-10-15 DOC=phan-boi-chau
 # Cả nhóm hoặc tất cả tài liệu:
-make sheet MONTH=2026-10 DATE=2026-10-15 CATEGORY="Chuyên đề"
+make sheet DRIVE_MONTH=2026-10 DATE=2026-10-15 CATEGORY="Chuyên đề"
 ```
 
-`MONTH` là folder tháng đích trên Drive và khối tháng trên Sheet. `DATE` là ngày upload bạn muốn ghi, bắt buộc định dạng `YYYY-MM-DD`; không tự thay bằng ngày nhận hay ngày chạy lệnh. `DRY_RUN=1` của Sheet vẫn đọc Drive/Sheet để xác minh, chỉ không ghi Sheet. Đích mặc định: [sổ tài liệu](https://docs.google.com/spreadsheets/d/1q7giSA18z4UkTomn9xQBqrDgdjssXeUSDj4fTtVYOVs/edit), hai tab `Chuyên đề` và `Đề thi`.
+`DRIVE_MONTH=YYYY-MM` bắt buộc cho cả `upload` và `sheet`: chọn folder tháng trên Drive và khối tháng trên Sheet. `DATE=YYYY-MM-DD` là ngày ghi vào cột Ngày/Tháng/Năm, độc lập với `DRIVE_MONTH`; không tự suy ra folder từ ngày. Nhãn khối tháng ghi dạng `Tháng MM-YYYY`, ví dụ `Tháng 10-2026`; vẫn nhận diện nhãn cũ `Tháng 10/2026` để tránh tạo khối trùng. `DRY_RUN=1` của Sheet vẫn đọc Drive/Sheet để xác minh, chỉ không ghi Sheet. Đích mặc định: [sổ tài liệu](https://docs.google.com/spreadsheets/d/1q7giSA18z4UkTomn9xQBqrDgdjssXeUSDj4fTtVYOVs/edit), hai tab `Chuyên đề` và `Đề thi`.
 
 | Cột | Dòng đề | Dòng đáp án |
 |---|---|---|

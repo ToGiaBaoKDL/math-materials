@@ -122,7 +122,7 @@ def normalized(text):
 
 
 def month_value(text):
-    match = re.fullmatch(r'tháng\s*(\d{1,2})\s*/\s*(\d{4})', normalized(text))
+    match = re.fullmatch(r'tháng\s*(\d{1,2})\s*[-/]\s*(\d{4})', normalized(text))
     return f'{match[2]}-{int(match[1]):02}' if match else text.strip()
 
 
@@ -178,7 +178,7 @@ def updates_for_sheet(sheet, month, records):
             {'mergeCells': {'range': {'sheetId': sheet_id, 'startRowIndex': start, 'endRowIndex': end,
                                       'startColumnIndex': 0, 'endColumnIndex': 1}, 'mergeType': 'MERGE_ALL'}},
             {'updateCells': {'start': {'sheetId': sheet_id, 'rowIndex': start, 'columnIndex': 0},
-                             'rows': [{'values': [cell(f'Tháng {int(month[5:])}/{month[:4]}')]}],
+                             'rows': [{'values': [cell(f'Tháng {month[5:]}-{month[:4]}')]}],
                              'fields': 'userEnteredValue'}},
         ])
     arranged = {r: displayed(rows, r, 3) for r in range(start, end)}
@@ -282,7 +282,7 @@ def updates_for_sheet(sheet, month, records):
             *moves,
             {'repeatCell': {'range': month_range, 'cell': {}, 'fields': 'userEnteredValue'}},
             {'updateCells': {'start': {'sheetId': sheet_id, 'rowIndex': start, 'columnIndex': 0},
-                             'rows': [{'values': [cell(f'Tháng {int(month[5:])}/{month[:4]}')]}],
+                             'rows': [{'values': [cell(f'Tháng {month[5:]}-{month[:4]}')]}],
                              'fields': 'userEnteredValue'}},
             {'mergeCells': {'range': month_range, 'mergeType': 'MERGE_ALL'}},
         ])
@@ -292,7 +292,7 @@ def updates_for_sheet(sheet, month, records):
 
 def main():
     parser = argparse.ArgumentParser(description='Update the approved-document register, separately from upload.')
-    parser.add_argument('--month', help='Destination Drive month, YYYY-MM')
+    parser.add_argument('--drive-month', help='Drive folder and Sheet month block, YYYY-MM')
     parser.add_argument('--date', help='Upload date to record, YYYY-MM-DD')
     parser.add_argument('--document')
     parser.add_argument('--category', choices=['Đề thi', 'Chuyên đề'])
@@ -307,17 +307,17 @@ def main():
         if args.authorize:
             credentials(args.credentials, args.client)
             return
-        check_month(args.month)
         if not args.date or not re.fullmatch(r'[0-9]{4}-[0-9]{2}-[0-9]{2}', args.date):
             parser.error('DATE is required in YYYY-MM-DD format')
         uploaded_on = date.fromisoformat(args.date)
+        month = check_month(args.drive_month)
         paths = documents(args.document, args.category)
         files = {p: document_files(p) for p in paths}
         from googleapiclient.discovery import build
         creds = credentials(args.credentials or ROOT / '.secret/togiabaode-token.json')
         drive = Drive(build('drive', 'v3', credentials=creds, cache_discovery=False))
         sheets = build('sheets', 'v4', credentials=creds, cache_discovery=False).spreadsheets()
-        month_id = drive.find(args.root_id, args.month, folder=True)['id']
+        month_id = drive.find(args.root_id, month, folder=True)['id']
         groups = {}
         for path in paths:
             groups.setdefault(path.parent.parent.name, []).extend(
@@ -329,7 +329,7 @@ def main():
         tabs = {s['properties']['title']: s for s in spreadsheet['sheets']}
         requests = []
         for name, records in groups.items():
-            batch, summary = updates_for_sheet(tabs[name], args.month, records)
+            batch, summary = updates_for_sheet(tabs[name], month, records)
             requests.extend(batch)
             print('\n'.join(summary))
         if args.dry_run:
