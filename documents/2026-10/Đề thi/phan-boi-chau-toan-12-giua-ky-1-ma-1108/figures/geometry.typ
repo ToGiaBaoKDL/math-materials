@@ -1,5 +1,5 @@
 #import "/templates/drawing.typ": path as draw-path, label as draw-label, smooth as draw-smooth, arrow-line
-#import "/templates/theme.typ": palette
+#import "/templates/theme.typ": exam-palette as palette
 #import "/templates/pyramid-net.typ": pyramid-net
 #let edge = 1.2pt + palette.primary
 #let curved-edge = 1.2pt + palette.geometry-secondary
@@ -90,7 +90,7 @@
      let q=p(..range(3).map(k=>v.at(k)+r*inward.at(k)*unit.at(k)))
      pts.push((q.at(0)/1mm,q.at(1)/1mm))
    }}
-   path(hull(pts),close:true,stroke:curved-edge,fill:palette.geometry-secondary.lighten(77%))
+   path(hull(pts),close:true,stroke:curved-edge,fill:palette.geometry-secondary.lighten(55%))
    // Only the three outward-facing cube planes are visible to the viewer.
    for (u,w,normal) in ((0,1,2),(1,2,0),(2,0,1)) {
      if v.at(normal)==1 {
@@ -101,7 +101,7 @@
          a.at(w)+=r*inward.at(w)*calc.sin(t)
          p(..a)
        })
-       path((c,)+arc,close:true,stroke:curved-edge,fill:palette.geometry-secondary.lighten(if normal==2 {95%} else if normal==0 {89%} else {84%}))
+       path((c,)+arc,close:true,stroke:curved-edge,fill:palette.geometry-secondary.lighten(if normal==2 {82%} else if normal==0 {68%} else {55%}))
      }
    }
  }
@@ -116,7 +116,7 @@
  #draw-label(center,[$O_0$],dx:-5mm,dy:3mm)
  #place(top+left,dx:63mm,dy:0mm,block(width:60mm,height:68mm)[
    #for (i,v) in vertices.enumerate() {
-     path((center,p(..v)),stroke:curved-hidden)
+     path((center,p(..v)),stroke:(paint:rgb("#163A5F"),thickness:1.45pt,dash:"dashed"))
    }
    #path((p(1,0,0),p(1,1,0),p(0,1,0),p(0,1,1),p(0,0,1),p(1,0,1)),close:true)
    #path((p(1,0,1),p(1,1,1),p(0,1,1)))

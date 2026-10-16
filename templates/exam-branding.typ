@@ -1,4 +1,4 @@
-#import "theme.typ": palette, fonts, exam-style
+#import "theme.typ": exam-palette as palette, fonts, exam-style
 // Exam-only running matter.
 #let plain-header() = block(width:100%,inset:(x:12mm,top:5mm))[
   #set text(font:fonts.ui,size:exam-style.running-size,weight:"regular",fill:palette.primary)

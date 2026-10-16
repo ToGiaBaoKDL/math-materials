@@ -231,3 +231,7 @@ make sheet MONTH=2026-10 DATE=2026-10-15 CATEGORY="Chuyên đề"
 Script tìm đúng ID folder/file trên Drive theo cấu trúc và convention; đối chiếu MD5 với file local trước khi ghi. Bộ thiếu file hoặc khác nội dung sẽ dừng, cần upload lại trước. Số trang lấy trực tiếp từ PDF local đã kiểm tra. Link là chữ có hyperlink, không dùng công thức phụ thuộc locale, không thay quyền chia sẻ file.
 
 Tìm dòng cũ bằng tiêu đề hoặc link PDF trong đúng khối tháng; nếu chưa có thì dùng dòng trống. Các dòng tiêu đề Buổi 10 có sẵn được điền tiếp, không nhân đôi. Giữ định dạng, ô gộp tháng và cột thù lao hiện có. Nếu chưa có khối tháng thì tạo khối mới 30 dòng bên dưới, sao chép định dạng; khối đã đầy thì tự chèn đúng số dòng còn thiếu ở cuối khối, sao chép định dạng A:I và chiều cao dòng liền trước, mở rộng ô gộp tháng; các tháng phía dưới được đẩy xuống nguyên vẹn. Gửi toàn bộ cập nhật bằng một batch sau khi kiểm tra đủ; không tự retry. Nên push mã nguồn đã duyệt lên GitHub trước khi ghi Sheet để link code mở được đúng nội dung.
+
+### Màu đề thi hiện hành
+
+Đề thi dùng `exam-palette` riêng trong `templates/theme.typ`: đỏ đậm `#A80F2D`, xanh `#12647A`, nền mặt hình `#B9DDE3`. Header bảng số liệu dùng nền đỏ đậm, chữ trắng. Ô mã đề và bảng biến thiên dùng nền hồng nhạt `#F1D8DE`, chữ đỏ đậm/đen. Đường cong đồ thị dùng tím đậm `#58118C`, nét 1,5 pt; nét đứt nối tâm cầu dùng xanh navy `#163A5F`, nét 1,45 pt. Hình phối đỏ–xanh với sắc độ mặt đủ rõ, nhãn đen và nét khuất giữ đúng hình học. Áp dụng cho mọi biến thể PBC/NBK; không thay palette chuyên đề.

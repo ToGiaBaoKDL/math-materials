@@ -1,4 +1,4 @@
-#import "theme.typ": palette, fonts, plot-style
+#import "theme.typ": exam-palette as palette, fonts, plot-style
 #import "drawing.typ": arrow-line
 
 // Curves, guides and labels use the same mathematical coordinate map.
@@ -108,23 +108,23 @@
     place(top + left, dx: x - size.width / 2, dy: y - size.height / 2, content)
   }
   block(width: width, height: 38mm, breakable: false)[
-    #place(top + left, rect(width: width, height: 8mm, fill: plot-style.table-fill, stroke: none))
-    #place(top + left, rect(width: 10mm, height: 38mm, fill: plot-style.table-fill, stroke: none))
+    #place(top + left, rect(width: width, height: 8mm, fill: plot-style.variation-fill, stroke: none))
+    #place(top + left, rect(width: 10mm, height: 38mm, fill: plot-style.variation-fill, stroke: none))
     #place(top + left, rect(width: width, height: 38mm, stroke: plot-style.table-stroke))
     #place(top + left, line(start: (10mm, 0mm), end: (10mm, 38mm), stroke: plot-style.table-stroke))
     #for y in (8mm, 16mm) {
       place(top + left, line(start: (0mm, y), end: (width, y), stroke: plot-style.table-stroke))
     }
-    #label(5mm, 4mm, [$x$], color: palette.exam-blue)
-    #label(5mm, 12mm, [$y'$], color: palette.exam-blue)
-    #label(5mm, 27mm, [$y$], color: palette.exam-blue)
+    #label(5mm, 4mm, [$x$], color: palette.primary)
+    #label(5mm, 12mm, [$y'$], color: palette.primary)
+    #label(5mm, 27mm, [$y$], color: palette.primary)
     #if closed-right {
       for dx in (1.5mm, 2.5mm) {
         place(top + left, line(start: (width - dx, 8mm), end: (width - dx, 38mm), stroke: plot-style.table-stroke))
       }
     }
     #for i in range(n) {
-      label(px(i), 4mm, xs.at(i))
+      label(px(i), 4mm, xs.at(i), color:palette.ink)
       label(px(i), py(i), values.at(i))
       if i > 0 and i < n - 1 { label(px(i), 12mm, [$0$]) }
       if i < n - 1 {
@@ -136,7 +136,7 @@
             place(top + left, line(start: (x, 11mm), end: (x, 13mm), stroke: 0.5pt + palette.ink))
           }
         } else { label(x, 12mm, sign) }
-        arrow-line((px(i) + 5mm, py(i)), (px(i + 1) - 5mm, py(i + 1)))
+        arrow-line((px(i) + 5mm, py(i)), (px(i + 1) - 5mm, py(i + 1)),color:palette.primary)
       }
     }
   ]

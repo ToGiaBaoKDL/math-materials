@@ -11,6 +11,14 @@
   paper: rgb("#FFFFFF"),
 )
 
+// Exam colors are independent of the DXT lesson identity.
+#let exam-palette = palette + (
+  primary: rgb("#A80F2D"),
+  geometry-secondary: rgb("#12647A"),
+  geometry-tint: rgb("#B9DDE3"),
+  exam-blue: rgb("#184B68"),
+)
+
 #let fonts = (body: ("Times New Roman", "FreeSerif"), math: "New Computer Modern Math", ui: "Noto Sans", course: "Arial",
   lesson-title: "#9Slide02 Tieu de dai",
   lesson-title-long: "#9Slide02 Tieu de rat dai 01",
@@ -143,8 +151,9 @@
 
 #let plot-style = (
   width: 70mm, height: 48mm, label-size: 10pt,
-  curve: 1pt + palette.primary,
+  curve: 1.5pt + rgb("#58118C"),
   guide: (paint: rgb("#67727A"), thickness: 0.55pt, dash: "dashed"),
-  table-fill: palette.primary.lighten(91%),
-  table-stroke: 0.5pt + palette.primary.lighten(35%),
+  table-fill: exam-palette.primary,
+  variation-fill: rgb("#F1D8DE"),
+  table-stroke: 0.6pt + exam-palette.primary,
 )

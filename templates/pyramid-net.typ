@@ -1,5 +1,5 @@
 #import "drawing.typ": path, label, diagram-hidden as hidden, solid-path
-#import "theme.typ": palette
+#import "theme.typ": exam-palette as palette
 
 // A square sheet, four equal corner flaps and its folded square pyramid.
 #let pyramid-net(side: none, labels: false, folded: true, edge-width: 0.8pt) = block(width:if folded {115mm} else {49mm},height:if folded {53mm} else {48mm})[
@@ -12,14 +12,14 @@
  #let g=(30mm,23mm)
  #let h=(23mm,16mm)
   #for pts in ((a,e,h),(b,f,e),(c,g,f),(d,h,g)) {
-   path(pts,close:true,fill:palette.primary.lighten(92%),stroke:none)
+   path(pts,close:true,fill:palette.primary.lighten(80%),stroke:none)
  }
  #path((e,f,g,h),close:true,fill:palette.geometry-tint,stroke:none)
  #for pts in ((e,a,h),(f,b,e),(g,c,f),(h,d,g)) {
    path(pts,stroke:(paint:palette.primary,thickness:edge-width,dash:"dashed"))
  }
- #solid-path((e,f,g,h),close:true,thickness:edge-width)
- #solid-path((a,b,c,d),close:true,thickness:edge-width)
+ #solid-path((e,f,g,h),close:true,thickness:edge-width,color:palette.primary)
+ #solid-path((a,b,c,d),close:true,thickness:edge-width,color:palette.primary)
  #if side != none { label((23mm,45mm),side) }
  #if labels {
   for (pt,name,dx,dy) in ((a,[$A$],-2mm,-2mm),(b,[$B$],-2mm,2mm),(c,[$C$],2mm,2mm),(d,[$D$],2mm,-2mm),(e,[$E$],-3mm,0mm),(f,[$F$],0mm,3mm),(g,[$G$],3mm,0mm),(h,[$H$],0mm,-3mm)) { label(pt,name,dx:dx,dy:dy) }
@@ -35,8 +35,8 @@
  #let q=project(base/2,base/2,0)
  #let r=project(base/2,-base/2,0)
  #let t=project(-base/2,-base/2,0)
- #path((p,q,s),close:true,fill:palette.primary.lighten(92%),stroke:edge-width+palette.primary)
- #path((q,r,s),close:true,fill:palette.primary.lighten(83%),stroke:edge-width+palette.primary)
+ #path((p,q,s),close:true,fill:palette.primary.lighten(80%),stroke:edge-width+palette.primary)
+ #path((q,r,s),close:true,fill:palette.primary.lighten(65%),stroke:edge-width+palette.primary)
  // Translucent base uses the same tint as EFGH in the net.
  #path((p,q,r,t),close:true,fill:palette.geometry-tint.transparentize(20%),stroke:none)
  #path((p,q,r),stroke:edge-width+palette.primary)

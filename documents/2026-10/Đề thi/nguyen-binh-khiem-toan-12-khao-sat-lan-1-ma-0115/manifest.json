@@ -77,26 +77,26 @@
       "dap-an": 9,
       "de-cach": 10
     },
-    "latest_color_review": "Shared net and folded pyramid inspected as enlarged renders; all document variants rebuilt."
+    "latest_color_review": "All three variants rebuilt; 22 question labels in each and all text within page bounds. Sphere figure inspected. Full-page visual review remains pending."
   },
   "outputs": {
     "de": {
       "pdf": "assets/targets/2026-10/Đề thi/nguyen-binh-khiem-toan-12-khao-sat-lan-1-ma-0115/de.pdf",
       "pages": 5,
-      "bytes": 1975991,
-      "sha256": "e810e67c04ef3f6e33a8c81f7b99dc8275d1c79ed9238f33b9277b852e22fbd0"
+      "bytes": 1976071,
+      "sha256": "762d40d412af2c5ebf2e82b04f5f26baaf15c5ed2771090de980dc173fc3dc97"
     },
     "de-cach": {
       "pdf": "assets/targets/2026-10/Đề thi/nguyen-binh-khiem-toan-12-khao-sat-lan-1-ma-0115/de-cach.pdf",
       "pages": 11,
-      "bytes": 1997432,
-      "sha256": "a7d39adac3fbbf25abdbc4597f2eca524ff9b45262f4b291d7cc8e36725b7fd0"
+      "bytes": 1997719,
+      "sha256": "e5878f7cddd2d7c53734300bd9c185a0f7140f6faf2107a745aa61abd6f3caec"
     },
     "dap-an": {
       "pdf": "assets/targets/2026-10/Đề thi/nguyen-binh-khiem-toan-12-khao-sat-lan-1-ma-0115/dap-an.pdf",
       "pages": 9,
-      "bytes": 2069272,
-      "sha256": "005a052f0dcdbae980e690cb6fe09267cded308f0404c6a4b7c47278152fd164"
+      "bytes": 2069387,
+      "sha256": "f77811b71ef1a68ba12edfcc9957c65aaa80f8a63822842eef6b36181a932823"
     }
   },
   "metadata": {
@@ -218,7 +218,17 @@
     "running_matter": "Optically balanced exam typography: Times New Roman body 12pt; Noto Sans header/footer 11pt via separate shared theme tokens. Header close to 1pt red rule.",
     "answer_frame": "dap-an only: complete question including figures/options in rounded red 0.7pt frame, 2mm radius, 3.5mm inset, pale fill. Solution outside.",
     "cover_leading": "0.65em for organization, school and exam title block (increased from 0.45em).",
-    "cover_rule": "Dashed primary-red separator, 0.9pt matching exam-code box border. Header solid 1pt."
+    "cover_rule": "Dashed primary-red separator, 0.9pt matching exam-code box border. Header solid 1pt.",
+    "exam_color_revision": {
+      "primary": "#A80F2D",
+      "secondary": "#12647A",
+      "figure_tint": "#B9DDE3",
+      "tables": "Data tables retain dark red header with white text; variation tables use #F1D8DE with dark labels.",
+      "code_box": "#F1D8DE background with #A80F2D text and border.",
+      "scope": "Exam palette only; lesson palette unchanged.",
+      "graph_curve": "#58118C, 1.5pt",
+      "sphere_radial_guides": "#163A5F, 1.45pt dashed"
+    }
   },
   "figure_renders": [
     {

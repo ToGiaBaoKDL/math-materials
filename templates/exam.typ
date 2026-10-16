@@ -1,4 +1,4 @@
-#import "theme.typ": palette, fonts, exam-style, plot-style
+#import "theme.typ": exam-palette as palette, fonts, exam-style, plot-style
 #import "components.typ": choices
 #import "exam-branding.typ": exam-header, exam-footer
 #import "writing.typ": writing-space, final-writing-space
@@ -44,7 +44,7 @@
     grid(columns: (32mm, 1fr), column-gutter: 2mm, row-gutter: 2mm, align:bottom,
       [Họ, tên thí sinh:], line(length:100%,stroke:(paint:palette.ink,thickness:0.7pt,dash:"dotted")),
       [Số báo danh:], line(length:100%,stroke:(paint:palette.ink,thickness:0.7pt,dash:"dotted"))),
-    block(width: 100%, fill: palette.box-fill, stroke: 0.9pt + palette.primary,
+    block(width: 100%, fill: rgb("#F1D8DE"), stroke: 0.9pt + palette.primary,
       radius: 2mm, inset: (x:3mm,y:3mm),
       align(center, text(size:14pt,weight: "bold", fill: palette.primary)[Mã đề: #code])))
   v(3mm)
@@ -60,7 +60,7 @@
 #let exam-table(columns: auto, header: (), ..cells) = table(
   columns: columns, align: center + horizon, inset: 4.5pt, stroke: plot-style.table-stroke,
   fill: (x, y) => if y == 0 { plot-style.table-fill } else { white },
-  table.header(..header.map(it => text(weight: "bold", fill: palette.exam-blue, it))), ..cells.pos())
+  table.header(..header.map(it => text(weight: "bold", fill: white, it))), ..cells.pos())
 
 #let exam-question(number, body, answers: (), statements: (), solution: [],
   variant: "de", writing-lines: 6, columns: auto, ending: none, keep-together: false) = {
