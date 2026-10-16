@@ -1,4 +1,4 @@
-.PHONY: build upload sheet sheets-auth list help
+.PHONY: build upload sheet sheets-auth list check format help
 
 DOC ?= $(DOCUMENT)
 REMOTE ?= dxt-gdrive
@@ -18,6 +18,15 @@ sheets-auth:
 
 list:
 	python3 scripts/build.py --list
+
+check:
+	uv run ruff check scripts
+	uv run ruff format --check scripts
+	uv run pyright
+
+format:
+	uv run ruff check --fix scripts
+	uv run ruff format scripts
 
 help:
 	@echo 'make list | make build | make upload DRIVE_MONTH=YYYY-MM [DOC=buoi-10] [VARIANT=de] [DRY_RUN=1] | make sheet DRIVE_MONTH=YYYY-MM DATE=YYYY-MM-DD [DOC=buoi-11] [DRY_RUN=1]'
