@@ -181,6 +181,7 @@ def updates_for_sheet(sheet, month, records):
                              'rows': [{'values': [cell(f'Tháng {int(month[5:])}/{month[:4]}')]}],
                              'fields': 'userEnteredValue'}},
         ])
+    arranged = {r: displayed(rows, r, 3) for r in range(start, end)}
     reserved = set()
     added = 0
     summary = []
@@ -198,6 +199,7 @@ def updates_for_sheet(sheet, month, records):
         if target in reserved:
             raise ValueError(f'Duplicate destination row for {title}')
         reserved.add(target)
+        arranged[target] = title
         requests.append({'updateCells': {
             'start': {'sheetId': sheet_id, 'rowIndex': target, 'columnIndex': 1},
             'rows': [{'values': values}], 'fields': 'userEnteredValue,textFormatRuns',
@@ -246,6 +248,45 @@ def updates_for_sheet(sheet, month, records):
         extension.append({'mergeCells': {'range': dict(month_range, endRowIndex=end + added), 'mergeType': 'MERGE_ALL'}})
         requests = extension + requests
         summary.insert(0, f"{props['title']}: extend {month} by {added} rows, keeping existing formatting.")
+    # Move complete rows so links, fees, formatting and row heights stay together.
+    moves = []
+    for title, _ in records:
+        base, separator, variant = normalized(title).rpartition(' - ')
+        if not separator or variant not in ('đề', 'đáp án'):
+            continue
+        pair = []
+        for suffix in ('đề', 'đáp án'):
+            matches = [r for r, name in arranged.items() if normalized(name) == base + ' - ' + suffix]
+            if len(matches) > 1:
+                raise ValueError(f"{props['title']}: duplicate rows for {base} - {suffix}")
+            pair.append(matches[0] if matches else None)
+        question, answer = pair
+        if question is None or answer is None or answer == question + 1:
+            continue
+        # If the answer precedes its question, bring the question directly above it.
+        source, target = (question, answer) if answer < question else (answer, question + 1)
+        moves.append({'moveDimension': {
+            'source': {'sheetId': sheet_id, 'dimension': 'ROWS',
+                       'startIndex': source, 'endIndex': source + 1},
+            'destinationIndex': target if target < source else target + 1,
+        }})
+        names = [arranged.get(r, '') for r in range(start, end + added)]
+        name = names.pop(source - start)
+        names.insert(target - start, name)
+        arranged = dict(enumerate(names, start))
+    if moves:
+        month_range = {'sheetId': sheet_id, 'startRowIndex': start, 'endRowIndex': end + added,
+                       'startColumnIndex': 0, 'endColumnIndex': 1}
+        requests.extend([
+            {'unmergeCells': {'range': month_range}},
+            *moves,
+            {'repeatCell': {'range': month_range, 'cell': {}, 'fields': 'userEnteredValue'}},
+            {'updateCells': {'start': {'sheetId': sheet_id, 'rowIndex': start, 'columnIndex': 0},
+                             'rows': [{'values': [cell(f'Tháng {int(month[5:])}/{month[:4]}')]}],
+                             'fields': 'userEnteredValue'}},
+            {'mergeCells': {'range': month_range, 'mergeType': 'MERGE_ALL'}},
+        ])
+        summary.append(f"{props['title']}: reordered {len(moves)} rows to keep each answer below its question.")
     return requests, summary
 
 
