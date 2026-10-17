@@ -1,0 +1,14 @@
+title = "BUỔI 11: ỨNG DỤNG MỘT SỐ BÀI TOÁN ĐIỂN HÌNH [CHUYÊN ĐỀ HỆ TRỤC TOẠ ĐỘ & VECTOR TRONG KHÔNG GIAN]"
+starts_at = "2026-10-15T20:00"
+location = "Lớp Zoom"
+intro = "Helo các em, chị gửi File đề Buổi 11 tối mai học, các em tải về và làm bài trước nhé."
+homework = true
+closing = "Video record + File tài liệu sẽ có trên Website thầy trước 19h ngày hôm sau buổi học, có anh Khoa sẽ thông báo cho các em nhé. @All"
+
+# Hoặc bỏ bảng links, đặt document và drive_month ở phía trên để lấy link từ Drive.
+# document = "buoi-11"
+# drive_month = "2026-10"
+[links]
+de = "https://drive.google.com/file/d/1jk2MMZhCJWU5j0-h1cizGj1P-jGZQi_1/view?usp=sharing"
+de-cach = "https://drive.google.com/file/d/1nIRn5Pvl7v0zRoON1Lw2x8A0F92-pEvq/view?usp=sharing"
+dap-an = "https://drive.google.com/file/d/1wXAWhvJRvCtNmr6JHdEv2K3y838K3Y_f/view?usp=sharing"

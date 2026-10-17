@@ -1,4 +1,4 @@
-.PHONY: build upload upload-rclone drive-auth sheet sheets-auth list check format help
+.PHONY: notify build upload upload-rclone drive-auth sheet sheets-auth list check format help
 
 DOC ?= $(DOCUMENT)
 REMOTE ?= dxt-gdrive
@@ -36,3 +36,6 @@ format:
 
 help:
 	@echo 'make list | make build | make drive-auth [CLIENT=...] | make upload DRIVE_MONTH=YYYY-MM [DOC=buoi-10] [VARIANT=de] [DRY_RUN=1] | make sheet DRIVE_MONTH=YYYY-MM DATE=YYYY-MM-DD [DOC=buoi-11] [DRY_RUN=1]'
+
+notify:
+	uv run scripts/notify.py --config "$(CONFIG)" $(if $(CREDENTIALS),--credentials "$(CREDENTIALS)") $(if $(filter 1 true,$(SEND)),--send)

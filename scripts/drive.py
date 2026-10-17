@@ -64,6 +64,16 @@ class Drive:
         self.cache.pop(parent, None)
         return created["id"]
 
+    def verified_links(self, parent, files):
+        links = {}
+        for key, (local, name) in files.items():
+            item = self.find(parent, name)
+            assert item is not None
+            if item.get("md5Checksum") != checksum(local):
+                raise ValueError(f"Drive differs from local: {name}. Upload the approved files first.")
+            links[key] = item.get("webViewLink") or f"https://drive.google.com/file/d/{item['id']}/view"
+        return links
+
     def upload(self, parent, name, local):
         from googleapiclient.http import MediaFileUpload
 

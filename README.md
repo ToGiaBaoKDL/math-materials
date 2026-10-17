@@ -24,6 +24,8 @@ Sau khi duyệt PDF, thực hiện [upload và cập nhật Sheet](docs/publishi
 | [Build và kiểm tra](docs/build.md) | Môi trường, lệnh build, render hình, metadata và kiểm tra Python |
 | [Xuất bản](docs/publishing.md) | Drive, xác thực, tên file, mapping Sheet và quy tắc cập nhật |
 
+Thông báo buổi học qua bot: [Telegram](docs/notifications.md), preview bằng `make notify CONFIG=docs/examples/announcement.toml`.
+
 ## Cấu trúc
 
 ```text

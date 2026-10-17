@@ -10,6 +10,7 @@ dev = [
     "google-api-python-client>=2,<3",
     "google-auth-oauthlib>=1,<2",
     "olefile>=0.47,<1",
+    "python-telegram-bot>=22,<23",
 ]
 
 [tool.ruff]

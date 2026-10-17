@@ -11,7 +11,7 @@ from typing import Any
 from urllib.parse import quote
 
 from build import ROOT, page_count
-from drive import Drive, checksum
+from drive import Drive
 from google_auth import DEFAULT_CLIENT, credentials
 from publishing import DRIVE_ROOT, check_month, document_files, documents
 
@@ -32,12 +32,7 @@ def document_rows(path, files, drive, month_id, uploaded_on):
     category = path.parent.parent.name
     category_id = drive.find(month_id, category, folder=True)["id"]
     folder = drive.find(category_id, path.parent.name, folder=True)["id"]
-    links = {}
-    for key, (local, filename) in files.items():
-        remote = drive.find(folder, filename)
-        if remote.get("md5Checksum") != checksum(local):
-            raise ValueError(f"Drive differs from local: {filename}. Upload the approved files first.")
-        links[key] = remote.get("webViewLink") or f"https://drive.google.com/file/d/{remote['id']}/view"
+    links = drive.verified_links(folder, files)
     code = GITHUB + "/" + quote(str(path.parent.relative_to(ROOT)), safe="/")
     serial = (uploaded_on - date(1899, 12, 30)).days
     primary = "de-dap-an" if "de-dap-an" in files else "de"
