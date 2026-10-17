@@ -266,3 +266,5 @@ Convention tiêu đề phần đề thi: chỉ nhãn “PHẦN I/II/III” có n
 Màu đề thi: đỏ `#C8102E`, đường cong hàm số `#005FE6` nét 1,5 pt. Hình hộp Nguyễn Khuyến dùng xanh–cam bão hòa; nhà máy dùng sàn vàng, khối xanh ngọc, cảm biến hồng đậm, không pha trắng các mặt này.
 
 Đường kẻ nhạt trong heading đề thi nằm sát dưới cụm tên đơn vị bên trái (cách 1 mm), gắn với khối chữ này; không hạ đường kẻ theo chiều cao tiêu đề bên phải.
+
+Bảng màu minh họa có thể phối thêm xanh lá tươi gần mẫu LX 2566 do người dùng cung cấp (`#BFFF36`, ước lượng từ ảnh), Salmon Pink `#FF91A4` và cyan `#55DCE5`. Phân bổ theo từng hình, tránh lạm dụng xanh dương; nét viền và nét khuất dùng màu đậm tương phản. Đây là màu minh họa, không thay màu nhận diện heading.
