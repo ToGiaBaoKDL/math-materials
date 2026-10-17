@@ -13,8 +13,8 @@ Build, upload và ghi Sheet là ba bước riêng. Build không tự upload; ch�
 | `DOC` | Chọn tài liệu bằng đoạn tên duy nhất hoặc ID đầy đủ; `DOCUMENT` là alias |
 | `CATEGORY` | Chọn nhóm `Đề thi` hoặc `Chuyên đề` |
 | `VARIANT` | Chọn một PDF khi upload; vẫn gửi kèm nguồn. Lệnh Sheet không nhận tham số này |
-| `REMOTE` | Remote rclone cho upload, mặc định `dxt-gdrive` |
-| `CREDENTIALS` | File xác thực Google API cho Sheet |
+| `REMOTE` | Chỉ dùng cho `upload-rclone`, mặc định `dxt-gdrive` |
+| `CREDENTIALS` | File token dùng chung cho upload và Sheet |
 
 Không chọn bộ lọc tài liệu thì xử lý tất cả tài liệu phù hợp. Tháng đích không đổi đường dẫn local hoặc ngày tiếp nhận trong manifest.
 
@@ -42,7 +42,7 @@ KHÓA TH - BUỔI 10 - MIN - MAX HÌNH HỌC - GỐC.docx
 
 ## Upload và cập nhật file
 
-Upload sao chép một chiều với mapping tên: cập nhật file cùng tên, bỏ qua file không đổi, không xóa file khác trên Drive. Upload kiểm tra PDF tồn tại và checksum khớp manifest trước khi chạy; sau khi sửa mã nguồn cần build lại.
+Upload dùng Google Drive API và token OAuth chung với Sheet. So MD5 local/remote trước khi gửi; nếu khác, cập nhật bằng `files.update(fileId=...)` để giữ ID và URL, sau đó xác minh checksum trả về. File chưa có mới dùng `files.create`; tên trùng hoặc khác loại (folder, Google Docs, shortcut) thì dừng. Upload sao chép một chiều với mapping tên: cập nhật file cùng tên, bỏ qua file không đổi, không xóa file khác trên Drive. Upload kiểm tra PDF tồn tại và checksum khớp manifest trước khi chạy; sau khi sửa mã nguồn cần build lại.
 
 ```sh
 make upload DRIVE_MONTH=2026-10 DOC=buoi-10 DRY_RUN=1
@@ -51,16 +51,20 @@ make upload DRIVE_MONTH=2026-10 CATEGORY="Chuyên đề"
 make upload DRIVE_MONTH=2026-10 DOC=nguyen-khuyen VARIANT=de-dap-an
 ```
 
-## Xác thực Google Sheet
+## Xác thực Google dùng chung
 
 Dùng Google Sheets API và Drive API qua `google-api-python-client`, `google-auth-oauthlib`. `uv run` cài dependency khai báo trong script vào môi trường riêng, không cần thay Python của build/upload.
 
 Thiết lập một lần:
 
 1. Trong Google Cloud project của bạn, bật **Google Sheets API** và **Google Drive API**, tạo OAuth client loại **Desktop app**; tải JSON về `.secret/dxt-toan-2027-client.json`.
-2. Gmail dùng ghi Sheet cần quyền sửa Sheet và quyền đọc folder Drive chứa bộ file đã upload. Có thể dùng Gmail khác với remote rclone.
-3. Chạy `make sheets-auth CLIENT=.secret/dxt-toan-2027-client.json`, chọn đúng Gmail của bạn và cấp quyền. Token tự đặt tên theo email đăng nhập, ví dụ `.secret/togiabaode-token.json` với `togiabaode@gmail.com` (Git bỏ qua, quyền file 600). Lệnh ghi Sheet mặc định dùng `.secret/togiabaode-token.json`; chọn tài khoản khác bằng `CREDENTIALS=.secret/<tên>-token.json`. Email ngoài Gmail giữ cả tên miền trong tên file để tránh trùng. Có thể truyền `CREDENTIALS` khi đăng nhập để chọn tên riêng. Lệnh ghi Sheet tự refresh khi cần; không tự mở trình duyệt đăng nhập.
-4. Nếu đã có service account được chia sẻ quyền sửa Sheet và đọc folder Drive, truyền `CREDENTIALS=.secret/dxt-sheets-service-account.json` trực tiếp, không cần `sheets-auth`.
+2. Tài khoản dùng chung cần quyền sửa Sheet và quyền thêm/cập nhật file trong folder Drive đích.
+3. Chạy `make drive-auth CLIENT=.secret/dxt-toan-2027-client.json`, chọn `thaythangtoan4@gmail.com` và cấp quyền. Token tự đặt tên theo email đăng nhập, ví dụ `.secret/thaythangtoan4-token.json` với `thaythangtoan4@gmail.com` (Git bỏ qua, quyền file 600). Upload và Sheet mặc định dùng `.secret/thaythangtoan4-token.json`; chọn tài khoản khác bằng `CREDENTIALS=.secret/<tên>-token.json`. Email ngoài Gmail giữ cả tên miền trong tên file để tránh trùng. Có thể truyền `CREDENTIALS` khi đăng nhập để chọn tên riêng. Cả hai tự refresh khi cần; không tự mở trình duyệt đăng nhập.
+4. Nếu đã có service account được chia sẻ quyền sửa Sheet và quyền thao tác trên Drive phù hợp, truyền `CREDENTIALS=.secret/dxt-sheets-service-account.json` trực tiếp, không cần `sheets-auth`.
+
+Upload và Sheet dùng cùng tài khoản `thaythangtoan4@gmail.com`, cùng token và cùng bộ scope. Không yêu cầu thêm `drive.readonly` vì `drive` đã bao gồm quyền đọc. Token cũ chỉ có `drive.readonly` cần cấp quyền lại bằng `make drive-auth` trước khi dùng cả hai lệnh. Lệnh `sheets-auth` được giữ tương thích và cũng cấp cùng bộ quyền: `spreadsheets` + `drive`. Không tự mở đăng nhập trong lúc upload/ghi Sheet.
+
+Scope `drive` cần để cập nhật các file cũ được rclone tạo; `drive.file` không cấp quyền chung lên các file đó ([Google: scopes](https://developers.google.com/workspace/drive/api/guides/api-specific-auth)). Không thay đổi quyền chia sẻ file.
 
 ## Mapping cột Sheet
 
@@ -98,4 +102,15 @@ make sheet DRIVE_MONTH=2026-10 DATE=2026-10-15 CATEGORY="Chuyên đề"
 
 Trước khi ghi Sheet, script tìm đúng ID folder/file trên Drive và đối chiếu MD5 với file local. Thiếu file hoặc khác nội dung thì dừng, cần upload lại. Folder trùng tên cần được xử lý trước khi tiếp tục; dry run upload không xác minh tình trạng Drive.
 
-Chi tiết retry: rclone dùng `--tpslimit 3 --tpslimit-burst 1 --retries 3 --low-level-retries 1`; script upload không thêm vòng lặp retry riêng. Ghi Sheet không tự retry.
+Luồng Google API không tự retry thao tác ghi; khi lỗi, chạy lại để tìm file hiện có và so checksum trước khi gửi tiếp. Không tự xóa hoặc tạo lại file sau lỗi. Tránh chạy đồng thời nhiều tiến trình upload cùng đích.
+
+## Rclone trong giai đoạn chuyển tiếp
+
+`make upload-rclone DRIVE_MONTH=2026-10 DOC=buoi-10` chạy `scripts/upload_rclone.py`, dùng chung mapping và kiểm tra local với luồng mới. `REMOTE` chỉ áp dụng lệnh này. Bản cũ vẫn giữ retry: rclone dùng `--tpslimit 3 --tpslimit-burst 1 --retries 3 --low-level-retries 1`; script upload không thêm vòng lặp retry riêng. Ghi Sheet không tự retry.
+
+## Phân chia mã nguồn
+
+- `publishing.py`: chọn tài liệu, kiểm tra PDF và mapping tên; dùng chung cho cả hai uploader và Sheet.
+- `google_auth.py`: scope, đăng nhập và refresh token chung.
+- `drive.py`: tìm folder/file, cache danh sách con, tạo folder và upload theo checksum.
+- `upload.py` / `sheets.py`: điều phối nghiệp vụ riêng; `upload_rclone.py` giữ backend cũ.

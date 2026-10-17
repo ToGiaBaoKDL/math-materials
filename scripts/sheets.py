@@ -3,8 +3,6 @@
 # dependencies = ["google-api-python-client>=2,<3", "google-auth-oauthlib>=1,<2"]
 # ///
 import argparse
-import hashlib
-import json
 import re
 import unicodedata
 from datetime import date
@@ -13,93 +11,12 @@ from typing import Any
 from urllib.parse import quote
 
 from build import ROOT, page_count
-from upload import DRIVE_ROOT, check_month, document_files, documents
+from drive import Drive, checksum
+from google_auth import DEFAULT_CLIENT, credentials
+from publishing import DRIVE_ROOT, check_month, document_files, documents
 
 GITHUB = "https://github.com/ToGiaBaoKDL/math-materials/tree/main"
 SPREADSHEET = "1q7giSA18z4UkTomn9xQBqrDgdjssXeUSDj4fTtVYOVs"
-SCOPES = ["https://www.googleapis.com/auth/spreadsheets", "https://www.googleapis.com/auth/drive.readonly"]
-
-
-def credentials(path, client=None):
-    from google.auth.transport.requests import Request
-    from google.oauth2.credentials import Credentials
-    from google.oauth2.service_account import Credentials as ServiceCredentials
-
-    if client:
-        from google_auth_oauthlib.flow import InstalledAppFlow
-
-        flow = InstalledAppFlow.from_client_secrets_file(str(client), SCOPES)
-        creds = flow.run_local_server(port=0)
-        if path is None:
-            from googleapiclient.discovery import build
-
-            user = (
-                build("drive", "v3", credentials=creds, cache_discovery=False)
-                .about()
-                .get(fields="user(emailAddress)")
-                .execute(num_retries=0)["user"]
-            )
-            email = user["emailAddress"].lower()
-            name = email.removesuffix("@gmail.com")
-            name = re.sub(r"[^a-z0-9@._-]", "_", name)
-            path = ROOT / ".secret" / f"{name}-token.json"
-    else:
-        if not path.is_file():
-            raise ValueError(f"Authorize first: make sheets-auth CLIENT=path/to/oauth-client.json CREDENTIALS={path}")
-        info = json.loads(path.read_text())
-        if info.get("type") == "service_account":
-            return ServiceCredentials.from_service_account_info(info, scopes=SCOPES)
-        creds = Credentials.from_authorized_user_info(info, SCOPES)
-        if not creds.valid:
-            if not creds.refresh_token:
-                raise ValueError("Sheets credentials have no refresh token; run sheets-auth.")
-            creds.refresh(Request())
-    path.parent.mkdir(parents=True, exist_ok=True)
-    path.touch(mode=0o600, exist_ok=True)
-    path.chmod(0o600)
-    path.write_text(creds.to_json() + "\n")
-    if client:
-        print(f"Sheets authorization saved to {path}")
-    return creds
-
-
-class Drive:
-    def __init__(self, service):
-        self.service = service
-        self.cache = {}
-
-    def children(self, parent):
-        if parent not in self.cache:
-            items, token = [], None
-            while True:
-                result = (
-                    self.service.files()
-                    .list(
-                        q=f"'{parent}' in parents and trashed = false",
-                        pageSize=1000,
-                        pageToken=token,
-                        supportsAllDrives=True,
-                        includeItemsFromAllDrives=True,
-                        fields="nextPageToken,files(id,name,mimeType,md5Checksum,webViewLink)",
-                    )
-                    .execute(num_retries=0)
-                )
-                items.extend(result.get("files", []))
-                token = result.get("nextPageToken")
-                if not token:
-                    break
-            self.cache[parent] = items
-        return self.cache[parent]
-
-    def find(self, parent, name, folder=False):
-        matches = [
-            item
-            for item in self.children(parent)
-            if item["name"] == name and (item["mimeType"] == "application/vnd.google-apps.folder") == folder
-        ]
-        if len(matches) != 1:
-            raise ValueError(f"Drive: expected one {name!r}, found {len(matches)}. Upload the complete set first.")
-        return matches[0]
 
 
 def cell(value: str | int = "", link: str | None = None) -> dict[str, Any]:
@@ -118,7 +35,7 @@ def document_rows(path, files, drive, month_id, uploaded_on):
     links = {}
     for key, (local, filename) in files.items():
         remote = drive.find(folder, filename)
-        if remote.get("md5Checksum") != hashlib.md5(local.read_bytes()).hexdigest():
+        if remote.get("md5Checksum") != checksum(local):
             raise ValueError(f"Drive differs from local: {filename}. Upload the approved files first.")
         links[key] = remote.get("webViewLink") or f"https://drive.google.com/file/d/{remote['id']}/view"
     code = GITHUB + "/" + quote(str(path.parent.relative_to(ROOT)), safe="/")
@@ -472,7 +389,7 @@ def main():
     parser.add_argument("--root-id", default=DRIVE_ROOT)
     parser.add_argument("--credentials", type=Path)
     parser.add_argument("--authorize", action="store_true")
-    parser.add_argument("--client", type=Path, default=ROOT / ".secret/dxt-toan-2027-client.json")
+    parser.add_argument("--client", type=Path, default=DEFAULT_CLIENT)
     parser.add_argument(
         "--dry-run", action="store_true", help="Read Drive and Sheet and print planned rows; do not write"
     )
@@ -489,10 +406,12 @@ def main():
         files = {p: document_files(p) for p in paths}
         from googleapiclient.discovery import build
 
-        creds = credentials(args.credentials or ROOT / ".secret/togiabaode-token.json")
+        creds = credentials(args.credentials)
         drive = Drive(build("drive", "v3", credentials=creds, cache_discovery=False))
         sheets = build("sheets", "v4", credentials=creds, cache_discovery=False).spreadsheets()
-        month_id = drive.find(args.root_id, month, folder=True)["id"]
+        month_folder = drive.find(args.root_id, month, folder=True)
+        assert month_folder is not None
+        month_id = month_folder["id"]
         groups = {}
         for path in paths:
             groups.setdefault(path.parent.parent.name, []).extend(
