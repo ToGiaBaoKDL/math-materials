@@ -5,15 +5,17 @@
 
 // Shared DXT heading: document files supply content, not presentation.
 #let lesson-heading(course, title, subtitle: none,
-  author: [Biên soạn và giảng dạy: Thầy Đỗ Xuân Thắng]) = block(
+  author: [Biên soạn và giảng dạy: Thầy Đỗ Xuân Thắng], plain: false) = block(
   width: 100%, stroke: 0.6pt + palette.primary,
   radius: 3mm, inset: (x: 5mm, y: 4mm),
 )[
   #set par(justify: false, leading: 0.5em)
   #align(center)[
-    #block(fill: rgb("#008000"), radius: 2mm, inset: (x: 7mm, y: 2mm))[
-      #text(font: fonts.course, size: 20.5pt, weight: "bold", fill: white, course)
-    ]
+    #if not plain {
+      block(fill: rgb("#008000"), radius: 2mm, inset: (x: 7mm, y: 2mm))[
+        #text(font: fonts.course, size: 20.5pt, weight: "bold", fill: white, course)
+      ]
+    }
     #v(1mm)
     #layout(size => {
       let candidates = (fonts.lesson-title, fonts.lesson-title-long, fonts.lesson-title-longer)
@@ -28,11 +30,11 @@
     })
     #if subtitle != none {
       v(1mm)
-      text(font: fonts.subtitle, size: 11.5pt, subtitle)
+      text(font: fonts.subtitle, size: 11.5pt, fill: if plain {palette.heading} else {palette.ink}, subtitle)
     }
   ]
   #v(1mm)
-  #align(right, text(font: fonts.course, size: 11pt, style: "italic")[\- #author -])
+  #align(right, text(font: fonts.course, size: 11pt, style: "italic", fill: if plain {palette.heading} else {palette.ink})[\- #author -])
 ]
 
 #let lesson(title, body, variant: "de", branding: lesson-style.branding, heading-image: none, heading-content: none, heading-top-trim: lesson-style.heading-top-trim) = {

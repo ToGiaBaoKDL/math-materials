@@ -12,7 +12,7 @@
     }
   ],
   "metadata": {
-    "title": "12 CÂU ÔN TẬP GIỮA KÌ I – TOÁN THỰC TẾ HÀM SỐ"
+    "title": "TOÁN THỰC TẾ CHUYÊN ĐỀ HÀM SỐ (12 CÂU HỎI TỦ SÂU GIỮA KÌ 1 TOÁN 12)"
   },
   "scope": {
     "questions": 12,
@@ -69,7 +69,7 @@
     "fonts": "embedded",
     "standalone_figures": "visually inspected; labels checked after widening label boxes",
     "source_docx_pdf_conversion": "LibreOffice unavailable in sandbox; source examined via DOCX XML, MathType/WMF pairs and extracted embedded images; EMF label records inspected.",
-    "latest_revision": "Question gap 10mm; black bold source schools; white header separators. Revised six diagrams visually inspected as standalone figures. Two PDFs rebuilt; all 12 questions present, text within page bounds; ruled prompts remain one per page. Full-page visual review pending."
+    "latest_revision": "Question 1 fraction uses compact inline style; shared lesson header tab widened by 4mm, logo diameter 10mm positioned at x=2mm with vertical centering. Header component visually inspected; PDFs rebuilt and text bounds checked."
   },
   "drive": {
     "folder": "Chuyên đề",
@@ -81,15 +81,15 @@
   "outputs": {
     "de": {
       "pdf": "assets/targets/2026-10/Chuyên đề/th-on-tap-gk1-toan-12-thuc-te-ham-so/de.pdf",
-      "pages": 6,
-      "bytes": 814190,
-      "sha256": "3ca42e8f0f36e6fe59421dc7b5c177d2e2b77256ebbc09ed5d60d915524f6d3e"
+      "pages": 5,
+      "bytes": 808913,
+      "sha256": "60cc1d6f32e1a65205c22af279baada12ef0b1b46a0323ea1fe34ddf757e46ea"
     },
     "de-cach": {
       "pdf": "assets/targets/2026-10/Chuyên đề/th-on-tap-gk1-toan-12-thuc-te-ham-so/de-cach.pdf",
       "pages": 12,
-      "bytes": 837741,
-      "sha256": "46bb3474909c92613b07bd1bc23b5712dbd04cad36fa545dcc70a0ade988565d"
+      "bytes": 834333,
+      "sha256": "b639e0e8e81a158faae25b749e4d712254886f9bc6b442e8e32d193f89f55438"
     }
   },
   "implementation": {

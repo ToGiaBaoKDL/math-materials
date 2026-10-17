@@ -268,3 +268,5 @@ Màu đề thi: đỏ `#C8102E`, đường cong hàm số `#005FE6` nét 1,5 pt.
 Đường kẻ nhạt trong heading đề thi nằm sát dưới cụm tên đơn vị bên trái (cách 1 mm), gắn với khối chữ này; không hạ đường kẻ theo chiều cao tiêu đề bên phải.
 
 Bảng màu minh họa có thể phối thêm xanh lá tươi gần mẫu LX 2566 do người dùng cung cấp (`#BFFF36`, ước lượng từ ảnh), Salmon Pink `#FF91A4` và cyan `#55DCE5`. Phân bổ theo từng hình, tránh lạm dụng xanh dương; nét viền và nét khuất dùng màu đậm tương phản. Đây là màu minh họa, không thay màu nhận diện heading.
+
+Header chuyên đề: tab đỏ rộng 44 mm ở trên, 27 mm ở dưới; đường chéo trắng bắt đầu tại 30 mm; logo đường kính 11 mm, cách trái 3 mm và căn giữa theo chiều dọc. Vùng tên thầy bắt đầu sau tab 2 mm, tránh chèn logo vào đường chéo. Với câu 1 bộ ôn tập hàm số, dùng phân số inline gọn để giữ nhịp dòng đều.

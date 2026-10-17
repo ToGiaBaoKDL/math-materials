@@ -451,20 +451,20 @@
     "de": {
       "pdf": "assets/targets/2026-10/Chuyên đề/th-buoi-12-phuong-trinh-mat-phang/de.pdf",
       "pages": 9,
-      "bytes": 516183,
-      "sha256": "f74fc6dc620e4eedffa2fd1518afd26b6b4f3b829147fe601f057e65a8be7474"
+      "bytes": 516102,
+      "sha256": "cea74cf541a1585e0ce56bfd62c42233995f1e3086fd9c15d170a517f29b35b1"
     },
     "de-cach": {
       "pdf": "assets/targets/2026-10/Chuyên đề/th-buoi-12-phuong-trinh-mat-phang/de-cach.pdf",
       "pages": 18,
-      "bytes": 548659,
-      "sha256": "59bb4e6200655e300eda4d727d352ca2e96741138407c35ab0d11c59e2df2189"
+      "bytes": 548457,
+      "sha256": "61d9329aa736914d69a4806dae65511721ccbf690c41069fc4817376cfd546db"
     },
     "dap-an": {
       "pdf": "assets/targets/2026-10/Chuyên đề/th-buoi-12-phuong-trinh-mat-phang/dap-an.pdf",
       "pages": 21,
-      "bytes": 725317,
-      "sha256": "064b2c4ae898bc8623647aac3cd736c3f00b92a93fad221ab107d93c3247af33"
+      "bytes": 725115,
+      "sha256": "db49bf2e26f1da8155813bdbe8ae2ebce40de1e19def1c18d1fcf4a8ac44ac6c"
     }
   },
   "drive": {

@@ -20,7 +20,7 @@
  path(((b.at(0)-2.5mm*ux+1mm*uy,b.at(1)-2.5mm*uy - 1mm*ux),b,
  (b.at(0)-2.5mm*ux - 1mm*uy,b.at(1)-2.5mm*uy+1mm*ux)),stroke:1.2pt+color)
 }
-#let diagram(kind)=block(width:140mm,height:if kind=="coaster" {66mm} else {58mm},above:3mm,below:2mm)[
+#let diagram(kind)=block(width:140mm,height:if kind=="coaster" {66mm} else {58mm},above:if kind=="coaster" {8mm} else {3mm},below:2mm)[
  #set text(size:11pt)
  #if kind=="river" {
   let a=(22mm,8mm);let c=(22mm,43mm);let b=(115mm,43mm);let d=(67mm,43mm)
@@ -78,14 +78,14 @@
   tag(a,[$P$],dx:-3mm,dy:3mm);tag(b,[$R$],dx:3mm,dy:3mm);tag(q,[$Q$],dy:-4mm);tag((70mm,47mm),[$O$],dy:4mm)
   label((89mm,51mm),[2 km]);label((51mm,21mm),[Chèo thuyền]);label((117mm,23mm),[Chạy bộ])
  } else if kind=="coaster" {
-  place(top+left,dx:-7mm,dy:1mm,image("coaster-photo.png",width:72mm,height:48mm,fit:"contain"))
-  let p(x,y)=(77mm+x*0.59mm,47mm-y*0.91mm)
+  place(top+left,dx:-12mm,dy:1mm,image("coaster-photo.png",width:72mm,height:48mm,fit:"contain"))
+  let p(x,y)=(82mm+x*0.59mm,47mm-y*0.91mm)
   path((p(0,46),p(0,0),p(96,0)),stroke:0.7pt+black)
   let f(x)=30 - x*(x - 50)*(x - 80)/1500
   smooth(t=>p(t,f(t)),t=>(0.59mm,-0.91mm*(-3*t*t+260*t - 4000)/1500),0,89,stroke:1.4pt+blue)
   for (x,y) in ((0,30),(20,6),(50,30),(80,30)) {path((p(x,0),p(x,y),p(0,y)),stroke:(paint:green,dash:"dashed",thickness:0.6pt))}
   for (pt,t,dx,dy) in ((p(0,30),[$A$],2mm,-3mm),(p(50,30),[$C$],-1mm,-3mm),(p(80,30),[$D$],2mm,-3mm),(p(0,0),[$O$],-2mm,3mm)) {tag(pt,t,dx:dx,dy:dy)}
   for (pt,t) in ((p(50,-4),[50]),(p(80,-4),[80]),(p(-5,6),[6]),(p(-5,30),[30]),(p(96,-3),[$x$]),(p(-3,46),[$y$])) {label(pt,t)}
-  label((29mm,62mm),[Hình 1]);label((107mm,62mm),[Hình 2])
+  label((24mm,62mm),[Hình 1]);label((112mm,62mm),[Hình 2])
  }
 ]

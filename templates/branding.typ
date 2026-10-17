@@ -33,6 +33,7 @@
     let inset = page-insets(margin)
     let cut = head.tab-width - head.tab-bottom
     let badge-top = (head.height - head.badge-diameter)/2
+    let badge-left = head.badge-left
     let title-left = head.tab-width + head.title-gap
     let title-width = size.width - title-left - if branded { 4mm } else { inset.right }
     let title-size = if size-override != none { size-override } else if branded { head.title-size } else { head.subject-title-size }
@@ -51,7 +52,7 @@
         (head.slash-top + head.slash-width - cut, head.height), (head.slash-top - cut, head.height),
         fill: palette.paper, stroke: none,
       ))
-      #place(top + left, dx: head.badge-left, dy: badge-top,
+      #place(top + left, dx: badge-left, dy: badge-top,
         circle(radius: head.badge-diameter/2, fill: palette.paper, stroke: none))
       #let badge-display = if branded {
         image("/assets/branding/logo-original.png", width: head.badge-diameter, height: head.badge-diameter, fit: "contain")
@@ -64,7 +65,7 @@
           ]
         ])
       }
-      #place(top + left, dx: head.badge-left, dy: badge-top, badge-display)
+      #place(top + left, dx: badge-left, dy: badge-top, badge-display)
       #place(top + left, dx: title-left,
         block(width: title-width, height: head.bar-height,
           align(title-align + horizon, text(top-edge: "bounds", bottom-edge: "bounds",

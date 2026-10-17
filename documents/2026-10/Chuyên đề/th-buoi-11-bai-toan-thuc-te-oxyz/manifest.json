@@ -868,20 +868,20 @@
     "de": {
       "pdf": "assets/targets/2026-10/Chuyên đề/th-buoi-11-bai-toan-thuc-te-oxyz/de.pdf",
       "pages": 13,
-      "bytes": 1704602,
-      "sha256": "d372662e7d1362f734df4234d9be3f2915e870579df3941ddfb962a0d7f17de3"
+      "bytes": 1707348,
+      "sha256": "c6fdab3dc82faa595f4983ee42c1d2ead79f227822b907a7c878d26a1ab022e5"
     },
     "de-cach": {
       "pdf": "assets/targets/2026-10/Chuyên đề/th-buoi-11-bai-toan-thuc-te-oxyz/de-cach.pdf",
       "pages": 21,
-      "bytes": 1735277,
-      "sha256": "023f4f57fa0534f18787791973a3e0cb1f990e4e3110148986845e0514655679"
+      "bytes": 1737886,
+      "sha256": "bac6e670dc16a1b333379aff080bcba7a8a2b0d92668f99a8f66eff9ecf25bbd"
     },
     "dap-an": {
       "pdf": "assets/targets/2026-10/Chuyên đề/th-buoi-11-bai-toan-thuc-te-oxyz/dap-an.pdf",
       "pages": 22,
-      "bytes": 2448325,
-      "sha256": "d64154342b9c6bd5caed6cffa19c4a9c1b03a8c10c46dff9a5c0c446bba02e83"
+      "bytes": 2450925,
+      "sha256": "a583b4432b3c18679043bd5fdb0147c8b89fd79b58ba4a913b2bdc3e0e3e03e5"
     }
   },
   "qa": {
