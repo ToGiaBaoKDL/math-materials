@@ -90,26 +90,31 @@
       "checks": "All variants compiled; text bounds checked; standalone heading visually inspected.",
       "full_page_visual_review": "pending",
       "spacing_update": "Both cells vertically centered; shared heading font size; left leading 0.7em/right 1em; information gaps 3mm/4mm; clock text gutter 5mm. All variants rebuilt; standalone heading visually inspected."
+    },
+    "color_heading_revision": {
+      "heading": "Noto Sans bold 11.5pt, horizontal fitting for long headings, matched line spacing, right inset 8mm. Blue #0055B8/red #C8102E.",
+      "curve": "#005FE6 at 1.5pt",
+      "validation": "All variants compiled; text bounds checked; standalone heading, box-net and factory inspected. Full-page visual review pending."
     }
   },
   "outputs": {
     "de": {
       "pdf": "assets/targets/2026-10/Đề thi/phan-boi-chau-toan-12-giua-ky-1-ma-1108/de.pdf",
       "pages": 7,
-      "bytes": 646090,
-      "sha256": "27d6703489df46556a2d3d257b0a4f6338de0ec84f0c9cfad65166a50562a770"
+      "bytes": 647542,
+      "sha256": "357612528dfb2ca074a7c2f70254cd107fc3ec2145eee51b89e2dc129311644d"
     },
     "de-cach": {
       "pdf": "assets/targets/2026-10/Đề thi/phan-boi-chau-toan-12-giua-ky-1-ma-1108/de-cach.pdf",
       "pages": 13,
-      "bytes": 657570,
-      "sha256": "d795251e44deb3856fd7c983ea660e5f82271bc1e7e61d6db0aa4017b2926269"
+      "bytes": 659398,
+      "sha256": "11d7c98a26de7da05b3c15de58fbd57c8bb7b9851797f62fc9321208c84e9b3e"
     },
     "dap-an": {
       "pdf": "assets/targets/2026-10/Đề thi/phan-boi-chau-toan-12-giua-ky-1-ma-1108/dap-an.pdf",
       "pages": 16,
-      "bytes": 807101,
-      "sha256": "c72d66bb57d2d6fce714ae24e07027fd1be208fdb5248b8518da75dc934f373f"
+      "bytes": 808535,
+      "sha256": "134793f4ffd522ed07ae11d5073493984bd0d01af1980c163ef2934b65a8aa4c"
     }
   },
   "metadata": {

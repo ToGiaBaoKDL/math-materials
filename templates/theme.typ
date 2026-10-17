@@ -10,6 +10,7 @@
   geometry-amber: rgb("#945000"),
   exam-blue: rgb("#245474"),
   heading: rgb("#C00000"),
+  section-green: rgb("#009B19"),
   box-fill: rgb("#FDF8F8"),
   question-tag: rgb("#E60012"),
   accent: rgb("#4CAF50"),
@@ -19,10 +20,10 @@
 
 // Exam colors are independent of the DXT lesson identity.
 #let exam-palette = palette + (
-  primary: rgb("#A80F2D"),
+  primary: rgb("#C8102E"),
   geometry-secondary: rgb("#12647A"),
   geometry-tint: rgb("#B9DDE3"),
-  exam-blue: rgb("#184B68"),
+  exam-blue: rgb("#0055B8"),
 )
 
 #let fonts = (body: ("Times New Roman", "FreeSerif"), math: "New Computer Modern Math", ui: "Noto Sans", course: "Arial",
@@ -157,7 +158,7 @@
 
 #let plot-style = (
   width: 70mm, height: 48mm, label-size: 10pt,
-  curve: 1.5pt + rgb("#58118C"),
+  curve: 1.5pt + rgb("#005FE6"),
   guide: (paint: rgb("#67727A"), thickness: 0.55pt, dash: "dashed"),
   table-fill: exam-palette.primary,
   variation-fill: rgb("#F1D8DE"),

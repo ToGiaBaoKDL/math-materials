@@ -23,54 +23,56 @@
 #let exam-cover(organization, title, code, duration: 90, subject: "Toán", grade: "12",
   status: none, note: none, organization-size: 12pt, title-size: 12pt, duration-size: 12pt, pages: none) = {
   set par(justify: false, leading: 0.55em)
-  let green = rgb("#08752B")
+  let school-color = palette.section-green
+  let title-color = rgb("#C6001D")
   block(width: 100%, breakable: false, radius: 3mm, stroke: 1pt + palette.primary,
-    fill: white, inset: (x: 4mm, y: 4mm))[
+    fill: white, clip: true, inset: (x: 4mm, y: 4mm))[
     #set text(font: fonts.ui, size: 10.5pt)
-    #set par(spacing: 1mm, leading: 0.7em)
+    #set par(spacing: 1mm, leading: 1em)
     #layout(space => {
-      let base-size = calc.min(organization-size, title-size)
+      let base-size = 12pt
       let heading-width = calc.max(
         measure(text(size: base-size, weight: "bold", organization)).width,
         measure(text(size: base-size, weight: "bold", title)).width)
-      let heading-size = base-size * calc.min(1, (space.width / 2 - 8mm) / heading-width)
+      let heading-scale = calc.min(100%, (space.width / 2 - 14mm) / heading-width * 100%)
+      let heading(body, color) = scale(x: heading-scale, y: heading-scale, reflow: true,
+        box(width: heading-width, text(size: base-size, weight: "bold", fill: color, stroke: 0.12pt + color, body)))
       [#table(columns: (1fr, 1fr), stroke: none, inset: (x: 4mm, y: 1mm), align: horizon,
       table.cell(align: top + center, stroke: (right: 0.6pt + rgb("#E4B7C0")))[
-        #text(size: heading-size, weight: "bold", fill: green, organization)
+        #heading(organization, school-color)
       ],
-      table.cell(align: top)[
-        #set par(leading: 1em)
-        #text(size: heading-size, weight: "bold", fill: palette.primary, title)
+      table.cell(align: top, inset: (left: 10mm, right: 4mm, y: 1mm))[
+        #heading(title, title-color)
       ],
       table.cell(stroke: (right: 0.6pt + rgb("#E4B7C0")))[
         #align(center)[
-          #if status != none { text(weight: "bold", fill: green, status); v(2mm) }
           #line(length: 100%, stroke: 0.5pt + rgb("#E4B7C0"))
         ]
-        #v(3mm)
-        #grid(columns: (17mm, 1fr), column-gutter: 7mm, align: horizon,
-          image("/assets/branding/icons/clock.svg", width: 17mm),
-          [#context text(weight: "bold")[Đề thi gồm #(if pages == none {counter(page).final().first()} else {pages}) trang]
-           #v(3mm)
-           #text(size: 10pt, weight: "bold")[Thời gian làm bài: #text(fill: palette.primary)[#duration phút]]
-           #v(3mm)
-           #text(size: 9.5pt, style: "italic")[(Không kể thời gian phát đề)]])
-      ],
-      [
-        #set par(leading: 1em)
-        *Môn:* #subject
-        #v(4mm)
-        *Khối:* #grade
-        #if note != none { v(4mm); text(size: 10.5pt, style: "italic", note) }
-        #if code != none {
-          v(4mm)
-          block(fill: rgb("#F8E4E8"), radius: 1mm, inset: (x: 3mm, y: 1.5mm))[
-            *Mã đề:* #text(weight: "bold", fill: palette.primary, code)
+      ], [],
+      ..(
+        (context text(weight: "bold")[Đề thi gồm #(if pages == none {counter(page).final().first()} else {pages}) trang], [*Môn:* #subject]),
+        (text(size: 10pt, weight: "bold")[Thời gian làm bài: #text(fill: palette.primary)[#duration phút]], [*Khối:* #grade]),
+        (text(size: 9.5pt, style: "italic")[(Không kể thời gian phát đề)],
+          if code != none {
+            box(fill: rgb("#F8E4E8"), radius: 1mm, inset: (x: 3mm, y: 1.5mm))[
+              *Mã đề:* #text(weight: "bold", fill: palette.primary, code)
+            ]
+          } else if note != none { text(size: 10.5pt, style: "italic", note) } else { [] }),
+      ).enumerate().map(((i, pair)) => (
+        table.cell(inset: (left: 31mm, right: 4mm, y: 1mm), stroke: (right: 0.6pt + rgb("#E4B7C0")))[
+          #block(height: 8mm)[
+            #align(horizon, pair.at(0))
           ]
-        }
-      ])]
+        ],
+        table.cell(inset: (left: 10mm, right: 4mm, y: 1mm))[
+          #block(height: 8mm, align(horizon, pair.at(1)))
+        ],
+      )).flatten()
+      )]
     })
-    #place(bottom + right, dx: 4mm, dy: 4mm,
+    #place(bottom + left, dx: 4mm, dy: -5.5mm,
+      image("/assets/branding/icons/clock.svg", width: 19mm))
+    #place(bottom + right, dx: 4mm, dy: 7mm,
       image("/assets/branding/icons/exam-corner.svg", width: 27mm))
   ]
   v(4mm)
@@ -85,8 +87,14 @@
 
 #let exam-section(number, title, instruction: []) = block(width: 100%, sticky: true,
   above: exam-style.section-gap, below: 2mm)[
-  #text(weight: "bold", fill: palette.primary)[PHẦN #number.]
-  #text(weight: "bold", fill: palette.exam-blue, title) #instruction
+  #set par(justify: false)
+  #box(fill: plot-style.table-fill, inset: (x: 2mm, y: 1.5mm))[
+    #text(weight: "bold", fill: white)[PHẦN #number.]
+  ]
+  #h(1mm)
+  #text(weight: "bold", fill: palette.section-green, stroke: 0.12pt + palette.section-green, title)
+  #parbreak()
+  #instruction
 ]
 
 #let exam-table(columns: auto, header: (), ..cells) = table(

@@ -83,26 +83,31 @@
       "checks": "All variants compiled; text bounds checked; standalone heading visually inspected.",
       "full_page_visual_review": "pending",
       "spacing_update": "Both cells vertically centered; shared heading font size; left leading 0.7em/right 1em; information gaps 3mm/4mm; clock text gutter 5mm. All variants rebuilt; standalone heading visually inspected."
+    },
+    "color_heading_revision": {
+      "heading": "Noto Sans bold 11.5pt, horizontal fitting for long headings, matched line spacing, right inset 8mm. Blue #0055B8/red #C8102E.",
+      "curve": "#005FE6 at 1.5pt",
+      "validation": "All variants compiled; text bounds checked; standalone heading, box-net and factory inspected. Full-page visual review pending."
     }
   },
   "outputs": {
     "de": {
       "pdf": "assets/targets/2026-10/Đề thi/nguyen-binh-khiem-toan-12-khao-sat-lan-1-ma-0115/de.pdf",
       "pages": 5,
-      "bytes": 1990716,
-      "sha256": "6b7befdec295973555dff10b49f8d792ddb551cfa0be519ef79d60788d05028f"
+      "bytes": 1992407,
+      "sha256": "b93887f1e41091a9d826ecfb178870d79aa57a4b7f8a45a3d949d8e29a50de84"
     },
     "de-cach": {
       "pdf": "assets/targets/2026-10/Đề thi/nguyen-binh-khiem-toan-12-khao-sat-lan-1-ma-0115/de-cach.pdf",
       "pages": 11,
-      "bytes": 2012232,
-      "sha256": "8282aff66d58f80d547bb6ca2b2502e2fb9c8c05e98eba10003854234598ff29"
+      "bytes": 2014218,
+      "sha256": "363d59f8849e2cc0fce5716ad5e5a827a7c10dce70e8c1f14eaa9c6e4c6968a4"
     },
     "dap-an": {
       "pdf": "assets/targets/2026-10/Đề thi/nguyen-binh-khiem-toan-12-khao-sat-lan-1-ma-0115/dap-an.pdf",
       "pages": 10,
-      "bytes": 2087220,
-      "sha256": "671556139008ac8ba49911ecbbaf52ae80e6adaf4d086d2e854bae5963df50fe"
+      "bytes": 2088975,
+      "sha256": "6ec2969d1b41fed3f12dd0997a482457fe7b73d864bb00c4e7039cb4331fa2e3"
     }
   },
   "metadata": {

@@ -7,7 +7,7 @@
       <stop stop-color="#F0243B"/><stop offset="1" stop-color="#BA0F2C"/>
     </linearGradient>
   </defs>
-  <path d="M3 49 16 33H28L15 49Z" fill="url(#stripe)"/>
-  <path d="M25 49 38 33H50L37 49Z" fill="url(#stripe)"/>
-  <path d="M47 49 89 2V39Q89 49 79 49Z" fill="url(#corner)"/>
+  <path d="M3 49 16 33H28L15 49Z" fill="url(#stripe)" transform="translate(0 -3.333333)"/>
+  <path d="M25 49 38 33H50L37 49Z" fill="url(#stripe)" transform="translate(0 -3.333333)"/>
+  <path d="M47 49 89 2V39Q89 49 79 49Z" fill="url(#corner)" transform="translate(0 3.333333)"/>
 </svg>

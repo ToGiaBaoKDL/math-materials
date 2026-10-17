@@ -74,6 +74,11 @@
       "checks": "All variants compiled; text bounds checked; standalone heading visually inspected.",
       "full_page_visual_review": "pending",
       "spacing_update": "Both cells vertically centered; shared heading font size; left leading 0.7em/right 1em; information gaps 3mm/4mm; clock text gutter 5mm. All variants rebuilt; standalone heading visually inspected."
+    },
+    "color_heading_revision": {
+      "heading": "Noto Sans bold 11.5pt, horizontal fitting for long headings, matched line spacing, right inset 8mm. Blue #0055B8/red #C8102E.",
+      "curve": "#005FE6 at 1.5pt",
+      "validation": "All variants compiled; text bounds checked; standalone heading, box-net and factory inspected. Full-page visual review pending."
     }
   },
   "source_issues": [
@@ -114,20 +119,20 @@
     "de": {
       "pdf": "assets/targets/2026-10/Đề thi/nguyen-khuyen-le-thanh-tong-toan-12-kiem-tra-thang-10/de.pdf",
       "pages": 6,
-      "bytes": 250869,
-      "sha256": "576390a800cd0e290ee25a938cc7a3aa08aa35c6ae1d8a19d27ac47f353a5561"
+      "bytes": 252576,
+      "sha256": "b36c2af361f08f0605ab71531b5f47131bf1c73c983fddf0f749e2d853aad0bb"
     },
     "dap-an": {
       "pdf": "assets/targets/2026-10/Đề thi/nguyen-khuyen-le-thanh-tong-toan-12-kiem-tra-thang-10/dap-an.pdf",
-      "pages": 5,
-      "bytes": 229013,
-      "sha256": "a91b94a3636a1820ccc07e5f74836bc23fa1452bd38ec2777d7994fc3eaa38d9"
+      "pages": 6,
+      "bytes": 230775,
+      "sha256": "0efc61475cd331293fbca074e498e243ade3653afcc4b534ca46151bf37dd7f9"
     },
     "de-dap-an": {
       "pdf": "assets/targets/2026-10/Đề thi/nguyen-khuyen-le-thanh-tong-toan-12-kiem-tra-thang-10/de-dap-an.pdf",
-      "pages": 11,
-      "bytes": 402426,
-      "sha256": "b7711c905ba992fa7ff320336039c363f47238a112ca0608c7c6a7d8a01d0f3b"
+      "pages": 12,
+      "bytes": 405910,
+      "sha256": "6c593c667b41bb77805ff2df58e864d0a683ada27ee4be2d13894a6a8c8204c7"
     }
   },
   "implementation": {
