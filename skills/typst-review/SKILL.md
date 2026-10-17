@@ -7,11 +7,15 @@ description: "Kiểm tra và xuất bản PDF đề hoặc bài giảng Typst tr
 
 Đọc README, manifest, nguồn và các thay đổi vừa thực hiện. Kiểm tra theo phạm vi thực tế; ảnh thiếu không được xem là một đề hoàn chỉnh.
 
+Quy tắc vận hành liên quan: [build](../../docs/build.md).
+
 ## Ownership
 
 - Phụ trách thao tác build/render, `scripts/build.py` và bản xuất trong `assets/targets/`; cập nhật `output`/`outputs` và `qa` trong manifest.
 - Đọc nội dung, hình và template để kiểm tra. Lỗi câu chữ/dữ kiện chuyển về `math-transcription`, lỗi hình học/nét/khung về `typst-figures`, lỗi typography/căn/ngắt trang về `typst-layout`.
 - Ownership chỉ chia trách nhiệm thao tác; không yêu cầu tạo agent riêng. Khi sửa lỗi trong cùng phiên, áp dụng phạm vi của skill phụ trách trước khi kiểm tra lại.
+
+Đối chiếu thiết kế theo [typst-layout](../typst-layout/SKILL.md) và màu/nét theo [typst-figures](../typst-figures/SKILL.md); không duy trì thêm một bảng convention trong skill review.
 
 ## Nội dung và hình
 

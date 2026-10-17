@@ -7,6 +7,8 @@ description: "Vẽ và sửa hình toán vector bằng Typst từ dữ kiện v�
 
 Đọc README, nguồn hình và nội dung câu hỏi liên quan. Dùng palette và quy ước nét sẵn có của repo.
 
+Quy tắc vận hành liên quan: [document-model](../../docs/document-model.md).
+
 ## Ownership
 
 - Phụ trách `templates/drawing.typ` cho hàm vẽ chung và `figures/*.typ`/SVG riêng cho mô hình, tọa độ, phép chiếu, đường/mặt, nét gạch, nhãn, khung và giới hạn hình xuất.
@@ -18,9 +20,9 @@ description: "Vẽ và sửa hình toán vector bằng Typst từ dữ kiện v�
 
 - Xem hình gốc ở mức phóng đủ đọc nhãn, kích thước, đường thấy/khuất, đường cắt/gấp và vùng tô. Phân biệt dữ kiện toán với tỉ lệ minh họa; không thêm số đo suy luận vào hình đầu ra.
 - Dùng primitives Typst, CeTZ hoặc SVG vector. Định nghĩa một hệ tọa độ và một phép biến đổi chung cho điểm, cạnh, mặt, giao tuyến và nhãn. Hình khai triển và khối dựng dùng cùng bộ kích thước.
-- Import hàm và vai trò nét từ `templates/drawing.typ`, sắc độ từ `figure-style` trong theme. Theo mặc định của repo, cạnh thấy/khuất, cắt và gấp dùng chung độ dày và tông đỏ; nét khuất nhạt hơn nét thấy. Đường cắt trên hình khai triển giữ đỏ đậm dù dùng nét đứt, vì nét đứt ở đây biểu thị thao tác cắt. Hachure là nét phụ. Chỉ đổi quy ước khi nguồn hoặc yêu cầu có chủ ý khác.
+- Import hàm và vai trò nét từ `templates/drawing.typ`, token từ theme. Nét cạnh mặc định 0,8 pt, hachure 0,35 pt; cạnh thấy/gấp/cắt nhất quán độ dày theo vai trò. Màu chọn theo convention phối màu bên dưới, không bắt buộc đỏ. Nét đứt biểu thị khuất/cắt/gấp theo bài toán, không phải trang trí; không làm nét khuất nhạt đến mất tương phản.
 - Sắc độ mặt của hình khai triển phải tương ứng với mặt trên khối dựng. Tô trên các mặt có thật; không thêm đường chia mặt hay cạnh để tạo bóng. Vùng tô đặt dưới nét, không làm mất nét khuất hoặc giao tuyến.
-- Với mặt phẳng 3D, dùng pháp tuyến và hướng sáng chung để chọn tông đỏ; mặt hướng sáng nhạt hơn, mặt khuất sáng đậm hơn. Hướng sáng dùng để tô mặt; hướng nhìn dùng để xác định nét thấy/khuất, không dùng màu thay cho kiểm tra che khuất.
+- Với mặt phẳng 3D, dùng pháp tuyến và hướng sáng chung để chọn sắc độ của màu mặt; mặt hướng sáng nhạt hơn, mặt khuất sáng đậm hơn. Hướng sáng dùng để tô mặt; hướng nhìn dùng để xác định nét thấy/khuất, không dùng màu thay cho kiểm tra che khuất.
 - Trong hình khai triển, nét cắt và nét gấp theo mô tả bài toán/ảnh nguồn. Khi bài yêu cầu cắt theo nét đứt, không gán cùng quy ước cho đường gấp nếu khiến người đọc hiểu là cắt rời các mặt. Với khối 3D, cạnh hiện khi ít nhất một mặt kề hướng về người nhìn; cạnh bị cả hai mặt che khuất dùng nét đứt.
 - Với đường tròn chiếu thành ellipse, kiểm tra tâm, trục chính, đường kính và đối xứng theo hướng nhìn. Khi nguồn có đáy đứng cân, dùng hai hàng chiếu bán kính vuông góc để tránh shear làm ellipse nghiêng.
 - Đường sinh tạo biên nón phải tiếp tuyến ellipse đáy; tìm điểm tiếp xúc từ mô hình và hướng nhìn thay vì chọn điểm cực trị tùy ý.
@@ -28,8 +30,35 @@ description: "Vẽ và sửa hình toán vector bằng Typst từ dữ kiện v�
 - Xác định nét thấy/khuất theo hướng nhìn và pháp tuyến; chia đường tại điểm chuyển. Từng nét gạch phải nằm trong miền cắt. Vẽ vùng tô trước, nét khuất rồi biên thấy; nhãn có khoảng trống và không đè lên cạnh.
 - Khung hình phải chứa đủ biên và nhãn. Với các hình cần căn cùng đỉnh/đáy, tính giới hạn phần hình thực; điều chỉnh phép biến đổi toàn hình, giữ tỉ lệ các phương. Không dịch riêng điểm để che lỗi mô hình.
 - Nhãn số đo hoặc hướng có nhiều chữ cần chiều rộng đủ để không xuống dòng ngoài ý muốn. Dùng tham số của hàm nhãn chung; kiểm tra không đè đường dóng, nhãn lân cận hoặc mép khung.
-- Khi thu nhỏ, đổi một hệ số chung cho toàn bộ tọa độ và đường cong; giữ cỡ nhãn đủ đọc. Nền bao ngoài và khung trang trí thuộc layout, không gắn vào hình. Với phong cách đơn giản, chỉ tô nhẹ các mặt/vùng cần phân biệt, giữ nét cắt, gấp và khuất theo nguồn.
+- Khi thu nhỏ, đổi một hệ số chung cho toàn bộ tọa độ và đường cong; giữ cỡ nhãn đủ đọc. Nền bao ngoài và khung trang trí thuộc layout, không gắn vào hình. Chỉ tô các mặt/vùng cần phân biệt theo palette đã chọn, giữ nét cắt, gấp và khuất theo nguồn.
 - Chỉ comment công thức hoặc quyết định khó suy ra từ mã.
+
+## Phối màu minh họa
+
+- Màu hình độc lập với màu nhận diện heading. Dùng các màu sáng, bão hòa rõ và hài hòa; đa dạng giữa các hình, tránh dùng xanh dương cho mọi hình. Ưu tiên hai màu chính và một màu nhấn khi cần phân biệt đối tượng; không luân phiên màu tùy tiện giữa các cạnh. Giữ cùng màu cho cùng hình ở mọi variant.
+- Các màu đã được duyệt để lựa chọn (không phải ép dùng tất cả):
+
+  | Màu | Mã | Vai trò gợi ý |
+  |---|---|---|
+  | Salmon Pink | `#FF91A4` | Mặt/vùng chính; thay màu hồng cũ khi áp dụng yêu cầu này |
+  | Cinnamon | `#7B3F00` | Mặt khối hoặc nền nâu ấm |
+  | Xanh lá tươi gần LX 2566 | `#BFFF36` | Vùng tô sáng; mã ước lượng từ ảnh, không phải mã hãng xác nhận |
+  | Cyan | `#55DCE5` | Mặt phụ, đáy, vùng nước |
+  | Mint | `#B5E9DE` | Nền nhẹ bổ trợ |
+  | Vàng sáng | `#FFD43B` | Vùng nhấn hoặc mặt sàn |
+  | Xanh dương / cam | `#0077C8` / `#C45A00` | Cạnh hoặc cặp màu tương phản |
+  | Xanh lá đậm | `#17623E` | Viền/đường phụ khi cần tương phản |
+
+- Ví dụ phối: Salmon Pink–cyan, lime–cyan với viền đậm, Cinnamon–mint với nét khuất sáng. Chọn theo vai trò và diện tích: một vùng chủ đạo, vùng phụ nhỏ hơn, nét/nhãn tương phản. Không tăng mọi màu lên neon cùng lúc. Không pha trắng quá mức làm mặt khối nhợt nhạt; vẫn có thể dùng nền nhẹ khi cần tách nét.
+- Trên Cinnamon, nét đứt kem `#FFF3D6` nhìn rõ; trên mặt sáng có thể dùng nâu đậm `#482500`. Kiểm tra tương phản ở cả nền tô và nền trắng, không mặc định giảm opacity nét khuất. Giữ nhãn đen ở nơi đọc rõ, dịch nhãn khỏi cạnh thay vì thêm ô nền trắng che hình.
+- Đường cong hàm số mặc định xanh dương đậm sáng `#005FE6`, nét 1,5 pt qua `plot-style.curve`; không dùng convention tím cũ. Đường dóng phụ phải phân biệt rõ với đường cong.
+- Nền màu ôm miền hình thực; không thêm hình chữ nhật dư chỉ để có background. Vùng nước/đất hay mặt phẳng hỗ trợ phải đúng phạm vi minh họa. Phối màu không được làm mất đường gấp, mũi tên hoặc dữ kiện của nguồn.
+
+## Nhãn và nhóm hình
+
+- Giữ mũi tên trên đoạn/đường theo nguồn; đặt nhãn trục, gốc tọa độ và vạch số gần đúng vị trí, không đè đường. Nhãn góc nằm gần đỉnh trong miền góc khi đủ chỗ; các điểm đánh dấu nhất quán.
+- Đường xuyên mặt phẳng chia đoạn thấy/khuất tại giao điểm: đoạn bị che dùng nét đứt, đoạn lộ dùng nét liền; không xóa toàn bộ đường nối. Dựng đúng quan hệ đối xứng và vị trí khối nhỏ, không cho các khối chồng nhau khi nguồn tách rời.
+- Nhóm khai triển → khối gấp căn tâm ngang theo phần hình thực, kích thước vừa đủ lớn và có khoảng cách; phép chiếu phải cho thấy cấu trúc rõ. Caption hai hình cùng baseline và cách hình đủ thoáng; ảnh minh họa cân kích thước với đồ thị kề bên.
 
 ## Đầu ra và kiểm tra
 

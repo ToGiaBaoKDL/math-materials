@@ -7,6 +7,8 @@ description: Chép đề và bài giảng toán từ ảnh/PDF/DOCX sang nội d
 
 Đọc README ở gốc repo và manifest của tài liệu để xác định cấu trúc, nguồn và phạm vi đã thống nhất.
 
+Quy tắc vận hành liên quan: [document-model](../../docs/document-model.md).
+
 ## Ownership
 
 - Phụ trách nội dung câu hỏi trong `main.typ` hoặc `content/*.typ`: câu chữ, công thức, số câu, thứ tự lựa chọn, thông tin đề và chỉ dẫn từ nguồn.
@@ -24,6 +26,12 @@ description: Chép đề và bài giảng toán từ ảnh/PDF/DOCX sang nội d
 - Phân biệt chủ ý xuống dòng với dòng tự wrap trong ảnh. Ghi chú nối sau câu hỏi vẫn nằm trong đoạn đó; chỉ dẫn có chủ ý ở dòng riêng dùng tham số tương ứng của component.
 - Nội dung thiếu/mờ và phạm vi bản trích nằm trong manifest. Không suy đoán phần thiếu, sửa lỗi nguồn, thêm lời giải, đáp án hay chú thích biên tập vào PDF khi người dùng chưa yêu cầu.
 - Với hình, ghi nhận dữ kiện xác định mô hình, nhãn, đường cắt/gấp và nét thấy/khuất. Các độ dài minh họa chưa được đề xác định cần được phân biệt với dữ kiện.
+
+## Phạm vi và metadata
+
+- Chỉ khai báo variant thực sự cần: nguồn chỉ có đề thì chưa tạo đáp án; yêu cầu bản gộp không đồng nghĩa cần thêm bản cách. Dùng chung nội dung giữa các variant, không sao chép câu hỏi để sửa riêng.
+- Metadata, mapping câu/hình/trang, lỗi nguồn và quyết định sửa đã được phép ghi trong manifest, không thêm file báo cáo rời hoặc trường rỗng. Đường dẫn tính từ gốc repo; phân biệt file dự kiến và file đã tạo.
+- Không tự thêm dòng nguồn/ghi chú biên tập vào PDF. Giữ ngoại lệ đã duyệt của các đề hiện tại: `exam-source` ghi “Nguồn đề: TOANMATH.com.”; `exam-source(ai: true)` chỉ dùng cho bản lời giải được phép (hiện là NBK). Không suy rộng ngoại lệ này thành quyền tự tạo lời giải cho đề mới.
 
 ## Đầu ra và kiểm tra
 
