@@ -27,51 +27,48 @@
   let title-color = rgb("#C6001D")
   block(width: 100%, breakable: false, radius: 3mm, stroke: 1pt + palette.primary,
     fill: white, clip: true, inset: (x: 4mm, y: 4mm))[
-    #set text(font: fonts.ui, size: 10.5pt)
+    #set text(font: fonts.ui, size: 12.5pt)
     #set par(spacing: 1mm, leading: 1em)
     #layout(space => {
-      let base-size = 12pt
-      let heading-width = calc.max(
-        measure(text(size: base-size, weight: "bold", organization)).width,
-        measure(text(size: base-size, weight: "bold", title)).width)
-      let heading-scale = calc.min(100%, (space.width / 2 - 14mm) / heading-width * 100%)
-      let heading(body, color) = scale(x: heading-scale, y: heading-scale, reflow: true,
-        box(width: heading-width, text(size: base-size, weight: "bold", fill: color, stroke: 0.12pt + color, body)))
-      [#table(columns: (1fr, 1fr), stroke: none, inset: (x: 4mm, y: 1mm), align: horizon,
+      let available-left = space.width * 0.56 - 8mm
+      let available-right = space.width * 0.44 - 12mm
+      let size = 14pt * calc.min(1,
+        available-left / measure(text(size: 14pt, weight: "bold", organization)).width,
+        available-right / measure(text(size: 14pt, weight: "bold", title)).width)
+      let heading(body, color) = text(size: size, weight: "bold", fill: color,
+        stroke: 0.12pt + color, body)
+      [#table(columns: (56%, 44%), stroke: none, inset: (x: 4mm, y: 1mm), align: horizon,
       table.cell(align: top + center, stroke: (right: 0.6pt + rgb("#E4B7C0")))[
         #heading(organization, school-color)
+        #v(1mm)
+        #line(length: 100%, stroke: 0.5pt + rgb("#E4B7C0"))
       ],
-      table.cell(align: top, inset: (left: 10mm, right: 4mm, y: 1mm))[
+      table.cell(align: top + center, inset: (left: 8mm, right: 4mm, y: 1mm))[
         #heading(title, title-color)
       ],
-      table.cell(stroke: (right: 0.6pt + rgb("#E4B7C0")))[
-        #align(center)[
-          #line(length: 100%, stroke: 0.5pt + rgb("#E4B7C0"))
-        ]
-      ], [],
       ..(
         (context text(weight: "bold")[Đề thi gồm #(if pages == none {counter(page).final().first()} else {pages}) trang], [*Môn:* #subject]),
-        (text(size: 10pt, weight: "bold")[Thời gian làm bài: #text(fill: palette.primary)[#duration phút]], [*Khối:* #grade]),
-        (text(size: 9.5pt, style: "italic")[(Không kể thời gian phát đề)],
+        (text(size: 12pt, weight: "bold")[Thời gian làm bài: #text(fill: palette.primary)[#duration phút]], [*Khối:* #grade]),
+        (text(size: 11.5pt, style: "italic")[(Không kể thời gian phát đề)],
           if code != none {
             box(fill: rgb("#F8E4E8"), radius: 1mm, inset: (x: 3mm, y: 1.5mm))[
               *Mã đề:* #text(weight: "bold", fill: palette.primary, code)
             ]
-          } else if note != none { text(size: 10.5pt, style: "italic", note) } else { [] }),
+          } else if note != none { text(size: 12.5pt, style: "italic", note) } else { [] }),
       ).enumerate().map(((i, pair)) => (
         table.cell(inset: (left: 31mm, right: 4mm, y: 1mm), stroke: (right: 0.6pt + rgb("#E4B7C0")))[
-          #block(height: 8mm)[
+          #block(height: 9mm)[
             #align(horizon, pair.at(0))
           ]
         ],
-        table.cell(inset: (left: 10mm, right: 4mm, y: 1mm))[
-          #block(height: 8mm, align(horizon, pair.at(1)))
+        table.cell(inset: (left: 8mm, right: 4mm, y: 1mm))[
+          #block(height: 9mm, align(horizon, pair.at(1)))
         ],
       )).flatten()
       )]
     })
-    #place(bottom + left, dx: 4mm, dy: -5.5mm,
-      image("/assets/branding/icons/clock.svg", width: 19mm))
+    #place(bottom + left, dx: 3.5mm, dy: -6.5mm,
+      image("/assets/branding/icons/clock.svg", width: 20mm))
     #place(bottom + right, dx: 4mm, dy: 7mm,
       image("/assets/branding/icons/exam-corner.svg", width: 27mm))
   ]

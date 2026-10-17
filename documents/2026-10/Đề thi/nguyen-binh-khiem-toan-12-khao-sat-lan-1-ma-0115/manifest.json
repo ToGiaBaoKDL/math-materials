@@ -94,20 +94,20 @@
     "de": {
       "pdf": "assets/targets/2026-10/Đề thi/nguyen-binh-khiem-toan-12-khao-sat-lan-1-ma-0115/de.pdf",
       "pages": 5,
-      "bytes": 1992407,
-      "sha256": "b93887f1e41091a9d826ecfb178870d79aa57a4b7f8a45a3d949d8e29a50de84"
+      "bytes": 1991982,
+      "sha256": "3b1b1fe5448369560cbe26e86a7e8afcc7ee3d8a0a93e962e108167a704c0a22"
     },
     "de-cach": {
       "pdf": "assets/targets/2026-10/Đề thi/nguyen-binh-khiem-toan-12-khao-sat-lan-1-ma-0115/de-cach.pdf",
-      "pages": 11,
-      "bytes": 2014218,
-      "sha256": "363d59f8849e2cc0fce5716ad5e5a827a7c10dce70e8c1f14eaa9c6e4c6968a4"
+      "pages": 12,
+      "bytes": 2014763,
+      "sha256": "fc7802fdc1bd0807b7e25777a9069184f3f1f6d1e6a03572bc378f92495f2442"
     },
     "dap-an": {
       "pdf": "assets/targets/2026-10/Đề thi/nguyen-binh-khiem-toan-12-khao-sat-lan-1-ma-0115/dap-an.pdf",
       "pages": 10,
-      "bytes": 2088975,
-      "sha256": "6ec2969d1b41fed3f12dd0997a482457fe7b73d864bb00c4e7039cb4331fa2e3"
+      "bytes": 2088512,
+      "sha256": "6e5636cad6f3a532208a64c772ac711893ee3c56aac25694e5fc6475628acd01"
     }
   },
   "metadata": {

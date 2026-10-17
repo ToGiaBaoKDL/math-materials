@@ -119,8 +119,8 @@
     "de": {
       "pdf": "assets/targets/2026-10/Đề thi/nguyen-khuyen-le-thanh-tong-toan-12-kiem-tra-thang-10/de.pdf",
       "pages": 6,
-      "bytes": 252576,
-      "sha256": "b36c2af361f08f0605ab71531b5f47131bf1c73c983fddf0f749e2d853aad0bb"
+      "bytes": 252178,
+      "sha256": "ae4329d2230bc3d01fca152945e598de280be278f290623a0f5bf9b3714ef8e3"
     },
     "dap-an": {
       "pdf": "assets/targets/2026-10/Đề thi/nguyen-khuyen-le-thanh-tong-toan-12-kiem-tra-thang-10/dap-an.pdf",
@@ -131,8 +131,8 @@
     "de-dap-an": {
       "pdf": "assets/targets/2026-10/Đề thi/nguyen-khuyen-le-thanh-tong-toan-12-kiem-tra-thang-10/de-dap-an.pdf",
       "pages": 12,
-      "bytes": 405910,
-      "sha256": "6c593c667b41bb77805ff2df58e864d0a683ada27ee4be2d13894a6a8c8204c7"
+      "bytes": 405457,
+      "sha256": "b4bc15f478b4733140c3023db8e5e6391dda003df8da0393299c6dbb3c17c8d4"
     }
   },
   "implementation": {
