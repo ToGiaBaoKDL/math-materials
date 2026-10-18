@@ -5,8 +5,9 @@ import os
 import tomllib
 from pathlib import Path
 
-from announcements import drive_links, render
+from announcements import announcement_config, drive_publication, render
 from config import ROOT
+from document_model import documents, load_manifest
 
 
 async def send(text, secret):
@@ -35,36 +36,18 @@ async def send(text, secret):
 
 def main():
     parser = argparse.ArgumentParser(description="Preview or send one document announcement to Telegram")
-    parser.add_argument("--config", type=Path, required=True)
+    parser.add_argument("--document", required=True, help="Unique document name fragment or full ID")
     parser.add_argument("--secret", type=Path, default=ROOT / ".secret/telegram.toml")
     parser.add_argument("--credentials", type=Path)
-    parser.add_argument("--title")
     parser.add_argument("--starts-at")
-    parser.add_argument("--location")
+    parser.add_argument("--location", default="Lớp Zoom")
+    parser.add_argument("--drive-month")
     parser.add_argument("--send", action="store_true", help="Send; default only renders HTML locally")
     args = parser.parse_args()
     try:
-        config = tomllib.loads(args.config.read_text())
-        for field in ("title", "starts_at", "location"):
-            if value := getattr(args, field):
-                config[field] = value
-        if config.get("document"):
-            from document_model import documents, load_manifest
-
-            document = documents(config["document"])[0]
-            document_kind = load_manifest(document)["kind"]
-            if "kind" in config and config["kind"] != document_kind:
-                raise ValueError("Announcement kind must match the document profile")
-            config["kind"] = document_kind
-        links = config.get("links")
-        if links is not None and (config.get("document") or config.get("drive_month")):
-            raise ValueError("Choose explicit links OR document + drive_month, not both")
-        if links is None:
-            if not config.get("document") or not config.get("drive_month"):
-                raise ValueError("Provide links or both document and drive_month")
-            links = drive_links(config["document"], config["drive_month"], args.credentials)
-        if not isinstance(links, dict):
-            raise ValueError("links must be a TOML table")
+        document = documents(args.document)[0]
+        config = announcement_config(load_manifest(document), args.starts_at, args.location)
+        links = drive_publication(document, args.drive_month, args.credentials)
         text = render(config, links)
         if not args.send:
             print(text)

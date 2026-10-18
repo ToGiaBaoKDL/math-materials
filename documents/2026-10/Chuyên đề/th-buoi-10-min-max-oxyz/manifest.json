@@ -5,7 +5,10 @@
   "received_date": "2026-10-12",
   "status": "implementing",
   "metadata": {
-    "title": "BUỔI 10: MIN – MAX OXYZ"
+    "title": "BUỔI 10: MIN – MAX OXYZ",
+    "lesson": 10,
+    "topic": "HỆ TRỤC TỌA ĐỘ VÀ VECTOR TRONG KHÔNG GIAN",
+    "homework": true
   },
   "sources": [
     {
