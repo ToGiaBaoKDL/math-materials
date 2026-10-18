@@ -12,7 +12,7 @@
     }
   ],
   "metadata": {
-    "title": "TOÁN THỰC TẾ CHUYÊN ĐỀ HÀM SỐ (12 CÂU HỎI TỦ SÂU GIỮA KÌ 1 TOÁN 12)"
+    "title": "TOÁN THỰC TẾ CHUYÊN ĐỀ HÀM SỐ – 12 CÂU HỎI TỦ SÂU GIỮA KỲ I TOÁN 12"
   },
   "scope": {
     "questions": 12,
@@ -82,14 +82,14 @@
     "de": {
       "pdf": "assets/targets/2026-10/Chuyên đề/th-on-tap-gk1-toan-12-thuc-te-ham-so/de.pdf",
       "pages": 5,
-      "bytes": 797121,
-      "sha256": "72f985c58a384f45d4e57631c34b812deb28d8c28250ae94462439d16231aa64"
+      "bytes": 809376,
+      "sha256": "2d23cbe6a117dd9f4b80f74b377101009a33e2b2d7b56d30ff99fa5c4584fdc6"
     },
     "de-cach": {
       "pdf": "assets/targets/2026-10/Chuyên đề/th-on-tap-gk1-toan-12-thuc-te-ham-so/de-cach.pdf",
       "pages": 12,
-      "bytes": 821849,
-      "sha256": "969d367d48af90b4c686f056522c077ae7c2bd00949e9748b939f455021943ed"
+      "bytes": 834087,
+      "sha256": "0dab6c4555919acd10b7f9891b5854ba4b5618f759229a26ede06f8a873c4465"
     }
   },
   "implementation": {
