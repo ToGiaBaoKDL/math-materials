@@ -32,7 +32,7 @@ help:
 	@echo 'make list | make build DOC=... [VARIANT=...] | make google-auth | make upload DOC=... [DRY_RUN=1] | make sheet DOC=... [DRY_RUN=1]'
 
 notify:
-	uv run python scripts/notify.py $(SELECTION) $(if $(STARTS_AT),--starts-at "$(STARTS_AT)") $(if $(LOCATION),--location "$(LOCATION)") $(if $(DRIVE_MONTH),--drive-month "$(DRIVE_MONTH)") $(if $(CREDENTIALS),--credentials "$(CREDENTIALS)") $(if $(filter 1 true,$(SEND)),--send)
+	uv run python scripts/notify.py $(SELECTION) $(if $(STARTS_AT),--starts-at "$(STARTS_AT)") $(if $(LOCATION),--location "$(LOCATION)") $(if $(DRIVE_MONTH),--drive-month "$(DRIVE_MONTH)") $(if $(CREDENTIALS),--credentials "$(CREDENTIALS)") $(if $(SECRET),--secret "$(SECRET)") $(if $(filter 1 true,$(SEND)),--send)
 
 # Typstyle 0.15.2; Python and Typst formatting are deliberately separate.
 TYPSTYLE ?= typstyle

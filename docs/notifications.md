@@ -28,7 +28,7 @@ HTML được escape, các khối cách nhau một dòng trống, icon cách n�
 
 ## Secret và chat đích
 
-Dùng `python-telegram-bot`, không cần polling/webhook. Tạo `.secret/telegram.toml`, quyền 600; không commit secret:
+Dùng `python-telegram-bot`, không cần polling/webhook. Tạo `.secret/telegram-credentials.toml`, quyền 600; không commit secret:
 
 ```toml
 bot_token = "TOKEN_FROM_BOTFATHER"
@@ -36,6 +36,6 @@ chat_id = "@your_channel"
 # thread_id = 123
 ```
 
-Bot cần quyền gửi vào chat/channel. Token Telegram tách khỏi OAuth Google. `TELEGRAM_BOT_TOKEN`, `TELEGRAM_CHAT_ID` ghi đè secret; CLI hỗ trợ `--secret` để chọn file khác. Không truyền token qua command line.
+Bot cần quyền gửi vào chat/channel. Token Telegram tách khỏi OAuth Google. `TELEGRAM_BOT_TOKEN`, `TELEGRAM_CHAT_ID` ghi đè secret; Dùng `SECRET=path/to/credentials.toml` qua Make hoặc `--secret` qua CLI để chọn file khác. Không truyền token qua command line.
 
 `SEND=1` gửi một tin mới và in `message_id`. Không retry tự động vì Telegram có thể đã nhận trước khi timeout; kiểm tra chat trước khi gửi lại. Không tự đăng lịch hoặc chống gửi lặp.

@@ -37,7 +37,7 @@ async def send(text, secret):
 def main():
     parser = argparse.ArgumentParser(description="Preview or send one document announcement to Telegram")
     parser.add_argument("--document", required=True, help="Unique document name fragment or full ID")
-    parser.add_argument("--secret", type=Path, default=ROOT / ".secret/telegram.toml")
+    parser.add_argument("--secret", type=Path, default=ROOT / ".secret/telegram-credentials.toml")
     parser.add_argument("--credentials", type=Path)
     parser.add_argument("--starts-at")
     parser.add_argument("--location", default="Lớp Zoom")
@@ -52,7 +52,13 @@ def main():
         if not args.send:
             print(text)
             return
-        secret = tomllib.loads(args.secret.read_text()) if args.secret.exists() else {}
+        if not args.secret.is_file() and not (
+            os.environ.get("TELEGRAM_BOT_TOKEN") and os.environ.get("TELEGRAM_CHAT_ID")
+        ):
+            raise ValueError(
+                f"Telegram credentials file not found: {args.secret}. Set SECRET=/path/to/credentials.toml"
+            )
+        secret = tomllib.loads(args.secret.read_text()) if args.secret.is_file() else {}
         asyncio.run(send(text, secret))
     except Exception as error:
         # Transport exceptions may contain the Bot API URL (including the token).
