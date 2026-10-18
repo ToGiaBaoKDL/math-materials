@@ -2,24 +2,21 @@
 import argparse
 from pathlib import Path
 
-from config import CATEGORIES, DRIVE_ROOT, ROOT
+from config import DRIVE_ROOT, ROOT
 from drive import Drive
 from google_auth import credentials
-from publishing import plan
+from publishing import add_publication_arguments, plan
 
 
 def main():
     parser = argparse.ArgumentParser(description="Upload PDFs and original sources using Google Drive OAuth 2.")
-    parser.add_argument("--document")
-    parser.add_argument("--variant", choices=["de", "de-cach", "dap-an", "de-dap-an"])
+    add_publication_arguments(parser)
     parser.add_argument("--root-id", default=DRIVE_ROOT)
-    parser.add_argument("--drive-month")
-    parser.add_argument("--category", choices=CATEGORIES)
     parser.add_argument("--credentials", type=Path)
     parser.add_argument("--dry-run", action="store_true", help="Show mapping locally without contacting Drive")
     args = parser.parse_args()
     try:
-        jobs = plan(args.document, args.variant, args.drive_month, args.category)
+        jobs = plan(args.document, args.drive_month)
         if args.dry_run:
             for local, month, destination in jobs:
                 print(f"{local.relative_to(ROOT)} → {month}/{destination}")

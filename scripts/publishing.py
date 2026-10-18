@@ -1,3 +1,4 @@
+import argparse
 import hashlib
 import re
 from pathlib import Path
@@ -9,7 +10,7 @@ from document_model import documents as documents
 
 def check_month(month: str | None) -> str:
     if not month or not re.fullmatch(r"[0-9]{4}-(0[1-9]|1[0-2])", month) or month.startswith("0000"):
-        raise ValueError("DRIVE_MONTH is required in YYYY-MM format, e.g. DRIVE_MONTH=2026-10")
+        raise ValueError("Invalid publication month; expected YYYY-MM")
     return month
 
 
@@ -39,14 +40,10 @@ def sheet_variants(manifest: Manifest, files: DocumentFiles) -> list[str]:
     return result
 
 
-def document_files(path: Path, variant: str | None = None) -> DocumentFiles:
+def document_files(path: Path) -> DocumentFiles:
     manifest = load_manifest(path)
     mapping = manifest["drive"]
     variants = {key: manifest["variants"][key] for key in publication_variants(manifest)}
-    if variant:
-        if variant not in variants:
-            raise ValueError(f"{path.parent.name}: variant {variant} unavailable")
-        variants = {variant: variants[variant]}
     relative = path.parent.relative_to(ROOT / "documents")
     files = {}
     for name, spec in variants.items():
@@ -68,17 +65,27 @@ def document_files(path: Path, variant: str | None = None) -> DocumentFiles:
     return files
 
 
-def plan(
-    document: str | None = None, variant: str | None = None, month: str | None = None, category: str | None = None
-) -> list[tuple[Path, str, str]]:
-    month = check_month(month)
+def add_publication_arguments(parser: argparse.ArgumentParser) -> None:
+    parser.add_argument("--document", required=True, help="Unique document name fragment or full ID")
+    parser.add_argument("--drive-month", help="Override the document month, YYYY-MM")
+
+
+def publication_month(path: Path, override: str | None = None) -> str:
+    return check_month(override if override is not None else path.parent.parent.parent.name)
+
+
+def plan(document: str, month: str | None = None) -> list[tuple[Path, str, str]]:
     result = []
     destinations = set()
-    for path in documents(document, category):
-        for local, filename in document_files(path, variant).values():
-            destination = f"{publication_category(path)}/{path.parent.name}/{filename}"
-            if destination in destinations:
-                raise ValueError(f"Duplicate Drive destination: {destination}")
-            destinations.add(destination)
-            result.append((local, month, destination))
+    if not document.strip():
+        raise ValueError("Choose one document")
+    path = documents(document)[0]
+    target_month = publication_month(path, month)
+    for local, filename in document_files(path).values():
+        destination = f"{publication_category(path)}/{path.parent.name}/{filename}"
+        key = (target_month, destination)
+        if key in destinations:
+            raise ValueError(f"Duplicate Drive destination: {target_month}/{destination}")
+        destinations.add(key)
+        result.append((local, target_month, destination))
     return result

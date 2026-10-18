@@ -1,23 +1,24 @@
 .PHONY: format-typst check-typst notify build upload upload-rclone google-auth sheet list check format help
 
-DOC ?= $(DOCUMENT)
 REMOTE ?= dxt-gdrive
-ARGS = $(if $(DOC),--document "$(DOC)") $(if $(VARIANT),--variant "$(VARIANT)")
+SELECTION = $(if $(DOC),--document "$(DOC)")
+PUBLICATION_ARGS = $(SELECTION) $(if $(DRIVE_MONTH),--drive-month "$(DRIVE_MONTH)") $(if $(filter 1 true,$(DRY_RUN)),--dry-run)
+AUTH_ARGS = $(if $(CREDENTIALS),--credentials "$(CREDENTIALS)")
 
 build:
-	uv run python scripts/build.py $(ARGS)
+	uv run python scripts/build.py $(if $(DOC),--document "$(DOC)") $(if $(VARIANT),--variant "$(VARIANT)")
 
 upload:
-	uv run python scripts/upload.py $(ARGS) $(if $(CREDENTIALS),--credentials "$(CREDENTIALS)") $(if $(DRIVE_MONTH),--drive-month "$(DRIVE_MONTH)") $(if $(CATEGORY),--category "$(CATEGORY)") $(if $(filter 1 true,$(DRY_RUN)),--dry-run)
+	uv run python scripts/upload.py $(PUBLICATION_ARGS) $(AUTH_ARGS)
 
 upload-rclone:
-	uv run python scripts/upload_rclone.py $(ARGS) --remote "$(REMOTE)" $(if $(DRIVE_MONTH),--drive-month "$(DRIVE_MONTH)") $(if $(CATEGORY),--category "$(CATEGORY)") $(if $(filter 1 true,$(DRY_RUN)),--dry-run)
+	uv run python scripts/upload_rclone.py $(PUBLICATION_ARGS) --remote "$(REMOTE)"
 
 google-auth:
 	uv run python scripts/google_auth.py $(if $(CLIENT),--client "$(CLIENT)") $(if $(CREDENTIALS),--credentials "$(CREDENTIALS)")
 
 sheet:
-	uv run python scripts/sheets.py $(if $(DRIVE_MONTH),--drive-month "$(DRIVE_MONTH)") $(if $(DOC),--document "$(DOC)") $(if $(DATE),--date "$(DATE)") $(if $(CATEGORY),--category "$(CATEGORY)") $(if $(CREDENTIALS),--credentials "$(CREDENTIALS)") $(if $(filter 1 true,$(DRY_RUN)),--dry-run)
+	uv run python scripts/sheets.py $(PUBLICATION_ARGS) $(AUTH_ARGS) $(if $(DATE),--date "$(DATE)")
 
 list:
 	uv run python scripts/build.py --list
@@ -32,7 +33,7 @@ format:
 	uv run ruff format scripts
 
 help:
-	@echo 'make list | make build | make google-auth [CLIENT=...] | make upload DRIVE_MONTH=YYYY-MM [DOC=buoi-10] [VARIANT=de] [DRY_RUN=1] | make sheet DRIVE_MONTH=YYYY-MM DATE=YYYY-MM-DD [DOC=buoi-11] [DRY_RUN=1]'
+	@echo 'make list | make build DOC=... [VARIANT=...] | make google-auth | make upload DOC=... [DRY_RUN=1] | make sheet DOC=... [DRY_RUN=1]'
 
 notify:
 	uv run python scripts/notify.py --config "$(CONFIG)" $(if $(CREDENTIALS),--credentials "$(CREDENTIALS)") $(if $(filter 1 true,$(SEND)),--send)

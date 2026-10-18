@@ -98,10 +98,12 @@ def build(entry: Path, variant: str | None = None) -> None:
 
 def main():
     parser = argparse.ArgumentParser(description="Build Typst documents and variants declared in manifests.")
-    parser.add_argument("--document", help="Unique name fragment or YYYY-MM/category/document-id; omit for all")
+    parser.add_argument("--document", help="Unique name fragment or YYYY-MM/category/document-id")
     parser.add_argument("--variant", choices=["de", "de-cach", "dap-an", "de-dap-an"], help="Build one variant")
     parser.add_argument("--list", action="store_true", help="List documents and available variants")
     args = parser.parse_args()
+    if not args.list and not args.document:
+        parser.error("--document is required for build")
     try:
         entries = [path.with_name("main.typ") for path in documents(args.document)]
     except ValueError as error:

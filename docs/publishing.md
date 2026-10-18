@@ -8,15 +8,15 @@ Build, upload và ghi Sheet là ba bước riêng. Build không tự upload; ch�
 
 | Tham số | Ý nghĩa |
 |---|---|
-| `DRIVE_MONTH=YYYY-MM` | Bắt buộc cho upload và Sheet; chọn folder tháng Drive và khối tháng Sheet, không lọc tháng nguồn local |
-| `DATE=YYYY-MM-DD` | Ngày ghi Sheet; độc lập với tháng đích |
-| `DOC` | Chọn tài liệu bằng đoạn tên duy nhất hoặc ID đầy đủ; `DOCUMENT` là alias |
-| `CATEGORY` | Chọn nhóm `Đề thi`, `Chuyên đề` hoặc `Livestream` |
-| `VARIANT` | Chọn một PDF khi upload; vẫn gửi kèm nguồn. Lệnh Sheet không nhận tham số này |
+| `DRIVE_MONTH=YYYY-MM` | Override tùy chọn; mặc định lấy tháng từ đường dẫn tài liệu, dùng chung cho folder Drive và khối Sheet |
+| `DATE=YYYY-MM-DD` | Override ngày ghi Sheet; mặc định ngày chạy theo Asia/Ho_Chi_Minh |
+| `DOC` | Chọn tài liệu bằng đoạn tên duy nhất hoặc ID đầy đủ; bắt buộc chọn đúng một DOC |
 | `REMOTE` | Chỉ dùng cho `upload-rclone`, mặc định `dxt-gdrive` |
 | `CREDENTIALS` | File token dùng chung cho upload và Sheet |
 
-Không chọn bộ lọc tài liệu thì xử lý tất cả tài liệu phù hợp. Tháng đích không đổi đường dẫn local hoặc ngày tiếp nhận trong manifest.
+Upload và Sheet tự chọn file theo profile; `VARIANT` chỉ dành cho build.
+
+Build, upload và Sheet đều yêu cầu DOC; mỗi lần xử lý đúng một tài liệu. `make list` liệt kê tất cả tài liệu. Tháng đích không đổi đường dẫn local hoặc ngày tiếp nhận trong manifest.
 
 | Chế độ | Hành vi |
 |---|---|
@@ -45,10 +45,9 @@ KHÓA TH - BUỔI 10 - MIN - MAX HÌNH HỌC - GỐC.docx
 Upload dùng Google Drive API và token OAuth chung với Sheet. So MD5 local/remote trước khi gửi; nếu khác, cập nhật bằng `files.update(fileId=...)` để giữ ID và URL, sau đó xác minh checksum trả về. File chưa có mới dùng `files.create`; tên trùng hoặc khác loại (folder, Google Docs, shortcut) thì dừng. Upload sao chép một chiều với mapping tên: cập nhật file cùng tên, bỏ qua file không đổi, không xóa file khác trên Drive. Upload kiểm tra PDF tồn tại và checksum khớp manifest trước khi chạy; sau khi sửa mã nguồn cần build lại.
 
 ```sh
-make upload DRIVE_MONTH=2026-10 DOC=buoi-10 DRY_RUN=1
-make upload DRIVE_MONTH=2026-10 DOC=buoi-10
-make upload DRIVE_MONTH=2026-10 CATEGORY="Chuyên đề"
-make upload DRIVE_MONTH=2026-10 DOC=nguyen-khuyen VARIANT=de-dap-an
+make upload DOC=buoi-10 DRY_RUN=1
+make upload DOC=buoi-10
+make upload DOC=nguyen-khuyen
 ```
 
 ## Xác thực Google dùng chung
@@ -93,9 +92,8 @@ Link là chữ có hyperlink, không dùng công thức phụ thuộc locale, kh
 - Giữ cột thù lao và định dạng hiện có. Gửi toàn bộ cập nhật trong một batch sau khi kiểm tra đủ.
 
 ```sh
-make sheet DRIVE_MONTH=2026-10 DATE=2026-10-15 DOC=buoi-11 DRY_RUN=1
-make sheet DRIVE_MONTH=2026-10 DATE=2026-10-15 DOC=buoi-11
-make sheet DRIVE_MONTH=2026-10 DATE=2026-10-15 CATEGORY="Chuyên đề"
+make sheet DOC=buoi-11 DRY_RUN=1
+make sheet DOC=buoi-11
 ```
 
 ## Kiểm tra và điều kiện dừng
@@ -119,6 +117,6 @@ Luồng Google API không tự retry thao tác ghi; khi lỗi, chạy lại đ�
 
 ## Livestream
 
-Livestream dùng profile hai bản đề/đề cách; logic tìm và cập nhật dòng dùng chung với các loại khác. Bộ 12 câu hiện có đề và đề cách; không tự tạo đáp án khi nguồn chưa có. Tạm dùng folder Drive và tab Sheet `Chuyên đề`, dù category local là `Livestream`. Bộ lọc `CATEGORY=Livestream` vẫn chọn nhóm local. Khi đổi category local, không tự di chuyển dữ liệu đã có trên Drive/Sheet.
+Livestream dùng profile hai bản đề/đề cách; logic tìm và cập nhật dòng dùng chung với các loại khác. Bộ 12 câu hiện có đề và đề cách; không tự tạo đáp án khi nguồn chưa có. Tạm dùng folder Drive và tab Sheet `Chuyên đề`, dù thư mục phân loại local là `Livestream`. Khi đổi thư mục phân loại local, không tự di chuyển dữ liệu đã có trên Drive/Sheet.
 
 Khi chuyển chế độ tách sang gộp, nhận diện dòng đề theo tên gốc thay vì tạo dòng trùng; xóa nội dung B:H của dòng đáp án cũ, giữ nguyên cột thù lao và định dạng. Dòng có thù lao còn được giữ lại, không tự cộng/chuyển tiền sang dòng gộp. Với bản gộp không xuất bản đề cách, cột G cũ được làm trống; cập nhật từng phần trong chế độ tách vẫn giữ link variant chưa có trong lần cập nhật.

@@ -4,7 +4,7 @@
 
 ## Loại tài liệu và kế hoạch xuất bản
 
-`scripts/document_model.py` là nguồn quy tắc chung. `kind` xác định profile; category trong đường dẫn dùng để tổ chức và lọc tài liệu, không tự quyết định format hoặc variant.
+`scripts/document_model.py` là nguồn quy tắc chung. `kind` xác định profile; thư mục phân loại trong đường dẫn dùng để tổ chức tài liệu, không tự quyết định format hoặc variant.
 
 | `kind` | Format | Đầu ra mặc định khi đủ nguồn | Drive / Sheet |
 |---|---|---|---|
@@ -16,7 +16,7 @@ Build mặc định, upload, Sheet và link tự động của notify cùng dùn
 
 `scope.has_questions` và `scope.has_solutions` ghi phần nguồn thực sự có. Khi đề thi chưa có lời giải, chỉ xuất bản đề đã có, chưa đặt nhãn bản gộp. Nếu chỉ có đáp án, có thể xuất bản đáp án trước rồi bổ sung đề sau. Không tự tạo lời giải. Nguồn chưa đủ bộ yêu cầu được thể hiện bằng scope; compile thành công không có nghĩa bộ nguồn đã hoàn chỉnh.
 
-`publication.combine_answers` là override boolean tùy chọn: mặc định bật cho `exam`, tắt cho hai loại bài giảng. Bật gộp cần variant `de-dap-an` đã triển khai trong Typst; flag không ghép máy móc hai PDF hoặc tạo nội dung thiếu. Các override phải đi kèm variant phù hợp, không khai báo chỉ để lặp lại mặc định. `publication.category` chỉ dùng khi cần đổi đích xuất bản; không đổi category local.
+`publication.combine_answers` là override boolean tùy chọn: mặc định bật cho `exam`, tắt cho hai loại bài giảng. Bật gộp cần variant `de-dap-an` đã triển khai trong Typst; flag không ghép máy móc hai PDF hoặc tạo nội dung thiếu. Các override phải đi kèm variant phù hợp, không khai báo chỉ để lặp lại mặc định. `publication.category` chỉ dùng khi cần đổi đích xuất bản; không đổi thư mục phân loại local.
 
 ## Cấu trúc lưu trữ
 
@@ -30,7 +30,7 @@ documents/YYYY-MM/<category>/<document-id>/
 assets/targets/YYYY-MM/<category>/<document-id>/*.pdf
 ```
 
-Category local gồm `Đề thi`, `Chuyên đề`, `Livestream`. Dùng cùng tháng/category/ID ở ba cây thư mục. Tháng là tháng tiếp nhận, độc lập với `DRIVE_MONTH` khi xuất bản. Giữ ID cũ khi đổi category; tài liệu chuyên đề mới dùng tiền tố `th-`.
+Thư mục phân loại local gồm `Đề thi`, `Chuyên đề`, `Livestream`. Dùng cùng tháng/thư mục phân loại/ID ở ba cây thư mục. Tháng là tháng tiếp nhận, độc lập với `DRIVE_MONTH` khi xuất bản. Giữ ID cũ khi đổi thư mục phân loại; tài liệu chuyên đề mới dùng tiền tố `th-`.
 
 ID và tên tài nguyên dùng chữ thường không dấu, nối bằng `-`, không có dấu cách hoặc `#`; giữ tên nguồn gốc trong manifest. Font đổi tên file không đổi family. Nguồn gốc chỉ đọc; bản crop/xoay phục vụ kiểm tra lưu riêng. Ảnh bổ sung vào đúng bộ hiện có dù nhận ngày khác; trang nguồn dùng số trang thực, không suy từ thứ tự upload.
 

@@ -10,13 +10,13 @@ Chạy từ gốc repo:
 
 ```sh
 make list                                 # Liệt kê tài liệu và biến thể
-make build                                # Build tất cả PDF
+make build DOC=buoi-10                    # Build một tài liệu
 make build DOC=phan-boi-chau               # Chọn bằng đoạn tên duy nhất
 make build DOC=buoi-10 VARIANT=de-cach
 make build DOC=buoi-11                    # Bài giảng: 3 bản đề / dòng viết / đáp án
 make help
 
-# Cũng chấp nhận ID đầy đủ; DOCUMENT là alias tương thích của DOC
+# Cũng chấp nhận ID đầy đủ
 make build DOC="2026-10/Đề thi/phan-boi-chau-toan-12-giua-ky-1-ma-1108"
 ```
 

@@ -111,10 +111,8 @@ def load_manifest(path: Path) -> Manifest:
     return manifest
 
 
-def documents(document: str | None = None, category: str | None = None) -> list[Path]:
+def documents(document: str | None = None) -> list[Path]:
     paths = sorted((ROOT / "documents").glob("*/*/*/manifest.json"))
-    if category:
-        paths = [p for p in paths if p.parent.parent.name == category]
     if document:
         paths = [p for p in paths if document in str(p.parent.relative_to(ROOT / "documents"))]
         if len(paths) != 1:

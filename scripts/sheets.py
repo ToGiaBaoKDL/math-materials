@@ -2,17 +2,26 @@
 import argparse
 import re
 import unicodedata
-from datetime import date
+from datetime import date, datetime
 from pathlib import Path
 from typing import Any
 from urllib.parse import quote
+from zoneinfo import ZoneInfo
 
-from config import CATEGORIES, DRIVE_ROOT, ROOT, SPREADSHEET
+from config import DRIVE_ROOT, ROOT, SPREADSHEET
 from document_model import DocumentFiles, load_manifest
 from drive import Drive
 from google_auth import credentials
 from pdf import page_count
-from publishing import check_month, document_files, document_title, documents, publication_category, sheet_variants
+from publishing import (
+    add_publication_arguments,
+    document_files,
+    document_title,
+    documents,
+    publication_category,
+    publication_month,
+    sheet_variants,
+)
 
 GITHUB = "https://github.com/ToGiaBaoKDL/math-materials/tree/main"
 SHEETS_DATE_EPOCH = date(1899, 12, 30)
@@ -398,10 +407,8 @@ def updates_for_sheet(
 
 def main():
     parser = argparse.ArgumentParser(description="Update the approved-document register, separately from upload.")
-    parser.add_argument("--drive-month", help="Drive folder and Sheet month block, YYYY-MM")
+    add_publication_arguments(parser)
     parser.add_argument("--date", help="Upload date to record, YYYY-MM-DD")
-    parser.add_argument("--document")
-    parser.add_argument("--category", choices=CATEGORIES)
     parser.add_argument("--sheet-id", default=SPREADSHEET)
     parser.add_argument("--root-id", default=DRIVE_ROOT)
     parser.add_argument("--credentials", type=Path)
@@ -410,12 +417,10 @@ def main():
     )
     args = parser.parse_args()
     try:
-        if not args.date or not re.fullmatch(r"[0-9]{4}-[0-9]{2}-[0-9]{2}", args.date):
-            parser.error("DATE is required in YYYY-MM-DD format")
-        uploaded_on = date.fromisoformat(args.date)
-        month = check_month(args.drive_month)
-        paths = documents(args.document, args.category)
-        files = {p: document_files(p) for p in paths}
+        uploaded_on = date.fromisoformat(args.date) if args.date else datetime.now(ZoneInfo("Asia/Ho_Chi_Minh")).date()
+        path = documents(args.document)[0]
+        month = publication_month(path, args.drive_month)
+        files = document_files(path)
         from googleapiclient.discovery import build
 
         creds = credentials(args.credentials)
@@ -423,25 +428,18 @@ def main():
         sheets = build("sheets", "v4", credentials=creds, cache_discovery=False).spreadsheets()
         month_folder = drive.find(args.root_id, month, folder=True)
         assert month_folder is not None
-        month_id = month_folder["id"]
-        groups = {}
-        for path in paths:
-            groups.setdefault(publication_category(path), []).extend(
-                document_rows(path, files[path], drive, month_id, uploaded_on)
-            )
+        category = publication_category(path)
+        records = document_rows(path, files, drive, month_folder["id"], uploaded_on)
         spreadsheet = sheets.get(
             spreadsheetId=args.sheet_id,
-            ranges=[f"'{name}'!A:I" for name in groups],
+            ranges=[f"'{category}'!A:I"],
             fields="sheets(properties,merges,data(startRow,rowMetadata(pixelSize),rowData(values(formattedValue,userEnteredValue,hyperlink))))",
         ).execute(num_retries=0)
-        tabs = {s["properties"]["title"]: s for s in spreadsheet["sheets"]}
-        requests: list[dict[str, Any]] = []
-        for name, records in groups.items():
-            batch, summary = updates_for_sheet(tabs[name], month, records)
-            requests.extend(batch)
-            print("\n".join(summary))
+        tab = next(tab for tab in spreadsheet["sheets"] if tab["properties"]["title"] == category)
+        requests, summary = updates_for_sheet(tab, month, records)
+        print("\n".join(summary))
         if args.dry_run:
-            print(f"Dry run: {sum(len(r) for r in groups.values())} rows; no Sheet writes.")
+            print(f"Dry run: {len(records)} rows; no Sheet writes.")
         else:
             sheets.batchUpdate(spreadsheetId=args.sheet_id, body={"requests": requests}).execute(num_retries=0)
             print("Sheet updated; upload and file permissions were not changed.")

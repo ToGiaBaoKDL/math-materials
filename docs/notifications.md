@@ -4,9 +4,26 @@
 
 Dùng `python-telegram-bot` với `Bot.send_message`, không chạy polling/webhook hay server. Template thuần trong `scripts/announcements.py`; CLI và gửi tin trong `scripts/notify.py`. HTML được escape cho mọi nội dung dynamic, link preview bị tắt. Không tự retry gửi tin vì timeout có thể xảy ra sau khi Telegram đã nhận; kiểm tra chat trước khi chạy lại.
 
+## Ba format thông báo
+
+`kind` chọn format theo mô hình tài liệu: `tinh-hoa`, `livestream`, `exam`. Với `document`, CLI tự đọc kind từ manifest (không dựa vào thư mục Drive hoặc tab Sheet); nếu khai báo kind khác manifest sẽ báo lỗi. Với link trực tiếp, bắt buộc khai báo `kind`; không có format mặc định ngầm.
+
+- **Tinh Hoa/chuyên đề:** giữ format buổi học hiện tại, cấu hình bên dưới.
+- **Livestream:** [mẫu cấu hình](examples/announcement-livestream.toml), `intro` giữ nguyên lời nhắn; các thông tin giờ và kênh nằm trong nội dung này. Link theo thứ tự file cách, file không cách; không có đáp án.
+- **Đề thi:** [mẫu cấu hình](examples/announcement-exam.toml), các trường `title`, `subject`, `school_year`, `group_url`, `closing` bắt buộc. Chỉ nhận link `de-dap-an` để nhãn thông báo phản ánh đúng file gộp.
+
+Các mẫu giữ nguyên câu chữ được yêu cầu. Kiểm tra giờ/ngày, tiêu đề và link trước khi gửi. Mỗi khối cách nhau một dòng trống; icon mở đầu có một dấu cách, không tách các cúp liên tiếp ở cuối lời chúc. Livestream đặt nhãn và URL trên cùng dòng, hai link liền nhau. Đề thi giữ dòng môn/năm học ngay dưới tiêu đề.
+
+```sh
+make notify CONFIG=docs/examples/announcement-livestream.toml
+make notify CONFIG=docs/examples/announcement-exam.toml
+```
+
+Thông báo vẫn là tác vụ độc lập, không nối tự động vào build/upload/Sheet.
+
 ## Cấu hình buổi học
 
-Copy [mẫu Buổi 11](examples/announcement.toml) vào thư mục tài liệu nếu muốn lưu cùng mã nguồn, hoặc `.secret/` cho bản nháp riêng. Đây là mẫu ngày cũ, cần sửa lịch/nội dung trước khi gửi.
+Copy [mẫu Buổi 11](examples/announcement-tinh-hoa.toml) vào thư mục tài liệu nếu muốn lưu cùng mã nguồn, hoặc `.secret/` cho bản nháp riêng. Đây là mẫu ngày cũ, cần sửa lịch/nội dung trước khi gửi.
 
 | Trường | Quy tắc |
 |---|---|
@@ -37,15 +54,15 @@ Giữ nguyên câu chữ được truyền vào; không sửa chính tả, cách
 ## Preview và gửi
 
 ```sh
-make notify CONFIG=docs/examples/announcement.toml
+make notify CONFIG=docs/examples/announcement-tinh-hoa.toml
 # Chỉ gửi sau khi sửa mẫu và kiểm tra nội dung/chat đích:
-make notify CONFIG=path/to/announcement.toml SEND=1
+make notify CONFIG=path/to/announcement-tinh-hoa.toml SEND=1
 ```
 
 CLI hỗ trợ override trường thường thay đổi, không cần sửa file:
 
 ```sh
-uv run python scripts/notify.py --config path/to/announcement.toml \
+uv run python scripts/notify.py --config path/to/announcement-tinh-hoa.toml \
   --starts-at 2026-10-22T20:00 --location "Lớp Zoom"
 ```
 

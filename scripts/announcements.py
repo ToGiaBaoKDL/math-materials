@@ -12,17 +12,9 @@ LABELS = {
 }
 
 
-def render(config: dict[str, Any], links: dict[str, str]) -> str:
-    allowed = {"title", "starts_at", "location", "intro", "closing", "homework", "links", "document", "drive_month"}
-    if extra := config.keys() - allowed:
-        raise ValueError(f"Unknown announcement fields: {', '.join(sorted(extra))}")
-    for field in ("title", "starts_at", "location", "intro"):
-        if not isinstance(config.get(field), str) or not config[field].strip():
-            raise ValueError(f"Announcement requires {field}")
+def lesson_blocks(config: dict[str, Any], links: dict[str, str]) -> list[str]:
     starts = datetime.strptime(config["starts_at"], "%Y-%m-%dT%H:%M")
     weekday = "Chủ nhật" if starts.weekday() == 6 else f"Thứ {starts.weekday() + 2}"
-    if not links or links.keys() - LABELS.keys():
-        raise ValueError("Provide at least one link using de, de-cach, dap-an or de-dap-an")
     if not isinstance(config.get("homework", False), bool):
         raise ValueError("homework must be true or false")
     closing = config.get("closing", "")
@@ -38,18 +30,80 @@ def render(config: dict[str, Any], links: dict[str, str]) -> str:
         if variant not in links:
             continue
         url = links[variant]
-        if not isinstance(url, str) or urlparse(url).scheme != "https" or not urlparse(url).netloc:
-            raise ValueError(f"Invalid HTTPS link for {variant}")
         if config.get("homework", False) and variant in ("de", "de-cach"):
             label += " + BTVN"
         blocks.append(f"🔰 <b>{label}:</b>\n{escape(url)}")
     if closing:
         blocks.append("🔰 " + escape(closing))
-    text = "\n\n".join(blocks)
+    return blocks
+
+
+def validate_text(config: dict[str, Any], field: str) -> None:
+    value = config.get(field)
+    if not isinstance(value, str) or not value.strip():
+        raise ValueError(f"Announcement requires {field}")
+
+
+def livestream_blocks(config: dict[str, Any], links: dict[str, str]) -> list[str]:
+    return [
+        "<b>[PHÁT ĐỀ LIVESTREAM TỐI NAY]</b> " + escape(config["intro"]),
+        "\n".join(
+            f"{label}: {escape(links[variant])}"
+            for variant, label in (("de-cach", "File cách"), ("de", "File không cách"))
+            if variant in links
+        ),
+    ]
+
+
+def exam_blocks(config: dict[str, Any], links: dict[str, str]) -> list[str]:
+    validate_url(config["group_url"], "group_url")
+    return [
+        "🎁 <b>FILE ĐỀ + FILE GIẢI CHI TIẾT THAM KHẢO: "
+        + escape(config["title"])
+        + "</b>\n➥ MÔN: "
+        + escape(config["subject"])
+        + " | NĂM HỌC "
+        + escape(config["school_year"]),
+        "📍 File đề + File đáp án giải tham khảo: " + escape(links["de-dap-an"]),
+        "🔥 Tham gia miễn phí Group Mukbang Toán Thực Tế &amp; Xác Suất cùng đội VIPDXT: "
+        + escape(config["group_url"]),
+        escape(config["closing"]),
+    ]
+
+
+REQUIRED_FIELDS = {
+    "tinh-hoa": {"title", "starts_at", "location", "intro"},
+    "livestream": {"intro"},
+    "exam": {"title", "subject", "school_year", "group_url", "closing"},
+}
+OPTIONAL_FIELDS = {"tinh-hoa": {"homework", "closing"}, "livestream": set(), "exam": set()}
+LINK_VARIANTS = {"tinh-hoa": set(LABELS), "livestream": {"de", "de-cach"}, "exam": {"de-dap-an"}}
+RENDERERS = {"tinh-hoa": lesson_blocks, "livestream": livestream_blocks, "exam": exam_blocks}
+
+
+def render(config: dict[str, Any], links: dict[str, str]) -> str:
+    kind = config.get("kind")
+    if not isinstance(kind, str) or kind not in RENDERERS:
+        raise ValueError("kind is required: tinh-hoa, livestream or exam")
+    allowed = REQUIRED_FIELDS[kind] | OPTIONAL_FIELDS[kind] | {"kind", "links", "document", "drive_month"}
+    if extra := config.keys() - allowed:
+        raise ValueError(f"Unknown announcement fields: {', '.join(sorted(extra))}")
+    for field in sorted(REQUIRED_FIELDS[kind]):
+        validate_text(config, field)
+    if not links or links.keys() - LINK_VARIANTS[kind]:
+        raise ValueError(f"Invalid publication links for {kind}")
+    for variant, url in links.items():
+        validate_url(url, variant)
+    text = "\n\n".join(RENDERERS[kind](config, links))
     # Conservative bound includes markup; never split a release announcement midway.
     if len(text.encode("utf-16-le")) // 2 > 4096:
         raise ValueError("Announcement too long; shorten it to fit one Telegram message")
     return text
+
+
+def validate_url(url: Any, field: str) -> None:
+    if not isinstance(url, str) or urlparse(url).scheme != "https" or not urlparse(url).netloc:
+        raise ValueError(f"Invalid HTTPS link for {field}")
 
 
 def drive_links(document: str, month: str, token: Path | None = None) -> dict[str, str]:

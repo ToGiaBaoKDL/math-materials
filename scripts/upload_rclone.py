@@ -3,8 +3,8 @@ import argparse
 import json
 import subprocess
 
-from config import CATEGORIES, DRIVE_ROOT, ROOT
-from publishing import plan
+from config import DRIVE_ROOT, ROOT
+from publishing import add_publication_arguments, plan
 
 
 def folder_id(remote, parent_id, name):
@@ -46,16 +46,13 @@ def folder_id(remote, parent_id, name):
 
 def main():
     parser = argparse.ArgumentParser(description="Upload PDFs and original source to their month/category on Drive.")
-    parser.add_argument("--document")
-    parser.add_argument("--variant", choices=["de", "de-cach", "dap-an", "de-dap-an"])
+    add_publication_arguments(parser)
     parser.add_argument("--remote", default="dxt-gdrive")
     parser.add_argument("--root-id", default=DRIVE_ROOT)
-    parser.add_argument("--drive-month", required=True, help="Destination Drive month in YYYY-MM format")
-    parser.add_argument("--category", choices=CATEGORIES)
     parser.add_argument("--dry-run", action="store_true", help="Show mapping locally without contacting Drive")
     args = parser.parse_args()
     try:
-        jobs = plan(args.document, args.variant, args.drive_month, args.category)
+        jobs = plan(args.document, args.drive_month)
         remote = args.remote.rstrip(":")
         folders = {}
         if not args.dry_run:

@@ -34,7 +34,7 @@ async def send(text, secret):
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Preview or send one lesson announcement to Telegram")
+    parser = argparse.ArgumentParser(description="Preview or send one document announcement to Telegram")
     parser.add_argument("--config", type=Path, required=True)
     parser.add_argument("--secret", type=Path, default=ROOT / ".secret/telegram.toml")
     parser.add_argument("--credentials", type=Path)
@@ -48,6 +48,14 @@ def main():
         for field in ("title", "starts_at", "location"):
             if value := getattr(args, field):
                 config[field] = value
+        if config.get("document"):
+            from document_model import documents, load_manifest
+
+            document = documents(config["document"])[0]
+            document_kind = load_manifest(document)["kind"]
+            if "kind" in config and config["kind"] != document_kind:
+                raise ValueError("Announcement kind must match the document profile")
+            config["kind"] = document_kind
         links = config.get("links")
         if links is not None and (config.get("document") or config.get("drive_month")):
             raise ValueError("Choose explicit links OR document + drive_month, not both")
