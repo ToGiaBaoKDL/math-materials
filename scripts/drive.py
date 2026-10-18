@@ -1,21 +1,25 @@
 import hashlib
 import mimetypes
+from pathlib import Path
+from typing import Any
+
+from document_model import DocumentFiles
 
 FOLDER = "application/vnd.google-apps.folder"
 FIELDS = "id,name,mimeType,md5Checksum,webViewLink"
 
 
-def checksum(path):
+def checksum(path: Path) -> str:
     with path.open("rb") as stream:
         return hashlib.file_digest(stream, "md5").hexdigest()
 
 
 class Drive:
-    def __init__(self, service):
+    def __init__(self, service: Any) -> None:
         self.service = service
-        self.cache = {}
+        self.cache: dict[str, list[dict[str, Any]]] = {}
 
-    def children(self, parent):
+    def children(self, parent: str) -> list[dict[str, Any]]:
         if parent not in self.cache:
             items, token = [], None
             escaped = parent.replace("\\", "\\\\").replace("'", "\\'")
@@ -39,7 +43,7 @@ class Drive:
             self.cache[parent] = items
         return self.cache[parent]
 
-    def find(self, parent, name, folder=False, required=True):
+    def find(self, parent: str, name: str, folder: bool = False, required: bool = True) -> dict[str, Any] | None:
         matches = [item for item in self.children(parent) if item["name"] == name]
         if len(matches) > 1:
             raise ValueError(f"Drive: duplicate name {name!r} under {parent}; resolve before continuing.")
@@ -52,7 +56,7 @@ class Drive:
             raise ValueError(f"Drive: incompatible file type for {name!r}.")
         return item
 
-    def ensure_folder(self, parent, name):
+    def ensure_folder(self, parent: str, name: str) -> str:
         found = self.find(parent, name, folder=True, required=False)
         if found:
             return found["id"]
@@ -64,7 +68,7 @@ class Drive:
         self.cache.pop(parent, None)
         return created["id"]
 
-    def verified_links(self, parent, files):
+    def verified_links(self, parent: str, files: DocumentFiles) -> dict[str, str]:
         links = {}
         for key, (local, name) in files.items():
             item = self.find(parent, name)
@@ -74,7 +78,7 @@ class Drive:
             links[key] = item.get("webViewLink") or f"https://drive.google.com/file/d/{item['id']}/view"
         return links
 
-    def upload(self, parent, name, local):
+    def upload(self, parent: str, name: str, local: Path) -> tuple[str, dict[str, Any]]:
         from googleapiclient.http import MediaFileUpload
 
         existing = self.find(parent, name, required=False)

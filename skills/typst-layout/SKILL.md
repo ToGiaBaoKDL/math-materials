@@ -15,7 +15,7 @@ Quy tắc vận hành liên quan: [document-model](../../docs/document-model.md)
 
 - Phụ trách `templates/theme.typ`, `components.typ`, `exam.typ`, `lesson.typ`, `branding.typ`, `exam-branding.typ`, `writing.typ`: palette, font, cấu hình trang, nhịp khoảng cách và component dùng chung. Token nét và sắc độ mặt nằm trong `figure-style`; bộ hàm `templates/drawing.typ` thuộc `typst-figures`.
 - Trong `main.typ`, phụ trách cấu trúc trình bày: gọi component, số cột đáp án, đặt/scale nhóm hình và ngắt trang. Nội dung câu hỏi và lựa chọn thuộc `math-transcription`; tọa độ, nét và khung nội bộ của hình thuộc `typst-figures`.
-- Phụ trách thông tin template và nguồn tham khảo thiết kế trong `implementation` của manifest. Mapping câu/trang nguồn thuộc transcription; `qa` và `output` thuộc review.
+- Phụ trách thông tin template và nguồn tham khảo thiết kế trong `provenance` của manifest (chỉ quyết định nội dung/nguồn đặc thù; convention thiết kế lưu trong skill/theme). Mapping câu/trang nguồn thuộc transcription; `qa` và `output` thuộc review.
 - Khi người dùng thay bản chuẩn, hợp nhất template và cập nhật build/metadata theo bản đã duyệt. Giữ nội dung và mô hình hình học; chỉ duy trì bản song song khi phạm vi công việc yêu cầu.
 
 ## Tham khảo và chọn thiết kế
@@ -29,6 +29,8 @@ Quy tắc vận hành liên quan: [document-model](../../docs/document-model.md)
 - Tách màu nhận diện trang khỏi màu minh họa. Giữ nhận diện riêng của đề thi và chuyên đề dưới đây; phối màu hình theo [typst-figures](../typst-figures/SKILL.md), không ép mọi hình dùng cạnh đỏ hoặc mặt pastel.
 - Tập trung độ đậm, cỡ chữ, lề, khoảng cách và kích thước header/footer trong theme. Căn caption/folio theo lề của tài liệu; đo nhãn dài để vừa khung. Main chỉ truyền nội dung, dữ kiện và bố trí; số liệu thuộc bài toán giữ ở model.
 - Đề cần nhịp đọc gọn; bài giảng có thể dùng thêm khung định nghĩa/ví dụ nếu nội dung đã có. Màu nhấn hỗ trợ phân cấp; nội dung chính giữ tương phản tốt cả khi in đen trắng.
+
+Profile Tinh Hoa/Livestream dùng chung template lesson; đề thi dùng exam và mặc định bản gộp. Theo [mô hình tài liệu](../../docs/document-model.md), không suy bộ đầu ra từ category hay sự tồn tại của PDF cũ.
 
 ## Convention template hiện hành
 

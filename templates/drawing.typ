@@ -1,4 +1,4 @@
-#import "theme.typ": palette, figure-style
+#import "theme.typ": figure-style, palette
 
 #let edge-color = palette.primary.transparentize(100% - figure-style.edge-opacity.visible)
 #let hidden-color = palette.primary.transparentize(100% - figure-style.edge-opacity.hidden)
@@ -10,22 +10,25 @@
 #let section-hidden = hidden
 #let hatch = figure-style.hatch-width + palette.primary
 
-#let dot3(a, b) = (a.at(0)*b.at(0) + a.at(1)*b.at(1) + a.at(2)*b.at(2))
+#let dot3(a, b) = (a.at(0) * b.at(0) + a.at(1) * b.at(1) + a.at(2) * b.at(2))
 
 #let face-tone(normal, family: "cap") = {
   let light = figure-style.light-direction
   let brightness = calc.clamp(
-    dot3(normal, light)/calc.sqrt(dot3(normal, normal)*dot3(light, light)), 0, 1,
+    dot3(normal, light) / calc.sqrt(dot3(normal, normal) * dot3(light, light)),
+    0,
+    1,
   )
   let tone = figure-style.faces.at(family)
-  let opacity = tone.shade + (tone.light - tone.shade)*brightness
+  let opacity = tone.shade + (tone.light - tone.shade) * brightness
   palette.primary.transparentize(100% - opacity)
 }
 
 #let path(points, stroke: edge, fill: none, close: false) = place(
   top + left,
   curve(
-    stroke: stroke, fill: fill,
+    stroke: stroke,
+    fill: fill,
     curve.move(points.first()),
     ..points.slice(1).map(point => curve.line(point)),
     ..if close { (curve.close(mode: "straight"),) } else { () },
@@ -33,7 +36,8 @@
 )
 
 #let label(point, body, dx: 0mm, dy: 0mm, width: figure-style.label-width) = place(
-  top + left, dx: point.at(0) - width/2 + dx,
+  top + left,
+  dx: point.at(0) - width / 2 + dx,
   dy: point.at(1) - figure-style.label-top + dy,
   box(width: width, align(center, text(size: figure-style.label-size, fill: palette.ink, body))),
 )
@@ -53,7 +57,10 @@
     )
   })
   place(top + left, curve(
-    stroke: stroke, fill: fill, curve.move(point(start)), ..curves,
+    stroke: stroke,
+    fill: fill,
+    curve.move(point(start)),
+    ..curves,
     ..if close { (curve.close(mode: "straight"),) } else { () },
   ))
 }
@@ -66,11 +73,14 @@
   let ux = dx / length
   let uy = dy / length
   let base = (end.at(0) - tip * ux, end.at(1) - tip * uy)
-  place(top + left, line(start: start, end: base, stroke: (paint:color,thickness:thickness,dash:dash)))
-  place(top + left, polygon(end,
+  place(top + left, line(start: start, end: base, stroke: (paint: color, thickness: thickness, dash: dash)))
+  place(top + left, polygon(
+    end,
     (base.at(0) - tip * 0.36 * uy, base.at(1) + tip * 0.36 * ux),
     (base.at(0) + tip * 0.36 * uy, base.at(1) - tip * 0.36 * ux),
-    fill: color, stroke: none))
+    fill: color,
+    stroke: none,
+  ))
 }
 
 #let diagram-hidden = (paint: edge-color, thickness: figure-style.edge-width, dash: "dashed")
@@ -86,13 +96,24 @@
     let length = calc.sqrt(calc.pow(dx / 1pt, 2) + calc.pow(dy / 1pt, 2)) * 1pt
     let nx = -dy / length * thickness / 2
     let ny = dx / length * thickness / 2
-    path(((a.at(0)+nx,a.at(1)+ny),(b.at(0)+nx,b.at(1)+ny),
-      (b.at(0)-nx,b.at(1)-ny),(a.at(0)-nx,a.at(1)-ny)),
-      close: true, fill: color, stroke: none)
+    path(
+      (
+        (a.at(0) + nx, a.at(1) + ny),
+        (b.at(0) + nx, b.at(1) + ny),
+        (b.at(0) - nx, b.at(1) - ny),
+        (a.at(0) - nx, a.at(1) - ny),
+      ),
+      close: true,
+      fill: color,
+      stroke: none,
+    )
   }
   let joins = if close { points } else { points.slice(1, points.len() - 1) }
   for point in joins {
-    place(top + left, dx: point.at(0) - thickness/2, dy: point.at(1) - thickness/2,
-      circle(radius: thickness/2, fill: color, stroke: none))
+    place(top + left, dx: point.at(0) - thickness / 2, dy: point.at(1) - thickness / 2, circle(
+      radius: thickness / 2,
+      fill: color,
+      stroke: none,
+    ))
   }
 }

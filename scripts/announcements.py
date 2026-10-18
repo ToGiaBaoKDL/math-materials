@@ -1,5 +1,7 @@
 from datetime import datetime
 from html import escape
+from pathlib import Path
+from typing import Any
 from urllib.parse import urlparse
 
 LABELS = {
@@ -10,7 +12,7 @@ LABELS = {
 }
 
 
-def render(config, links):
+def render(config: dict[str, Any], links: dict[str, str]) -> str:
     allowed = {"title", "starts_at", "location", "intro", "closing", "homework", "links", "document", "drive_month"}
     if extra := config.keys() - allowed:
         raise ValueError(f"Unknown announcement fields: {', '.join(sorted(extra))}")
@@ -50,11 +52,12 @@ def render(config, links):
     return text
 
 
-def drive_links(document, month, token=None):
+def drive_links(document: str, month: str, token: Path | None = None) -> dict[str, str]:
+    from config import DRIVE_ROOT
     from drive import Drive
     from google_auth import credentials
     from googleapiclient.discovery import build
-    from publishing import DRIVE_ROOT, check_month, document_files, documents, publication_category
+    from publishing import check_month, document_files, documents, publication_category
 
     path = documents(document)[0]
     files = document_files(path)

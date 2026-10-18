@@ -1,49 +1,32 @@
 import hashlib
-import json
 import re
+from pathlib import Path
 
-from build import ROOT
-
-CATEGORIES = ("Đề thi", "Chuyên đề", "Livestream")
-
-DRIVE_ROOT = "11EmKdVdsShhjyQpzlozlr8bEVDiThA8R"
-
-
-def documents(document=None, category=None):
-    paths = sorted((ROOT / "documents").glob("*/*/*/manifest.json"))
-    if category:
-        paths = [p for p in paths if p.parent.parent.name == category]
-    if document:
-        paths = [p for p in paths if document in str(p.parent.relative_to(ROOT / "documents"))]
-        if len(paths) != 1:
-            raise ValueError(f"Document must match exactly one entry (matched {len(paths)}).")
-    if not paths:
-        raise ValueError("No documents found.")
-    return paths
+from config import ROOT
+from document_model import PROFILES, DocumentFiles, Manifest, load_manifest, publication_variants
+from document_model import documents as documents
 
 
-def check_month(month):
+def check_month(month: str | None) -> str:
     if not month or not re.fullmatch(r"[0-9]{4}-(0[1-9]|1[0-2])", month) or month.startswith("0000"):
         raise ValueError("DRIVE_MONTH is required in YYYY-MM format, e.g. DRIVE_MONTH=2026-10")
     return month
 
 
-def publication_category(path):
-    category = path.parent.parent.name
-    return "Chuyên đề" if category == "Livestream" else category
+def publication_category(path: Path) -> str:
+    manifest = load_manifest(path)
+    return manifest.get("publication", {}).get("category", PROFILES[manifest["kind"]].category)
 
 
-def document_title(filename):
+def document_title(filename: str) -> str:
     for suffix in (" - ĐỀ + ĐÁP ÁN.pdf", " - ĐỀ CÁCH.pdf", " - ĐÁP ÁN.pdf", " - ĐỀ.pdf"):
         if filename.endswith(suffix):
             return filename.removesuffix(suffix)
     raise ValueError(f"Invalid publication filename: {filename}")
 
 
-def sheet_variants(manifest, files):
-    combined = manifest.get("publication", {}).get("combine_answers", False)
-    if not isinstance(combined, bool):
-        raise ValueError("publication.combine_answers must be a boolean")
+def sheet_variants(manifest: Manifest, files: DocumentFiles) -> list[str]:
+    combined = "de-dap-an" in publication_variants(manifest)
     if combined:
         if "de-dap-an" not in files:
             raise ValueError("combine_answers requires a built and uploaded de-dap-an variant")
@@ -56,12 +39,10 @@ def sheet_variants(manifest, files):
     return result
 
 
-def document_files(path, variant=None):
-    manifest = json.loads(path.read_text())
+def document_files(path: Path, variant: str | None = None) -> DocumentFiles:
+    manifest = load_manifest(path)
     mapping = manifest["drive"]
-    if mapping["folder"] != publication_category(path) or mapping["folder"] not in CATEGORIES:
-        raise ValueError(f"Drive category differs from local category: {path}")
-    variants = manifest["variants"]
+    variants = {key: manifest["variants"][key] for key in publication_variants(manifest)}
     if variant:
         if variant not in variants:
             raise ValueError(f"{path.parent.name}: variant {variant} unavailable")
@@ -87,8 +68,10 @@ def document_files(path, variant=None):
     return files
 
 
-def plan(document=None, variant=None, month=None, category=None):
-    check_month(month)
+def plan(
+    document: str | None = None, variant: str | None = None, month: str | None = None, category: str | None = None
+) -> list[tuple[Path, str, str]]:
+    month = check_month(month)
     result = []
     destinations = set()
     for path in documents(document, category):

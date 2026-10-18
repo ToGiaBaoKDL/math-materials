@@ -16,7 +16,7 @@
    [0,68],[513],[2],[9],[7],[7,3])
 ]
 #let solutions = (
-[
+"I-1": [
 Xét phương án A: $y = frac(x ^(2) - 3 x + 6, x - 1) = x - 2 + frac(4, x - 1) .$
 
 Suy ra đồ thị có tiệm cận đứng $x = 1$ và tiệm cận xiên $y = x - 2$, đúng với hình vẽ.
@@ -29,7 +29,7 @@ Các điểm cực trị $lr(( - 1 ; - 5 ))$ và $lr(( 3 ; 3 ))$ cũng khớp v�
 
 Chọn A.
 ],
-[
+"I-2": [
 Cho $y = frac(x ^(2) - 3 x + 6, x - 2) = x - 1 + frac(4, x - 2) .$
 
 Ta có $y ' = 1 - frac(4, lr(( x - 2 )) ^(2)) = 0 ⇔ lr(( x - 2 )) ^(2) = 4 .$
@@ -44,21 +44,21 @@ Vì đi qua $A lr(( 0 ; - 3 ))$ nên phương trình là $y = 2 x - 3 .$
 
 Chọn A.
 ],
-[
+"I-3": [
 Từ bảng biến thiên, trên nửa khoảng $lr([ - 5 ; 7 ))$ hàm số giảm từ $6$ xuống $2$ tại $x = 1$, sau đó tăng và tiến tới $9$ khi $x → 7 ^(-)$. Vì $7$ không thuộc miền xét nên giá trị $9$ không đạt được.
 
 Do đó $"min"_(x ∈ lr([ - 5 ; 7 ))) f lr(( x )) = 2 .$
 
 Chọn C.
 ],
-[
+"I-4": [
 Từ đồ thị, hai điểm cực tiểu có tung độ khoảng $- 2$, còn điểm cực đại ở giữa có tung độ khoảng $- 1$.
 
 Đường thẳng $y = - frac(1, 2)$ nằm phía trên điểm cực đại ở giữa, nên chỉ cắt hai nhánh ngoài của đồ thị. Vì vậy phương trình có đúng $2$ nghiệm.
 
 Chọn B.
 ],
-[
+"I-5": [
 Xét $f lr(( x )) = - x ^(3) + 3 x "," x ∈ lr([ 0 ; 2 ]) .$
 
 Ta có $f ' lr(( x )) = - 3 x ^(2) + 3 = 3 lr(( 1 - x ^(2) )) .$
@@ -71,28 +71,28 @@ Vậy giá trị lớn nhất là $"max"_(lr([ 0 ; 2 ])) f lr(( x )) = 2 .$
 
 Chọn D.
 ],
-[
+"I-6": [
 Từ bảng biến thiên, dấu của đạo hàm là âm trên các khoảng $lr(( - ∞ ; - 2 )) "," lr(( 0 ; 2 )) .$
 
 Trong các phương án chỉ có $lr(( - ∞ ; - 2 ))$ phù hợp.
 
 Chọn B.
 ],
-[
+"I-7": [
 Với $y = frac(2 x - 1, x + 1) ","$ ta có tiệm cận đứng $x = - 1$ và tiệm cận ngang $y = 2 .$
 
 Vậy đồ thị có $2$ đường tiệm cận.
 
 Chọn C.
 ],
-[
+"I-8": [
 Với $y = frac(3 x - 1, 2 x + 3) ","$ tiệm cận đứng là $x = - frac(3, 2) ","$ và tiệm cận ngang là $y = frac(3, 2) .$
 
 Tâm đối xứng của đồ thị là giao điểm hai tiệm cận: $I lr(( - frac(3, 2) ; frac(3, 2) )) .$
 
 Chọn A.
 ],
-[
+"I-9": [
 Cho $y = x + frac(4, x) "," x ≠ 0 .$
 
 Ta có $y ' = 1 - frac(4, x ^(2)) = frac(x ^(2) - 4, x ^(2)) .$
@@ -105,14 +105,14 @@ Trong các phương án, khoảng nghịch biến phù hợp là $lr(( - 2 ; 0 )
 
 Chọn B.
 ],
-[
+"I-10": [
 Từ bảng biến thiên, tại $x = 2$ đạo hàm đổi dấu từ âm sang dương, nên $x = 2$ là điểm cực tiểu và $f lr(( 2 )) = - 2 .$
 
 Giá trị cực tiểu của hàm số bằng $- 2$.
 
 Chọn A.
 ],
-[
+"I-11": [
 Với hàm bậc ba $y = a x ^(3) + b x ^(2) + c x + d ","$ quan sát đồ thị: Nhánh trái đi lên và nhánh phải đi xuống nên $a < 0$.
 
 Giao điểm với trục tung nằm dưới trục hoành nên $d = f lr(( 0 )) < 0$.
@@ -125,7 +125,7 @@ Vậy $a < 0 ; b > 0 ; c > 0 ; d < 0$
 
 Chọn D.
 ],
-[
+"I-12": [
 Ta biến đổi$y = frac(2 + 2 x, 2 + x) = 2 - frac(2, x + 2) .$
 
 Suy ra: Tiệm cận đứng: $x = - 2$.
@@ -140,7 +140,7 @@ Hình B thỏa tất cả các đặc điểm trên.
 
 Chọn B.
 ],
-[
+"II-1": [
 Số sản phẩm bán được là $n lr(( x )) = a + b "ln" lr(( 1 + x )) .$
 
 Khi không quảng cáo, $x = 0$ và bán được $400$ sản phẩm: $a = 400 .$
@@ -173,7 +173,7 @@ Vì vậy theo đúng điều kiện nguyên của đề, khẳng định $x = 3
 
 Kết luận: Sai.
 ],
-[
+"II-2": [
 Khung gồm hình chữ nhật rộng $x$, cao $y$ và một nửa đường tròn có đường kính $x$. Dây thép gồm đáy dưới, đường kính phía trên, hai cạnh bên và cung bán nguyệt.
 
 Ta có $2 x + 2 y + frac(π x, 2) = 8 .$
@@ -194,7 +194,7 @@ Kết luận: Sai. d) Bán kính bán nguyệt là $x / 2$, nên độ dài cung
 
 Kết luận: Đúng.
 ],
-[
+"II-3": [
 Thể tích của bình là $V _(B) = 50 ^(2) ⋅ 80 = 200000$cm³.
 
 Thể tích quả cầu bán kính $20$ là $V _(C) = frac(4, 3) π ⋅ 20 ^(3) = frac(32000 π, 3) ≈ "33510,322"$ cm³.
@@ -231,7 +231,7 @@ Thực tế $V _(C) ≈ "33510,322"$ cm³.
 
 Kết luận: Sai.
 ],
-[
+"II-4": [
 Cho $f lr(( x )) = frac(x ^(2) - x + 1, - x + 1) = - x - frac(1, x - 1) "," x ≠ 1 .$ a) Tâm đối xứng là $I lr(( 1 ; - 1 ))$
 
 Hai tiệm cận là $x = 1 "," y = - x .$
@@ -256,7 +256,7 @@ Trên $lr(( 1 ; + ∞ ))$, hàm số tăng trên $lr(( 1 ; 2 ))$ rồi giảm tr
 
 Kết luận: Đúng.
 ],
-[
+"III-1": [
 Gọi bán kính của tám hình cầu có tâm tại các đỉnh hình lập phương là $r$, bán kính hình cầu ở tâm khối lập phương là $R$.
 
 Khoảng cách từ tâm khối lập phương cạnh $1$ đến một đỉnh là $frac(sqrt(3), 2) .$
@@ -275,7 +275,7 @@ Suy ra $V _("min") = frac(4, 3) π ⋅ 2 lr(( frac(sqrt(3), 4) )) ^(3) = frac(π
 
 Làm tròn đến hàng phần trăm: $"0,68" .$
 ],
-[
+"III-2": [
 Đặt $t = "cos" x .$
 
 Vì $x ∈ lr([ - frac(π, 3) ; frac(π, 3) ]) ","$ nên $frac(1, 2) ≤ t ≤ 1 .$
@@ -292,7 +292,7 @@ Tính $g lr(( frac(2, 3) )) = 2 ⋅ frac(8, 27) - 2 ⋅ frac(4, 9) + 1 = frac(19
 
 Vậy $frac(a, b) = frac(19, 27) ","$ suy ra $P = a b = 19 ⋅ 27 = 513 .$
 ],
-[
+"III-3": [
 Ta có $A lr(( 0 ; 0 )) "," C lr(( 6 ; 4 )) .$
 
 Trung điểm của $A C$ là $H lr(( 3 ; 2 )) .$
@@ -313,7 +313,7 @@ Giải hệ được $a = frac(2, 27) "," b = - frac(2, 3) "," c = 2 "," d = 0 .
 
 Vậy $27 a + 3 b + c + 9 d = 2 - 2 + 2 = 2 .$
 ],
-[
+"III-4": [
 Gọi $v$ là vận tốc của cá khi nước đứng yên. Khi bơi ngược dòng, vận tốc thực tế của cá là $v - 6 ","$ với $v > 6$.
 
 Thời gian bơi hết quãng đường $300$ km là $t = frac(300, v - 6) .$
@@ -328,7 +328,7 @@ Ta có $g ' lr(( v )) = frac(3 v ^(2) lr(( v - 6 )) - v ^(3), lr(( v - 6 )) ^(2)
 
 Với $v > 6$, hàm số giảm trên $lr(( 6 ; 9 ))$ và tăng trên $lr(( 9 ; + ∞ ))$. Do đó năng lượng nhỏ nhất khi $v = 9$ km/h.
 ],
-[
+"III-5": [
 Quỹ đạo là $y = frac(3 x ^(2) - x + 5, x - 1) "," x > 1 .$
 
 Chia đa thức: $y = 3 x + 2 + frac(7, x - 1) .$
@@ -349,7 +349,7 @@ Suy ra $C ^(2) = frac(49, 10) .$
 
 Do đó $frac(10, 7) C ^(2) = frac(10, 7) ⋅ frac(49, 10) = 7 .$
 ],
-[
+"III-6": [
 Gọi $O$ là tâm tấm bìa hình vuông cạnh $6$. Gọi $x$ là khoảng cách từ $O$ đến mỗi đỉnh của hình vuông đáy ở giữa sau khi cắt. Khi đó $0 < x < 3 .$
 
 Hình vuông đáy có hai đường chéo cùng bằng $2 x$, nên cạnh đáy là $a = x sqrt(2) ","$ và diện tích đáy là $S = a ^(2) = 2 x ^(2) .$

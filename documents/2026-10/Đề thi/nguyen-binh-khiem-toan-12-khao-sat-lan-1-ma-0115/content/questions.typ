@@ -3,7 +3,7 @@
 #import "../figures.typ": derivative, hopper, shaded-square
 #import "solutions.typ": multiple, true-false, short
 #let questions(variant, ending: none) = {
- let q(number,body,..args) = exam-question(number,body,variant:variant,solution:multiple.at(number - 1),..args)
+ let q(number,body,..args) = exam-question(number,body,variant:variant,solution:multiple.at(str(number)),..args)
  exam-section("I",[Câu trắc nghiệm nhiều phương án lựa chọn.],instruction:[Thí sinh trả lời từ câu 1 đến câu 12. Mỗi câu hỏi thí sinh chỉ chọn một phương án.])
  q(1,[Cho hàm số $f(x)$ có bảng biến thiên như sau:
  #fig(variation(([$-infinity$],[$-2$],[$1$],[$+infinity$]),([$+$],[$-$],[$+$]),([$-infinity$],[$0$],[$-3$],[$+infinity$]),(0,1,0,1)))
@@ -27,7 +27,7 @@
  Hàm số đã cho đồng biến trên khoảng nào dưới đây?],answers:([$(2;+infinity)$],[$(-1;1)$],[$(1;+infinity)$],[$(-2;+infinity)$]))
  q(12,[Giá trị nhỏ nhất của hàm số $y=x^2+2/x$ với $x>0$ bằng:],answers:([$3$],[$1$],[$4$],[$2$]))
  exam-section("II",[Câu trắc nghiệm đúng sai.],instruction:[Thí sinh trả lời từ câu 1 đến câu 4. Trong mỗi ý a), b), c), d) ở mỗi câu, thí sinh chọn đúng hoặc sai.])
- let q(number,body,..args) = exam-question(number,body,variant:variant,solution:true-false.at(number - 1),writing-lines:10,..args)
+ let q(number,body,..args) = exam-question(number,body,variant:variant,solution:true-false.at(str(number)),writing-lines:10,..args)
  q(1,[Đội thanh niên tình nguyện của một trường THPT gồm 4 học sinh khối 12, 5 học sinh khối 11, 6 học sinh khối 10. Giáo viên cần chọn 6 học sinh đi làm nhiệm vụ.],statements:([Số phần tử của không gian mẫu $n(Omega)=C_15^6$.],[Xác suất để chọn được 6 học sinh cùng khối là $1/5005$.],[Xác suất để chọn được nhiều nhất 2 học sinh khối 10 là $69/385$.],[Xác suất để chọn được 6 học sinh trong đó có đủ 3 khối là $850/1001$.]))
  q(2,[Người ta cần làm một khay chứa thóc cho máy xát gạo có dạng hình chóp đều bằng cách cắt mảnh tôn hình vuông cạnh $1","5$ m theo các tam giác cân $A E B$, $B F C$, $C G D$, $D H A$ và sau đó gò các tam giác $A E H$, $B E F$, $C F G$, $D G H$ sao cho bốn đỉnh $A,B,C,D$ trùng nhau tạo thành khối chóp. Đặt $H G=x$.
  #fig(hopper())],statements:([Khối chóp thu được là khối tứ diện đều.],[Diện tích đáy của khối chóp thu được là $S=x^2$.],[Chiều cao của khối chóp thu được là $h=sqrt(9/8-(3x)/(2sqrt(2)))$.],[Khối chóp thu được có thể tích lớn nhất khi $x=sqrt(2)/2$.]))
@@ -35,7 +35,7 @@
  q(4,[Cho hàm số $y=f(x)$ có đạo hàm trên $RR$ và đạo hàm $f'(x)=a x^3+b x^2+c x+d$ là hàm số bậc ba có đồ thị như hình sau:
  #fig(derivative())],statements:([Hàm số $y=f(x)$ nghịch biến trên khoảng $(-1;1)$.],[Hàm số $y=f(x)$ có hai điểm cực trị.],[Hàm số $y=f(x)$ đạt cực đại tại $x=-1$.],[Giá trị lớn nhất của hàm số $f'(x)$ trên đoạn $[1;5]$ là 108.]))
  exam-section("III",[Câu trắc nghiệm trả lời ngắn.],instruction:[Thí sinh trả lời từ câu 1 đến câu 6.])
- let q(number,body,..args) = exam-question(number,body,variant:variant,solution:short.at(number - 1),writing-lines:10,..args)
+ let q(number,body,..args) = exam-question(number,body,variant:variant,solution:short.at(str(number)),writing-lines:10,..args)
  q(1,[Biết đồ thị hàm số $y=x^3-3x^2-9x-1$ có hai điểm cực trị $A$ và $B$. Phương trình đường thẳng $A B$ là $y=a x+b$ ($a,b in RR$). Tính tổng $a+b$.])
  q(2,[Cho hình vuông $A B C D$ có cạnh bằng 4, chính giữa có một hình vuông đồng tâm với $A B C D$. Biết rằng bốn tam giác là bốn tam giác cân. Hỏi tổng diện tích của hình vuông ở giữa và bốn tam giác cân có giá trị nhỏ nhất bằng bao nhiêu? (Kết quả làm tròn đến chữ số thập phân thứ 2).
  #fig(shaded-square())])

@@ -1,7 +1,4 @@
 #!/usr/bin/env python3
-# /// script
-# dependencies = ["python-telegram-bot>=22,<23", "google-api-python-client>=2,<3", "google-auth-oauthlib>=1,<2"]
-# ///
 import argparse
 import asyncio
 import os
@@ -9,7 +6,7 @@ import tomllib
 from pathlib import Path
 
 from announcements import drive_links, render
-from build import ROOT
+from config import ROOT
 
 
 async def send(text, secret):

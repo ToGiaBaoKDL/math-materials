@@ -15,7 +15,7 @@ Copy [mẫu Buổi 11](examples/announcement.toml) vào thư mục tài liệu n
 | `homework` | Boolean; thêm `+ BTVN` vào nhãn hai bản đề khi thực sự có bài tập |
 | `closing` | Đoạn kết tùy chọn; thông tin record/người thông báo nằm ở đây |
 | `links` | Bảng URL HTTPS theo variant `de`, `de-cach`, `dap-an`, `de-dap-an`; bỏ variant không có |
-| `document`, `drive_month` | Thay cho toàn bộ bảng `links`; tìm folder/file bằng Google API và kiểm tra MD5 với PDF local |
+| `document`, `drive_month` | Thay cho toàn bộ bảng `links`; tìm folder/file bằng Google API theo kế hoạch xuất bản chung và kiểm tra MD5 với PDF local |
 
 Hai cách lấy link không dùng đồng thời. Link trực tiếp phục vụ tài liệu ngoài repo và preview offline; người gửi chịu trách nhiệm kiểm tra quyền truy cập. Với link tự động, dùng OAuth chung, mapping và Drive client hiện có; không đổi quyền chia sẻ. Preview chế độ này có đọc Drive, không ghi. Link file nguồn không đưa vào thông báo học sinh.
 
@@ -45,7 +45,7 @@ make notify CONFIG=path/to/announcement.toml SEND=1
 CLI hỗ trợ override trường thường thay đổi, không cần sửa file:
 
 ```sh
-uv run scripts/notify.py --config path/to/announcement.toml \
+uv run python scripts/notify.py --config path/to/announcement.toml \
   --starts-at 2026-10-22T20:00 --location "Lớp Zoom"
 ```
 

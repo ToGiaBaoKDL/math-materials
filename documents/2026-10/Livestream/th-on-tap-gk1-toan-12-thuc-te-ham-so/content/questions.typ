@@ -2,7 +2,7 @@
 #import "../figures.typ": diagram
 #let questions(variant) = {
  set par(leading:0.85em)
- let item=exercise.with(variant:variant,question-gap:10mm,keep-together:false,flow-stem:true,writing-line-gap:9mm,writing-single-page:true,fill-writing-page:true,statement-table:true)
+ let item=exercise.with(variant:variant,question-gap:10mm,keep-together:false,flow-stem:true,writing-line-gap:9mm,writing-single-page:true,fill-writing-page:true,statements-table:true)
  {
  show math.frac: it => math.inline(it)
  set text(top-edge:1.1em,bottom-edge:0.65em)

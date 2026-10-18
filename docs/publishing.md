@@ -53,16 +53,16 @@ make upload DRIVE_MONTH=2026-10 DOC=nguyen-khuyen VARIANT=de-dap-an
 
 ## Xác thực Google dùng chung
 
-Dùng Google Sheets API và Drive API qua `google-api-python-client`, `google-auth-oauthlib`. `uv run` cài dependency khai báo trong script vào môi trường riêng, không cần thay Python của build/upload.
+Dùng Google Sheets API và Drive API qua `google-api-python-client`, `google-auth-oauthlib`. Dependency khai báo chung trong `pyproject.toml`; tất cả CLI dùng cùng môi trường `uv`.
 
 Thiết lập một lần:
 
 1. Trong Google Cloud project của bạn, bật **Google Sheets API** và **Google Drive API**, tạo OAuth client loại **Desktop app**; tải JSON về `.secret/dxt-toan-2027-client.json`.
 2. Tài khoản dùng chung cần quyền sửa Sheet và quyền thêm/cập nhật file trong folder Drive đích.
-3. Chạy `make drive-auth CLIENT=.secret/dxt-toan-2027-client.json`, chọn `thaythangtoan4@gmail.com` và cấp quyền. Token tự đặt tên theo email đăng nhập, ví dụ `.secret/thaythangtoan4-token.json` với `thaythangtoan4@gmail.com` (Git bỏ qua, quyền file 600). Upload và Sheet mặc định dùng `.secret/thaythangtoan4-token.json`; chọn tài khoản khác bằng `CREDENTIALS=.secret/<tên>-token.json`. Email ngoài Gmail giữ cả tên miền trong tên file để tránh trùng. Có thể truyền `CREDENTIALS` khi đăng nhập để chọn tên riêng. Cả hai tự refresh khi cần; không tự mở trình duyệt đăng nhập.
-4. Nếu đã có service account được chia sẻ quyền sửa Sheet và quyền thao tác trên Drive phù hợp, truyền `CREDENTIALS=.secret/dxt-sheets-service-account.json` trực tiếp, không cần `sheets-auth`.
+3. Chạy `make google-auth CLIENT=.secret/dxt-toan-2027-client.json`, chọn `thaythangtoan4@gmail.com` và cấp quyền. Token tự đặt tên theo email đăng nhập, ví dụ `.secret/thaythangtoan4-token.json` với `thaythangtoan4@gmail.com` (Git bỏ qua, quyền file 600). Upload và Sheet mặc định dùng `.secret/thaythangtoan4-token.json`; chọn tài khoản khác bằng `CREDENTIALS=.secret/<tên>-token.json`. Email ngoài Gmail giữ cả tên miền trong tên file để tránh trùng. Có thể truyền `CREDENTIALS` khi đăng nhập để chọn tên riêng. Cả hai tự refresh khi cần; không tự mở trình duyệt đăng nhập.
+4. Nếu đã có service account được chia sẻ quyền sửa Sheet và quyền thao tác trên Drive phù hợp, truyền `CREDENTIALS=.secret/dxt-sheets-service-account.json` trực tiếp, không cần chạy OAuth consent.
 
-Upload và Sheet dùng cùng tài khoản `thaythangtoan4@gmail.com`, cùng token và cùng bộ scope. Không yêu cầu thêm `drive.readonly` vì `drive` đã bao gồm quyền đọc. Token cũ chỉ có `drive.readonly` cần cấp quyền lại bằng `make drive-auth` trước khi dùng cả hai lệnh. Lệnh `sheets-auth` được giữ tương thích và cũng cấp cùng bộ quyền: `spreadsheets` + `drive`. Không tự mở đăng nhập trong lúc upload/ghi Sheet.
+Upload và Sheet dùng cùng tài khoản `thaythangtoan4@gmail.com`, cùng token và cùng bộ scope. Không yêu cầu thêm `drive.readonly` vì `drive` đã bao gồm quyền đọc. Token cũ chỉ có `drive.readonly` cần cấp quyền lại bằng `make google-auth` trước khi dùng cả hai lệnh. Một lệnh `make google-auth` cấp chung bộ quyền `spreadsheets` + `drive`. Không tự mở đăng nhập trong lúc upload/ghi Sheet.
 
 Scope `drive` cần để cập nhật các file cũ được rclone tạo; `drive.file` không cấp quyền chung lên các file đó ([Google: scopes](https://developers.google.com/workspace/drive/api/guides/api-specific-auth)). Không thay đổi quyền chia sẻ file.
 
@@ -80,7 +80,7 @@ Scope `drive` cần để cập nhật các file cũ được rclone tạo; `dri
 | H – Số trang/File ko cách | Số trang `de.pdf` | Số trang `dap-an.pdf` |
 | I – Thù lao | Không ghi | Không ghi |
 
-Khi manifest bật `publication.combine_answers: true`, cần có `de-dap-an` đã build/upload và Sheet dùng một dòng cho bản gộp: tên kết thúc `ĐỀ + ĐÁP ÁN`, cột F ghi link `ĐỀ + ĐÁP ÁN`, cột G ghi đề cách nếu có, cột H là tổng số trang file gộp; không thêm dòng đáp án riêng. Mặc định flag tắt: dùng dòng đề (F đề, G đề cách) và dòng đáp án ngay dưới, theo variant thực sự có; việc có file `de-dap-an` không tự bật chế độ gộp. Nếu chưa có đề không cách, bản cách vẫn được ghi ở G trên dòng đề; chưa có variant nào thì không cập nhật ô tương ứng, giữ link cũ nếu đã có. Chỉ có đáp án thì ghi dòng đáp án riêng và ghép đúng vị trí khi bổ sung đề sau.
+Theo [profile tài liệu](document-model.md), đề thi mặc định gộp, hoặc dùng override `publication.combine_answers: true`; cần `de-dap-an` đã build/upload. Sheet dùng một dòng cho bản gộp: tên kết thúc `ĐỀ + ĐÁP ÁN`, cột F ghi link `ĐỀ + ĐÁP ÁN`, cột G ghi đề cách nếu có, cột H là tổng số trang file gộp; không thêm dòng đáp án riêng. Với chế độ tách: dùng dòng đề (F đề, G đề cách) và dòng đáp án ngay dưới, theo variant thực sự có; file rời có trên disk nhưng ngoài kế hoạch xuất bản không được tự thêm vào Sheet. Nếu chưa có đề không cách, bản cách vẫn được ghi ở G trên dòng đề; chưa có variant nào thì không cập nhật ô tương ứng, giữ link cũ nếu đã có. Chỉ có đáp án thì ghi dòng đáp án riêng và ghép đúng vị trí khi bổ sung đề sau.
 
 Link là chữ có hyperlink, không dùng công thức phụ thuộc locale, không thay quyền chia sẻ file. Số trang lấy từ PDF local đã kiểm tra.
 
@@ -110,11 +110,15 @@ Luồng Google API không tự retry thao tác ghi; khi lỗi, chạy lại đ�
 
 ## Phân chia mã nguồn
 
-- `publishing.py`: chọn tài liệu, kiểm tra PDF và mapping tên; dùng chung cho cả hai uploader và Sheet.
-- `google_auth.py`: scope, đăng nhập và refresh token chung.
+- `config.py`: ROOT và ID đích mặc định; `pdf.py`: đọc metadata PDF.
+- `document_model.py`: schema, ba profile và kế hoạch variant dùng chung.
+- `publishing.py`: chọn tài liệu, kiểm tra PDF và mapping tên; dùng chung cho cả hai uploader, Sheet và notify.
+- `google_auth.py`: scope, đăng nhập và refresh token chung, có CLI riêng; hai target auth là alias cùng một lệnh.
 - `drive.py`: tìm folder/file, cache danh sách con, tạo folder và upload theo checksum.
 - `upload.py` / `sheets.py`: điều phối nghiệp vụ riêng; `upload_rclone.py` giữ backend cũ.
 
 ## Livestream
 
-Livestream dùng cùng quy tắc variant và xếp dòng như các category khác. Bộ 12 câu hiện có đề và đề cách; không tự tạo đáp án khi nguồn chưa có. Tạm dùng folder Drive và tab Sheet `Chuyên đề`, dù category local là `Livestream`. Bộ lọc `CATEGORY=Livestream` vẫn chọn nhóm local. Khi đổi category local, không tự di chuyển dữ liệu đã có trên Drive/Sheet.
+Livestream dùng profile hai bản đề/đề cách; logic tìm và cập nhật dòng dùng chung với các loại khác. Bộ 12 câu hiện có đề và đề cách; không tự tạo đáp án khi nguồn chưa có. Tạm dùng folder Drive và tab Sheet `Chuyên đề`, dù category local là `Livestream`. Bộ lọc `CATEGORY=Livestream` vẫn chọn nhóm local. Khi đổi category local, không tự di chuyển dữ liệu đã có trên Drive/Sheet.
+
+Khi chuyển chế độ tách sang gộp, nhận diện dòng đề theo tên gốc thay vì tạo dòng trùng; xóa nội dung B:H của dòng đáp án cũ, giữ nguyên cột thù lao và định dạng. Dòng có thù lao còn được giữ lại, không tự cộng/chuyển tiền sang dòng gộp. Với bản gộp không xuất bản đề cách, cột G cũ được làm trống; cập nhật từng phần trong chế độ tách vẫn giữ link variant chưa có trong lần cập nhật.

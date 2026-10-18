@@ -425,26 +425,30 @@ wheels = [
 name = "math-materials"
 version = "0.0.0"
 source = { virtual = "." }
-
-[package.dev-dependencies]
-dev = [
+dependencies = [
     { name = "google-api-python-client" },
     { name = "google-auth-oauthlib" },
     { name = "olefile" },
-    { name = "pyright" },
     { name = "python-telegram-bot" },
+]
+
+[package.dev-dependencies]
+dev = [
+    { name = "pyright" },
     { name = "ruff" },
 ]
 
 [package.metadata]
-
-[package.metadata.requires-dev]
-dev = [
+requires-dist = [
     { name = "google-api-python-client", specifier = ">=2,<3" },
     { name = "google-auth-oauthlib", specifier = ">=1,<2" },
     { name = "olefile", specifier = ">=0.47,<1" },
-    { name = "pyright", specifier = ">=1.1.411,<2" },
     { name = "python-telegram-bot", specifier = ">=22,<23" },
+]
+
+[package.metadata.requires-dev]
+dev = [
+    { name = "pyright", specifier = ">=1.1.411,<2" },
     { name = "ruff", specifier = ">=0.16,<0.17" },
 ]
 

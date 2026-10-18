@@ -12,7 +12,7 @@ Quy tắc vận hành liên quan: [document-model](../../docs/document-model.md)
 ## Ownership
 
 - Phụ trách nội dung câu hỏi trong `main.typ` hoặc `content/*.typ`: câu chữ, công thức, số câu, thứ tự lựa chọn, thông tin đề và chỉ dẫn từ nguồn.
-- Phụ trách các trường manifest về nguồn, metadata nguồn, mức độ đầy đủ, phạm vi, ghi chú nội dung và mapping câu/trang. Giữ các trường `implementation`, `output` và `qa` của những trách nhiệm khác.
+- Phụ trách các trường manifest về nguồn, metadata nguồn, mức độ đầy đủ, phạm vi, ghi chú nội dung và mapping câu/trang. Giữ các trường `outputs` và `qa` của những trách nhiệm khác.
 - Nguồn gốc là đầu vào chỉ đọc. Giao dữ kiện và nhãn hình cho `typst-figures`; giao cấu trúc nội dung và ý định xuống dòng cho `typst-layout`.
 - Phân biệt nguồn nội dung với ảnh tham khảo thiết kế. Không nhập tiêu đề, hướng dẫn hoặc dữ kiện của mẫu khi người dùng chỉ yêu cầu học cách trình bày; ghi rõ những phần mẫu đã được xác nhận là sai.
 

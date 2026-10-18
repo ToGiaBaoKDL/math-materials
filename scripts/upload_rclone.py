@@ -3,8 +3,8 @@ import argparse
 import json
 import subprocess
 
-from build import ROOT
-from publishing import CATEGORIES, DRIVE_ROOT, plan
+from config import CATEGORIES, DRIVE_ROOT, ROOT
+from publishing import plan
 
 
 def folder_id(remote, parent_id, name):

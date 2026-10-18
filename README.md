@@ -2,6 +2,8 @@
 
 Dựng lại đề thi và bài giảng toán từ ảnh, PDF hoặc DOCX bằng Typst; xuất PDF có nội dung chính xác, hình minh họa và bố cục theo convention DXT.
 
+Ba loại đầu vào: **Tinh Hoa** (đề, đề cách, đáp án), **Livestream** (đề, đề cách), **đề thi** (đề + đáp án gộp). Hai loại bài giảng dùng chung format chuyên đề; đề thi dùng format riêng.
+
 ## Bắt đầu
 
 Cần `uv`, Typst, GNU Make, font và Poppler; xem [môi trường build](docs/build.md).
@@ -14,7 +16,7 @@ make check
 make help
 ```
 
-Sau khi duyệt PDF, thực hiện [upload và cập nhật Sheet](docs/publishing.md). Hai lệnh dùng chung token OAuth; cấp quyền bằng `make drive-auth`. Luồng cũ còn tại `make upload-rclone` trong giai đoạn chuyển tiếp.
+Sau khi duyệt PDF, thực hiện [upload và cập nhật Sheet](docs/publishing.md). Hai lệnh dùng chung token OAuth; cấp quyền bằng `make google-auth`. Luồng cũ còn tại `make upload-rclone` trong giai đoạn chuyển tiếp.
 
 ## Tài liệu hệ thống
 

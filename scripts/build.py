@@ -2,39 +2,45 @@
 import argparse
 import hashlib
 import json
-import re
 import subprocess
 from datetime import UTC, datetime
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[1]
+from config import ROOT
+from document_model import Output, Variant, documents, load_manifest, publication_variants
+from figure_cache import cached, digest, input_key
+from pdf import page_count
 
 
-def run(*args):
+def run(*args: str) -> None:
     subprocess.run(args, cwd=ROOT, check=True)
 
 
-def page_count(pdf):
-    info = subprocess.check_output(["pdfinfo", str(pdf)], text=True)
-    match = re.search(r"^Pages:\s+(\d+)", info, re.MULTILINE)
-    if match is None:
-        raise ValueError(f"Cannot read PDF page count: {pdf}")
-    return int(match[1])
-
-
-def build(entry, variant=None):
+def build(entry: Path, variant: str | None = None) -> None:
     manifest_path = entry.with_name("manifest.json")
-    manifest = json.loads(manifest_path.read_text())
-    variants = manifest.get("variants", {"document": {"filename": "document.pdf", "inputs": {}}})
+    manifest = load_manifest(manifest_path)
+    variants: dict[str, Variant] = {name: manifest["variants"][name] for name in publication_variants(manifest)}
+    if variant and variant in manifest["variants"]:
+        variants = {variant: manifest["variants"][variant]}
     target = ROOT / "assets/targets" / entry.parent.relative_to(ROOT / "documents")
     target.mkdir(parents=True, exist_ok=True)
     if variant and variant not in variants:
         raise ValueError(f"{entry.parent.name}: unknown variant {variant}")
     created = datetime.fromisoformat(manifest["received_date"]).replace(tzinfo=UTC)
     timestamp = str(int(created.timestamp()))
-    for figure in manifest.get("figure_renders", []):
+    figures = manifest.get("figure_renders", [])
+    cache_path = target / ".figure-cache.json"
+    try:
+        figure_cache = json.loads(cache_path.read_text())
+    except (OSError, ValueError):
+        figure_cache = {}
+    figure_key = input_key(entry.parent, figures) if figures else None
+    for figure in figures:
         destination = entry.parent / figure["output"]
         destination.parent.mkdir(parents=True, exist_ok=True)
+        if cached(figure_cache, destination, figure_key):
+            print(f"Cached figure {figure['output']}", flush=True)
+            continue
         command = [
             "typst",
             "compile",
@@ -48,9 +54,10 @@ def build(entry, variant=None):
         for key, value in figure.get("inputs", {}).items():
             command.extend(["--input", f"{key}={value}"])
         run(*command, str(entry.parent / figure["entry"]), str(destination))
+        figure_cache[str(destination)] = {"input": figure_key, "sha256": digest(destination)}
+    if figures:
+        cache_path.write_text(json.dumps(figure_cache, indent=2) + "\n")
     outputs = manifest.get("outputs", {}).copy()
-    if "output" in manifest:
-        outputs["document"] = manifest["output"]
     changed = False
     if variant:
         variants = {variant: variants[variant]}
@@ -73,7 +80,7 @@ def build(entry, variant=None):
         print(f"Build {entry.parent.relative_to(ROOT)} → {pdf.name}", flush=True)
         run(*command, str(entry), str(pdf))
         data = pdf.read_bytes()
-        output = {
+        output: Output = {
             "pdf": str(pdf.relative_to(ROOT)),
             "pages": page_count(pdf),
             "bytes": len(data),
@@ -82,10 +89,7 @@ def build(entry, variant=None):
         previous = outputs.get(name, {})
         changed |= previous.get("sha256") != output["sha256"]
         outputs[name] = output
-    if "variants" in manifest:
-        manifest["outputs"] = outputs
-    else:
-        manifest["output"] = outputs["document"]
+    manifest["outputs"] = outputs
     manifest.setdefault("qa", {})["compile"] = "passed"
     if changed:
         manifest["qa"]["review_status"] = "pending"
@@ -98,21 +102,20 @@ def main():
     parser.add_argument("--variant", choices=["de", "de-cach", "dap-an", "de-dap-an"], help="Build one variant")
     parser.add_argument("--list", action="store_true", help="List documents and available variants")
     args = parser.parse_args()
-    entries = sorted((ROOT / "documents").glob("*/*/*/main.typ"))
-    if args.document:
-        entries = [e for e in entries if args.document in str(e.parent.relative_to(ROOT / "documents"))]
-        if len(entries) != 1:
-            parser.error(f"Document selector must match exactly one document (matched {len(entries)}). Use --list.")
+    try:
+        entries = [path.with_name("main.typ") for path in documents(args.document)]
+    except ValueError as error:
+        parser.error(str(error))
     if args.list:
         for entry in entries:
-            manifest = json.loads(entry.with_name("manifest.json").read_text())
-            print(f"{entry.parent.relative_to(ROOT / 'documents')}  [{', '.join(manifest.get('variants', {}))}]")
+            manifest = load_manifest(entry.with_name("manifest.json"))
+            print(f"{entry.parent.relative_to(ROOT / 'documents')}  [{', '.join(publication_variants(manifest))}]")
         return
     if args.variant:
         incompatible = [
             e.parent.name
             for e in entries
-            if args.variant not in json.loads(e.with_name("manifest.json").read_text()).get("variants", {})
+            if args.variant not in load_manifest(e.with_name("manifest.json"))["variants"]
         ]
         if incompatible:
             parser.error(f"Variant {args.variant} unavailable: {', '.join(incompatible)}")
@@ -123,6 +126,8 @@ def main():
             build(entry, variant=args.variant)
     except FileNotFoundError as error:
         parser.exit(1, f"Missing build tool: {error.filename}\n")
+    except ValueError as error:
+        parser.exit(1, f"Build failed: {error}\n")
     except subprocess.CalledProcessError as error:
         parser.exit(1, f"Build failed (exit {error.returncode}). See tool output above.\n")
 

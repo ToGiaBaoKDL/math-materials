@@ -1,9 +1,5 @@
 #!/usr/bin/env python3
-# /// script
-# dependencies = ["google-api-python-client>=2,<3", "google-auth-oauthlib>=1,<2"]
-# ///
 import argparse
-import json
 import re
 import unicodedata
 from datetime import date
@@ -11,22 +7,15 @@ from pathlib import Path
 from typing import Any
 from urllib.parse import quote
 
-from build import ROOT, page_count
+from config import CATEGORIES, DRIVE_ROOT, ROOT, SPREADSHEET
+from document_model import DocumentFiles, load_manifest
 from drive import Drive
-from google_auth import DEFAULT_CLIENT, credentials
-from publishing import (
-    CATEGORIES,
-    DRIVE_ROOT,
-    check_month,
-    document_files,
-    document_title,
-    documents,
-    publication_category,
-    sheet_variants,
-)
+from google_auth import credentials
+from pdf import page_count
+from publishing import check_month, document_files, document_title, documents, publication_category, sheet_variants
 
 GITHUB = "https://github.com/ToGiaBaoKDL/math-materials/tree/main"
-SPREADSHEET = "1q7giSA18z4UkTomn9xQBqrDgdjssXeUSDj4fTtVYOVs"
+SHEETS_DATE_EPOCH = date(1899, 12, 30)
 
 
 def cell(value: str | int = "", link: str | None = None) -> dict[str, Any]:
@@ -38,15 +27,20 @@ def cell(value: str | int = "", link: str | None = None) -> dict[str, Any]:
     return result
 
 
-def document_rows(path, files, drive, month_id, uploaded_on):
+def document_rows(
+    path: Path, files: DocumentFiles, drive: Drive, month_id: str, uploaded_on: date
+) -> list[tuple[str, list[dict[str, Any] | None]]]:
     category = publication_category(path)
-    category_id = drive.find(month_id, category, folder=True)["id"]
-    folder = drive.find(category_id, path.parent.name, folder=True)["id"]
+    category_folder = drive.find(month_id, category, folder=True)
+    assert category_folder is not None
+    document_folder = drive.find(category_folder["id"], path.parent.name, folder=True)
+    assert document_folder is not None
+    folder = document_folder["id"]
     links = drive.verified_links(folder, files)
     code = GITHUB + "/" + quote(str(path.parent.relative_to(ROOT)), safe="/")
-    serial = (uploaded_on - date(1899, 12, 30)).days
+    serial = (uploaded_on - SHEETS_DATE_EPOCH).days
     rows = []
-    for variant in sheet_variants(json.loads(path.read_text()), files):
+    for variant in sheet_variants(load_manifest(path), files):
         answer = variant == "dap-an"
         primary = variant if variant in files else "de-cach"
         base = document_title(files[primary][1])
@@ -62,7 +56,11 @@ def document_rows(path, files, drive, month_id, uploaded_on):
                     cell(title),
                     cell() if answer else cell("Github", code),
                     cell(label, links[variant]) if variant in links else None,
-                    cell("ĐỀ - CÁCH", links["de-cach"]) if not answer and "de-cach" in links else None,
+                    cell("ĐỀ - CÁCH", links["de-cach"])
+                    if not answer and "de-cach" in links
+                    else cell()
+                    if variant == "de-dap-an"
+                    else None,
                     cell(page_count(files[variant][0])) if variant in files else None,
                 ],
             )
@@ -72,6 +70,15 @@ def document_rows(path, files, drive, month_id, uploaded_on):
 
 def normalized(text):
     return " ".join(unicodedata.normalize("NFKC", text).replace("–", "-").replace("—", "-").split()).casefold()
+
+
+def row_identity(title: str) -> tuple[str, str]:
+    base, separator, suffix = normalized(title).rpartition(" - ")
+    if separator and suffix in ("đề", "đề cách", "đề + đáp án"):
+        return base, "question"
+    if separator and suffix == "đáp án":
+        return base, "answer"
+    return normalized(title), "other"
 
 
 def month_value(text):
@@ -92,7 +99,23 @@ def displayed(rows, row, column):
     return cells[column].get("formattedValue", "") if column < len(cells) else ""
 
 
-def updates_for_sheet(sheet, month, records):
+def month_range(sheet_id: int, start: int, end: int) -> dict[str, int]:
+    return {"sheetId": sheet_id, "startRowIndex": start, "endRowIndex": end, "startColumnIndex": 0, "endColumnIndex": 1}
+
+
+def month_label_request(sheet_id: int, row: int, month: str) -> dict[str, Any]:
+    return {
+        "updateCells": {
+            "start": {"sheetId": sheet_id, "rowIndex": row, "columnIndex": 0},
+            "rows": [{"values": [cell(f"Tháng {month[5:]}-{month[:4]}")]}],
+            "fields": "userEnteredValue",
+        }
+    }
+
+
+def updates_for_sheet(
+    sheet: dict[str, Any], month: str, records: list[tuple[str, list[dict[str, Any] | None]]]
+) -> tuple[list[dict[str, Any]], list[str]]:
     props = sheet["properties"]
     sheet_id = props["sheetId"]
     rows = sheet_rows(sheet)
@@ -170,13 +193,7 @@ def updates_for_sheet(sheet, month, records):
                         "mergeType": "MERGE_ALL",
                     }
                 },
-                {
-                    "updateCells": {
-                        "start": {"sheetId": sheet_id, "rowIndex": start, "columnIndex": 0},
-                        "rows": [{"values": [cell(f"Tháng {month[5:]}-{month[:4]}")]}],
-                        "fields": "userEnteredValue",
-                    }
-                },
+                month_label_request(sheet_id, start, month),
             ]
         )
     arranged = {r: displayed(rows, r, 3) for r in range(start, end)}
@@ -192,7 +209,7 @@ def updates_for_sheet(sheet, month, records):
         matches = [
             r
             for r in range(start, end)
-            if normalized(displayed(rows, r, 3)) == normalized(title)
+            if row_identity(displayed(rows, r, 3)) == row_identity(title)
             or any(c.get("hyperlink") in pdf_urls for c in rows.get(r, [])[5:7])
         ]
         if len(matches) > 1:
@@ -216,6 +233,22 @@ def updates_for_sheet(sheet, month, records):
             raise ValueError(f"Duplicate destination row for {title}")
         reserved.add(target)
         arranged[target] = title
+        if normalized(title).endswith(" - đề + đáp án"):
+            base = row_identity(title)[0]
+            old_answers = [r for r in range(start, end) if row_identity(displayed(rows, r, 3)) == (base, "answer")]
+            if len(old_answers) > 1:
+                raise ValueError(f"{props['title']}: duplicate answer rows for {title}")
+            for row in old_answers:
+                requests.append(
+                    {
+                        "updateCells": {
+                            "start": {"sheetId": sheet_id, "rowIndex": row, "columnIndex": 1},
+                            "rows": [{"values": [{} for _ in range(7)]}],
+                            "fields": "userEnteredValue,textFormatRuns",
+                        }
+                    }
+                )
+                arranged[row] = ""
         # None means this variant is absent: preserve any previously published cell.
         for column, value in enumerate(values, 1):
             if value is not None:
@@ -261,14 +294,8 @@ def updates_for_sheet(sheet, month, records):
             )
         summary.append(f"{props['title']}!B{target + 1}:H{target + 1} → {title}")
     if added:
-        month_range = {
-            "sheetId": sheet_id,
-            "startRowIndex": start,
-            "endRowIndex": end,
-            "startColumnIndex": 0,
-            "endColumnIndex": 1,
-        }
-        extension: list[dict[str, Any]] = [{"unmergeCells": {"range": month_range}}]
+        month_cells = month_range(sheet_id, start, end)
+        extension: list[dict[str, Any]] = [{"unmergeCells": {"range": month_cells}}]
         if end == grid_rows:
             extension.append({"appendDimension": {"sheetId": sheet_id, "dimension": "ROWS", "length": added}})
         else:
@@ -321,7 +348,7 @@ def updates_for_sheet(sheet, month, records):
                 )
                 break
         extension.append(
-            {"mergeCells": {"range": dict(month_range, endRowIndex=end + added), "mergeType": "MERGE_ALL"}}
+            {"mergeCells": {"range": dict(month_cells, endRowIndex=end + added), "mergeType": "MERGE_ALL"}}
         )
         requests = extension + requests
         summary.insert(0, f"{props['title']}: extend {month} by {added} rows, keeping existing formatting.")
@@ -355,26 +382,14 @@ def updates_for_sheet(sheet, month, records):
         names.insert(target - start, name)
         arranged = dict(enumerate(names, start))
     if moves:
-        month_range = {
-            "sheetId": sheet_id,
-            "startRowIndex": start,
-            "endRowIndex": end + added,
-            "startColumnIndex": 0,
-            "endColumnIndex": 1,
-        }
+        month_cells = month_range(sheet_id, start, end + added)
         requests.extend(
             [
-                {"unmergeCells": {"range": month_range}},
+                {"unmergeCells": {"range": month_cells}},
                 *moves,
-                {"repeatCell": {"range": month_range, "cell": {}, "fields": "userEnteredValue"}},
-                {
-                    "updateCells": {
-                        "start": {"sheetId": sheet_id, "rowIndex": start, "columnIndex": 0},
-                        "rows": [{"values": [cell(f"Tháng {month[5:]}-{month[:4]}")]}],
-                        "fields": "userEnteredValue",
-                    }
-                },
-                {"mergeCells": {"range": month_range, "mergeType": "MERGE_ALL"}},
+                {"repeatCell": {"range": month_cells, "cell": {}, "fields": "userEnteredValue"}},
+                month_label_request(sheet_id, start, month),
+                {"mergeCells": {"range": month_cells, "mergeType": "MERGE_ALL"}},
             ]
         )
         summary.append(f"{props['title']}: reordered {len(moves)} rows to keep each answer below its question.")
@@ -390,16 +405,11 @@ def main():
     parser.add_argument("--sheet-id", default=SPREADSHEET)
     parser.add_argument("--root-id", default=DRIVE_ROOT)
     parser.add_argument("--credentials", type=Path)
-    parser.add_argument("--authorize", action="store_true")
-    parser.add_argument("--client", type=Path, default=DEFAULT_CLIENT)
     parser.add_argument(
         "--dry-run", action="store_true", help="Read Drive and Sheet and print planned rows; do not write"
     )
     args = parser.parse_args()
     try:
-        if args.authorize:
-            credentials(args.credentials, args.client)
-            return
         if not args.date or not re.fullmatch(r"[0-9]{4}-[0-9]{2}-[0-9]{2}", args.date):
             parser.error("DATE is required in YYYY-MM-DD format")
         uploaded_on = date.fromisoformat(args.date)

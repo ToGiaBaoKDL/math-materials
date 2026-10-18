@@ -1,8 +1,12 @@
 {
+  "schema_version": 1,
   "id": "th-on-tap-gk1-toan-12-thuc-te-ham-so",
+  "kind": "livestream",
   "received_date": "2026-10-17",
   "status": "implemented",
-  "template": "lesson",
+  "metadata": {
+    "title": "TOÁN THỰC TẾ CHUYÊN ĐỀ HÀM SỐ – 12 CÂU HỎI TỦ SÂU GIỮA KỲ I TOÁN 12"
+  },
   "sources": [
     {
       "path": "assets/sources/2026-10/Livestream/th-on-tap-gk1-toan-12-thuc-te-ham-so/source.docx",
@@ -11,12 +15,184 @@
       "sha256": "dfbcecaca3414fc808f40b490e33553a1d01af7a3b290cfd6d8efe93bb9ce87d"
     }
   ],
-  "metadata": {
-    "title": "TOÁN THỰC TẾ CHUYÊN ĐỀ HÀM SỐ – 12 CÂU HỎI TỦ SÂU GIỮA KỲ I TOÁN 12"
-  },
   "scope": {
     "questions": 12,
-    "has_solutions": false
+    "has_solutions": false,
+    "has_questions": true
+  },
+  "content_mapping": [
+    {
+      "id": "question:1",
+      "role": "question",
+      "source": {
+        "number": 1,
+        "paragraphs": [
+          3
+        ]
+      }
+    },
+    {
+      "id": "question:2",
+      "role": "question",
+      "source": {
+        "number": 2,
+        "paragraphs": [
+          4
+        ]
+      }
+    },
+    {
+      "id": "question:3",
+      "role": "question",
+      "source": {
+        "number": 3,
+        "paragraphs": [
+          6,
+          7,
+          8,
+          9,
+          10
+        ]
+      }
+    },
+    {
+      "id": "question:4",
+      "role": "question",
+      "source": {
+        "number": 4,
+        "paragraphs": [
+          11
+        ]
+      }
+    },
+    {
+      "id": "question:5",
+      "role": "question",
+      "source": {
+        "number": 5,
+        "paragraphs": [
+          12
+        ]
+      }
+    },
+    {
+      "id": "question:6",
+      "role": "question",
+      "source": {
+        "number": 6,
+        "paragraphs": [
+          13,
+          15
+        ]
+      }
+    },
+    {
+      "id": "question:7",
+      "role": "question",
+      "source": {
+        "number": 7,
+        "paragraphs": [
+          17,
+          18,
+          19
+        ]
+      }
+    },
+    {
+      "id": "question:8",
+      "role": "question",
+      "source": {
+        "number": 8,
+        "paragraphs": [
+          20,
+          21,
+          22
+        ]
+      }
+    },
+    {
+      "id": "question:9",
+      "role": "question",
+      "source": {
+        "number": 9,
+        "paragraphs": [
+          23
+        ]
+      }
+    },
+    {
+      "id": "question:10",
+      "role": "question",
+      "source": {
+        "number": 10,
+        "paragraphs": [
+          24,
+          25,
+          26
+        ]
+      }
+    },
+    {
+      "id": "question:11",
+      "role": "question",
+      "source": {
+        "number": 11,
+        "paragraphs": [
+          27,
+          28,
+          29,
+          30,
+          31,
+          32
+        ]
+      }
+    },
+    {
+      "id": "question:12",
+      "role": "question",
+      "source": {
+        "number": 12,
+        "paragraphs": [
+          34,
+          35,
+          36,
+          37,
+          38,
+          39
+        ]
+      }
+    }
+  ],
+  "provenance": {
+    "source_issues": [
+      {
+        "question": 2,
+        "issue": "Nguồn gọi S là quãng đường nhưng S(0)=26; giữ nguyên cách gọi của nguồn."
+      },
+      {
+        "question": 8,
+        "issue": "Tên trường ghi THPT ĐINH YÊN DŨNG SỐ 2; giữ nguyên, chưa tự sửa tên trường."
+      }
+    ],
+    "source_corrections": [
+      {
+        "issue": "Số câu lặp và không liên tục",
+        "action": "Đánh số 1–12 theo thứ tự nguồn."
+      },
+      {
+        "question": 2,
+        "issue": "Ký tự rác fzj| sau bao nhiêu",
+        "action": "Bỏ ký tự rác; giữ dữ kiện."
+      },
+      {
+        "question": 10,
+        "issue": "Ký tự riêng không hợp lệ trong đơn vị AB",
+        "action": "Chuẩn hóa AB = 60 cm."
+      }
+    ],
+    "decisions": {
+      "coaster_model": "y = 30 - x(x-50)(x-80)/1500, matching A(0,30), C(50,30), D(80,30), minimum height 6; model used only to render source diagram."
+    }
   },
   "variants": {
     "de": {
@@ -31,45 +207,6 @@
         "variant": "de-cach"
       }
     }
-  },
-  "source_corrections": [
-    {
-      "issue": "Số câu lặp và không liên tục",
-      "action": "Đánh số 1–12 theo thứ tự nguồn."
-    },
-    {
-      "question": 2,
-      "issue": "Ký tự rác fzj| sau bao nhiêu",
-      "action": "Bỏ ký tự rác; giữ dữ kiện."
-    },
-    {
-      "question": 10,
-      "issue": "Ký tự riêng không hợp lệ trong đơn vị AB",
-      "action": "Chuẩn hóa AB = 60 cm."
-    }
-  ],
-  "source_issues": [
-    {
-      "question": 2,
-      "issue": "Nguồn gọi S là quãng đường nhưng S(0)=26; giữ nguyên cách gọi của nguồn."
-    },
-    {
-      "question": 8,
-      "issue": "Tên trường ghi THPT ĐINH YÊN DŨNG SỐ 2; giữ nguyên, chưa tự sửa tên trường."
-    }
-  ],
-  "qa": {
-    "mathtype_equations": 85,
-    "preview_pairs_checked": 85,
-    "full_page_visual_review": "pending",
-    "compile": "passed",
-    "review_status": "pending",
-    "question_sequence": "1–12 present once in each variant",
-    "pdf_text_bounds": "passed",
-    "fonts": "embedded",
-    "standalone_figures": "visually inspected; labels checked after widening label boxes",
-    "source_docx_pdf_conversion": "LibreOffice unavailable in sandbox; source examined via DOCX XML, MathType/WMF pairs and extracted embedded images; EMF label records inspected.",
-    "latest_revision": "Question 1 fraction uses compact inline style; shared lesson header tab widened by 4mm, logo diameter 10mm positioned at x=2mm with vertical centering. Header component visually inspected; PDFs rebuilt and text bounds checked."
   },
   "drive": {
     "folder": "Chuyên đề",
@@ -92,70 +229,17 @@
       "sha256": "0dab6c4555919acd10b7f9891b5854ba4b5618f759229a26ede06f8a873c4465"
     }
   },
-  "implementation": {
-    "template": "templates/lesson.typ",
-    "variants": "Livestream: de and de-cach only; no answer variant.",
-    "figures": "Six native vector diagrams with explicit labels, point marks, folding/hidden lines and distinct colors; original roller coaster photo retained.",
-    "writing": "9 mm line spacing; prompts and writing area remain on same page.",
-    "source_question_paragraphs": [
-      [
-        3
-      ],
-      [
-        4
-      ],
-      [
-        6,
-        7,
-        8,
-        9,
-        10
-      ],
-      [
-        11
-      ],
-      [
-        12
-      ],
-      [
-        13,
-        15
-      ],
-      [
-        17,
-        18,
-        19
-      ],
-      [
-        20,
-        21,
-        22
-      ],
-      [
-        23
-      ],
-      [
-        24,
-        25,
-        26
-      ],
-      [
-        27,
-        28,
-        29,
-        30,
-        31,
-        32
-      ],
-      [
-        34,
-        35,
-        36,
-        37,
-        38,
-        39
-      ]
-    ],
-    "coaster_model": "y = 30 - x(x-50)(x-80)/1500, matching A(0,30), C(50,30), D(80,30), minimum height 6; model used only to render source diagram."
+  "qa": {
+    "mathtype_equations": 85,
+    "preview_pairs_checked": 85,
+    "full_page_visual_review": "pending",
+    "compile": "passed",
+    "review_status": "pending",
+    "question_sequence": "1–12 present once in each variant",
+    "pdf_text_bounds": "passed",
+    "fonts": "embedded",
+    "standalone_figures": "visually inspected; labels checked after widening label boxes",
+    "source_docx_pdf_conversion": "LibreOffice unavailable in sandbox; source examined via DOCX XML, MathType/WMF pairs and extracted embedded images; EMF label records inspected.",
+    "latest_revision": "Question 1 fraction uses compact inline style; shared lesson header tab widened by 4mm, logo diameter 10mm positioned at x=2mm with vertical centering. Header component visually inspected; PDFs rebuilt and text bounds checked."
   }
 }

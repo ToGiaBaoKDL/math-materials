@@ -2,70 +2,61 @@
 
 [README](../README.md) · [Build](build.md) · [Xuất bản](publishing.md)
 
+## Loại tài liệu và kế hoạch xuất bản
+
+`scripts/document_model.py` là nguồn quy tắc chung. `kind` xác định profile; category trong đường dẫn dùng để tổ chức và lọc tài liệu, không tự quyết định format hoặc variant.
+
+| `kind` | Format | Đầu ra mặc định khi đủ nguồn | Drive / Sheet |
+|---|---|---|---|
+| `tinh-hoa` | `lesson` | `de`, `de-cach`, `dap-an` | Chuyên đề; đề và đề cách cùng dòng, đáp án ngay dưới |
+| `livestream` | `lesson` | `de`, `de-cach` | Tạm dùng Chuyên đề; một dòng có hai link |
+| `exam` | `exam` | `de-dap-an` | Đề thi; một dòng, link bản gộp và tổng số trang |
+
+Build mặc định, upload, Sheet và link tự động của notify cùng dùng `publication_variants`. Notify vẫn độc lập, không tự chạy sau các bước khác.
+
+`scope.has_questions` và `scope.has_solutions` ghi phần nguồn thực sự có. Khi đề thi chưa có lời giải, chỉ xuất bản đề đã có, chưa đặt nhãn bản gộp. Nếu chỉ có đáp án, có thể xuất bản đáp án trước rồi bổ sung đề sau. Không tự tạo lời giải. Nguồn chưa đủ bộ yêu cầu được thể hiện bằng scope; compile thành công không có nghĩa bộ nguồn đã hoàn chỉnh.
+
+`publication.combine_answers` là override boolean tùy chọn: mặc định bật cho `exam`, tắt cho hai loại bài giảng. Bật gộp cần variant `de-dap-an` đã triển khai trong Typst; flag không ghép máy móc hai PDF hoặc tạo nội dung thiếu. Các override phải đi kèm variant phù hợp, không khai báo chỉ để lặp lại mặc định. `publication.category` chỉ dùng khi cần đổi đích xuất bản; không đổi category local.
+
 ## Cấu trúc lưu trữ
 
 ```text
-math-materials/
-├── README.md
-├── docs/                                 # Mô hình, build và xuất bản
-├── assets/
-│   ├── fonts/dxt/                         # Font 9Slide nguyên bản do người dùng cung cấp
-│   ├── sources/YYYY-MM/<Đề thi|Chuyên đề|Livestream>/<document-id>/   # DOCX/ảnh/PDF đầu vào
-│   └── targets/YYYY-MM/<Đề thi|Chuyên đề|Livestream>/<document-id>/   # PDF đầu ra
-├── documents/YYYY-MM/<Đề thi|Chuyên đề|Livestream>/<document-id>/
-│   ├── manifest.json                      # Mapping và trạng thái
-│   ├── main.typ                           # Mã nguồn tài liệu
-│   ├── content/                           # Chỉ tách khi tài liệu dài
-│   └── figures/                           # Mã hình .typ / SVG nếu cần
-├── templates/                             # Theme/component .typ dùng chung
-├── scripts/build.py                       # Build các bản xuất theo manifest
-└── skills/<skill>/SKILL.md                 # Bốn skill theo trách nhiệm
+assets/sources/YYYY-MM/<category>/<document-id>/source.*
+documents/YYYY-MM/<category>/<document-id>/
+  manifest.json
+  main.typ
+  content/       # Khi cần tách nội dung
+  figures/       # Mô hình và tài nguyên riêng
+assets/targets/YYYY-MM/<category>/<document-id>/*.pdf
 ```
 
-Tên file tài nguyên dùng chữ thường không dấu, nối bằng `-`, không có dấu cách hoặc `#`; tên gốc giữ trong manifest. Tên family bên trong font không đổi khi đổi tên file `.ttf`. Thư mục gốc chỉ giữ README, Makefile và các thư mục chức năng; không để ảnh/font upload rời ở gốc. Chỉ lưu bản mẫu cũ khi cần giữ lịch sử. Chỉ bỏ bản trùng sau khi checksum khớp với bản lưu chính.
+Category local gồm `Đề thi`, `Chuyên đề`, `Livestream`. Dùng cùng tháng/category/ID ở ba cây thư mục. Tháng là tháng tiếp nhận, độc lập với `DRIVE_MONTH` khi xuất bản. Giữ ID cũ khi đổi category; tài liệu chuyên đề mới dùng tiền tố `th-`.
 
-Đây là quy ước tổ chức; các thư mục tùy chọn chỉ được tạo khi cần. Mô hình hình học và tài nguyên riêng nằm trong thư mục tài liệu; theme, component và hàm vẽ dùng chung nằm trong `templates/`. Tài liệu mới import bộ hàm chung thay vì sao chép mã vẽ hoặc style.
+ID và tên tài nguyên dùng chữ thường không dấu, nối bằng `-`, không có dấu cách hoặc `#`; giữ tên nguồn gốc trong manifest. Font đổi tên file không đổi family. Nguồn gốc chỉ đọc; bản crop/xoay phục vụ kiểm tra lưu riêng. Ảnh bổ sung vào đúng bộ hiện có dù nhận ngày khác; trang nguồn dùng số trang thực, không suy từ thứ tự upload.
 
-## Định danh và nguồn
+Tài nguyên chung ở `templates/`, `assets/fonts/`, `assets/branding/`; không sao chép theme hoặc hàm hình sang từng tài liệu. `assets/targets/` được Git bỏ qua; chỉ tạo thư mục phụ khi có nội dung.
 
-- `YYYY-MM` là tháng tiếp nhận; phân loại `Đề thi`, `Chuyên đề` hoặc `Livestream`. Ngày tiếp nhận đầy đủ vẫn lưu trong manifest.
-- `<document-id>` dùng chữ thường, không dấu, nối bằng `-`; chọn tên theo môn, lớp, chủ đề hoặc mã đề để phân biệt tài liệu.
-- Dùng cùng tháng, loại và ID ở `sources`, `documents`, `targets`. Nhiều tài liệu trong một tháng dùng ID khác nhau.
-- Trang nguồn đặt tên theo số trang thực: `page-01.jpg`, `page-02.jpg`, ... Không suy ra số trang từ thứ tự upload.
-- Ảnh bổ sung của cùng tài liệu đưa vào bộ đã có, dù nhận vào ngày khác; cập nhật manifest.
-- Bản xuất Google Docs lưu thành `source.docx`; URL và tên gốc nằm trong manifest. Nguồn nội dung và mẫu trình bày là hai vai trò riêng.
-- Giữ nguyên nội dung nguồn. Bản xoay/cắt/tăng tương phản phục vụ đọc nguồn, nếu có, lưu riêng.
-- Nếu cần giữ nhiều bản PDF, dùng `document-v01.pdf`, `document-v02.pdf` và cập nhật mapping.
+## Manifest schema 1
 
-Mỗi `manifest.json` lưu ID/ngày, metadata từ nguồn, tên file gốc, đường dẫn ảnh, số trang gốc, SHA-256, trạng thái xử lý và đường dẫn Typst/PDF. Đường dẫn tính từ gốc kho; phân biệt đường dẫn dự kiến với file đã tạo. Ghi điểm thiếu/mờ, kết quả kiểm tra và mapping theo câu/hình tại đây khi cần; không thêm trường rỗng hoặc file ghi chú riêng.
+`load_manifest` kiểm tra version, kind, ID, ngày, tiêu đề, scope, mapping và tên file trước khi build hoặc xuất bản. Không dùng manifest làm nhật ký chỉnh thiết kế; Git lưu lịch sử, skills/theme lưu convention hiện hành.
 
-Chuyên đề dùng ID có tiền tố `th-`; đề thi không thêm tiền tố này. Tháng trong đường dẫn là tháng tiếp nhận, độc lập với tháng đích khi xuất bản.
-
-## Manifest và biến thể
-
-Manifest là nơi lưu dữ liệu riêng của từng tài liệu; không đưa danh sách variant hoặc ngoại lệ của từng bộ vào convention chung.
-
-| Thành phần | Ý nghĩa |
+| Trường | Nội dung |
 |---|---|
-| Nguồn và metadata | Danh tính tài liệu, ngày tiếp nhận, tên gốc, đường dẫn, checksum, phạm vi và mapping câu/trang |
-| `implementation` | Template và quyết định triển khai |
-| `variants` | Các bản xuất thực sự cần; mỗi bản có `filename` và `inputs` |
-| `output` / `outputs` | Kết quả build: đường dẫn, số trang, byte, checksum |
-| `qa` | Kết quả kiểm tra của đúng bản xuất hiện tại |
-| `figure_renders` | Hình cần render trước khi biên dịch; xem [build](build.md) |
-| `drive.filenames` | Tên hiển thị của từng PDF trên Drive; xem [xuất bản](publishing.md) |
+| `schema_version` | `1` |
+| `id`, `kind`, `received_date`, `status` | Định danh, profile, ngày tiếp nhận và trạng thái xử lý |
+| `metadata.title` | Tiêu đề bắt buộc ở một vị trí duy nhất; các metadata nguồn khác ở cùng object |
+| `sources` | Đường dẫn nguồn, tên gốc, byte, SHA-256 |
+| `scope` | Hai boolean `has_questions`, `has_solutions`; số câu/phạm vi trang nguồn nếu biết |
+| `content_mapping` | Danh sách `{id, role, source}`; ID duy nhất, role là source/question/solution/figure; source giữ vị trí và dữ kiện đối chiếu |
+| `provenance` | Lỗi/corrections nguồn, bằng chứng đọc công thức, quyết định nội dung và mapping tài nguyên; không chứa lịch sử sửa màu/spacing |
+| `variants` | Các recipe Typst khả dụng: tên variant → `{filename, inputs}` |
+| `publication` | Chỉ các override cần thiết, như `combine_answers`, `category` |
+| `drive` | `folder` phải khớp đích profile/override; `filenames` giữ tên hiển thị hiện có |
+| `figure_renders` | Entry/output/input/PPI cho hình render trước khi build |
+| `outputs`, `qa` | Kết quả build và kiểm tra của đúng bản xuất |
 
-Các variant dùng chung nội dung Typst, chọn cách xuất qua `sys.inputs`:
+Đường dẫn trong manifest tính từ gốc repo, riêng entry/output của `figure_renders` tính từ thư mục tài liệu. Mapping không tự thay nội dung: khóa phần/câu trong mã Typst liên kết câu với lời giải; không dùng index mảng phẳng viết tay.
 
-| Variant | Nội dung | Tên local thông dụng |
-|---|---|---|
-| `de` | Đề, không có dòng viết | `de.pdf` |
-| `de-cach` | Đề có vùng viết lời giải | `de-cach.pdf` |
-| `dap-an` | Đáp án/lời giải trong phạm vi đã thống nhất | `dap-an.pdf` |
-| `de-dap-an` | Đề và đáp án chung một file | `de-dap-an.pdf` |
+`variants` là recipe khả dụng, không phải danh sách mặc định upload. Các recipe riêng của đề thi được giữ để đối chiếu hoặc build chủ động bằng `VARIANT`; profile chỉ xuất bản gộp. File cũ đã build có thể còn ở targets nhưng không tự được upload vì không thuộc kế hoạch xuất bản. Tên local thông dụng là `de.pdf`, `de-cach.pdf`, `dap-an.pdf`, `de-dap-an.pdf`.
 
-Không bắt buộc tài liệu nào cũng có đủ bốn bản. Nguồn chỉ có đề thì chưa tạo đáp án; không có `variants` thì build xuất `document.pdf`. Quy tắc nội dung nằm trong [math-transcription](../skills/math-transcription/SKILL.md), bố cục từng bản trong [typst-layout](../skills/typst-layout/SKILL.md).
-
-Category chỉ phân loại tài liệu, không quyết định bộ variant. Mọi category dùng cùng quy tắc: khai báo những bản thực sự có; đáp án có thể bổ sung trước hoặc sau đề. Bộ 12 câu Livestream hiện có `de` và `de-cach` vì chưa có nguồn đáp án. Category local vẫn là `Livestream`, tạm định tuyến Drive/Sheet vào `Chuyên đề` qua `publication_category`.
-
-`publication.combine_answers` là flag boolean trong manifest, mặc định `false`. Khi bật, cần có variant `de-dap-an` đã build; Sheet ghi bản gộp thay cho hai dòng riêng. Flag không tự tạo lời giải hoặc ghép PDF chưa được dựng. Nguyễn Khuyến bật flag này. Có `de-cach` thì luôn ghi link bản cách, kể cả khi dùng bản gộp.
+Quy tắc chép nguồn: [math-transcription](../skills/math-transcription/SKILL.md). Quy tắc trình bày: [typst-layout](../skills/typst-layout/SKILL.md).

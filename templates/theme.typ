@@ -1,5 +1,10 @@
 #let palette = (
   primary: rgb("#A80F2D"),
+  course-green: rgb("#008000"),
+  lesson-green: rgb("#008A16"),
+  lesson-badge: rgb("#006B18"),
+  lesson-badge-light: rgb("#E9F8E9"),
+  lesson-badge-shade: rgb("#8FC398"),
   geometry-secondary: rgb("#12647A"),
   geometry-tint: rgb("#B9DDE3"),
   geometry-blue: rgb("#0077C8"),
@@ -19,18 +24,30 @@
 )
 
 // Exam colors are independent of the DXT lesson identity.
-#let exam-palette = palette + (
-  primary: rgb("#C8102E"),
-  geometry-secondary: rgb("#12647A"),
-  geometry-tint: rgb("#B9DDE3"),
-  exam-blue: rgb("#0055B8"),
+#let exam-palette = (
+  palette
+    + (
+      primary: rgb("#C8102E"),
+      cover-title: rgb("#C6001D"),
+      cover-rule: rgb("#E4B7C0"),
+      code-fill: rgb("#F8E4E8"),
+      geometry-secondary: rgb("#12647A"),
+      geometry-tint: rgb("#B9DDE3"),
+      exam-blue: rgb("#0055B8"),
+    )
 )
 
-#let fonts = (body: ("Times New Roman", "FreeSerif"), math: "New Computer Modern Math", ui: "Noto Sans", course: "Arial",
+#let fonts = (
+  body: ("Times New Roman", "FreeSerif"),
+  math: "New Computer Modern Math",
+  ui: "Noto Sans",
+  course: "Arial",
   lesson-title: "#9Slide02 Tieu de dai",
   lesson-title-long: "#9Slide02 Tieu de rat dai 01",
   lesson-title-longer: "#9Slide02 Tieu de rat dai 02",
-  subtitle: "#9Slide02 Noi dung dai", section: "#9Slide02 Tieu de dai")
+  subtitle: "#9Slide02 Noi dung dai",
+  section: "#9Slide02 Tieu de dai",
+)
 
 #let line-style = (edge: 0.8pt, fine: 0.5pt, underline: 0.45pt, hatch: 0.35pt)
 
@@ -149,15 +166,31 @@
 )
 
 #let exam-style = (
-  margin: (x: 12mm, top: 16mm, bottom: 18mm),
-  body-size: 12.5pt, running-size: 11pt, running-weight: 400, running-stroke: 0.12pt, leading: 0.76em, question-gap: 5mm,
-  section-gap: 5mm, statement-gap: 4mm,
+  margin: (x: 12mm, top: 18mm, bottom: 16mm),
+  body-size: 12.5pt,
+  running-size: 11pt,
+  running-weight: 400,
+  running-stroke: 0.12pt,
+  leading: 0.76em,
+  question-gap: 5mm,
+  section-gap: 5mm,
+  statement-gap: 4mm,
+  end-rule: 22mm,
+  end-gap: 3mm,
+  end-stroke: 0.65pt,
+  end-above: 5mm,
+  end-note-gap: 2mm,
+  figure-gap: 2mm,
+  solution-above: 8mm,
+  solution-below: 3mm,
 )
 
 #let writing-style = (solution-gap: 6mm, ruled-gap: 8mm, ruled-width: 0.4pt, ruled-opacity: 20%)
 
 #let plot-style = (
-  width: 70mm, height: 48mm, label-size: 10pt,
+  width: 70mm,
+  height: 48mm,
+  label-size: 10pt,
   curve: 1.5pt + rgb("#005FE6"),
   guide: (paint: rgb("#67727A"), thickness: 0.55pt, dash: "dashed"),
   table-fill: exam-palette.primary,

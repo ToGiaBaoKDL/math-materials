@@ -1,8 +1,16 @@
 {
+  "schema_version": 1,
   "id": "nguyen-binh-khiem-toan-12-khao-sat-lan-1-ma-0115",
+  "kind": "exam",
   "received_date": "2026-10-13",
   "status": "ready",
-  "template": "exam",
+  "metadata": {
+    "subject": "Toán 12",
+    "school_year": "2026–2027",
+    "duration_minutes": 90,
+    "exam_code": "0115",
+    "title": "NGUYEN-BINH-KHIEM-TOAN-12-KHAO-SAT-LAN-1-MA-0115"
+  },
   "sources": [
     {
       "path": "assets/sources/2026-10/Đề thi/nguyen-binh-khiem-toan-12-khao-sat-lan-1-ma-0115/source.pdf",
@@ -12,6 +20,86 @@
       "pages": 14
     }
   ],
+  "scope": {
+    "questions": {
+      "I": 12,
+      "II": 4,
+      "III": 6
+    },
+    "source_question_pages": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "has_solutions": true,
+    "source_solution_pages": [
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13
+    ],
+    "excluded": "Source attribution heading and final publisher disclaimer omitted from output at user request.",
+    "has_questions": true
+  },
+  "content_mapping": [
+    {
+      "id": "source:I-1",
+      "role": "source",
+      "source": {
+        "section": "I",
+        "questions": "1–12",
+        "source_pages": [
+          1,
+          2,
+          3
+        ]
+      }
+    },
+    {
+      "id": "source:II-2",
+      "role": "source",
+      "source": {
+        "section": "II",
+        "questions": "1–4",
+        "source_pages": [
+          3,
+          4
+        ]
+      }
+    },
+    {
+      "id": "source:III-3",
+      "role": "source",
+      "source": {
+        "section": "III",
+        "questions": "1–6",
+        "source_pages": [
+          4,
+          5
+        ]
+      }
+    }
+  ],
+  "provenance": {
+    "source_notes": [
+      "Cover says 4 pages, but questions occupy PDF pages 1–5. Output folio uses actual generated page count.",
+      "Solution reasoning and answers transcribed from pages 6–13; wording condensed without removing mathematical steps."
+    ],
+    "figure_assets": [
+      {
+        "path": "documents/2026-10/Đề thi/nguyen-binh-khiem-toan-12-khao-sat-lan-1-ma-0115/figures/rice-mill.png",
+        "original_name": "Industrial Red and Gray Grain Mill.png",
+        "sha256": "ce26a8cf6ed99abe8e90084d463fb854e3ebc9af2c1ddc45e33b9291d880bffb",
+        "role": "User-provided red and gray grain mill, original transparent PNG preserved; proportional 54mm fit centered in 58mm square alongside net."
+      }
+    ]
+  },
   "variants": {
     "de": {
       "filename": "de.pdf",
@@ -30,6 +118,65 @@
       "inputs": {
         "variant": "dap-an"
       }
+    },
+    "de-dap-an": {
+      "filename": "de-dap-an.pdf",
+      "inputs": {
+        "variant": "de-dap-an"
+      }
+    }
+  },
+  "figure_renders": [
+    {
+      "entry": "figures/render.typ",
+      "output": "figures/generated/net.png",
+      "inputs": {
+        "figure": "net"
+      },
+      "ppi": 600
+    },
+    {
+      "entry": "figures/render.typ",
+      "output": "figures/generated/square.png",
+      "inputs": {
+        "figure": "square"
+      },
+      "ppi": 600
+    }
+  ],
+  "drive": {
+    "folder": "Đề thi",
+    "filenames": {
+      "de": "NGUYEN-BINH-KHIEM-TOAN-12-KHAO-SAT-LAN-1-MA-0115 - ĐỀ.pdf",
+      "de-cach": "NGUYEN-BINH-KHIEM-TOAN-12-KHAO-SAT-LAN-1-MA-0115 - ĐỀ CÁCH.pdf",
+      "dap-an": "NGUYEN-BINH-KHIEM-TOAN-12-KHAO-SAT-LAN-1-MA-0115 - ĐÁP ÁN.pdf",
+      "de-dap-an": "NGUYEN-BINH-KHIEM-TOAN-12-KHAO-SAT-LAN-1-MA-0115 - ĐỀ + ĐÁP ÁN.pdf"
+    }
+  },
+  "outputs": {
+    "de": {
+      "pdf": "assets/targets/2026-10/Đề thi/nguyen-binh-khiem-toan-12-khao-sat-lan-1-ma-0115/de.pdf",
+      "pages": 5,
+      "bytes": 1991982,
+      "sha256": "3b1b1fe5448369560cbe26e86a7e8afcc7ee3d8a0a93e962e108167a704c0a22"
+    },
+    "de-cach": {
+      "pdf": "assets/targets/2026-10/Đề thi/nguyen-binh-khiem-toan-12-khao-sat-lan-1-ma-0115/de-cach.pdf",
+      "pages": 12,
+      "bytes": 2014763,
+      "sha256": "fc7802fdc1bd0807b7e25777a9069184f3f1f6d1e6a03572bc378f92495f2442"
+    },
+    "dap-an": {
+      "pdf": "assets/targets/2026-10/Đề thi/nguyen-binh-khiem-toan-12-khao-sat-lan-1-ma-0115/dap-an.pdf",
+      "pages": 10,
+      "bytes": 2088512,
+      "sha256": "6e5636cad6f3a532208a64c772ac711893ee3c56aac25694e5fc6475628acd01"
+    },
+    "de-dap-an": {
+      "pdf": "assets/targets/2026-10/Đề thi/nguyen-binh-khiem-toan-12-khao-sat-lan-1-ma-0115/de-dap-an.pdf",
+      "pages": 14,
+      "bytes": 2204499,
+      "sha256": "28ac254b95f6e576edfb15c387e13c1e2406d43a7aac1da2838d4adeec977e8e"
     }
   },
   "qa": {
@@ -88,183 +235,6 @@
       "heading": "Noto Sans bold 11.5pt, horizontal fitting for long headings, matched line spacing, right inset 8mm. Blue #0055B8/red #C8102E.",
       "curve": "#005FE6 at 1.5pt",
       "validation": "All variants compiled; text bounds checked; standalone heading, box-net and factory inspected. Full-page visual review pending."
-    }
-  },
-  "outputs": {
-    "de": {
-      "pdf": "assets/targets/2026-10/Đề thi/nguyen-binh-khiem-toan-12-khao-sat-lan-1-ma-0115/de.pdf",
-      "pages": 5,
-      "bytes": 1991982,
-      "sha256": "3b1b1fe5448369560cbe26e86a7e8afcc7ee3d8a0a93e962e108167a704c0a22"
-    },
-    "de-cach": {
-      "pdf": "assets/targets/2026-10/Đề thi/nguyen-binh-khiem-toan-12-khao-sat-lan-1-ma-0115/de-cach.pdf",
-      "pages": 12,
-      "bytes": 2014763,
-      "sha256": "fc7802fdc1bd0807b7e25777a9069184f3f1f6d1e6a03572bc378f92495f2442"
-    },
-    "dap-an": {
-      "pdf": "assets/targets/2026-10/Đề thi/nguyen-binh-khiem-toan-12-khao-sat-lan-1-ma-0115/dap-an.pdf",
-      "pages": 10,
-      "bytes": 2088512,
-      "sha256": "6e5636cad6f3a532208a64c772ac711893ee3c56aac25694e5fc6475628acd01"
-    }
-  },
-  "metadata": {
-    "subject": "Toán 12",
-    "school_year": "2026–2027",
-    "duration_minutes": 90,
-    "exam_code": "0115"
-  },
-  "scope": {
-    "questions": {
-      "I": 12,
-      "II": 4,
-      "III": 6
-    },
-    "source_question_pages": [
-      1,
-      2,
-      3,
-      4,
-      5
-    ],
-    "has_solutions": true,
-    "source_solution_pages": [
-      6,
-      7,
-      8,
-      9,
-      10,
-      11,
-      12,
-      13
-    ],
-    "excluded": "Source attribution heading and final publisher disclaimer omitted from output at user request."
-  },
-  "source_notes": [
-    "Cover says 4 pages, but questions occupy PDF pages 1–5. Output folio uses actual generated page count.",
-    "Solution reasoning and answers transcribed from pages 6–13; wording condensed without removing mathematical steps."
-  ],
-  "mapping": [
-    {
-      "section": "I",
-      "questions": "1–12",
-      "source_pages": [
-        1,
-        2,
-        3
-      ]
-    },
-    {
-      "section": "II",
-      "questions": "1–4",
-      "source_pages": [
-        3,
-        4
-      ]
-    },
-    {
-      "section": "III",
-      "questions": "1–6",
-      "source_pages": [
-        4,
-        5
-      ]
-    }
-  ],
-  "figure_assets": [
-    {
-      "path": "documents/2026-10/Đề thi/nguyen-binh-khiem-toan-12-khao-sat-lan-1-ma-0115/figures/rice-mill.png",
-      "original_name": "Industrial Red and Gray Grain Mill.png",
-      "sha256": "ce26a8cf6ed99abe8e90084d463fb854e3ebc9af2c1ddc45e33b9291d880bffb",
-      "role": "User-provided red and gray grain mill, original transparent PNG preserved; proportional 54mm fit centered in 58mm square alongside net."
-    }
-  ],
-  "implementation": {
-    "entry": "documents/2026-10/Đề thi/nguyen-binh-khiem-toan-12-khao-sat-lan-1-ma-0115/main.typ",
-    "template": "templates/exam.typ",
-    "body_font": "Times New Roman",
-    "math_font": "New Computer Modern Math",
-    "body_size_pt": 13,
-    "question_prefix": "ruby red",
-    "section_and_choice_labels": "navy",
-    "figures": "Graphs remain vector. Square and hopper net use 600 dpi embedded images generated from figures/geometry.typ for stable low-zoom edge rendering. Rice mill is the user-supplied replacement photograph.",
-    "writing_space": "Shared minimum ruled lines plus fractional fill of remaining page height.",
-    "design_refinements": {
-      "leading_em": 0.76,
-      "statement_gap_mm": 4,
-      "graph_mm": [
-        70,
-        48
-      ],
-      "graph_choice_mm": [
-        65,
-        42
-      ],
-      "graph_label_pt": 10,
-      "arrows": "Unit-vector arrowheads aligned with line direction",
-      "labels": "Offset outside axes, drawn last with clear backing; origin avoids nearby negative tick",
-      "tables": "Rose header and navy labels, unified grid strokes",
-      "geometry": "1.5 pt model edges rendered to 600 dpi images for the square and hopper net.",
-      "ending": "Bottom of final content page, above examination notes and folio",
-      "question_gap_mm": 6,
-      "statement_before_mm": 5,
-      "pagination": "Figures and tables stay intact; final answer prompt, solution and ending stay together.",
-      "answer_leading_em": 0.95,
-      "solution_gap_mm": 8
-    },
-    "branding": "templates/exam-branding.typ; logo-original.png; assets/branding/icons/*.svg",
-    "exam_revision": {
-      "header": "Thầy Đỗ Xuân Thắng - Luyện Thi 9+ Toán 10.11.12; 11.5pt",
-      "footer": "Facebook & TikTok icons with ampersand",
-      "cover": "Organization/title 12pt, same red; plain candidate labels; aligned dotted lines; larger code box; 1.2pt separator",
-      "body": "12.5pt; leading 0.95em, NBK answer 1.0em",
-      "figures": "Full original size by default. Only NBK I.8 answer figure at 88% to keep it on the question page.",
-      "pagination": "Choices/solutions may continue on next page; final writing question remains together.",
-      "credits": "TOANMATH in all variants; original AI and unofficial-transcription notice restored in NBK answers."
-    },
-    "rice_mill": "Red and gray mill PNG; proportional 54mm fit centered in unchanged 58mm square beside net. Old rice-mill.jpg removed.",
-    "net_colors": "Mint/teal base EFGH matches the folded pyramid base; pale red lateral faces; red edges preserved, hidden edges dashed. At most two main hues.",
-    "running_matter": "Optically balanced exam typography: Times New Roman body 12pt; Noto Sans header/footer 11pt via separate shared theme tokens. Header close to 1pt red rule.",
-    "answer_frame": "dap-an only: complete question including figures/options in rounded red 0.7pt frame, 2mm radius, 3.5mm inset, pale fill. Solution outside.",
-    "cover_leading": "0.65em for organization, school and exam title block (increased from 0.45em).",
-    "cover_rule": "Dashed primary-red separator, 0.9pt matching exam-code box border. Header solid 1pt.",
-    "exam_color_revision": {
-      "primary": "#A80F2D",
-      "secondary": "#12647A",
-      "figure_tint": "#B9DDE3",
-      "tables": "Data tables retain dark red header with white text; variation tables use #F1D8DE with dark labels.",
-      "code_box": "#F1D8DE background with #A80F2D text and border.",
-      "scope": "Exam palette only; lesson palette unchanged.",
-      "graph_curve": "#58118C, 1.5pt",
-      "sphere_radial_guides": "#163A5F, 1.45pt dashed"
-    }
-  },
-  "figure_renders": [
-    {
-      "entry": "figures/render.typ",
-      "output": "figures/generated/net.png",
-      "inputs": {
-        "figure": "net"
-      },
-      "ppi": 600
-    },
-    {
-      "entry": "figures/render.typ",
-      "output": "figures/generated/square.png",
-      "inputs": {
-        "figure": "square"
-      },
-      "ppi": 600
-    }
-  ],
-  "drive": {
-    "folder": "Đề thi",
-    "filenames": {
-      "de": "NGUYEN-BINH-KHIEM-TOAN-12-KHAO-SAT-LAN-1-MA-0115 - ĐỀ.pdf",
-      "de-cach": "NGUYEN-BINH-KHIEM-TOAN-12-KHAO-SAT-LAN-1-MA-0115 - ĐỀ CÁCH.pdf",
-      "dap-an": "NGUYEN-BINH-KHIEM-TOAN-12-KHAO-SAT-LAN-1-MA-0115 - ĐÁP ÁN.pdf"
     }
   }
 }

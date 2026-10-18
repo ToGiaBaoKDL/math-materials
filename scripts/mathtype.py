@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+import argparse
 import json
 import re
 import struct
@@ -341,7 +342,6 @@ def extract(source):
 
 
 def main():
-    import argparse
 
     parser = argparse.ArgumentParser(
         description="Decode MathType 5 OLE equations to native Typst math and verify WMF previews."

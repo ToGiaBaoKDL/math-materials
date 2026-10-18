@@ -1,8 +1,16 @@
 {
+  "schema_version": 1,
   "id": "phan-boi-chau-toan-12-giua-ky-1-ma-1108",
+  "kind": "exam",
   "received_date": "2026-10-13",
   "status": "implemented",
-  "template": "exam",
+  "metadata": {
+    "subject": "Toán 12",
+    "school_year": "2026–2027",
+    "duration_minutes": 90,
+    "exam_code": "1108",
+    "title": "PHAN-BOI-CHAU-TOAN-12-GIUA-KY-1-MA-1108"
+  },
   "sources": [
     {
       "path": "assets/sources/2026-10/Đề thi/phan-boi-chau-toan-12-giua-ky-1-ma-1108/source.pdf",
@@ -20,6 +28,300 @@
       "sha256": "2d98b250d431751d2487b82d3c32d8e5b827e333d7d2948dd43bbfbe30e12dfc"
     }
   ],
+  "scope": {
+    "questions": {
+      "I": 12,
+      "II": 4,
+      "III": 6
+    },
+    "source_question_pages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "has_solutions": true,
+    "has_questions": true
+  },
+  "content_mapping": [
+    {
+      "id": "source:I-1",
+      "role": "source",
+      "source": {
+        "section": "I",
+        "questions": "1–12",
+        "source_pages": [
+          1,
+          2,
+          3
+        ]
+      }
+    },
+    {
+      "id": "source:II-2",
+      "role": "source",
+      "source": {
+        "section": "II",
+        "questions": "1–4",
+        "source_pages": [
+          3,
+          4
+        ]
+      }
+    },
+    {
+      "id": "source:III-3",
+      "role": "source",
+      "source": {
+        "section": "III",
+        "questions": "1–6",
+        "source_pages": [
+          4,
+          5,
+          6
+        ]
+      }
+    },
+    {
+      "id": "solution:I-1",
+      "role": "solution",
+      "source": {
+        "section": "I",
+        "number": 1,
+        "source_paragraph": 82,
+        "source_end_exclusive": 91
+      }
+    },
+    {
+      "id": "solution:I-2",
+      "role": "solution",
+      "source": {
+        "section": "I",
+        "number": 2,
+        "source_paragraph": 91,
+        "source_end_exclusive": 99
+      }
+    },
+    {
+      "id": "solution:I-3",
+      "role": "solution",
+      "source": {
+        "section": "I",
+        "number": 3,
+        "source_paragraph": 99,
+        "source_end_exclusive": 103
+      }
+    },
+    {
+      "id": "solution:I-4",
+      "role": "solution",
+      "source": {
+        "section": "I",
+        "number": 4,
+        "source_paragraph": 103,
+        "source_end_exclusive": 109
+      }
+    },
+    {
+      "id": "solution:I-5",
+      "role": "solution",
+      "source": {
+        "section": "I",
+        "number": 5,
+        "source_paragraph": 109,
+        "source_end_exclusive": 116
+      }
+    },
+    {
+      "id": "solution:I-6",
+      "role": "solution",
+      "source": {
+        "section": "I",
+        "number": 6,
+        "source_paragraph": 116,
+        "source_end_exclusive": 120
+      }
+    },
+    {
+      "id": "solution:I-7",
+      "role": "solution",
+      "source": {
+        "section": "I",
+        "number": 7,
+        "source_paragraph": 120,
+        "source_end_exclusive": 125
+      }
+    },
+    {
+      "id": "solution:I-8",
+      "role": "solution",
+      "source": {
+        "section": "I",
+        "number": 8,
+        "source_paragraph": 125,
+        "source_end_exclusive": 130
+      }
+    },
+    {
+      "id": "solution:I-9",
+      "role": "solution",
+      "source": {
+        "section": "I",
+        "number": 9,
+        "source_paragraph": 130,
+        "source_end_exclusive": 137
+      }
+    },
+    {
+      "id": "solution:I-10",
+      "role": "solution",
+      "source": {
+        "section": "I",
+        "number": 10,
+        "source_paragraph": 137,
+        "source_end_exclusive": 142
+      }
+    },
+    {
+      "id": "solution:I-11",
+      "role": "solution",
+      "source": {
+        "section": "I",
+        "number": 11,
+        "source_paragraph": 142,
+        "source_end_exclusive": 152
+      }
+    },
+    {
+      "id": "solution:I-12",
+      "role": "solution",
+      "source": {
+        "section": "I",
+        "number": 12,
+        "source_paragraph": 152,
+        "source_end_exclusive": 163
+      }
+    },
+    {
+      "id": "solution:II-1",
+      "role": "solution",
+      "source": {
+        "section": "II",
+        "number": 1,
+        "source_paragraph": 163,
+        "source_end_exclusive": 197
+      }
+    },
+    {
+      "id": "solution:II-2",
+      "role": "solution",
+      "source": {
+        "section": "II",
+        "number": 2,
+        "source_paragraph": 197,
+        "source_end_exclusive": 216
+      }
+    },
+    {
+      "id": "solution:II-3",
+      "role": "solution",
+      "source": {
+        "section": "II",
+        "number": 3,
+        "source_paragraph": 216,
+        "source_end_exclusive": 240
+      }
+    },
+    {
+      "id": "solution:II-4",
+      "role": "solution",
+      "source": {
+        "section": "II",
+        "number": 4,
+        "source_paragraph": 240,
+        "source_end_exclusive": 259
+      }
+    },
+    {
+      "id": "solution:III-1",
+      "role": "solution",
+      "source": {
+        "section": "III",
+        "number": 1,
+        "source_paragraph": 259,
+        "source_end_exclusive": 269
+      }
+    },
+    {
+      "id": "solution:III-2",
+      "role": "solution",
+      "source": {
+        "section": "III",
+        "number": 2,
+        "source_paragraph": 269,
+        "source_end_exclusive": 279
+      }
+    },
+    {
+      "id": "solution:III-3",
+      "role": "solution",
+      "source": {
+        "section": "III",
+        "number": 3,
+        "source_paragraph": 279,
+        "source_end_exclusive": 293
+      }
+    },
+    {
+      "id": "solution:III-4",
+      "role": "solution",
+      "source": {
+        "section": "III",
+        "number": 4,
+        "source_paragraph": 293,
+        "source_end_exclusive": 304
+      }
+    },
+    {
+      "id": "solution:III-5",
+      "role": "solution",
+      "source": {
+        "section": "III",
+        "number": 5,
+        "source_paragraph": 304,
+        "source_end_exclusive": 315
+      }
+    },
+    {
+      "id": "solution:III-6",
+      "role": "solution",
+      "source": {
+        "section": "III",
+        "number": 6,
+        "source_paragraph": 315,
+        "source_end_exclusive": 328
+      }
+    }
+  ],
+  "provenance": {
+    "source_notes": [
+      "I.4 option C (x=1) and II.3 volume 33150 preserved as printed.",
+      "I.12 C is a schematic distractor: preserve both marked asymptotes and the source guide (-3,3); branches drawn independently to retain the original shape and axis intercepts.",
+      "Cube/sphere illustration uses a valid member of the tangency family, with no inferred radius added as a label."
+    ],
+    "source_review_notes": [
+      {
+        "id": "II-1-d",
+        "note": "Source explicitly treats integer product count: n=815 gives x≈34.062874 million, so d is False; retained."
+      },
+      {
+        "id": "II-3-a",
+        "note": "Source marks True after rounding t≈47.923460 to 48 minutes, although the statement does not explicitly authorize rounding. Source answer retained; ambiguity flagged for author review."
+      }
+    ]
+  },
   "variants": {
     "de": {
       "filename": "de.pdf",
@@ -38,6 +340,89 @@
       "inputs": {
         "variant": "dap-an"
       }
+    },
+    "de-dap-an": {
+      "filename": "de-dap-an.pdf",
+      "inputs": {
+        "variant": "de-dap-an"
+      }
+    }
+  },
+  "figure_renders": [
+    {
+      "entry": "figures/render.typ",
+      "output": "figures/generated/window.png",
+      "inputs": {
+        "figure": "window"
+      },
+      "ppi": 600
+    },
+    {
+      "entry": "figures/render.typ",
+      "output": "figures/generated/tank.png",
+      "inputs": {
+        "figure": "tank"
+      },
+      "ppi": 600
+    },
+    {
+      "entry": "figures/render.typ",
+      "output": "figures/generated/led.png",
+      "inputs": {
+        "figure": "led"
+      },
+      "ppi": 600
+    },
+    {
+      "entry": "figures/render.typ",
+      "output": "figures/generated/spheres.png",
+      "inputs": {
+        "figure": "spheres"
+      },
+      "ppi": 600
+    },
+    {
+      "entry": "figures/render.typ",
+      "output": "figures/generated/pyramid.png",
+      "inputs": {
+        "figure": "pyramid"
+      },
+      "ppi": 600
+    }
+  ],
+  "drive": {
+    "folder": "Đề thi",
+    "filenames": {
+      "de": "PHAN-BOI-CHAU-TOAN-12-GIUA-KY-1-MA-1108 - ĐỀ.pdf",
+      "de-cach": "PHAN-BOI-CHAU-TOAN-12-GIUA-KY-1-MA-1108 - ĐỀ CÁCH.pdf",
+      "dap-an": "PHAN-BOI-CHAU-TOAN-12-GIUA-KY-1-MA-1108 - ĐÁP ÁN.pdf",
+      "de-dap-an": "PHAN-BOI-CHAU-TOAN-12-GIUA-KY-1-MA-1108 - ĐỀ + ĐÁP ÁN.pdf"
+    }
+  },
+  "outputs": {
+    "de": {
+      "pdf": "assets/targets/2026-10/Đề thi/phan-boi-chau-toan-12-giua-ky-1-ma-1108/de.pdf",
+      "pages": 7,
+      "bytes": 647105,
+      "sha256": "6cc546d6c16b9e7eab3bd3f37686a8021c027453c29cfbc26c00da50bfe9288c"
+    },
+    "de-cach": {
+      "pdf": "assets/targets/2026-10/Đề thi/phan-boi-chau-toan-12-giua-ky-1-ma-1108/de-cach.pdf",
+      "pages": 13,
+      "bytes": 658973,
+      "sha256": "289a4e91fc874f696530cc78570b7ef53991f41b9d8fcbc168c9af1d94d986ab"
+    },
+    "dap-an": {
+      "pdf": "assets/targets/2026-10/Đề thi/phan-boi-chau-toan-12-giua-ky-1-ma-1108/dap-an.pdf",
+      "pages": 16,
+      "bytes": 808092,
+      "sha256": "a60f674b0bf9bddb5ee96a4c43ba2c4531fc234fad0721c121c26255117e0951"
+    },
+    "de-dap-an": {
+      "pdf": "assets/targets/2026-10/Đề thi/phan-boi-chau-toan-12-giua-ky-1-ma-1108/de-dap-an.pdf",
+      "pages": 23,
+      "bytes": 959066,
+      "sha256": "273ba8f98fee422049e4d2db51ba8326ad2bbe16b1a3516f4838355ec766851a"
     }
   },
   "qa": {
@@ -96,337 +481,5 @@
       "curve": "#005FE6 at 1.5pt",
       "validation": "All variants compiled; text bounds checked; standalone heading, box-net and factory inspected. Full-page visual review pending."
     }
-  },
-  "outputs": {
-    "de": {
-      "pdf": "assets/targets/2026-10/Đề thi/phan-boi-chau-toan-12-giua-ky-1-ma-1108/de.pdf",
-      "pages": 7,
-      "bytes": 647105,
-      "sha256": "6cc546d6c16b9e7eab3bd3f37686a8021c027453c29cfbc26c00da50bfe9288c"
-    },
-    "de-cach": {
-      "pdf": "assets/targets/2026-10/Đề thi/phan-boi-chau-toan-12-giua-ky-1-ma-1108/de-cach.pdf",
-      "pages": 13,
-      "bytes": 658973,
-      "sha256": "289a4e91fc874f696530cc78570b7ef53991f41b9d8fcbc168c9af1d94d986ab"
-    },
-    "dap-an": {
-      "pdf": "assets/targets/2026-10/Đề thi/phan-boi-chau-toan-12-giua-ky-1-ma-1108/dap-an.pdf",
-      "pages": 16,
-      "bytes": 808092,
-      "sha256": "a60f674b0bf9bddb5ee96a4c43ba2c4531fc234fad0721c121c26255117e0951"
-    }
-  },
-  "metadata": {
-    "subject": "Toán 12",
-    "school_year": "2026–2027",
-    "duration_minutes": 90,
-    "exam_code": "1108"
-  },
-  "scope": {
-    "questions": {
-      "I": 12,
-      "II": 4,
-      "III": 6
-    },
-    "source_question_pages": [
-      1,
-      2,
-      3,
-      4,
-      5,
-      6
-    ],
-    "has_solutions": true
-  },
-  "source_notes": [
-    "I.4 option C (x=1) and II.3 volume 33150 preserved as printed.",
-    "I.12 C is a schematic distractor: preserve both marked asymptotes and the source guide (-3,3); branches drawn independently to retain the original shape and axis intercepts.",
-    "Cube/sphere illustration uses a valid member of the tangency family, with no inferred radius added as a label."
-  ],
-  "mapping": [
-    {
-      "section": "I",
-      "questions": "1–12",
-      "source_pages": [
-        1,
-        2,
-        3
-      ]
-    },
-    {
-      "section": "II",
-      "questions": "1–4",
-      "source_pages": [
-        3,
-        4
-      ]
-    },
-    {
-      "section": "III",
-      "questions": "1–6",
-      "source_pages": [
-        4,
-        5,
-        6
-      ]
-    }
-  ],
-  "implementation": {
-    "entry": "documents/2026-10/Đề thi/phan-boi-chau-toan-12-giua-ky-1-ma-1108/main.typ",
-    "template": "templates/exam.typ",
-    "body_font": "Times New Roman",
-    "math_font": "New Computer Modern Math",
-    "body_size_pt": 13,
-    "question_prefix": "ruby red",
-    "section_and_choice_labels": "navy",
-    "figures": "Five geometry illustrations generated at 600 dpi from figures/geometry.typ; graphs and variation tables remain vector.",
-    "writing_space": "Shared minimum ruled lines plus fractional fill of remaining page height.",
-    "design_refinements": {
-      "leading_em": 0.95,
-      "statement_gap_mm": 4,
-      "graph_mm": [
-        70,
-        48
-      ],
-      "graph_choice_mm": [
-        65,
-        65
-      ],
-      "graph_label_pt": 10,
-      "arrows": "Unit-vector arrowheads aligned with line direction",
-      "labels": "2.5 mm tick clearance, 4 mm for negative y labels, side chosen opposite guides, asymptote/root offsets, configurable origin offset.",
-      "tables": "Rose header and navy labels, unified grid strokes",
-      "geometry": "600 dpi geometry: double window border, oblique tank and square pyramid, LED radius derived from source coordinates",
-      "ending": "Bottom of final page above notes and folio",
-      "question_gap_mm": 6,
-      "statement_before_mm": 5,
-      "pagination": "Questions may span pages; figures and variation tables do not split",
-      "graph_first_mm": [
-        68,
-        82
-      ],
-      "tank": "Light fill, solid silhouette, fine dashed equator, complete hidden box edges occluded by ball"
-    },
-    "branding": "templates/exam-branding.typ; logo-original.png; assets/branding/icons/*.svg",
-    "exam_revision": {
-      "header": "Thầy Đỗ Xuân Thắng - Luyện Thi 9+ Toán 10.11.12; 11.5pt",
-      "footer": "Facebook & TikTok icons with ampersand",
-      "cover": "Organization/title 12pt, same red; plain candidate labels; aligned dotted lines; larger code box; 1.2pt separator",
-      "body": "12.5pt; leading 0.95em, NBK answer 1.0em",
-      "figures": "Full original size by default. Only NBK I.8 answer figure at 88% to keep it on the question page.",
-      "pagination": "Choices/solutions may continue on next page; final writing question remains together.",
-      "credits": "TOANMATH in all variants; original AI and unofficial-transcription notice restored in NBK answers."
-    },
-    "geometry_color": "Selected spherical/circular objects: teal #267D8D with pale mint fill; frame/construction stays red; neutral walls/text/axes. Maximum two main hues per figure.",
-    "net_colors": "Mint/teal base EFGH matches the folded pyramid base; pale red lateral faces; red edges preserved, hidden edges dashed. At most two main hues.",
-    "running_matter": "Optically balanced exam typography: Times New Roman body 12pt; Noto Sans header/footer 11pt via separate shared theme tokens. Header close to 1pt red rule.",
-    "answer_frame": "dap-an only: complete question including figures/options in rounded red 0.7pt frame, 2mm radius, 3.5mm inset, pale fill. Solution outside.",
-    "cover_leading": "0.65em for organization, school and exam title block (increased from 0.45em).",
-    "cover_rule": "Dashed primary-red separator, 0.9pt matching exam-code box border. Header solid 1pt.",
-    "exam_color_revision": {
-      "primary": "#A80F2D",
-      "secondary": "#12647A",
-      "figure_tint": "#B9DDE3",
-      "tables": "Data tables retain dark red header with white text; variation tables use #F1D8DE with dark labels.",
-      "code_box": "#F1D8DE background with #A80F2D text and border.",
-      "scope": "Exam palette only; lesson palette unchanged.",
-      "graph_curve": "#58118C, 1.5pt",
-      "sphere_radial_guides": "#163A5F, 1.45pt dashed"
-    }
-  },
-  "figure_renders": [
-    {
-      "entry": "figures/render.typ",
-      "output": "figures/generated/window.png",
-      "inputs": {
-        "figure": "window"
-      },
-      "ppi": 600
-    },
-    {
-      "entry": "figures/render.typ",
-      "output": "figures/generated/tank.png",
-      "inputs": {
-        "figure": "tank"
-      },
-      "ppi": 600
-    },
-    {
-      "entry": "figures/render.typ",
-      "output": "figures/generated/led.png",
-      "inputs": {
-        "figure": "led"
-      },
-      "ppi": 600
-    },
-    {
-      "entry": "figures/render.typ",
-      "output": "figures/generated/spheres.png",
-      "inputs": {
-        "figure": "spheres"
-      },
-      "ppi": 600
-    },
-    {
-      "entry": "figures/render.typ",
-      "output": "figures/generated/pyramid.png",
-      "inputs": {
-        "figure": "pyramid"
-      },
-      "ppi": 600
-    }
-  ],
-  "drive": {
-    "folder": "Đề thi",
-    "filenames": {
-      "de": "PHAN-BOI-CHAU-TOAN-12-GIUA-KY-1-MA-1108 - ĐỀ.pdf",
-      "de-cach": "PHAN-BOI-CHAU-TOAN-12-GIUA-KY-1-MA-1108 - ĐỀ CÁCH.pdf",
-      "dap-an": "PHAN-BOI-CHAU-TOAN-12-GIUA-KY-1-MA-1108 - ĐÁP ÁN.pdf"
-    }
-  },
-  "solution_mapping": [
-    {
-      "section": "I",
-      "number": 1,
-      "source_paragraph": 82,
-      "source_end_exclusive": 91
-    },
-    {
-      "section": "I",
-      "number": 2,
-      "source_paragraph": 91,
-      "source_end_exclusive": 99
-    },
-    {
-      "section": "I",
-      "number": 3,
-      "source_paragraph": 99,
-      "source_end_exclusive": 103
-    },
-    {
-      "section": "I",
-      "number": 4,
-      "source_paragraph": 103,
-      "source_end_exclusive": 109
-    },
-    {
-      "section": "I",
-      "number": 5,
-      "source_paragraph": 109,
-      "source_end_exclusive": 116
-    },
-    {
-      "section": "I",
-      "number": 6,
-      "source_paragraph": 116,
-      "source_end_exclusive": 120
-    },
-    {
-      "section": "I",
-      "number": 7,
-      "source_paragraph": 120,
-      "source_end_exclusive": 125
-    },
-    {
-      "section": "I",
-      "number": 8,
-      "source_paragraph": 125,
-      "source_end_exclusive": 130
-    },
-    {
-      "section": "I",
-      "number": 9,
-      "source_paragraph": 130,
-      "source_end_exclusive": 137
-    },
-    {
-      "section": "I",
-      "number": 10,
-      "source_paragraph": 137,
-      "source_end_exclusive": 142
-    },
-    {
-      "section": "I",
-      "number": 11,
-      "source_paragraph": 142,
-      "source_end_exclusive": 152
-    },
-    {
-      "section": "I",
-      "number": 12,
-      "source_paragraph": 152,
-      "source_end_exclusive": 163
-    },
-    {
-      "section": "II",
-      "number": 1,
-      "source_paragraph": 163,
-      "source_end_exclusive": 197
-    },
-    {
-      "section": "II",
-      "number": 2,
-      "source_paragraph": 197,
-      "source_end_exclusive": 216
-    },
-    {
-      "section": "II",
-      "number": 3,
-      "source_paragraph": 216,
-      "source_end_exclusive": 240
-    },
-    {
-      "section": "II",
-      "number": 4,
-      "source_paragraph": 240,
-      "source_end_exclusive": 259
-    },
-    {
-      "section": "III",
-      "number": 1,
-      "source_paragraph": 259,
-      "source_end_exclusive": 269
-    },
-    {
-      "section": "III",
-      "number": 2,
-      "source_paragraph": 269,
-      "source_end_exclusive": 279
-    },
-    {
-      "section": "III",
-      "number": 3,
-      "source_paragraph": 279,
-      "source_end_exclusive": 293
-    },
-    {
-      "section": "III",
-      "number": 4,
-      "source_paragraph": 293,
-      "source_end_exclusive": 304
-    },
-    {
-      "section": "III",
-      "number": 5,
-      "source_paragraph": 304,
-      "source_end_exclusive": 315
-    },
-    {
-      "section": "III",
-      "number": 6,
-      "source_paragraph": 315,
-      "source_end_exclusive": 328
-    }
-  ],
-  "source_review_notes": [
-    {
-      "id": "II-1-d",
-      "note": "Source explicitly treats integer product count: n=815 gives x≈34.062874 million, so d is False; retained."
-    },
-    {
-      "id": "II-3-a",
-      "note": "Source marks True after rounding t≈47.923460 to 48 minutes, although the statement does not explicitly authorize rounding. Source answer retained; ambiguity flagged for author review."
-    }
-  ]
+  }
 }

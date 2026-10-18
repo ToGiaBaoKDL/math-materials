@@ -11,7 +11,7 @@ Quy tắc vận hành liên quan: [build](../../docs/build.md).
 
 ## Ownership
 
-- Phụ trách thao tác build/render, `scripts/build.py` và bản xuất trong `assets/targets/`; cập nhật `output`/`outputs` và `qa` trong manifest.
+- Phụ trách thao tác build/render, `scripts/build.py` và bản xuất trong `assets/targets/`; cập nhật `outputs` và `qa` trong manifest.
 - Đọc nội dung, hình và template để kiểm tra. Lỗi câu chữ/dữ kiện chuyển về `math-transcription`, lỗi hình học/nét/khung về `typst-figures`, lỗi typography/căn/ngắt trang về `typst-layout`.
 - Ownership chỉ chia trách nhiệm thao tác; không yêu cầu tạo agent riêng. Khi sửa lỗi trong cùng phiên, áp dụng phạm vi của skill phụ trách trước khi kiểm tra lại.
 
