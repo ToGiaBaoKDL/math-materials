@@ -1,9 +1,9 @@
 #import "/templates/lesson.typ": exercise
 #import "../figures.typ": diagram
 #let questions(variant) = {
+ set par(leading:0.85em)
  let item=exercise.with(variant:variant,question-gap:10mm,keep-together:false,flow-stem:true,writing-line-gap:9mm,writing-single-page:true,fill-writing-page:true,statement-table:true)
  {
- set par(leading:0.85em)
  show math.frac: it => math.inline(it)
  set text(top-edge:1.1em,bottom-edge:0.65em)
  item(1,[#text(weight:"bold",fill:black)[(THPT ĐÔNG HÀ – QUẢNG TRỊ)] Một bể chứa ban đầu có 250 lít nước. Sau đó, cứ mỗi phút người ta bơm thêm 25 lít nước, đồng thời cho vào bể 8 gam chất khử khuẩn được hòa tan. Giả sử $C lr(( t ))$ là nồng độ chất khử khuẩn trong bể sau $t$ phút (với $C(t)=m(t) / V(t)$, đơn vị gam/lít, trong đó $m lr(( t ))$ là khối lượng chất khử khuẩn trong bể và $V lr(( t ))$ là thể tích nước trong bể). Gọi $c$ là số dương nhỏ nhất mà nồng độ chất khử khuẩn là $C lr(( t ))$ tăng theo thời gian $t$ nhưng không vượt quá ngưỡng $c$ gam/lít. Tìm $c$, làm tròn kết quả đến hàng phần trăm.],writing-lines:7)

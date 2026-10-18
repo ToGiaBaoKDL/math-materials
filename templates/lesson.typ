@@ -5,18 +5,19 @@
 
 // Shared DXT heading: document files supply content, not presentation.
 #let lesson-heading(course, title, subtitle: none,
-  author: [Biên soạn và giảng dạy: Thầy Đỗ Xuân Thắng], plain: false) = block(
-  width: 100%, stroke: 0.6pt + palette.primary,
+  author: [Biên soạn và giảng dạy: Thầy Đỗ Xuân Thắng], plain: false,
+  border: 0.6pt + palette.primary) = block(
+  width: 100%, stroke: border,
   radius: 3mm, inset: (x: 5mm, y: 4mm),
 )[
   #set par(justify: false, leading: 0.5em)
   #align(center)[
-    #if not plain {
+    #if not plain and course != none {
       block(fill: rgb("#008000"), radius: 2mm, inset: (x: 7mm, y: 2mm))[
         #text(font: fonts.course, size: 20.5pt, weight: "bold", fill: white, course)
       ]
+      v(1mm)
     }
-    #v(1mm)
     #layout(size => {
       let candidates = (fonts.lesson-title, fonts.lesson-title-long, fonts.lesson-title-longer)
       let chosen = candidates.last()
