@@ -54,3 +54,11 @@ Giữ một tầng module với tên theo trách nhiệm; chưa cần thêm pack
 | Chuyển tiếp | `upload_rclone.py` | Backend rclone cũ, dùng chung kế hoạch xuất bản |
 
 Kế hoạch upload chỉ chọn PDF theo profile và file nguồn `source.*`; không đưa `manifest.json`, cache hay mã Typst lên Drive.
+
+## Trích công thức DOCX
+
+Chạy `uv run python scripts/mathtype.py <source.docx> /tmp/equations.json` để giải mã công thức MathType MTEF 5 thành biểu thức Typst. Script kiểm tra đã đọc hết dữ liệu OLE và đối chiếu với dữ liệu MTEF trong preview WMF nhúng nếu có. Đây là kiểm tra dữ liệu công thức, không thay thế duyệt nội dung và bố cục tài liệu.
+
+Parser dùng chung bộ đọc tab-stop cho ruler độc lập và payload ruler gắn trong line/pile; hỗ trợ mũi tên đơn có nhãn trên/dưới. Dấu chấm phẩy được xuất như ký tự literal và `//` được chuẩn hoá thành dấu song song để tránh bị hiểu là cú pháp Typst. Cấu trúc/variation chưa hỗ trợ phải báo lỗi, không bỏ qua công thức. MTEF 3 chưa được hỗ trợ.
+
+Tham chiếu định dạng: [Wiris MTEF 5](https://docs.wiris.com/en_US/mathtype-mtef-v5-mathtype-40-and-later). Dữ liệu ruler đính kèm được kiểm tra trực tiếp trên cả OLE và WMF trong các nguồn DOCX.

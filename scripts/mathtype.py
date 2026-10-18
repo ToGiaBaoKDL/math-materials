@@ -46,6 +46,13 @@ class MTEF:
         if found != count:
             raise ValueError(f"Invalid dimension count at byte {self.pos}: expected {count}, got {found}")
 
+    def ruler(self):
+        for _ in range(self.byte()):
+            alignment = self.byte()
+            if alignment > 4:
+                raise ValueError(f"Invalid tab alignment {alignment} at byte {self.pos - 1}")
+            self.u16()
+
     def objects(self):
         out = []
         while True:
@@ -64,9 +71,8 @@ class MTEF:
             if opt & 4:
                 self.pos += 2
             if opt & 2:
-                if self.byte() != 7:
-                    raise ValueError(f"Expected ruler record at byte {self.pos - 1}")
-                self.record(7)
+                # Attached rulers contain the payload directly, without a record tag.
+                self.ruler()
             return {"type": "line", "children": [] if opt & 1 else self.objects()}
         if tag == 2:
             face = self.integer(True)
@@ -91,9 +97,8 @@ class MTEF:
         if tag == 4:
             h, v = self.byte(), self.byte()
             if opt & 2:
-                if self.byte() != 7:
-                    raise ValueError(f"Expected ruler record at byte {self.pos - 1}")
-                self.record(7)
+                # Attached rulers contain the payload directly, without a record tag.
+                self.ruler()
             return {"type": "pile", "halign": h, "valign": v, "children": self.objects()}
         if tag == 5:
             for _ in range(3):
@@ -107,8 +112,7 @@ class MTEF:
         if tag == 6:
             return {"type": "embell", "kind": self.byte()}
         if tag == 7:
-            count = self.byte()
-            self.pos += count * 3
+            self.ruler()
             return
         if tag == 8:
             self.integer()
@@ -178,6 +182,7 @@ def render(n):
             0x2026: "dots.h",
             0xA0: "",
             44: '","',
+            59: '";"',
         }.get(code, chr(code))
         if s in ("#", "$", "_", "^", "\\", "{", "}"):
             s = "\\" + s
@@ -222,6 +227,17 @@ def render(n):
                 7: ("ceil.l", "ceil.r"),
             }[s]
             return f"lr({left} {cs[0]} {right})"
+        if s == 14:
+            # MTEF single arrows: direction bits plus optional upper/lower slots.
+            if v & ~0x3C or v & 0x30 not in (0x10, 0x20, 0x30) or len(cs) != 3:
+                raise ValueError(f"Unsupported arrow variation: {v}")
+            arrow = {0x10: "arrow.l", 0x20: "arrow.r", 0x30: "arrow.l.r"}[v & 0x30]
+            value = f"limits(stretch({arrow}))"
+            if v & 4:
+                value += f"^({cs[0]})"
+            if v & 8:
+                value += f"_({cs[1]})"
+            return value
         if s == 13:
             return "overline(" + cs[0] + ")"
         if s == 10:
@@ -281,7 +297,7 @@ def normalize(v):
         v = re.sub(r'"' + fn + r'(\d+)"', fn + r" \1", v)
     v = re.sub(r'(\d+)\s+","\s+(\d+)', r'"\1,\2"', v)
     v = v.replace("= >", "⇒").replace("k m / h", '"km/h"').replace("k m", '"km"')
-    v = v.replace("^(′)", "'")
+    v = v.replace("^(′)", "'").replace("/ /", "∥")
     return v
 
 
