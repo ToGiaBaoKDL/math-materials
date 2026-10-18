@@ -4,7 +4,7 @@ import json
 import subprocess
 
 from build import ROOT
-from publishing import DRIVE_ROOT, plan
+from publishing import CATEGORIES, DRIVE_ROOT, plan
 
 
 def folder_id(remote, parent_id, name):
@@ -51,7 +51,7 @@ def main():
     parser.add_argument("--remote", default="dxt-gdrive")
     parser.add_argument("--root-id", default=DRIVE_ROOT)
     parser.add_argument("--drive-month", required=True, help="Destination Drive month in YYYY-MM format")
-    parser.add_argument("--category", choices=["Đề thi", "Chuyên đề"])
+    parser.add_argument("--category", choices=CATEGORIES)
     parser.add_argument("--dry-run", action="store_true", help="Show mapping locally without contacting Drive")
     args = parser.parse_args()
     try:

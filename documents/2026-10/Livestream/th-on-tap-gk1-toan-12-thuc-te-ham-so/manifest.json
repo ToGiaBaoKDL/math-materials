@@ -5,7 +5,7 @@
   "template": "lesson",
   "sources": [
     {
-      "path": "assets/sources/2026-10/Chuyên đề/th-on-tap-gk1-toan-12-thuc-te-ham-so/source.docx",
+      "path": "assets/sources/2026-10/Livestream/th-on-tap-gk1-toan-12-thuc-te-ham-so/source.docx",
       "original_name": "12 CÂU HỎI LIVE ÔN TỦ GK1 TOÁN 12 (TOÁN THỰC TẾ HÀM SỐ).docx",
       "bytes": 840603,
       "sha256": "dfbcecaca3414fc808f40b490e33553a1d01af7a3b290cfd6d8efe93bb9ce87d"
@@ -80,13 +80,13 @@
   },
   "outputs": {
     "de": {
-      "pdf": "assets/targets/2026-10/Chuyên đề/th-on-tap-gk1-toan-12-thuc-te-ham-so/de.pdf",
+      "pdf": "assets/targets/2026-10/Livestream/th-on-tap-gk1-toan-12-thuc-te-ham-so/de.pdf",
       "pages": 5,
       "bytes": 809376,
       "sha256": "2d23cbe6a117dd9f4b80f74b377101009a33e2b2d7b56d30ff99fa5c4584fdc6"
     },
     "de-cach": {
-      "pdf": "assets/targets/2026-10/Chuyên đề/th-on-tap-gk1-toan-12-thuc-te-ham-so/de-cach.pdf",
+      "pdf": "assets/targets/2026-10/Livestream/th-on-tap-gk1-toan-12-thuc-te-ham-so/de-cach.pdf",
       "pages": 12,
       "bytes": 834087,
       "sha256": "0dab6c4555919acd10b7f9891b5854ba4b5618f759229a26ede06f8a873c4465"
@@ -94,7 +94,7 @@
   },
   "implementation": {
     "template": "templates/lesson.typ",
-    "variants": "de and de-cach only; no solutions requested",
+    "variants": "Livestream: de and de-cach only; no answer variant.",
     "figures": "Six native vector diagrams with explicit labels, point marks, folding/hidden lines and distinct colors; original roller coaster photo retained.",
     "writing": "9 mm line spacing; prompts and writing area remain on same page.",
     "source_question_paragraphs": [

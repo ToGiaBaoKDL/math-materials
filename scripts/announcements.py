@@ -54,13 +54,13 @@ def drive_links(document, month, token=None):
     from drive import Drive
     from google_auth import credentials
     from googleapiclient.discovery import build
-    from publishing import DRIVE_ROOT, check_month, document_files, documents
+    from publishing import DRIVE_ROOT, check_month, document_files, documents, publication_category
 
     path = documents(document)[0]
     files = document_files(path)
     drive = Drive(build("drive", "v3", credentials=credentials(token), cache_discovery=False))
     parent = DRIVE_ROOT
-    for name in (check_month(month), path.parent.parent.name, path.parent.name):
+    for name in (check_month(month), publication_category(path), path.parent.name):
         folder = drive.find(parent, name, folder=True)
         assert folder is not None
         parent = folder["id"]

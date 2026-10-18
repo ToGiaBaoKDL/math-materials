@@ -140,5 +140,8 @@
     "variants": "de: flowing questions allowed across pages; dap-an: answer key and solutions; de-dap-an: questions then answers on a new page with shared continuous header/footer and pagination.",
     "palette": "Shared saturated blue/orange/yellow figure palette; existing purple graph style; exam branding.",
     "sheet": "One combined row; F=ĐỀ + ĐÁP ÁN, G blank, H=combined PDF page count."
+  },
+  "publication": {
+    "combine_answers": true
   }
 }

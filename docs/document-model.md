@@ -10,9 +10,9 @@ math-materials/
 ├── docs/                                 # Mô hình, build và xuất bản
 ├── assets/
 │   ├── fonts/dxt/                         # Font 9Slide nguyên bản do người dùng cung cấp
-│   ├── sources/YYYY-MM/<Đề thi|Chuyên đề>/<document-id>/   # DOCX/ảnh/PDF đầu vào
-│   └── targets/YYYY-MM/<Đề thi|Chuyên đề>/<document-id>/   # PDF đầu ra
-├── documents/YYYY-MM/<Đề thi|Chuyên đề>/<document-id>/
+│   ├── sources/YYYY-MM/<Đề thi|Chuyên đề|Livestream>/<document-id>/   # DOCX/ảnh/PDF đầu vào
+│   └── targets/YYYY-MM/<Đề thi|Chuyên đề|Livestream>/<document-id>/   # PDF đầu ra
+├── documents/YYYY-MM/<Đề thi|Chuyên đề|Livestream>/<document-id>/
 │   ├── manifest.json                      # Mapping và trạng thái
 │   ├── main.typ                           # Mã nguồn tài liệu
 │   ├── content/                           # Chỉ tách khi tài liệu dài
@@ -28,7 +28,7 @@ Tên file tài nguyên dùng chữ thường không dấu, nối bằng `-`, kh�
 
 ## Định danh và nguồn
 
-- `YYYY-MM` là tháng tiếp nhận; phân loại `Đề thi` hoặc `Chuyên đề`. Ngày tiếp nhận đầy đủ vẫn lưu trong manifest.
+- `YYYY-MM` là tháng tiếp nhận; phân loại `Đề thi`, `Chuyên đề` hoặc `Livestream`. Ngày tiếp nhận đầy đủ vẫn lưu trong manifest.
 - `<document-id>` dùng chữ thường, không dấu, nối bằng `-`; chọn tên theo môn, lớp, chủ đề hoặc mã đề để phân biệt tài liệu.
 - Dùng cùng tháng, loại và ID ở `sources`, `documents`, `targets`. Nhiều tài liệu trong một tháng dùng ID khác nhau.
 - Trang nguồn đặt tên theo số trang thực: `page-01.jpg`, `page-02.jpg`, ... Không suy ra số trang từ thứ tự upload.
@@ -65,3 +65,7 @@ Các variant dùng chung nội dung Typst, chọn cách xuất qua `sys.inputs`:
 | `de-dap-an` | Đề và đáp án chung một file | `de-dap-an.pdf` |
 
 Không bắt buộc tài liệu nào cũng có đủ bốn bản. Nguồn chỉ có đề thì chưa tạo đáp án; không có `variants` thì build xuất `document.pdf`. Quy tắc nội dung nằm trong [math-transcription](../skills/math-transcription/SKILL.md), bố cục từng bản trong [typst-layout](../skills/typst-layout/SKILL.md).
+
+Category chỉ phân loại tài liệu, không quyết định bộ variant. Mọi category dùng cùng quy tắc: khai báo những bản thực sự có; đáp án có thể bổ sung trước hoặc sau đề. Bộ 12 câu Livestream hiện có `de` và `de-cach` vì chưa có nguồn đáp án. Category local vẫn là `Livestream`, tạm định tuyến Drive/Sheet vào `Chuyên đề` qua `publication_category`.
+
+`publication.combine_answers` là flag boolean trong manifest, mặc định `false`. Khi bật, cần có variant `de-dap-an` đã build; Sheet ghi bản gộp thay cho hai dòng riêng. Flag không tự tạo lời giải hoặc ghép PDF chưa được dựng. Nguyễn Khuyến bật flag này. Có `de-cach` thì luôn ghi link bản cách, kể cả khi dùng bản gộp.

@@ -4,6 +4,8 @@ import re
 
 from build import ROOT
 
+CATEGORIES = ("Đề thi", "Chuyên đề", "Livestream")
+
 DRIVE_ROOT = "11EmKdVdsShhjyQpzlozlr8bEVDiThA8R"
 
 
@@ -26,10 +28,38 @@ def check_month(month):
     return month
 
 
+def publication_category(path):
+    category = path.parent.parent.name
+    return "Chuyên đề" if category == "Livestream" else category
+
+
+def document_title(filename):
+    for suffix in (" - ĐỀ + ĐÁP ÁN.pdf", " - ĐỀ CÁCH.pdf", " - ĐÁP ÁN.pdf", " - ĐỀ.pdf"):
+        if filename.endswith(suffix):
+            return filename.removesuffix(suffix)
+    raise ValueError(f"Invalid publication filename: {filename}")
+
+
+def sheet_variants(manifest, files):
+    combined = manifest.get("publication", {}).get("combine_answers", False)
+    if not isinstance(combined, bool):
+        raise ValueError("publication.combine_answers must be a boolean")
+    if combined:
+        if "de-dap-an" not in files:
+            raise ValueError("combine_answers requires a built and uploaded de-dap-an variant")
+        return ["de-dap-an"]
+    result = ["de"] if "de" in files or "de-cach" in files else []
+    if "dap-an" in files:
+        result.append("dap-an")
+    if not result:
+        raise ValueError("No separate question/answer variants; set publication.combine_answers for a combined file")
+    return result
+
+
 def document_files(path, variant=None):
     manifest = json.loads(path.read_text())
     mapping = manifest["drive"]
-    if mapping["folder"] != path.parent.parent.name or mapping["folder"] not in ("Đề thi", "Chuyên đề"):
+    if mapping["folder"] != publication_category(path) or mapping["folder"] not in CATEGORIES:
         raise ValueError(f"Drive category differs from local category: {path}")
     variants = manifest["variants"]
     if variant:
@@ -47,10 +77,10 @@ def document_files(path, variant=None):
     sources = sorted((ROOT / "assets/sources" / relative).glob("source.*"))
     if len(sources) != 1:
         raise ValueError(f"{relative}: expected one source.* file, found {len(sources)}")
-    title = mapping["filenames"]["de"]
-    if not title.endswith(" - ĐỀ.pdf"):
-        raise ValueError(f'Expected convention ending in " - ĐỀ.pdf": {title}')
-    files["goc"] = (sources[0], title.removesuffix(" - ĐỀ.pdf") + " - GỐC" + sources[0].suffix)
+    titles = {document_title(filename) for filename in mapping["filenames"].values()}
+    if len(titles) != 1:
+        raise ValueError(f"Inconsistent document titles in Drive filenames: {path}")
+    files["goc"] = (sources[0], titles.pop() + " - GỐC" + sources[0].suffix)
     for _, filename in files.values():
         if "/" in filename or "\\" in filename:
             raise ValueError(f"Invalid Drive filename: {filename}")
@@ -63,7 +93,7 @@ def plan(document=None, variant=None, month=None, category=None):
     destinations = set()
     for path in documents(document, category):
         for local, filename in document_files(path, variant).values():
-            destination = f"{path.parent.parent.name}/{path.parent.name}/{filename}"
+            destination = f"{publication_category(path)}/{path.parent.name}/{filename}"
             if destination in destinations:
                 raise ValueError(f"Duplicate Drive destination: {destination}")
             destinations.add(destination)

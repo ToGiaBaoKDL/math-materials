@@ -8,7 +8,7 @@ from pathlib import Path
 from build import ROOT
 from drive import Drive
 from google_auth import DEFAULT_CLIENT, credentials
-from publishing import DRIVE_ROOT, plan
+from publishing import CATEGORIES, DRIVE_ROOT, plan
 
 
 def main():
@@ -17,7 +17,7 @@ def main():
     parser.add_argument("--variant", choices=["de", "de-cach", "dap-an", "de-dap-an"])
     parser.add_argument("--root-id", default=DRIVE_ROOT)
     parser.add_argument("--drive-month")
-    parser.add_argument("--category", choices=["Đề thi", "Chuyên đề"])
+    parser.add_argument("--category", choices=CATEGORIES)
     parser.add_argument("--credentials", type=Path)
     parser.add_argument("--authorize", action="store_true")
     parser.add_argument("--client", type=Path, default=DEFAULT_CLIENT)

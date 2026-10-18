@@ -3,6 +3,7 @@
 # dependencies = ["google-api-python-client>=2,<3", "google-auth-oauthlib>=1,<2"]
 # ///
 import argparse
+import json
 import re
 import unicodedata
 from datetime import date
@@ -13,7 +14,16 @@ from urllib.parse import quote
 from build import ROOT, page_count
 from drive import Drive
 from google_auth import DEFAULT_CLIENT, credentials
-from publishing import DRIVE_ROOT, check_month, document_files, documents
+from publishing import (
+    CATEGORIES,
+    DRIVE_ROOT,
+    check_month,
+    document_files,
+    document_title,
+    documents,
+    publication_category,
+    sheet_variants,
+)
 
 GITHUB = "https://github.com/ToGiaBaoKDL/math-materials/tree/main"
 SPREADSHEET = "1q7giSA18z4UkTomn9xQBqrDgdjssXeUSDj4fTtVYOVs"
@@ -29,41 +39,31 @@ def cell(value: str | int = "", link: str | None = None) -> dict[str, Any]:
 
 
 def document_rows(path, files, drive, month_id, uploaded_on):
-    category = path.parent.parent.name
+    category = publication_category(path)
     category_id = drive.find(month_id, category, folder=True)["id"]
     folder = drive.find(category_id, path.parent.name, folder=True)["id"]
     links = drive.verified_links(folder, files)
     code = GITHUB + "/" + quote(str(path.parent.relative_to(ROOT)), safe="/")
     serial = (uploaded_on - date(1899, 12, 30)).days
-    primary = "de-dap-an" if "de-dap-an" in files else "de"
-    title = files[primary][1].removesuffix(".pdf")
-    rows = [
-        (
-            title,
-            [
-                cell(serial),
-                cell("ĐỀ - GỐC", links["goc"]),
-                cell(title),
-                cell("Github", code),
-                cell("ĐỀ + ĐÁP ÁN" if primary == "de-dap-an" else "ĐỀ - KHÔNG CÁCH", links[primary]),
-                cell("ĐỀ - CÁCH", links["de-cach"]) if "de-cach" in links and primary == "de" else cell(),
-                cell(page_count(files[primary][0])),
-            ],
-        )
-    ]
-    if "dap-an" in files and primary != "de-dap-an":
-        title = files["dap-an"][1].removesuffix(".pdf")
+    rows = []
+    for variant in sheet_variants(json.loads(path.read_text()), files):
+        answer = variant == "dap-an"
+        primary = variant if variant in files else "de-cach"
+        base = document_title(files[primary][1])
+        suffix = {"de": "ĐỀ", "dap-an": "ĐÁP ÁN", "de-dap-an": "ĐỀ + ĐÁP ÁN"}[variant]
+        title = base + " - " + suffix
+        label = {"de": "ĐỀ - KHÔNG CÁCH", "dap-an": "ĐÁP ÁN", "de-dap-an": "ĐỀ + ĐÁP ÁN"}[variant]
         rows.append(
             (
                 title,
                 [
-                    cell(),
-                    cell(),
+                    cell() if answer else cell(serial),
+                    cell() if answer else cell("ĐỀ - GỐC", links["goc"]),
                     cell(title),
-                    cell(),
-                    cell("ĐÁP ÁN", links["dap-an"]),
-                    cell(),
-                    cell(page_count(files["dap-an"][0])),
+                    cell() if answer else cell("Github", code),
+                    cell(label, links[variant]) if variant in links else None,
+                    cell("ĐỀ - CÁCH", links["de-cach"]) if not answer and "de-cach" in links else None,
+                    cell(page_count(files[variant][0])) if variant in files else None,
                 ],
             )
         )
@@ -184,12 +184,16 @@ def updates_for_sheet(sheet, month, records):
     added = 0
     summary = []
     for title, values in records:
-        pdf_url = values[4]["textFormatRuns"][0]["format"]["link"]["uri"]
+        pdf_urls = {
+            value["textFormatRuns"][0]["format"]["link"]["uri"]
+            for value in values[4:6]
+            if value and "textFormatRuns" in value
+        }
         matches = [
             r
             for r in range(start, end)
             if normalized(displayed(rows, r, 3)) == normalized(title)
-            or (len(rows.get(r, [])) > 5 and rows[r][5].get("hyperlink") == pdf_url)
+            or any(c.get("hyperlink") in pdf_urls for c in rows.get(r, [])[5:7])
         ]
         if len(matches) > 1:
             raise ValueError(f"{props['title']}: duplicate rows for {title}")
@@ -212,15 +216,18 @@ def updates_for_sheet(sheet, month, records):
             raise ValueError(f"Duplicate destination row for {title}")
         reserved.add(target)
         arranged[target] = title
-        requests.append(
-            {
-                "updateCells": {
-                    "start": {"sheetId": sheet_id, "rowIndex": target, "columnIndex": 1},
-                    "rows": [{"values": values}],
-                    "fields": "userEnteredValue,textFormatRuns",
-                }
-            }
-        )
+        # None means this variant is absent: preserve any previously published cell.
+        for column, value in enumerate(values, 1):
+            if value is not None:
+                requests.append(
+                    {
+                        "updateCells": {
+                            "start": {"sheetId": sheet_id, "rowIndex": target, "columnIndex": column},
+                            "rows": [{"values": [value]}],
+                            "fields": "userEnteredValue,textFormatRuns",
+                        }
+                    }
+                )
         requests.append(
             {
                 "repeatCell": {
@@ -379,7 +386,7 @@ def main():
     parser.add_argument("--drive-month", help="Drive folder and Sheet month block, YYYY-MM")
     parser.add_argument("--date", help="Upload date to record, YYYY-MM-DD")
     parser.add_argument("--document")
-    parser.add_argument("--category", choices=["Đề thi", "Chuyên đề"])
+    parser.add_argument("--category", choices=CATEGORIES)
     parser.add_argument("--sheet-id", default=SPREADSHEET)
     parser.add_argument("--root-id", default=DRIVE_ROOT)
     parser.add_argument("--credentials", type=Path)
@@ -409,7 +416,7 @@ def main():
         month_id = month_folder["id"]
         groups = {}
         for path in paths:
-            groups.setdefault(path.parent.parent.name, []).extend(
+            groups.setdefault(publication_category(path), []).extend(
                 document_rows(path, files[path], drive, month_id, uploaded_on)
             )
         spreadsheet = sheets.get(

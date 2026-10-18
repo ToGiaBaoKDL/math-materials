@@ -11,7 +11,7 @@ Build, upload và ghi Sheet là ba bước riêng. Build không tự upload; ch�
 | `DRIVE_MONTH=YYYY-MM` | Bắt buộc cho upload và Sheet; chọn folder tháng Drive và khối tháng Sheet, không lọc tháng nguồn local |
 | `DATE=YYYY-MM-DD` | Ngày ghi Sheet; độc lập với tháng đích |
 | `DOC` | Chọn tài liệu bằng đoạn tên duy nhất hoặc ID đầy đủ; `DOCUMENT` là alias |
-| `CATEGORY` | Chọn nhóm `Đề thi` hoặc `Chuyên đề` |
+| `CATEGORY` | Chọn nhóm `Đề thi`, `Chuyên đề` hoặc `Livestream` |
 | `VARIANT` | Chọn một PDF khi upload; vẫn gửi kèm nguồn. Lệnh Sheet không nhận tham số này |
 | `REMOTE` | Chỉ dùng cho `upload-rclone`, mặc định `dxt-gdrive` |
 | `CREDENTIALS` | File token dùng chung cho upload và Sheet |
@@ -80,7 +80,7 @@ Scope `drive` cần để cập nhật các file cũ được rclone tạo; `dri
 | H – Số trang/File ko cách | Số trang `de.pdf` | Số trang `dap-an.pdf` |
 | I – Thù lao | Không ghi | Không ghi |
 
-Nếu manifest có `de-dap-an`, Sheet ưu tiên một dòng cho bản gộp: tên kết thúc `ĐỀ + ĐÁP ÁN`, cột F ghi link `ĐỀ + ĐÁP ÁN`, cột G trống, cột H là tổng số trang file gộp; không thêm dòng đáp án riêng. Các bộ không có bản gộp dùng mapping đề/đáp án ở bảng trên, theo variant thực sự có.
+Khi manifest bật `publication.combine_answers: true`, cần có `de-dap-an` đã build/upload và Sheet dùng một dòng cho bản gộp: tên kết thúc `ĐỀ + ĐÁP ÁN`, cột F ghi link `ĐỀ + ĐÁP ÁN`, cột G ghi đề cách nếu có, cột H là tổng số trang file gộp; không thêm dòng đáp án riêng. Mặc định flag tắt: dùng dòng đề (F đề, G đề cách) và dòng đáp án ngay dưới, theo variant thực sự có; việc có file `de-dap-an` không tự bật chế độ gộp. Nếu chưa có đề không cách, bản cách vẫn được ghi ở G trên dòng đề; chưa có variant nào thì không cập nhật ô tương ứng, giữ link cũ nếu đã có. Chỉ có đáp án thì ghi dòng đáp án riêng và ghép đúng vị trí khi bổ sung đề sau.
 
 Link là chữ có hyperlink, không dùng công thức phụ thuộc locale, không thay quyền chia sẻ file. Số trang lấy từ PDF local đã kiểm tra.
 
@@ -114,3 +114,7 @@ Luồng Google API không tự retry thao tác ghi; khi lỗi, chạy lại đ�
 - `google_auth.py`: scope, đăng nhập và refresh token chung.
 - `drive.py`: tìm folder/file, cache danh sách con, tạo folder và upload theo checksum.
 - `upload.py` / `sheets.py`: điều phối nghiệp vụ riêng; `upload_rclone.py` giữ backend cũ.
+
+## Livestream
+
+Livestream dùng cùng quy tắc variant và xếp dòng như các category khác. Bộ 12 câu hiện có đề và đề cách; không tự tạo đáp án khi nguồn chưa có. Tạm dùng folder Drive và tab Sheet `Chuyên đề`, dù category local là `Livestream`. Bộ lọc `CATEGORY=Livestream` vẫn chọn nhóm local. Khi đổi category local, không tự di chuyển dữ liệu đã có trên Drive/Sheet.
