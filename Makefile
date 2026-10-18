@@ -1,6 +1,5 @@
-.PHONY: format-typst check-typst notify build upload upload-rclone google-auth sheet list check format help
+.PHONY: format-typst check-typst notify build upload google-auth sheet list check format help
 
-REMOTE ?= dxt-gdrive
 SELECTION = $(if $(DOC),--document "$(DOC)")
 PUBLICATION_ARGS = $(SELECTION) $(if $(DRIVE_MONTH),--drive-month "$(DRIVE_MONTH)") $(if $(filter 1 true,$(DRY_RUN)),--dry-run)
 AUTH_ARGS = $(if $(CREDENTIALS),--credentials "$(CREDENTIALS)")
@@ -10,9 +9,6 @@ build:
 
 upload:
 	uv run python scripts/upload.py $(PUBLICATION_ARGS) $(AUTH_ARGS)
-
-upload-rclone:
-	uv run python scripts/upload_rclone.py $(PUBLICATION_ARGS) --remote "$(REMOTE)"
 
 google-auth:
 	uv run python scripts/google_auth.py $(if $(CLIENT),--client "$(CLIENT)") $(if $(CREDENTIALS),--credentials "$(CREDENTIALS)")

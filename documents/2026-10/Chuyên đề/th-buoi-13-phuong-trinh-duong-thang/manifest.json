@@ -1,0 +1,960 @@
+{
+  "schema_version": 1,
+  "id": "th-buoi-13-phuong-trinh-duong-thang",
+  "kind": "tinh-hoa",
+  "received_date": "2026-10-18",
+  "status": "implemented",
+  "metadata": {
+    "title": "BUỔI 13: CÁC CÁCH VIẾT PHƯƠNG TRÌNH ĐƯỜNG THẲNG",
+    "lesson": 13,
+    "subject": "Toán – hình tọa độ Oxyz"
+  },
+  "sources": [
+    {
+      "path": "assets/sources/2026-10/Chuyên đề/th-buoi-13-phuong-trinh-duong-thang/source.docx",
+      "original_name": "BUỔI 13 CÁC CÁCH VIẾT PHƯƠNG TRÌNH ĐƯỜNG THẲNG.docx",
+      "bytes": 944116,
+      "sha256": "ce3fca42f9ac2be04860e10146ed571fa7f6085665c19c8529ccd3ba3a284e4f"
+    }
+  ],
+  "scope": {
+    "has_questions": true,
+    "has_solutions": true,
+    "questions": 37,
+    "sections": [
+      {
+        "title": "Nhận diện phương trình đường thẳng",
+        "questions": 6
+      },
+      {
+        "title": "Viết phương trình đường thẳng",
+        "questions": 11
+      },
+      {
+        "title": "Bài tập tự luyện",
+        "questions": 20
+      }
+    ]
+  },
+  "content_mapping": [
+    {
+      "id": "bai-hoc-1",
+      "role": "question",
+      "source": {
+        "number": "1",
+        "section": "bai-hoc",
+        "prompt_paragraphs": [
+          20
+        ],
+        "choice_paragraphs": [
+          21
+        ],
+        "solution_paragraphs": [
+          22,
+          23
+        ]
+      }
+    },
+    {
+      "id": "bai-hoc-2",
+      "role": "question",
+      "source": {
+        "number": "2",
+        "section": "bai-hoc",
+        "prompt_paragraphs": [
+          24
+        ],
+        "choice_paragraphs": [
+          25
+        ],
+        "solution_paragraphs": [
+          26,
+          27,
+          28
+        ]
+      }
+    },
+    {
+      "id": "bai-hoc-3",
+      "role": "question",
+      "source": {
+        "number": "3",
+        "section": "bai-hoc",
+        "prompt_paragraphs": [
+          29
+        ],
+        "choice_paragraphs": [
+          30
+        ],
+        "solution_paragraphs": [
+          31,
+          32,
+          33
+        ]
+      }
+    },
+    {
+      "id": "bai-hoc-4",
+      "role": "question",
+      "source": {
+        "number": "4",
+        "section": "bai-hoc",
+        "prompt_paragraphs": [
+          34
+        ],
+        "choice_paragraphs": [
+          35
+        ],
+        "solution_paragraphs": [
+          36,
+          37,
+          38
+        ]
+      }
+    },
+    {
+      "id": "bai-hoc-5",
+      "role": "question",
+      "source": {
+        "number": "5",
+        "section": "bai-hoc",
+        "prompt_paragraphs": [
+          39
+        ],
+        "choice_paragraphs": [
+          40
+        ],
+        "solution_paragraphs": [
+          41,
+          42,
+          43
+        ]
+      }
+    },
+    {
+      "id": "bai-hoc-6",
+      "role": "question",
+      "source": {
+        "number": "6",
+        "section": "bai-hoc",
+        "prompt_paragraphs": [
+          45
+        ],
+        "choice_paragraphs": [
+          46
+        ],
+        "solution_paragraphs": [
+          47,
+          48,
+          49
+        ]
+      }
+    },
+    {
+      "id": "bai-hoc-7",
+      "role": "question",
+      "source": {
+        "number": "7",
+        "section": "bai-hoc",
+        "prompt_paragraphs": [
+          51,
+          52
+        ],
+        "choice_paragraphs": [
+          53,
+          54
+        ],
+        "solution_paragraphs": [
+          55,
+          56,
+          57,
+          58
+        ]
+      }
+    },
+    {
+      "id": "bai-hoc-8",
+      "role": "question",
+      "source": {
+        "number": "8",
+        "section": "bai-hoc",
+        "prompt_paragraphs": [
+          59,
+          60
+        ],
+        "choice_paragraphs": [
+          61,
+          62
+        ],
+        "solution_paragraphs": [
+          63,
+          64,
+          65,
+          66,
+          67
+        ]
+      }
+    },
+    {
+      "id": "bai-hoc-9a",
+      "role": "question",
+      "source": {
+        "number": "9a",
+        "section": "bai-hoc",
+        "prompt_paragraphs": [
+          68,
+          69
+        ],
+        "choice_paragraphs": [
+          70
+        ],
+        "solution_paragraphs": [
+          71,
+          72,
+          73,
+          74,
+          75,
+          76
+        ]
+      }
+    },
+    {
+      "id": "bai-hoc-9b",
+      "role": "question",
+      "source": {
+        "number": "9b",
+        "section": "bai-hoc",
+        "prompt_paragraphs": [
+          77
+        ],
+        "choice_paragraphs": [
+          78
+        ],
+        "solution_paragraphs": [
+          79,
+          80,
+          81,
+          82,
+          83,
+          84,
+          85,
+          86
+        ]
+      }
+    },
+    {
+      "id": "bai-hoc-10a",
+      "role": "question",
+      "source": {
+        "number": "10a",
+        "section": "bai-hoc",
+        "prompt_paragraphs": [
+          87,
+          88
+        ],
+        "choice_paragraphs": [
+          89
+        ],
+        "solution_paragraphs": [
+          90,
+          91,
+          92,
+          93,
+          94
+        ]
+      }
+    },
+    {
+      "id": "bai-hoc-10b",
+      "role": "question",
+      "source": {
+        "number": "10b",
+        "section": "bai-hoc",
+        "prompt_paragraphs": [
+          95
+        ],
+        "choice_paragraphs": [
+          96
+        ],
+        "solution_paragraphs": [
+          97,
+          98,
+          99,
+          100,
+          101
+        ]
+      }
+    },
+    {
+      "id": "bai-hoc-11c",
+      "role": "question",
+      "source": {
+        "number": "11c",
+        "section": "bai-hoc",
+        "prompt_paragraphs": [
+          102
+        ],
+        "choice_paragraphs": [
+          103
+        ],
+        "solution_paragraphs": [
+          104,
+          105,
+          106,
+          107,
+          108,
+          109,
+          110,
+          111,
+          112,
+          113
+        ]
+      }
+    },
+    {
+      "id": "bai-hoc-12a",
+      "role": "question",
+      "source": {
+        "number": "12a",
+        "section": "bai-hoc",
+        "prompt_paragraphs": [
+          114,
+          115
+        ],
+        "choice_paragraphs": [
+          116
+        ],
+        "solution_paragraphs": [
+          117,
+          118,
+          119,
+          120,
+          121,
+          122,
+          123
+        ]
+      }
+    },
+    {
+      "id": "bai-hoc-12b",
+      "role": "question",
+      "source": {
+        "number": "12b",
+        "section": "bai-hoc",
+        "prompt_paragraphs": [
+          124
+        ],
+        "choice_paragraphs": [
+          125,
+          126
+        ],
+        "solution_paragraphs": [
+          127,
+          128,
+          129,
+          130,
+          131,
+          132
+        ]
+      }
+    },
+    {
+      "id": "bai-hoc-13c",
+      "role": "question",
+      "source": {
+        "number": "13c",
+        "section": "bai-hoc",
+        "prompt_paragraphs": [
+          133,
+          134
+        ],
+        "choice_paragraphs": [
+          135,
+          136
+        ],
+        "solution_paragraphs": [
+          137,
+          138,
+          139,
+          140,
+          141
+        ]
+      }
+    },
+    {
+      "id": "bai-hoc-14",
+      "role": "question",
+      "source": {
+        "number": "14",
+        "section": "bai-hoc",
+        "prompt_paragraphs": [
+          142,
+          143
+        ],
+        "choice_paragraphs": [
+          144
+        ],
+        "solution_paragraphs": [
+          145,
+          146,
+          147,
+          148,
+          149,
+          150,
+          151,
+          152,
+          153,
+          154
+        ]
+      }
+    },
+    {
+      "id": "tu-luyen-1",
+      "role": "question",
+      "source": {
+        "number": "1",
+        "section": "tu-luyen",
+        "prompt_paragraphs": [
+          157
+        ],
+        "choice_paragraphs": [
+          158
+        ],
+        "solution_paragraphs": [
+          159,
+          160,
+          161
+        ]
+      }
+    },
+    {
+      "id": "tu-luyen-2",
+      "role": "question",
+      "source": {
+        "number": "2",
+        "section": "tu-luyen",
+        "prompt_paragraphs": [
+          162
+        ],
+        "choice_paragraphs": [
+          163
+        ],
+        "solution_paragraphs": [
+          164,
+          165,
+          166,
+          167,
+          168
+        ]
+      }
+    },
+    {
+      "id": "tu-luyen-3",
+      "role": "question",
+      "source": {
+        "number": "3",
+        "section": "tu-luyen",
+        "prompt_paragraphs": [
+          169
+        ],
+        "choice_paragraphs": [
+          170
+        ],
+        "solution_paragraphs": [
+          171,
+          172,
+          173,
+          174
+        ]
+      }
+    },
+    {
+      "id": "tu-luyen-4",
+      "role": "question",
+      "source": {
+        "number": "4",
+        "section": "tu-luyen",
+        "prompt_paragraphs": [
+          176
+        ],
+        "choice_paragraphs": [
+          177
+        ],
+        "solution_paragraphs": [
+          178,
+          179,
+          180
+        ]
+      }
+    },
+    {
+      "id": "tu-luyen-5",
+      "role": "question",
+      "source": {
+        "number": "5",
+        "section": "tu-luyen",
+        "prompt_paragraphs": [
+          181
+        ],
+        "choice_paragraphs": [
+          182
+        ],
+        "solution_paragraphs": [
+          183,
+          184,
+          185,
+          186
+        ]
+      }
+    },
+    {
+      "id": "tu-luyen-6",
+      "role": "question",
+      "source": {
+        "number": "6",
+        "section": "tu-luyen",
+        "prompt_paragraphs": [
+          187
+        ],
+        "choice_paragraphs": [
+          188
+        ],
+        "solution_paragraphs": [
+          189,
+          190,
+          191
+        ]
+      }
+    },
+    {
+      "id": "tu-luyen-7",
+      "role": "question",
+      "source": {
+        "number": "7",
+        "section": "tu-luyen",
+        "prompt_paragraphs": [
+          192
+        ],
+        "choice_paragraphs": [
+          193
+        ],
+        "solution_paragraphs": [
+          194,
+          195,
+          196
+        ]
+      }
+    },
+    {
+      "id": "tu-luyen-8",
+      "role": "question",
+      "source": {
+        "number": "8",
+        "section": "tu-luyen",
+        "prompt_paragraphs": [
+          197
+        ],
+        "choice_paragraphs": [
+          198
+        ],
+        "solution_paragraphs": [
+          199,
+          200,
+          201
+        ]
+      }
+    },
+    {
+      "id": "tu-luyen-9",
+      "role": "question",
+      "source": {
+        "number": "9",
+        "section": "tu-luyen",
+        "prompt_paragraphs": [
+          202
+        ],
+        "choice_paragraphs": [
+          203,
+          204
+        ],
+        "solution_paragraphs": [
+          205,
+          206,
+          207,
+          208
+        ]
+      }
+    },
+    {
+      "id": "tu-luyen-10",
+      "role": "question",
+      "source": {
+        "number": "10",
+        "section": "tu-luyen",
+        "prompt_paragraphs": [
+          209
+        ],
+        "choice_paragraphs": [
+          210,
+          211
+        ],
+        "solution_paragraphs": [
+          212,
+          213,
+          214,
+          215
+        ]
+      }
+    },
+    {
+      "id": "tu-luyen-11",
+      "role": "question",
+      "source": {
+        "number": "11",
+        "section": "tu-luyen",
+        "prompt_paragraphs": [
+          216
+        ],
+        "choice_paragraphs": [
+          217
+        ],
+        "solution_paragraphs": [
+          218,
+          219,
+          220,
+          221
+        ]
+      }
+    },
+    {
+      "id": "tu-luyen-12",
+      "role": "question",
+      "source": {
+        "number": "12",
+        "section": "tu-luyen",
+        "prompt_paragraphs": [
+          222
+        ],
+        "choice_paragraphs": [
+          223,
+          224
+        ],
+        "solution_paragraphs": [
+          225,
+          226,
+          227,
+          228,
+          229
+        ]
+      }
+    },
+    {
+      "id": "tu-luyen-13",
+      "role": "question",
+      "source": {
+        "number": "13",
+        "section": "tu-luyen",
+        "prompt_paragraphs": [
+          230
+        ],
+        "choice_paragraphs": [
+          231
+        ],
+        "solution_paragraphs": [
+          232,
+          233,
+          234,
+          235
+        ]
+      }
+    },
+    {
+      "id": "tu-luyen-14",
+      "role": "question",
+      "source": {
+        "number": "14",
+        "section": "tu-luyen",
+        "prompt_paragraphs": [
+          236
+        ],
+        "choice_paragraphs": [
+          237
+        ],
+        "solution_paragraphs": [
+          238,
+          239,
+          240
+        ]
+      }
+    },
+    {
+      "id": "tu-luyen-15",
+      "role": "question",
+      "source": {
+        "number": "15",
+        "section": "tu-luyen",
+        "prompt_paragraphs": [
+          242
+        ],
+        "choice_paragraphs": [
+          243
+        ],
+        "solution_paragraphs": [
+          244,
+          245,
+          246,
+          247,
+          248
+        ]
+      }
+    },
+    {
+      "id": "tu-luyen-16",
+      "role": "question",
+      "source": {
+        "number": "16",
+        "section": "tu-luyen",
+        "prompt_paragraphs": [
+          249
+        ],
+        "choice_paragraphs": [
+          250,
+          251
+        ],
+        "solution_paragraphs": [
+          252,
+          253,
+          254,
+          255,
+          256,
+          257,
+          258
+        ]
+      }
+    },
+    {
+      "id": "tu-luyen-17",
+      "role": "question",
+      "source": {
+        "number": "17",
+        "section": "tu-luyen",
+        "prompt_paragraphs": [
+          259
+        ],
+        "choice_paragraphs": [
+          260
+        ],
+        "solution_paragraphs": [
+          261,
+          262,
+          263,
+          264,
+          265,
+          266,
+          267,
+          268,
+          269
+        ]
+      }
+    },
+    {
+      "id": "tu-luyen-18",
+      "role": "question",
+      "source": {
+        "number": "18",
+        "section": "tu-luyen",
+        "prompt_paragraphs": [
+          270
+        ],
+        "choice_paragraphs": [
+          271,
+          272
+        ],
+        "solution_paragraphs": [
+          273,
+          274,
+          275,
+          276,
+          277,
+          278,
+          279,
+          280,
+          281,
+          282,
+          283
+        ]
+      }
+    },
+    {
+      "id": "tu-luyen-19",
+      "role": "question",
+      "source": {
+        "number": "19",
+        "section": "tu-luyen",
+        "prompt_paragraphs": [
+          284
+        ],
+        "choice_paragraphs": [
+          285
+        ],
+        "solution_paragraphs": [
+          286,
+          287,
+          288,
+          289,
+          290,
+          291,
+          292
+        ]
+      }
+    },
+    {
+      "id": "tu-luyen-20",
+      "role": "question",
+      "source": {
+        "number": "20",
+        "section": "tu-luyen",
+        "prompt_paragraphs": [
+          293
+        ],
+        "choice_paragraphs": [
+          294
+        ],
+        "solution_paragraphs": [
+          295,
+          296,
+          297,
+          298,
+          299,
+          300
+        ]
+      }
+    }
+  ],
+  "provenance": {
+    "math": {
+      "ole_equations": 592,
+      "preview_pairs_checked": 592,
+      "empty_equations": 0
+    },
+    "source_pagination": {
+      "docx_cached_pages": 18,
+      "verified": false,
+      "note": "DOCX cached page count is not a verified paginated export; mapping uses XML paragraph indices."
+    },
+    "editorial_policy": "User authorized correction of verified source errors, with before/after retained here. Source numbering and distractor options preserved.",
+    "source_corrections": [
+      {
+        "paragraph": 67,
+        "before": "Chọn D.",
+        "after": "Chọn B."
+      },
+      {
+        "paragraph": 65,
+        "before": "cảu",
+        "after": "của"
+      },
+      {
+        "paragraph": 115,
+        "before": "là phương trình là",
+        "after": "có phương trình là"
+      },
+      {
+        "paragraph": 120,
+        "before": "arrow(u _(A))",
+        "after": "arrow(u _(Δ))"
+      },
+      {
+        "paragraph": 139,
+        "before": "1 + 2 t _(2)",
+        "after": "- 1 + 2 t _(2)"
+      },
+      {
+        "paragraph": 168,
+        "before": "k arrow(. u _(1))",
+        "after": "k dot arrow(u _(1))"
+      },
+      {
+        "paragraph": 246,
+        "before": "arrow(n) _(lr(( O x y ))) = lr(( 1",
+        "after": "arrow(n) _(lr(( P ))) = lr(( 1"
+      },
+      {
+        "paragraph": 147,
+        "before": "90^(o)",
+        "after": "90 degree",
+        "reason": "Source uses superscript letter o as a degree sign; render as the actual degree symbol."
+      }
+    ],
+    "theory_figure": "One DrawingML group plus its VML fallback; duplicated labels represent one figure, not six independent figures.",
+    "math_spacing": "MathType PUA EF04 is spacing; removed from displayed math.",
+    "figures": {
+      "theory": "direction-vectors",
+      "image99.png": "normal-plane",
+      "image225.png": "angle-bisector",
+      "image475.emf": "triangle-bisector",
+      "image506.emf": "line-plane-midpoint"
+    },
+    "notation": "Normalized mixed roman/italic Oxyz and multiplication periods without changing variables or values. Source punctuation retained when splitting long inline formula lists."
+  },
+  "variants": {
+    "de": {
+      "filename": "de.pdf",
+      "inputs": {
+        "variant": "de"
+      }
+    },
+    "de-cach": {
+      "filename": "de-cach.pdf",
+      "inputs": {
+        "variant": "de-cach"
+      }
+    },
+    "dap-an": {
+      "filename": "dap-an.pdf",
+      "inputs": {
+        "variant": "dap-an"
+      }
+    }
+  },
+  "drive": {
+    "folder": "Chuyên đề",
+    "filenames": {
+      "de": "KHÓA TH - BUỔI 13 - CÁC CÁCH VIẾT PHƯƠNG TRÌNH ĐƯỜNG THẲNG - ĐỀ.pdf",
+      "de-cach": "KHÓA TH - BUỔI 13 - CÁC CÁCH VIẾT PHƯƠNG TRÌNH ĐƯỜNG THẲNG - ĐỀ CÁCH.pdf",
+      "dap-an": "KHÓA TH - BUỔI 13 - CÁC CÁCH VIẾT PHƯƠNG TRÌNH ĐƯỜNG THẲNG - ĐÁP ÁN.pdf"
+    }
+  },
+  "outputs": {
+    "de": {
+      "pdf": "assets/targets/2026-10/Chuyên đề/th-buoi-13-phuong-trinh-duong-thang/de.pdf",
+      "pages": 10,
+      "bytes": 534673,
+      "sha256": "f8cf770b6c36c599f5554089482d513ef408d88ff9c0576e3968bf5c0ef4e2db"
+    },
+    "de-cach": {
+      "pdf": "assets/targets/2026-10/Chuyên đề/th-buoi-13-phuong-trinh-duong-thang/de-cach.pdf",
+      "pages": 26,
+      "bytes": 580060,
+      "sha256": "b55c16696d077484022ba916c46ceb4c9c334389ea2f8ff53f779589e2797624"
+    },
+    "dap-an": {
+      "pdf": "assets/targets/2026-10/Chuyên đề/th-buoi-13-phuong-trinh-duong-thang/dap-an.pdf",
+      "pages": 24,
+      "bytes": 759703,
+      "sha256": "59cf2e049100bb69b93a98b62bf9bd8691c01d9d3d845db94500358c3dc770fb"
+    }
+  },
+  "qa": {
+    "review_status": "pending",
+    "compile": "passed",
+    "content": "37 questions (17 lesson, 20 practice) and 148 choices in every variant; 37 worked solutions only in dap-an; theory included in all variants. Source numbering including a/b/c preserved.",
+    "math": "592 MathType OLE equations decoded with no empty entries; all 592 match embedded WMF data. Verified source corrections recorded in provenance.",
+    "layout": "All pages checked using PDF text bounds; no text outside page/body horizontal bounds. All 37 writing prompts and their writing areas share a page. 387 ruled lines; consecutive gaps measured 9 mm (0.02 pt tolerance), below body bottom limit. No explicit page breaks in question/solution content. Revised solution flow: question frames can break across pages; solution headings attach to the following content, not to the question. All 37 answer conclusions are bold and follow the derivation. Removed orphan plus signs and standalone trailing implication arrows. Spacing revision: solution paragraph gaps 5 mm, question gaps 6.5 mm (was 6). Rechecked all three PDFs: 37 questions, text in bounds; writing variant retains 387 rules at 9 mm with prompt and writing areas on the same page.  Practice question 20 and all four choices are kept together; verified on answer page 24. Practice question 19: replaced centered one-column matrices with native left-aligned cases in all four options and the final solution equation.",
+    "fonts": "All fonts embedded; Times New Roman body, New Computer Modern Math, supplied DXT heading fonts. No PUA or replacement characters in extracted PDF text.",
+    "figures": "Five native vector models inspected separately against source diagram structure. Triangle bisector uses source lengths/angle; midpoint and line-plane hidden segment use one coordinate model. Revised direction-vector and plane labels inspected in standalone render; triangle uses cyan/salmon, final plane cyan (#55DCE5) with dark-red Delta (solid/hidden), a corner arc followed by (P), and black labels; revised plane inspected in standalone render.",
+    "regression": "Buoi 12 answer and writing variants compiled to temporary PDFs; question order and solution-heading counts retained.",
+    "source_integrity": "Archived source.docx SHA-256 matches the recorded source checksum.",
+    "visual_review": "Standalone figures reviewed. Full-page visual PDF review pending; no page-preview images generated."
+  }
+}

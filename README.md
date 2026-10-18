@@ -16,7 +16,7 @@ make check
 make help
 ```
 
-Sau khi duyệt PDF, thực hiện [upload và cập nhật Sheet](docs/publishing.md). Hai lệnh dùng chung token OAuth; cấp quyền bằng `make google-auth`. Luồng cũ còn tại `make upload-rclone` trong giai đoạn chuyển tiếp.
+Sau khi duyệt PDF, thực hiện [upload và cập nhật Sheet](docs/publishing.md). Hai lệnh dùng chung token OAuth; cấp quyền bằng `make google-auth`.
 
 ## Tài liệu hệ thống
 

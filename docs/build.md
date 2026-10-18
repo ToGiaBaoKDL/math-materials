@@ -51,7 +51,6 @@ Giữ một tầng module với tên theo trách nhiệm; chưa cần thêm pack
 | Mô hình | `document_model.py`, `publishing.py` | Schema/profile và kế hoạch file, tên xuất bản, thứ tự trên Sheet |
 | Hạ tầng | `config.py`, `drive.py`, `pdf.py`, `figure_cache.py` | Cấu hình, Drive API, metadata PDF, cache render hình |
 | Nội dung | `announcements.py`, `mathtype.py` | Định dạng thông báo và đọc công thức nguồn |
-| Chuyển tiếp | `upload_rclone.py` | Backend rclone cũ, dùng chung kế hoạch xuất bản |
 
 Kế hoạch upload chỉ chọn PDF theo profile và file nguồn `source.*`; không đưa `manifest.json`, cache hay mã Typst lên Drive.
 

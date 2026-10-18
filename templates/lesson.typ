@@ -208,11 +208,11 @@
   #body
 ]
 
-#let paragraph(body, keep-next: false) = block(
+#let paragraph(body, keep-next: false, gap: lesson-style.paragraph-gap) = block(
   width: 100%,
   sticky: keep-next,
-  above: 0pt,
-  below: lesson-style.paragraph-gap,
+  above: gap,
+  below: gap,
   body,
 )
 
@@ -353,7 +353,7 @@
   } else {
     block(
       width: 100%,
-      breakable: variant != "dap-an" and not keep-together,
+      breakable: not keep-together,
       sticky: variant == "dap-an" and keep-solution-start,
       above: question-gap,
       below: 0pt,
@@ -365,26 +365,10 @@
     )
   }
   if variant == "dap-an" {
-    let heading = solution-heading(
-      above: if keep-together { lesson-style.solution-gap } else { 0pt },
+    solution-heading(
+      above: lesson-style.solution-gap,
       below: lesson-style.solution-heading-gap,
     )
-    if keep-together {
-      heading
-      solution
-    } else {
-      // Discard inter-block whitespace so the heading attaches to real content.
-      let parts = solution.fields().at("children", default: (solution,)).filter(it => repr(it.func()) != "space")
-      if parts.len() > 0 {
-        block(width: 100%, breakable: false, above: lesson-style.solution-gap)[#heading#v(
-            lesson-style.solution-heading-gap,
-            weak: true,
-          )#parts.first()]
-        if parts.len() > 2 {
-          for part in parts.slice(1, calc.max(1, parts.len() - 2)) { part }
-          block(width: 100%, breakable: false)[#parts.at(-2)#parts.last()]
-        } else if parts.len() == 2 { parts.last() }
-      } else { heading }
-    }
+    solution
   }
 }

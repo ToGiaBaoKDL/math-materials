@@ -27,7 +27,7 @@
   #layout(size => {
     let count = calc.max(0, calc.floor(calc.max(0pt, size.height - 3mm) / gap))
     for i in range(count) {
-      place(top + left, dy: (i + 1) * gap - 1pt, line(
+      place(top + left, dy: (i + 1) * gap, line(
         length: 100%,
         stroke: writing-style.ruled-width + palette.ink.transparentize(100% - writing-style.ruled-opacity),
       ))

@@ -11,7 +11,6 @@ Build, upload và ghi Sheet là ba bước riêng. Build không tự upload; ch�
 | `DRIVE_MONTH=YYYY-MM` | Override tùy chọn; mặc định lấy tháng từ đường dẫn tài liệu, dùng chung cho folder Drive và khối Sheet |
 | `DATE=YYYY-MM-DD` | Override ngày ghi Sheet; mặc định ngày chạy theo Asia/Ho_Chi_Minh |
 | `DOC` | Chọn tài liệu bằng đoạn tên duy nhất hoặc ID đầy đủ; bắt buộc chọn đúng một DOC |
-| `REMOTE` | Chỉ dùng cho `upload-rclone`, mặc định `dxt-gdrive` |
 | `CREDENTIALS` | File token dùng chung cho upload và Sheet |
 
 Upload và Sheet tự chọn file theo profile; `VARIANT` chỉ dành cho build.
@@ -63,7 +62,7 @@ Thiết lập một lần:
 
 Upload và Sheet dùng cùng tài khoản `thaythangtoan4@gmail.com`, cùng token và cùng bộ scope. Không yêu cầu thêm `drive.readonly` vì `drive` đã bao gồm quyền đọc. Token cũ chỉ có `drive.readonly` cần cấp quyền lại bằng `make google-auth` trước khi dùng cả hai lệnh. Một lệnh `make google-auth` cấp chung bộ quyền `spreadsheets` + `drive`. Không tự mở đăng nhập trong lúc upload/ghi Sheet.
 
-Scope `drive` cần để cập nhật các file cũ được rclone tạo; `drive.file` không cấp quyền chung lên các file đó ([Google: scopes](https://developers.google.com/workspace/drive/api/guides/api-specific-auth)). Không thay đổi quyền chia sẻ file.
+Scope `drive` cần để cập nhật các file hiện có được tạo bên ngoài ứng dụng OAuth này; `drive.file` không cấp quyền chung lên các file đó ([Google: scopes](https://developers.google.com/workspace/drive/api/guides/api-specific-auth)). Không thay đổi quyền chia sẻ file.
 
 ## Mapping cột Sheet
 
@@ -102,18 +101,14 @@ Trước khi ghi Sheet, script tìm đúng ID folder/file trên Drive và đối
 
 Luồng Google API không tự retry thao tác ghi; khi lỗi, chạy lại để tìm file hiện có và so checksum trước khi gửi tiếp. Không tự xóa hoặc tạo lại file sau lỗi. Tránh chạy đồng thời nhiều tiến trình upload cùng đích.
 
-## Rclone trong giai đoạn chuyển tiếp
-
-`make upload-rclone DRIVE_MONTH=2026-10 DOC=buoi-10` chạy `scripts/upload_rclone.py`, dùng chung mapping và kiểm tra local với luồng mới. `REMOTE` chỉ áp dụng lệnh này. Bản cũ vẫn giữ retry: rclone dùng `--tpslimit 3 --tpslimit-burst 1 --retries 3 --low-level-retries 1`; script upload không thêm vòng lặp retry riêng. Ghi Sheet không tự retry.
-
 ## Phân chia mã nguồn
 
 - `config.py`: ROOT và ID đích mặc định; `pdf.py`: đọc metadata PDF.
 - `document_model.py`: schema, ba profile và kế hoạch variant dùng chung.
-- `publishing.py`: chọn tài liệu, kiểm tra PDF và mapping tên; dùng chung cho cả hai uploader, Sheet và notify.
-- `google_auth.py`: scope, đăng nhập và refresh token chung, có CLI riêng; hai target auth là alias cùng một lệnh.
+- `publishing.py`: chọn tài liệu, kiểm tra PDF và mapping tên; dùng chung cho upload, Sheet và notify.
+- `google_auth.py`: scope, đăng nhập và refresh token chung, có CLI duy nhất `make google-auth`.
 - `drive.py`: tìm folder/file, cache danh sách con, tạo folder và upload theo checksum.
-- `upload.py` / `sheets.py`: điều phối nghiệp vụ riêng; `upload_rclone.py` giữ backend cũ.
+- `upload.py` / `sheets.py`: điều phối nghiệp vụ upload và cập nhật Sheet.
 
 ## Livestream
 
