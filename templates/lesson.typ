@@ -9,6 +9,7 @@
   title,
   subtitle: none,
   title-tracking: 0pt,
+  horizontal-inset: 5mm,
   title-size: 25pt,
   course-size: 20.5pt,
   title-stroke: none,
@@ -19,7 +20,7 @@
   width: 100%,
   stroke: border,
   radius: 3mm,
-  inset: (x: 5mm, y: 4mm),
+  inset: (x: horizontal-inset, y: 4mm),
 )[
   #set par(justify: false, leading: 0.5em)
   #align(center)[

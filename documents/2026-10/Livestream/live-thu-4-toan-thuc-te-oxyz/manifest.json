@@ -190,14 +190,14 @@
     "de": {
       "pdf": "assets/targets/2026-10/Livestream/live-thu-4-toan-thuc-te-oxyz/de.pdf",
       "pages": 6,
-      "bytes": 395811,
-      "sha256": "1b1e504ab5a995cc61ee767acc7e9ad398266353f2307323c151f22ddc534ff0"
+      "bytes": 395800,
+      "sha256": "756a927ca4deb3f25bf10e99c63fdaf745ac7e51850f22bf3a8b78860445f0b2"
     },
     "de-cach": {
       "pdf": "assets/targets/2026-10/Livestream/live-thu-4-toan-thuc-te-oxyz/de-cach.pdf",
       "pages": 10,
-      "bytes": 416569,
-      "sha256": "6323b060dd1fc69a8a4703ab60379f6b15eaf7d581fcb41e792345d2a3d413d7"
+      "bytes": 416559,
+      "sha256": "03fbe9c15e0faac54495d401d25133c39bae627ff013709aa1e8145d5ac81a06"
     }
   }
 }

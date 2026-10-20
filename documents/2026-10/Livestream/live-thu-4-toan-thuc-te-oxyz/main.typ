@@ -8,7 +8,8 @@
 ), heading-content: lesson-heading(
   [ÔN THI GIỮA HK1 TOÁN 12],
   [TỦ SÂU TOÁN THỰC TẾ OXYZ | ĐỀ CHỌN LỌC CÁC TRƯỜNG],
-  title-tracking: 0.9pt,
+  title-tracking: 1.2pt,
+  horizontal-inset: 3mm,
   title-size: 25.8pt,
   course-size: 21pt,
   title-stroke: 0.1pt + palette.heading,
