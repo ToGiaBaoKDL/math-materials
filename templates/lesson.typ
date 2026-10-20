@@ -9,6 +9,9 @@
   title,
   subtitle: none,
   title-tracking: 0pt,
+  title-size: 25pt,
+  course-size: 20.5pt,
+  title-stroke: none,
   author: [Biên soạn và giảng dạy: Thầy Đỗ Xuân Thắng],
   plain: false,
   border: 0.6pt + palette.primary,
@@ -22,7 +25,7 @@
   #align(center)[
     #if not plain and course != none {
       block(fill: palette.course-green, radius: 2mm, inset: (x: 7mm, y: 2mm))[
-        #text(font: fonts.course, size: 20.5pt, weight: "bold", fill: white, course)
+        #text(font: fonts.course, size: course-size, weight: "bold", fill: white, course)
       ]
       v(1mm)
     }
@@ -30,12 +33,12 @@
       let candidates = (fonts.lesson-title, fonts.lesson-title-long, fonts.lesson-title-longer)
       let chosen = candidates.last()
       for candidate in candidates {
-        if measure(text(font: candidate, size: 25pt, tracking: title-tracking, weight: "bold", title)).width <= size.width {
+        if measure(text(font: candidate, size: title-size, tracking: title-tracking, weight: "bold", title)).width <= size.width {
           chosen = candidate
           break
         }
       }
-      text(font: chosen, size: 25pt, tracking: title-tracking, weight: "bold", fill: palette.heading, title)
+      text(font: chosen, size: title-size, tracking: title-tracking, weight: "bold", fill: palette.heading, stroke: title-stroke, title)
     })
     #if subtitle != none {
       v(1mm)
