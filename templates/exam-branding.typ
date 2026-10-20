@@ -1,3 +1,4 @@
+#import "contacts.typ": contact-links
 #import "theme.typ": exam-palette as palette, exam-style, fonts
 // Exam-only running matter.
 #let plain-header() = block(width: 100%, inset: (x: 12mm, top: 5mm))[
@@ -35,25 +36,8 @@
 ]
 
 #let exam-header = plain-header
-#let contact-icon(name) = image(
-  "/assets/branding/icons/" + name + ".svg",
-  width: 4mm,
-  height: 4mm,
-)
 #let exam-footer(code) = context {
   let number = counter(page).get().first()
   let total = counter(page).final().first()
-  let contacts = grid(
-    columns: (auto, auto, auto, auto, auto, auto, auto),
-    column-gutter: 1.2mm,
-    align: horizon,
-    contact-icon("website"),
-    [toanthaythang.vn],
-    box(width: 3mm, align(center)[|]),
-    contact-icon("facebook"),
-    [\&],
-    contact-icon("tiktok"),
-    [toanthaythangdxt],
-  )
-  plain-footer(contacts, [#if code != none { [Mã đề thi #code – ] }Trang #number/#total])
+  plain-footer(contact-links(), [#if code != none { [Mã đề thi #code – ] }Trang #number/#total])
 }

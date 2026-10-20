@@ -8,6 +8,7 @@
   course,
   title,
   subtitle: none,
+  title-tracking: 0pt,
   author: [Biên soạn và giảng dạy: Thầy Đỗ Xuân Thắng],
   plain: false,
   border: 0.6pt + palette.primary,
@@ -29,12 +30,12 @@
       let candidates = (fonts.lesson-title, fonts.lesson-title-long, fonts.lesson-title-longer)
       let chosen = candidates.last()
       for candidate in candidates {
-        if measure(text(font: candidate, size: 25pt, weight: "bold", title)).width <= size.width {
+        if measure(text(font: candidate, size: 25pt, tracking: title-tracking, weight: "bold", title)).width <= size.width {
           chosen = candidate
           break
         }
       }
-      text(font: chosen, size: 25pt, weight: "bold", fill: palette.heading, title)
+      text(font: chosen, size: 25pt, tracking: title-tracking, weight: "bold", fill: palette.heading, title)
     })
     #if subtitle != none {
       v(1mm)
