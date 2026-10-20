@@ -260,16 +260,16 @@
   arrow-line(A, (94mm, 39mm), color: palette.primary, thickness: 1.8pt)
   arrow-line(A, (26mm, 46mm), color: rgb("#C58A00"), thickness: 1.8pt)
   arrow-line(A, (55mm, 5mm), color: palette.geometry-green, thickness: 1.8pt)
-  let start = calc.atan2(2, 39) / 1rad
-  let end = calc.atan2(9, -29) / 1rad
+  let start = calc.atan(2 / 39) / 1rad
+  let end = calc.pi - calc.atan(9 / 29) / 1rad
   smooth(
-    t => (A.at(0) + 12mm * calc.cos(t), A.at(1) + 12mm * calc.sin(t)),
-    t => (-12mm * calc.sin(t), 12mm * calc.cos(t)),
+    t => (A.at(0) + 7mm * calc.cos(t), A.at(1) + 7mm * calc.sin(t)),
+    t => (-7mm * calc.sin(t), 7mm * calc.cos(t)),
     start,
     end,
     stroke: 1pt + brown,
   )
-  label((55mm, 43mm), text(size: 10pt)[$135 degree$], width: 14mm)
+  label((55.4mm, 40.4mm), text(size: 8pt)[$135 degree$], width: 10mm)
   dot(A)
   label(A, $A$, dx: -4mm, dy: -3mm)
   label((93mm, 34mm), $arrow(F)_1$)
