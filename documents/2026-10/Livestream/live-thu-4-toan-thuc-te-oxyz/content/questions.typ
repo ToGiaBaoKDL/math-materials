@@ -19,6 +19,7 @@
     1,
     [
       *(THPT ĐINH TIÊN HOÀNG – NINH BÌNH)* Một chiếc máy bay điều khiển từ xa mini đang đậu tại điểm $A$ nằm trên mặt phẳng nằm ngang $lr(( α ))$. Lúc khởi động nó chịu tác động của ba lực đẩy: $arrow(F_(1))$, $arrow(F_(2))$, $arrow(F_(3))$. Hai cánh quạt trái và phải tạo ra hai lực $arrow(F_(1))$, $arrow(F_(2))$ có giá nằm trong mặt phẳng ngang $lr(( α ))$ và $lr(( arrow(F_(1)) "," arrow(F_(2)) )) = 135 degree$. Một lực nâng $arrow(F_(3))$ do cánh quạt chính tạo ra có giá vuông góc với $lr(( α ))$ và hướng lên trên. Độ lớn hợp lực của các lực $arrow(F_(1))$, $arrow(F_(2))$, $arrow(F_(3))$ bằng bao nhiêu Niu-tơn, biết rằng độ lớn của ba lực đó lần lượt là $20$N, $15$N và $10$N (Kết quả làm tròn đến hàng phần chục)?
+      #figure-panel(drone-forces())
     ],
     source-id: "question-1",
     writing-lines: 5,
@@ -55,6 +56,7 @@
     5,
     [
       *(THPT YÊN DŨNG SỐ 2 – BẮC NINH)* Trong không gian chọn hệ trục tọa độ cho trước, đơn vị đo lấy kilômét, ra đa phát hiện một máy bay chiến đấu $X$ di chuyển với vận tốc và hướng không đổi từ điểm $M lr(( 1000 ";" 600 ";" 14 ))$ đến điểm $N$ trong 30 phút. Nếu máy bay tiếp tục giữ nguyên vận tốc và hướng bay thì tọa độ của máy bay sau 10 phút tiếp theo đến $Q lr(( 1400 ";" 800 ";" 16 ))$. Tọa độ vị trí điểm $N lr(( a ";" b ";" c ))$, tính $S = a + b + 2 c$.
+      #figure-panel(flight-path())
     ],
     source-id: "question-5",
     writing-lines: 5,
@@ -63,6 +65,7 @@
     6,
     [
       *(THPT NGÔ SỸ LIÊN – BẮC NINH)* Trong không gian với hệ tọa độ $O x y z$, đơn vị trên mỗi trục tọa độ tương ứng với $10 "km"$. Trạm kiểm soát không lưu đặt tại gốc tọa độ $O lr(( 0 ";" 0 ";" 0 ))$. Một máy bay đang ở vị trí $A lr(( - 65 ";" - 54 ";" 6 ))$ chuyển động theo hướng $arrow(u) lr(( 3 ";" 4 ";" 0 ))$ với tốc độ không đổi $800 "km" / h$. Máy bay sẽ được hiển thị trên màn hình rađa nếu nó nằm trong phạm vi cách đài kiểm soát không quá $430 "km"$. Gọi $B lr(( a ";" b ";" c ))$ là vị trí cuối cùng máy bay xuất hiện trên màn hình rađa. Tính giá trị $a + b + c$.
+      #figure-panel(radar-flight())
     ],
     source-id: "question-6",
     writing-lines: 7,

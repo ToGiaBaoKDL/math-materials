@@ -33,6 +33,10 @@ Quy tắc vận hành liên quan: [document-model](../../docs/document-model.md)
 - Khi thu nhỏ, đổi một hệ số chung cho toàn bộ tọa độ và đường cong; giữ cỡ nhãn đủ đọc. Nền bao ngoài và khung trang trí thuộc layout, không gắn vào hình. Chỉ tô các mặt/vùng cần phân biệt theo palette đã chọn, giữ nét cắt, gấp và khuất theo nguồn.
 - Chỉ comment công thức hoặc quyết định khó suy ra từ mã.
 
+## Hình cho bài toán thực tế
+
+Mỗi câu toán thực tế có một hình minh họa phù hợp dữ kiện. Giữ và cải thiện hình đã có; câu thiếu hình thì dựng hình vector theo ngữ cảnh, không thêm số liệu suy ra, đáp án hoặc nhãn số ngoài đề. Mỗi câu dùng một hình hoặc một nhóm hình có cùng mục đích, tránh chèn hình trùng lặp.
+
 ## Phối màu minh họa
 
 - Màu hình độc lập với màu nhận diện heading. Dùng các màu sáng, bão hòa rõ và hài hòa; đa dạng giữa các hình, tránh dùng xanh dương cho mọi hình. Ưu tiên hai màu chính và một màu nhấn khi cần phân biệt đối tượng; không luân phiên màu tùy tiện giữa các cạnh. Giữ cùng màu cho cùng hình ở mọi variant.

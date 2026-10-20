@@ -253,3 +253,113 @@
     label(p, t, dx: dx, dy: dy)
   }
 })
+
+#let drone-forces() = block(width: 115mm, height: 55mm, {
+  let A = (55mm, 37mm)
+  path(((8mm, 46mm), (85mm, 51mm), (107mm, 30mm), (30mm, 25mm)), fill: mint, stroke: edge, close: true)
+  arrow-line(A, (94mm, 39mm), color: palette.primary, thickness: 1.8pt)
+  arrow-line(A, (26mm, 46mm), color: rgb("#C58A00"), thickness: 1.8pt)
+  arrow-line(A, (55mm, 5mm), color: palette.geometry-green, thickness: 1.8pt)
+  let start = calc.atan2(2, 39) / 1rad
+  let end = calc.atan2(9, -29) / 1rad
+  smooth(
+    t => (A.at(0) + 12mm * calc.cos(t), A.at(1) + 12mm * calc.sin(t)),
+    t => (-12mm * calc.sin(t), 12mm * calc.cos(t)),
+    start,
+    end,
+    stroke: 1pt + brown,
+  )
+  label((55mm, 43mm), text(size: 10pt)[$135 degree$], width: 14mm)
+  dot(A)
+  label(A, $A$, dx: -4mm, dy: -3mm)
+  label((93mm, 34mm), $arrow(F)_1$)
+  label((25mm, 41mm), $arrow(F)_2$)
+  label((61mm, 8mm), $arrow(F)_3$)
+  label((95mm, 46mm), $(alpha)$)
+})
+#let jet(p, color: blue) = {
+  let x = p.at(0)
+  let y = p.at(1)
+  // Nose faces right; swept wings and tail make direction unambiguous.
+  path(
+    (
+      (x + 9mm, y),
+      (x + 2mm, y - 1.4mm),
+      (x - 3mm, y - 6mm),
+      (x - 5mm, y - 6mm),
+      (x - 3mm, y - 1mm),
+      (x - 7mm, y - 1mm),
+      (x - 9mm, y - 3mm),
+      (x - 10mm, y - 3mm),
+      (x - 9mm, y),
+      (x - 10mm, y + 3mm),
+      (x - 9mm, y + 3mm),
+      (x - 7mm, y + 1mm),
+      (x - 3mm, y + 1mm),
+      (x - 5mm, y + 6mm),
+      (x - 3mm, y + 6mm),
+      (x + 2mm, y + 1.4mm),
+    ),
+    fill: color,
+    stroke: 0.9pt + palette.ink,
+    close: true,
+  )
+  path(((x + 1mm, y), (x + 5mm, y)), stroke: 1.2pt + blue)
+}
+#let flight-path() = block(width: 124mm, height: 35mm, {
+  let M = (10mm, 23mm)
+  let N = (82mm, 23mm)
+  let Q = (106mm, 23mm)
+  arrow-line(M, (117mm, 23mm), color: blue, thickness: 1.5pt)
+  path((M, N), stroke: 1.8pt + palette.primary)
+  for (p, t) in ((M, $M$), (N, $N$), (Q, $Q$)) {
+    dot(p)
+    label(p, t, dy: 5mm)
+  }
+  label((46mm, 17mm), [30 phút], width: 25mm)
+  label((96mm, 17mm), [10 phút], width: 25mm)
+  jet((60mm, 8mm), color: cyan)
+  label((73mm, 7mm), $X$)
+})
+#let radar-flight() = block(width: 122mm, height: 78mm, {
+  let O = (65mm, 38mm)
+  place(top + left, dx: 35mm, dy: 8mm, circle(radius: 30mm, fill: mint, stroke: 1.3pt + palette.geometry-green))
+  let meridian(t) = (65mm + 12mm * calc.cos(t), 38mm + 30mm * calc.sin(t))
+  let meridian-tangent(t) = (-12mm * calc.sin(t), 30mm * calc.cos(t))
+  smooth(meridian, meridian-tangent, -calc.pi / 2, calc.pi / 2, stroke: 1pt + palette.geometry-green)
+  smooth(meridian, meridian-tangent, calc.pi / 2, 3 * calc.pi / 2, stroke: (
+    paint: palette.geometry-green,
+    thickness: 1pt,
+    dash: "dashed",
+  ))
+  let equator(t) = (65mm + 30mm * calc.cos(t), 38mm + 9mm * calc.sin(t))
+  let tangent(t) = (-30mm * calc.sin(t), 9mm * calc.cos(t))
+  smooth(equator, tangent, 0, calc.pi, stroke: 1pt + palette.geometry-green)
+  smooth(equator, tangent, calc.pi, 2 * calc.pi, stroke: (
+    paint: palette.geometry-green,
+    thickness: 1pt,
+    dash: "dashed",
+  ))
+  // Illustrative horizontal slice and flight chord, with B on the coverage sphere.
+  let r = calc.sqrt(30 * 30 - 12 * 12) * 1mm
+  place(top + left, dx: 65mm - r, dy: 26mm - 8mm, ellipse(
+    width: 2 * r,
+    height: 16mm,
+    fill: cyan.transparentize(55%),
+    stroke: (paint: blue, thickness: 0.8pt, dash: "dashed"),
+  ))
+  let A = (8mm, 26mm)
+  let B = (65mm + r, 26mm)
+  let entry = (65mm - r, 26mm)
+  path((A, entry), stroke: 1.8pt + palette.primary)
+  path((entry, B), stroke: (paint: palette.primary, thickness: 1.8pt, dash: (1.5mm, 1mm)))
+  arrow-line(B, (113mm, 26mm), color: palette.primary, thickness: 1.8pt)
+  path((O, B), stroke: (paint: blue, thickness: 1.2pt, dash: "dashed"))
+  for (P, t) in ((A, $A$), (B, $B$), (O, $O$)) {
+    dot(P)
+    label(P, t, dx: if P == B { 5mm } else { 2mm }, dy: 5mm)
+  }
+  jet((18mm, 16mm), color: cyan)
+  label((111mm, 21mm), $arrow(u)$)
+  label((65mm, 74mm), [Vùng phủ sóng rađa], width: 50mm)
+})

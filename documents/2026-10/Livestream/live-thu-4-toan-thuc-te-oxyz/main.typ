@@ -3,9 +3,8 @@
 #import "content/questions.typ": questions
 #let variant = sys.inputs.at("variant", default: "de")
 #show: lesson.with([10 CÂU TOÁN THỰC TẾ OXYZ GIỮA KỲ I], variant: variant, heading-content: lesson-heading(
-  [TOÁN THỰC TẾ OXYZ – LIVE THỨ 4],
-  [10 CÂU TOÁN THỰC TẾ OXYZ GIỮA KỲ 1],
-  subtitle: [CHỌN LỌC TỪ ĐỀ THI CHÍNH THỨC CÁC TRƯỜNG (CÓ PHÂN DẠNG)],
+  [ÔN THI GIỮA HK1 TOÁN 12],
+  [TỦ SÂU TOÁN THỰC TẾ OXYZ | ĐỀ CHỌN LỌC CÁC TRƯỜNG],
   border: 0.8pt + palette.heading,
 ))
 #set par(leading: 1.05em)

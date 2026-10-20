@@ -88,7 +88,7 @@ def livestream_blocks(config: dict[str, Any], links: dict[str, str]) -> list[str
         "<b>[PHÁT ĐỀ LIVESTREAM TỐI NAY]</b> " + escape(config["intro"]),
         "\n".join(
             f"{label}: {escape(links[variant])}"
-            for variant, label in (("de-cach", "File cách"), ("de", "File không cách"))
+            for variant, label in (("de", "File không cách"), ("de-cach", "File cách"))
             if variant in links
         ),
     ]

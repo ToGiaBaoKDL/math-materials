@@ -9,7 +9,7 @@ Thông báo là tác vụ độc lập, không tự chạy sau build, upload ho�
 - `metadata.title`: tên tài liệu dành cho người đọc, không phải tên file hoặc slug. Đề thi dùng tên kỳ thi và trường đầy đủ.
 - Tinh Hoa thêm `metadata.lesson` (số buổi), `metadata.topic` (tên chuyên đề), `metadata.homework` (có BTVN hay không). Tiêu đề hiển thị `<title> [CĐ <topic>]`; lời mở tự chèn `Buổi <lesson>`.
 - Đề thi thêm `metadata.subject`, `metadata.school_year`.
-- Câu chữ dùng chung của ba format nằm trong `scripts/announcements.py`. Livestream giữ lời mở về 22:00 và kênh Tóp Tóp; đề thi giữ link nhóm và lời chúc đã duyệt.
+- Câu chữ dùng chung của ba format nằm trong `scripts/announcements.py`. Livestream hiển thị File không cách trước File cách; giữ lời mở về 22:00 và kênh Tóp Tóp; đề thi giữ link nhóm và lời chúc đã duyệt.
 - Link PDF luôn đọc từ Drive qua OAuth chung, theo kế hoạch xuất bản; đối chiếu MD5 với PDF local. Không đưa file nguồn vào thông báo, không đổi quyền chia sẻ. Tiêu đề không suy từ tên PDF trên Drive.
 
 ## Xem trước và gửi
