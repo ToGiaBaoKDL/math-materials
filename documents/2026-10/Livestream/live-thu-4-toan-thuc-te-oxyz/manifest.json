@@ -1,0 +1,193 @@
+{
+  "schema_version": 1,
+  "id": "live-thu-4-toan-thuc-te-oxyz",
+  "kind": "livestream",
+  "received_date": "2026-10-19",
+  "status": "implemented",
+  "metadata": {
+    "title": "10 CÂU TOÁN THỰC TẾ OXYZ GIỮA KỲ 1 – CHỌN LỌC TỪ ĐỀ THI CHÍNH THỨC CÁC TRƯỜNG (CÓ PHÂN DẠNG)",
+    "starts_at": "2026-10-21T22:00"
+  },
+  "sources": [
+    {
+      "path": "assets/sources/2026-10/Livestream/live-thu-4-toan-thuc-te-oxyz/source.docx",
+      "original_name": "LIVE THỨ 4.docx",
+      "bytes": 450282,
+      "sha256": "27ab2abed474eb0e90ba49dd6916a5920c4f72c60c273e1f550e927b1850ac54"
+    }
+  ],
+  "scope": {
+    "questions": 10,
+    "has_questions": true,
+    "has_solutions": false
+  },
+  "content_mapping": [
+    {
+      "id": "question-1",
+      "role": "question",
+      "source": {
+        "number": 1,
+        "paragraphs": [
+          3
+        ]
+      }
+    },
+    {
+      "id": "question-2",
+      "role": "question",
+      "source": {
+        "number": 2,
+        "paragraphs": [
+          4,
+          5
+        ]
+      }
+    },
+    {
+      "id": "question-3",
+      "role": "question",
+      "source": {
+        "number": 3,
+        "paragraphs": [
+          6
+        ]
+      }
+    },
+    {
+      "id": "question-4",
+      "role": "question",
+      "source": {
+        "number": 4,
+        "paragraphs": [
+          8
+        ]
+      }
+    },
+    {
+      "id": "question-5",
+      "role": "question",
+      "source": {
+        "number": 5,
+        "paragraphs": [
+          10
+        ]
+      }
+    },
+    {
+      "id": "question-6",
+      "role": "question",
+      "source": {
+        "number": 6,
+        "paragraphs": [
+          11
+        ]
+      }
+    },
+    {
+      "id": "question-7",
+      "role": "question",
+      "source": {
+        "number": 7,
+        "paragraphs": [
+          12,
+          14,
+          15
+        ]
+      }
+    },
+    {
+      "id": "question-8",
+      "role": "question",
+      "source": {
+        "number": 8,
+        "paragraphs": [
+          17,
+          18
+        ]
+      }
+    },
+    {
+      "id": "question-9",
+      "role": "question",
+      "source": {
+        "number": 9,
+        "paragraphs": [
+          20,
+          21
+        ]
+      }
+    },
+    {
+      "id": "question-10",
+      "role": "question",
+      "source": {
+        "number": 10,
+        "paragraphs": [
+          22,
+          23,
+          24
+        ]
+      }
+    }
+  ],
+  "provenance": {
+    "source_pages": "DOCX cached page count 4; not independently verified",
+    "formula_notes": "Six legacy WMF formulas read from text and vector records: P vector, a sqrt(b) N, a+b, a,b, a/b, B(a,b,c). Source contradictory radical/fraction wording in question 3 retained. Degree superscript 0 normalized to degree symbol; PUA spacing omitted.",
+    "preview_recovery": [
+      "word/embeddings/oleObject28.bin",
+      "word/embeddings/oleObject29.bin",
+      "word/embeddings/oleObject73.bin"
+    ],
+    "airplane_replacement": {
+      "source": "User-provided images.jpeg",
+      "asset": "images/fighter-aircraft.jpeg",
+      "sha256": "341c8ba48c378f5f7bb26d535073b795a5f28b938402fbff1c975bc222c4e46a"
+    },
+    "drone_schematic": "User explicitly requested A displaced upward/inward and separate ground rays. Illustration now deliberately not to scale; numerical coordinates and problem text preserved. Do not infer collinearity from the rendered schematic."
+  },
+  "variants": {
+    "de": {
+      "filename": "de.pdf",
+      "inputs": {
+        "variant": "de"
+      }
+    },
+    "de-cach": {
+      "filename": "de-cach.pdf",
+      "inputs": {
+        "variant": "de-cach"
+      }
+    }
+  },
+  "drive": {
+    "filenames": {
+      "de": "LIVE THỨ 4 - 10 CÂU TOÁN THỰC TẾ OXYZ GIỮA KỲ 1 - ĐỀ.pdf",
+      "de-cach": "LIVE THỨ 4 - 10 CÂU TOÁN THỰC TẾ OXYZ GIỮA KỲ 1 - ĐỀ CÁCH.pdf"
+    },
+    "folder": "Chuyên đề"
+  },
+  "qa": {
+    "review_status": "pending",
+    "compile": "passed",
+    "content": "10 questions in three source sections, same order in both variants; no answers added.",
+    "math": "90 nonempty MathType expressions; 87 OLE/WMF matches; 3 equations recovered from embedded MTEF preview where Equation Native was absent. Six legacy WMF expressions transcribed from glyph/vector records.",
+    "layout": "Both PDFs checked via text bounds; 10 questions in order. de 5 pages, de-cach 9 pages; all prompts and writing areas share pages; required 5/7 lines retained with 9 mm spacing above footer. Leading 1.05 em, question gap 8 mm, figure gaps 5 mm before/6 mm after.",
+    "figures": "Cube faces filled without stroking, then each edge drawn once at 1.15 pt; hidden edges same width. Drone dashed guides unified at 1.1 pt, A displaced per user-requested schematic, separate solid rays from O, labels moved and Oy shortened. House walls teal, roofs pink, hidden edges dark red; P label on right roof. Latest changes compiled; standalone visual review pending. Final drone revision inspected standalone: Oy shortened from 111 to 92 mm, B inset with its guides, A fully left/below B, O label clear of origin and rays. Both variants rebuilt and writing/bounds checks passed. All explicit figure strokes increased 35%, point radii 0.75 mm. Question 9 axes extended along positive directions at 1.8 pt; AB/OH/HB/HK 1.8 pt, dark-red j 2.6 pt, K label above Oy. Updated room figure inspected standalone; both PDFs passed bounds/writing checks. Question 10 visible and hidden edges use black, consistently 1.5 pt; face fills unchanged. Both variants rebuilt and bounds/writing checks passed. Question 10 faces drawn first without strokes; each visible edge, including BM, drawn once above fills at 1.5 pt. Hidden edges use the same black and thickness. Roof faces use neon lime #BFFF36 and #8FE817.",
+    "visual_review": "Standalone figures reviewed. Full-page visual PDF review pending; no page-preview images generated.",
+    "source_integrity": "Archived source SHA-256 equals original DOCX."
+  },
+  "outputs": {
+    "de": {
+      "pdf": "assets/targets/2026-10/Livestream/live-thu-4-toan-thuc-te-oxyz/de.pdf",
+      "pages": 5,
+      "bytes": 387074,
+      "sha256": "d1d79f70974149cfa06c00fe909a1b33f01fe7830bbdd88f8bb489a525b5f6b6"
+    },
+    "de-cach": {
+      "pdf": "assets/targets/2026-10/Livestream/live-thu-4-toan-thuc-te-oxyz/de-cach.pdf",
+      "pages": 9,
+      "bytes": 405319,
+      "sha256": "7ce0855c781b5dfd59f4971af7eed0643dbf5be9918a5ee8765bc4a3cde4bebd"
+    }
+  }
+}

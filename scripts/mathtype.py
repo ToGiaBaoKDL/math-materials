@@ -337,6 +337,7 @@ def extract(source):
         }
         root = ET.fromstring(archive.read("word/document.xml"))
         compared = 0
+        recovered = []
         for obj in root.findall(".//w:object", namespaces):
             ole = obj.find(".//o:OLEObject", namespaces)
             preview = obj.find(".//v:imagedata", namespaces)
@@ -351,10 +352,16 @@ def extract(source):
                 continue
             decoder = MTEF(raw[marker - 5 :])
             value = normalize(render(decoder.parse()))
+            if original not in equations:
+                if not value.strip():
+                    raise ValueError(f"Empty preview equation: {original}, {image}")
+                equations[original] = {"typst": value, "empty": False}
+                recovered.append(original)
+                continue
             if value != equations[original]["typst"]:
                 raise ValueError(f"Equation/preview mismatch: {original}, {image}")
             compared += 1
-    return {"equations": equations, "preview_pairs_checked": compared}
+    return {"equations": equations, "preview_pairs_checked": compared, "recovered_from_preview": recovered}
 
 
 def main():

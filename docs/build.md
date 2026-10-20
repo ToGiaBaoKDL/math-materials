@@ -56,7 +56,7 @@ Kế hoạch upload chỉ chọn PDF theo profile và file nguồn `source.*`; k
 
 ## Trích công thức DOCX
 
-Chạy `uv run python scripts/mathtype.py <source.docx> /tmp/equations.json` để giải mã công thức MathType MTEF 5 thành biểu thức Typst. Script kiểm tra đã đọc hết dữ liệu OLE và đối chiếu với dữ liệu MTEF trong preview WMF nhúng nếu có. Đây là kiểm tra dữ liệu công thức, không thay thế duyệt nội dung và bố cục tài liệu.
+Chạy `uv run python scripts/mathtype.py <source.docx> /tmp/equations.json` để giải mã công thức MathType MTEF 5 thành biểu thức Typst. Script kiểm tra đã đọc hết dữ liệu OLE và đối chiếu với dữ liệu MTEF trong preview WMF nhúng nếu có. Nếu OLE không còn stream `Equation Native` nhưng WMF vẫn chứa MTEF, parser khôi phục biểu thức từ preview và liệt kê riêng trong `recovered_from_preview`; không tính là cặp đã đối chiếu. WMF không có MTEF cần được đọc riêng, không tự suy công thức. Đây là kiểm tra dữ liệu công thức, không thay thế duyệt nội dung và bố cục tài liệu.
 
 Parser dùng chung bộ đọc tab-stop cho ruler độc lập và payload ruler gắn trong line/pile; hỗ trợ mũi tên đơn có nhãn trên/dưới. Dấu chấm phẩy được xuất như ký tự literal và `//` được chuẩn hoá thành dấu song song để tránh bị hiểu là cú pháp Typst. Cấu trúc/variation chưa hỗ trợ phải báo lỗi, không bỏ qua công thức. MTEF 3 chưa được hỗ trợ.
 
