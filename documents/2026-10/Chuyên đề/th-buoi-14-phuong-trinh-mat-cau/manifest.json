@@ -1,0 +1,980 @@
+{
+  "schema_version": 1,
+  "id": "th-buoi-14-phuong-trinh-mat-cau",
+  "kind": "tinh-hoa",
+  "received_date": "2026-10-20",
+  "status": "implemented",
+  "metadata": {
+    "title": "BUỔI 14: CÁC CÁCH VIẾT PHƯƠNG TRÌNH MẶT CẦU",
+    "lesson": 14,
+    "subject": "Toán – hình tọa độ Oxyz",
+    "topic": "HÌNH TỌA ĐỘ OXYZ",
+    "homework": true
+  },
+  "sources": [
+    {
+      "path": "assets/sources/2026-10/Chuyên đề/th-buoi-14-phuong-trinh-mat-cau/source.docx",
+      "original_name": "BUỔI 14 CÁC CÁCH VIẾT PHƯƠNG TRÌNH MẶT CẦU.docx",
+      "bytes": 909508,
+      "sha256": "a10b7087cc09da31e09bd71279289aab7f342c30950d4f4415d9f82eca55221f"
+    }
+  ],
+  "scope": {
+    "has_questions": true,
+    "has_solutions": true,
+    "questions": 32,
+    "sections": [
+      {
+        "title": "Xác định tâm và bán kính",
+        "questions": 5
+      },
+      {
+        "title": "Viết phương trình mặt cầu",
+        "questions": 10
+      },
+      {
+        "title": "Bài tập tự luyện",
+        "questions": 14
+      },
+      {
+        "title": "Mức vận dụng cao 9+",
+        "questions": 3
+      }
+    ]
+  },
+  "content_mapping": [
+    {
+      "id": "bai-hoc-1",
+      "role": "question",
+      "source": {
+        "number": 1,
+        "section": "bai-hoc",
+        "prompt_paragraphs": [
+          11
+        ],
+        "choice_paragraphs": [
+          12
+        ],
+        "solution_paragraphs": [
+          13,
+          14
+        ]
+      }
+    },
+    {
+      "id": "bai-hoc-2",
+      "role": "question",
+      "source": {
+        "number": 2,
+        "section": "bai-hoc",
+        "prompt_paragraphs": [
+          15
+        ],
+        "choice_paragraphs": [
+          16
+        ],
+        "solution_paragraphs": [
+          18,
+          19
+        ]
+      }
+    },
+    {
+      "id": "bai-hoc-3",
+      "role": "question",
+      "source": {
+        "number": 3,
+        "section": "bai-hoc",
+        "prompt_paragraphs": [
+          20
+        ],
+        "choice_paragraphs": [
+          21
+        ],
+        "solution_paragraphs": [
+          23,
+          24
+        ]
+      }
+    },
+    {
+      "id": "bai-hoc-4",
+      "role": "question",
+      "source": {
+        "number": 4,
+        "section": "bai-hoc",
+        "prompt_paragraphs": [
+          25
+        ],
+        "choice_paragraphs": [
+          26
+        ],
+        "solution_paragraphs": [
+          28,
+          29,
+          30
+        ]
+      }
+    },
+    {
+      "id": "bai-hoc-5",
+      "role": "question",
+      "source": {
+        "number": 5,
+        "section": "bai-hoc",
+        "prompt_paragraphs": [
+          31
+        ],
+        "choice_paragraphs": [
+          32
+        ],
+        "solution_paragraphs": [
+          34,
+          35,
+          36,
+          37,
+          38
+        ]
+      }
+    },
+    {
+      "id": "bai-hoc-6",
+      "role": "question",
+      "source": {
+        "number": 6,
+        "section": "bai-hoc",
+        "prompt_paragraphs": [
+          43
+        ],
+        "choice_paragraphs": [
+          44,
+          45
+        ],
+        "solution_paragraphs": [
+          46,
+          47,
+          48,
+          49,
+          50
+        ]
+      }
+    },
+    {
+      "id": "bai-hoc-7",
+      "role": "question",
+      "source": {
+        "number": 7,
+        "section": "bai-hoc",
+        "prompt_paragraphs": [
+          51
+        ],
+        "choice_paragraphs": [
+          52,
+          53
+        ],
+        "solution_paragraphs": [
+          55,
+          56,
+          57,
+          58,
+          59,
+          60
+        ]
+      }
+    },
+    {
+      "id": "bai-hoc-8",
+      "role": "question",
+      "source": {
+        "number": 8,
+        "section": "bai-hoc",
+        "prompt_paragraphs": [
+          61
+        ],
+        "choice_paragraphs": [
+          62,
+          63
+        ],
+        "solution_paragraphs": [
+          64,
+          65,
+          66,
+          67,
+          68
+        ]
+      }
+    },
+    {
+      "id": "bai-hoc-9",
+      "role": "question",
+      "source": {
+        "number": 9,
+        "section": "bai-hoc",
+        "prompt_paragraphs": [
+          69
+        ],
+        "choice_paragraphs": [
+          70,
+          71
+        ],
+        "solution_paragraphs": [
+          73,
+          74,
+          75,
+          76,
+          77,
+          78
+        ]
+      }
+    },
+    {
+      "id": "bai-hoc-10",
+      "role": "question",
+      "source": {
+        "number": 10,
+        "section": "bai-hoc",
+        "prompt_paragraphs": [
+          79
+        ],
+        "choice_paragraphs": [
+          80,
+          81
+        ],
+        "solution_paragraphs": [
+          83,
+          84,
+          85,
+          86,
+          87,
+          88
+        ]
+      }
+    },
+    {
+      "id": "bai-hoc-11",
+      "role": "question",
+      "source": {
+        "number": 11,
+        "section": "bai-hoc",
+        "prompt_paragraphs": [
+          89
+        ],
+        "choice_paragraphs": [
+          90
+        ],
+        "solution_paragraphs": [
+          92,
+          93,
+          94,
+          95,
+          96,
+          97,
+          98
+        ]
+      }
+    },
+    {
+      "id": "bai-hoc-12",
+      "role": "question",
+      "source": {
+        "number": 12,
+        "section": "bai-hoc",
+        "prompt_paragraphs": [
+          99
+        ],
+        "choice_paragraphs": [
+          100
+        ],
+        "solution_paragraphs": [
+          101,
+          102,
+          103,
+          104,
+          105,
+          106
+        ]
+      }
+    },
+    {
+      "id": "bai-hoc-13",
+      "role": "question",
+      "source": {
+        "number": 13,
+        "section": "bai-hoc",
+        "prompt_paragraphs": [
+          107
+        ],
+        "choice_paragraphs": [
+          108,
+          109
+        ],
+        "solution_paragraphs": [
+          111,
+          112,
+          113,
+          114,
+          115
+        ]
+      }
+    },
+    {
+      "id": "bai-hoc-14",
+      "role": "question",
+      "source": {
+        "number": 14,
+        "section": "bai-hoc",
+        "prompt_paragraphs": [
+          116
+        ],
+        "choice_paragraphs": [
+          117
+        ],
+        "solution_paragraphs": [
+          119,
+          120,
+          121,
+          122,
+          123,
+          124
+        ]
+      }
+    },
+    {
+      "id": "bai-hoc-15",
+      "role": "question",
+      "source": {
+        "number": 15,
+        "section": "bai-hoc",
+        "prompt_paragraphs": [
+          125
+        ],
+        "choice_paragraphs": [
+          126
+        ],
+        "solution_paragraphs": [
+          128,
+          129,
+          130,
+          131,
+          132
+        ]
+      }
+    },
+    {
+      "id": "tu-luyen-1",
+      "role": "question",
+      "source": {
+        "number": 1,
+        "section": "tu-luyen",
+        "prompt_paragraphs": [
+          135
+        ],
+        "choice_paragraphs": [
+          136
+        ],
+        "solution_paragraphs": [
+          137,
+          138,
+          139,
+          140
+        ]
+      }
+    },
+    {
+      "id": "tu-luyen-2",
+      "role": "question",
+      "source": {
+        "number": 2,
+        "section": "tu-luyen",
+        "prompt_paragraphs": [
+          141
+        ],
+        "choice_paragraphs": [
+          142
+        ],
+        "solution_paragraphs": [
+          143,
+          144,
+          145
+        ]
+      }
+    },
+    {
+      "id": "tu-luyen-3",
+      "role": "question",
+      "source": {
+        "number": 3,
+        "section": "tu-luyen",
+        "prompt_paragraphs": [
+          146
+        ],
+        "choice_paragraphs": [
+          147
+        ],
+        "solution_paragraphs": [
+          149,
+          150
+        ]
+      }
+    },
+    {
+      "id": "tu-luyen-4",
+      "role": "question",
+      "source": {
+        "number": 4,
+        "section": "tu-luyen",
+        "prompt_paragraphs": [
+          151
+        ],
+        "choice_paragraphs": [
+          152,
+          153
+        ],
+        "solution_paragraphs": [
+          154,
+          155,
+          156,
+          157
+        ]
+      }
+    },
+    {
+      "id": "tu-luyen-5",
+      "role": "question",
+      "source": {
+        "number": 5,
+        "section": "tu-luyen",
+        "prompt_paragraphs": [
+          158
+        ],
+        "choice_paragraphs": [
+          159
+        ],
+        "solution_paragraphs": [
+          160,
+          161,
+          162,
+          163
+        ]
+      }
+    },
+    {
+      "id": "tu-luyen-6",
+      "role": "question",
+      "source": {
+        "number": 6,
+        "section": "tu-luyen",
+        "prompt_paragraphs": [
+          164
+        ],
+        "choice_paragraphs": [
+          165
+        ],
+        "solution_paragraphs": [
+          167,
+          168,
+          169,
+          170
+        ]
+      }
+    },
+    {
+      "id": "tu-luyen-7",
+      "role": "question",
+      "source": {
+        "number": 7,
+        "section": "tu-luyen",
+        "prompt_paragraphs": [
+          171
+        ],
+        "choice_paragraphs": [
+          172,
+          173
+        ],
+        "solution_paragraphs": [
+          175,
+          176,
+          177
+        ]
+      }
+    },
+    {
+      "id": "tu-luyen-8",
+      "role": "question",
+      "source": {
+        "number": 8,
+        "section": "tu-luyen",
+        "prompt_paragraphs": [
+          178
+        ],
+        "choice_paragraphs": [
+          179,
+          180
+        ],
+        "solution_paragraphs": [
+          182,
+          183,
+          184
+        ]
+      }
+    },
+    {
+      "id": "tu-luyen-9",
+      "role": "question",
+      "source": {
+        "number": 9,
+        "section": "tu-luyen",
+        "prompt_paragraphs": [
+          185
+        ],
+        "choice_paragraphs": [
+          186,
+          187
+        ],
+        "solution_paragraphs": [
+          188,
+          189,
+          190,
+          191
+        ]
+      }
+    },
+    {
+      "id": "tu-luyen-10",
+      "role": "question",
+      "source": {
+        "number": 10,
+        "section": "tu-luyen",
+        "prompt_paragraphs": [
+          192
+        ],
+        "choice_paragraphs": [
+          193,
+          194
+        ],
+        "solution_paragraphs": [
+          196,
+          197,
+          198
+        ]
+      }
+    },
+    {
+      "id": "tu-luyen-11",
+      "role": "question",
+      "source": {
+        "number": 11,
+        "section": "tu-luyen",
+        "prompt_paragraphs": [
+          199
+        ],
+        "choice_paragraphs": [
+          200,
+          201
+        ],
+        "solution_paragraphs": [
+          202,
+          203,
+          204,
+          205,
+          206,
+          207
+        ]
+      }
+    },
+    {
+      "id": "tu-luyen-12",
+      "role": "question",
+      "source": {
+        "number": 12,
+        "section": "tu-luyen",
+        "prompt_paragraphs": [
+          208
+        ],
+        "choice_paragraphs": [
+          209
+        ],
+        "solution_paragraphs": [
+          210,
+          211,
+          212,
+          213,
+          214,
+          215
+        ]
+      }
+    },
+    {
+      "id": "tu-luyen-13",
+      "role": "question",
+      "source": {
+        "number": 13,
+        "section": "tu-luyen",
+        "prompt_paragraphs": [
+          216
+        ],
+        "choice_paragraphs": [
+          217
+        ],
+        "solution_paragraphs": [
+          218,
+          219,
+          220,
+          221,
+          222,
+          223,
+          224
+        ]
+      }
+    },
+    {
+      "id": "tu-luyen-14",
+      "role": "question",
+      "source": {
+        "number": 14,
+        "section": "tu-luyen",
+        "prompt_paragraphs": [
+          225
+        ],
+        "choice_paragraphs": [
+          226
+        ],
+        "solution_paragraphs": [
+          228,
+          229,
+          230,
+          231,
+          232
+        ]
+      }
+    },
+    {
+      "id": "tu-luyen-15",
+      "role": "question",
+      "source": {
+        "number": 15,
+        "section": "tu-luyen",
+        "prompt_paragraphs": [
+          234
+        ],
+        "choice_paragraphs": [
+          235
+        ],
+        "solution_paragraphs": [
+          237,
+          238,
+          239,
+          240,
+          241
+        ]
+      }
+    },
+    {
+      "id": "tu-luyen-16",
+      "role": "question",
+      "source": {
+        "number": 16,
+        "section": "tu-luyen",
+        "prompt_paragraphs": [
+          242
+        ],
+        "choice_paragraphs": [
+          243
+        ],
+        "solution_paragraphs": [
+          244,
+          245,
+          246,
+          247,
+          248,
+          249,
+          250,
+          251,
+          252,
+          253
+        ]
+      }
+    },
+    {
+      "id": "tu-luyen-17",
+      "role": "question",
+      "source": {
+        "number": 17,
+        "section": "tu-luyen",
+        "prompt_paragraphs": [
+          254
+        ],
+        "choice_paragraphs": [
+          255
+        ],
+        "solution_paragraphs": [
+          256,
+          257,
+          258,
+          259,
+          260,
+          261,
+          262
+        ]
+      }
+    },
+    {
+      "id": "figure-great-circle",
+      "role": "figure",
+      "source": {
+        "embedded_image": "word/media/image47.png",
+        "question": "bai-hoc-5",
+        "placement": "solution",
+        "implementation": "figures.typ:great-circle"
+      }
+    },
+    {
+      "id": "figure-diameter",
+      "role": "figure",
+      "source": {
+        "embedded_image": "word/media/image77.png",
+        "question": "bai-hoc-7",
+        "placement": "solution",
+        "implementation": "figures.typ:diameter"
+      }
+    },
+    {
+      "id": "figure-sphere-chord",
+      "role": "figure",
+      "source": {
+        "embedded_image": "word/media/image105.png",
+        "question": "bai-hoc-9",
+        "placement": "solution",
+        "implementation": "figures.typ:sphere-chord"
+      }
+    },
+    {
+      "id": "figure-orthogonal-tetrahedron",
+      "role": "figure",
+      "source": {
+        "embedded_image": "word/media/image137.png",
+        "question": "bai-hoc-11",
+        "placement": "solution",
+        "implementation": "figures.typ:orthogonal-tetrahedron"
+      }
+    },
+    {
+      "id": "figure-tangent-spheres",
+      "role": "figure",
+      "source": {
+        "embedded_image": "word/media/image177.png",
+        "question": "bai-hoc-13",
+        "placement": "solution",
+        "implementation": "figures.typ:tangent-spheres"
+      }
+    },
+    {
+      "id": "figure-contact-circle",
+      "role": "figure",
+      "source": {
+        "embedded_image": "word/media/image214.png",
+        "question": "bai-hoc-15",
+        "placement": "solution",
+        "implementation": "figures.typ:contact-circle"
+      }
+    },
+    {
+      "id": "figure-apollonius-line",
+      "role": "figure",
+      "source": {
+        "embedded_image": "word/media/image380.png",
+        "question": "tu-luyen-14",
+        "placement": "solution",
+        "implementation": "figures.typ:apollonius-line"
+      }
+    },
+    {
+      "id": "figure-max-distance",
+      "role": "figure",
+      "source": {
+        "embedded_image": "word/media/image401.png",
+        "question": "tu-luyen-15",
+        "placement": "solution",
+        "implementation": "figures.typ:max-distance"
+      }
+    },
+    {
+      "id": "figure-orthogonal-tangents",
+      "role": "figure",
+      "source": {
+        "embedded_image": "word/media/image413.png",
+        "question": "tu-luyen-16",
+        "placement": "solution",
+        "implementation": "figures.typ:orthogonal-tangents"
+      }
+    },
+    {
+      "id": "figure-inscribed-tetrahedron",
+      "role": "figure",
+      "source": {
+        "embedded_image": "word/media/image434.png",
+        "question": "tu-luyen-17",
+        "placement": "solution",
+        "implementation": "figures.typ:inscribed-tetrahedron"
+      }
+    }
+  ],
+  "provenance": {
+    "math_extraction": {
+      "ole_equations": 466,
+      "preview_pairs_checked": 466,
+      "standalone_wmf_equations": {
+        "word/media/image234.wmf": "O x y z",
+        "word/media/image235.wmf": "lr(( S )) : x ^(2) + lr(( y - 2 )) ^(2) + z ^(2) = 9",
+        "word/media/image236.wmf": "lr(( S ))",
+        "word/media/image237.wmf": "6",
+        "word/media/image238.wmf": "18",
+        "word/media/image239.wmf": "3",
+        "word/media/image240.wmf": "9",
+        "word/media/image241.wmf": "R = sqrt(9) = 3"
+      }
+    },
+    "corrections": [
+      {
+        "paragraph": 26,
+        "original": "A. $7$ B. $8$ C. $9$ D. $6$",
+        "corrected": "A. $3$ B. $8$ C. $9$ D. $6$"
+      },
+      {
+        "paragraph": 28,
+        "original": "Yêu cầu bài toán tương đương $lr(( 2 m )) ^(2) + m ^(2) + m ^(2) - lr(( 9 m ^(2) - 28 )) > 0$",
+        "corrected": "Yêu cầu bài toán tương đương $lr((2m))^2 + m^2 + m^2 - lr((9m^2 - 8)) > 0$"
+      },
+      {
+        "paragraph": 29,
+        "original": "$⇔ 28 - 3 m ^(2) > 0 ⇔ m ^(2) < frac(28, 3) ⇔ - sqrt(frac(28, 3)) < m < sqrt(frac(28, 3))$",
+        "corrected": "$⇔ 8 - 3m^2 > 0 ⇔ m^2 < frac(8,3) ⇔ -sqrt(frac(8,3)) < m < sqrt(frac(8,3))$"
+      },
+      {
+        "paragraph": 30,
+        "original": "Mà $m ∈ Z ⇒$ có 7 giá trị thoả mãn. Chọn A.",
+        "corrected": "Mà $m ∈ Z ⇒$ có 3 giá trị thoả mãn. Chọn A."
+      },
+      {
+        "paragraph": 76,
+        "original": "Xét $Δ I A H$ vuông ở $H$ ta có: $R ^(2) = I H ^(2) + A H ^(2) = I H ^(2) + lr(( frac(A B, 2) )) ^(2) = lr(( sqrt(13) )) ^(2) + lr(( sqrt(3) )) ^(2) = 4$",
+        "corrected": "Xét $Δ I A H$ vuông ở $H$ ta có: $R^2 = I H^2 + A H^2 = I H^2 + lr((frac(A B,2)))^2 = lr((sqrt(13)))^2 + lr((sqrt(3)))^2 = 16$"
+      },
+      {
+        "paragraph": 93,
+        "original": "Ta thấy $A ∈ O x \",\" B ∈ O y \",\" C ∈ O z ⇒$ Tứ diện $O A B C$ có ba góc vuông tại $O$.",
+        "corrected": "Ta thấy $A ∈ O x, B ∈ O z, C ∈ O y ⇒$ Tứ diện $O A B C$ có ba góc vuông tại $O$."
+      },
+      {
+        "paragraph": 94,
+        "original": "Gọi $M$ là trung điểm của $B C$, qua $M$ kẻ đường thẳng $d ⊥ lr(( O A B ))$",
+        "corrected": "Gọi $M$ là trung điểm của $A B$, qua $M$ kẻ đường thẳng $d ⊥ lr((O A B))$"
+      },
+      {
+        "paragraph": 104,
+        "original": "$cases(display(I A = I B), display(I A = I C)) ⇔ cases(display(sqrt(lr(( x - 1 )) ^(2) + lr(( y - 2 )) ^(2) + 4 ^(2)) = sqrt(lr(( x - 1 )) ^(2) + lr(( y + 3 )) ^(2) + 1 ^(2))), display(sqrt(lr(( x - 1 )) ^(2) + lr(( y - 2 )) ^(2) + 4 ^(2)) = sqrt(lr(( x - 2 )) ^(2) + lr(( y - 2 )) ^(2) + 3 ^(2))))$",
+        "corrected": "$cases(I A^2 = I B^2, I A^2 = I C^2) ⇔ cases((x-1)^2 + (y-2)^2 + 16 = (x-1)^2 + (y+3)^2 + 1, (x-1)^2 + (y-2)^2 + 16 = (x-2)^2 + (y-2)^2 + 9)$"
+      },
+      {
+        "paragraph": 149,
+        "original": "Từ phương trình mặt cầu ta suy ra tâm $I lr(( - 4 \";\" 1 \";\" 0 )) \",\" R = sqrt(4 ^(2) + lr(( - 1 )) ^(2) - 1) = 4$",
+        "corrected": "Từ phương trình mặt cầu ta suy ra tâm $I lr((4; -1; 0)), R = sqrt(4^2 + (-1)^2 - 1) = 4$"
+      },
+      {
+        "paragraph": 147,
+        "original": "A. $I lr(( - 4 \";\" 1 \";\" 0 )) \",\" R = 2$ B. $I lr(( - 4 \";\" 1 \";\" 0 )) \",\" R = 4$      C. $I lr(( 4 \";\" - 1 \";\" - 1 )) \",\" R = 2$    D. $I lr(( 8 \";\" - 2 \";\" 0 = - 1 )) \",\" R = 4$",
+        "corrected": "A. $I lr(( - 4 \";\" 1 \";\" 0 )) \",\" R = 2$ B. $I lr(( 4 \";\" - 1 \";\" 0 )) \",\" R = 4$      C. $I lr(( 4 \";\" - 1 \";\" - 1 )) \",\" R = 2$    D. $I lr(( 8 \";\" - 2 \";\" 0 = - 1 )) \",\" R = 4$"
+      },
+      {
+        "paragraph": 231,
+        "original": "$⇒ cases(display(I A = frac(9, 2)), display(I B = frac(1, 2))) ⇒ 8 M I ^(2) = I A ^(2) + 9 I B ^(2) ⇒ M I ^(2) = lr([ lr(( frac(9, 2) )) ^(2) - 9 . lr(( frac(1, 2) )) ^(2) ]) . frac(1, 8) = frac(9, 4) ⇒ M I = frac(3, 2)$",
+        "corrected": "$⇒ cases(display(I A = frac(9, 2)), display(I B = frac(1, 2))) ⇒ 8 M I ^(2) = I A ^(2) - 9 I B ^(2) ⇒ M I ^(2) = lr([ lr(( frac(9, 2) )) ^(2) - 9 . lr(( frac(1, 2) )) ^(2) ]) . frac(1, 8) = frac(9, 4) ⇒ M I = frac(3, 2)$"
+      },
+      {
+        "paragraph": 238,
+        "original": "Mà:$frac(M A, M B) = frac(2, 3)$$⇔ 9 M A ^(2) = 4 M B ^(2) ⇔ 5 lr(( x ^(2) + y ^(2) + z ^(2) )) + 60 x - 60 y + 60 z = 0 ⇔ x ^(2) + y ^(2) + z ^(2) + 12 z - 12 y + 12 z = 0$",
+        "corrected": "Mà:$frac(M A, M B) = frac(2, 3)$$⇔ 9 M A ^(2) = 4 M B ^(2) ⇔ 5 lr(( x ^(2) + y ^(2) + z ^(2) )) + 60 x - 60 y + 60 z = 0 ⇔ x ^(2) + y ^(2) + z ^(2) + 12 x - 12 y + 12 z = 0$"
+      },
+      {
+        "paragraph": 239,
+        "original": "$⇒ M ∈ lr(( S )) : x ^(2) + y ^(2) + z ^(2) + 12 z - 12 y + 12 z = 0$, trong đó $lr(( S ))$ có: $cases(display(I lr(( - 6 \";\" 6 \";\" - 6 ))), display(R = 6 sqrt(3)))$",
+        "corrected": "$⇒ M ∈ lr(( S )) : x ^(2) + y ^(2) + z ^(2) + 12 x - 12 y + 12 z = 0$, trong đó $lr(( S ))$ có: $cases(display(I lr(( - 6 \";\" 6 \";\" - 6 ))), display(R = 6 sqrt(3)))$"
+      },
+      {
+        "paragraph": 260,
+        "original": "Theo BĐT Côsi: $a ^(2) + b ^(2) + c ^(2) ≥ 3 sqrt(a ^(2) b ^(2) c ^(2)) ⇔ 108 ≥ 3 root(3, a ^(2) b ^(2) c ^(2)) ⇔ a b c ≤ 216$",
+        "corrected": "Theo BĐT Côsi: $a ^(2) + b ^(2) + c ^(2) ≥ 3 root(3, a ^(2) b ^(2) c ^(2)) ⇔ 108 ≥ 3 root(3, a ^(2) b ^(2) c ^(2)) ⇔ a b c ≤ 216$"
+      }
+    ],
+    "correction_authorization": "User approved verified corrections and manifest recording in this session.",
+    "source_issues": [
+      {
+        "question": "tu-luyen-3",
+        "note": "Option D contains malformed coordinate 0 = -1 in source; preserved as a distractor. Correct option B and solution center corrected to (4; -1; 0)."
+      }
+    ],
+    "figure_models": {
+      "tangent-spheres": "Smaller sphere enlarged schematically at user request; external tangency retained. Display radii are not to scale; source equations and numerical radii unchanged.",
+      "inscribed-tetrahedron": "Source-matching schematic: lower elliptical section through A, B, C, B on rear dashed arc; A at silhouette contact, C on front arc, D on upper sphere silhouette. Diagram not a metric projection of the right tetrahedron; source mathematical data unchanged."
+    }
+  },
+  "variants": {
+    "de": {
+      "filename": "de.pdf",
+      "inputs": {
+        "variant": "de"
+      }
+    },
+    "de-cach": {
+      "filename": "de-cach.pdf",
+      "inputs": {
+        "variant": "de-cach"
+      }
+    },
+    "dap-an": {
+      "filename": "dap-an.pdf",
+      "inputs": {
+        "variant": "dap-an"
+      }
+    }
+  },
+  "qa": {
+    "review_status": "pending",
+    "compile": "passed",
+    "content": "32 questions and 128 choices in each variant, source numbering 1–15 then 1–17. All source theory retained. 32 solution headings and bold final answer conclusions only in dap-an; no duplicate source solution labels or isolated answer conclusions at page starts.",
+    "math": "466 OLE expressions matched their embedded WMF MTEF data; 8 standalone WMF expressions decoded separately. Verified source corrections authorized by user and listed in provenance. One malformed source distractor retained and flagged.",
+    "layout": "All three PDFs retain 32 questions and 128 choices. Question paragraphs left aligned; coordinate tuples use native math punctuation and separate inline boxes per point; long stem equations displayed separately. Four numbered section headings; only first two use DẠNG prefix. Solution paragraph gap 5.5 mm and leading 1 em. Writing questions and areas stay on the same page; 237 rules checked at 9 mm pitch, minimum 3/6 lines per question. PDF text checked within page bounds. No full-page visual review performed.",
+    "fonts": "All PDF fonts embedded. Body Times New Roman, math New Computer Modern Math, DXT heading fonts. No replacement characters in PDF text.",
+    "figures": "All figures retain 110.25% scale, question 17 additionally 110%. Revised question 17 inspected as standalone render: lower section wraps around sphere, front arc solid/rear dashed, A/B/C on section, D on upper silhouette, no face fill obscuring hidden edges. Full-page visual review pending.",
+    "source_integrity": "Archived source matches original SHA-256; original untouched.",
+    "visual_review": "Standalone figures reviewed. Full-page visual PDF review pending; no page preview images generated."
+  },
+  "drive": {
+    "folder": "Chuyên đề",
+    "filenames": {
+      "de": "KHÓA TH - BUỔI 14 - CÁC CÁCH VIẾT PHƯƠNG TRÌNH MẶT CẦU - ĐỀ.pdf",
+      "de-cach": "KHÓA TH - BUỔI 14 - CÁC CÁCH VIẾT PHƯƠNG TRÌNH MẶT CẦU - ĐỀ CÁCH.pdf",
+      "dap-an": "KHÓA TH - BUỔI 14 - CÁC CÁCH VIẾT PHƯƠNG TRÌNH MẶT CẦU - ĐÁP ÁN.pdf"
+    }
+  },
+  "outputs": {
+    "de": {
+      "pdf": "assets/targets/2026-10/Chuyên đề/th-buoi-14-phuong-trinh-mat-cau/de.pdf",
+      "pages": 7,
+      "bytes": 481498,
+      "sha256": "4ef75fe165ff115fdee1ce988c00c7741fe541e3fa77685f2ae42d396b570aef"
+    },
+    "de-cach": {
+      "pdf": "assets/targets/2026-10/Chuyên đề/th-buoi-14-phuong-trinh-mat-cau/de-cach.pdf",
+      "pages": 17,
+      "bytes": 516358,
+      "sha256": "ce9d30c79a8d937f4d7c21021998da556eb2beb174bcd495ad4a22afa9778556"
+    },
+    "dap-an": {
+      "pdf": "assets/targets/2026-10/Chuyên đề/th-buoi-14-phuong-trinh-mat-cau/dap-an.pdf",
+      "pages": 21,
+      "bytes": 696110,
+      "sha256": "f4da15fefa459e79be790c7224ddb0dbd3ffed6d40e03f8a8590c7a365742297"
+    }
+  }
+}
