@@ -32,6 +32,7 @@
   title-size: 12pt,
   duration-size: 12pt,
   pages: none,
+  exam-date: none,
 ) = {
   set par(justify: false, leading: 0.55em)
   let school-color = palette.section-green
@@ -69,23 +70,35 @@
         ],
         ..(
           (
-            context text(
-              weight: "bold",
-            )[Đề thi gồm #(if pages == none { counter(page).final().first() } else { pages }) trang],
-            [*Môn:* #subject],
-          ),
-          (
-            text(size: 12pt, weight: "bold")[Thời gian làm bài: #text(fill: palette.primary)[#duration phút]],
-            [*Khối:* #grade],
-          ),
-          (
-            text(size: 11.5pt, style: "italic")[(Không kể thời gian phát đề)],
-            if code != none {
-              box(fill: palette.code-fill, radius: 1mm, inset: (x: 3mm, y: 1.5mm))[
-                *Mã đề:* #text(weight: "bold", fill: palette.primary, code)
-              ]
-            } else if note != none { text(size: 12.5pt, style: "italic", note) } else { [] },
-          ),
+            (
+              context text(
+                weight: "bold",
+              )[Đề thi gồm #(if pages == none { counter(page).final().first() } else { pages }) trang],
+              [*Môn:* #subject],
+            ),
+            (
+              text(size: 12pt, weight: "bold")[Thời gian làm bài: #text(fill: palette.primary)[#duration phút]],
+              [*Lớp:* #grade],
+            ),
+            (
+              text(size: 11.5pt, style: "italic")[(Không kể thời gian phát đề)],
+              if exam-date != none { [*Ngày thi:* #exam-date] } else if code != none {
+                box(fill: palette.code-fill, radius: 1mm, inset: (x: 3mm, y: 1.5mm))[
+                  *Mã đề:* #text(weight: "bold", fill: palette.primary, code)
+                ]
+              } else if note != none { text(size: 12.5pt, style: "italic", note) } else { [] },
+            ),
+          )
+            + if exam-date != none and code != none {
+              (
+                (
+                  [],
+                  box(fill: palette.code-fill, radius: 1mm, inset: (x: 3mm, y: 1.5mm))[
+                    *Mã đề:* #text(weight: "bold", fill: palette.primary, code)
+                  ],
+                ),
+              )
+            } else { () }
         )
           .enumerate()
           .map(((i, pair)) => (
@@ -133,7 +146,7 @@
   below: 2mm,
 )[
   #set par(justify: false)
-  #box(fill: plot-style.table-fill, inset: (x: 2mm, y: 1.5mm))[
+  #box(fill: palette.primary, inset: (x: 2mm, y: 1.5mm))[
     #text(weight: "bold", fill: white)[PHẦN #number.]
   ]
   #h(1mm)
@@ -145,7 +158,11 @@
 #let exam-table(columns: auto, header: (), ..cells) = table(
   columns: columns, align: center + horizon, inset: 4.5pt, stroke: plot-style.table-stroke,
   fill: (x, y) => if y == 0 { plot-style.table-fill } else { white },
-  table.header(..header.map(it => text(weight: "bold", fill: white, it))), ..cells.pos()
+  table.header(..header.map(it => table.cell(stroke: 0.6pt + white, text(
+    weight: "bold",
+    fill: white,
+    it,
+  )))), ..cells.pos()
 )
 
 #let exam-question(

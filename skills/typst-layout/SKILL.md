@@ -40,18 +40,18 @@ Dùng template làm nguồn triển khai, skill làm quy tắc tái sử dụng.
 
 - Thân chữ Times New Roman, đen, regular; FreeSerif dự phòng ký hiệu thiếu. Toán dùng New Computer Modern Math. Không tăng độ đậm toàn bộ thân bài ngoài yêu cầu.
 - Font 9Slide gốc ở `assets/fonts/dxt/`, nạp qua `--font-path assets/fonts`; không làm đậm giả font vốn có nét đậm. Noto Sans dùng cho UI; Arial cho khóa học và tác giả. Kiểm tra font nhúng và dấu tiếng Việt khi đổi font.
-- Header bảng nền đỏ đậm theo palette của loại tài liệu, chữ trắng đậm; đường chia các ô header phải nhìn rõ (dùng nét trắng tương phản). Ô dữ liệu giữ chữ đen dễ đọc. Ô mã đề/bảng biến thiên dùng nền hồng nhạt và chữ đậm tương phản khi template quy định.
+- Header bảng nền đỏ đô `#980D2B` theo token `plot-style.table-fill`, chữ trắng đậm; đường chia các ô header phải nhìn rõ (dùng nét trắng tương phản). Ô dữ liệu giữ chữ đen dễ đọc. Ô mã đề/bảng biến thiên dùng nền hồng nhạt và chữ đậm tương phản khi template quy định.
 - Bảng biến thiên chia các ô cùng vai trò đều nhau; căn giữa dấu, vô cùng và nội dung theo cả hai chiều. Nhãn lựa chọn và công thức dùng cùng trục bắt đầu. Tên trường trích trong câu hỏi in đậm đen.
 - Tăng khoảng cách giữa các câu bằng token riêng, không chỉ tăng leading. Không đặt `set par` giữa nhãn `[DXT]` và câu dẫn làm tách dòng; scope thay đổi quanh cả câu. Phân số inline dùng dạng gọn khi thích hợp, vẫn giữ tử/mẫu rõ và nhịp dòng đều.
 
 ### Đề thi
 
-- `templates/exam.typ` và `exam-branding.typ`; A4, lề ngang 12 mm, trên 18 mm, dưới 16 mm. Thân đề và đáp án 12,5 pt. Leading theo cấu hình tài liệu; không nhầm mặc định theme với override của bản đã duyệt.
+- `templates/exam.typ` và `exam-branding.typ`; A4, lề ngang 12 mm, trên 18 mm, dưới 16 mm. Thân đề và đáp án 13 pt, leading mặc định 1,1 em. Leading theo cấu hình tài liệu; không nhầm mặc định theme với override của bản đã duyệt.
 - Cover khung trắng bo góc 3 mm, viền đỏ 1 pt; cột trái/phải 56%/44%. Hai khối tiêu đề Noto Sans bold cùng cỡ, tối đa 14 pt; nếu không vừa, ngắt ở cụm nghĩa rồi chọn cỡ chung vừa cả hai cột. Không ép ngang chữ. Cho phép trái 2 dòng/phải 3 dòng; căn trên để dòng đầu ngang nhau, chữ căn giữa theo chiều ngang. Không cắt vụn tên riêng hoặc năm học.
 - Tên đơn vị xanh lá tươi bão hòa `palette.section-green` (`#009B19`), bold và stroke 0,12 pt cùng màu; tên kỳ thi đỏ `#C6001D`, cùng độ đậm. Không pha trắng/giảm opacity. Không hiển thị “ĐỀ CHÍNH THỨC”. Đường kẻ nhạt bên trái cách cụm tên đơn vị 1 mm, không hạ theo chiều cao khối phải.
-- Cột phải đệm trái 8 mm. Ba hàng thông tin hai bên cùng cao độ: số trang ↔ môn; thời gian ↔ khối; ghi chú phát đề ↔ mã đề hoặc ngày thi. Cỡ thông tin 12,5 pt, dòng thời gian 12 pt, ghi chú 11,5 pt. Đồng hồ 20 mm, đầy đủ không bị cắt, có khoảng hở với chữ. Họ tên/số báo danh cùng một dòng chia đôi; dưới có đường đỏ nét đứt theo component.
+- Cột phải đệm trái 8 mm. Ba hàng thông tin hai bên cùng cao độ: số trang ↔ môn; thời gian ↔ khối; ghi chú phát đề ↔ mã đề hoặc ngày thi. Nếu có cả ngày thi và mã đề, đặt ngày thi dưới Lớp và trên Mã đề, nhãn “Ngày thi:” in đậm. Cỡ thông tin 12,5 pt, dòng thời gian 12 pt, ghi chú 11,5 pt. Đồng hồ 20 mm, đầy đủ không bị cắt, có khoảng hở với chữ. Họ tên/số báo danh cùng một dòng chia đôi; dưới có đường đỏ nét đứt theo component.
 - Họa tiết góc dưới phải dùng `assets/branding/icons/exam-corner.svg`: tam giác đỏ và hai hình bình hành, cắt gọn theo khung bo góc. Không kéo dài họa tiết hoặc để lấn nội dung.
-- Tiêu đề phần: chỉ nhãn “PHẦN I/II/III” có nền đỏ đậm như header bảng, chữ trắng đậm. Tên phần phía sau xanh lá `#009B19`, bold + stroke 0,12 pt; hướng dẫn màu đen. Áp dụng mọi phần và variant. **Xanh lá này cho heading/phần đề thi, không thay convention chuyên đề.**
+- Tiêu đề phần: chỉ nhãn “PHẦN I/II/III” có nền đỏ nhận diện đề thi, chữ trắng đậm. Tên phần phía sau xanh lá `#009B19`, bold + stroke 0,12 pt; hướng dẫn màu đen. Áp dụng mọi phần và variant. **Xanh lá này cho heading/phần đề thi, không thay convention chuyên đề.**
 - Header/footer chữ Noto Sans Regular 11 pt, stroke 0,12 pt cùng màu; nhận diện đỏ đề thi `#C8102E`, icon liên hệ, mã đề nếu có và trang thực. Không dùng dải DXT/logo chuyên đề.
 - Câu hỏi được nối qua trang; không bắt buộc nguyên câu trong một trang. `de-dap-an` nối đáp án từ trang mới, dùng chung header/footer và số trang liên tục; không chèn một bộ header/footer đáp án lồng vào. Bản đáp án riêng vẫn có header/footer. Chỉ tạo variant theo phạm vi nguồn/yêu cầu.
 

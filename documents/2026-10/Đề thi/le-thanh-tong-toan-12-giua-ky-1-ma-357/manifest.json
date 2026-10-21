@@ -1,0 +1,340 @@
+{
+  "schema_version": 1,
+  "id": "le-thanh-tong-toan-12-giua-ky-1-ma-357",
+  "kind": "exam",
+  "received_date": "2026-10-22",
+  "status": "implemented",
+  "metadata": {
+    "title": "ĐỀ KIỂM TRA GIỮA KÌ I TRƯỜNG TH–THCS–THPT LÊ THÁNH TÔNG",
+    "subject": "TOÁN 12",
+    "school_year": "2026 - 2027"
+  },
+  "sources": [
+    {
+      "path": "assets/sources/2026-10/Đề thi/le-thanh-tong-toan-12-giua-ky-1-ma-357/source.pdf",
+      "original_name": "de-giua-ki-1-toan-12-nam-2026-2027-truong-le-thanh-tong-tp-hcm.pdf",
+      "bytes": 2166455,
+      "sha256": "692b975d8fc7ee4acd412722d33a1574716e30f54ea82fc0b102be0a718cb03a",
+      "pages": 14
+    }
+  ],
+  "scope": {
+    "questions": 22,
+    "question_pages": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "answer_pages": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14
+    ],
+    "has_questions": true,
+    "has_solutions": true
+  },
+  "variants": {
+    "de": {
+      "filename": "de.pdf",
+      "inputs": {
+        "variant": "de"
+      }
+    },
+    "dap-an": {
+      "filename": "dap-an.pdf",
+      "inputs": {
+        "variant": "dap-an"
+      }
+    },
+    "de-dap-an": {
+      "filename": "de-dap-an.pdf",
+      "inputs": {
+        "variant": "de-dap-an"
+      }
+    }
+  },
+  "drive": {
+    "folder": "Đề thi",
+    "filenames": {
+      "de": "LE-THANH-TONG-TOAN-12-GIUA-KY-I-MA-357 - ĐỀ.pdf",
+      "dap-an": "LE-THANH-TONG-TOAN-12-GIUA-KY-I-MA-357 - ĐÁP ÁN.pdf",
+      "de-dap-an": "LE-THANH-TONG-TOAN-12-GIUA-KY-I-MA-357 - ĐỀ + ĐÁP ÁN.pdf"
+    }
+  },
+  "provenance": {
+    "source_issues": [
+      {
+        "question": "I.11",
+        "issue": "Nguồn viết mặt phẳng tọa độ Oxyz thay vì không gian tọa độ; giữ nguyên câu chữ."
+      },
+      {
+        "question": "III.2",
+        "issue": "C(x)/x=150+900/x >150 với mọi x>0; đáp án 150 là giới hạn khi x tiến tới vô cùng, không phải cận trên. Giữ câu chữ nguồn và giải thích giới hạn trong lời giải."
+      }
+    ],
+    "supplementary_images": [
+      {
+        "path": "documents/2026-10/Đề thi/le-thanh-tong-toan-12-giua-ky-1-ma-357/images/cable-stayed-bridge.png",
+        "original_name": "screenshot_2026_10_19_153358_1792398950113682735809.png",
+        "question": "II.4",
+        "sha256": "a9418083948fe94050eeeb5786b998b4805dfc66a54055653598714bc188c6ed"
+      }
+    ]
+  },
+  "qa": {
+    "status": "pending",
+    "full_page_visual_review": "pending: no full-page PDF visual inspection performed",
+    "compile": "passed",
+    "review_status": "pending",
+    "checks": {
+      "de-dap-an": {
+        "pages": 14,
+        "question_sequence": "passed",
+        "text_page_bounds": "passed",
+        "end_marks": [
+          [
+            8,
+            766.624421
+          ],
+          [
+            14,
+            766.624421
+          ]
+        ]
+      },
+      "de": {
+        "pages": 8,
+        "question_sequence": "passed",
+        "text_page_bounds": "passed",
+        "end_marks": [
+          [
+            8,
+            766.624421
+          ]
+        ]
+      },
+      "dap-an": {
+        "pages": 6,
+        "question_sequence": "passed",
+        "text_page_bounds": "passed",
+        "end_marks": [
+          [
+            6,
+            766.624421
+          ]
+        ]
+      }
+    },
+    "answer_key": "Matched official code 357 key on source page 5: 12 MC, 16 TF statements, 6 short answers.",
+    "figures": "Inspected revised graph labels, net, factory and pool as standalone figures. User-provided bridge image inspected and used unchanged.",
+    "fonts": "Previous all-vector claim superseded: bridge is a user-provided raster image; other diagrams are native vectors.",
+    "source_integrity": "Original PDF preserved; SHA-256 recorded in sources.",
+    "ending": "HẾT is on the last question page and final solution page, near bottom; no standalone ending page."
+  },
+  "outputs": {
+    "de-dap-an": {
+      "pdf": "assets/targets/2026-10/Đề thi/le-thanh-tong-toan-12-giua-ky-1-ma-357/de-dap-an.pdf",
+      "pages": 14,
+      "bytes": 569970,
+      "sha256": "e11186394964775bda514f5d95930476e7b6371c7bf7b6db9c5b004f9eabb01e"
+    },
+    "de": {
+      "pdf": "assets/targets/2026-10/Đề thi/le-thanh-tong-toan-12-giua-ky-1-ma-357/de.pdf",
+      "pages": 8,
+      "bytes": 397783,
+      "sha256": "abef500d6f3bea4c04cb1e2c1a6e3dc1e0d7c3b4379afdbebd7ac814cf891b2e"
+    },
+    "dap-an": {
+      "pdf": "assets/targets/2026-10/Đề thi/le-thanh-tong-toan-12-giua-ky-1-ma-357/dap-an.pdf",
+      "pages": 6,
+      "bytes": 249377,
+      "sha256": "e4aca668dde545aff77e821274851a7fe7fcab4a2b965496b8771ebb92a72765"
+    }
+  },
+  "content_mapping": [
+    {
+      "id": "I.1",
+      "role": "question",
+      "source": {
+        "index": 0,
+        "page": 1
+      }
+    },
+    {
+      "id": "I.2",
+      "role": "question",
+      "source": {
+        "index": 0,
+        "page": 1
+      }
+    },
+    {
+      "id": "I.3",
+      "role": "question",
+      "source": {
+        "index": 0,
+        "page": 1
+      }
+    },
+    {
+      "id": "I.4",
+      "role": "question",
+      "source": {
+        "index": 0,
+        "page": 1
+      }
+    },
+    {
+      "id": "I.5",
+      "role": "question",
+      "source": {
+        "index": 0,
+        "page": 1
+      }
+    },
+    {
+      "id": "I.6",
+      "role": "question",
+      "source": {
+        "index": 0,
+        "page": 1
+      }
+    },
+    {
+      "id": "I.7",
+      "role": "question",
+      "source": {
+        "index": 0,
+        "page": 1
+      }
+    },
+    {
+      "id": "I.8",
+      "role": "question",
+      "source": {
+        "index": 0,
+        "page": 1
+      }
+    },
+    {
+      "id": "I.9",
+      "role": "question",
+      "source": {
+        "index": 0,
+        "page": 1
+      }
+    },
+    {
+      "id": "I.10",
+      "role": "question",
+      "source": {
+        "index": 0,
+        "page": 2
+      }
+    },
+    {
+      "id": "I.11",
+      "role": "question",
+      "source": {
+        "index": 0,
+        "page": 2
+      }
+    },
+    {
+      "id": "I.12",
+      "role": "question",
+      "source": {
+        "index": 0,
+        "page": 2
+      }
+    },
+    {
+      "id": "II.1",
+      "role": "question",
+      "source": {
+        "index": 0,
+        "page": 2
+      }
+    },
+    {
+      "id": "II.2",
+      "role": "question",
+      "source": {
+        "index": 0,
+        "page": 2
+      }
+    },
+    {
+      "id": "II.3",
+      "role": "question",
+      "source": {
+        "index": 0,
+        "page": 2
+      }
+    },
+    {
+      "id": "II.4",
+      "role": "question",
+      "source": {
+        "index": 0,
+        "page": 3
+      }
+    },
+    {
+      "id": "III.1",
+      "role": "question",
+      "source": {
+        "index": 0,
+        "page": 3
+      }
+    },
+    {
+      "id": "III.2",
+      "role": "question",
+      "source": {
+        "index": 0,
+        "page": 3
+      }
+    },
+    {
+      "id": "III.3",
+      "role": "question",
+      "source": {
+        "index": 0,
+        "page": 4
+      }
+    },
+    {
+      "id": "III.4",
+      "role": "question",
+      "source": {
+        "index": 0,
+        "page": 4
+      }
+    },
+    {
+      "id": "III.5",
+      "role": "question",
+      "source": {
+        "index": 0,
+        "page": 4
+      }
+    },
+    {
+      "id": "III.6",
+      "role": "question",
+      "source": {
+        "index": 0,
+        "page": 4
+      }
+    }
+  ]
+}

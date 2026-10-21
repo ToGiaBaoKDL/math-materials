@@ -167,11 +167,11 @@
 
 #let exam-style = (
   margin: (x: 12mm, top: 18mm, bottom: 16mm),
-  body-size: 12.5pt,
+  body-size: 13pt,
   running-size: 11pt,
   running-weight: 400,
   running-stroke: 0.12pt,
-  leading: 0.76em,
+  leading: 1.1em,
   question-gap: 5mm,
   section-gap: 5mm,
   statement-gap: 4mm,
@@ -193,7 +193,7 @@
   label-size: 10pt,
   curve: 1.5pt + rgb("#005FE6"),
   guide: (paint: rgb("#67727A"), thickness: 0.55pt, dash: "dashed"),
-  table-fill: exam-palette.primary,
+  table-fill: rgb("#980D2B"),
   variation-fill: rgb("#F1D8DE"),
   table-stroke: 0.6pt + exam-palette.primary,
 )
