@@ -63,14 +63,14 @@
     },
     "full_page_visual_review": "pending: full-page preview images are disabled by repository convention; text and bbox checked.",
     "source_content": "All five content rows and requirements transcribed; source inconsistencies preserved.",
-    "layout": "Three pages retained. Specification chapter/content columns narrowed to 24/30 mm; count columns widened to 14 mm (Huong Hoa) / 18 mm (Trieu Phong). Question labels boxed individually to prevent internal wrapping. Shared lesson hexagon section labels applied. Text bounds passed; full-page visual review pending."
+    "layout": "Three pages retained. Specification chapter/content columns narrowed to 24/30 mm; count columns widened to 14 mm (Huong Hoa) / 18 mm (Trieu Phong). Question labels boxed individually to prevent internal wrapping. Shared lesson hexagon section labels applied. Text bounds passed; full-page visual review pending. Group headers DT1/DT2/DT3/essay and their assessment-level headers restored to original brighter cyan/pink/green/yellow fills; body fills remain muted."
   },
   "outputs": {
     "de": {
       "pdf": "assets/targets/2026-10/Ma trận/ma-tran-trieu-phong-toan-12-giua-ky-1-2026-2027/ma-tran.pdf",
       "pages": 3,
-      "bytes": 338191,
-      "sha256": "901121e7bd2b0434115299f0303c775946654ba47d974590ea287b7cbea7185c"
+      "bytes": 338188,
+      "sha256": "057dc20472a3fe6a151c58ccb5e4fddd017eb9a0dbb52a3a7293e223d679659a"
     }
   },
   "content_mapping": [
