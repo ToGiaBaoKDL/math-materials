@@ -83,7 +83,7 @@
       *Vận dụng:*
 
       Khảo sát được tập xác định, chiều biến thiên, cực trị, tiệm cận, bảng biến thiên và vẽ đồ thị của các hàm số: hàm số bậc ba; hàm bậc nhất/bậc nhất; hàm bậc hai/bậc nhất (với diều kiện để hàm số tồn tại)],
-    cells: ("Câu\n6, 7, 8", "Câu 12", "", "Câu 3d\nCâu 4d", "", "", ""),
+    cells: ("Câu 6\nCâu 7\nCâu 8", "Câu 12", "", "Câu 3d\nCâu 4d", "", "", ""),
   ),
   (
     title: [Ứng dụng đạo hàm để giải quyết một số vấn đề liên quan đến thực tiễn],

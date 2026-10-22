@@ -1,11 +1,11 @@
 #import "theme.typ": fonts, lesson-style, palette, plot-style
-#import "lesson.typ": lesson-heading
+#import "lesson.typ": lesson-heading, lesson-section
 #import "branding.typ": running-foot, running-head
 #import "contacts.typ": contact-links
 
 #let matrix-document(school, body, organization: none) = {
   set document(title: [Ma trận đề kiểm tra giữa kì I Toán 12 — #school])
-  set text(font: fonts.body, size: 12.5pt, lang: "vi")
+  set text(font: "Arial", size: 12.5pt, lang: "vi")
   show math.equation: set text(font: fonts.math)
   set par(justify: false, leading: 0.65em, spacing: 2mm)
   let margin = (x: 12mm, top: 20mm, bottom: 19mm)
@@ -40,15 +40,10 @@
   body
 }
 
-#let section(title) = block(above: 4mm, below: 3mm, sticky: true, text(
-  size: 14.5pt,
-  weight: "bold",
-  fill: palette.heading,
-  title,
-))
+#let section(title, badge: none) = lesson-section(title, badge: badge, above: 2mm)
 #let chapter = [Ứng dụng đạo hàm để khảo sát và vẽ đồ thị của hàm số\ (24 tiết)]
 #let table-style = (merge-chapter: false, spacious: false, colored: false)
-#let group-colors = (rgb("#C5F1F5"), rgb("#FFD0DA"), rgb("#E2F6A5"), rgb("#FFE6A3"))
+#let group-colors = (rgb("#EDF4F5"), rgb("#F5EFF1"), rgb("#F0F4EB"), rgb("#F7F3E9"))
 #let group-fill(index) = group-colors.at(if index < 2 { 0 } else if index < 5 { 1 } else if index < 7 { 2 } else { 3 })
 #let data-cell(value, index, style) = table.cell(fill: if style.colored and index < 9 { group-fill(index) } else {
   white
@@ -86,12 +81,12 @@
 #let summary(rows, totals, essay: false, style: table-style) = {
   let levels = if essay { 9 } else { 7 }
   set text(size: 11pt)
-  set par(leading: if style.spacious { 0.65em } else { 0.35em }, spacing: 1mm)
+  set par(leading: if style.spacious { 0.3em } else { 0.35em }, spacing: 1mm)
   table(
-    columns: (8mm, 30mm, 48mm) + (1fr,) * levels + (11mm, 11mm, 11mm, 15mm),
+    columns: (8mm, 26mm, 40mm) + (1fr,) * levels + (11mm, 11mm, 11mm, 15mm),
     align: center + horizon,
-    inset: (x: 1.2mm, y: if style.spacious { 1.3mm } else { 1.2mm }),
-    stroke: 0.6pt + palette.primary,
+    inset: (x: 1.2mm, y: if style.spacious { 0.7mm } else { 1.2mm }),
+    stroke: 0.6pt + rgb("#B39A9F"),
     headings(essay: essay, style: style),
     table.cell(rowspan: rows.len())[*1*], table.cell(rowspan: rows.len())[#strong(chapter)],
     ..rows
@@ -118,14 +113,14 @@
         ..row.cells.map(x => table.cell(fill: palette.box-fill)[#strong(x)]),
       ))
       .flatten(),
-    table.cell(colspan: 3, fill: rgb("#FFD43B"))[*Tỉ lệ %*],
-    table.cell(colspan: 2, fill: rgb("#FFD43B"))[*30*], table.cell(colspan: 3, fill: rgb("#FFD43B"))[*40*], table.cell(
+    table.cell(colspan: 3, fill: rgb("#FFF0B8"))[*Tỉ lệ %*],
+    table.cell(colspan: 2, fill: rgb("#FFF0B8"))[*30*], table.cell(colspan: 3, fill: rgb("#FFF0B8"))[*40*], table.cell(
       colspan: 2,
-      fill: rgb("#FFD43B"),
+      fill: rgb("#FFF0B8"),
     )[*30*],
-    ..if essay { (table.cell(colspan: 2, fill: rgb("#FFD43B"))[*0*],) } else { () },
-    table.cell(colspan: 2, fill: rgb("#FFD43B"))[*70*], table.cell(fill: rgb("#FFD43B"))[*30*], table.cell(
-      fill: rgb("#FFD43B"),
+    ..if essay { (table.cell(colspan: 2, fill: rgb("#FFF0B8"))[*0*],) } else { () },
+    table.cell(colspan: 2, fill: rgb("#FFF0B8"))[*70*], table.cell(fill: rgb("#FFF0B8"))[*30*], table.cell(
+      fill: rgb("#FFF0B8"),
     )[*100*],
   )
 }
@@ -137,11 +132,11 @@
       ..row.cells.enumerate().map(((i, x)) => data-cell(strong(x), i, style)),
     ))
     .flatten(),
-  table.cell(colspan: label-span, fill: rgb("#FFD43B"))[*Tỉ lệ %*],
-  table.cell(colspan: 2, fill: rgb("#FFD43B"))[*30*],
-  table.cell(colspan: 3, fill: rgb("#FFD43B"))[*40*],
-  table.cell(colspan: 2, fill: rgb("#FFD43B"))[*30*],
-  ..if essay { (table.cell(colspan: 2, fill: rgb("#FFD43B"))[*0*],) } else { () },
+  table.cell(colspan: label-span, fill: rgb("#FFF0B8"))[*Tỉ lệ %*],
+  table.cell(colspan: 2, fill: rgb("#FFF0B8"))[*30*],
+  table.cell(colspan: 3, fill: rgb("#FFF0B8"))[*40*],
+  table.cell(colspan: 2, fill: rgb("#FFF0B8"))[*30*],
+  ..if essay { (table.cell(colspan: 2, fill: rgb("#FFF0B8"))[*0*],) } else { () },
 )
 
 #let specification(rows, essay: false, style: table-style, totals: ()) = {
@@ -150,10 +145,10 @@
   set table.cell(breakable: false)
   set par(leading: if style.spacious { 0.72em } else { 0.65em }, spacing: 2mm)
   table(
-    columns: (8mm, 29mm, 38mm, 1fr) + (if essay { 12mm } else { 14mm },) * levels,
+    columns: (8mm, 24mm, 30mm, 1fr) + (if essay { 14mm } else { 18mm },) * levels,
     align: center + horizon,
     inset: (x: 1.5mm, y: 2mm),
-    stroke: 0.6pt + palette.primary,
+    stroke: 0.6pt + rgb("#B39A9F"),
     headings(spec: true, essay: essay, style: style),
     ..rows
       .enumerate()
@@ -168,7 +163,14 @@
         } else { ([*1*], [#strong(chapter)]) },
         [#row.title],
         table.cell(align: left + horizon)[#row.requirements],
-        ..row.cells.enumerate().map(((i, x)) => data-cell(x, i, style)),
+        ..row
+          .cells
+          .enumerate()
+          .map(((i, x)) => data-cell(
+            if type(x) == str { x.split("\n").map(line => box(line)).join(linebreak()) } else { x },
+            i,
+            style,
+          )),
       ))
       .flatten(),
     ..if totals.len() > 0 { total-cells(totals, essay: essay, style: style, label-span: 4) } else { () },
@@ -180,7 +182,13 @@
   set text(size: 12pt)
   table(
     columns: (75mm, 1fr) + (if essay { 12mm } else { 14mm },) * levels,
-    inset: (x: 1.5mm, y: 2mm), align: center + horizon, stroke: 0.6pt + palette.primary,
+    inset: (x: 1.5mm, y: 2mm), align: center + horizon, stroke: 0.6pt + rgb("#B39A9F"),
     ..total-cells(rows, essay: essay, style: style),
   )
+}
+
+// Square pages retain the landscape summary width and natural table typography.
+#let square-specification(body) = {
+  set page(width: 297mm, height: 297mm, flipped: false)
+  body
 }

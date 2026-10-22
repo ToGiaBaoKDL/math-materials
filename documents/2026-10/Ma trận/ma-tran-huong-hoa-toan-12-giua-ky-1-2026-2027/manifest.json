@@ -53,24 +53,24 @@
     "review_status": "pending",
     "compile": "passed",
     "checks": {
-      "landscape": "passed",
+      "landscape": "page 1 A4 landscape; pages 2–3 square 297 × 297 mm",
       "text_page_bounds": "passed",
       "summary_and_specification_totals": "present",
       "signature_exclusion": "passed",
       "source_sha256": "passed",
       "embedded_fonts": "passed",
-      "pages": 4
+      "pages": 3
     },
     "full_page_visual_review": "pending: full-page preview images are disabled by repository convention; text and bbox checked.",
     "source_content": "All five content rows and requirements transcribed; source inconsistencies preserved.",
-    "layout": "Body and tables increased 0.5pt; repeated merged chapter per specification page; all summary values bold; totals integrated."
+    "layout": "Three pages retained. Specification chapter/content columns narrowed to 24/30 mm; count columns widened to 14 mm (Huong Hoa) / 18 mm (Trieu Phong). Question labels boxed individually to prevent internal wrapping. Shared lesson hexagon section labels applied. Text bounds passed; full-page visual review pending."
   },
   "outputs": {
     "de": {
       "pdf": "assets/targets/2026-10/Ma trận/ma-tran-huong-hoa-toan-12-giua-ky-1-2026-2027/ma-tran.pdf",
-      "pages": 4,
-      "bytes": 388522,
-      "sha256": "6ebf9662c95ffc05e243d7e0c60c7edc166a68578d4c0e2563525504a0ec5dac"
+      "pages": 3,
+      "bytes": 356433,
+      "sha256": "accd13f0223fe6b41b2a453eedf5914e958d381e2f5a037846fdd456516b48e7"
     }
   },
   "content_mapping": [

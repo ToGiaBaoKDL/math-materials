@@ -137,26 +137,26 @@
     "figures": "Inspected revised room, display case, pool and factory as standalone figures. Room column projection exaggerated for legibility; source dimensions unchanged. Pool, sugar and factory increased 10% relative to previous version.",
     "fonts": "Previous all-vector claim superseded: bridge is a user-provided raster image; other diagrams are native vectors.",
     "source_integrity": "Original PDF preserved; SHA-256 recorded in sources.",
-    "ending": "HẾT is on the last question page and final solution page, near bottom; no standalone ending page."
+    "ending": "Removed final TOANMATH source note in all three variants at user request; HẾT retained. Verified extracted PDF text."
   },
   "outputs": {
     "de-dap-an": {
       "pdf": "assets/targets/2026-10/Đề thi/le-thanh-tong-toan-12-giua-ky-1-ma-357/de-dap-an.pdf",
       "pages": 13,
-      "bytes": 570652,
-      "sha256": "124bb83cc3daf369122fa740bc578f26d495d28f5b7a7bf7bf27e5c5841c7205"
+      "bytes": 569952,
+      "sha256": "0a43cdd9d9f4a333f525c1c3c2e51a90839edcabc4a61c462486a86ff2e6c34b"
     },
     "de": {
       "pdf": "assets/targets/2026-10/Đề thi/le-thanh-tong-toan-12-giua-ky-1-ma-357/de.pdf",
       "pages": 7,
-      "bytes": 398524,
-      "sha256": "18d47c9752f51afc5db362785d2f2ad568d068555af08b888706b3da32e79c31"
+      "bytes": 398072,
+      "sha256": "cb8297222a9b28ae9cfac66c39609222404fc5c5442e57e4f11a03dfc82a3984"
     },
     "dap-an": {
       "pdf": "assets/targets/2026-10/Đề thi/le-thanh-tong-toan-12-giua-ky-1-ma-357/dap-an.pdf",
       "pages": 6,
-      "bytes": 249377,
-      "sha256": "e4aca668dde545aff77e821274851a7fe7fcab4a2b965496b8771ebb92a72765"
+      "bytes": 248912,
+      "sha256": "f11886d9860a7fe37e7fd52aba47bd2a15ad05ee37c0ce4cd973b11696b2323a"
     }
   },
   "content_mapping": [

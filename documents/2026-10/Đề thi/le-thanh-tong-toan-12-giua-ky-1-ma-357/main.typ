@@ -1,4 +1,4 @@
-#import "/templates/exam.typ": exam, exam-cover, exam-end, exam-source
+#import "/templates/exam.typ": exam, exam-cover, exam-end
 #import "content/questions.typ": questions
 #import "content/solutions.typ": answer-key, solutions
 #let variant = sys.inputs.at("variant", default: "de-dap-an")
@@ -16,7 +16,7 @@
   )
   questions()
   v(1fr)
-  exam-end(note: exam-source())
+  exam-end()
   [#metadata("end-questions") <end-questions>]
 }
 #if variant == "de-dap-an" { pagebreak() }
@@ -24,5 +24,5 @@
   answer-key()
   solutions()
   v(1fr)
-  exam-end(note: exam-source())
+  exam-end()
 }
