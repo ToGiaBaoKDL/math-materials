@@ -49,11 +49,18 @@ Dùng template làm nguồn triển khai, skill làm quy tắc tái sử dụng.
 - `templates/exam.typ` và `exam-branding.typ`; A4, lề ngang 12 mm, trên 18 mm, dưới 16 mm. Thân đề và đáp án 13 pt, leading mặc định 1,1 em. Leading theo cấu hình tài liệu; không nhầm mặc định theme với override của bản đã duyệt.
 - Cover khung trắng bo góc 3 mm, viền đỏ 1 pt; cột trái/phải 56%/44%. Hai khối tiêu đề Noto Sans bold cùng cỡ, tối đa 14 pt; nếu không vừa, ngắt ở cụm nghĩa rồi chọn cỡ chung vừa cả hai cột. Không ép ngang chữ. Cho phép trái 2 dòng/phải 3 dòng; căn trên để dòng đầu ngang nhau, chữ căn giữa theo chiều ngang. Không cắt vụn tên riêng hoặc năm học.
 - Tên đơn vị xanh lá tươi bão hòa `palette.section-green` (`#009B19`), bold và stroke 0,12 pt cùng màu; tên kỳ thi đỏ `#C6001D`, cùng độ đậm. Không pha trắng/giảm opacity. Không hiển thị “ĐỀ CHÍNH THỨC”. Đường kẻ nhạt bên trái cách cụm tên đơn vị 1 mm, không hạ theo chiều cao khối phải.
-- Cột phải đệm trái 8 mm. Ba hàng thông tin hai bên cùng cao độ: số trang ↔ môn; thời gian ↔ khối; ghi chú phát đề ↔ mã đề hoặc ngày thi. Nếu có cả ngày thi và mã đề, đặt ngày thi dưới Lớp và trên Mã đề, nhãn “Ngày thi:” in đậm. Cỡ thông tin 12,5 pt, dòng thời gian 12 pt, ghi chú 11,5 pt. Đồng hồ 20 mm, đầy đủ không bị cắt, có khoảng hở với chữ. Họ tên/số báo danh cùng một dòng chia đôi; dưới có đường đỏ nét đứt theo component.
+- Cột phải đệm trái 8 mm. Ba hàng thông tin hai bên cùng cao độ: số trang ↔ môn và lớp gộp thành “Môn: Toán 12”; thời gian ↔ ngày thi nếu có; ghi chú phát đề ↔ mã đề. Không hiển thị hàng Lớp riêng. Ngày thi nằm dưới Môn và trên Mã đề, nhãn “Ngày thi:” in đậm. Cỡ thông tin 12,5 pt, dòng thời gian 12 pt, ghi chú 11,5 pt. Đồng hồ 20 mm, đầy đủ không bị cắt, có khoảng hở với chữ. Họ tên/số báo danh cùng một dòng chia đôi; dưới có đường đỏ nét đứt theo component.
 - Họa tiết góc dưới phải dùng `assets/branding/icons/exam-corner.svg`: tam giác đỏ và hai hình bình hành, cắt gọn theo khung bo góc. Không kéo dài họa tiết hoặc để lấn nội dung.
 - Tiêu đề phần: chỉ nhãn “PHẦN I/II/III” có nền đỏ nhận diện đề thi, chữ trắng đậm. Tên phần phía sau xanh lá `#009B19`, bold + stroke 0,12 pt; hướng dẫn màu đen. Áp dụng mọi phần và variant. **Xanh lá này cho heading/phần đề thi, không thay convention chuyên đề.**
 - Header/footer chữ Noto Sans Regular 11 pt, stroke 0,12 pt cùng màu; nhận diện đỏ đề thi `#C8102E`, icon liên hệ, mã đề nếu có và trang thực. Không dùng dải DXT/logo chuyên đề.
 - Câu hỏi được nối qua trang; không bắt buộc nguyên câu trong một trang. `de-dap-an` nối đáp án từ trang mới, dùng chung header/footer và số trang liên tục; không chèn một bộ header/footer đáp án lồng vào. Bản đáp án riêng vẫn có header/footer. Chỉ tạo variant theo phạm vi nguồn/yêu cầu.
+
+### Ma trận và bản đặc tả
+
+- `templates/matrix.typ`, A4 ngang; dùng header/footer và heading bài giảng. Khung xanh ghi “MA TRẬN ĐỀ KIỂM TRA…”, dòng đỏ ghi tên trường; môn/lớp, năm học và thời gian nằm ở subtitle. Không gắn dòng tác giả giảng dạy cho ma trận của trường.
+- Giữ cấu trúc nhóm cột và số liệu nguồn, gồm cột Tự luận nếu có. Header bảng đỏ đô, chữ trắng; ô dữ liệu nền trắng, viền đỏ. Lặp header khi bảng sang trang; giữ mỗi hàng đặc tả nguyên khối nếu vừa trang.
+- Bôi đậm giá trị ở STT, Chương/Chủ đề, các cột Tổng (Biết/Hiểu/VD), Tỉ lệ và toàn bộ ba hàng tổng kết: Tổng số lệnh hỏi, Tổng điểm, Tỉ lệ %. Hàng Tỉ lệ % tô vàng sáng toàn hàng.
+- Căn giữa số liệu, căn trái yêu cầu cần đạt; giữ ghi chú cùng trang ma trận khi có thể. Không tự sửa các tổng chưa khớp. Với hai ma trận Hướng Hóa/Triệu Phong hiện tại, bỏ khối chữ ký cuối theo yêu cầu người dùng; không suy rộng việc bỏ chữ ký cho nguồn khác.
 
 ### Chuyên đề / bài giảng
 

@@ -2,7 +2,7 @@
 
 Dựng lại đề thi và bài giảng toán từ ảnh, PDF hoặc DOCX bằng Typst; xuất PDF có nội dung chính xác, hình minh họa và bố cục theo convention DXT.
 
-Ba loại đầu vào: **Tinh Hoa** (đề, đề cách, đáp án), **Livestream** (đề, đề cách), **đề thi** (đề + đáp án gộp). Hai loại bài giảng dùng chung format chuyên đề; đề thi dùng format riêng.
+Ba loại tài liệu câu hỏi: **Tinh Hoa** (đề, đề cách, đáp án), **Livestream** (đề, đề cách), **đề thi** (đề + đáp án gộp). Hai loại bài giảng dùng chung format chuyên đề; đề thi dùng format riêng. Ma trận và bản đặc tả dùng profile `matrix`, xuất một PDF ngang với nhận diện bài giảng.
 
 ## Bắt đầu
 

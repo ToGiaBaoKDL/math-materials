@@ -7,7 +7,7 @@
 #let lime = rgb("#BFFF36")
 #let edge = 1.35pt + ink
 #let hidden = (paint: red, thickness: 1.35pt, dash: (2.5pt, 2pt))
-#let figure(body) = figure-panel(body, above: 5mm, below: 6mm)
+#let figure(body, above: 5mm, below: 6mm) = figure-panel(body, above: above, below: below)
 #let dot(p) = place(top + left, dx: p.at(0) - 0.65mm, dy: p.at(1) - 0.65mm, circle(
   radius: 0.65mm,
   fill: ink,
@@ -73,26 +73,29 @@
   #label((41mm, 82mm), [$6 "cm"$], dy: 4mm)
 ]
 #let room() = box(width: 130mm, height: 96mm)[
+  #let brown = rgb("#7B3F00")
+  #let edge = 1.6pt + brown
+  #let hidden = (paint: brown, thickness: 1.6pt, dash: (2.5pt, 2pt))
   #let p(x, y, z) = ((39 + y * 18 - x * 10) * 1mm, (66 + x * 7 - z * 18) * 1mm)
-  #path((p(0, 0, 0), p(3, 0, 0), p(3, 0, 3), p(0, 0, 3)), stroke: edge, fill: pink.lighten(75%), close: true)
-  #path((p(0, 0, 0), p(0, 4, 0), p(0, 4, 3), p(0, 0, 3)), stroke: edge, fill: cyan.lighten(75%), close: true)
-  #path((p(0, 4, 0), p(3, 4, 0), p(3, 4, 3), p(0, 4, 3)), stroke: edge, fill: cyan.lighten(85%), close: true)
+  #path((p(0, 0, 0), p(3, 0, 0), p(3, 0, 3), p(0, 0, 3)), stroke: none, fill: cyan.lighten(25%), close: true)
+  #path((p(0, 0, 0), p(0, 4, 0), p(0, 4, 3), p(0, 0, 3)), stroke: none, fill: cyan.lighten(40%), close: true)
+  #path((p(0, 4, 0), p(3, 4, 0), p(3, 4, 3), p(0, 4, 3)), stroke: none, fill: cyan.lighten(15%), close: true)
   #path((p(3, 0, 0), p(3, 4, 0), p(0, 4, 0)), stroke: edge)
-  #path((p(0, 1.7, 0), p(.2, 1.7, 0), p(.2, 1.7, 3), p(0, 1.7, 3)), stroke: edge, fill: lime, close: true)
-  #path(
-    (p(.2, 1.7, 0), p(.2, 2.1, 0), p(.2, 2.1, 3), p(.2, 1.7, 3)),
-    stroke: edge,
-    fill: lime.lighten(30%),
-    close: true,
-  )
-  #path((p(.2, 2.1, 0), p(0, 2.1, 0), p(0, 2.1, 3), p(.2, 2.1, 3)), stroke: edge, fill: lime, close: true)
+  #path((p(0, 0, 3), p(3, 0, 3), p(3, 0, 0), p(3, 4, 0), p(0, 4, 0), p(0, 4, 3), p(0, 0, 3)), stroke: edge)
+  #path((p(3, 4, 0), p(3, 4, 3), p(0, 4, 3)), stroke: edge)
+  #path((p(3, 0, 3), p(3, 4, 3)), stroke: edge)
+  #for y in (1.7, 2.1) {
+    path((p(0, y, 3), p(0, y, 0), p(.4, y, 0), p(.4, y, 3)), stroke: hidden)
+  }
+  #path((p(.4, 1.7, 0), p(.4, 2.1, 0)), stroke: hidden)
+  #path((p(0, 1.7, 3), p(.4, 1.7, 3), p(.4, 2.1, 3), p(0, 2.1, 3)), stroke: edge, fill: cyan, close: true)
   #path(
     (
       p(1, 0, 2.5),
       p(0, 0, 2.35),
       p(0, 1.7, 1.92),
-      p(.2, 1.7, 1.87),
-      p(.2, 2.1, 1.77),
+      p(.4, 1.7, 1.87),
+      p(.4, 2.1, 1.77),
       p(0, 2.1, 1.72),
       p(0, 4, 1.12),
       p(.5, 4, 1),
@@ -100,28 +103,44 @@
     stroke: hidden,
   )
   #label(p(3, 0, 1.5), [$3 "m"$], dx: -5mm)
-  #for (end, t) in ((p(3.6, 0, 0), [$x$]), (p(0, 4.7, 0), [$y$]), (p(0, 0, 3.6), [$z$])) {
-    arrow-line(p(0, 0, 0), end, color: black)
-    label(end, t, dx: 3mm, dy: 1mm)
+  #for (start, end) in ((p(0, 0, 0), p(3, 0, 0)), (p(0, 0, 0), p(0, 4, 0)), (p(0, 0, 0), p(0, 0, 3))) {
+    let vx = (end.at(0) - start.at(0)) / 1pt
+    let vy = (end.at(1) - start.at(1)) / 1pt
+    let length = calc.sqrt(vx * vx + vy * vy)
+    let ux = vx / length
+    let uy = vy / length
+    for d in range(0, int(calc.ceil(length)), step: 5) {
+      let e = calc.min(d + 2.8, length)
+      let point(t, n) = (start.at(0) + (t * ux - n * uy) * 1pt, start.at(1) + (t * uy + n * ux) * 1pt)
+      path((point(d, -0.8), point(e, -0.8), point(e, 0.8), point(d, 0.8)), stroke: none, fill: brown, close: true)
+    }
+  }
+  #for (start, end, t, dx, dy) in (
+    (p(3, 0, 0), p(3.6, 0, 0), [$x$], -1mm, 4mm),
+    (p(0, 4, 0), p(0, 4.7, 0), [$y$], 3mm, 0mm),
+    (p(0, 0, 3), p(0, 0, 3.6), [$z$], 3mm, 0mm),
+  ) {
+    arrow-line(start, end, color: brown, thickness: 1.6pt)
+    label(end, t, dx: dx, dy: dy)
   }
   #for (pt, t, dx, dy) in (
     (p(0, 0, 0), [$O$], -4mm, -2mm),
     (p(1, 0, 2.5), [$A$], -4mm, -1mm),
-    (p(.5, 4, 1), [$B$], 4mm, -1mm),
+    (p(.5, 4, 1), [$B$], -3mm, 3mm),
   ) {
     dot(pt)
     label(pt, t, dx: dx, dy: dy)
   }
-  #label(p(3, 2, 0), [$4 "m"$], dy: 5mm);#label(p(1.5, 0, 0), [$3 "m"$], dx: -5mm)
-  #label(p(.2, 1.9, 3), [$"0,4 m"$], dy: -6mm)
-  #label(p(.1, 1.7, 0), [$"0,2 m"$], dx: -7mm, dy: 6mm)
+  #label(p(3, 2, 0), [$4 "m"$], dy: 5mm);#label(p(1.5, 4, 0), [$3 "m"$], dx: 5mm, dy: 2mm)
+  #label(p(.4, 1.9, 0), text(size: 9pt)[$"0,4 m"$], dx: -2mm, dy: 3mm)
+  #label(p(.2, 2.1, 0), text(size: 9pt)[$"0,2 m"$], dx: 5mm, dy: 1mm)
 ]
-#let display-case() = box(width: 88mm, height: 100mm)[
+#let display-case() = box(width: 88mm, height: 94mm)[
   #let p(x, y, z) = ((33 + y * 65 - x * 40) * 1mm, (79 + x * 23 - z * 48) * 1mm)
   #let a = p(0, 0, 1);#let b = p(0, .5, 1);#let c = p(.5, .5, 1);#let d = p(.5, 0, 1);#let s = p(.25, .25, 1.485)
-  #path((p(0, 0, 0), p(.5, 0, 0), d, a), stroke: edge, fill: cyan.lighten(40%), close: true)
-  #path((p(.5, 0, 0), p(.5, .5, 0), c, d), stroke: edge, fill: cyan, close: true)
-  #path((p(.5, .5, 0), p(0, .5, 0), b, c), stroke: edge, fill: cyan.lighten(65%), close: true)
+  #path((p(0, 0, 0), p(.5, 0, 0), d, a), stroke: edge, fill: rgb("#FFD43B").lighten(30%), close: true)
+  #path((p(.5, 0, 0), p(.5, .5, 0), c, d), stroke: edge, fill: rgb("#FFD43B"), close: true)
+  #path((p(.5, .5, 0), p(0, .5, 0), b, c), stroke: edge, fill: rgb("#FFD43B").lighten(45%), close: true)
   #path((b, c, s), stroke: edge, fill: pink.lighten(20%), close: true)
   #path((c, d, s), stroke: edge, fill: pink, close: true)
   #path((d, a, b), stroke: hidden)
@@ -135,11 +154,11 @@
     (b, [$B$], 4mm, 0mm),
     (c, [$C$], 4mm, 1mm),
     (d, [$D$], -4mm, 1mm),
-    (p(0, 0, 0), [$A'$], -4mm, 1mm),
+    (p(0, 0, 0), [$A'$], -4mm, -3mm),
     (p(0, .5, 0), [$B'$], 4mm, 1mm),
     (p(.5, .5, 0), [$C'$], 4mm, 2mm),
     (p(.5, 0, 0), [$D'$], -4mm, 2mm),
-    (p(.25, .25, 1), [$I$], 3mm, 3mm),
+    (p(.25, .25, 1), [$I$], -2mm, 4mm),
   ) {
     dot(pt)
     label(pt, t, dx: dx, dy: dy)
@@ -216,7 +235,7 @@
   #path(((8mm, 24mm), (73mm, 24mm), (95mm, 7mm), (30mm, 7mm)), stroke: edge, fill: cyan, close: true)
   #path(((8mm, 24mm), (8mm, 34mm), (73mm, 34mm), (73mm, 24mm)), stroke: edge, fill: pink, close: true)
   #path(((73mm, 24mm), (95mm, 7mm), (95mm, 17mm), (73mm, 34mm)), stroke: edge, fill: pink.darken(10%), close: true)
-  #for y in (12, 17) {
+  #for y in (10, 14, 18, 22) {
     path(range(81).map(i => ((33 + i * .5) * 1mm, (y + 0.65 * calc.sin(i * 18deg)) * 1mm)), stroke: 1.2pt + ink)
   }
   #path(((20mm, 7mm), (20mm, 2mm), (27mm, 2mm), (27mm, 10mm)), stroke: 3.5pt + rgb("#7B3F00"))

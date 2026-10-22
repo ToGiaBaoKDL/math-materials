@@ -26,7 +26,7 @@ Build, upload và Sheet đều yêu cầu DOC; mỗi lần xử lý đúng một
 
 Folder Drive cha của các tháng có ID `11EmKdVdsShhjyQpzlozlr8bEVDiThA8R`. Trong tháng đích, Drive giữ cấu trúc `<loại>/<document-id>/` như [mô hình local](document-model.md). Script tìm ID folder theo từng cấp, tạo folder còn thiếu; gặp nhiều folder trùng tên cùng cấp thì dừng. Không cố định ID folder tháng trong code.
 
-Sheet mặc định là [sổ tài liệu](https://docs.google.com/spreadsheets/d/1q7giSA18z4UkTomn9xQBqrDgdjssXeUSDj4fTtVYOVs/edit), hai tab `Chuyên đề` và `Đề thi`. Khối tháng có nhãn `Tháng MM-YYYY`; vẫn nhận diện dạng cũ `Tháng MM/YYYY` để tránh tạo trùng.
+Sheet mặc định là [sổ tài liệu](https://docs.google.com/spreadsheets/d/1q7giSA18z4UkTomn9xQBqrDgdjssXeUSDj4fTtVYOVs/edit), các tab `Chuyên đề`, `Đề thi`, `Livestream` và `Ma trận`. Khối tháng có nhãn `Tháng MM-YYYY`; vẫn nhận diện dạng cũ `Tháng MM/YYYY` để tránh tạo trùng.
 
 ## Tên file và nguồn
 
@@ -87,7 +87,8 @@ Link là chữ có hyperlink, không dùng công thức phụ thuộc locale, kh
 - Tìm dòng cũ bằng tiêu đề hoặc link PDF trong đúng khối tháng; chưa có thì dùng dòng trống, không nhân đôi dòng đã tồn tại.
 - Ghép cặp theo tên tài liệu bỏ hậu tố ` - ĐỀ`/` - ĐÁP ÁN`; đáp án nằm ngay dưới đề. Nếu đáp án có trước, giữ riêng đến khi thêm đề rồi đưa đề lên trên.
 - Cặp đang tách được xếp lại bằng cách di chuyển nguyên dòng, giữ link, định dạng và thù lao; không ghi đè tài liệu khác. Khôi phục ô gộp tháng sau khi sắp dòng.
-- Chưa có khối tháng thì tạo 30 dòng bên dưới và sao chép định dạng. Khối đầy thì chèn đúng số dòng còn thiếu ở cuối khối, sao chép định dạng A:I và chiều cao dòng liền trước, mở rộng ô gộp tháng; các tháng phía dưới được đẩy xuống nguyên vẹn.
+- Nếu thiếu nhãn tháng, ưu tiên dùng lại khối đầu bảng/ô gộp tháng đang trống; khối đã có dữ liệu chỉ được nhận lại khi ngày thuộc tháng cần cập nhật hoặc có đúng tài liệu và không có ngày mâu thuẫn. Không chuyển dữ liệu khỏi khối tháng đã có nhãn.
+- Không có khối tái sử dụng được thì tạo 30 dòng bên dưới và sao chép định dạng. Khối đầy thì chèn đúng số dòng còn thiếu ở cuối khối, sao chép định dạng A:I và chiều cao dòng liền trước, mở rộng ô gộp tháng; các tháng phía dưới được đẩy xuống nguyên vẹn.
 - Giữ cột thù lao và định dạng hiện có. Gửi toàn bộ cập nhật trong một batch sau khi kiểm tra đủ.
 
 ```sh
@@ -112,6 +113,10 @@ Luồng Google API không tự retry thao tác ghi; khi lỗi, chạy lại đ�
 
 ## Livestream
 
-Livestream dùng profile hai bản đề/đề cách; logic tìm và cập nhật dòng dùng chung với các loại khác. Bộ 12 câu hiện có đề và đề cách; không tự tạo đáp án khi nguồn chưa có. Tạm dùng folder Drive và tab Sheet `Chuyên đề`, dù thư mục phân loại local là `Livestream`. Khi đổi thư mục phân loại local, không tự di chuyển dữ liệu đã có trên Drive/Sheet.
+Livestream dùng profile hai bản đề/đề cách; logic tìm và cập nhật dòng dùng chung với các loại khác. Bộ 12 câu hiện có đề và đề cách; không tự tạo đáp án khi nguồn chưa có. Folder Drive và tab Sheet đều là `Livestream`. Khi đổi thư mục phân loại local, không tự di chuyển dữ liệu đã có trên Drive/Sheet.
 
 Khi chuyển chế độ tách sang gộp, nhận diện dòng đề theo tên gốc thay vì tạo dòng trùng; xóa nội dung B:H của dòng đáp án cũ, giữ nguyên cột thù lao và định dạng. Dòng có thù lao còn được giữ lại, không tự cộng/chuyển tiền sang dòng gộp. Với bản gộp không xuất bản đề cách, cột G cũ được làm trống; cập nhật từng phần trong chế độ tách vẫn giữ link variant chưa có trong lần cập nhật.
+
+## Ma trận
+
+Profile `matrix` upload vào `<tháng>/Ma trận/<id>/` và cập nhật tab `Ma trận`. Nhãn link là `MA TRẬN`, nguồn là `MA TRẬN - GỐC`; chỉ một dòng, không có đề cách hoặc đáp án. Folder Drive và tab Sheet dùng chung category từ profile. Cơ chế cập nhật giữ ID/URL và bỏ qua nội dung không đổi dùng chung với các tài liệu khác.

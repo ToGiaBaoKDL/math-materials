@@ -20,7 +20,7 @@ def publication_category(path: Path) -> str:
 
 
 def document_title(filename: str) -> str:
-    for suffix in (" - ĐỀ + ĐÁP ÁN.pdf", " - ĐỀ CÁCH.pdf", " - ĐÁP ÁN.pdf", " - ĐỀ.pdf"):
+    for suffix in (" - ĐỀ + ĐÁP ÁN.pdf", " - ĐỀ CÁCH.pdf", " - ĐÁP ÁN.pdf", " - ĐỀ.pdf", " - MA TRẬN.pdf"):
         if filename.endswith(suffix):
             return filename.removesuffix(suffix)
     raise ValueError(f"Invalid publication filename: {filename}")

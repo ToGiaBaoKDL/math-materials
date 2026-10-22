@@ -6,9 +6,11 @@
 #set par(justify: false, spacing: 3.5mm)
 #if variant != "dap-an" {
   exam-cover(
-    [SỞ GIÁO DỤC VÀ ĐÀO TẠO TP. HCM\ TRƯỜNG TH-THCS-THPT\ LÊ THÁNH TÔNG],
+    [SỞ GIÁO DỤC VÀ ĐÀO TẠO TP. HCM\ TRƯỜNG TH-THCS-THPT LÊ THÁNH TÔNG],
     [ĐỀ KIỂM TRA GIỮA KÌ I\ NĂM HỌC 2026–2027],
     "357",
+    heading-increase: 1pt,
+    left-column: 61%,
     exam-date: [18/10/2026],
     pages: context counter(page).at(<end-questions>).first(),
   )

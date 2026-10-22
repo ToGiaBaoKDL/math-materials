@@ -1,0 +1,99 @@
+{
+  "schema_version": 1,
+  "id": "ma-tran-trieu-phong-toan-12-giua-ky-1-2026-2027",
+  "kind": "matrix",
+  "received_date": "2026-10-22",
+  "status": "implemented",
+  "metadata": {
+    "title": "MA TRẬN ĐỀ KIỂM TRA GIỮA KÌ I – TRƯỜNG THPT TRIỆU PHONG",
+    "subject": "TOÁN 12",
+    "school_year": "2026 - 2027"
+  },
+  "sources": [
+    {
+      "path": "assets/sources/2026-10/Ma trận/ma-tran-trieu-phong-toan-12-giua-ky-1-2026-2027/source.pdf",
+      "original_name": "03.TOAN_12_MTDT_KIEMTRA_GK1.signed_signed_9317d (1).pdf",
+      "pages": 3,
+      "bytes": 440663,
+      "sha256": "65b9fe3fb0dea44b19cfec339aeefd19237d30da00ad9e5fef0f87112ac83283"
+    }
+  ],
+  "scope": {
+    "has_questions": false,
+    "has_solutions": false,
+    "sections": [
+      "Ma trận",
+      "Bản đặc tả"
+    ],
+    "excluded": [
+      "Khối chữ ký cuối tài liệu: BGH, tổ trưởng, tên người ký và địa điểm/ngày ký"
+    ]
+  },
+  "variants": {
+    "de": {
+      "filename": "ma-tran.pdf",
+      "inputs": {}
+    }
+  },
+  "drive": {
+    "folder": "Ma trận",
+    "filenames": {
+      "de": "MA-TRAN-TRIEU-PHONG-TOAN-12-GIUA-KY-I-2026-2027 - MA TRẬN.pdf"
+    }
+  },
+  "provenance": {
+    "source_issues": [
+      "Giữ nguyên số liệu nguồn, chưa điều chỉnh các tổng chưa khớp với hàng chi tiết.",
+      "Hàng khảo sát hàm số có dấu phẩy đơn ở DT3 VD; giữ nguyên.",
+      "Hàng ứng dụng thực tiễn ghi 15, không có dấu %; giữ nguyên.",
+      "Tổng số lệnh hỏi 16/12/6 không khớp tổng các hàng chi tiết; giữ nguyên."
+    ]
+  },
+  "qa": {
+    "review_status": "pending",
+    "compile": "passed",
+    "checks": {
+      "landscape": "passed",
+      "text_page_bounds": "passed",
+      "summary_and_specification_totals": "present",
+      "signature_exclusion": "passed",
+      "source_sha256": "passed",
+      "embedded_fonts": "passed",
+      "pages": 4
+    },
+    "full_page_visual_review": "pending: full-page preview images are disabled by repository convention; text and bbox checked.",
+    "source_content": "All five content rows and requirements transcribed; source inconsistencies preserved.",
+    "layout": "Body and tables increased 0.5pt; repeated merged chapter per specification page; all summary values bold; totals integrated."
+  },
+  "outputs": {
+    "de": {
+      "pdf": "assets/targets/2026-10/Ma trận/ma-tran-trieu-phong-toan-12-giua-ky-1-2026-2027/ma-tran.pdf",
+      "pages": 4,
+      "bytes": 368845,
+      "sha256": "5a86dc4ee2fd262d7ff416fd19acdf4b0584165ca5ead941434fece357b7279a"
+    }
+  },
+  "content_mapping": [
+    {
+      "id": "matrix",
+      "role": "source",
+      "source": {
+        "index": 0,
+        "pages": [
+          1
+        ]
+      }
+    },
+    {
+      "id": "specification",
+      "role": "source",
+      "source": {
+        "index": 0,
+        "pages": [
+          2,
+          3
+        ]
+      }
+    }
+  ]
+}

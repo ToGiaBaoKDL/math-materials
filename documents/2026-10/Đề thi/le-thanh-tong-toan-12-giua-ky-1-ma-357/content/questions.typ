@@ -191,18 +191,18 @@
           "0,99",
           "0,94",
         ).map(x => [#x]))))
-      #figure(sugar())
+      #figure(scale(x: 110%, y: 110%, reflow: true, sugar()))
       Đưa mẫu số liệu trên về mẫu số liệu ghép nhóm biết các nhóm có độ dài bằng nhau với nhóm đầu tiên là $["0,94";"0,97")$. Dựa vào bảng mẫu số liệu ghép nhóm đó, tính độ lệch chuẩn. (Làm tròn kết quả đến hàng phần trăm).],
   )
   q(
     2,
     [Một công ty sản xuất đồ gia dụng ước tính chi phí để sản xuất $x$ (sản phẩm) là $C(x)=150x+900$ (nghìn đồng). Khi sản xuất càng nhiều sản phẩm thì chi phí sản xuất trung bình cho mỗi sản phẩm không vượt quá $t$ (nghìn đồng). Tìm giá trị của $t$.
-      #figure(scale(x: 110%, y: 110%, reflow: true, factory()))],
+      #figure(scale(x: 121%, y: 121%, reflow: true, factory()))],
   )
   q(
     3,
     [Thể tích nước của một bể bơi sau $t$ phút bơm được tính theo công thức $V(t)=1/100 (30t^3-t^4/4)$ với $0<t<90$. Tốc độ bơm nước ở thời điểm $t$ được tính theo công thức $v(t)=V'(t)$. Tìm tốc độ bơm nước lớn nhất?
-      #figure(pool())],
+      #figure(scale(x: 110%, y: 110%, reflow: true, pool()))],
   )
   q(
     4,
@@ -212,11 +212,11 @@
   q(
     5,
     [Một căn phòng có dạng hình hộp chữ nhật với chiều dài $4 "m"$, chiều rộng $3 "m"$ và chiều cao $3 "m"$. Xét hệ trục tọa độ $O x y z$ có gốc $O$ trùng với một góc phòng và mặt phẳng $O x y$ trùng với mặt sàn (xem hình vẽ), đơn vị đo được lấy theo mét. Trên bức tường thuộc mặt phẳng $O y z$ có một cột dạng hình hộp chữ nhật nhô ra với chiều dài $"0,4" "m"$, chiều rộng $"0,2" "m"$. Bác Nam lắp một bóng đèn trên tường tại vị trí điểm $A(1;0;5/2)$ và công tắc bóng đèn đặt tại điểm $B(1/2;4;1)$. Dây cáp điện cho bóng đèn được đấu từ công tắc điện dọc theo các bức tường (không đi qua trần nhà, sàn nhà) và nối đến bóng đèn. Hỏi bác phải dùng đoạn dây điện có độ dài tối thiểu là bao nhiêu mét (kết quả làm tròn đến hàng phần trăm)?
-      #figure(room())],
+      #figure(scale(x: 90.25%, y: 90.25%, reflow: true, room()))],
   )
   q(
     6,
     [Để chuẩn bị cho một buổi triển lãm quốc tế, các trang sức có giá trị lớn được đặt bảo mật trong các khối chóp tứ giác đều $S.A B C D$ và đặt lên phía trên trụ hình hộp chữ nhật $A B C D.A' B' C' D'$ có đáy là hình vuông (như hình vẽ bên). Chọn hệ tọa độ $O x y z$ (đơn vị trên mỗi trục là mét) sao cho $A'(0;0;0)$, $A(0;0;1)$, $B(0;1/2;1)$. Biết rằng, ban tổ chức sự kiện dự định dùng các tấm kính cường lực hình tam giác cân có cạnh bên là $60 "cm"$ để lắp lại thành khối chóp nói trên. Khi đó, tọa độ điểm $S$ là $(a;b;c)$. Tính giá trị của $a+b+c$ (làm tròn kết quả đến hàng phần trăm).
-      #figure(display-case())],
+      #figure(scale(x: 90.25%, y: 90.25%, reflow: true, display-case()), above: 3mm, below: 0mm)],
   )
 }

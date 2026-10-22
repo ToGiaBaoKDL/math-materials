@@ -9,10 +9,15 @@
 | `kind` | Format | Đầu ra mặc định khi đủ nguồn | Drive / Sheet |
 |---|---|---|---|
 | `tinh-hoa` | `lesson` | `de`, `de-cach`, `dap-an` | Chuyên đề; đề và đề cách cùng dòng, đáp án ngay dưới |
-| `livestream` | `lesson` | `de`, `de-cach` | Tạm dùng Chuyên đề; một dòng có hai link |
+| `livestream` | `lesson` | `de`, `de-cach` | Livestream; một dòng có hai link |
+| `matrix` | `matrix` (A4 ngang, nhận diện lesson) | `de` → `ma-tran.pdf` | Drive và Sheet: Ma trận; một bản ma trận và đặc tả, chưa có format notify |
 | `exam` | `exam` | `de-dap-an` | Đề thi; một dòng, link bản gộp và tổng số trang |
 
 Build mặc định, upload, Sheet và link tự động của notify cùng dùng `publication_variants`. Notify vẫn độc lập, không tự chạy sau các bước khác.
+
+ID/thư mục ma trận có hậu tố năm học (ví dụ `ma-tran-huong-hoa-toan-12-giua-ky-1-2026-2027`) để phân biệt cùng trường qua các năm.
+
+Ma trận dùng profile `matrix`, lưu trong thư mục `Ma trận`; không giả lập câu hỏi hoặc lời giải (`scope.has_questions = false`, `scope.has_solutions = false`). Chỉ khai báo một recipe `de` cho toàn bộ ma trận và đặc tả.
 
 `scope.has_questions` và `scope.has_solutions` ghi phần nguồn thực sự có. Khi đề thi chưa có lời giải, chỉ xuất bản đề đã có, chưa đặt nhãn bản gộp. Nếu chỉ có đáp án, có thể xuất bản đáp án trước rồi bổ sung đề sau. Không tự tạo lời giải. Nguồn chưa đủ bộ yêu cầu được thể hiện bằng scope; compile thành công không có nghĩa bộ nguồn đã hoàn chỉnh.
 
@@ -30,7 +35,7 @@ documents/YYYY-MM/<category>/<document-id>/
 assets/targets/YYYY-MM/<category>/<document-id>/*.pdf
 ```
 
-Thư mục phân loại local gồm `Đề thi`, `Chuyên đề`, `Livestream`. Dùng cùng tháng/thư mục phân loại/ID ở ba cây thư mục. Tháng là tháng tiếp nhận, độc lập với `DRIVE_MONTH` khi xuất bản. Giữ ID cũ khi đổi thư mục phân loại; tài liệu chuyên đề mới dùng tiền tố `th-`.
+Thư mục phân loại local gồm `Đề thi`, `Chuyên đề`, `Livestream`, `Ma trận`. Dùng cùng tháng/thư mục phân loại/ID ở ba cây thư mục. Tháng là tháng tiếp nhận, độc lập với `DRIVE_MONTH` khi xuất bản. Giữ ID cũ khi đổi thư mục phân loại; tài liệu chuyên đề mới dùng tiền tố `th-`.
 
 ID và tên tài nguyên dùng chữ thường không dấu, nối bằng `-`, không có dấu cách hoặc `#`; giữ tên nguồn gốc trong manifest. Font đổi tên file không đổi family. Nguồn gốc chỉ đọc; bản crop/xoay phục vụ kiểm tra lưu riêng. Ảnh bổ sung vào đúng bộ hiện có dù nhận ngày khác; trang nguồn dùng số trang thực, không suy từ thứ tự upload.
 

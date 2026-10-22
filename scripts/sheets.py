@@ -2,7 +2,7 @@
 import argparse
 import re
 import unicodedata
-from datetime import date, datetime
+from datetime import date, datetime, timedelta
 from pathlib import Path
 from typing import Any
 from urllib.parse import quote
@@ -49,19 +49,25 @@ def document_rows(
     code = GITHUB + "/" + quote(str(path.parent.relative_to(ROOT)), safe="/")
     serial = (uploaded_on - SHEETS_DATE_EPOCH).days
     rows = []
-    for variant in sheet_variants(load_manifest(path), files):
+    manifest = load_manifest(path)
+    matrix = manifest["kind"] == "matrix"
+    for variant in sheet_variants(manifest, files):
         answer = variant == "dap-an"
         primary = variant if variant in files else "de-cach"
         base = document_title(files[primary][1])
         suffix = {"de": "ĐỀ", "dap-an": "ĐÁP ÁN", "de-dap-an": "ĐỀ + ĐÁP ÁN"}[variant]
+        if matrix:
+            suffix = "MA TRẬN"
         title = base + " - " + suffix
         label = {"de": "ĐỀ - KHÔNG CÁCH", "dap-an": "ĐÁP ÁN", "de-dap-an": "ĐỀ + ĐÁP ÁN"}[variant]
+        if matrix:
+            label = "MA TRẬN"
         rows.append(
             (
                 title,
                 [
                     cell() if answer else cell(serial),
-                    cell() if answer else cell("ĐỀ - GỐC", links["goc"]),
+                    cell() if answer else cell("MA TRẬN - GỐC" if matrix else "ĐỀ - GỐC", links["goc"]),
                     cell(title),
                     cell() if answer else cell("Github", code),
                     cell(label, links[variant]) if variant in links else None,
@@ -122,6 +128,51 @@ def month_label_request(sheet_id: int, row: int, month: str) -> dict[str, Any]:
     }
 
 
+def reusable_month_block(sheet, rows, month, records):
+    """Recover an unlabeled block without treating its merge as occupied content."""
+    blocks = sorted(
+        (m.get("startRowIndex", 0), m["endRowIndex"])
+        for m in sheet.get("merges", [])
+        if m.get("startColumnIndex", 0) == 0 and m["endColumnIndex"] == 1 and m.get("startRowIndex", 0) >= 2
+    )
+    first_boundary = min(
+        [
+            sheet["properties"]["gridProperties"]["rowCount"],
+            *(a for a, _ in blocks),
+            *(r for r in rows if r >= 2 and displayed(rows, r, 0)),
+        ]
+    )
+    if first_boundary > 2:
+        blocks.insert(0, (2, first_boundary))
+    identities = {row_identity(title) for title, _ in records}
+    empty = []
+    recovered = []
+    for start, end in blocks:
+        if any(displayed(rows, r, 0) for r in range(start, end)):
+            continue
+        occupied = [r for r in range(start, end) if any(c.get("userEnteredValue") for c in rows.get(r, [])[1:9])]
+        if not occupied:
+            empty.append((start, end))
+            continue
+        months = set()
+        for r in occupied:
+            cells = rows.get(r, [])
+            value = cells[1].get("userEnteredValue", {}) if len(cells) > 1 else {}
+            if "numberValue" in value:
+                months.add((SHEETS_DATE_EPOCH + timedelta(days=value["numberValue"])).strftime("%Y-%m"))
+            elif displayed(rows, r, 1):
+                try:
+                    months.add(datetime.strptime(displayed(rows, r, 1), "%d/%m/%Y").strftime("%Y-%m"))
+                except ValueError:
+                    months.add("unknown")
+        matches = any(row_identity(displayed(rows, r, 3)) in identities for r in occupied)
+        if months == {month} or (not months and matches):
+            recovered.append((start, end))
+    if len(recovered) > 1:
+        raise ValueError(f"Multiple unlabeled blocks contain data for {month}; restore their month labels first.")
+    return recovered[0] if recovered else empty[0] if empty else None
+
+
 def updates_for_sheet(
     sheet: dict[str, Any], month: str, records: list[tuple[str, list[dict[str, Any] | None]]]
 ) -> tuple[list[dict[str, Any]], list[str]]:
@@ -148,7 +199,19 @@ def updates_for_sheet(
         raise ValueError(f"{props['title']}: duplicate month blocks for {month}")
     requests: list[dict[str, Any]] = []
     grid_rows = props["gridProperties"]["rowCount"]
-    if month_rows:
+    reusable = reusable_month_block(sheet, rows, month, records) if not month_rows else None
+    if reusable:
+        start, end = reusable
+        if not any(
+            m.get("startRowIndex", 0) == start
+            and m["endRowIndex"] == end
+            and m.get("startColumnIndex", 0) == 0
+            and m["endColumnIndex"] == 1
+            for m in merges
+        ):
+            requests.append({"mergeCells": {"range": month_range(sheet_id, start, end), "mergeType": "MERGE_ALL"}})
+        requests.append(month_label_request(sheet_id, start, month))
+    elif month_rows:
         start = month_rows[0]
         merge = next(
             (

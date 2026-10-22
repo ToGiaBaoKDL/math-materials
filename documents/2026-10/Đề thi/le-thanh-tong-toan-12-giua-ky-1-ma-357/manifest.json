@@ -134,7 +134,7 @@
       }
     },
     "answer_key": "Matched official code 357 key on source page 5: 12 MC, 16 TF statements, 6 short answers.",
-    "figures": "Inspected revised graph labels, net, factory and pool as standalone figures. User-provided bridge image inspected and used unchanged.",
+    "figures": "Inspected revised room, display case, pool and factory as standalone figures. Room column projection exaggerated for legibility; source dimensions unchanged. Pool, sugar and factory increased 10% relative to previous version.",
     "fonts": "Previous all-vector claim superseded: bridge is a user-provided raster image; other diagrams are native vectors.",
     "source_integrity": "Original PDF preserved; SHA-256 recorded in sources.",
     "ending": "HẾT is on the last question page and final solution page, near bottom; no standalone ending page."
@@ -142,15 +142,15 @@
   "outputs": {
     "de-dap-an": {
       "pdf": "assets/targets/2026-10/Đề thi/le-thanh-tong-toan-12-giua-ky-1-ma-357/de-dap-an.pdf",
-      "pages": 14,
-      "bytes": 569970,
-      "sha256": "e11186394964775bda514f5d95930476e7b6371c7bf7b6db9c5b004f9eabb01e"
+      "pages": 13,
+      "bytes": 570652,
+      "sha256": "124bb83cc3daf369122fa740bc578f26d495d28f5b7a7bf7bf27e5c5841c7205"
     },
     "de": {
       "pdf": "assets/targets/2026-10/Đề thi/le-thanh-tong-toan-12-giua-ky-1-ma-357/de.pdf",
-      "pages": 8,
-      "bytes": 397783,
-      "sha256": "abef500d6f3bea4c04cb1e2c1a6e3dc1e0d7c3b4379afdbebd7ac814cf891b2e"
+      "pages": 7,
+      "bytes": 398524,
+      "sha256": "18d47c9752f51afc5db362785d2f2ad568d068555af08b888706b3da32e79c31"
     },
     "dap-an": {
       "pdf": "assets/targets/2026-10/Đề thi/le-thanh-tong-toan-12-giua-ky-1-ma-357/dap-an.pdf",

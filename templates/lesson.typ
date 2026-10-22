@@ -12,6 +12,7 @@
   horizontal-inset: 5mm,
   title-size: 25pt,
   course-size: 20.5pt,
+  course-tracking: 0pt,
   title-stroke: none,
   author: [Biên soạn và giảng dạy: Thầy Đỗ Xuân Thắng],
   plain: false,
@@ -26,7 +27,7 @@
   #align(center)[
     #if not plain and course != none {
       block(fill: palette.course-green, radius: 2mm, inset: (x: 7mm, y: 2mm))[
-        #text(font: fonts.course, size: course-size, weight: "bold", fill: white, course)
+        #text(font: fonts.course, size: course-size, tracking: course-tracking, weight: "bold", fill: white, course)
       ]
       v(1mm)
     }
@@ -46,10 +47,12 @@
       text(font: fonts.subtitle, size: 11.5pt, fill: if plain { palette.heading } else { palette.ink }, subtitle)
     }
   ]
-  #v(1mm)
-  #align(right, text(font: fonts.course, size: 11pt, style: "italic", fill: if plain { palette.heading } else {
+  #if author != none {
+    v(1mm)
+    align(right, text(font: fonts.course, size: 11pt, style: "italic", fill: if plain { palette.heading } else {
     palette.ink
   })[\- #author -])
+  }
 ]
 
 #let lesson(

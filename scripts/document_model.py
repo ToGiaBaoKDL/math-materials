@@ -30,7 +30,8 @@ class Profile:
 
 PROFILES = {
     "tinh-hoa": Profile("lesson", ("de", "de-cach", "dap-an"), "Chuyên đề"),
-    "livestream": Profile("lesson", ("de", "de-cach"), "Chuyên đề"),
+    "livestream": Profile("lesson", ("de", "de-cach"), "Livestream"),
+    "matrix": Profile("matrix", ("de",), "Ma trận"),
     "exam": Profile("exam", ("de-dap-an",), "Đề thi"),
 }
 Manifest = dict[str, Any]
@@ -39,6 +40,10 @@ DocumentFiles = dict[str, tuple[Path, str]]
 
 def publication_variants(manifest: Manifest) -> tuple[str, ...]:
     profile = PROFILES[manifest["kind"]]
+    if manifest["kind"] == "matrix":
+        if set(manifest["variants"]) != {"de"}:
+            raise ValueError("Matrix documents require exactly one de variant")
+        return profile.variants
     combine = manifest.get("publication", {}).get("combine_answers", manifest["kind"] == "exam")
     if type(combine) is not bool:
         raise ValueError("publication.combine_answers must be boolean")

@@ -33,6 +33,8 @@
   duration-size: 12pt,
   pages: none,
   exam-date: none,
+  heading-increase: 0pt,
+  left-column: 56%,
 ) = {
   set par(justify: false, leading: 0.55em)
   let school-color = palette.section-green
@@ -54,9 +56,10 @@
             available-right / measure(text(size: 14pt, weight: "bold", title)).width,
           )
       )
-      let heading(body, color) = text(size: size, weight: "bold", fill: color, stroke: 0.12pt + color, body)
+      let heading-size = size + heading-increase
+      let heading(body, color) = text(size: heading-size, weight: "bold", fill: color, stroke: 0.12pt + color, body)
       [#table(
-        columns: (56%, 44%),
+        columns: (left-column, 100% - left-column),
         stroke: none,
         inset: (x: 4mm, y: 1mm),
         align: horizon,
@@ -65,7 +68,7 @@
           #v(1mm)
           #line(length: 100%, stroke: 0.5pt + palette.cover-rule)
         ],
-        table.cell(align: top + center, inset: (left: 8mm, right: 4mm, y: 1mm))[
+        table.cell(align: top + center, inset: (left: 4mm, right: 2mm, y: 1mm))[
           #heading(title, title-color)
         ],
         ..(
@@ -74,35 +77,25 @@
               context text(
                 weight: "bold",
               )[Đề thi gồm #(if pages == none { counter(page).final().first() } else { pages }) trang],
-              [*Môn:* #subject],
+              [*Môn:* #subject #grade],
             ),
             (
               text(size: 12pt, weight: "bold")[Thời gian làm bài: #text(fill: palette.primary)[#duration phút]],
-              [*Lớp:* #grade],
+              if exam-date != none { [*Ngày thi:* #exam-date] } else { [] },
             ),
             (
               text(size: 11.5pt, style: "italic")[(Không kể thời gian phát đề)],
-              if exam-date != none { [*Ngày thi:* #exam-date] } else if code != none {
+              if code != none {
                 box(fill: palette.code-fill, radius: 1mm, inset: (x: 3mm, y: 1.5mm))[
                   *Mã đề:* #text(weight: "bold", fill: palette.primary, code)
                 ]
               } else if note != none { text(size: 12.5pt, style: "italic", note) } else { [] },
             ),
           )
-            + if exam-date != none and code != none {
-              (
-                (
-                  [],
-                  box(fill: palette.code-fill, radius: 1mm, inset: (x: 3mm, y: 1.5mm))[
-                    *Mã đề:* #text(weight: "bold", fill: palette.primary, code)
-                  ],
-                ),
-              )
-            } else { () }
         )
           .enumerate()
           .map(((i, pair)) => (
-            table.cell(inset: (left: 31mm, right: 4mm, y: 1mm), stroke: (right: 0.6pt + palette.cover-rule))[
+            table.cell(inset: (left: 35mm, right: 4mm, y: 1mm), stroke: (right: 0.6pt + palette.cover-rule))[
               #block(height: 9mm)[
                 #align(horizon, pair.at(0))
               ]
@@ -114,7 +107,12 @@
           .flatten(),
       )]
     })
-    #place(bottom + left, dx: 3.5mm, dy: -6.5mm, image("/assets/branding/icons/clock.svg", width: 20mm))
+    #place(
+      bottom + left,
+      dx: 3.5mm,
+      dy: -6mm,
+      image("/assets/branding/icons/clock.svg", width: 22mm),
+    )
     #place(bottom + right, dx: 4mm, dy: 7mm, image("/assets/branding/icons/exam-corner.svg", width: 27mm))
   ]
   v(4mm)

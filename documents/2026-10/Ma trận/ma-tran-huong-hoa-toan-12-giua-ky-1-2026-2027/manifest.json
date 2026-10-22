@@ -1,0 +1,100 @@
+{
+  "schema_version": 1,
+  "id": "ma-tran-huong-hoa-toan-12-giua-ky-1-2026-2027",
+  "kind": "matrix",
+  "received_date": "2026-10-22",
+  "status": "implemented",
+  "metadata": {
+    "title": "MA TRẬN ĐỀ KIỂM TRA GIỮA KÌ I – TRƯỜNG THPT HƯỚNG HÓA",
+    "subject": "TOÁN 12",
+    "school_year": "2026 - 2027"
+  },
+  "sources": [
+    {
+      "path": "assets/sources/2026-10/Ma trận/ma-tran-huong-hoa-toan-12-giua-ky-1-2026-2027/source.pdf",
+      "original_name": "01._MTDT_GK1_12_2026_2027_79846_compressed.pdf",
+      "pages": 4,
+      "bytes": 125979,
+      "sha256": "c0144a7f8bc99fbdd17ad82a42cb1a794e2d1ae2dc07d7faf04f80957630aea2"
+    }
+  ],
+  "scope": {
+    "has_questions": false,
+    "has_solutions": false,
+    "sections": [
+      "Ma trận",
+      "Bản đặc tả"
+    ],
+    "excluded": [
+      "Khối chữ ký cuối tài liệu: BGH, tổ trưởng, tên người ký và địa điểm/ngày ký"
+    ]
+  },
+  "variants": {
+    "de": {
+      "filename": "ma-tran.pdf",
+      "inputs": {}
+    }
+  },
+  "drive": {
+    "folder": "Ma trận",
+    "filenames": {
+      "de": "MA-TRAN-HUONG-HOA-TOAN-12-GIUA-KY-I-2026-2027 - MA TRẬN.pdf"
+    }
+  },
+  "provenance": {
+    "source_issues": [
+      "Giữ nguyên số liệu nguồn, chưa điều chỉnh các tổng chưa khớp với hàng chi tiết.",
+      "Tổng số tiết ở 5 nội dung là 22, trong khi chủ đề ghi 24 tiết.",
+      "Hàng GTLN/GTNN ghi DT2 Hiểu là 2c; giữ nguyên.",
+      "Đường tiệm cận: tổng Biết/Hiểu ghi 5/1 nhưng các ô chi tiết cho 2/1/3; giữ nguyên."
+    ]
+  },
+  "qa": {
+    "review_status": "pending",
+    "compile": "passed",
+    "checks": {
+      "landscape": "passed",
+      "text_page_bounds": "passed",
+      "summary_and_specification_totals": "present",
+      "signature_exclusion": "passed",
+      "source_sha256": "passed",
+      "embedded_fonts": "passed",
+      "pages": 4
+    },
+    "full_page_visual_review": "pending: full-page preview images are disabled by repository convention; text and bbox checked.",
+    "source_content": "All five content rows and requirements transcribed; source inconsistencies preserved.",
+    "layout": "Body and tables increased 0.5pt; repeated merged chapter per specification page; all summary values bold; totals integrated."
+  },
+  "outputs": {
+    "de": {
+      "pdf": "assets/targets/2026-10/Ma trận/ma-tran-huong-hoa-toan-12-giua-ky-1-2026-2027/ma-tran.pdf",
+      "pages": 4,
+      "bytes": 388522,
+      "sha256": "6ebf9662c95ffc05e243d7e0c60c7edc166a68578d4c0e2563525504a0ec5dac"
+    }
+  },
+  "content_mapping": [
+    {
+      "id": "matrix",
+      "role": "source",
+      "source": {
+        "index": 0,
+        "pages": [
+          1,
+          2
+        ]
+      }
+    },
+    {
+      "id": "specification",
+      "role": "source",
+      "source": {
+        "index": 0,
+        "pages": [
+          3,
+          4
+        ]
+      }
+    }
+  ]
+}
