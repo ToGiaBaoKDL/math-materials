@@ -1,6 +1,6 @@
 #import "theme.typ": content-style, document-style, line-style, palette, rhythm
 
-#let choices(values, columns: auto, label-color: palette.primary) = layout(size => {
+#let choices(values, columns: auto, label-color: palette.primary, row-gap: none) = layout(size => {
   set par(justify: false)
   let format(value) = {
     show math.equation: set text(top-edge: "bounds", bottom-edge: "bounds")
@@ -17,7 +17,7 @@
   } else if required <= (size.width - rhythm.answer-column) / 2 { 2 } else { 1 }
   grid(
     columns: (1fr,) * count,
-    column-gutter: rhythm.answer-column, row-gutter: rhythm.answer-row,
+    column-gutter: rhythm.answer-column, row-gutter: if row-gap == none { rhythm.answer-row } else { row-gap },
     align: left + horizon,
     ..values
       .enumerate()

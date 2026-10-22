@@ -174,10 +174,16 @@
   columns: auto,
   ending: none,
   keep-together: false,
+  keep-body: false,
   statements-table: false,
+  question-gap: none,
+  statement-gap: exam-style.statement-gap,
+  answer-gap: none,
 ) = {
   let prompt = [
-    #text(weight: "bold", fill: palette.primary)[Câu #number.] #body
+    #if keep-body {
+      block(width: 100%, breakable: false)[#text(weight: "bold", fill: palette.primary)[Câu #number.] #body]
+    } else { [#text(weight: "bold", fill: palette.primary)[Câu #number.] #body] }
     #if statements.len() > 0 {
       if statements-table {
         block(above: 3mm, below: 0pt, exam-table(
@@ -187,21 +193,21 @@
         ))
       } else {
         block(above: 5mm, below: 0pt, grid(
-          columns: (1fr,), row-gutter: exam-style.statement-gap,
+          columns: (1fr,), row-gutter: statement-gap,
           ..statements.enumerate().map(((i, it)) => [#("abcd".at(i))) #it])
         ))
       }
     }
     #if answers.len() > 0 {
       v(3mm)
-      choices(answers, columns: columns, label-color: palette.exam-blue)
+      choices(answers, columns: columns, label-color: palette.exam-blue, row-gap: answer-gap)
     }
   ]
   block(
     width: 100%,
     breakable: variant != "dap-an" and not keep-together and (ending == none or variant != "de-cach"),
     sticky: false,
-    above: if variant == "de" { 4mm } else { exam-style.question-gap },
+    above: if question-gap != none { question-gap } else if variant == "de" { 4mm } else { exam-style.question-gap },
     below: 0pt,
     stroke: if variant == "dap-an" { 0.7pt + palette.primary } else { none },
     fill: if variant == "dap-an" { palette.box-fill } else { none },

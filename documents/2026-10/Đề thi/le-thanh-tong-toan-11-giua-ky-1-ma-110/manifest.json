@@ -1,0 +1,531 @@
+{
+  "schema_version": 1,
+  "id": "le-thanh-tong-toan-11-giua-ky-1-ma-110",
+  "kind": "exam",
+  "received_date": "2026-10-22",
+  "status": "implemented",
+  "metadata": {
+    "title": "ĐỀ ĐÁNH GIÁ GIỮA KỲ I TRƯỜNG TH–THCS–THPT LÊ THÁNH TÔNG",
+    "subject": "TOÁN 11",
+    "school_year": "2026 - 2027"
+  },
+  "sources": [
+    {
+      "path": "assets/sources/2026-10/Đề thi/le-thanh-tong-toan-11-giua-ky-1-ma-110/source.pdf",
+      "original_name": "de-giua-ky-1-toan-11-nam-2026-2027-truong-le-thanh-tong-tp-hcm.pdf",
+      "bytes": 516603,
+      "sha256": "b9cab689d455886acad9be0cc0b69f7eaddbb599ef922d04098d6c984b293939",
+      "pages": 10
+    }
+  ],
+  "scope": {
+    "questions": 21,
+    "question_pages": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "answer_pages": [
+      6,
+      7,
+      8,
+      9
+    ],
+    "has_questions": true,
+    "has_solutions": true
+  },
+  "variants": {
+    "de": {
+      "filename": "de.pdf",
+      "inputs": {
+        "variant": "de"
+      }
+    },
+    "dap-an": {
+      "filename": "dap-an.pdf",
+      "inputs": {
+        "variant": "dap-an"
+      }
+    },
+    "de-dap-an": {
+      "filename": "de-dap-an.pdf",
+      "inputs": {
+        "variant": "de-dap-an"
+      }
+    }
+  },
+  "drive": {
+    "folder": "Đề thi",
+    "filenames": {
+      "de": "LE-THANH-TONG-TOAN-11-GIUA-KY-I-MA-110 - ĐỀ.pdf",
+      "dap-an": "LE-THANH-TONG-TOAN-11-GIUA-KY-I-MA-110 - ĐÁP ÁN.pdf",
+      "de-dap-an": "LE-THANH-TONG-TOAN-11-GIUA-KY-I-MA-110 - ĐỀ + ĐÁP ÁN.pdf"
+    }
+  },
+  "provenance": {
+    "source_issues": [
+      {
+        "issue": "Heading nguồn ghi 4 trang đề, thực tế câu hỏi trải trên trang 1–5; heading đầu ra dùng số trang đề đã dàn thực tế."
+      }
+    ],
+    "answer_source": "Lời giải tham khảo AI & TOANMATH.com trong nguồn, không phải đáp án chính thức của trường.",
+    "figures": "Seven source diagrams redrawn as SVG. Added theater, IV.2 pyramid and Ferris vectors; II.1 uses user-supplied bicycle photograph. Colors and labels follow current user revisions.",
+    "source_notice": "Trang 10 chỉ có lưu ý nguồn gõ từ ảnh và lời giải AI; không chép trang quảng bá vào đầu ra, ghi nguồn lời giải tham khảo ở đầu đáp án.",
+    "supplementary_images": [
+      {
+        "path": "documents/2026-10/Đề thi/le-thanh-tong-toan-11-giua-ky-1-ma-110/images/bicycle-rally-coolgrey.jpg",
+        "original_name": "rally-1-b-2026-coolgrey_2.jpg",
+        "question": "II.1",
+        "sha256": "d46eef36156e82bc7a1c22ec392dba4171140769c6f219cc78fab4176b45df8b"
+      }
+    ]
+  },
+  "qa": {
+    "compile": "passed",
+    "review_status": "pending",
+    "checks": {
+      "de-dap-an": {
+        "pages": 14,
+        "question_sequence": "passed",
+        "text_page_bounds": "passed",
+        "unbroken_money_amount": "passed",
+        "empty_page_check": "passed"
+      },
+      "de": {
+        "pages": 8,
+        "question_sequence": "passed",
+        "text_page_bounds": "passed",
+        "unbroken_money_amount": "passed",
+        "empty_page_check": "passed"
+      },
+      "dap-an": {
+        "pages": 6,
+        "question_sequence": "passed",
+        "text_page_bounds": "passed",
+        "unbroken_money_amount": "passed",
+        "empty_page_check": "passed"
+      }
+    },
+    "answer_key": "All 12 MC answers, 8 TF statements, 4 short answers and 3 written solutions checked against source; arithmetic and geometric ratios independently verified.",
+    "figures": "Revised section and tank visually inspected standalone: black pyramid edges, continuous SB redrawn above section fill; simplified single-outline tank opening with M on rim; uniform cyan water with additional wave marks and orange visible tank edges. Previous revised illustrations unchanged. Theater enlarged 15% (94 to 108.1 mm); rear tank wall regions A′D′LI and D′C′KL now filled orange beneath foreground surfaces.",
+    "full_page_visual_review": "pending: no full-page preview images generated under repository convention; extracted text, page bounds, sequence and fonts checked.",
+    "source_integrity": "Source PDF preserved byte-for-byte; checksum verified.",
+    "layout": "13.5 pt justified body, 1.2 em leading; wide question/statement gaps retained. Removed all question/body keep-together overrides so adjacent questions flow continuously. Monetary amounts use nonbreaking spaces. Full-width figure containers retained."
+  },
+  "content_mapping": [
+    {
+      "id": "I.1",
+      "role": "question",
+      "source": {
+        "index": 0,
+        "page": 1
+      }
+    },
+    {
+      "id": "I.2",
+      "role": "question",
+      "source": {
+        "index": 0,
+        "page": 1
+      }
+    },
+    {
+      "id": "I.3",
+      "role": "question",
+      "source": {
+        "index": 0,
+        "page": 1
+      }
+    },
+    {
+      "id": "I.4",
+      "role": "question",
+      "source": {
+        "index": 0,
+        "page": 1
+      }
+    },
+    {
+      "id": "I.5",
+      "role": "question",
+      "source": {
+        "index": 0,
+        "page": 1
+      }
+    },
+    {
+      "id": "I.6",
+      "role": "question",
+      "source": {
+        "index": 0,
+        "page": 1
+      }
+    },
+    {
+      "id": "I.7",
+      "role": "question",
+      "source": {
+        "index": 0,
+        "page": 1
+      }
+    },
+    {
+      "id": "I.8",
+      "role": "question",
+      "source": {
+        "index": 0,
+        "page": 2
+      }
+    },
+    {
+      "id": "I.9",
+      "role": "question",
+      "source": {
+        "index": 0,
+        "page": 2
+      }
+    },
+    {
+      "id": "I.10",
+      "role": "question",
+      "source": {
+        "index": 0,
+        "page": 2
+      }
+    },
+    {
+      "id": "I.11",
+      "role": "question",
+      "source": {
+        "index": 0,
+        "page": 2
+      }
+    },
+    {
+      "id": "I.12",
+      "role": "question",
+      "source": {
+        "index": 0,
+        "page": 2
+      }
+    },
+    {
+      "id": "II.1",
+      "role": "question",
+      "source": {
+        "index": 0,
+        "page": 3
+      }
+    },
+    {
+      "id": "II.2",
+      "role": "question",
+      "source": {
+        "index": 0,
+        "page": 3
+      }
+    },
+    {
+      "id": "III.1",
+      "role": "question",
+      "source": {
+        "index": 0,
+        "page": 4
+      }
+    },
+    {
+      "id": "III.2",
+      "role": "question",
+      "source": {
+        "index": 0,
+        "page": 4
+      }
+    },
+    {
+      "id": "III.3",
+      "role": "question",
+      "source": {
+        "index": 0,
+        "page": 4
+      }
+    },
+    {
+      "id": "III.4",
+      "role": "question",
+      "source": {
+        "index": 0,
+        "page": 5
+      }
+    },
+    {
+      "id": "IV.1",
+      "role": "question",
+      "source": {
+        "index": 0,
+        "page": 5
+      }
+    },
+    {
+      "id": "IV.2",
+      "role": "question",
+      "source": {
+        "index": 0,
+        "page": 5
+      }
+    },
+    {
+      "id": "IV.3",
+      "role": "question",
+      "source": {
+        "index": 0,
+        "page": 5
+      }
+    },
+    {
+      "id": "solution-I.1",
+      "role": "solution",
+      "source": {
+        "index": 0,
+        "page": 6
+      }
+    },
+    {
+      "id": "solution-I.2",
+      "role": "solution",
+      "source": {
+        "index": 0,
+        "page": 6
+      }
+    },
+    {
+      "id": "solution-I.3",
+      "role": "solution",
+      "source": {
+        "index": 0,
+        "page": 6
+      }
+    },
+    {
+      "id": "solution-I.4",
+      "role": "solution",
+      "source": {
+        "index": 0,
+        "page": 6
+      }
+    },
+    {
+      "id": "solution-I.5",
+      "role": "solution",
+      "source": {
+        "index": 0,
+        "page": 6
+      }
+    },
+    {
+      "id": "solution-I.6",
+      "role": "solution",
+      "source": {
+        "index": 0,
+        "page": 6
+      }
+    },
+    {
+      "id": "solution-I.7",
+      "role": "solution",
+      "source": {
+        "index": 0,
+        "page": 6
+      }
+    },
+    {
+      "id": "solution-I.8",
+      "role": "solution",
+      "source": {
+        "index": 0,
+        "page": 6
+      }
+    },
+    {
+      "id": "solution-I.9",
+      "role": "solution",
+      "source": {
+        "index": 0,
+        "page": 6
+      }
+    },
+    {
+      "id": "solution-I.10",
+      "role": "solution",
+      "source": {
+        "index": 0,
+        "page": 6
+      }
+    },
+    {
+      "id": "solution-I.11",
+      "role": "solution",
+      "source": {
+        "index": 0,
+        "page": 6
+      }
+    },
+    {
+      "id": "solution-I.12",
+      "role": "solution",
+      "source": {
+        "index": 0,
+        "page": 6
+      }
+    },
+    {
+      "id": "solution-II.1",
+      "role": "solution",
+      "source": {
+        "index": 0,
+        "page": 7
+      }
+    },
+    {
+      "id": "solution-II.2",
+      "role": "solution",
+      "source": {
+        "index": 0,
+        "page": 7
+      }
+    },
+    {
+      "id": "solution-III.1",
+      "role": "solution",
+      "source": {
+        "index": 0,
+        "page": 7
+      }
+    },
+    {
+      "id": "solution-III.2",
+      "role": "solution",
+      "source": {
+        "index": 0,
+        "page": 7
+      }
+    },
+    {
+      "id": "solution-III.3",
+      "role": "solution",
+      "source": {
+        "index": 0,
+        "page": 8
+      }
+    },
+    {
+      "id": "solution-III.4",
+      "role": "solution",
+      "source": {
+        "index": 0,
+        "page": 8
+      }
+    },
+    {
+      "id": "solution-IV.1",
+      "role": "solution",
+      "source": {
+        "index": 0,
+        "page": 8
+      }
+    },
+    {
+      "id": "solution-IV.2",
+      "role": "solution",
+      "source": {
+        "index": 0,
+        "page": 9
+      }
+    },
+    {
+      "id": "solution-IV.3",
+      "role": "solution",
+      "source": {
+        "index": 0,
+        "page": 9
+      }
+    },
+    {
+      "id": "figure-pyramid",
+      "role": "figure",
+      "source": {
+        "index": 0,
+        "page": 2
+      }
+    },
+    {
+      "id": "figure-box",
+      "role": "figure",
+      "source": {
+        "index": 0,
+        "page": 2
+      }
+    },
+    {
+      "id": "figure-tetrahedron",
+      "role": "figure",
+      "source": {
+        "index": 0,
+        "page": 3
+      }
+    },
+    {
+      "id": "figure-section",
+      "role": "figure",
+      "source": {
+        "index": 0,
+        "page": 3
+      }
+    },
+    {
+      "id": "figure-tank",
+      "role": "figure",
+      "source": {
+        "index": 0,
+        "page": 4
+      }
+    },
+    {
+      "id": "figure-prism",
+      "role": "figure",
+      "source": {
+        "index": 0,
+        "page": 4
+      }
+    },
+    {
+      "id": "figure-honeycomb",
+      "role": "figure",
+      "source": {
+        "index": 0,
+        "page": 5
+      }
+    }
+  ],
+  "outputs": {
+    "de-dap-an": {
+      "pdf": "assets/targets/2026-10/Đề thi/le-thanh-tong-toan-11-giua-ky-1-ma-110/de-dap-an.pdf",
+      "pages": 14,
+      "bytes": 688908,
+      "sha256": "fecc158b5d4bd259f3284e6554dad40fab21722e75cad98de2225002db7785ba"
+    },
+    "de": {
+      "pdf": "assets/targets/2026-10/Đề thi/le-thanh-tong-toan-11-giua-ky-1-ma-110/de.pdf",
+      "pages": 8,
+      "bytes": 540357,
+      "sha256": "080cd87367157a39b51e32d0f68f26c07179e6dc9de80ac66fd620ca6a054f41"
+    },
+    "dap-an": {
+      "pdf": "assets/targets/2026-10/Đề thi/le-thanh-tong-toan-11-giua-ky-1-ma-110/dap-an.pdf",
+      "pages": 6,
+      "bytes": 236159,
+      "sha256": "78718b2a3b1ffbfc8d4daf6477ead9c53443b84119f4bd61e8bdaa4cd1d5097a"
+    }
+  }
+}
