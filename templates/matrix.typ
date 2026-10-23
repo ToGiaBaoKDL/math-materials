@@ -89,18 +89,18 @@
 #let summary(rows, totals, essay: false, style: table-style) = {
   let levels = if essay { 9 } else { 7 }
   set text(size: 11pt)
-  set par(leading: if style.spacious { 0.3em } else { 0.35em }, spacing: 1mm)
+  set par(leading: if style.spacious { 0.4em } else { 0.35em }, spacing: 1mm)
   table(
-    columns: (8mm, 26mm, 40mm) + (1fr,) * levels + (11mm, 11mm, 11mm, 15mm),
+    columns: (8mm, 25mm, 55mm) + (1fr, 0.8fr, 1.2fr, 1.7fr, 0.65fr, 0.8fr, 1.2fr) + (if essay { (0.8fr, 0.65fr) } else { () }) + (10mm, 10mm, 10mm, 15mm),
     align: center + horizon,
-    inset: (x: 1.2mm, y: if style.spacious { 0.7mm } else { 1.2mm }),
+    inset: (x: 1.2mm, y: if style.spacious { 1.1mm } else { 1.2mm }),
     stroke: 0.6pt + rgb("#B39A9F"),
     headings(essay: essay, style: style),
     table.cell(rowspan: rows.len())[*1*], table.cell(rowspan: rows.len())[#strong(chapter)],
     ..rows
       .enumerate()
       .map(((i, row)) => (
-        table.cell(align: left + horizon)[#row.title],
+        table.cell(align: left + horizon, inset: (x: 2.2mm, y: 2.1mm))[#row.title],
         ..row
           .cells
           .enumerate()
@@ -115,13 +115,14 @@
       .map(row => (
         table.cell(
           colspan: 3,
+          inset: (x: 2.2mm, y: 2.1mm),
           fill: palette.box-fill,
           text(weight: "bold", row.title),
         ),
         ..row.cells.map(x => table.cell(fill: palette.box-fill)[#strong(x)]),
       ))
       .flatten(),
-    table.cell(colspan: 3, fill: rgb("#FFF0B8"))[*Tỉ lệ %*],
+    table.cell(colspan: 3, inset: (x: 2.2mm, y: 2.1mm), fill: rgb("#FFF0B8"))[*Tỉ lệ %*],
     table.cell(colspan: 2, fill: rgb("#FFF0B8"))[*30*], table.cell(colspan: 3, fill: rgb("#FFF0B8"))[*40*], table.cell(
       colspan: 2,
       fill: rgb("#FFF0B8"),
@@ -136,11 +137,11 @@
 #let total-cells(rows, essay: false, style: table-style, label-span: 2) = (
   ..rows
     .map(row => (
-      table.cell(colspan: label-span, fill: palette.box-fill, text(weight: "bold", row.title)),
+      table.cell(colspan: label-span, inset: (x: 2.2mm, y: 3.2mm), fill: palette.box-fill, text(weight: "bold", row.title)),
       ..row.cells.enumerate().map(((i, x)) => data-cell(strong(x), i, style)),
     ))
     .flatten(),
-  table.cell(colspan: label-span, fill: rgb("#FFF0B8"))[*Tỉ lệ %*],
+  table.cell(colspan: label-span, inset: (x: 2.2mm, y: 3.2mm), fill: rgb("#FFF0B8"))[*Tỉ lệ %*],
   table.cell(colspan: 2, fill: rgb("#FFF0B8"))[*30*],
   table.cell(colspan: 3, fill: rgb("#FFF0B8"))[*40*],
   table.cell(colspan: 2, fill: rgb("#FFF0B8"))[*30*],
@@ -151,11 +152,11 @@
   let levels = if essay { 9 } else { 7 }
   set text(size: 12pt)
   set table.cell(breakable: false)
-  set par(leading: if style.spacious { 0.72em } else { 0.65em }, spacing: 2mm)
+  set par(leading: if style.spacious { 0.78em } else { 0.65em }, spacing: 2mm)
   table(
     columns: (8mm, 24mm, 30mm, 1fr) + (if essay { 14mm } else { 18mm },) * levels,
     align: center + horizon,
-    inset: (x: 1.5mm, y: 2mm),
+    inset: (x: 1.5mm, y: 2.6mm),
     stroke: 0.6pt + rgb("#B39A9F"),
     headings(spec: true, essay: essay, style: style),
     ..rows
@@ -190,7 +191,7 @@
   set text(size: 12pt)
   table(
     columns: (75mm, 1fr) + (if essay { 12mm } else { 14mm },) * levels,
-    inset: (x: 1.5mm, y: 2mm), align: center + horizon, stroke: 0.6pt + rgb("#B39A9F"),
+    inset: (x: 1.5mm, y: 2.6mm), align: center + horizon, stroke: 0.6pt + rgb("#B39A9F"),
     ..total-cells(rows, essay: essay, style: style),
   )
 }
@@ -198,5 +199,6 @@
 // Square pages retain the landscape summary width and natural table typography.
 #let square-specification(body) = {
   set page(width: 297mm, height: 297mm, flipped: false)
+  set align(center + horizon)
   body
 }
