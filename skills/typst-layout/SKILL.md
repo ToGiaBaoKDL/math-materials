@@ -59,6 +59,7 @@ Dùng template làm nguồn triển khai, skill làm quy tắc tái sử dụng.
 
 - `templates/matrix.typ`, A4 ngang; dùng header/footer và heading bài giảng. Khung xanh ghi “MA TRẬN ĐỀ KIỂM TRA…”, dòng đỏ ghi tên trường; môn/lớp, năm học và thời gian nằm ở subtitle. Không gắn dòng tác giả giảng dạy cho ma trận của trường.
 - Giữ cấu trúc nhóm cột và số liệu nguồn, gồm cột Tự luận nếu có. Header bảng đỏ đô, chữ trắng; ô dữ liệu nền trắng, viền đỏ. Lặp header khi bảng sang trang; giữ mỗi hàng đặc tả nguyên khối nếu vừa trang.
+- Các nhóm DT1, DT2, DT3, Tự luận dùng nền pastel dịu; header tên nhóm và Biết/Hiểu/VD dùng cùng màu nền với thân cột tương ứng, không tăng độ đậm màu riêng cho header. Giữ chữ header in đậm.
 - Bôi đậm giá trị ở STT, Chương/Chủ đề, các cột Tổng (Biết/Hiểu/VD), Tỉ lệ và toàn bộ ba hàng tổng kết: Tổng số lệnh hỏi, Tổng điểm, Tỉ lệ %. Hàng Tỉ lệ % tô vàng sáng toàn hàng.
 - Căn giữa số liệu, căn trái yêu cầu cần đạt; giữ ghi chú cùng trang ma trận khi có thể. Không tự sửa các tổng chưa khớp. Với hai ma trận Hướng Hóa/Triệu Phong hiện tại, bỏ khối chữ ký cuối theo yêu cầu người dùng; không suy rộng việc bỏ chữ ký cho nguồn khác.
 

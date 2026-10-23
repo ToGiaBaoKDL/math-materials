@@ -44,7 +44,7 @@
 #let chapter = [Ứng dụng đạo hàm để khảo sát và vẽ đồ thị của hàm số\ (24 tiết)]
 #let table-style = (merge-chapter: false, spacious: false, colored: false)
 #let group-colors = (rgb("#EDF4F5"), rgb("#F5EFF1"), rgb("#F0F4EB"), rgb("#F7F3E9"))
-#let group-header-colors = (rgb("#C5F1F5"), rgb("#FFD0DA"), rgb("#E2F6A5"), rgb("#FFE6A3"))
+#let group-header-colors = group-colors
 #let group-header-fill(index) = group-header-colors.at(if index < 2 { 0 } else if index < 5 { 1 } else if index < 7 {
   2
 } else { 3 })
