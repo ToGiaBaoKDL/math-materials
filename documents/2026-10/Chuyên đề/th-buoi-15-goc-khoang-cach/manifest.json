@@ -1,0 +1,586 @@
+{
+  "schema_version": 1,
+  "id": "th-buoi-15-goc-khoang-cach",
+  "kind": "tinh-hoa",
+  "received_date": "2026-10-23",
+  "status": "implemented",
+  "metadata": {
+    "title": "BUỔI 15: GÓC – KHOẢNG CÁCH",
+    "lesson": 15,
+    "subject": "Toán – hình tọa độ Oxyz",
+    "topic": "HÌNH TỌA ĐỘ OXYZ",
+    "homework": true
+  },
+  "sources": [
+    {
+      "path": "assets/sources/2026-10/Chuyên đề/th-buoi-15-goc-khoang-cach/source.docx",
+      "original_name": "BUỔI 15 GÓC - KHOẢNG CÁCH.docx",
+      "bytes": 677812,
+      "sha256": "53c9c81e62c0a7e0533d69f3c1261569d23a4246fbaafc7a6ddb30b4cf6c9655"
+    }
+  ],
+  "scope": {
+    "has_questions": true,
+    "has_solutions": true,
+    "questions": 19,
+    "sections": [
+      {
+        "title": "Bài toán xác định góc",
+        "questions": 4
+      },
+      {
+        "title": "Bài toán tính khoảng cách",
+        "questions": 5
+      },
+      {
+        "title": "Bài tập tự luyện",
+        "questions": 10
+      }
+    ]
+  },
+  "variants": {
+    "de": {
+      "filename": "de.pdf",
+      "inputs": {
+        "variant": "de"
+      }
+    },
+    "de-cach": {
+      "filename": "de-cach.pdf",
+      "inputs": {
+        "variant": "de-cach"
+      }
+    },
+    "dap-an": {
+      "filename": "dap-an.pdf",
+      "inputs": {
+        "variant": "dap-an"
+      }
+    }
+  },
+  "content_mapping": [
+    {
+      "id": "bai-hoc-1",
+      "role": "question",
+      "source": {
+        "number": 1,
+        "section": "bai-hoc",
+        "prompt_paragraphs": [
+          17
+        ],
+        "choice_paragraphs": [
+          18
+        ],
+        "solution_paragraphs": [
+          20,
+          21,
+          22
+        ]
+      }
+    },
+    {
+      "id": "bai-hoc-2",
+      "role": "question",
+      "source": {
+        "number": 2,
+        "section": "bai-hoc",
+        "prompt_paragraphs": [
+          23
+        ],
+        "choice_paragraphs": [],
+        "solution_paragraphs": [
+          25,
+          26,
+          27
+        ]
+      }
+    },
+    {
+      "id": "bai-hoc-3",
+      "role": "question",
+      "source": {
+        "number": 3,
+        "section": "bai-hoc",
+        "prompt_paragraphs": [
+          28
+        ],
+        "choice_paragraphs": [],
+        "solution_paragraphs": [
+          30,
+          31,
+          32,
+          33
+        ]
+      }
+    },
+    {
+      "id": "bai-hoc-4",
+      "role": "question",
+      "source": {
+        "number": 4,
+        "section": "bai-hoc",
+        "prompt_paragraphs": [
+          34
+        ],
+        "choice_paragraphs": [],
+        "solution_paragraphs": [
+          36,
+          37,
+          38,
+          39,
+          40
+        ]
+      }
+    },
+    {
+      "id": "bai-hoc-5",
+      "role": "question",
+      "source": {
+        "number": 5,
+        "section": "bai-hoc",
+        "prompt_paragraphs": [
+          54
+        ],
+        "choice_paragraphs": [
+          55
+        ],
+        "solution_paragraphs": [
+          58,
+          59,
+          60,
+          61,
+          62
+        ]
+      }
+    },
+    {
+      "id": "bai-hoc-6",
+      "role": "question",
+      "source": {
+        "number": 6,
+        "section": "bai-hoc",
+        "prompt_paragraphs": [
+          63
+        ],
+        "choice_paragraphs": [
+          64
+        ],
+        "solution_paragraphs": [
+          66,
+          67,
+          68
+        ]
+      }
+    },
+    {
+      "id": "bai-hoc-7",
+      "role": "question",
+      "source": {
+        "number": 7,
+        "section": "bai-hoc",
+        "prompt_paragraphs": [
+          69
+        ],
+        "choice_paragraphs": [],
+        "solution_paragraphs": [
+          71,
+          72,
+          73,
+          74,
+          75,
+          76,
+          77,
+          78,
+          79,
+          80
+        ]
+      }
+    },
+    {
+      "id": "bai-hoc-8",
+      "role": "question",
+      "source": {
+        "number": 8,
+        "section": "bai-hoc",
+        "prompt_paragraphs": [
+          81
+        ],
+        "choice_paragraphs": [
+          82
+        ],
+        "solution_paragraphs": [
+          84,
+          85,
+          86,
+          87,
+          88
+        ]
+      }
+    },
+    {
+      "id": "bai-hoc-9",
+      "role": "question",
+      "source": {
+        "number": 9,
+        "section": "bai-hoc",
+        "prompt_paragraphs": [
+          89
+        ],
+        "choice_paragraphs": [
+          90
+        ],
+        "solution_paragraphs": [
+          92,
+          93,
+          94,
+          95
+        ]
+      }
+    },
+    {
+      "id": "tu-luyen-1",
+      "role": "question",
+      "source": {
+        "number": 1,
+        "section": "tu-luyen",
+        "prompt_paragraphs": [
+          97
+        ],
+        "choice_paragraphs": [
+          98
+        ],
+        "solution_paragraphs": [
+          100,
+          101,
+          102
+        ]
+      }
+    },
+    {
+      "id": "tu-luyen-2",
+      "role": "question",
+      "source": {
+        "number": 2,
+        "section": "tu-luyen",
+        "prompt_paragraphs": [
+          103
+        ],
+        "choice_paragraphs": [],
+        "solution_paragraphs": [
+          105,
+          106
+        ]
+      }
+    },
+    {
+      "id": "tu-luyen-3",
+      "role": "question",
+      "source": {
+        "number": 3,
+        "section": "tu-luyen",
+        "prompt_paragraphs": [
+          107
+        ],
+        "choice_paragraphs": [
+          108
+        ],
+        "solution_paragraphs": [
+          110,
+          111,
+          112,
+          113,
+          114
+        ]
+      }
+    },
+    {
+      "id": "tu-luyen-4",
+      "role": "question",
+      "source": {
+        "number": 4,
+        "section": "tu-luyen",
+        "prompt_paragraphs": [
+          115
+        ],
+        "choice_paragraphs": [
+          116
+        ],
+        "solution_paragraphs": [
+          118,
+          119,
+          120,
+          121,
+          122,
+          123
+        ]
+      }
+    },
+    {
+      "id": "tu-luyen-5",
+      "role": "question",
+      "source": {
+        "number": 5,
+        "section": "tu-luyen",
+        "prompt_paragraphs": [
+          124
+        ],
+        "choice_paragraphs": [
+          125
+        ],
+        "solution_paragraphs": [
+          127,
+          128,
+          129
+        ]
+      }
+    },
+    {
+      "id": "tu-luyen-6",
+      "role": "question",
+      "source": {
+        "number": 6,
+        "section": "tu-luyen",
+        "prompt_paragraphs": [
+          130
+        ],
+        "choice_paragraphs": [
+          131
+        ],
+        "solution_paragraphs": [
+          133,
+          134,
+          135,
+          136
+        ]
+      }
+    },
+    {
+      "id": "tu-luyen-7",
+      "role": "question",
+      "source": {
+        "number": 7,
+        "section": "tu-luyen",
+        "prompt_paragraphs": [
+          137
+        ],
+        "choice_paragraphs": [
+          138
+        ],
+        "solution_paragraphs": [
+          140,
+          141,
+          142
+        ]
+      }
+    },
+    {
+      "id": "tu-luyen-8",
+      "role": "question",
+      "source": {
+        "number": 8,
+        "section": "tu-luyen",
+        "prompt_paragraphs": [
+          143
+        ],
+        "choice_paragraphs": [
+          144
+        ],
+        "solution_paragraphs": [
+          146,
+          147,
+          148,
+          149,
+          150,
+          151,
+          152
+        ]
+      }
+    },
+    {
+      "id": "tu-luyen-9",
+      "role": "question",
+      "source": {
+        "number": 9,
+        "section": "tu-luyen",
+        "prompt_paragraphs": [
+          153
+        ],
+        "choice_paragraphs": [
+          154
+        ],
+        "solution_paragraphs": [
+          156,
+          157,
+          158,
+          159,
+          160,
+          161,
+          162,
+          163,
+          164
+        ]
+      }
+    },
+    {
+      "id": "tu-luyen-10",
+      "role": "question",
+      "source": {
+        "number": 10,
+        "section": "tu-luyen",
+        "prompt_paragraphs": [
+          165
+        ],
+        "choice_paragraphs": [
+          166,
+          167
+        ],
+        "solution_paragraphs": [
+          169,
+          170,
+          171,
+          172,
+          173,
+          174,
+          175,
+          176,
+          177,
+          178,
+          179,
+          180,
+          181,
+          182,
+          183,
+          184
+        ]
+      }
+    }
+  ],
+  "qa": {
+    "compile": "passed",
+    "review_status": "pending",
+    "checks": {
+      "de": {
+        "pages": 7,
+        "question_sequence": "passed: 1–9 then 1–10",
+        "text_page_bounds": "passed",
+        "theory_retained": "passed",
+        "embedded_fonts": "passed",
+        "solution_visibility": "passed"
+      },
+      "de-cach": {
+        "pages": 13,
+        "question_sequence": "passed: 1–9 then 1–10",
+        "text_page_bounds": "passed",
+        "theory_retained": "passed",
+        "embedded_fonts": "passed",
+        "solution_visibility": "passed"
+      },
+      "dap-an": {
+        "pages": 15,
+        "question_sequence": "passed: 1–9 then 1–10",
+        "text_page_bounds": "passed",
+        "theory_retained": "passed",
+        "embedded_fonts": "passed",
+        "solution_visibility": "passed"
+      }
+    },
+    "math_review": "All 19 questions checked with independent dot/cross-product, distance and projection calculations. Source errors corrected as documented; question data retained.",
+    "figures": "Oblique plane-angle layout retained. Normal n_P adjusted perpendicular to projected hinge with a right-angle marker; angle arc follows the updated vector. Normal n_Q remains purple, distinct from the red hinge. Earlier figure fixes retained.",
+    "source_integrity": "DOCX preserved byte-for-byte; all 357 MathType equations compared against WMF previews, none empty.",
+    "full_page_visual_review": "pending: full-page preview images not generated under repository convention. PDF text, bounds, sequence and fonts checked.",
+    "layout": "Shared lesson heading, 14 pt body, 7 mm question gaps, 5 mm solution paragraph spacing, centered colored vector figures; 9 mm writing line pitch."
+  },
+  "provenance": {
+    "math_extraction": {
+      "ole_equations": 357,
+      "preview_pairs_checked": 357,
+      "empty_equations": 0,
+      "local_render_override": "MTEF selector 37, variation 30 wraps formula in oleObject71; mathematical child rendered without surrounding decorative template. OLE and WMF child renderings agree."
+    },
+    "corrections": [
+      {
+        "paragraphs": [
+          9,
+          10,
+          16
+        ],
+        "issue": "Normal vector mislabeled as direction vector; inconsistent symbols and parentheses in angle formulas. Standard normal-vector notation restored."
+      },
+      {
+        "question": "bai-hoc-3",
+        "paragraphs": [
+          31,
+          32,
+          33
+        ],
+        "issue": "Source plane x-y+z=1 has normal (1,-1,1), but source solution uses (1,-1,2). Kept original plane; corrected sin(angle)=sqrt(2)/3 and angle≈28.13 degrees."
+      },
+      {
+        "paragraphs": [
+          23,
+          103
+        ],
+        "issue": "Malformed phrase Cho đường thẳng mặt phẳng normalized to Cho hai mặt phẳng."
+      },
+      {
+        "question": "bai-hoc-5",
+        "paragraphs": [
+          60,
+          61
+        ],
+        "issue": "Missing norm/equality/cross-product brackets corrected in distance calculation; final 2sqrt(2) unchanged."
+      },
+      {
+        "question": "bai-hoc-9",
+        "paragraphs": [
+          89
+        ],
+        "issue": "Source calls (P) a line despite defining a plane; corrected to mặt phẳng."
+      },
+      {
+        "question": "tu-luyen-4",
+        "paragraphs": [
+          122
+        ],
+        "issue": "Source sin(angle)=abs(cos(same angle)) is false; use absolute cosine between normal and Ox direction, retaining 60 degrees."
+      },
+      {
+        "question": "tu-luyen-10",
+        "paragraphs": [
+          180
+        ],
+        "issue": "Direction vector of Delta mislabeled n; corrected to u."
+      }
+    ],
+    "correction_policy": "User explicitly approved verified corrections and manifest recording in the asynchronous reply for Buổi 15.",
+    "figures": "Six source illustration roles inspected from DOCX images 1,7,59,115,269,297. Redrawn as nine vector SVG assets including supplemental plane-angle/skew-line/distance diagrams. Source solution diagrams remain in answer variant; theory diagrams appear in all variants."
+  },
+  "drive": {
+    "folder": "Chuyên đề",
+    "filenames": {
+      "de": "KHOA-TH-BUOI-15-GOC-KHOANG-CACH - ĐỀ.pdf",
+      "de-cach": "KHOA-TH-BUOI-15-GOC-KHOANG-CACH - ĐỀ CÁCH.pdf",
+      "dap-an": "KHOA-TH-BUOI-15-GOC-KHOANG-CACH - ĐÁP ÁN.pdf"
+    }
+  },
+  "outputs": {
+    "de": {
+      "pdf": "assets/targets/2026-10/Chuyên đề/th-buoi-15-goc-khoang-cach/de.pdf",
+      "pages": 7,
+      "bytes": 433193,
+      "sha256": "90fae2ceb59f431cac07d9390cbac29b1e0ac24039bff02ae2bbe400a29a84bc"
+    },
+    "de-cach": {
+      "pdf": "assets/targets/2026-10/Chuyên đề/th-buoi-15-goc-khoang-cach/de-cach.pdf",
+      "pages": 13,
+      "bytes": 456647,
+      "sha256": "54ecbd24b1e659dda60daf088c88399187a96d0c6693a7fc5b9493a8b28b8f77"
+    },
+    "dap-an": {
+      "pdf": "assets/targets/2026-10/Chuyên đề/th-buoi-15-goc-khoang-cach/dap-an.pdf",
+      "pages": 15,
+      "bytes": 586892,
+      "sha256": "77f1d91eb513766d0aeca152c32f4d17a5a9a4937b2f162ab4e8223ad9002c59"
+    }
+  }
+}
