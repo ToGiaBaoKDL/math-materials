@@ -3,7 +3,7 @@
 #show: matrix-document.with([TRƯỜNG THPT TRIỆU PHONG], organization: [TỔ TOÁN])
 #show math.equation.where(block: false): it => box(math.display(it))
 #show math.equation: set text(top-edge: "bounds", bottom-edge: "bounds")
-#let style = (merge-chapter: true, spacious: true, colored: true)
+#let style = (merge-chapter: true, spacious: true, colored: true, group-colors: (rgb("#DDDDFF"), rgb("#F8CBAD"), rgb("#E2EFD9"), rgb("#F0F0F0")))
 #section([MA TRẬN ĐỀ KIỂM TRA], badge: [I])
 #summary(rows, totals, essay: false, style: style)
 #v(2mm)

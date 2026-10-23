@@ -1,4 +1,4 @@
-#import "theme.typ": fonts, lesson-style, palette, plot-style
+#import "theme.typ": fonts, lesson-style, palette
 #import "lesson.typ": lesson-heading, lesson-section
 #import "branding.typ": running-foot, running-head
 #import "contacts.typ": contact-links
@@ -43,19 +43,17 @@
 #let section(title, badge: none) = lesson-section(title, badge: badge, above: 2mm)
 #let chapter = [Ứng dụng đạo hàm để khảo sát và vẽ đồ thị của hàm số\ (24 tiết)]
 #let table-style = (merge-chapter: false, spacious: false, colored: false)
-#let group-colors = (rgb("#EDF4F5"), rgb("#F5EFF1"), rgb("#F0F4EB"), rgb("#F7F3E9"))
-#let group-header-colors = group-colors
-#let group-header-fill(index) = group-header-colors.at(if index < 2 { 0 } else if index < 5 { 1 } else if index < 7 {
-  2
-} else { 3 })
-#let group-fill(index) = group-colors.at(if index < 2 { 0 } else if index < 5 { 1 } else if index < 7 { 2 } else { 3 })
-#let data-cell(value, index, style) = table.cell(fill: if style.colored and index < 9 { group-fill(index) } else {
+#let group-colors = (rgb("#E2EFD9"), rgb("#DEEBF7"), rgb("#FFF2CC"), rgb("#F0F0F0"))
+#let group-fill(index, style) = style.at("group-colors", default: group-colors).at(
+  if index < 2 { 0 } else if index < 5 { 1 } else if index < 7 { 2 } else { 3 },
+)
+#let data-cell(value, index, style) = table.cell(fill: if style.colored and index < 9 { group-fill(index, style) } else {
   white
 })[#value]
 #let headings(spec: false, essay: false, style: table-style) = {
   let levels = if essay { 9 } else { 7 }
-  let h(body, ..args) = table.cell(fill: plot-style.table-fill, stroke: 0.6pt + white, ..args, text(
-    fill: white,
+  let h(body, ..args) = table.cell(fill: white, stroke: 0.6pt + rgb("#B39A9F"), ..args, text(
+    fill: palette.ink,
     weight: "bold",
     body,
   ))
@@ -70,7 +68,7 @@
       .enumerate()
       .map(((i, item)) => {
         if style.colored {
-          table.cell(colspan: item.at(1), fill: group-header-colors.at(i), text(
+          table.cell(colspan: item.at(1), fill: style.at("group-colors", default: group-colors).at(i), text(
             weight: "bold",
             fill: palette.ink,
             item.at(0),
@@ -80,7 +78,7 @@
     ..([Biết], [Hiểu], [Biết], [Hiểu], [VD], [Hiểu], [VD], ..if essay { ([Hiểu], [VD]) } else { () })
       .enumerate()
       .map(((i, x)) => {
-        if style.colored { table.cell(fill: group-header-fill(i), text(weight: "bold", fill: palette.ink, x)) } else {
+        if style.colored { table.cell(fill: group-fill(i, style), text(weight: "bold", fill: palette.ink, x)) } else {
           h(x)
         }
       }),
