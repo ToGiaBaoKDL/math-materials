@@ -96,14 +96,23 @@ def livestream_blocks(config: dict[str, Any], links: dict[str, str]) -> list[str
 
 def exam_blocks(config: dict[str, Any], links: dict[str, str]) -> list[str]:
     validate_url(config["group_url"], "group_url")
+    title = "FILE ĐỀ + FILE GIẢI CHI TIẾT THAM KHẢO" if {"de-dap-an", "dap-an"} & links.keys() else "FILE ĐỀ THAM KHẢO"
+    labels = {
+        "de": "File đề",
+        "de-cach": "File đề cách",
+        "dap-an": "File đáp án giải tham khảo",
+        "de-dap-an": "File đề + File đáp án giải tham khảo",
+    }
     return [
-        "🎁 <b>FILE ĐỀ + FILE GIẢI CHI TIẾT THAM KHẢO: "
+        "🎁 <b>"
+        + title
+        + ": "
         + escape(config["title"])
         + "</b>\n➥ MÔN: "
         + escape(config["subject"])
         + " | NĂM HỌC "
         + escape(config["school_year"]),
-        "📍 File đề + File đáp án giải tham khảo: " + escape(links["de-dap-an"]),
+        *(f"📍 {label}: {escape(links[variant])}" for variant, label in labels.items() if variant in links),
         "🔥 Tham gia miễn phí Group Mukbang Toán Thực Tế &amp; Xác Suất cùng đội VIPDXT: "
         + escape(config["group_url"]),
         escape(config["closing"]),
@@ -116,7 +125,7 @@ REQUIRED_FIELDS = {
     "exam": {"title", "subject", "school_year", "group_url", "closing"},
 }
 OPTIONAL_FIELDS = {"tinh-hoa": {"homework", "closing"}, "livestream": set(), "exam": set()}
-LINK_VARIANTS = {"tinh-hoa": set(LABELS), "livestream": {"de", "de-cach"}, "exam": {"de-dap-an"}}
+LINK_VARIANTS = {"tinh-hoa": set(LABELS), "livestream": {"de", "de-cach"}, "exam": set(LABELS)}
 RENDERERS = {"tinh-hoa": lesson_blocks, "livestream": livestream_blocks, "exam": exam_blocks}
 
 

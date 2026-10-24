@@ -5,6 +5,7 @@ import unittest
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
+from announcements import render
 from document_model import publication_variants
 
 
@@ -35,3 +36,23 @@ class ExamPublicationTests(unittest.TestCase):
         m = self.manifest(True, True)
         m["publication"]["combine_answers"] = False
         self.assertEqual(publication_variants(m), ("de", "de-cach", "dap-an"))
+
+
+class ExamAnnouncementTests(unittest.TestCase):
+    config = dict(kind="exam", title="Bắc Ninh", subject="Toán 12", school_year="26–27",
+                  group_url="https://example.com/group", closing="Chúc học tốt")
+
+    def test_publication_combinations(self):
+        for variants in [("de",), ("de", "de-cach"), ("de-dap-an",),
+                         ("de-dap-an", "de-cach"), ("de", "de-cach", "dap-an")]:
+            with self.subTest(variants=variants):
+                links = {v: "https://example.com/" + v + ".pdf" for v in variants}
+                text = render(self.config, links)
+                for url in links.values():
+                    self.assertEqual(text.count(url), 1)
+                self.assertEqual("GIẢI CHI TIẾT" in text, bool({"dap-an", "de-dap-an"} & set(variants)))
+
+    def test_unknown_and_empty_links_rejected(self):
+        for links in [{}, {"goc": "https://example.com/source.pdf"}]:
+            with self.assertRaises(ValueError):
+                render(self.config, links)

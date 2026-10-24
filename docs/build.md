@@ -26,7 +26,7 @@ Makefile gọi `scripts/build.py` với `--font-path assets/fonts`, tìm tài li
 
 ## Render hình
 
-Các hình cần hiển thị nét ổn định giữa trình đọc PDF có thể khai báo `figure_renders` trong manifest: `entry`, `output` (tương đối với thư mục tài liệu), `inputs`, `ppi`. Build dựng ảnh 600 dpi từ mã Typst trước khi biên dịch PDF; mã hình vector vẫn là nguồn chỉnh sửa. Cache nằm tại `.figure-cache.json` trong thư mục targets của tài liệu: so hash mã/tài nguyên tài liệu, template, branding, nguồn/font, input/PPI và phiên bản Typst, đồng thời kiểm tra hash ảnh đầu ra. Không kiểm kê được font hệ thống thì rebuild. Đổi variant PDF mà các input hình không đổi sẽ dùng lại ảnh. Cache không đánh dấu QA là đã duyệt.
+Các hình cần hiển thị nét ổn định giữa trình đọc PDF có thể khai báo `figure_renders` trong manifest: `entry`, `output` (tương đối với thư mục tài liệu), `inputs`, `ppi`. Build dựng ảnh 600 dpi từ mã Typst trước khi biên dịch PDF; mã hình vector vẫn là nguồn chỉnh sửa. Mỗi lần build đều dựng lại các hình đã khai báo, kể cả khi chỉ build một variant PDF.
 
 `assets/targets/` được Git bỏ qua. Build ghi đè đầu ra hiện tại, không cần lệnh clean. Không có lệnh preview hoặc ảnh preview trang; `figure_renders` tạo tài nguyên hình để đưa vào PDF, không phải ảnh preview trang.
 
@@ -49,7 +49,7 @@ Giữ một tầng module với tên theo trách nhiệm; chưa cần thêm pack
 | CLI | `build.py`, `upload.py`, `sheets.py`, `notify.py` | Build, upload, cập nhật Sheet, gửi thông báo độc lập |
 | Xác thực | `google_auth.py` | Một CLI `make google-auth`, một token dùng chung Drive và Sheets |
 | Mô hình | `document_model.py`, `publishing.py` | Schema/profile và kế hoạch file, tên xuất bản, thứ tự trên Sheet |
-| Hạ tầng | `config.py`, `drive.py`, `pdf.py`, `figure_cache.py` | Cấu hình, Drive API, metadata PDF, cache render hình |
+| Hạ tầng | `config.py`, `drive.py`, `pdf.py` | Cấu hình, Drive API, metadata PDF |
 | Nội dung | `announcements.py`, `mathtype.py` | Định dạng thông báo và đọc công thức nguồn |
 
 Kế hoạch upload chỉ chọn PDF theo profile và file nguồn `source.*`; không đưa `manifest.json`, cache hay mã Typst lên Drive.

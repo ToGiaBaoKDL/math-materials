@@ -8,7 +8,6 @@ from pathlib import Path
 
 from config import ROOT
 from document_model import Output, Variant, documents, load_manifest, publication_variants
-from figure_cache import cached, digest, input_key
 from pdf import page_count
 
 
@@ -29,18 +28,9 @@ def build(entry: Path, variant: str | None = None) -> None:
     created = datetime.fromisoformat(manifest["received_date"]).replace(tzinfo=UTC)
     timestamp = str(int(created.timestamp()))
     figures = manifest.get("figure_renders", [])
-    cache_path = target / ".figure-cache.json"
-    try:
-        figure_cache = json.loads(cache_path.read_text())
-    except (OSError, ValueError):
-        figure_cache = {}
-    figure_key = input_key(entry.parent, figures) if figures else None
     for figure in figures:
         destination = entry.parent / figure["output"]
         destination.parent.mkdir(parents=True, exist_ok=True)
-        if cached(figure_cache, destination, figure_key):
-            print(f"Cached figure {figure['output']}", flush=True)
-            continue
         command = [
             "typst",
             "compile",
@@ -54,9 +44,6 @@ def build(entry: Path, variant: str | None = None) -> None:
         for key, value in figure.get("inputs", {}).items():
             command.extend(["--input", f"{key}={value}"])
         run(*command, str(entry.parent / figure["entry"]), str(destination))
-        figure_cache[str(destination)] = {"input": figure_key, "sha256": digest(destination)}
-    if figures:
-        cache_path.write_text(json.dumps(figure_cache, indent=2) + "\n")
     outputs = manifest.get("outputs", {}).copy()
     changed = False
     if variant:
