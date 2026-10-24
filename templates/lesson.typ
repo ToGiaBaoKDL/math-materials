@@ -289,6 +289,7 @@
   writing-keep-prompt: true,
   writing-single-page: false,
   compact-statements: false,
+  statement-gap: lesson-style.statement-gap,
   writing-line-gap: writing-style.ruled-gap,
   source-id: none,
   keep-together: true,
@@ -339,7 +340,7 @@
         )
       } else {
         grid(
-          columns: (1fr,), row-gutter: lesson-style.statement-gap,
+          columns: (1fr,), row-gutter: statement-gap,
           ..statements.map(statement => block(width: 100%, above: 0pt, below: 0pt, statement))
         )
       })

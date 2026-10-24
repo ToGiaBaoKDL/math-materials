@@ -1,0 +1,147 @@
+{
+  "schema_version": 1,
+  "id": "live-5-bai-toan-dung-sai-oxyz-thuan-tuy",
+  "kind": "livestream",
+  "received_date": "2026-10-24",
+  "status": "implemented",
+  "metadata": {
+    "title": "5 BÀI TOÁN ĐÚNG – SAI OXYZ THUẦN TÚY",
+    "course": "ÔN THI GIỮA HK1 TOÁN 12"
+  },
+  "sources": [
+    {
+      "path": "assets/sources/2026-10/Livestream/live-5-bai-toan-dung-sai-oxyz-thuan-tuy/source.docx",
+      "original_name": "5 CÂU LIVE CHỌN LỌC OXYZ THUẦN TÚY.docx",
+      "bytes": 125007,
+      "sha256": "e83cf8bfa868aa7ec5b4fdf6948b2c641a4cf7d13ba13677a65d5413b729c0b1"
+    }
+  ],
+  "scope": {
+    "questions": 5,
+    "has_questions": true,
+    "has_solutions": false
+  },
+  "content_mapping": [
+    {
+      "id": "question-1",
+      "role": "question",
+      "source": {
+        "number": 1,
+        "paragraphs": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      }
+    },
+    {
+      "id": "question-2",
+      "role": "question",
+      "source": {
+        "number": 2,
+        "paragraphs": [
+          6,
+          7,
+          8,
+          9,
+          10
+        ]
+      }
+    },
+    {
+      "id": "question-3",
+      "role": "question",
+      "source": {
+        "number": 3,
+        "paragraphs": [
+          11,
+          12,
+          13,
+          14,
+          15,
+          16
+        ]
+      }
+    },
+    {
+      "id": "question-4",
+      "role": "question",
+      "source": {
+        "number": 4,
+        "paragraphs": [
+          17,
+          18,
+          19,
+          20,
+          21
+        ]
+      }
+    },
+    {
+      "id": "question-5",
+      "role": "question",
+      "source": {
+        "number": 5,
+        "paragraphs": [
+          22,
+          23,
+          24,
+          25,
+          26
+        ]
+      }
+    }
+  ],
+  "provenance": {
+    "math_extraction": "63 MathType formulas; 63 OLE/preview pairs agree; no empty equations. Deliberately false true/false statements retained.",
+    "normalization": "Q4 preview WMF EXTTEXTOUT explicitly contains (4;0;2) and A, confirming U+EF07 spacing glyphs may be omitted. Punctuation/year spacing normalized; false assertions preserved.",
+    "figures": "Q4 retains two views. Q5 now one coherent affine view: ABC to right of Oyz, G=(A+B+C)/3, I=(2A+B+3C)/6, M in Oyz. Camera x direction=(30,0), and I-M=(65,0), consistent with x_I=13/6. MI dashed only inside triangular face. Standalone merged figure inspected; uniform 105% scale retained."
+  },
+  "variants": {
+    "de": {
+      "filename": "de.pdf",
+      "inputs": {
+        "variant": "de"
+      }
+    },
+    "de-cach": {
+      "filename": "de-cach.pdf",
+      "inputs": {
+        "variant": "de-cach"
+      }
+    }
+  },
+  "drive": {
+    "folder": "Livestream",
+    "filenames": {
+      "de": "LIVESTREAM - 5 BÀI TOÁN ĐÚNG SAI OXYZ THUẦN TÚY - ĐỀ.pdf",
+      "de-cach": "LIVESTREAM - 5 BÀI TOÁN ĐÚNG SAI OXYZ THUẦN TÚY - ĐỀ CÁCH.pdf"
+    }
+  },
+  "qa": {
+    "review_status": "pending",
+    "compile": "passed: de 4 pages, de-cach 5 pages",
+    "content": "All 5 questions and 20 statements in order in both PDFs, no solutions added; 63 OLE/preview pairs checked.",
+    "layout": "14.5 pt body, 1.1 em leading, 6 mm statement gap, 9 mm writing gap. Q3/Q4 scale 110.25% (5% larger than previous 105%); Q2/Q5 remain 105%. Both PDF variants passed question/statement counts and text bounds/font checks.",
+    "fonts": "Times New Roman and New Computer Modern Math embedded.",
+    "figures": "Q4 retains two views. Q5 now one coherent affine view: ABC to right of Oyz, G=(A+B+C)/3, I=(2A+B+3C)/6, M in Oyz. Camera x direction=(30,0), and I-M=(65,0), consistent with x_I=13/6. MI dashed only inside triangular face. Standalone merged figure inspected; uniform 105% scale retained.",
+    "visual_review": "Standalone figures reviewed; full-page PDF visual review pending. No page-preview images generated.",
+    "source_integrity": "Archived DOCX checksum matches original."
+  },
+  "outputs": {
+    "de": {
+      "pdf": "assets/targets/2026-10/Livestream/live-5-bai-toan-dung-sai-oxyz-thuan-tuy/de.pdf",
+      "pages": 4,
+      "bytes": 332274,
+      "sha256": "1d4661c2d48fcd6c33a4a6404a4c228f715500e670e3a88d00aa08af274d1d92"
+    },
+    "de-cach": {
+      "pdf": "assets/targets/2026-10/Livestream/live-5-bai-toan-dung-sai-oxyz-thuan-tuy/de-cach.pdf",
+      "pages": 5,
+      "bytes": 345389,
+      "sha256": "4c2a07902648ca7ee61a1fca59734ac754aa716020c75d26f3e0b36685545760"
+    }
+  }
+}
