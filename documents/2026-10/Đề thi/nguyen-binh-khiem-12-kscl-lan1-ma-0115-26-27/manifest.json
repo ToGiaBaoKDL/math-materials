@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "id": "nguyen-binh-khiem-12-kscl-lan-1-ma-0115-26-27",
+  "id": "nguyen-binh-khiem-12-kscl-lan1-ma-0115-26-27",
   "kind": "exam",
   "received_date": "2026-10-13",
   "status": "ready",
@@ -13,7 +13,7 @@
   },
   "sources": [
     {
-      "path": "assets/sources/2026-10/Đề thi/nguyen-binh-khiem-12-kscl-lan-1-ma-0115-26-27/source.pdf",
+      "path": "assets/sources/2026-10/Đề thi/nguyen-binh-khiem-12-kscl-lan1-ma-0115-26-27/source.pdf",
       "original_name": "de-khao-sat-toan-12-lan-1-nam-2026-2027-truong-thpt-nguyen-binh-khiem-gia-lai.pdf",
       "bytes": 488375,
       "sha256": "c1d1ef22b10c98fd8cc3825005ae5552554d662333aff5ebea8a885158f271d7",
@@ -93,7 +93,7 @@
     ],
     "figure_assets": [
       {
-        "path": "documents/2026-10/Đề thi/nguyen-binh-khiem-12-kscl-lan-1-ma-0115-26-27/figures/rice-mill.png",
+        "path": "documents/2026-10/Đề thi/nguyen-binh-khiem-12-kscl-lan1-ma-0115-26-27/figures/rice-mill.png",
         "original_name": "Industrial Red and Gray Grain Mill.png",
         "sha256": "ce26a8cf6ed99abe8e90084d463fb854e3ebc9af2c1ddc45e33b9291d880bffb",
         "role": "User-provided red and gray grain mill, original transparent PNG preserved; proportional 54mm fit centered in 58mm square alongside net."
@@ -155,25 +155,25 @@
   },
   "outputs": {
     "de": {
-      "pdf": "assets/targets/2026-10/Đề thi/nguyen-binh-khiem-12-kscl-lan-1-ma-0115-26-27/de.pdf",
+      "pdf": "assets/targets/2026-10/Đề thi/nguyen-binh-khiem-12-kscl-lan1-ma-0115-26-27/de.pdf",
       "pages": 5,
       "bytes": 1991982,
       "sha256": "3b1b1fe5448369560cbe26e86a7e8afcc7ee3d8a0a93e962e108167a704c0a22"
     },
     "de-cach": {
-      "pdf": "assets/targets/2026-10/Đề thi/nguyen-binh-khiem-12-kscl-lan-1-ma-0115-26-27/de-cach.pdf",
+      "pdf": "assets/targets/2026-10/Đề thi/nguyen-binh-khiem-12-kscl-lan1-ma-0115-26-27/de-cach.pdf",
       "pages": 12,
       "bytes": 2014763,
       "sha256": "fc7802fdc1bd0807b7e25777a9069184f3f1f6d1e6a03572bc378f92495f2442"
     },
     "dap-an": {
-      "pdf": "assets/targets/2026-10/Đề thi/nguyen-binh-khiem-12-kscl-lan-1-ma-0115-26-27/dap-an.pdf",
+      "pdf": "assets/targets/2026-10/Đề thi/nguyen-binh-khiem-12-kscl-lan1-ma-0115-26-27/dap-an.pdf",
       "pages": 10,
       "bytes": 2088512,
       "sha256": "6e5636cad6f3a532208a64c772ac711893ee3c56aac25694e5fc6475628acd01"
     },
     "de-dap-an": {
-      "pdf": "assets/targets/2026-10/Đề thi/nguyen-binh-khiem-12-kscl-lan-1-ma-0115-26-27/de-dap-an.pdf",
+      "pdf": "assets/targets/2026-10/Đề thi/nguyen-binh-khiem-12-kscl-lan1-ma-0115-26-27/de-dap-an.pdf",
       "pages": 14,
       "bytes": 2204499,
       "sha256": "28ac254b95f6e576edfb15c387e13c1e2406d43a7aac1da2838d4adeec977e8e"

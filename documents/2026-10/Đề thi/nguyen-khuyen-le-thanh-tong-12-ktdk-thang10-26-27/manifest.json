@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "id": "nguyen-khuyen-le-thanh-tong-12-ktdk-thang-10-26-27",
+  "id": "nguyen-khuyen-le-thanh-tong-12-ktdk-thang10-26-27",
   "kind": "exam",
   "received_date": "2026-10-17",
   "status": "implemented",
@@ -11,7 +11,7 @@
   },
   "sources": [
     {
-      "path": "assets/sources/2026-10/Đề thi/nguyen-khuyen-le-thanh-tong-12-ktdk-thang-10-26-27/source.pdf",
+      "path": "assets/sources/2026-10/Đề thi/nguyen-khuyen-le-thanh-tong-12-ktdk-thang10-26-27/source.pdf",
       "original_name": "de-kiem-tra-toan-12-thang-10-nam-2026-truong-nguyen-khuyen-le-thanh-tong-tp-hcm-2.pdf",
       "bytes": 580360,
       "sha256": "675ac4ac76b2de3ddcc4127738543fabdd81650511e9ffd8da6f8cc8ae450f40",
@@ -80,19 +80,19 @@
   },
   "outputs": {
     "de": {
-      "pdf": "assets/targets/2026-10/Đề thi/nguyen-khuyen-le-thanh-tong-12-ktdk-thang-10-26-27/de.pdf",
+      "pdf": "assets/targets/2026-10/Đề thi/nguyen-khuyen-le-thanh-tong-12-ktdk-thang10-26-27/de.pdf",
       "pages": 6,
       "bytes": 252178,
       "sha256": "ae4329d2230bc3d01fca152945e598de280be278f290623a0f5bf9b3714ef8e3"
     },
     "dap-an": {
-      "pdf": "assets/targets/2026-10/Đề thi/nguyen-khuyen-le-thanh-tong-12-ktdk-thang-10-26-27/dap-an.pdf",
+      "pdf": "assets/targets/2026-10/Đề thi/nguyen-khuyen-le-thanh-tong-12-ktdk-thang10-26-27/dap-an.pdf",
       "pages": 6,
       "bytes": 230775,
       "sha256": "0efc61475cd331293fbca074e498e243ade3653afcc4b534ca46151bf37dd7f9"
     },
     "de-dap-an": {
-      "pdf": "assets/targets/2026-10/Đề thi/nguyen-khuyen-le-thanh-tong-12-ktdk-thang-10-26-27/de-dap-an.pdf",
+      "pdf": "assets/targets/2026-10/Đề thi/nguyen-khuyen-le-thanh-tong-12-ktdk-thang10-26-27/de-dap-an.pdf",
       "pages": 12,
       "bytes": 405457,
       "sha256": "b4bc15f478b4733140c3023db8e5e6391dda003df8da0393299c6dbb3c17c8d4"

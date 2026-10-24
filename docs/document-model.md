@@ -39,10 +39,11 @@ Thư mục phân loại local gồm `Đề thi`, `Chuyên đề`, `Livestream`, 
 
 Đề thi dùng ID `<truong>-<lop>-<loai>[-<dot>][-ma-<ma-de>]-<nam-hoc>`.
 Loại đề: `kscl` (khảo sát chất lượng), `ktdk` (kiểm tra định kỳ), `gk` (giữa kỳ), `ck` (cuối kỳ).
-Học kỳ viết liền với loại: `gk1`, `gk2`, `ck1`, `ck2` (giữa/cuối kỳ 1/2); giữ lần khảo sát `kscl-lan-1`, hoặc tháng kiểm tra `ktdk-thang-10` để phân biệt các đợt.
+Học kỳ viết liền với loại: `gk1`, `gk2`, `ck1`, `ck2` (giữa/cuối kỳ 1/2); giữ lần khảo sát `kscl-lan1`, hoặc tháng kiểm tra `ktdk-thang10` để phân biệt các đợt.
+Số lần và tháng viết liền trong một block: `lan1`, `lan2`, `thang10`; không dùng `lan-1`, `thang-10`.
 Năm học viết gọn ở cuối: `26-27` tương ứng `2026–2027`; metadata và nội dung đề giữ năm đầy đủ.
 Giữ số 0 đầu mã đề; nguồn không có mã thì bỏ cả cụm `ma-...`, không tự đặt mã.
-Ví dụ: `nguyen-binh-khiem-12-kscl-lan-1-ma-0115-26-27`.
+Ví dụ: `nguyen-binh-khiem-12-kscl-lan1-ma-0115-26-27`.
 Áp dụng cùng ID cho `documents`, `assets/sources`, `assets/targets` và các tham chiếu trong manifest.
 
 ID và tên tài nguyên dùng chữ thường không dấu, nối bằng `-`, không có dấu cách hoặc `#`; giữ tên nguồn gốc trong manifest. Font đổi tên file không đổi family. Nguồn gốc chỉ đọc; bản crop/xoay phục vụ kiểm tra lưu riêng. Ảnh bổ sung vào đúng bộ hiện có dù nhận ngày khác; trang nguồn dùng số trang thực, không suy từ thứ tự upload.
