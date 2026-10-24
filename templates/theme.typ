@@ -172,7 +172,7 @@
   running-weight: 400,
   running-stroke: 0.12pt,
   leading: 1.1em,
-  question-gap: 5mm,
+  question-gap: 6mm,
   section-gap: 5mm,
   statement-gap: 4mm,
   end-rule: 22mm,

@@ -141,7 +141,7 @@
   width: 100%,
   sticky: true,
   above: exam-style.section-gap,
-  below: 2mm,
+  below: 6mm,
 )[
   #set par(justify: false)
   #box(fill: palette.primary, inset: (x: 2mm, y: 1.5mm))[
@@ -207,7 +207,7 @@
     width: 100%,
     breakable: variant != "dap-an" and not keep-together and (ending == none or variant != "de-cach"),
     sticky: false,
-    above: if question-gap != none { question-gap } else if variant == "de" { 4mm } else { exam-style.question-gap },
+    above: if question-gap != none { question-gap } else { exam-style.question-gap },
     below: 0pt,
     stroke: if variant == "dap-an" { 0.7pt + palette.primary } else { none },
     fill: if variant == "dap-an" { palette.box-fill } else { none },

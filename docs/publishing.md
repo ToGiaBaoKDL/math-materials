@@ -30,7 +30,7 @@ Sheet mặc định là [sổ tài liệu](https://docs.google.com/spreadsheets/
 
 ## Tên file và nguồn
 
-Tên PDF trên Drive được khai báo trong `drive.filenames` của manifest; tên local theo [variant](document-model.md). Các hậu tố hiển thị là ` - ĐỀ.pdf`, ` - ĐỀ CÁCH.pdf`, ` - ĐÁP ÁN.pdf` hoặc ` - ĐỀ + ĐÁP ÁN.pdf`.
+Tên PDF trên Drive được khai báo trong `drive.filenames` của manifest; tên local theo [variant](document-model.md). Với đề thi và ma trận, phần tên gốc là document ID viết HOA, giữ các block `GK1`, `CK1`, `KSCL-LAN1`, `KTDK-THANG10` và năm học `26-27`; không thêm `TOAN`. Ví dụ `PHAN-BOI-CHAU-12-GK1-MA-1108-26-27 - ĐỀ.pdf`, `MA-TRAN-HUONG-HOA-12-GK1-26-27 - MA TRẬN.pdf`. Tiêu đề Sheet dùng cùng tên, bỏ `.pdf`; file nguồn dùng cùng tên gốc và hậu tố ` - GỐC` theo cơ chế bên dưới. Các hậu tố hiển thị là ` - ĐỀ.pdf`, ` - ĐỀ CÁCH.pdf`, ` - ĐÁP ÁN.pdf` hoặc ` - ĐỀ + ĐÁP ÁN.pdf`.
 
 Upload luôn kèm `source.*` từ thư mục nguồn tương ứng, kể cả khi chọn một variant; không thêm manifest nguồn. Tên nguồn suy ra từ tên đề, thay hậu tố ` - ĐỀ.pdf` bằng ` - GỐC` và giữ đuôi gốc. Ví dụ:
 
@@ -124,3 +124,5 @@ Profile `matrix` upload vào `<tháng>/Ma trận/<id>/` và cập nhật tab `Ma
 ## Đổi tên thư mục tài liệu
 
 Upload tìm thư mục theo tên, không theo ID đã lưu. Khi đổi ID local, đổi tên chính thư mục hiện có trên Drive sang đúng tên mới trước lần upload tiếp theo; giữ nguyên vị trí để giữ ID và URL. Nếu để tên cũ, upload sẽ tạo thư mục mới. Giữ `drive.filenames` khi chỉ đổi thư mục để tiếp tục cập nhật đúng file cũ; cập nhật link thư mục code trong Sheet khi đường dẫn GitHub thay đổi.
+
+Với đề thi có `publication.include_writing: true`, upload kèm `de-cach`; Sheet ghi link bản này ở cột G cùng dòng đề hoặc đề + đáp án, không tạo dòng riêng. Cột F giữ bản thường/bản gộp và cột H giữ số trang bản đó.

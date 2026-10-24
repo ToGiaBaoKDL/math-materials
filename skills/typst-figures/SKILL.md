@@ -60,6 +60,8 @@ Mỗi câu toán thực tế có một hình minh họa phù hợp dữ kiện. 
 
 ## Nhãn và nhóm hình
 
+- Nhãn mặt phẳng, ví dụ `(Oxy)`, đặt trong góc trống của miền mặt phẳng với một cung nhỏ ở góc bao nhãn; không đặt lơ lửng giữa mặt phẳng. Cung chỉ nhận diện mặt phẳng, không ghi số đo góc.
+
 - Giữ mũi tên trên đoạn/đường theo nguồn; đặt nhãn trục, gốc tọa độ và vạch số gần đúng vị trí, không đè đường. Nhãn góc nằm gần đỉnh trong miền góc khi đủ chỗ; các điểm đánh dấu nhất quán.
 - Đường xuyên mặt phẳng chia đoạn thấy/khuất tại giao điểm: đoạn bị che dùng nét đứt, đoạn lộ dùng nét liền; không xóa toàn bộ đường nối. Dựng đúng quan hệ đối xứng và vị trí khối nhỏ, không cho các khối chồng nhau khi nguồn tách rời.
 - Nhóm khai triển → khối gấp căn tâm ngang theo phần hình thực, kích thước vừa đủ lớn và có khoảng cách; phép chiếu phải cho thấy cấu trúc rõ. Caption hai hình cùng baseline và cách hình đủ thoáng; ảnh minh họa cân kích thước với đồ thị kề bên.

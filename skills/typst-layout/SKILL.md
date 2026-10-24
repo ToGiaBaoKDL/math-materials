@@ -53,6 +53,8 @@ Dùng template làm nguồn triển khai, skill làm quy tắc tái sử dụng.
 - Họa tiết góc dưới phải dùng `assets/branding/icons/exam-corner.svg`: tam giác đỏ và hai hình bình hành, cắt gọn theo khung bo góc. Không kéo dài họa tiết hoặc để lấn nội dung.
 - Tiêu đề phần: chỉ nhãn “PHẦN I/II/III” có nền đỏ nhận diện đề thi, chữ trắng đậm. Tên phần phía sau xanh lá `#009B19`, bold + stroke 0,12 pt; hướng dẫn màu đen. Áp dụng mọi phần và variant. **Xanh lá này cho heading/phần đề thi, không thay convention chuyên đề.**
 - Header/footer chữ Noto Sans Regular 11 pt, stroke 0,12 pt cùng màu; nhận diện đỏ đề thi `#C8102E`, icon liên hệ, mã đề nếu có và trang thực. Không dùng dải DXT/logo chuyên đề.
+- Sau khối tiêu đề phần và hướng dẫn, chừa 6 mm trước câu đầu. Khối bọc câu cuối để căn chữ HẾT phải giữ khoảng cách trên 6 mm, không để khoảng cách của câu bên trong bị mất ở đầu khối.
+- Khoảng cách giữa các câu mặc định 6 mm qua `exam-style.question-gap`, dùng chung cho các variant đề thi; chỉ override khi tài liệu có yêu cầu riêng.
 - Câu hỏi được nối qua trang; không bắt buộc nguyên câu trong một trang. `de-dap-an` nối đáp án từ trang mới, dùng chung header/footer và số trang liên tục; không chèn một bộ header/footer đáp án lồng vào. Bản đáp án riêng vẫn có header/footer. Chỉ tạo variant theo phạm vi nguồn/yêu cầu.
 
 - Bảng đáp án in đậm kết quả. Trong lời giải, in đậm kết luận chọn phương án, Đúng/Sai và đáp số cuối cùng (kể cả công thức); giữ diễn giải regular.

@@ -48,13 +48,24 @@ def publication_variants(manifest: Manifest) -> tuple[str, ...]:
     if type(combine) is not bool:
         raise ValueError("publication.combine_answers must be boolean")
     available = manifest["variants"]
+    include_writing = manifest.get("publication", {}).get("include_writing", False)
+    if type(include_writing) is not bool:
+        raise ValueError("publication.include_writing must be boolean")
+    if include_writing and "de-cach" not in available:
+        raise ValueError("Writing publication requires a de-cach build variant")
     has_questions = manifest["scope"]["has_questions"]
     has_solutions = manifest["scope"]["has_solutions"]
     if combine and has_questions and has_solutions:
         if "de-dap-an" not in available:
             raise ValueError("Combined publication requires a de-dap-an build variant")
-        return ("de-dap-an",) + (("de-cach",) if manifest["kind"] != "exam" and "de-cach" in available else ())
-    expected = profile.variants if manifest["kind"] != "exam" else ("de", "dap-an")
+        return ("de-dap-an",) + (
+            ("de-cach",) if (manifest["kind"] != "exam" or include_writing) and "de-cach" in available else ()
+        )
+    expected = (
+        profile.variants
+        if manifest["kind"] != "exam"
+        else (("de", "de-cach", "dap-an") if include_writing else ("de", "dap-an"))
+    )
     selected = tuple(v for v in expected if v in available and (has_solutions if v == "dap-an" else has_questions))
     if not selected:
         raise ValueError("No publishable variants for the declared source scope")

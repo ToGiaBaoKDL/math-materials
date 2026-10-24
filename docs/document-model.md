@@ -74,3 +74,5 @@ Tài nguyên chung ở `templates/`, `assets/fonts/`, `assets/branding/`; không
 `variants` là recipe khả dụng, không phải danh sách mặc định upload. Các recipe riêng của đề thi được giữ để đối chiếu hoặc build chủ động bằng `VARIANT`; profile chỉ xuất bản gộp. File cũ đã build có thể còn ở targets nhưng không tự được upload vì không thuộc kế hoạch xuất bản. Tên local thông dụng là `de.pdf`, `de-cach.pdf`, `dap-an.pdf`, `de-dap-an.pdf`.
 
 Quy tắc chép nguồn: [math-transcription](../skills/math-transcription/SKILL.md). Quy tắc trình bày: [typst-layout](../skills/typst-layout/SKILL.md).
+
+Đề thi có thể xuất thêm bản có dòng viết khi `publication.include_writing: true`; cần khai báo recipe `de-cach`. Khi chỉ có câu hỏi, bộ xuất là `de` + `de-cach`; khi gộp đáp án, bộ xuất là `de-dap-an` + `de-cach`. Mặc định không bật để các recipe cũ chỉ dành cho kiểm tra không tự được xuất bản. Cấu hình này dùng chung cho build, upload và Sheet.

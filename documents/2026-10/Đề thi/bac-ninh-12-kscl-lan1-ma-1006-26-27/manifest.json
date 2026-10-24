@@ -1,0 +1,372 @@
+{
+  "schema_version": 1,
+  "id": "bac-ninh-12-kscl-lan1-ma-1006-26-27",
+  "kind": "exam",
+  "received_date": "2026-10-25",
+  "status": "implemented",
+  "metadata": {
+    "title": "ĐỀ KHẢO SÁT CHẤT LƯỢNG LỚP 12 – LIÊN TRƯỜNG THPT BẮC NINH – LẦN 1",
+    "subject": "Toán 12",
+    "school_year": "2026–2027",
+    "exam_code": "1006",
+    "duration_minutes": 90
+  },
+  "sources": [
+    {
+      "path": "assets/sources/2026-10/Đề thi/bac-ninh-12-kscl-lan1-ma-1006-26-27/trang-1.jpg",
+      "original_name": "2aOboR7kgBuaTudQGM7jn2BsRcqIEOpc2NH8Qkb2.jpg",
+      "bytes": 548917,
+      "sha256": "883975e0aa05d739b80507c72e61c353473a8bc5fc99fd37acf21a7186d2301c",
+      "page": 1
+    },
+    {
+      "path": "assets/sources/2026-10/Đề thi/bac-ninh-12-kscl-lan1-ma-1006-26-27/trang-2.jpg",
+      "original_name": "2aOboR7kgCaKm8UlpI6zxfZhfHXRyZeqgzrZbJCa.jpg",
+      "bytes": 533129,
+      "sha256": "43d17d0c001b6947952c62ec56e0d989a621b112147abae9bb88a64aaece7024",
+      "page": 2
+    },
+    {
+      "path": "assets/sources/2026-10/Đề thi/bac-ninh-12-kscl-lan1-ma-1006-26-27/trang-3.jpg",
+      "original_name": "2aOboR7kgD0Lasm6Xxbed97XSZzp6GPk2AY97ZFw.jpg",
+      "bytes": 789410,
+      "sha256": "862c37c4d18de245a955c46c0e93849315c5ba72d37110b8f5555e07ed324f11",
+      "page": 3
+    },
+    {
+      "path": "assets/sources/2026-10/Đề thi/bac-ninh-12-kscl-lan1-ma-1006-26-27/trang-4.jpg",
+      "original_name": "2aOboR7kgDoj3rmqqZswVvzgK89NTKYRR2gYJ4JE.jpg",
+      "bytes": 724934,
+      "sha256": "65fde27b726d542d4cfa3bdda1d7a24b12be0c5d01c4f8b8416a8bc2eae38b24",
+      "page": 4
+    },
+    {
+      "path": "assets/sources/2026-10/Đề thi/bac-ninh-12-kscl-lan1-ma-1006-26-27/source.pdf",
+      "original_name": "source.pdf",
+      "bytes": 2601817,
+      "sha256": "93d6727c8c69c6d865b1b509748cddfc30fe266960e527526a307bc2bb8a16dd",
+      "pages": 4,
+      "derived_from": [
+        "trang-1.jpg",
+        "trang-2.jpg",
+        "trang-3.jpg",
+        "trang-4.jpg"
+      ]
+    }
+  ],
+  "scope": {
+    "has_questions": true,
+    "has_solutions": false,
+    "questions": 22,
+    "question_pages": [
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  "variants": {
+    "de": {
+      "filename": "de.pdf",
+      "inputs": {
+        "variant": "de"
+      }
+    },
+    "de-cach": {
+      "filename": "de-cach.pdf",
+      "inputs": {
+        "variant": "de-cach"
+      }
+    }
+  },
+  "drive": {
+    "folder": "Đề thi",
+    "filenames": {
+      "de": "BAC-NINH-12-KSCL-LAN1-MA-1006-26-27 - ĐỀ.pdf",
+      "de-cach": "BAC-NINH-12-KSCL-LAN1-MA-1006-26-27 - ĐỀ CÁCH.pdf"
+    }
+  },
+  "content_mapping": [
+    {
+      "id": "I.1",
+      "role": "question",
+      "source": {
+        "pages": [
+          1
+        ],
+        "question": 1,
+        "part": "I"
+      }
+    },
+    {
+      "id": "I.2",
+      "role": "question",
+      "source": {
+        "pages": [
+          1
+        ],
+        "question": 2,
+        "part": "I"
+      }
+    },
+    {
+      "id": "I.3",
+      "role": "question",
+      "source": {
+        "pages": [
+          1
+        ],
+        "question": 3,
+        "part": "I"
+      }
+    },
+    {
+      "id": "I.4",
+      "role": "question",
+      "source": {
+        "pages": [
+          1
+        ],
+        "question": 4,
+        "part": "I"
+      }
+    },
+    {
+      "id": "I.5",
+      "role": "question",
+      "source": {
+        "pages": [
+          1
+        ],
+        "question": 5,
+        "part": "I"
+      }
+    },
+    {
+      "id": "I.6",
+      "role": "question",
+      "source": {
+        "pages": [
+          2
+        ],
+        "question": 6,
+        "part": "I"
+      }
+    },
+    {
+      "id": "I.7",
+      "role": "question",
+      "source": {
+        "pages": [
+          2
+        ],
+        "question": 7,
+        "part": "I"
+      }
+    },
+    {
+      "id": "I.8",
+      "role": "question",
+      "source": {
+        "pages": [
+          2
+        ],
+        "question": 8,
+        "part": "I"
+      }
+    },
+    {
+      "id": "I.9",
+      "role": "question",
+      "source": {
+        "pages": [
+          2
+        ],
+        "question": 9,
+        "part": "I"
+      }
+    },
+    {
+      "id": "I.10",
+      "role": "question",
+      "source": {
+        "pages": [
+          2
+        ],
+        "question": 10,
+        "part": "I"
+      }
+    },
+    {
+      "id": "I.11",
+      "role": "question",
+      "source": {
+        "pages": [
+          2
+        ],
+        "question": 11,
+        "part": "I"
+      }
+    },
+    {
+      "id": "I.12",
+      "role": "question",
+      "source": {
+        "pages": [
+          2
+        ],
+        "question": 12,
+        "part": "I"
+      }
+    },
+    {
+      "id": "II.1",
+      "role": "question",
+      "source": {
+        "pages": [
+          2,
+          3
+        ],
+        "question": 1,
+        "part": "II"
+      }
+    },
+    {
+      "id": "II.2",
+      "role": "question",
+      "source": {
+        "pages": [
+          3
+        ],
+        "question": 2,
+        "part": "II"
+      }
+    },
+    {
+      "id": "II.3",
+      "role": "question",
+      "source": {
+        "pages": [
+          3
+        ],
+        "question": 3,
+        "part": "II"
+      }
+    },
+    {
+      "id": "II.4",
+      "role": "question",
+      "source": {
+        "pages": [
+          3
+        ],
+        "question": 4,
+        "part": "II"
+      }
+    },
+    {
+      "id": "III.1",
+      "role": "question",
+      "source": {
+        "pages": [
+          3
+        ],
+        "question": 1,
+        "part": "III"
+      }
+    },
+    {
+      "id": "III.2",
+      "role": "question",
+      "source": {
+        "pages": [
+          3
+        ],
+        "question": 2,
+        "part": "III"
+      }
+    },
+    {
+      "id": "III.3",
+      "role": "question",
+      "source": {
+        "pages": [
+          3,
+          4
+        ],
+        "question": 3,
+        "part": "III"
+      }
+    },
+    {
+      "id": "III.4",
+      "role": "question",
+      "source": {
+        "pages": [
+          4
+        ],
+        "question": 4,
+        "part": "III"
+      }
+    },
+    {
+      "id": "III.5",
+      "role": "question",
+      "source": {
+        "pages": [
+          4
+        ],
+        "question": 5,
+        "part": "III"
+      }
+    },
+    {
+      "id": "III.6",
+      "role": "question",
+      "source": {
+        "pages": [
+          4
+        ],
+        "question": 6,
+        "part": "III"
+      }
+    }
+  ],
+  "provenance": {
+    "source_notes": [
+      "Four photographed pages contain handwritten selections, grading ticks and calculations. Only printed question text and diagrams transcribed; handwritten answers are not an official solution source.",
+      "II.1(a) printed 4x cm² and II.1(c) printed volume formula preserved as true/false assertions.",
+      "No exam date is printed; cover date omitted.",
+      "source.pdf bundles the four original photographs in page order for the existing upload workflow; original JPG bytes retained."
+    ],
+    "figures": "Vector reconstruction from source; contextual illustrations added without answer annotations."
+  },
+  "qa": {
+    "review_status": "pending",
+    "compile": "passed",
+    "content": "All 22 printed questions (12 multiple-choice, 4 true/false, 6 short-answer) transcribed and compared with the four photographs. Source II.1(a) 4x and I.6(D) AC confirmed with enlarged crops. Handwriting omitted. No solution section added.",
+    "layout": "Normal exam figures reduced uniformly by 8%; final question stays on the final page with HẾT at the bottom. Writing variant keeps each question with all its ruled lines in an unbreakable block, caps line counts by measured question height, and fills remaining page space with extra rules. Both PDFs rebuilt; text extraction checks all 22 questions and matching writing headings, with no question-free pages. Full-page visual review pending. Section-to-question spacing increased to 6 mm. Final exam question wrapper now has explicit 6 mm top spacing; bbox verification shows an 11.16 pt clear gap after III.5 and 12.74 pt after the Part II instruction. Exam remains 8 pages; writing variant 18 pages.",
+    "figures": "Updated oblique labels and consistent filled-vector dashes; variation values vertically ordered 0 > -1 > -2, centered signs and complete border; centered-apex pyramid with opaque pink/cyan visible faces, hidden base shown only by dashed edges, edge-length x; net fold dashes increased to 1.5 pt; equal filled-vector octagon edges; detailed kiln illustration. Five revised figures inspected standalone. Octagon perimeter now one closed filled-vector path, uniformly 1.6 pt on all eight edges; final perimeter change not visually reviewed. III.3 redesigned with A/B transmitter icons, ground receiver M, elevated command reference C, vertical guide and corner-arc plane label; visually inspected. M chosen on MA+MB=20; affine coordinates preserved. Final III.3 corner arc reduced to 18 mm and label placed near vertex; right-angle marker follows projected -Oy and vertical directions. III.5 uses an oblique affine view of unchanged 3D vertices. Both final standalone figures visually inspected. III.6 factory illustration removed at user request; final HẾT verified after the last question in rebuilt PDF.",
+    "sources": "Original photo and bundled-source checksums verified. source.pdf contains all four original photos in order.",
+    "publication": "Explicit include_writing enabled; upload dry-run selects de, de-cach, source. Four publication policy tests pass. No remote upload or Sheet mutation performed.",
+    "visual_review": "Standalone figures visually inspected. Full-page visual inspection remains pending; no full-page preview images generated.",
+    "writing": "Each question stays with heading and first two 9 mm lines. Remaining page height distributed to ruled writing areas with final-writing-space; explicit 6 mm clearance before next question. All 22 question/heading pairs verified after rebuild; full-page visual review pending."
+  },
+  "outputs": {
+    "de": {
+      "pdf": "assets/targets/2026-10/Đề thi/bac-ninh-12-kscl-lan1-ma-1006-26-27/de.pdf",
+      "pages": 8,
+      "bytes": 280755,
+      "sha256": "7bb996953819b9daa267ec84d57f5b91b613467d14905ec0f6129ca2f4d035fd"
+    },
+    "de-cach": {
+      "pdf": "assets/targets/2026-10/Đề thi/bac-ninh-12-kscl-lan1-ma-1006-26-27/de-cach.pdf",
+      "pages": 18,
+      "bytes": 310699,
+      "sha256": "432dfa63e71bd205e4dc12e485f145fb87991fdfb2425405fe99da426f96ce28"
+    }
+  },
+  "publication": {
+    "include_writing": true
+  }
+}
