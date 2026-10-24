@@ -1,0 +1,710 @@
+{
+  "schema_version": 1,
+  "id": "thang-long-toan-12-giua-ky-1-ma-127",
+  "kind": "exam",
+  "received_date": "2026-10-24",
+  "status": "implemented",
+  "metadata": {
+    "title": "ĐỀ KIỂM TRA GIỮA HỌC KÌ I TOÁN 12 – THPT THĂNG LONG",
+    "school_year": "2026–2027",
+    "exam_code": "127",
+    "duration_minutes": 90,
+    "subject": "Toán 12"
+  },
+  "sources": [
+    {
+      "path": "assets/sources/2026-10/Đề thi/thang-long-toan-12-giua-ky-1-ma-127/source.docx",
+      "original_name": "ĐỀ BÀI.docx",
+      "bytes": 820697,
+      "sha256": "790770a6e577a0eb77e483e7c695d08b5649aefd5a16222463fdb4e64ce85d28"
+    },
+    {
+      "path": "assets/sources/2026-10/Đề thi/thang-long-toan-12-giua-ky-1-ma-127/answers.docx",
+      "original_name": "ĐÁP ÁN VÀ LỜI GIẢI THAM KHẢO.docx",
+      "bytes": 382300,
+      "sha256": "7af20153ef3c5acb4804b5e02479ef0664c62637650e9aceacf679da033d544b"
+    }
+  ],
+  "scope": {
+    "questions": {
+      "I": 12,
+      "II": 4,
+      "III": 6
+    },
+    "has_questions": true,
+    "has_solutions": true
+  },
+  "content_mapping": [
+    {
+      "id": "question:I-1",
+      "role": "question",
+      "source": {
+        "file": "source.docx",
+        "section": "I",
+        "number": 1,
+        "paragraphs": [
+          12,
+          13
+        ]
+      }
+    },
+    {
+      "id": "question:I-2",
+      "role": "question",
+      "source": {
+        "file": "source.docx",
+        "section": "I",
+        "number": 2,
+        "paragraphs": [
+          14,
+          15
+        ]
+      }
+    },
+    {
+      "id": "question:I-3",
+      "role": "question",
+      "source": {
+        "file": "source.docx",
+        "section": "I",
+        "number": 3,
+        "paragraphs": [
+          16,
+          17,
+          18,
+          19
+        ]
+      }
+    },
+    {
+      "id": "question:I-4",
+      "role": "question",
+      "source": {
+        "file": "source.docx",
+        "section": "I",
+        "number": 4,
+        "paragraphs": [
+          20,
+          21
+        ]
+      }
+    },
+    {
+      "id": "question:I-5",
+      "role": "question",
+      "source": {
+        "file": "source.docx",
+        "section": "I",
+        "number": 5,
+        "paragraphs": [
+          22,
+          23,
+          24
+        ]
+      }
+    },
+    {
+      "id": "question:I-6",
+      "role": "question",
+      "source": {
+        "file": "source.docx",
+        "section": "I",
+        "number": 6,
+        "paragraphs": [
+          25,
+          26
+        ]
+      }
+    },
+    {
+      "id": "question:I-7",
+      "role": "question",
+      "source": {
+        "file": "source.docx",
+        "section": "I",
+        "number": 7,
+        "paragraphs": [
+          27,
+          28
+        ]
+      }
+    },
+    {
+      "id": "question:I-8",
+      "role": "question",
+      "source": {
+        "file": "source.docx",
+        "section": "I",
+        "number": 8,
+        "paragraphs": [
+          29,
+          30
+        ]
+      }
+    },
+    {
+      "id": "question:I-9",
+      "role": "question",
+      "source": {
+        "file": "source.docx",
+        "section": "I",
+        "number": 9,
+        "paragraphs": [
+          31,
+          32,
+          33,
+          34
+        ]
+      }
+    },
+    {
+      "id": "question:I-10",
+      "role": "question",
+      "source": {
+        "file": "source.docx",
+        "section": "I",
+        "number": 10,
+        "paragraphs": [
+          35,
+          36
+        ]
+      }
+    },
+    {
+      "id": "question:I-11",
+      "role": "question",
+      "source": {
+        "file": "source.docx",
+        "section": "I",
+        "number": 11,
+        "paragraphs": [
+          37,
+          38
+        ]
+      }
+    },
+    {
+      "id": "question:I-12",
+      "role": "question",
+      "source": {
+        "file": "source.docx",
+        "section": "I",
+        "number": 12,
+        "paragraphs": [
+          39,
+          40
+        ]
+      }
+    },
+    {
+      "id": "question:II-1",
+      "role": "question",
+      "source": {
+        "file": "source.docx",
+        "section": "II",
+        "number": 1,
+        "paragraphs": [
+          42,
+          43,
+          44,
+          45,
+          46
+        ]
+      }
+    },
+    {
+      "id": "question:II-2",
+      "role": "question",
+      "source": {
+        "file": "source.docx",
+        "section": "II",
+        "number": 2,
+        "paragraphs": [
+          47,
+          48,
+          49,
+          50,
+          51
+        ]
+      }
+    },
+    {
+      "id": "question:II-3",
+      "role": "question",
+      "source": {
+        "file": "source.docx",
+        "section": "II",
+        "number": 3,
+        "paragraphs": [
+          52,
+          53,
+          54,
+          55,
+          56
+        ]
+      }
+    },
+    {
+      "id": "question:II-4",
+      "role": "question",
+      "source": {
+        "file": "source.docx",
+        "section": "II",
+        "number": 4,
+        "paragraphs": [
+          57,
+          58,
+          59,
+          60,
+          61
+        ]
+      }
+    },
+    {
+      "id": "question:III-1",
+      "role": "question",
+      "source": {
+        "file": "source.docx",
+        "section": "III",
+        "number": 1,
+        "paragraphs": [
+          63
+        ]
+      }
+    },
+    {
+      "id": "question:III-2",
+      "role": "question",
+      "source": {
+        "file": "source.docx",
+        "section": "III",
+        "number": 2,
+        "paragraphs": [
+          64
+        ]
+      }
+    },
+    {
+      "id": "question:III-3",
+      "role": "question",
+      "source": {
+        "file": "source.docx",
+        "section": "III",
+        "number": 3,
+        "paragraphs": [
+          65,
+          66
+        ]
+      }
+    },
+    {
+      "id": "question:III-4",
+      "role": "question",
+      "source": {
+        "file": "source.docx",
+        "section": "III",
+        "number": 4,
+        "paragraphs": [
+          67,
+          68
+        ]
+      }
+    },
+    {
+      "id": "question:III-5",
+      "role": "question",
+      "source": {
+        "file": "source.docx",
+        "section": "III",
+        "number": 5,
+        "paragraphs": [
+          69
+        ]
+      }
+    },
+    {
+      "id": "question:III-6",
+      "role": "question",
+      "source": {
+        "file": "source.docx",
+        "section": "III",
+        "number": 6,
+        "paragraphs": [
+          70
+        ]
+      }
+    },
+    {
+      "id": "solution:I-1",
+      "role": "solution",
+      "source": {
+        "file": "answers.docx",
+        "section": "I",
+        "number": 1,
+        "paragraphs": [
+          2,
+          3
+        ]
+      }
+    },
+    {
+      "id": "solution:I-2",
+      "role": "solution",
+      "source": {
+        "file": "answers.docx",
+        "section": "I",
+        "number": 2,
+        "paragraphs": [
+          4,
+          5
+        ]
+      }
+    },
+    {
+      "id": "solution:I-3",
+      "role": "solution",
+      "source": {
+        "file": "answers.docx",
+        "section": "I",
+        "number": 3,
+        "paragraphs": [
+          6
+        ]
+      }
+    },
+    {
+      "id": "solution:I-4",
+      "role": "solution",
+      "source": {
+        "file": "answers.docx",
+        "section": "I",
+        "number": 4,
+        "paragraphs": [
+          7
+        ]
+      }
+    },
+    {
+      "id": "solution:I-5",
+      "role": "solution",
+      "source": {
+        "file": "answers.docx",
+        "section": "I",
+        "number": 5,
+        "paragraphs": [
+          8,
+          9,
+          10,
+          11
+        ]
+      }
+    },
+    {
+      "id": "solution:I-6",
+      "role": "solution",
+      "source": {
+        "file": "answers.docx",
+        "section": "I",
+        "number": 6,
+        "paragraphs": [
+          12
+        ]
+      }
+    },
+    {
+      "id": "solution:I-7",
+      "role": "solution",
+      "source": {
+        "file": "answers.docx",
+        "section": "I",
+        "number": 7,
+        "paragraphs": [
+          13
+        ]
+      }
+    },
+    {
+      "id": "solution:I-8",
+      "role": "solution",
+      "source": {
+        "file": "answers.docx",
+        "section": "I",
+        "number": 8,
+        "paragraphs": [
+          14,
+          15
+        ]
+      }
+    },
+    {
+      "id": "solution:I-9",
+      "role": "solution",
+      "source": {
+        "file": "answers.docx",
+        "section": "I",
+        "number": 9,
+        "paragraphs": [
+          16,
+          17
+        ]
+      }
+    },
+    {
+      "id": "solution:I-10",
+      "role": "solution",
+      "source": {
+        "file": "answers.docx",
+        "section": "I",
+        "number": 10,
+        "paragraphs": [
+          18,
+          19
+        ]
+      }
+    },
+    {
+      "id": "solution:I-11",
+      "role": "solution",
+      "source": {
+        "file": "answers.docx",
+        "section": "I",
+        "number": 11,
+        "paragraphs": [
+          20
+        ]
+      }
+    },
+    {
+      "id": "solution:I-12",
+      "role": "solution",
+      "source": {
+        "file": "answers.docx",
+        "section": "I",
+        "number": 12,
+        "paragraphs": [
+          21,
+          22
+        ]
+      }
+    },
+    {
+      "id": "solution:II-1",
+      "role": "solution",
+      "source": {
+        "file": "answers.docx",
+        "section": "II",
+        "number": 1,
+        "paragraphs": [
+          24,
+          25,
+          26,
+          27,
+          28,
+          29
+        ]
+      }
+    },
+    {
+      "id": "solution:II-2",
+      "role": "solution",
+      "source": {
+        "file": "answers.docx",
+        "section": "II",
+        "number": 2,
+        "paragraphs": [
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39
+        ]
+      }
+    },
+    {
+      "id": "solution:II-3",
+      "role": "solution",
+      "source": {
+        "file": "answers.docx",
+        "section": "II",
+        "number": 3,
+        "paragraphs": [
+          40,
+          41,
+          42,
+          43,
+          44,
+          45
+        ]
+      }
+    },
+    {
+      "id": "solution:II-4",
+      "role": "solution",
+      "source": {
+        "file": "answers.docx",
+        "section": "II",
+        "number": 4,
+        "paragraphs": [
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53
+        ]
+      }
+    },
+    {
+      "id": "solution:III-1",
+      "role": "solution",
+      "source": {
+        "file": "answers.docx",
+        "section": "III",
+        "number": 1,
+        "paragraphs": [
+          55,
+          56,
+          57
+        ]
+      }
+    },
+    {
+      "id": "solution:III-2",
+      "role": "solution",
+      "source": {
+        "file": "answers.docx",
+        "section": "III",
+        "number": 2,
+        "paragraphs": [
+          58,
+          59,
+          60,
+          61
+        ]
+      }
+    },
+    {
+      "id": "solution:III-3",
+      "role": "solution",
+      "source": {
+        "file": "answers.docx",
+        "section": "III",
+        "number": 3,
+        "paragraphs": [
+          62,
+          63,
+          64
+        ]
+      }
+    },
+    {
+      "id": "solution:III-4",
+      "role": "solution",
+      "source": {
+        "file": "answers.docx",
+        "section": "III",
+        "number": 4,
+        "paragraphs": [
+          65,
+          66,
+          67,
+          68,
+          69,
+          70,
+          71,
+          72,
+          73
+        ]
+      }
+    },
+    {
+      "id": "solution:III-5",
+      "role": "solution",
+      "source": {
+        "file": "answers.docx",
+        "section": "III",
+        "number": 5,
+        "paragraphs": [
+          74,
+          75,
+          76,
+          77
+        ]
+      }
+    },
+    {
+      "id": "solution:III-6",
+      "role": "solution",
+      "source": {
+        "file": "answers.docx",
+        "section": "III",
+        "number": 6,
+        "paragraphs": [
+          78,
+          79,
+          80,
+          81,
+          82
+        ]
+      }
+    }
+  ],
+  "provenance": {
+    "math_extraction": "155 question and 237 answer equations; all OLE/WMF preview pairs checked. Five lim templates decoded from MTEF selector 23, variation 16.",
+    "source_layout": "Question DOCX states 4 pages; newly typeset page count used on cover.",
+    "solutions": "Supplied AI & TOANMATH.com reference solutions transcribed; false statements in questions preserved.",
+    "figures": "Source images 19/58 (graphs), 142 (crane photograph), 151 (paper fold) inspected and replaced with native vector drawings; supplemental illustrations contain no computed answer coordinates."
+  },
+  "variants": {
+    "de": {
+      "filename": "de.pdf",
+      "inputs": {
+        "variant": "de"
+      }
+    },
+    "dap-an": {
+      "filename": "dap-an.pdf",
+      "inputs": {
+        "variant": "dap-an"
+      }
+    },
+    "de-dap-an": {
+      "filename": "de-dap-an.pdf",
+      "inputs": {
+        "variant": "de-dap-an"
+      }
+    }
+  },
+  "drive": {
+    "folder": "Đề thi",
+    "filenames": {
+      "de": "THPT THĂNG LONG - GIỮA HỌC KÌ I TOÁN 12 - 2026–2027 - MÃ 127 - ĐỀ.pdf",
+      "dap-an": "THPT THĂNG LONG - GIỮA HỌC KÌ I TOÁN 12 - 2026–2027 - MÃ 127 - ĐÁP ÁN.pdf",
+      "de-dap-an": "THPT THĂNG LONG - GIỮA HỌC KÌ I TOÁN 12 - 2026–2027 - MÃ 127 - ĐỀ VÀ ĐÁP ÁN.pdf"
+    }
+  },
+  "qa": {
+    "review_status": "pending",
+    "compile": "passed",
+    "content": "22 questions and 22 source solutions in order. All 155 question and 237 solution MathType formulas decoded, nonempty and checked against preview. Source hashes verified.",
+    "math": "Independent arithmetic checks passed for drone positions/timing, triangle dot product/sine/altitude/parallelogram, drug derivative, derivative sign count, crane force, paper-fold minimization and pricing optimum. No source corrections required; intentionally false assertions retained.",
+    "layout": "15-page combined PDF: 9 question pages and 6 answer pages. Exam date 23/10/2026. Poppler text bounds pass; all fonts embedded. Answer selections, true/false conclusions and final answers use bold fonts, including NewCMMath-Bold. Full-page visual review remains pending.",
+    "figures": "All illustrations scaled uniformly to 108%. I.8 faces neon lime. Rescue ground brown and expanded to contain building footprints; contact edges emphasized, B label cleared, drone moved away from roof. Camera axes use uniform 1.5 pt solid strokes and plane label moved toward corner. Crane labels repositioned and top spacing increased to 10 mm. Standalone changed figures inspected; final 60-degree label moved outside geometry with leader.",
+    "visual_review": "Changed standalone figures visually inspected. Full-page visual review pending."
+  },
+  "outputs": {
+    "de-dap-an": {
+      "pdf": "assets/targets/2026-10/Đề thi/thang-long-toan-12-giua-ky-1-ma-127/de-dap-an.pdf",
+      "pages": 16,
+      "bytes": 438989,
+      "sha256": "c1157e2a28462e190a6b0c911f6d9142bca6ec936eb526709c1cafe8b27874e9"
+    }
+  }
+}

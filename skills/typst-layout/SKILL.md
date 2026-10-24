@@ -55,6 +55,8 @@ Dùng template làm nguồn triển khai, skill làm quy tắc tái sử dụng.
 - Header/footer chữ Noto Sans Regular 11 pt, stroke 0,12 pt cùng màu; nhận diện đỏ đề thi `#C8102E`, icon liên hệ, mã đề nếu có và trang thực. Không dùng dải DXT/logo chuyên đề.
 - Câu hỏi được nối qua trang; không bắt buộc nguyên câu trong một trang. `de-dap-an` nối đáp án từ trang mới, dùng chung header/footer và số trang liên tục; không chèn một bộ header/footer đáp án lồng vào. Bản đáp án riêng vẫn có header/footer. Chỉ tạo variant theo phạm vi nguồn/yêu cầu.
 
+- Bảng đáp án in đậm kết quả. Trong lời giải, in đậm kết luận chọn phương án, Đúng/Sai và đáp số cuối cùng (kể cả công thức); giữ diễn giải regular.
+
 ### Ma trận và bản đặc tả
 
 - `templates/matrix.typ`, A4 ngang; dùng header/footer và heading bài giảng. Khung xanh ghi “MA TRẬN ĐỀ KIỂM TRA…”, dòng đỏ ghi tên trường; môn/lớp, năm học và thời gian nằm ở subtitle. Không gắn dòng tác giả giảng dạy cho ma trận của trường.
