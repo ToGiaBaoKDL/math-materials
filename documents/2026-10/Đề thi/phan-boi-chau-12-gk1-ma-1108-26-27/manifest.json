@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "id": "phan-boi-chau-toan-12-giua-ky-1-ma-1108",
+  "id": "phan-boi-chau-12-gk1-ma-1108-26-27",
   "kind": "exam",
   "received_date": "2026-10-13",
   "status": "implemented",
@@ -13,14 +13,14 @@
   },
   "sources": [
     {
-      "path": "assets/sources/2026-10/Đề thi/phan-boi-chau-toan-12-giua-ky-1-ma-1108/source.pdf",
+      "path": "assets/sources/2026-10/Đề thi/phan-boi-chau-12-gk1-ma-1108-26-27/source.pdf",
       "original_name": "de-giua-ky-1-toan-12-nam-2026-2027-truong-thpt-phan-boi-chau-ha-noi (4).pdf",
       "bytes": 1888440,
       "sha256": "43e652be04342e8ef926faa43b21e6303c4bee772b72daf8a568dc39a692cbd7",
       "pages": 6
     },
     {
-      "path": "assets/sources/2026-10/Đề thi/phan-boi-chau-toan-12-giua-ky-1-ma-1108/answers.docx",
+      "path": "assets/sources/2026-10/Đề thi/phan-boi-chau-12-gk1-ma-1108-26-27/answers.docx",
       "original_name": "De-kiem-tra-giua-HK-1-Toan-12-THPT-Phan-Boi-Chau-nam-26-27.docx",
       "role": "questions_and_detailed_solutions",
       "received_date": "2026-10-16",
@@ -401,25 +401,25 @@
   },
   "outputs": {
     "de": {
-      "pdf": "assets/targets/2026-10/Đề thi/phan-boi-chau-toan-12-giua-ky-1-ma-1108/de.pdf",
+      "pdf": "assets/targets/2026-10/Đề thi/phan-boi-chau-12-gk1-ma-1108-26-27/de.pdf",
       "pages": 7,
       "bytes": 647105,
       "sha256": "6cc546d6c16b9e7eab3bd3f37686a8021c027453c29cfbc26c00da50bfe9288c"
     },
     "de-cach": {
-      "pdf": "assets/targets/2026-10/Đề thi/phan-boi-chau-toan-12-giua-ky-1-ma-1108/de-cach.pdf",
+      "pdf": "assets/targets/2026-10/Đề thi/phan-boi-chau-12-gk1-ma-1108-26-27/de-cach.pdf",
       "pages": 13,
       "bytes": 658973,
       "sha256": "289a4e91fc874f696530cc78570b7ef53991f41b9d8fcbc168c9af1d94d986ab"
     },
     "dap-an": {
-      "pdf": "assets/targets/2026-10/Đề thi/phan-boi-chau-toan-12-giua-ky-1-ma-1108/dap-an.pdf",
+      "pdf": "assets/targets/2026-10/Đề thi/phan-boi-chau-12-gk1-ma-1108-26-27/dap-an.pdf",
       "pages": 16,
       "bytes": 808092,
       "sha256": "a60f674b0bf9bddb5ee96a4c43ba2c4531fc234fad0721c121c26255117e0951"
     },
     "de-dap-an": {
-      "pdf": "assets/targets/2026-10/Đề thi/phan-boi-chau-toan-12-giua-ky-1-ma-1108/de-dap-an.pdf",
+      "pdf": "assets/targets/2026-10/Đề thi/phan-boi-chau-12-gk1-ma-1108-26-27/de-dap-an.pdf",
       "pages": 23,
       "bytes": 959066,
       "sha256": "273ba8f98fee422049e4d2db51ba8326ad2bbe16b1a3516f4838355ec766851a"

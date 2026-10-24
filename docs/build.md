@@ -17,7 +17,7 @@ make build DOC=buoi-11                    # Bài giảng: 3 bản đề / dòng 
 make help
 
 # Cũng chấp nhận ID đầy đủ
-make build DOC="2026-10/Đề thi/phan-boi-chau-toan-12-giua-ky-1-ma-1108"
+make build DOC="2026-10/Đề thi/phan-boi-chau-12-gk1-ma-1108-26-27"
 ```
 
 ## Quá trình build

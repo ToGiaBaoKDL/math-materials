@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "id": "le-thanh-tong-toan-11-giua-ky-1-ma-110",
+  "id": "le-thanh-tong-11-gk1-ma-110-26-27",
   "kind": "exam",
   "received_date": "2026-10-22",
   "status": "implemented",
@@ -11,7 +11,7 @@
   },
   "sources": [
     {
-      "path": "assets/sources/2026-10/Đề thi/le-thanh-tong-toan-11-giua-ky-1-ma-110/source.pdf",
+      "path": "assets/sources/2026-10/Đề thi/le-thanh-tong-11-gk1-ma-110-26-27/source.pdf",
       "original_name": "de-giua-ky-1-toan-11-nam-2026-2027-truong-le-thanh-tong-tp-hcm.pdf",
       "bytes": 516603,
       "sha256": "b9cab689d455886acad9be0cc0b69f7eaddbb599ef922d04098d6c984b293939",
@@ -75,7 +75,7 @@
     "source_notice": "Trang 10 chỉ có lưu ý nguồn gõ từ ảnh và lời giải AI; không chép trang quảng bá vào đầu ra, ghi nguồn lời giải tham khảo ở đầu đáp án.",
     "supplementary_images": [
       {
-        "path": "documents/2026-10/Đề thi/le-thanh-tong-toan-11-giua-ky-1-ma-110/images/bicycle-rally-coolgrey.jpg",
+        "path": "documents/2026-10/Đề thi/le-thanh-tong-11-gk1-ma-110-26-27/images/bicycle-rally-coolgrey.jpg",
         "original_name": "rally-1-b-2026-coolgrey_2.jpg",
         "question": "II.1",
         "sha256": "d46eef36156e82bc7a1c22ec392dba4171140769c6f219cc78fab4176b45df8b"
@@ -510,19 +510,19 @@
   ],
   "outputs": {
     "de-dap-an": {
-      "pdf": "assets/targets/2026-10/Đề thi/le-thanh-tong-toan-11-giua-ky-1-ma-110/de-dap-an.pdf",
+      "pdf": "assets/targets/2026-10/Đề thi/le-thanh-tong-11-gk1-ma-110-26-27/de-dap-an.pdf",
       "pages": 14,
       "bytes": 688908,
       "sha256": "fecc158b5d4bd259f3284e6554dad40fab21722e75cad98de2225002db7785ba"
     },
     "de": {
-      "pdf": "assets/targets/2026-10/Đề thi/le-thanh-tong-toan-11-giua-ky-1-ma-110/de.pdf",
+      "pdf": "assets/targets/2026-10/Đề thi/le-thanh-tong-11-gk1-ma-110-26-27/de.pdf",
       "pages": 8,
       "bytes": 540357,
       "sha256": "080cd87367157a39b51e32d0f68f26c07179e6dc9de80ac66fd620ca6a054f41"
     },
     "dap-an": {
-      "pdf": "assets/targets/2026-10/Đề thi/le-thanh-tong-toan-11-giua-ky-1-ma-110/dap-an.pdf",
+      "pdf": "assets/targets/2026-10/Đề thi/le-thanh-tong-11-gk1-ma-110-26-27/dap-an.pdf",
       "pages": 6,
       "bytes": 236159,
       "sha256": "78718b2a3b1ffbfc8d4daf6477ead9c53443b84119f4bd61e8bdaa4cd1d5097a"

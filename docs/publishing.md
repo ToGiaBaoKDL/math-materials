@@ -120,3 +120,7 @@ Khi chuyển chế độ tách sang gộp, nhận diện dòng đề theo tên g
 ## Ma trận
 
 Profile `matrix` upload vào `<tháng>/Ma trận/<id>/` và cập nhật tab `Ma trận`. Nhãn link là `MA TRẬN`, nguồn là `MA TRẬN - GỐC`; chỉ một dòng, không có đề cách hoặc đáp án. Folder Drive và tab Sheet dùng chung category từ profile. Cơ chế cập nhật giữ ID/URL và bỏ qua nội dung không đổi dùng chung với các tài liệu khác.
+
+## Đổi tên thư mục tài liệu
+
+Upload tìm thư mục theo tên, không theo ID đã lưu. Khi đổi ID local, đổi tên chính thư mục hiện có trên Drive sang đúng tên mới trước lần upload tiếp theo; giữ nguyên vị trí để giữ ID và URL. Nếu để tên cũ, upload sẽ tạo thư mục mới. Giữ `drive.filenames` khi chỉ đổi thư mục để tiếp tục cập nhật đúng file cũ; cập nhật link thư mục code trong Sheet khi đường dẫn GitHub thay đổi.

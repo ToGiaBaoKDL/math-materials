@@ -1,21 +1,21 @@
 {
   "schema_version": 1,
-  "id": "ma-tran-trieu-phong-toan-12-giua-ky-1-2026-2027",
+  "id": "ma-tran-huong-hoa-12-gk1-26-27",
   "kind": "matrix",
   "received_date": "2026-10-22",
   "status": "implemented",
   "metadata": {
-    "title": "MA TRẬN ĐỀ KIỂM TRA GIỮA KÌ I – TRƯỜNG THPT TRIỆU PHONG",
+    "title": "MA TRẬN ĐỀ KIỂM TRA GIỮA KÌ I – TRƯỜNG THPT HƯỚNG HÓA",
     "subject": "TOÁN 12",
     "school_year": "2026 - 2027"
   },
   "sources": [
     {
-      "path": "assets/sources/2026-10/Ma trận/ma-tran-trieu-phong-toan-12-giua-ky-1-2026-2027/source.pdf",
-      "original_name": "03.TOAN_12_MTDT_KIEMTRA_GK1.signed_signed_9317d (1).pdf",
-      "pages": 3,
-      "bytes": 440663,
-      "sha256": "65b9fe3fb0dea44b19cfec339aeefd19237d30da00ad9e5fef0f87112ac83283"
+      "path": "assets/sources/2026-10/Ma trận/ma-tran-huong-hoa-12-gk1-26-27/source.pdf",
+      "original_name": "01._MTDT_GK1_12_2026_2027_79846_compressed.pdf",
+      "pages": 4,
+      "bytes": 125979,
+      "sha256": "c0144a7f8bc99fbdd17ad82a42cb1a794e2d1ae2dc07d7faf04f80957630aea2"
     }
   ],
   "scope": {
@@ -38,15 +38,15 @@
   "drive": {
     "folder": "Ma trận",
     "filenames": {
-      "de": "MA-TRAN-TRIEU-PHONG-TOAN-12-GIUA-KY-I-2026-2027 - MA TRẬN.pdf"
+      "de": "MA-TRAN-HUONG-HOA-TOAN-12-GIUA-KY-I-2026-2027 - MA TRẬN.pdf"
     }
   },
   "provenance": {
     "source_issues": [
       "Giữ nguyên số liệu nguồn, chưa điều chỉnh các tổng chưa khớp với hàng chi tiết.",
-      "Hàng khảo sát hàm số có dấu phẩy đơn ở DT3 VD; giữ nguyên.",
-      "Hàng ứng dụng thực tiễn ghi 15, không có dấu %; giữ nguyên.",
-      "Tổng số lệnh hỏi 16/12/6 không khớp tổng các hàng chi tiết; giữ nguyên."
+      "Tổng số tiết ở 5 nội dung là 22, trong khi chủ đề ghi 24 tiết.",
+      "Hàng GTLN/GTNN ghi DT2 Hiểu là 2c; giữ nguyên.",
+      "Đường tiệm cận: tổng Biết/Hiểu ghi 5/1 nhưng các ô chi tiết cho 2/1/3; giữ nguyên."
     ]
   },
   "qa": {
@@ -67,10 +67,10 @@
   },
   "outputs": {
     "de": {
-      "pdf": "assets/targets/2026-10/Ma trận/ma-tran-trieu-phong-toan-12-giua-ky-1-2026-2027/ma-tran.pdf",
+      "pdf": "assets/targets/2026-10/Ma trận/ma-tran-huong-hoa-12-gk1-26-27/ma-tran.pdf",
       "pages": 3,
-      "bytes": 329433,
-      "sha256": "9f21c095f9bfb9a332163edb995fb27ff9523ca6521b0a2e8ddb28a0b0008949"
+      "bytes": 346499,
+      "sha256": "b6d770eba7464644cb0f0913f39b1c37d2ad532e8a1cb1353b5ce8fc3679629f"
     }
   },
   "content_mapping": [
@@ -80,7 +80,8 @@
       "source": {
         "index": 0,
         "pages": [
-          1
+          1,
+          2
         ]
       }
     },
@@ -90,8 +91,8 @@
       "source": {
         "index": 0,
         "pages": [
-          2,
-          3
+          3,
+          4
         ]
       }
     }

@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "id": "thang-long-toan-12-giua-ky-1-ma-127",
+  "id": "thang-long-12-gk1-ma-127-26-27",
   "kind": "exam",
   "received_date": "2026-10-24",
   "status": "implemented",
@@ -13,13 +13,13 @@
   },
   "sources": [
     {
-      "path": "assets/sources/2026-10/Đề thi/thang-long-toan-12-giua-ky-1-ma-127/source.docx",
+      "path": "assets/sources/2026-10/Đề thi/thang-long-12-gk1-ma-127-26-27/source.docx",
       "original_name": "ĐỀ BÀI.docx",
       "bytes": 820697,
       "sha256": "790770a6e577a0eb77e483e7c695d08b5649aefd5a16222463fdb4e64ce85d28"
     },
     {
-      "path": "assets/sources/2026-10/Đề thi/thang-long-toan-12-giua-ky-1-ma-127/answers.docx",
+      "path": "assets/sources/2026-10/Đề thi/thang-long-12-gk1-ma-127-26-27/answers.docx",
       "original_name": "ĐÁP ÁN VÀ LỜI GIẢI THAM KHẢO.docx",
       "bytes": 382300,
       "sha256": "7af20153ef3c5acb4804b5e02479ef0664c62637650e9aceacf679da033d544b"
@@ -701,7 +701,7 @@
   },
   "outputs": {
     "de-dap-an": {
-      "pdf": "assets/targets/2026-10/Đề thi/thang-long-toan-12-giua-ky-1-ma-127/de-dap-an.pdf",
+      "pdf": "assets/targets/2026-10/Đề thi/thang-long-12-gk1-ma-127-26-27/de-dap-an.pdf",
       "pages": 16,
       "bytes": 438989,
       "sha256": "c1157e2a28462e190a6b0c911f6d9142bca6ec936eb526709c1cafe8b27874e9"

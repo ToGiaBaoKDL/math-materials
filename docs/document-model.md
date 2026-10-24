@@ -15,7 +15,7 @@
 
 Build mặc định, upload, Sheet và link tự động của notify cùng dùng `publication_variants`. Notify vẫn độc lập, không tự chạy sau các bước khác.
 
-ID/thư mục ma trận có hậu tố năm học (ví dụ `ma-tran-huong-hoa-toan-12-giua-ky-1-2026-2027`) để phân biệt cùng trường qua các năm.
+ID/thư mục ma trận dùng mã kỳ `gk1`, `gk2`, `ck1`, `ck2`, bỏ tên môn `toan` và có hậu tố năm học dạng `26-27` (ví dụ `ma-tran-huong-hoa-12-gk1-26-27`) để phân biệt cùng trường qua các năm.
 
 Ma trận dùng profile `matrix`, lưu trong thư mục `Ma trận`; không giả lập câu hỏi hoặc lời giải (`scope.has_questions = false`, `scope.has_solutions = false`). Chỉ khai báo một recipe `de` cho toàn bộ ma trận và đặc tả.
 
@@ -36,6 +36,14 @@ assets/targets/YYYY-MM/<category>/<document-id>/*.pdf
 ```
 
 Thư mục phân loại local gồm `Đề thi`, `Chuyên đề`, `Livestream`, `Ma trận`. Dùng cùng tháng/thư mục phân loại/ID ở ba cây thư mục. Tháng là tháng tiếp nhận, độc lập với `DRIVE_MONTH` khi xuất bản. Giữ ID cũ khi đổi thư mục phân loại; tài liệu chuyên đề mới dùng tiền tố `th-`.
+
+Đề thi dùng ID `<truong>-<lop>-<loai>[-<dot>][-ma-<ma-de>]-<nam-hoc>`.
+Loại đề: `kscl` (khảo sát chất lượng), `ktdk` (kiểm tra định kỳ), `gk` (giữa kỳ), `ck` (cuối kỳ).
+Học kỳ viết liền với loại: `gk1`, `gk2`, `ck1`, `ck2` (giữa/cuối kỳ 1/2); giữ lần khảo sát `kscl-lan-1`, hoặc tháng kiểm tra `ktdk-thang-10` để phân biệt các đợt.
+Năm học viết gọn ở cuối: `26-27` tương ứng `2026–2027`; metadata và nội dung đề giữ năm đầy đủ.
+Giữ số 0 đầu mã đề; nguồn không có mã thì bỏ cả cụm `ma-...`, không tự đặt mã.
+Ví dụ: `nguyen-binh-khiem-12-kscl-lan-1-ma-0115-26-27`.
+Áp dụng cùng ID cho `documents`, `assets/sources`, `assets/targets` và các tham chiếu trong manifest.
 
 ID và tên tài nguyên dùng chữ thường không dấu, nối bằng `-`, không có dấu cách hoặc `#`; giữ tên nguồn gốc trong manifest. Font đổi tên file không đổi family. Nguồn gốc chỉ đọc; bản crop/xoay phục vụ kiểm tra lưu riêng. Ảnh bổ sung vào đúng bộ hiện có dù nhận ngày khác; trang nguồn dùng số trang thực, không suy từ thứ tự upload.
 

@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "id": "le-thanh-tong-toan-12-giua-ky-1-ma-357",
+  "id": "le-thanh-tong-12-gk1-ma-357-26-27",
   "kind": "exam",
   "received_date": "2026-10-22",
   "status": "implemented",
@@ -11,7 +11,7 @@
   },
   "sources": [
     {
-      "path": "assets/sources/2026-10/Đề thi/le-thanh-tong-toan-12-giua-ky-1-ma-357/source.pdf",
+      "path": "assets/sources/2026-10/Đề thi/le-thanh-tong-12-gk1-ma-357-26-27/source.pdf",
       "original_name": "de-giua-ki-1-toan-12-nam-2026-2027-truong-le-thanh-tong-tp-hcm.pdf",
       "bytes": 2166455,
       "sha256": "692b975d8fc7ee4acd412722d33a1574716e30f54ea82fc0b102be0a718cb03a",
@@ -82,7 +82,7 @@
     ],
     "supplementary_images": [
       {
-        "path": "documents/2026-10/Đề thi/le-thanh-tong-toan-12-giua-ky-1-ma-357/images/cable-stayed-bridge.png",
+        "path": "documents/2026-10/Đề thi/le-thanh-tong-12-gk1-ma-357-26-27/images/cable-stayed-bridge.png",
         "original_name": "screenshot_2026_10_19_153358_1792398950113682735809.png",
         "question": "II.4",
         "sha256": "a9418083948fe94050eeeb5786b998b4805dfc66a54055653598714bc188c6ed"
@@ -141,19 +141,19 @@
   },
   "outputs": {
     "de-dap-an": {
-      "pdf": "assets/targets/2026-10/Đề thi/le-thanh-tong-toan-12-giua-ky-1-ma-357/de-dap-an.pdf",
+      "pdf": "assets/targets/2026-10/Đề thi/le-thanh-tong-12-gk1-ma-357-26-27/de-dap-an.pdf",
       "pages": 13,
       "bytes": 569952,
       "sha256": "0a43cdd9d9f4a333f525c1c3c2e51a90839edcabc4a61c462486a86ff2e6c34b"
     },
     "de": {
-      "pdf": "assets/targets/2026-10/Đề thi/le-thanh-tong-toan-12-giua-ky-1-ma-357/de.pdf",
+      "pdf": "assets/targets/2026-10/Đề thi/le-thanh-tong-12-gk1-ma-357-26-27/de.pdf",
       "pages": 7,
       "bytes": 398072,
       "sha256": "cb8297222a9b28ae9cfac66c39609222404fc5c5442e57e4f11a03dfc82a3984"
     },
     "dap-an": {
-      "pdf": "assets/targets/2026-10/Đề thi/le-thanh-tong-toan-12-giua-ky-1-ma-357/dap-an.pdf",
+      "pdf": "assets/targets/2026-10/Đề thi/le-thanh-tong-12-gk1-ma-357-26-27/dap-an.pdf",
       "pages": 6,
       "bytes": 248912,
       "sha256": "f11886d9860a7fe37e7fd52aba47bd2a15ad05ee37c0ce4cd973b11696b2323a"
