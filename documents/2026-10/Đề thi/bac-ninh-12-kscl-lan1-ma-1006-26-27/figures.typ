@@ -29,6 +29,13 @@
  tag(p,t,dx:dx,dy:dy)
 }
 #let rect-at(p,w,h,fill,radius:1mm)=place(top+left,dx:p.at(0)*1mm,dy:p.at(1)*1mm,rect(width:w*1mm,height:h*1mm,fill:fill,stroke:1pt+ink,radius:radius))
+// One hue per solid; edge shades distinguish depth without changing line weight.
+#let solid-colors=(light:rgb("#FFB5C6"),mid:rgb("#FF789A"),dark:rgb("#E84D78"),edge:rgb("#78253E"),soft:rgb("#A83D5C"))
+#let solid-edge(a,b,dashed:false,width:1.1pt,colors:solid-colors) = edge(a,b,color:if dashed {colors.soft} else if b.at(1) < a.at(1) {colors.soft} else {colors.edge},dashed:dashed,width:width)
+#let solid-dot(p,t,dx:0,dy:0,colors:solid-colors)={
+ place(top+left,dx:p.at(0)*1mm - 0.65mm,dy:p.at(1)*1mm - 0.65mm,circle(radius:0.65mm,fill:colors.edge,stroke:none))
+ tag(p,t,dx:dx,dy:dy)
+}
 #let rational()=box(width:98mm,height:80mm)[
  #let p(x,y)=(51+12*x,65 - 10*y)
  #arrow(p(-3.9,0),p(3.3,0)) #arrow(p(0,-1),p(0,5.7))
@@ -62,11 +69,11 @@
 #let prism()=box(width:98mm,height:77mm)[
  #let A=(39,48); #let B=(15,64); #let C=(71,64)
  #let Ap=(48,9); #let Bp=(24,25); #let Cp=(80,25)
- #face((B,C,Cp,Bp),cyan) #face((Ap,Bp,Cp),lime)
- #for (a,b) in ((A,B),(A,C),(A,Ap)) {edge(a,b,dashed:true)}
- #for (a,b) in ((B,C),(B,Bp),(C,Cp),(Ap,Bp),(Bp,Cp),(Cp,Ap)) {edge(a,b)}
- #dot(A,$A$,dx:-3,dy:-3) #dot(B,$B$,dx:-4,dy:3) #dot(C,$C$,dx:4,dy:3)
- #dot(Ap,$A'$,dy:-4) #dot(Bp,$B'$,dx:-5) #dot(Cp,$C'$,dx:5)
+ #face((B,C,Cp,Bp),solid-colors.dark) #face((Ap,Bp,Cp),solid-colors.light)
+ #for (a,b) in ((A,B),(A,C),(A,Ap)) {solid-edge(a,b,dashed:true)}
+ #for (a,b) in ((B,C),(B,Bp),(C,Cp),(Ap,Bp),(Bp,Cp),(Cp,Ap)) {solid-edge(a,b)}
+ #solid-dot(A,$A$,dx:-3,dy:-3) #solid-dot(B,$B$,dx:-4,dy:3) #solid-dot(C,$C$,dx:4,dy:3)
+ #solid-dot(Ap,$A'$,dy:-4) #solid-dot(Bp,$B'$,dx:-5) #solid-dot(Cp,$C'$,dx:5)
 ]
 #let variation()=box(width:144mm,height:62mm)[
  #face(((0,0),(144,0),(144,10),(0,10)),rgb("#FFE6ED"))
@@ -87,24 +94,24 @@
 ]
 #let pyramid-net()=box(width:166mm,height:80mm)[
  #let A=(22,42); #let B=(42,42); #let C=(42,22); #let D=(22,22)
- #face((A,B,C,D),lime)
- #for (a,b,c,col) in ((A,B,(32,57),pink),(B,C,(57,32),cyan),(C,D,(32,7),pink),(D,A,(7,32),cyan)) {
+ #face((A,B,C,D),solid-colors.light)
+ #for (a,b,c,col) in ((A,B,(32,57),solid-colors.mid),(B,C,(57,32),solid-colors.dark),(C,D,(32,7),solid-colors.mid),(D,A,(7,32),solid-colors.dark)) {
   face((a,b,c),col)
  }
- #solid-path(((7mm,7mm),(57mm,7mm),(57mm,57mm),(7mm,57mm)),close:true,thickness:1.1pt,color:ink)
+ #solid-path(((7mm,7mm),(57mm,7mm),(57mm,57mm),(7mm,57mm)),close:true,thickness:1.1pt,color:solid-colors.edge)
  #for (a,b,c) in ((A,B,(32,57)),(B,C,(57,32)),(C,D,(32,7)),(D,A,(7,32))) {
-  edge(a,c); edge(b,c); edge(a,b,dashed:true,width:1.5pt)
+  solid-edge(a,c); solid-edge(b,c); solid-edge(a,b,dashed:true,width:1.5pt)
  }
  #for p in ((14,14),(50,14),(14,50),(50,50)) {tag(p,[Bỏ],width:12)}
  #tag((32,46),$x$)
- #edge((7,64),(57,64)) #edge((7,61),(7,67)) #edge((57,61),(57,67))
+ #solid-edge((7,64),(57,64)) #solid-edge((7,61),(7,67)) #solid-edge((57,61),(57,67))
  #tag((32,71),[190 cm],width:30)
- #arrow((68,34),(85,34),color:blue)
+ #arrow((68,34),(85,34),color:solid-colors.edge)
  // Standard square pyramid: apex above the center of the projected base.
  #let a=(98,53); #let b=(138,60); #let c=(158,45); #let d=(118,38); #let s=(128,7)
- #face((s,a,b),pink) #face((s,b,c),cyan)
- #for (u,v) in ((a,d),(d,c),(s,d)) {edge(u,v,dashed:true)}
- #for (u,v) in ((a,b),(b,c),(s,a),(s,b),(s,c)) {edge(u,v)}
+ #face((s,a,b),solid-colors.mid) #face((s,b,c),solid-colors.dark)
+ #for (u,v) in ((a,d),(d,c),(s,d)) {solid-edge(u,v,dashed:true)}
+ #for (u,v) in ((a,b),(b,c),(s,a),(s,b),(s,c)) {solid-edge(u,v)}
  #tag((118,61),$x$,dy:3) #tag((128,75),$(H)$)
 ]
 #let earthquake()=box(width:104mm,height:36mm)[
@@ -114,54 +121,61 @@
  #path(((59mm,21mm),(65mm,21mm),(69mm,16mm),(73mm,28mm),(78mm,7mm),(83mm,25mm),(88mm,18mm),(93mm,21mm),(100mm,21mm)),stroke:1.4pt+red)
 ]
 #let box-figure()=box(width:110mm,height:82mm)[
+ #let solid-colors=(light:rgb("#B0EFF1"),mid:rgb("#55DCE5"),dark:rgb("#29B9C7"),edge:rgb("#19535C"),soft:rgb("#357B83"))
+ #let solid-edge(a,b,dashed:false,width:1.1pt) = {
+  if dashed {edge(a,b,color:red,dashed:true,width:width)} else {edge(a,b,color:solid-colors.edge,width:width)}
+ }
+ #let solid-dot=solid-dot.with(colors:solid-colors)
  #let A=(13,46); #let B=(60,59); #let C=(92,44); #let D=(45,31)
  #let Ap=(13,13); #let Bp=(60,26); #let Cp=(92,11); #let Dp=(45,-2)
  // Keep top labels inside the frame by shifting the full group down.
  #place(top+left,dy:9mm)[
- #face((A,B,Bp,Ap),lime) #face((B,C,Cp,Bp),cyan) #face((Ap,Bp,Cp,Dp),pink)
- #for (a,b) in ((A,D),(D,C),(D,Dp)) {edge(a,b,dashed:true)}
- #for (a,b) in ((A,B),(B,C),(A,Ap),(B,Bp),(C,Cp),(Ap,Bp),(Bp,Cp),(Cp,Dp),(Dp,Ap)) {edge(a,b)}
- #edge(B,Cp,color:red,dashed:true) #edge(C,Bp,color:red,dashed:true)
+ #face((A,B,Bp,Ap),solid-colors.mid) #face((B,C,Cp,Bp),solid-colors.dark) #face((Ap,Bp,Cp,Dp),solid-colors.light)
+ #for (a,b) in ((A,D),(D,C),(D,Dp)) {solid-edge(a,b,dashed:true)}
+ #for (a,b) in ((A,B),(B,C),(A,Ap),(B,Bp),(C,Cp),(Ap,Bp),(Bp,Cp),(Cp,Dp),(Dp,Ap)) {solid-edge(a,b)}
+ #solid-edge(B,Cp,dashed:true) #solid-edge(C,Bp,dashed:true)
  #let G=((13+45+92)/3,(46+31+44)/3)
- #edge(A,C,color:red,dashed:true)
- #dot((76,35),$O$,dx:5,dy:1) #dot(G,$G$,dx:4,dy:-3)
- #dot(A,$A$,dx:-4) #dot(B,$B$,dy:5) #dot(C,$C$,dx:5) #dot(D,$D$,dx:-4,dy:-2)
- #dot(Ap,$A'$,dx:-5) #dot(Bp,$B'$,dx:0,dy:-4) #dot(Cp,$C'$,dx:5) #dot(Dp,$D'$,dy:-4)
+ #solid-edge(A,C,dashed:true)
+ #solid-dot((76,35),$O$,dx:5,dy:1) #solid-dot(G,$G$,dx:4,dy:-3)
+ #solid-dot(A,$A$,dx:-4) #solid-dot(B,$B$,dy:5) #solid-dot(C,$C$,dx:5) #solid-dot(D,$D$,dx:-4,dy:-2)
+ #solid-dot(Ap,$A'$,dx:-5) #solid-dot(Bp,$B'$,dx:0,dy:-4) #solid-dot(Cp,$C'$,dx:5) #solid-dot(Dp,$D'$,dy:-4)
  ]
 ]
 #let octagon()=box(width:82mm,height:77mm)[
  #let ps=range(8).map(i=>(41+27*calc.cos((202.5-i*45)*1deg),38+27*calc.sin((202.5-i*45)*1deg)))
- #face(ps,lime)
- #solid-path(ps.map(pt),close:true,thickness:1.6pt,color:ink)
+ #face(ps,ink)
+ // Nested polygons form one continuous border, including horizontal and vertical sides.
+ #let inset-radius=27 - (1.8pt / 1mm) / calc.cos(22.5deg)
+ #face(range(8).map(i=>(41+inset-radius*calc.cos((202.5-i*45)*1deg),38+inset-radius*calc.sin((202.5-i*45)*1deg))),lime)
  #for i in range(8) {
   let p=ps.at(i); let x=p.at(0) - 41;let y=p.at(1) - 38
   dot(p,($A$,$B$,$C$,$D$,$E$,$F$,$G$,$H$).at(i),dx:x/6,dy:y/6)
  }
 ]
 #let kiln()=box(width:112mm,height:58mm)[
- #face(((15,8),(23,3),(76,3),(68,8)),cyan)
- #face(((68,8),(76,3),(76,43),(68,48)),rgb("#179DAA"))
- #rect-at((15,8),53,40,cyan,radius:2mm)
+ #face(((15,8),(23,3),(76,3),(68,8)),solid-colors.mid)
+ #face(((68,8),(76,3),(76,43),(68,48)),solid-colors.dark)
+ #rect-at((15,8),53,40,solid-colors.mid,radius:2mm)
  #rect-at((20,13),34,29,ink,radius:2mm)
- #rect-at((23,16),28,23,rgb("#FF9D32"),radius:1mm)
- #rect-at((26,19),22,17,gold,radius:0.8mm)
+ #rect-at((23,16),28,23,solid-colors.mid,radius:1mm)
+ #rect-at((26,19),22,17,solid-colors.light,radius:0.8mm)
  #for y in (20,26,32) {edge((23,y),(26,y),color:ink,width:0.65pt); edge((48,y),(51,y),color:ink,width:0.65pt)}
  // Curved ceramic vase silhouette and rim.
- #place(top+left,curve(fill:pink,stroke:0.8pt+ink,
+ #place(top+left,curve(fill:solid-colors.dark,stroke:0.8pt+ink,
   curve.move((34mm,22mm)),curve.line((40mm,22mm)),curve.line((39mm,25mm)),
   curve.cubic((46mm,28mm),(44mm,34mm),(41mm,35mm)),
   curve.line((33mm,35mm)),curve.cubic((30mm,34mm),(28mm,28mm),(35mm,25mm)),curve.close()))
  #edge((33.5,22),(40.5,22),width:0.9pt)
  #edge((25,37),(49,37),width:1.3pt)
  #rect-at((58,14),6,9,ink,radius:0.8mm)
- #rect-at((59,16),4,3,lime,radius:0.3mm)
- #place(top+left,dx:59mm,dy:27mm,circle(radius:2mm,fill:pink,stroke:0.8pt+ink))
+ #rect-at((59,16),4,3,solid-colors.light,radius:0.3mm)
+ #place(top+left,dx:59mm,dy:27mm,circle(radius:2mm,fill:solid-colors.dark,stroke:0.8pt+ink))
  #edge((57,35),(64,35)) #edge((57,38),(64,38))
  #rect-at((19,48),7,4,ink,radius:0mm) #rect-at((58,48),7,4,ink,radius:0mm)
  #edge((10,53),(81,53))
  #rect-at((92,11),4,28,white,radius:2mm)
- #place(top+left,dx:89mm,dy:35mm,circle(radius:5mm,fill:red,stroke:1pt+ink))
- #edge((94,23),(94,39),color:red,width:2pt)
+ #place(top+left,dx:89mm,dy:35mm,circle(radius:5mm,fill:solid-colors.dark,stroke:1pt+ink))
+ #edge((94,23),(94,39),color:solid-colors.dark,width:2pt)
  #for y in (17,22,27,32) {edge((97,y),(100,y),width:0.7pt)}
  #tag((104,10),[°C])
 ]
@@ -207,28 +221,31 @@
 #let triangles()=box(width:90mm,height:66mm)[
  #let A=(45,5); #let B=(12,59); #let C=(78,59)
  #let D=(28.5,32); #let E=(61.5,32); #let F=(45,59)
- #face((A,D,E),lime) #face((B,D,F),lime) #face((C,E,F),lime) #face((D,E,F),pink)
+ #face((A,D,E),cyan) #face((B,D,F),cyan) #face((C,E,F),cyan) #face((D,E,F),pink)
  #for (a,b) in ((A,B),(B,C),(C,A),(D,E),(E,F),(F,D)) {edge(a,b)}
 ]
 #let steel()=box(width:170mm,height:79mm)[
+ #let solid-colors=(light:rgb("#FFC0CB"),mid:rgb("#FF91A4"),dark:rgb("#E9748D"),edge:rgb("#823C4C"),soft:rgb("#A64D63"))
+ #let solid-edge=solid-edge.with(colors:solid-colors)
+ #let solid-dot=solid-dot.with(colors:solid-colors)
  #let A=(8,57); #let B=(62,57); #let C=(62,16); #let D=(8,16); #let O=(35,36.5)
- #face((A,B,O),pink) #face((A,O,D),lime) #face((D,O,C),cyan)
+ #face((A,B,O),solid-colors.mid) #face((A,O,D),solid-colors.light) #face((D,O,C),solid-colors.dark)
  // Irregular right edge is damaged material removed with OBC.
  #face((O,C,(62,22),(52,27),(51,34),(58,42),B),rgb("#D8DDE5"))
- #for (a,b) in ((A,B),(B,O),(O,C),(C,D),(D,A),(A,O),(D,O)) {edge(a,b)}
- #path(((62mm,16mm),(62mm,22mm),(52mm,27mm),(51mm,34mm),(58mm,42mm),(62mm,57mm)),stroke:1pt+ink)
- #dot(A,$A$,dy:5) #dot(B,$B$,dy:5) #dot(C,$C$,dy:-4) #dot(D,$D$,dy:-4) #dot(O,$O$,dy:-5)
- #arrow((73,36),(89,36),color:blue)
+ #for (a,b) in ((A,B),(B,O),(O,C),(C,D),(D,A),(A,O),(D,O)) {solid-edge(a,b)}
+ #path(((62mm,16mm),(62mm,22mm),(52mm,27mm),(51mm,34mm),(58mm,42mm),(62mm,57mm)),stroke:1pt+solid-colors.edge)
+ #solid-dot(A,$A$,dy:5) #solid-dot(B,$B$,dy:5) #solid-dot(C,$C$,dy:-4) #solid-dot(D,$D$,dy:-4) #solid-dot(O,$O$,dy:-5)
+ #arrow((73,36),(89,36),color:solid-colors.edge)
  // OA=OB=OD=1.95; AB=BD=3.12; AD=2.34. Exact 3D model before projection.
  #let l=calc.sqrt(3.12*3.12 - 1.17*1.17)
  #let cy=(l*l - 1.17*1.17)/(2*l)
  #let h=calc.sqrt(1.95*1.95 - 1.17*1.17-cy*cy)
  #let p(x,y,z)=(121+16*x+4*y,43+3*x+6*y - 29*z)
  #let a=p(-1.17,0,0); #let d=p(1.17,0,0); #let b=p(0,l,0); #let o=p(0,cy,h)
- #face((o,a,b),pink) #face((o,b,d),cyan)
- #edge(a,d,dashed:true)
- #edge(a,b) #edge(b,d) #edge(o,b) #edge(o,a) #edge(o,d)
- #dot(o,$O$,dy:-4) #dot(a,$A$,dx:-4,dy:3) #dot(d,$D$,dx:4,dy:3) #dot(b,$B equiv C$,dy:6)
+ #face((o,a,b),solid-colors.mid) #face((o,b,d),solid-colors.dark)
+ #solid-edge(a,d,dashed:true)
+ #solid-edge(a,b) #solid-edge(b,d) #solid-edge(o,b) #solid-edge(o,a) #solid-edge(o,d)
+ #solid-dot(o,$O$,dy:-4) #solid-dot(a,$A$,dx:-4,dy:3) #solid-dot(d,$D$,dx:4,dy:3) #solid-dot(b,$B equiv C$,dy:6)
 ]
 #let factory()=box(width:100mm,height:40mm)[
  #face(((10,33),(10,15),(25,8),(25,15),(40,8),(40,15),(55,8),(55,33)),cyan)

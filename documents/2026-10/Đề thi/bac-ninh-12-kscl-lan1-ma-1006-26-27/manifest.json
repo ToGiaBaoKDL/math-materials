@@ -345,7 +345,7 @@
     "review_status": "pending",
     "compile": "passed",
     "content": "All 22 printed questions (12 multiple-choice, 4 true/false, 6 short-answer) transcribed and compared with the four photographs. Source II.1(a) 4x and I.6(D) AC confirmed with enlarged crops. Handwriting omitted. No solution section added.",
-    "layout": "Normal exam figures reduced uniformly by 8%; final question stays on the final page with HẾT at the bottom. Writing variant keeps each question with all its ruled lines in an unbreakable block, caps line counts by measured question height, and fills remaining page space with extra rules. Both PDFs rebuilt; text extraction checks all 22 questions and matching writing headings, with no question-free pages. Full-page visual review pending. Section-to-question spacing increased to 6 mm. Final exam question wrapper now has explicit 6 mm top spacing; bbox verification shows an 11.16 pt clear gap after III.5 and 12.74 pt after the Part II instruction. Exam remains 8 pages; writing variant 18 pages.",
+    "layout": "Bac Ninh livestream edition only: lesson heading/header/footer, original exam question styling retained. Writing height allowance adapted to lesson margins. Both variants rebuilt; extracted text confirms 22 questions, date 23/10/2026 and no question-free pages. Full-page visual review pending.",
     "figures": "Updated oblique labels and consistent filled-vector dashes; variation values vertically ordered 0 > -1 > -2, centered signs and complete border; centered-apex pyramid with opaque pink/cyan visible faces, hidden base shown only by dashed edges, edge-length x; net fold dashes increased to 1.5 pt; equal filled-vector octagon edges; detailed kiln illustration. Five revised figures inspected standalone. Octagon perimeter now one closed filled-vector path, uniformly 1.6 pt on all eight edges; final perimeter change not visually reviewed. III.3 redesigned with A/B transmitter icons, ground receiver M, elevated command reference C, vertical guide and corner-arc plane label; visually inspected. M chosen on MA+MB=20; affine coordinates preserved. Final III.3 corner arc reduced to 18 mm and label placed near vertex; right-angle marker follows projected -Oy and vertical directions. III.5 uses an oblique affine view of unchanged 3D vertices. Both final standalone figures visually inspected. III.6 factory illustration removed at user request; final HẾT verified after the last question in rebuilt PDF.",
     "sources": "Original photo and bundled-source checksums verified. source.pdf contains all four original photos in order.",
     "publication": "Explicit include_writing enabled; upload dry-run selects de, de-cach, source. Four publication policy tests pass. No remote upload or Sheet mutation performed.",
@@ -355,15 +355,15 @@
   "outputs": {
     "de": {
       "pdf": "assets/targets/2026-10/Đề thi/bac-ninh-12-kscl-lan1-ma-1006-26-27/de.pdf",
-      "pages": 8,
-      "bytes": 280755,
-      "sha256": "7bb996953819b9daa267ec84d57f5b91b613467d14905ec0f6129ca2f4d035fd"
+      "pages": 9,
+      "bytes": 472717,
+      "sha256": "0248ad89dc00389f75e534ee7b679bed8cf815f29ad62a04a65c8b9af9d9d8eb"
     },
     "de-cach": {
       "pdf": "assets/targets/2026-10/Đề thi/bac-ninh-12-kscl-lan1-ma-1006-26-27/de-cach.pdf",
       "pages": 18,
-      "bytes": 310699,
-      "sha256": "432dfa63e71bd205e4dc12e485f145fb87991fdfb2425405fe99da426f96ce28"
+      "bytes": 506691,
+      "sha256": "3bdbf69c30c3974d888dd13c29cf12dc5452e7727944be5e76f112b4df31bdb3"
     }
   },
   "publication": {

@@ -3,13 +3,16 @@
 #import "/templates/writing.typ": writing-space, final-writing-space
 #import "/templates/theme.typ": writing-style, palette
 #let questions(variant:"de") = {
- let fig(name) = scale(x:if variant == "de" {92%} else {100%},y:if variant == "de" {92%} else {100%},reflow:true,original-fig(name))
+ let fig(name) = {
+  let size = (if variant == "de" {92%} else {100%}) * (if name == "steel" {1.08} else {1})
+  scale(x:size,y:size,reflow:true,original-fig(name))
+ }
  let base = exam-question.with(keep-body:false,statement-gap:4mm,answer-gap:3.5mm)
  let q(number,body,answers:(),statements:(),..args) = {
   if variant == "de-cach" { context {
    let count=if statements.len()>0 {12} else if answers.len()>0 {6} else {16}
    let prompt = [#base(number,body,answers:answers,statements:statements,..args)]
-   let available = 230mm - measure(prompt,width:186mm).height - measure(writing-space(0,gap:9mm),width:186mm).height
+   let available = 210mm - measure(prompt,width:186mm).height - measure(writing-space(0,gap:9mm),width:186mm).height
    let count = calc.min(count,calc.max(2,calc.floor(available / 9mm)))
    block(breakable:false)[
     #base(number,body,answers:answers,statements:statements,..args)
@@ -87,10 +90,12 @@
  #fig("steel")
  nên người đó cắt bỏ tam giác $O B C$ và hàn hai mép $O B$, $O C$ với nhau để thu được một hình tứ diện $O A B D$ (không có mặt $A B D$). Dụng cụ này sẽ được vùi đất xung quanh sao cho đỉnh $O$ quay xuống và mặt $A B D$ hướng lên trên, khi đựng đầy vật liệu lỏng thì phần không gian trong lòng dụng cụ hoàn toàn bị lấp đầy. Tính thể tích của vật liệu lỏng được đựng đầy trong dụng cụ. (Làm tròn kết quả đến hàng phần mười của đơn vị m³ và xem độ dày của tấm thép không đáng kể).],keep-body:false)
  let last-question = [
- #q(6,[Nếu một doanh nghiệp sản xuất $x$ sản phẩm trong một tháng ($x in NN^*;1<=x<=4500$) thì doanh thu nhận được khi bán hết số sản phẩm đó là $F(x)=-"0,01"x^2+400x$ (nghìn đồng), trong khi chi phí sản xuất bình quân cho mỗi sản phẩm là $G(x)=frac(25000,x)+180$ (nghìn đồng). Giả sử số sản phẩm sản xuất ra luôn được bán hết. Trong một tháng, doanh nghiệp đó cần sản xuất ít nhất bao nhiêu sản phẩm để lợi nhuận thu được lớn hơn $140$ triệu đồng?])
+ #q(6,[Nếu một doanh nghiệp sản xuất $x$ sản phẩm trong một tháng ($x in NN^*;1<=x<=4500$) thì doanh thu nhận được khi bán hết số sản phẩm đó là $F(x)=-"0,01"x^2+400x$ (nghìn đồng), trong khi chi phí sản xuất bình quân cho mỗi sản phẩm là $G(x)=frac(25000,x)+180$ (nghìn đồng). Giả sử số sản phẩm sản xuất ra luôn được bán hết. Trong một tháng, doanh nghiệp đó cần sản xuất ít nhất bao nhiêu sản phẩm để lợi nhuận thu được lớn hơn $140$ triệu đồng?],keep-together:true)
  ]
  if variant == "de" {
-  block(height:1fr,breakable:false,above:6mm)[#last-question #v(1fr) #exam-end()]
+  last-question
+  v(1fr)
+  block(above:6mm,breakable:false)[#exam-end()]
  } else {
   last-question
   exam-end()

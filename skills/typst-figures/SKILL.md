@@ -39,6 +39,8 @@ Mỗi câu toán thực tế có một hình minh họa phù hợp dữ kiện. 
 
 ## Phối màu minh họa
 
+- Khối 3D dùng một tông màu; phân biệt mặt và cạnh bằng sắc độ đậm nhạt cùng tông. Giữ nét khuất đủ tương phản và nét đứt theo hình học. Hình khai triển đi kèm dùng sắc độ tương ứng với các mặt của khối.
+
 - Màu hình độc lập với màu nhận diện heading. Dùng các màu sáng, bão hòa rõ và hài hòa; đa dạng giữa các hình, tránh dùng xanh dương cho mọi hình. Ưu tiên hai màu chính và một màu nhấn khi cần phân biệt đối tượng; không luân phiên màu tùy tiện giữa các cạnh. Giữ cùng màu cho cùng hình ở mọi variant.
 - Các màu đã được duyệt để lựa chọn (không phải ép dùng tất cả):
 
