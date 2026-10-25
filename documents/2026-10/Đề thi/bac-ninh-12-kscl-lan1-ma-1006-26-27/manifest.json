@@ -350,20 +350,21 @@
     "sources": "Original photo and bundled-source checksums verified. source.pdf contains all four original photos in order.",
     "publication": "Explicit include_writing enabled; upload dry-run selects de, de-cach, source. Four publication policy tests pass. No remote upload or Sheet mutation performed.",
     "visual_review": "Standalone figures visually inspected. Full-page visual inspection remains pending; no full-page preview images generated.",
-    "writing": "Each question stays with heading and first two 9 mm lines. Remaining page height distributed to ruled writing areas with final-writing-space; explicit 6 mm clearance before next question. All 22 question/heading pairs verified after rebuild; full-page visual review pending."
+    "writing": "Each question stays with heading and first two 9 mm lines. Remaining page height distributed to ruled writing areas with final-writing-space; explicit 6 mm clearance before next question. All 22 question/heading pairs verified after rebuild; full-page visual review pending.",
+    "figure_colors": "Area fills mixed with 25% white using shared figure-fill token for exams, topical lessons and livestreams. Outlines, hidden lines, point markers and graph curves preserved. Six representative standalone figures visually checked: Thang Long box/fold/balloon and Bac Ninh prism/box/triangles. Full-page visual review remains pending. III.4 outer triangles now share the III.3 command-station ground color (#D9BC8F before the common 25% white mix); central pink triangle retained. Both variants rebuilt; this color substitution has not been visually reviewed."
   },
   "outputs": {
     "de": {
       "pdf": "assets/targets/2026-10/Đề thi/bac-ninh-12-kscl-lan1-ma-1006-26-27/de.pdf",
       "pages": 9,
-      "bytes": 472717,
-      "sha256": "0248ad89dc00389f75e534ee7b679bed8cf815f29ad62a04a65c8b9af9d9d8eb"
+      "bytes": 472724,
+      "sha256": "d9dd634a27880324fa301db2402731384e687cab48e3132a13d3860aa1777a3a"
     },
     "de-cach": {
       "pdf": "assets/targets/2026-10/Đề thi/bac-ninh-12-kscl-lan1-ma-1006-26-27/de-cach.pdf",
       "pages": 18,
-      "bytes": 506691,
-      "sha256": "3bdbf69c30c3974d888dd13c29cf12dc5452e7727944be5e76f112b4df31bdb3"
+      "bytes": 506697,
+      "sha256": "c07a81145652b174f9ea9ffbf3a45fd7715f2bee0005ea8fcf1914168e7f5361"
     }
   },
   "publication": {

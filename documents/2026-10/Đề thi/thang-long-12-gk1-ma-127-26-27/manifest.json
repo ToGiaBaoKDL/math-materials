@@ -697,14 +697,15 @@
     "math": "Independent arithmetic checks passed for drone positions/timing, triangle dot product/sine/altitude/parallelogram, drug derivative, derivative sign count, crane force, paper-fold minimization and pricing optimum. No source corrections required; intentionally false assertions retained.",
     "layout": "15-page combined PDF: 9 question pages and 6 answer pages. Exam date 23/10/2026. Poppler text bounds pass; all fonts embedded. Answer selections, true/false conclusions and final answers use bold fonts, including NewCMMath-Bold. Full-page visual review remains pending.",
     "figures": "All illustrations scaled uniformly to 108%. I.8 faces neon lime. Rescue ground brown and expanded to contain building footprints; contact edges emphasized, B label cleared, drone moved away from roof. Camera axes use uniform 1.5 pt solid strokes and plane label moved toward corner. Crane labels repositioned and top spacing increased to 10 mm. Standalone changed figures inspected; final 60-degree label moved outside geometry with leader.",
-    "visual_review": "Changed standalone figures visually inspected. Full-page visual review pending."
+    "visual_review": "Changed standalone figures visually inspected. Full-page visual review pending.",
+    "figure_colors": "Area fills mixed with 25% white using shared figure-fill token for exams, topical lessons and livestreams. Outlines, hidden lines, point markers and graph curves preserved. Six representative standalone figures visually checked: Thang Long box/fold/balloon and Bac Ninh prism/box/triangles. Full-page visual review remains pending."
   },
   "outputs": {
     "de-dap-an": {
       "pdf": "assets/targets/2026-10/Đề thi/thang-long-12-gk1-ma-127-26-27/de-dap-an.pdf",
       "pages": 16,
-      "bytes": 438989,
-      "sha256": "c1157e2a28462e190a6b0c911f6d9142bca6ec936eb526709c1cafe8b27874e9"
+      "bytes": 439064,
+      "sha256": "9a6ca61ea51ed5b129797d1e6cb960524663b35339cce4186e05820657e532b4"
     }
   }
 }

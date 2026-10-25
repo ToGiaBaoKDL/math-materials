@@ -1,4 +1,4 @@
-#import "/templates/drawing.typ": arrow-line, label, path, smooth, solid-path
+#import "/templates/drawing.typ": figure-fill, arrow-line, label, path, smooth, solid-path
 #import "/templates/components.typ": figure-panel
 #let blue = rgb("#0077C8")
 #let brown = rgb("#263345")
@@ -8,13 +8,14 @@
 #let cyan = rgb("#55DCE5")
 #let salmon = rgb("#FF91A4")
 #let lime = rgb("#BFFF36")
+#let area-fill(color) = if color == brown or color == white { color } else { figure-fill(color) }
 #let pt(p) = (p.at(0) * 1mm, p.at(1) * 1mm)
 #let edge(a, b, color: brown, dashed: false) = path((pt(a), pt(b)), stroke: (
   paint: color,
   thickness: 1.2pt,
   dash: if dashed { (2.5pt, 2.5pt) } else { "solid" },
 ))
-#let face(points, color) = path(points.map(pt), close: true, fill: color, stroke: none)
+#let face(points, color) = path(points.map(pt), close: true, fill:area-fill(color), stroke: none)
 #let tag(p, t, dx: 0, dy: 0, width: 10) = label(pt(p), t, dx: dx * 1mm, dy: dy * 1mm, width: width * 1mm)
 #let dot(p, t, dx: 0, dy: 0) = {
   place(top + left, dx: p.at(0) * 1mm - 0.65mm, dy: p.at(1) * 1mm - 0.65mm, circle(
@@ -27,7 +28,7 @@
 #let arrow(a, b, color: blue) = arrow-line(pt(a), pt(b), color: color, thickness: 1.2pt)
 #let disc(p, r, color) = place(top + left, dx: (p.at(0) - r) * 1mm, dy: (p.at(1) - r) * 1mm, circle(
   radius: r * 1mm,
-  fill: color,
+  fill:area-fill(color),
   stroke: 1pt + brown,
 ))
 #let drone(p) = {
@@ -35,10 +36,10 @@
   for (a,b) in ((-5,-3),(-5,3),(5,-3),(5,3)) {
     edge((x,y),(x+a,y+b),color: brown)
     place(top + left, dx: (x + a - 2.8)*1mm, dy: (y + b - 1.1)*1mm,
-      ellipse(width:5.6mm,height:2.2mm,fill:lime,stroke:0.8pt+brown))
+      ellipse(width:5.6mm,height:2.2mm,fill:area-fill(lime),stroke:0.8pt+brown))
   }
   place(top + left,dx:(x - 2.8)*1mm,dy:(y - 1.8)*1mm,
-    rect(width:5.6mm,height:3.6mm,radius:1mm,fill:pink,stroke:0.8pt+brown))
+    rect(width:5.6mm,height:3.6mm,radius:1mm,fill:area-fill(pink),stroke:0.8pt+brown))
 }
 #let graph(kind) = box(width: 88mm, height: 70mm)[
   #let p(x, y) = (43 + 13 * x, 47 - 9 * y)
@@ -123,8 +124,8 @@
   #arrow((55,12),(78,12),color:red) #tag((69,6),$s(t)$,width:16)
 ]
 #let balloon() = box(width:98mm,height:72mm)[
-  #place(top+left,dx:24mm,dy:3mm,ellipse(width:28mm,height:32mm,fill:pink,stroke:1.2pt+brown))
-  #place(top+left,dx:32mm,dy:3mm,ellipse(width:12mm,height:32mm,fill:lime,stroke:0.9pt+brown))
+  #place(top+left,dx:24mm,dy:3mm,ellipse(width:28mm,height:32mm,fill:area-fill(pink),stroke:1.2pt+brown))
+  #place(top+left,dx:32mm,dy:3mm,ellipse(width:12mm,height:32mm,fill:area-fill(lime),stroke:0.9pt+brown))
   #edge((31,32),(34,39)) #edge((45,32),(42,39))
   #face(((33,38),(43,38),(42,43),(34,43)),rgb("#FFD43B"))
   #edge((8,65),(88,65)) #tag((28,70),[Mặt đất],width:26)
@@ -151,12 +152,12 @@
   #tag((24,89),[Trạm cứu hộ],width:35)
 ]
 #let medicine() = box(width:110mm,height:38mm)[
-  #place(top+left,dx:12mm,dy:11mm,rect(width:18mm,height:23mm,radius:3mm,fill:cyan,stroke:1pt+brown))
-  #place(top+left,dx:16mm,dy:6mm,rect(width:10mm,height:7mm,radius:1mm,fill:cyan,stroke:1pt+brown))
-  #place(top+left,dx:14mm,dy:3mm,rect(width:14mm,height:5mm,radius:1mm,fill:pink,stroke:1pt+brown))
+  #place(top+left,dx:12mm,dy:11mm,rect(width:18mm,height:23mm,radius:3mm,fill:area-fill(cyan),stroke:1pt+brown))
+  #place(top+left,dx:16mm,dy:6mm,rect(width:10mm,height:7mm,radius:1mm,fill:area-fill(cyan),stroke:1pt+brown))
+  #place(top+left,dx:14mm,dy:3mm,rect(width:14mm,height:5mm,radius:1mm,fill:area-fill(pink),stroke:1pt+brown))
   #place(top+left,dx:14mm,dy:18mm,rect(width:14mm,height:10mm,radius:1mm,fill:white,stroke:none))
   #edge((18,23),(24,23),color:red) #edge((21,20),(21,26),color:red)
-  #place(top+left,dx:48mm,dy:16mm,rect(width:34mm,height:6mm,radius:0.7mm,fill:cyan,stroke:1pt+brown))
+  #place(top+left,dx:48mm,dy:16mm,rect(width:34mm,height:6mm,radius:0.7mm,fill:area-fill(cyan),stroke:1pt+brown))
   #edge((39,19),(48,19)) #edge((39,15),(39,23))
   #edge((48,13),(48,25))
   #face(((82,17),(86,18),(86,20),(82,21)),pink)

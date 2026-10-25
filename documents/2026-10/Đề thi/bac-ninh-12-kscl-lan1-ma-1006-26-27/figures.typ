@@ -1,4 +1,4 @@
-#import "/templates/drawing.typ": path, smooth, arrow-line, label, solid-path
+#import "/templates/drawing.typ": figure-fill, path, smooth, arrow-line, label, solid-path
 #import "/templates/components.typ": figure-panel
 #let ink=rgb("#263345")
 #let blue=rgb("#005FE6")
@@ -7,6 +7,8 @@
 #let lime=rgb("#BFFF36")
 #let cyan=rgb("#35DDE5")
 #let gold=rgb("#FFD43B")
+#let ground=rgb("#D9BC8F")
+#let area-fill(color) = if color == ink or color == white { color } else { figure-fill(color) }
 #let pt(p)=(p.at(0)*1mm,p.at(1)*1mm)
 #let edge(a,b,color:ink,dashed:false,width:1.1pt)={
  if dashed {
@@ -21,14 +23,14 @@
   }
  } else {solid-path((pt(a),pt(b)),thickness:width,color:color)}
 }
-#let face(ps,color)=path(ps.map(pt),close:true,fill:color,stroke:none)
+#let face(ps,color)=path(ps.map(pt),close:true,fill:area-fill(color),stroke:none)
 #let tag(p,t,dx:0,dy:0,width:14)=label(pt(p),t,dx:dx*1mm,dy:dy*1mm,width:width*1mm)
 #let arrow(a,b,color:ink)=arrow-line(pt(a),pt(b),color:color,thickness:1.2pt)
 #let dot(p,t,dx:0,dy:0)={
  place(top+left,dx:p.at(0)*1mm - 0.65mm,dy:p.at(1)*1mm - 0.65mm,circle(radius:0.65mm,fill:red,stroke:none))
  tag(p,t,dx:dx,dy:dy)
 }
-#let rect-at(p,w,h,fill,radius:1mm)=place(top+left,dx:p.at(0)*1mm,dy:p.at(1)*1mm,rect(width:w*1mm,height:h*1mm,fill:fill,stroke:1pt+ink,radius:radius))
+#let rect-at(p,w,h,fill,radius:1mm)=place(top+left,dx:p.at(0)*1mm,dy:p.at(1)*1mm,rect(width:w*1mm,height:h*1mm,fill:area-fill(fill),stroke:1pt+ink,radius:radius))
 // One hue per solid; edge shades distinguish depth without changing line weight.
 #let solid-colors=(light:rgb("#FFB5C6"),mid:rgb("#FF789A"),dark:rgb("#E84D78"),edge:rgb("#78253E"),soft:rgb("#A83D5C"))
 #let solid-edge(a,b,dashed:false,width:1.1pt,colors:solid-colors) = edge(a,b,color:if dashed {colors.soft} else if b.at(1) < a.at(1) {colors.soft} else {colors.edge},dashed:dashed,width:width)
@@ -161,7 +163,7 @@
  #rect-at((26,19),22,17,solid-colors.light,radius:0.8mm)
  #for y in (20,26,32) {edge((23,y),(26,y),color:ink,width:0.65pt); edge((48,y),(51,y),color:ink,width:0.65pt)}
  // Curved ceramic vase silhouette and rim.
- #place(top+left,curve(fill:solid-colors.dark,stroke:0.8pt+ink,
+ #place(top+left,curve(fill:area-fill(solid-colors.dark),stroke:0.8pt+ink,
   curve.move((34mm,22mm)),curve.line((40mm,22mm)),curve.line((39mm,25mm)),
   curve.cubic((46mm,28mm),(44mm,34mm),(41mm,35mm)),
   curve.line((33mm,35mm)),curve.cubic((30mm,34mm),(28mm,28mm),(35mm,25mm)),curve.close()))
@@ -169,12 +171,12 @@
  #edge((25,37),(49,37),width:1.3pt)
  #rect-at((58,14),6,9,ink,radius:0.8mm)
  #rect-at((59,16),4,3,solid-colors.light,radius:0.3mm)
- #place(top+left,dx:59mm,dy:27mm,circle(radius:2mm,fill:solid-colors.dark,stroke:0.8pt+ink))
+ #place(top+left,dx:59mm,dy:27mm,circle(radius:2mm,fill:area-fill(solid-colors.dark),stroke:0.8pt+ink))
  #edge((57,35),(64,35)) #edge((57,38),(64,38))
  #rect-at((19,48),7,4,ink,radius:0mm) #rect-at((58,48),7,4,ink,radius:0mm)
  #edge((10,53),(81,53))
  #rect-at((92,11),4,28,white,radius:2mm)
- #place(top+left,dx:89mm,dy:35mm,circle(radius:5mm,fill:solid-colors.dark,stroke:1pt+ink))
+ #place(top+left,dx:89mm,dy:35mm,circle(radius:5mm,fill:area-fill(solid-colors.dark),stroke:1pt+ink))
  #edge((94,23),(94,39),color:solid-colors.dark,width:2pt)
  #for y in (17,22,27,32) {edge((97,y),(100,y),width:0.7pt)}
  #tag((104,10),[°C])
@@ -184,7 +186,7 @@
  #let p(x,y,z)=(65+5*x+1.6*y,78 - 1.8*y - 12*z)
  #let A=p(6,0,0); #let B=p(-6,0,0); #let C=p(0,12,3); #let H=p(0,12,0)
  #let M=p(-4,8*calc.sqrt(1 - 16/100),0)
- #face(((5,94),(117,94),(143,48),(31,48)),rgb("#D9BC8F"))
+ #face(((5,94),(117,94),(143,48),(31,48)),ground)
  #solid-path(((5mm,94mm),(117mm,94mm),(143mm,48mm),(31mm,48mm)),close:true,thickness:0.7pt,color:rgb("#8C633B"))
  // Corner arc denotes the plane label, not a measured angle.
  #smooth(t=>pt((5+18*calc.cos(t*1rad),94+18*calc.sin(t*1rad))),t=>(-18mm*calc.sin(t*1rad),18mm*calc.cos(t*1rad)),-1.056,0,stroke:0.8pt+ink)
@@ -221,7 +223,7 @@
 #let triangles()=box(width:90mm,height:66mm)[
  #let A=(45,5); #let B=(12,59); #let C=(78,59)
  #let D=(28.5,32); #let E=(61.5,32); #let F=(45,59)
- #face((A,D,E),cyan) #face((B,D,F),cyan) #face((C,E,F),cyan) #face((D,E,F),pink)
+ #face((A,D,E),ground) #face((B,D,F),ground) #face((C,E,F),ground) #face((D,E,F),pink)
  #for (a,b) in ((A,B),(B,C),(C,A),(D,E),(E,F),(F,D)) {edge(a,b)}
 ]
 #let steel()=box(width:170mm,height:79mm)[

@@ -39,9 +39,10 @@ Mỗi câu toán thực tế có một hình minh họa phù hợp dữ kiện. 
 
 ## Phối màu minh họa
 
+- Áp dụng chung cho **đề thi, chuyên đề và livestream**, ở mọi variant: màu tô mặt/vùng minh họa pha **25% trắng** qua `figure-fill(color)` trong `templates/drawing.typ`, dùng token `figure-style.fill-white` trong theme. Gọi đúng một lần ở nơi tô (kể cả ellipse, rect và curve), giữ màu đục để vùng chồng không đậm thêm. Không làm nhạt chữ, nét viền, nét khuất, điểm, đường cong đồ thị hoặc chi tiết tối mang vai trò đường biên. Bảng màu dưới là màu gốc trước khi pha trắng; không pha lại màu đã xử lý.
 - Khối 3D dùng một tông màu; phân biệt mặt và cạnh bằng sắc độ đậm nhạt cùng tông. Giữ nét khuất đủ tương phản và nét đứt theo hình học. Hình khai triển đi kèm dùng sắc độ tương ứng với các mặt của khối.
 
-- Màu hình độc lập với màu nhận diện heading. Dùng các màu sáng, bão hòa rõ và hài hòa; đa dạng giữa các hình, tránh dùng xanh dương cho mọi hình. Ưu tiên hai màu chính và một màu nhấn khi cần phân biệt đối tượng; không luân phiên màu tùy tiện giữa các cạnh. Giữ cùng màu cho cùng hình ở mọi variant.
+- Màu hình độc lập với màu nhận diện heading. Dùng các màu sáng, dịu và hài hòa; đa dạng giữa các hình, tránh dùng xanh dương cho mọi hình. Ưu tiên hai màu chính và một màu nhấn khi cần phân biệt đối tượng; không luân phiên màu tùy tiện giữa các cạnh. Giữ cùng màu cho cùng hình ở mọi variant.
 - Các màu đã được duyệt để lựa chọn (không phải ép dùng tất cả):
 
   | Màu | Mã | Vai trò gợi ý |
@@ -55,7 +56,7 @@ Mỗi câu toán thực tế có một hình minh họa phù hợp dữ kiện. 
   | Xanh dương / cam | `#0077C8` / `#C45A00` | Cạnh hoặc cặp màu tương phản |
   | Xanh lá đậm | `#17623E` | Viền/đường phụ khi cần tương phản |
 
-- Ví dụ phối: Salmon Pink–cyan, lime–cyan với viền đậm, Cinnamon–mint với nét khuất sáng. Chọn theo vai trò và diện tích: một vùng chủ đạo, vùng phụ nhỏ hơn, nét/nhãn tương phản. Không tăng mọi màu lên neon cùng lúc. Không pha trắng quá mức làm mặt khối nhợt nhạt; vẫn có thể dùng nền nhẹ khi cần tách nét.
+- Ví dụ phối: Salmon Pink–cyan, lime–cyan với viền đậm, Cinnamon–mint với nét khuất sáng. Chọn theo vai trò và diện tích: một vùng chủ đạo, vùng phụ nhỏ hơn, nét/nhãn tương phản. Không tăng mọi màu lên neon cùng lúc. Pha trắng theo token chung, giữ khác biệt giữa mặt sáng và mặt tối; vẫn có thể dùng nền nhẹ khi cần tách nét.
 - Trên Cinnamon, nét đứt kem `#FFF3D6` nhìn rõ; trên mặt sáng có thể dùng nâu đậm `#482500`. Kiểm tra tương phản ở cả nền tô và nền trắng, không mặc định giảm opacity nét khuất. Giữ nhãn đen ở nơi đọc rõ, dịch nhãn khỏi cạnh thay vì thêm ô nền trắng che hình.
 - Đường cong hàm số mặc định xanh dương đậm sáng `#005FE6`, nét 1,5 pt qua `plot-style.curve`; không dùng convention tím cũ. Đường dóng phụ phải phân biệt rõ với đường cong.
 - Nền màu ôm miền hình thực; không thêm hình chữ nhật dư chỉ để có background. Vùng nước/đất hay mặt phẳng hỗ trợ phải đúng phạm vi minh họa. Phối màu không được làm mất đường gấp, mũi tên hoặc dữ kiện của nguồn.

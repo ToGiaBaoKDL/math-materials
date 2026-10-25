@@ -1,5 +1,8 @@
 #import "theme.typ": figure-style, palette
 
+// Opaque pastel fills stay consistent where faces overlap. Apply once per fill.
+#let figure-fill(color) = color.mix((white, figure-style.fill-white / (100% - figure-style.fill-white)), space: rgb)
+
 #let edge-color = palette.primary.transparentize(100% - figure-style.edge-opacity.visible)
 #let hidden-color = palette.primary.transparentize(100% - figure-style.edge-opacity.hidden)
 #let edge = figure-style.edge-width + edge-color

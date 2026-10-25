@@ -61,6 +61,7 @@
 )
 
 #let figure-style = (
+  fill-white: 25%,
   edge-width: line-style.edge,
   edge-opacity: (visible: 100%, hidden: 60%),
   hatch-width: line-style.hatch,
