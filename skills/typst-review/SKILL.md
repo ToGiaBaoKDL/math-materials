@@ -21,7 +21,7 @@ Quy tắc vận hành liên quan: [build](../../docs/build.md).
 
 - Đối chiếu số câu, lựa chọn, số liệu, dấu toán, số mũ/chỉ số, vector, prime, tên điểm và đơn vị với nguồn. PDF chỉ chứa nội dung trong phạm vi và phần bổ sung đã được yêu cầu.
 - Xem toàn trang rồi phóng hình: nét thấy/khuất, nhãn, vùng tô/gạch, đối xứng, tiếp tuyến và giao tuyến. Kiểm tra dữ kiện mô hình, và tọa độ vector xuất nếu quan hệ cần xác nhận chính xác.
-- Với cả đề thi, chuyên đề và livestream: kiểm tra bản cách chừa ít dòng cho câu chỉ chọn đáp án/một phép tính nhỏ, không giãn câu dễ để lấp trang; hình đơn nhỏ được cân nhắc đặt cạnh câu bằng grid hai cột. Với đề thi, đối chiếu nguồn để bảo đảm câu không có hình gốc không bị tự thêm minh họa.
+- Với cả đề thi, chuyên đề và livestream: kiểm tra bản cách giữ tối thiểu khoảng 3 dòng viết cho câu chỉ chọn đáp án/một phép tính nhỏ, không giãn câu dễ để lấp trang; hình đơn nhỏ được cân nhắc đặt cạnh câu bằng grid hai cột. Với đề thi, đối chiếu nguồn để bảo đảm câu không có hình gốc không bị tự thêm minh họa.
 - Khi đổi style hình, kiểm tra độ dày các cạnh theo theme, phân biệt với hachure; sắc độ mặt và nét đứt vẫn rõ khi nhìn toàn trang. Khi chuyển hàm dùng chung, đối chiếu tọa độ vector và bbox văn bản trước/sau để phát hiện thay đổi ngoài ý muốn.
 - Đối chiếu vai trò đường cắt/gấp với bài toán, nét thấy/khuất với hướng nhìn. Kiểm tra tông mặt theo hướng sáng và mapping với hình khai triển. Khi refactor header/footer, kiểm tra toàn bộ chữ và hình trong biên trang, caption/folio căn theo lề; compile thành công chưa xác nhận các lớp `place` nằm đúng chỗ.
 - Với nhóm hình, so sánh giới hạn phần hình nhìn thấy theo tiêu chí căn đã chọn. Khung có cùng chiều cao chưa đủ; hình khai triển và khối dựng phải tương ứng.
