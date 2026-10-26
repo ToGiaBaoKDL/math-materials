@@ -35,7 +35,9 @@ Quy tắc vận hành liên quan: [document-model](../../docs/document-model.md)
 
 ## Hình cho bài toán thực tế
 
-Mỗi câu toán thực tế có một hình minh họa phù hợp dữ kiện. Giữ và cải thiện hình đã có; câu thiếu hình thì dựng hình vector theo ngữ cảnh, không thêm số liệu suy ra, đáp án hoặc nhãn số ngoài đề. Mỗi câu dùng một hình hoặc một nhóm hình có cùng mục đích, tránh chèn hình trùng lặp.
+- **Đề thi:** chỉ dựng lại/cải thiện hình có trong đề gốc. Câu gốc không có hình thì không tự vẽ thêm, kể cả bài toán thực tế hoặc hình học; chỉ bổ sung khi người dùng yêu cầu riêng. Áp dụng cả bản đề, đề cách và phần đề trong bản gộp đáp án. Hình riêng của lời giải được xử lý theo phạm vi lời giải đã thống nhất.
+- **Chuyên đề/Tinh Hoa và livestream:** câu toán thực tế có thể dựng thêm hình minh họa phù hợp dữ kiện khi cần hỗ trợ hiểu đề. Giữ và cải thiện hình đã có; không thêm số liệu suy ra, đáp án hoặc nhãn số ngoài đề.
+- Mỗi câu dùng một hình hoặc một nhóm hình có cùng mục đích, tránh chèn hình trùng lặp. Chuẩn bị khung hình gọn để có thể đặt cạnh câu hỏi bằng grid hai cột theo [typst-layout](../typst-layout/SKILL.md); không mặc định mọi hình đều đứng riêng dưới câu hỏi.
 
 ## Phối màu minh họa
 

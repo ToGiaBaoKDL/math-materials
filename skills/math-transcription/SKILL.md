@@ -25,6 +25,7 @@ Quy tắc vận hành liên quan: [document-model](../../docs/document-model.md)
 - Dùng biểu thức toán Typst có thể chọn/tìm kiếm; phân số, căn và chỉ số phải có cấu trúc toán đúng. Tách nội dung khỏi màu, khoảng cách và hình dạng component.
 - Phân biệt chủ ý xuống dòng với dòng tự wrap trong ảnh. Ghi chú nối sau câu hỏi vẫn nằm trong đoạn đó; chỉ dẫn có chủ ý ở dòng riêng dùng tham số tương ứng của component.
 - Nội dung thiếu/mờ và phạm vi bản trích nằm trong manifest. Không suy đoán phần thiếu, sửa lỗi nguồn, thêm lời giải, đáp án hay chú thích biên tập vào PDF khi người dùng chưa yêu cầu.
+- Với đề thi, ghi nhận câu nào có hình trong nguồn; câu không có hình không tự bổ sung minh họa. Chuyển thông tin này cùng dữ kiện cho `typst-figures`.
 - Với hình, ghi nhận dữ kiện xác định mô hình, nhãn, đường cắt/gấp và nét thấy/khuất. Các độ dài minh họa chưa được đề xác định cần được phân biệt với dữ kiện.
 
 ## Phạm vi và metadata

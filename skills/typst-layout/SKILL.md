@@ -36,6 +36,17 @@ Profile Tinh Hoa/Livestream dùng chung template lesson; đề thi dùng exam v�
 
 Dùng template làm nguồn triển khai, skill làm quy tắc tái sử dụng. Khi thay convention được duyệt, cập nhật cả hai; không lưu lịch sử chỉnh từng mm trong README. Không lấy nội dung trường, năm học, mã đề từ ảnh tham khảo.
 
+### Khoảng viết và bố trí hình — áp dụng cả ba dạng
+
+Áp dụng cho **đề thi, chuyên đề/Tinh Hoa và livestream**, kể cả đề thi xuất thêm bản `de-cach`.
+
+- Với bản cách, đánh giá lượng thao tác cần viết của từng câu trước khi chọn số dòng. Câu nhận biết rất dễ, chỉ chọn đáp án hoặc làm một phép tính nhỏ chỉ chừa ít khoảng trống: thường 1–2 dòng viết là đủ. Không cấp khoảng giải dài đồng loạt theo số câu hoặc loại trắc nghiệm.
+- Câu nhiều bước, chứng minh hoặc nhiều ý được chừa thêm khoảng theo lời giải dự kiến. Không suy độ khó chỉ từ độ dài câu dẫn hoặc việc có hình. Khi chưa chắc, ước lượng các bước giải cần thiết để chọn khoảng phù hợp.
+- Giữ câu hỏi cùng phần đầu vùng viết; cho phép nhiều câu ngắn trên một trang. Không tự kéo giãn vùng viết của câu dễ để lấp đầy trang bằng `final-writing-space` hoặc khoảng co giãn; ưu tiên đưa câu tiếp theo lên nếu đủ chỗ.
+- Với câu có hình, linh hoạt dùng grid hai cột: câu hỏi bên trái, hình bên phải; chọn tỉ lệ cột theo độ dài đề và kích thước hình, không bắt buộc chia đôi bằng nhau. Đáp án hoặc các ý dài có thể trải toàn chiều rộng bên dưới.
+- Ưu tiên đặt cạnh bên cho hình đơn nhỏ, tránh để hình nhỏ đứng riêng ngay dưới câu hỏi tạo khoảng trống lớn. Hình rộng, nhóm nhiều hình hoặc câu có công thức dài vẫn có thể đặt dưới nếu dễ đọc hơn. Giữ nhãn đủ lớn, không ép hình/câu vào cột hẹp hoặc làm sai thứ tự đọc.
+- Việc có cần dựng thêm hình hay không theo [typst-figures](../typst-figures/SKILL.md): đề thi không có hình gốc thì không tự thêm hình minh họa.
+
 ### Font và thành phần chung
 
 - Thân chữ Times New Roman, đen, regular; FreeSerif dự phòng ký hiệu thiếu. Toán dùng New Computer Modern Math. Không tăng độ đậm toàn bộ thân bài ngoài yêu cầu.
