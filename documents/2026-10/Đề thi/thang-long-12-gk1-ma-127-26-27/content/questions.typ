@@ -1,4 +1,5 @@
 #import "/templates/exam.typ": exam-question, exam-section
+#import "/templates/components.typ": figure-panel
 #import "../figures.typ": illustration
 #let questions() = {
   let q = exam-question.with(
@@ -33,7 +34,7 @@
     columns: 4,
     answers: ([$3$.], [$2$.], [$1$.], [$- 1$.]),
   )
-  q(4, [Đường tiệm cận đứng của đồ thị hàm số $y = 2 + frac(1, x)$ có phương trình là], columns: 4, answers: (
+  q(4, keep-together: true, [Đường tiệm cận đứng của đồ thị hàm số $y = 2 + frac(1, x)$ có phương trình là], columns: 4, answers: (
     [$x = 2$.],
     [$x = 0$.],
     [$y = 2$.],
@@ -78,6 +79,7 @@
   )
   q(
     10,
+    keep-together: true,
     [Trong 8 phút đầu kể từ khi xuất phát, độ cao $h$ (tính bằng mét) so với mặt đất của khinh khí cầu vào thời điểm $t$ phút được cho bởi công thức $h ( t ) = 6 t^(3) - 81 t^(2) + 324 t$. Trong 3 phút đầu tiên, độ cao của khinh khí cầu],
     columns: 4,
     answers: ([Tăng rồi giảm.], [Giảm rồi tăng.], [Tăng.], [Giảm.]),
@@ -147,7 +149,7 @@
   q(
     3,
     [Tại một xưởng cơ khí, người ta dùng cần cẩu để di chuyển một kiện hàng. Kiện hàng nặng 50 kg được đặt trên một tấm ván gỗ hình vuông nặng 10 kg. Tấm ván được giữ cân bằng nằm ngang gồm 4 sợi dây cáp nhẹ, không giãn có độ dài bằng nhau. Một đầu của mỗi sợi dây cáp được gắn cố định vào một góc tấm ván, bốn đầu còn lại cùng được xỏ vào móc của cần cẩu. Khi cần cẩu nâng kiện hàng lên theo phương thẳng đứng, mỗi sợi dây cáp hợp với mặt phẳng tấm ván một góc $60 degree$. Lấy gia tốc rơi tự do $g = 10$ m/s². Lực căng của mỗi sợi dây cáp nối từ góc tấm ván đến móc của cần cẩu bằng bao nhiêu Newton? Kết quả làm tròn đến hàng đơn vị.
-      #illustration("crane")],
+      #figure-panel(image("../figures/factory.png", width: 110mm), above: 8mm, below: 3mm)],
   )
   q(
     4,

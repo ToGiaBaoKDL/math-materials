@@ -41,8 +41,8 @@
   place(top + left,dx:(x - 2.8)*1mm,dy:(y - 1.8)*1mm,
     rect(width:5.6mm,height:3.6mm,radius:1mm,fill:area-fill(pink),stroke:0.8pt+brown))
 }
-#let graph(kind) = box(width: 88mm, height: 70mm)[
-  #let p(x, y) = (43 + 13 * x, 47 - 9 * y)
+#let graph(kind) = box(width: 60mm, height: 35mm)[
+  #let p(x, y) = (30 + 8.5 * x, 23 - 4 * y)
   #arrow(p(-2.8, 0), p(2.9, 0), color: black)
   #arrow(p(0, -2), p(0, 4.4), color: black)
   #tag(p(2.9, 0), $x$, dy: 4)
@@ -51,7 +51,7 @@
   #if kind == "cubic" {
     smooth(
       t => pt(p(t, -t * t * t + 3 * t + 1)),
-      t => (13mm, (-3 + 3 * t * t) * 9mm),
+      t => (8.5mm, (-3 + 3 * t * t) * 4mm),
       -2.05,
       2.05,
       stroke: 1.5pt + blue,
@@ -68,15 +68,15 @@
     // Override axes for the lower derivative graph.
   }
 ]
-#let derivative-graph() = box(width: 88mm, height: 76mm)[
-  #let p(x, y) = (40 + 13 * x, 24 - 9 * y)
+#let derivative-graph() = box(width: 70mm, height: 57mm)[
+  #let p(x, y) = (32 + 10 * x, 18 - 7 * y)
   #arrow(p(-2.6, 0), p(3, 0), color: black)
   #arrow(p(0, -4.7), p(0, 2), color: black)
   #tag(p(3, 0), $x$, dy: 4) #tag(p(0, 2), $y$, dx: 4)
   #tag(p(0, 0), $O$, dx: 3, dy: -3)
   #smooth(
     t => pt(p(t, (t + 1) * (t + 1) * (t - 2))),
-    t => (13mm, -9 * (3 * t * t - 3) * 1mm),
+    t => (10mm, -7 * (3 * t * t - 3) * 1mm),
     -2.05,
     2.18,
     stroke: 1.5pt + blue,
@@ -255,7 +255,7 @@
   #tag((48, 72), [15 cm], width: 22) #tag((96, 35), [10 cm], width: 22)
 ]
 #let illustration(name) = figure-panel(
-  scale(x: if ("box", "rescue", "triangle").contains(name) { 102.6% } else { 108% }, y: if ("box", "rescue", "triangle").contains(name) { 102.6% } else { 108% }, reflow:true,
+  scale(x: if name == "cubic" { 125% } else if name == "derivative" { 100% } else if ("box", "rescue", "triangle").contains(name) { 102.6% } else { 108% }, y: if name == "cubic" { 125% } else if name == "derivative" { 100% } else if ("box", "rescue", "triangle").contains(name) { 102.6% } else { 108% }, reflow:true,
   if name == "cubic" { graph(name) } else if name == "derivative" { derivative-graph() } else {
     (
       flight: flight,
@@ -272,6 +272,6 @@
     ).at(name)()
   },
   ),
-  above: if name == "crane" { 10mm } else { 5mm },
-  below: 5mm,
+  above: if name == "crane" { 10mm } else if ("cubic", "derivative").contains(name) { 1mm } else { 5mm },
+  below: if ("cubic", "derivative").contains(name) { 1mm } else { 5mm },
 )

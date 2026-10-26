@@ -660,7 +660,12 @@
     "math_extraction": "155 question and 237 answer equations; all OLE/WMF preview pairs checked. Five lim templates decoded from MTEF selector 23, variation 16.",
     "source_layout": "Question DOCX states 4 pages; newly typeset page count used on cover.",
     "solutions": "Supplied AI & TOANMATH.com reference solutions transcribed; false statements in questions preserved.",
-    "figures": "Source DOCX non-equation image inventory verified: paragraphs 17/32 graphs (image19/58), paragraph 66 crane photograph (image142), paragraph 68 fold diagram (image151). Retain cubic, derivative, crane and fold. Crane uses a schematic vector drawing as explicitly requested. Supplemental illustrations removed from I.1, I.2, I.5, I.8, I.10, II.2, II.3, II.4 and III.1."
+    "figures": "Retained source graphs (I.3/I.9) and paper fold (III.4); supplemental drawings removed. III.3 now uses user-provided factory.png in place of the schematic crane drawing, centered at 110 mm wide with original aspect ratio. Factory image is contextual, not a dimensioned diagram of the square board.",
+    "factory_image": {
+      "path": "documents/2026-10/Đề thi/thang-long-12-gk1-ma-127-26-27/figures/factory.png",
+      "original_name": "factory.png",
+      "sha256": "f9649f700ac7b7ed64f00ed8d4085e415e095b2973fad2b9cf4044bc7049cb05"
+    }
   },
   "variants": {
     "de": {
@@ -695,17 +700,17 @@
     "compile": "passed",
     "content": "22 questions and 22 source solutions in order. All 155 question and 237 solution MathType formulas decoded, nonempty and checked against preview. Source hashes verified.",
     "math": "Independent arithmetic checks passed for drone positions/timing, triangle dot product/sine/altitude/parallelogram, drug derivative, derivative sign count, crane force, paper-fold minimization and pricing optimum. No source corrections required; intentionally false assertions retained.",
-    "layout": "Combined exam/answers rebuilt after removing supplemental illustrations; all 22 question calls retained and crane question present in extracted PDF. Full-page visual review pending.",
-    "figures": "Removed nine supplemental illustration placements, verified only cubic/derivative graphs, schematic crane and fold remain in questions. Source image inventory checked against DOCX. Crane retained by explicit user instruction.",
+    "layout": "I.3 graph enlarged 15%; complete I.3 remains on page 1 and complete I.4 starts page 2, verified in final extracted PDF. Factory photograph top gap increased from 3 to 8 mm. Combined PDF rebuilt; full-page visual review pending. Final PDF verifies I.9 stem, graph and four choices on page 2. I.10 kept together with choices on page 3. Final rebuilt PDF retains all of I.9 on page 2 with reduced bottom whitespace; I.10 begins page 3. Final PDF text confirms complete I.3 including all choices still on page 1; I.4 starts page 2.",
+    "figures": "III.3 schematic crane replaced by user-provided factory.png. Source photo visually inspected; original aspect ratio retained at 110 mm width. PDF image embedding checked after rebuild. Graphs and paper fold retained. I.9 derivative graph compacted to 60×32 mm with consistent coordinate/tangent scaling, readable labels preserved; standalone graph visually inspected. I.9 graph rebalanced to 70×57 mm with matching coordinate/tangent scaling, visually checked standalone. I.3 uniform scale increased from 115% to 125% (75×43.75 mm), preserving geometry and label proportions.",
     "visual_review": "Changed standalone figures visually inspected. Full-page visual review pending.",
     "figure_colors": "Area fills mixed with 25% white using shared figure-fill token for exams, topical lessons and livestreams. Outlines, hidden lines, point markers and graph curves preserved. Six representative standalone figures visually checked: Thang Long box/fold/balloon and Bac Ninh prism/box/triangles. Full-page visual review remains pending."
   },
   "outputs": {
     "de-dap-an": {
       "pdf": "assets/targets/2026-10/Đề thi/thang-long-12-gk1-ma-127-26-27/de-dap-an.pdf",
-      "pages": 13,
-      "bytes": 424257,
-      "sha256": "b1a4bff62bff66202eb94d6379ae1758b0a3772a27a96bad2d08e6b10751b1a5"
+      "pages": 12,
+      "bytes": 4340217,
+      "sha256": "bbb7c796f77de8d443f33aa27c44d20589632ea8ab4229cebfc46366d81583fd"
     }
   }
 }
