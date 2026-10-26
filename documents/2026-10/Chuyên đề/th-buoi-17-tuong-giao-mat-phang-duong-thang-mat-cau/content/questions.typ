@@ -28,6 +28,8 @@
   answers: (),
   source-id: "bai-hoc-6", writing-lines: 8, solution: solutions.at("bai-hoc-6"))
 #theory(3,variant:variant)
+#[
+#set par(leading: if variant == "de" {0.65em} else {0.92em}, spacing: if variant == "de" {2mm} else {3.5mm})
 #item("7", [Trong không gian với hệ tọa độ $O x y z$, cho mặt phẳng $lr(( P )) : 2 x - 2 y + z + 3 = 0$ và mặt cầu $lr(( S )) : lr(( x - 1 )) ^(2) + lr(( y + 3 )) ^(2) + z ^(2) = 9$ và đường thẳng $d : frac(x, - 2) = frac(y + 2, 1) = frac(z + 1, 2)$. Cho các phát biểu sau đây:
 
 I. Đường thẳng $d$ cắt mặt cầu $lr(( S ))$ tại 2 điểm phân biệt.
@@ -40,10 +42,11 @@ IV. Đường thẳng $d$ cắt mặt phẳng $lr(( P ))$ tại một điểm.
 
 Số phát biểu đúng là:],
   answers: ([$4$.],[$1$.],[$2$.],[$3$.],),
-  source-id: "bai-hoc-7", writing-lines: 8, solution: solutions.at("bai-hoc-7"))
+  source-id: "bai-hoc-7", writing-lines: 4, solution: solutions.at("bai-hoc-7"))
 #item("8", [Trong không gian $O x y z$, cho mặt cầu $lr(( S )) : x ^(2) + y ^(2) + z ^(2) + 4 x - 6 y + m = 0$ ( $m$ là tham số) và đường thẳng $Δ : cases(display(x = 4 + 2 t), display(y = 3 + t), display(z = 3 + 2 t))$. Biết đường thẳng $Δ$ cắt mặt cầu $lr(( S ))$ tại hai điểm phân biệt $A "," B$ sao cho $A B = 8$. Giá trị của $m$ là],
   answers: ([$m = 5$.],[$m = 12$.],[$m = - 12$.],[$m = - 10$.],),
   source-id: "bai-hoc-8", writing-lines: 6, solution: solutions.at("bai-hoc-8"))
+]
 #lesson-section([BÀI TẬP TỰ LUYỆN], badge: [4])
 #item("1", [Trong không gian với hệ tọa độ $O x y z$ cho hai đường thẳng $d _(1) : frac(x - 1, 2) = frac(y, 1) = frac(z + 2, - 2)$, $d _(2) : frac(x + 2, - 2) = frac(y - 1, - 1) = frac(z, 2)$. Xét vị trí tương đối của hai đường thẳng đã cho.],
   answers: ([Chéo nhau],[Trùng nhau],[Song song],[Cắt nhau],),

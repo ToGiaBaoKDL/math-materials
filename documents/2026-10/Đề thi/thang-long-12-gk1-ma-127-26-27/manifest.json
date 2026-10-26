@@ -660,7 +660,7 @@
     "math_extraction": "155 question and 237 answer equations; all OLE/WMF preview pairs checked. Five lim templates decoded from MTEF selector 23, variation 16.",
     "source_layout": "Question DOCX states 4 pages; newly typeset page count used on cover.",
     "solutions": "Supplied AI & TOANMATH.com reference solutions transcribed; false statements in questions preserved.",
-    "figures": "Source images 19/58 (graphs), 142 (crane photograph), 151 (paper fold) inspected and replaced with native vector drawings; supplemental illustrations contain no computed answer coordinates."
+    "figures": "Source DOCX non-equation image inventory verified: paragraphs 17/32 graphs (image19/58), paragraph 66 crane photograph (image142), paragraph 68 fold diagram (image151). Retain cubic, derivative, crane and fold. Crane uses a schematic vector drawing as explicitly requested. Supplemental illustrations removed from I.1, I.2, I.5, I.8, I.10, II.2, II.3, II.4 and III.1."
   },
   "variants": {
     "de": {
@@ -695,17 +695,17 @@
     "compile": "passed",
     "content": "22 questions and 22 source solutions in order. All 155 question and 237 solution MathType formulas decoded, nonempty and checked against preview. Source hashes verified.",
     "math": "Independent arithmetic checks passed for drone positions/timing, triangle dot product/sine/altitude/parallelogram, drug derivative, derivative sign count, crane force, paper-fold minimization and pricing optimum. No source corrections required; intentionally false assertions retained.",
-    "layout": "15-page combined PDF: 9 question pages and 6 answer pages. Exam date 23/10/2026. Poppler text bounds pass; all fonts embedded. Answer selections, true/false conclusions and final answers use bold fonts, including NewCMMath-Bold. Full-page visual review remains pending.",
-    "figures": "All illustrations scaled uniformly to 108%. I.8 faces neon lime. Rescue ground brown and expanded to contain building footprints; contact edges emphasized, B label cleared, drone moved away from roof. Camera axes use uniform 1.5 pt solid strokes and plane label moved toward corner. Crane labels repositioned and top spacing increased to 10 mm. Standalone changed figures inspected; final 60-degree label moved outside geometry with leader.",
+    "layout": "Combined exam/answers rebuilt after removing supplemental illustrations; all 22 question calls retained and crane question present in extracted PDF. Full-page visual review pending.",
+    "figures": "Removed nine supplemental illustration placements, verified only cubic/derivative graphs, schematic crane and fold remain in questions. Source image inventory checked against DOCX. Crane retained by explicit user instruction.",
     "visual_review": "Changed standalone figures visually inspected. Full-page visual review pending.",
     "figure_colors": "Area fills mixed with 25% white using shared figure-fill token for exams, topical lessons and livestreams. Outlines, hidden lines, point markers and graph curves preserved. Six representative standalone figures visually checked: Thang Long box/fold/balloon and Bac Ninh prism/box/triangles. Full-page visual review remains pending."
   },
   "outputs": {
     "de-dap-an": {
       "pdf": "assets/targets/2026-10/Đề thi/thang-long-12-gk1-ma-127-26-27/de-dap-an.pdf",
-      "pages": 16,
-      "bytes": 439064,
-      "sha256": "9a6ca61ea51ed5b129797d1e6cb960524663b35339cce4186e05820657e532b4"
+      "pages": 13,
+      "bytes": 424257,
+      "sha256": "b1a4bff62bff66202eb94d6379ae1758b0a3772a27a96bad2d08e6b10751b1a5"
     }
   }
 }

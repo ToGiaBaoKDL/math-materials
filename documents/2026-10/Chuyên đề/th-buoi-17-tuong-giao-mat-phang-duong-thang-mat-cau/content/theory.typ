@@ -1,14 +1,15 @@
 #import "/templates/lesson.typ": lesson-section, theory-box, paragraph
 #import "../figures.typ": diagram
-#let beside(body,name)=block(breakable:false,above:3mm,below:3mm,
-  grid(columns:(1fr,69.12mm),gutter:5mm,align:left+horizon,body,diagram(name,width:69.12mm)))
+#let beside(body,name,compact:false)=block(breakable:false,above:if compact {1mm} else {3mm},below:if compact {1mm} else {3mm},
+  grid(columns:(1fr,69.12mm),gutter:5mm,align:left+horizon,body,box(height:if compact {51mm} else {auto},diagram(name,width:69.12mm))))
 #let slide-case(body,name,flow:false)=block(width:100%,breakable:flow,above:4mm,below:5mm)[
   #block(width:100%,breakable:false,body)
   #v(2mm)
   #align(center,box(width:88mm,diagram(name,width:88mm)))
 ]
 #let theory(n,variant:"de") = {
- let slide-case = slide-case.with(flow: variant == "dap-an")
+ let beside = beside.with(compact: variant != "dap-an")
+ let slide-case = slide-case.with(flow: variant != "de")
  if n==1 {
   lesson-section([VỊ TRÍ TƯƠNG ĐỐI GIỮA HAI ĐƯỜNG THẲNG],badge:[1])
   theory-box(title:[Lý thuyết cần nhớ])[

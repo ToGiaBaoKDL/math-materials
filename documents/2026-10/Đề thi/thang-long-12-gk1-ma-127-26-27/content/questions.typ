@@ -15,15 +15,13 @@
   )
   q(
     1,
-    [Trong không gian với hệ trục tọa độ $O x y z$ (đơn vị trên mỗi trục tính bằng mét) được thiết lập cho khu vực vận hành drone, một thiết bị bay di chuyển thẳng đều với vận tốc không đổi từ điểm $A ( 1 ; 1 ; 1 )$ đến điểm $B ( 7 ; 10 ; 13 )$ trong thời gian 60 giây. Trên hành trình đó, sau khi xuất phát từ $A$ được 20 giây, drone bay qua điểm kiểm soát $C ( a ; b ; c )$. Tổng $a + b + c$ bằng
-      #illustration("flight")],
+    [Trong không gian với hệ trục tọa độ $O x y z$ (đơn vị trên mỗi trục tính bằng mét) được thiết lập cho khu vực vận hành drone, một thiết bị bay di chuyển thẳng đều với vận tốc không đổi từ điểm $A ( 1 ; 1 ; 1 )$ đến điểm $B ( 7 ; 10 ; 13 )$ trong thời gian 60 giây. Trên hành trình đó, sau khi xuất phát từ $A$ được 20 giây, drone bay qua điểm kiểm soát $C ( a ; b ; c )$. Tổng $a + b + c$ bằng],
     columns: 4,
     answers: ([$18$.], [$10$.], [$15$.], [$12$.]),
   )
   q(
     2,
-    [Một chất điểm chuyển động theo phương trình $s ( t ) = t^(3) - 3 t^(2) + 5 t + 2$, trong đó thời gian $t > 0$ tính bằng giây và quãng đường $s$ tính bằng mét. Trong 5 giây đầu vận tốc nhỏ nhất của chất điểm bằng bao nhiêu?
-      #illustration("motion")],
+    [Một chất điểm chuyển động theo phương trình $s ( t ) = t^(3) - 3 t^(2) + 5 t + 2$, trong đó thời gian $t > 0$ tính bằng giây và quãng đường $s$ tính bằng mét. Trong 5 giây đầu vận tốc nhỏ nhất của chất điểm bằng bao nhiêu?],
     columns: 4,
     answers: ([$5$ m/s.], [$3$ m/s.], [$2$ m/s.], [$1$ m/s.]),
   )
@@ -43,8 +41,7 @@
   ))
   q(
     5,
-    [Cho hình hộp $A B C D . A_(1) B_(1) C_(1) D_(1)$. Khẳng định nào dưới đây sai?
-      #illustration("box")],
+    [Cho hình hộp $A B C D . A_(1) B_(1) C_(1) D_(1)$. Khẳng định nào dưới đây sai?],
     columns: 1,
     answers: (
       [$arrow(B A) + arrow(D D_(1)) + arrow(B D_(1)) = arrow(B C)$.],
@@ -67,8 +64,7 @@
   ))
   q(
     8,
-    [Cho hình chóp $S . A B C D$ có đáy $A B C D$ là hình thoi cạnh bằng $a$, $hat(A B C) = 60 degree$. Biết $S A = S C ","$ tích vô hướng $arrow(A C) ⋅ arrow(S B)$ bằng
-      #illustration("pyramid")],
+    [Cho hình chóp $S . A B C D$ có đáy $A B C D$ là hình thoi cạnh bằng $a$, $hat(A B C) = 60 degree$. Biết $S A = S C ","$ tích vô hướng $arrow(A C) ⋅ arrow(S B)$ bằng],
     columns: 4,
     answers: ([$frac(a^(2), 2)$.], [$0$.], [$- a^(2)$.], [$a^(2)$.]),
   )
@@ -82,8 +78,7 @@
   )
   q(
     10,
-    [Trong 8 phút đầu kể từ khi xuất phát, độ cao $h$ (tính bằng mét) so với mặt đất của khinh khí cầu vào thời điểm $t$ phút được cho bởi công thức $h ( t ) = 6 t^(3) - 81 t^(2) + 324 t$. Trong 3 phút đầu tiên, độ cao của khinh khí cầu
-      #illustration("balloon")],
+    [Trong 8 phút đầu kể từ khi xuất phát, độ cao $h$ (tính bằng mét) so với mặt đất của khinh khí cầu vào thời điểm $t$ phút được cho bởi công thức $h ( t ) = 6 t^(3) - 81 t^(2) + 324 t$. Trong 3 phút đầu tiên, độ cao của khinh khí cầu],
     columns: 4,
     answers: ([Tăng rồi giảm.], [Giảm rồi tăng.], [Tăng.], [Giảm.]),
   )
@@ -112,8 +107,7 @@
   ))
   q(
     2,
-    [Sau một trận lũ lớn, một trạm cứu hộ sử dụng drone để vận chuyển nhu yếu phẩm đến người dân bị cô lập. Chọn hệ trục $O x y z$ với gốc $O$ đặt tại trạm cứu hộ, mặt phẳng $( O x y )$ trùng với mặt đất, trục $O z$ hướng thẳng đứng lên trời, đơn vị đo tính theo mét. Một chiếc drone chưa được sạc đầy pin xuất phát từ trạm, phát hiện được hai địa điểm cần cứu hộ ở trên nóc hai tòa nhà là $A ( 120 ; 90 ; 30 )$ và $B ( 40 ; 30 ; 10 )$. Sau khi bay đến điểm $A$, drone chỉ còn đủ pin để bay $40 %$ quãng đường từ $A$ đến $B .$ Các kết quả làm tròn đến hàng đơn vị.
-      #illustration("rescue")],
+    [Sau một trận lũ lớn, một trạm cứu hộ sử dụng drone để vận chuyển nhu yếu phẩm đến người dân bị cô lập. Chọn hệ trục $O x y z$ với gốc $O$ đặt tại trạm cứu hộ, mặt phẳng $( O x y )$ trùng với mặt đất, trục $O z$ hướng thẳng đứng lên trời, đơn vị đo tính theo mét. Một chiếc drone chưa được sạc đầy pin xuất phát từ trạm, phát hiện được hai địa điểm cần cứu hộ ở trên nóc hai tòa nhà là $A ( 120 ; 90 ; 30 )$ và $B ( 40 ; 30 ; 10 )$. Sau khi bay đến điểm $A$, drone chỉ còn đủ pin để bay $40 %$ quãng đường từ $A$ đến $B .$ Các kết quả làm tròn đến hàng đơn vị.],
     statements: (
       [Hai địa điểm cần cứu hộ cách nhau xấp xỉ $102$ m.],
       [Drone chỉ có thể vận chuyển nhu yếu phẩm đến từng địa điểm, nên người ở trạm cứu hộ quyết định dựng thêm một trạm cứu hộ cho riêng hai tòa nhà, mà tổng khoảng cách từ trạm cứu hộ đó đến nóc hai tòa nhà là ngắn nhất. Trạm cứu hộ mới có tọa độ $( 45 ; 60 ; 0 )$.],
@@ -123,8 +117,7 @@
   )
   q(
     3,
-    [Để điều trị cho một bệnh nhân, bác sĩ tiêm một loại thuốc vào tĩnh mạch. Nồng độ $C ( t )$ của thuốc trong máu bệnh nhân (đơn vị: mg/l) thay đổi theo thời gian $t$ (đơn vị: giờ) kể từ lúc tiêm $( t ≥ 0 )$ được xác định bởi công thức $C ( t ) = frac(15 t, t^(2) + 9)$.
-      #illustration("medicine")],
+    [Để điều trị cho một bệnh nhân, bác sĩ tiêm một loại thuốc vào tĩnh mạch. Nồng độ $C ( t )$ của thuốc trong máu bệnh nhân (đơn vị: mg/l) thay đổi theo thời gian $t$ (đơn vị: giờ) kể từ lúc tiêm $( t ≥ 0 )$ được xác định bởi công thức $C ( t ) = frac(15 t, t^(2) + 9)$.],
     statements: (
       [Nồng độ thuốc trong máu đạt giá trị lớn nhất tại thời điểm $t = 9$ giờ sau khi tiêm.],
       [Giá trị nồng độ thuốc trong máu cao nhất là $"2,5"$ mg/l.],
@@ -134,8 +127,7 @@
   )
   q(
     4,
-    [Trong không gian $O x y z$, cho tam giác $A B C$ biết $A ( 7 ; 3 ; 3 ) "," B ( 1 ; 2 ; 4 ) "," C ( 2 ; 3 ; 5 )$.
-      #illustration("triangle")],
+    [Trong không gian $O x y z$, cho tam giác $A B C$ biết $A ( 7 ; 3 ; 3 ) "," B ( 1 ; 2 ; 4 ) "," C ( 2 ; 3 ; 5 )$.],
     statements: (
       [$sin hat(B A C) = sqrt(frac(37, 551))$.],
       [$arrow(A B) ⋅ arrow(A C) = 32$.],
@@ -146,8 +138,7 @@
   exam-section("III", [TRẮC NGHIỆM TRẢ LỜI NGẮN.], instruction: [Thí sinh trả lời từ câu 1 đến câu 6.])
   q(
     1,
-    [Trong một sân vận động, chọn hệ tọa độ $O x y z$, đơn vị đo là mét, trong đó mặt sân nằm trên mặt phẳng $(O x y)$ và trục $O z$ vuông góc với mặt sân. Một hệ thống camera tự động được lắp trên một thanh ray cố định ở phía trên sân. Hai đầu của thanh ray lần lượt có tọa độ là $A ( 0 ; 6 ; 8 )$ và $B ( 12 ; 6 ; 8 ) .$ Camera có thể di chuyển dọc theo đoạn ray $A B$. Một cầu thủ đang đứng cố định tại vị trí $C ( 6 ; 0 ; 0 )$. Gọi $M$ là vị trí của camera. Để hình ảnh cầu thủ rõ nét, nhà sản xuất quy định độ phóng đại hiệu dụng của camera tỉ lệ nghịch với bình phương khoảng cách từ camera đến cầu thủ. Do đó để hình ảnh đạt chất lượng cao nhất, cần tìm vị trí của điểm $M$ để khoảng cách $C M$ nhỏ nhất. Điểm $M$ cách đầu ray $A$ bao nhiêu mét để khoảng cách từ camera đến cầu thủ là nhỏ nhất?
-      #illustration("camera")],
+    [Trong một sân vận động, chọn hệ tọa độ $O x y z$, đơn vị đo là mét, trong đó mặt sân nằm trên mặt phẳng $(O x y)$ và trục $O z$ vuông góc với mặt sân. Một hệ thống camera tự động được lắp trên một thanh ray cố định ở phía trên sân. Hai đầu của thanh ray lần lượt có tọa độ là $A ( 0 ; 6 ; 8 )$ và $B ( 12 ; 6 ; 8 ) .$ Camera có thể di chuyển dọc theo đoạn ray $A B$. Một cầu thủ đang đứng cố định tại vị trí $C ( 6 ; 0 ; 0 )$. Gọi $M$ là vị trí của camera. Để hình ảnh cầu thủ rõ nét, nhà sản xuất quy định độ phóng đại hiệu dụng của camera tỉ lệ nghịch với bình phương khoảng cách từ camera đến cầu thủ. Do đó để hình ảnh đạt chất lượng cao nhất, cần tìm vị trí của điểm $M$ để khoảng cách $C M$ nhỏ nhất. Điểm $M$ cách đầu ray $A$ bao nhiêu mét để khoảng cách từ camera đến cầu thủ là nhỏ nhất?],
   )
   q(
     2,
