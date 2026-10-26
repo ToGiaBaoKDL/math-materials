@@ -1,0 +1,811 @@
+{
+  "schema_version": 1,
+  "id": "th-buoi-17-tuong-giao-mat-phang-duong-thang-mat-cau",
+  "kind": "tinh-hoa",
+  "received_date": "2026-10-26",
+  "status": "implemented",
+  "metadata": {
+    "title": "BUỔI 17: TƯƠNG GIAO MẶT PHẲNG – ĐƯỜNG THẲNG – MẶT CẦU",
+    "lesson": 17,
+    "subject": "Toán – hình tọa độ Oxyz",
+    "topic": "HÌNH TỌA ĐỘ OXYZ",
+    "homework": true
+  },
+  "sources": [
+    {
+      "path": "assets/sources/2026-10/Chuyên đề/th-buoi-17-tuong-giao-mat-phang-duong-thang-mat-cau/source.docx",
+      "original_name": "BUỔI 17 TƯƠNG GIAO MẶT PHẲNG - ĐƯỜNG THẲNG - MẶT CẦU.docx",
+      "bytes": 1119940,
+      "sha256": "d7405930b24b1fa68abc644f86fc7b94f4557e6cabe8aa9f225404bfaa033c58"
+    }
+  ],
+  "scope": {
+    "has_questions": true,
+    "has_solutions": true,
+    "questions": 25,
+    "sections": [
+      {
+        "title": "Bài tập mẫu",
+        "questions": 8
+      },
+      {
+        "title": "Bài tập tự luyện",
+        "questions": 17
+      }
+    ]
+  },
+  "variants": {
+    "de": {
+      "filename": "de.pdf",
+      "inputs": {
+        "variant": "de"
+      }
+    },
+    "de-cach": {
+      "filename": "de-cach.pdf",
+      "inputs": {
+        "variant": "de-cach"
+      }
+    },
+    "dap-an": {
+      "filename": "dap-an.pdf",
+      "inputs": {
+        "variant": "dap-an"
+      }
+    }
+  },
+  "content_mapping": [
+    {
+      "id": "bai-hoc-1",
+      "role": "question",
+      "source": {
+        "file": "source.docx",
+        "section": "bai-hoc",
+        "number": 1,
+        "prompt_paragraphs": [
+          9,
+          10
+        ],
+        "solution_paragraphs": [
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18
+        ]
+      }
+    },
+    {
+      "id": "bai-hoc-2",
+      "role": "question",
+      "source": {
+        "file": "source.docx",
+        "section": "bai-hoc",
+        "number": 2,
+        "prompt_paragraphs": [
+          19,
+          20
+        ],
+        "solution_paragraphs": [
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29
+        ]
+      }
+    },
+    {
+      "id": "bai-hoc-3",
+      "role": "question",
+      "source": {
+        "file": "source.docx",
+        "section": "bai-hoc",
+        "number": 3,
+        "prompt_paragraphs": [
+          42,
+          43,
+          44
+        ],
+        "solution_paragraphs": [
+          46,
+          47,
+          48,
+          49
+        ]
+      }
+    },
+    {
+      "id": "bai-hoc-4",
+      "role": "question",
+      "source": {
+        "file": "source.docx",
+        "section": "bai-hoc",
+        "number": 4,
+        "prompt_paragraphs": [
+          50,
+          51,
+          52
+        ],
+        "solution_paragraphs": [
+          54,
+          55,
+          56,
+          57
+        ]
+      }
+    },
+    {
+      "id": "bai-hoc-5",
+      "role": "question",
+      "source": {
+        "file": "source.docx",
+        "section": "bai-hoc",
+        "number": 5,
+        "prompt_paragraphs": [
+          58
+        ],
+        "solution_paragraphs": [
+          60,
+          61,
+          62,
+          63,
+          64,
+          65,
+          66,
+          67
+        ]
+      }
+    },
+    {
+      "id": "bai-hoc-6",
+      "role": "question",
+      "source": {
+        "file": "source.docx",
+        "section": "bai-hoc",
+        "number": 6,
+        "prompt_paragraphs": [
+          68
+        ],
+        "solution_paragraphs": [
+          70,
+          71,
+          72,
+          73,
+          74
+        ]
+      }
+    },
+    {
+      "id": "bai-hoc-7",
+      "role": "question",
+      "source": {
+        "file": "source.docx",
+        "section": "bai-hoc",
+        "number": 7,
+        "prompt_paragraphs": [
+          111,
+          112,
+          113,
+          114,
+          115,
+          116,
+          117
+        ],
+        "solution_paragraphs": [
+          119,
+          120,
+          121,
+          122,
+          123,
+          124,
+          125,
+          126
+        ]
+      }
+    },
+    {
+      "id": "bai-hoc-8",
+      "role": "question",
+      "source": {
+        "file": "source.docx",
+        "section": "bai-hoc",
+        "number": 8,
+        "prompt_paragraphs": [
+          127,
+          128
+        ],
+        "solution_paragraphs": [
+          130,
+          131,
+          132,
+          133,
+          134,
+          135,
+          136,
+          137,
+          138
+        ]
+      }
+    },
+    {
+      "id": "tu-luyen-1",
+      "role": "question",
+      "source": {
+        "file": "source.docx",
+        "section": "tu-luyen",
+        "number": 1,
+        "prompt_paragraphs": [
+          140,
+          141
+        ],
+        "solution_paragraphs": [
+          143,
+          144,
+          145,
+          146
+        ]
+      }
+    },
+    {
+      "id": "tu-luyen-2",
+      "role": "question",
+      "source": {
+        "file": "source.docx",
+        "section": "tu-luyen",
+        "number": 2,
+        "prompt_paragraphs": [
+          147,
+          148,
+          149
+        ],
+        "solution_paragraphs": [
+          151,
+          152,
+          153,
+          154,
+          155
+        ]
+      }
+    },
+    {
+      "id": "tu-luyen-3",
+      "role": "question",
+      "source": {
+        "file": "source.docx",
+        "section": "tu-luyen",
+        "number": 3,
+        "prompt_paragraphs": [
+          156,
+          157,
+          158
+        ],
+        "solution_paragraphs": [
+          160,
+          161,
+          162,
+          163,
+          164,
+          165
+        ]
+      }
+    },
+    {
+      "id": "tu-luyen-4",
+      "role": "question",
+      "source": {
+        "file": "source.docx",
+        "section": "tu-luyen",
+        "number": 4,
+        "prompt_paragraphs": [
+          166,
+          167
+        ],
+        "solution_paragraphs": [
+          169,
+          170,
+          171,
+          172,
+          173,
+          174,
+          175,
+          176
+        ]
+      }
+    },
+    {
+      "id": "tu-luyen-5",
+      "role": "question",
+      "source": {
+        "file": "source.docx",
+        "section": "tu-luyen",
+        "number": 5,
+        "prompt_paragraphs": [
+          177,
+          178
+        ],
+        "solution_paragraphs": [
+          180,
+          181,
+          182,
+          183
+        ]
+      }
+    },
+    {
+      "id": "tu-luyen-6",
+      "role": "question",
+      "source": {
+        "file": "source.docx",
+        "section": "tu-luyen",
+        "number": 6,
+        "prompt_paragraphs": [
+          184,
+          185
+        ],
+        "solution_paragraphs": [
+          187,
+          188,
+          189,
+          190,
+          191
+        ]
+      }
+    },
+    {
+      "id": "tu-luyen-7",
+      "role": "question",
+      "source": {
+        "file": "source.docx",
+        "section": "tu-luyen",
+        "number": 7,
+        "prompt_paragraphs": [
+          192,
+          193
+        ],
+        "solution_paragraphs": [
+          195,
+          196,
+          197,
+          198,
+          199,
+          200,
+          201
+        ]
+      }
+    },
+    {
+      "id": "tu-luyen-8",
+      "role": "question",
+      "source": {
+        "file": "source.docx",
+        "section": "tu-luyen",
+        "number": 8,
+        "prompt_paragraphs": [
+          202,
+          203
+        ],
+        "solution_paragraphs": [
+          205,
+          206,
+          207,
+          208,
+          209,
+          210
+        ]
+      }
+    },
+    {
+      "id": "tu-luyen-9",
+      "role": "question",
+      "source": {
+        "file": "source.docx",
+        "section": "tu-luyen",
+        "number": 9,
+        "prompt_paragraphs": [
+          211,
+          212
+        ],
+        "solution_paragraphs": [
+          214,
+          215,
+          216,
+          217
+        ]
+      }
+    },
+    {
+      "id": "tu-luyen-10",
+      "role": "question",
+      "source": {
+        "file": "source.docx",
+        "section": "tu-luyen",
+        "number": 10,
+        "prompt_paragraphs": [
+          218,
+          219
+        ],
+        "solution_paragraphs": [
+          221,
+          222,
+          223,
+          224,
+          225,
+          226
+        ]
+      }
+    },
+    {
+      "id": "tu-luyen-11",
+      "role": "question",
+      "source": {
+        "file": "source.docx",
+        "section": "tu-luyen",
+        "number": 11,
+        "prompt_paragraphs": [
+          227,
+          228
+        ],
+        "solution_paragraphs": [
+          230,
+          231,
+          232,
+          233,
+          234
+        ]
+      }
+    },
+    {
+      "id": "tu-luyen-12",
+      "role": "question",
+      "source": {
+        "file": "source.docx",
+        "section": "tu-luyen",
+        "number": 12,
+        "prompt_paragraphs": [
+          235,
+          236,
+          237
+        ],
+        "solution_paragraphs": [
+          239,
+          240,
+          241,
+          242
+        ]
+      }
+    },
+    {
+      "id": "tu-luyen-13",
+      "role": "question",
+      "source": {
+        "file": "source.docx",
+        "section": "tu-luyen",
+        "number": 13,
+        "prompt_paragraphs": [
+          243,
+          244
+        ],
+        "solution_paragraphs": [
+          246,
+          247
+        ]
+      }
+    },
+    {
+      "id": "tu-luyen-14",
+      "role": "question",
+      "source": {
+        "file": "source.docx",
+        "section": "tu-luyen",
+        "number": 14,
+        "prompt_paragraphs": [
+          248,
+          249
+        ],
+        "solution_paragraphs": [
+          251,
+          252
+        ]
+      }
+    },
+    {
+      "id": "tu-luyen-15",
+      "role": "question",
+      "source": {
+        "file": "source.docx",
+        "section": "tu-luyen",
+        "number": 15,
+        "prompt_paragraphs": [
+          253,
+          254
+        ],
+        "solution_paragraphs": [
+          256,
+          257
+        ]
+      }
+    },
+    {
+      "id": "tu-luyen-16",
+      "role": "question",
+      "source": {
+        "file": "source.docx",
+        "section": "tu-luyen",
+        "number": 16,
+        "prompt_paragraphs": [
+          258,
+          259
+        ],
+        "solution_paragraphs": [
+          261,
+          262,
+          263,
+          264
+        ]
+      }
+    },
+    {
+      "id": "tu-luyen-17",
+      "role": "question",
+      "source": {
+        "file": "source.docx",
+        "section": "tu-luyen",
+        "number": 17,
+        "prompt_paragraphs": [
+          265,
+          266,
+          267
+        ],
+        "solution_paragraphs": [
+          269,
+          270,
+          271,
+          272,
+          273
+        ]
+      }
+    },
+    {
+      "id": "theory-1",
+      "role": "source",
+      "source": {
+        "file": "source.docx",
+        "paragraphs": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ]
+      }
+    },
+    {
+      "id": "theory-2",
+      "role": "source",
+      "source": {
+        "file": "source.docx",
+        "paragraphs": [
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41
+        ]
+      }
+    },
+    {
+      "id": "theory-3",
+      "role": "source",
+      "source": {
+        "file": "source.docx",
+        "paragraphs": [
+          75,
+          76,
+          77,
+          78,
+          79,
+          80,
+          81,
+          82,
+          83,
+          84,
+          85,
+          86,
+          87,
+          88,
+          89,
+          90,
+          91,
+          92,
+          93,
+          94,
+          95,
+          96,
+          97,
+          98,
+          99,
+          100,
+          101,
+          102,
+          103,
+          104,
+          105,
+          106,
+          107,
+          108,
+          109,
+          110
+        ]
+      }
+    },
+    {
+      "id": "figure-1",
+      "role": "figure",
+      "source": {
+        "file": "source.docx",
+        "paragraphs": [
+          35
+        ],
+        "reconstruction": "plane-outside"
+      }
+    },
+    {
+      "id": "figure-2",
+      "role": "figure",
+      "source": {
+        "file": "source.docx",
+        "paragraphs": [
+          38
+        ],
+        "reconstruction": "plane-tangent"
+      }
+    },
+    {
+      "id": "figure-3",
+      "role": "figure",
+      "source": {
+        "file": "source.docx",
+        "paragraphs": [
+          41,
+          62
+        ],
+        "reconstruction": "plane-cut"
+      }
+    },
+    {
+      "id": "figure-4",
+      "role": "figure",
+      "source": {
+        "file": "source.docx",
+        "paragraphs": [
+          77,
+          78,
+          79,
+          80,
+          81,
+          82,
+          83,
+          84,
+          85,
+          86,
+          87,
+          88,
+          89,
+          90,
+          91,
+          92,
+          93,
+          94,
+          95,
+          96,
+          97,
+          98,
+          99,
+          100,
+          101,
+          102,
+          103,
+          104,
+          105,
+          106,
+          107,
+          108,
+          109,
+          110
+        ],
+        "reconstruction": "line/sphere meridian diagrams"
+      }
+    },
+    {
+      "id": "figure-5",
+      "role": "figure",
+      "source": {
+        "file": "source.docx",
+        "paragraphs": [
+          131
+        ],
+        "reconstruction": "chord"
+      }
+    },
+    {
+      "id": "figure-6",
+      "role": "figure",
+      "source": {
+        "file": "source.docx",
+        "paragraphs": [
+          270
+        ],
+        "reconstruction": "equilateral"
+      }
+    }
+  ],
+  "provenance": {
+    "equations": {
+      "decoded": 553,
+      "preview_pairs_checked": 553
+    },
+    "source_notes": [
+      "Paragraph indices are zero-based XML paragraph traversal, including nested drawing text boxes. Duplicate labels in drawing text boxes are replaced by vector figure labels.",
+      "User requested a lower illustrative section for practice 17. Diagram plane offset is now schematic (1.4 for radius 2), not the source coordinate distance 3/sqrt(35); question and solution coordinates unchanged. Triangle remains equilateral with E its chord midpoint."
+    ],
+    "corrections": [
+      "Approved by user: sample 1 alternative coincident case d2 ≡ d2 corrected to d1 ≡ d2.",
+      "Approved by user: sample 7 line/plane intersection parameter corrected from 3/2 to 7/4, since -4t+7=0.",
+      "Approved by user: practice 14 final choice A corrected to D (16π).",
+      "Approved by user: practice 16 final choice A corrected to C (ordinate -4).",
+      "Typographic normalization: source circle-shaped zero subscripts rendered as 0; math-encoded Vietnamese labels rendered as text; duplicated drawing labels omitted."
+    ]
+  },
+  "qa": {
+    "review_status": "pending",
+    "compile": "passed",
+    "content": "25 questions (8 worked examples, 17 practice), all choices and source solutions retained; 553 MathType equations decoded and verified against 553 WMF previews. Approved source corrections recorded in provenance.",
+    "layout": "Dạng 2 case blocks explicitly span full text width and center a fixed-width 88 mm diagram box. All three variants rebuilt and checked for 25 question labels. Full-page visual review pending. Answer variant theory cases now allow page breaks between the complete description and centered figure; headings remain with their description. Rebuilt dap-an and verified all 25 questions; full-page visual review remains pending. Sample 8 and practice 17 solution figures now occupy centered standalone 60 mm boxes; accompanying text spans full width. Answer PDF rebuilt and 25 questions verified. Writing variant now uses final-writing-space after exercises to rule remaining page height; removed competing empty v(1fr) before HẾT. Rebuilt all variants, verified 25 questions and HẾT at bottom of final writing page. Practice 2–4 now share writing page 10, verified by Typst metadata and final PDF text. Each has three minimum lines at 8 mm pitch and 4 mm question spacing; remaining page space ruled. Writing PDF rebuilt to 17 pages.",
+    "figures": "Intersection plane lowered to IH=18.5 with sphere radius 25; section radius sqrt(25²−18.5²), leaving a visible gap below the equator. Removed the artificial lower-cap color boundary. Final standalone intersection diagram visually inspected. Compact (P) sector retained. Final R label moved into the clear region below the equator and above the section; (P) shifted right/down away from the oblique plane edge. Tangent and intersection diagrams visually checked at their 88 mm output width after these changes. Practice 17 replaced by a centered 88 mm 3D sphere/plane diagram; exact source plane distance 3/sqrt(35), OE=sqrt(3), OA=OB=AB=2 and OE perpendicular AB numerically verified. Standalone final geometry visually inspected. Internal triangle edges dashed; E marks chord midpoint. Practice 17 final view: removed decorative dashed meridian; rotated the same 3D geometry so AB is horizontal and OE projects vertically. Labels O/A/B/E individually offset into clear space; final standalone image inspected at 100 mm output width. Frame tightened to 60 mm high. Practice 17 view angle reduced from 30° to 18°, with the supporting plane depth reduced consistently; section ellipse is flatter and lower sphere silhouette clearer. Final standalone figure visually inspected; exact 3D vertices unchanged. Shared plane-front occlusion applied to practice 17 and plane-cut diagrams in theory/sample 5: foreground plane covers lower sphere, covered silhouette dashed, section retained on top. Both final standalone figures visually inspected together; all variants rebuilt. Final practice 17 view uses 6° elevation with a distinct equator above the section; original plane distance retained. Labels A/B moved below section to avoid overlap. Foreground plane outer edges redrawn using the shared 0.8 pt edge stroke for all cut diagrams. Final standalone image visually inspected; PDFs rebuilt. Practice 17 supersedes the earlier exact plane-distance rendering: sphere raised relative to plane using schematic lower section, leaving a small lower cap. Final standalone figure visually inspected; labels clear; answer PDF rebuilt.",
+    "sources": "Archived source SHA-256 verified against the digest recorded at ingestion.",
+    "visual_review": "Standalone vector diagrams inspected; full-page PDF visual review pending."
+  },
+  "drive": {
+    "folder": "Chuyên đề",
+    "filenames": {
+      "de": "KHÓA TH - BUỔI 17 - TƯƠNG GIAO MẶT PHẲNG - ĐƯỜNG THẲNG - MẶT CẦU - ĐỀ.pdf",
+      "de-cach": "KHÓA TH - BUỔI 17 - TƯƠNG GIAO MẶT PHẲNG - ĐƯỜNG THẲNG - MẶT CẦU - ĐỀ CÁCH.pdf",
+      "dap-an": "KHÓA TH - BUỔI 17 - TƯƠNG GIAO MẶT PHẲNG - ĐƯỜNG THẲNG - MẶT CẦU - ĐÁP ÁN.pdf"
+    }
+  },
+  "outputs": {
+    "de": {
+      "pdf": "assets/targets/2026-10/Chuyên đề/th-buoi-17-tuong-giao-mat-phang-duong-thang-mat-cau/de.pdf",
+      "pages": 9,
+      "bytes": 494982,
+      "sha256": "750c020c3be51a6c9e8984bf5ae6453e430aef5f252e01847c8441912089970f"
+    },
+    "de-cach": {
+      "pdf": "assets/targets/2026-10/Chuyên đề/th-buoi-17-tuong-giao-mat-phang-duong-thang-mat-cau/de-cach.pdf",
+      "pages": 17,
+      "bytes": 524309,
+      "sha256": "9163594754163baedec640ec66cbc0731cc7e191a8062c8d3cd1c19594b07f78"
+    },
+    "dap-an": {
+      "pdf": "assets/targets/2026-10/Chuyên đề/th-buoi-17-tuong-giao-mat-phang-duong-thang-mat-cau/dap-an.pdf",
+      "pages": 19,
+      "bytes": 720146,
+      "sha256": "b9e56ae7649d3d9598bd87d2bd759653f297138ecf2999bfbf29778d45b797b8"
+    }
+  }
+}
