@@ -1,17 +1,36 @@
 #import "/templates/lesson.typ": exercise
 #import "/templates/components.typ": end-mark, figure-panel
-#import "../figures.typ": coordinate-triangle, cube, prism
+#import "../figures.typ": cube, prism
 #let questions(variant) = {
-  let item = exercise.with(
+  let base-item = exercise.with(
     variant: variant,
     keep-together: false,
     flow-stem: true,
-    question-gap: 9mm,
-    statement-gap: 6mm,
-    writing-line-gap: 9mm,
+    question-gap: 4mm,
+    statement-gap: 3mm,
+    writing-line-gap: 8mm,
     writing-single-page: true,
-    writing-lines: 5,
+    writing-lines: 3,
   )
+  let item(number, body, source-id: none, statements: ()) = {
+    if variant == "de-cach" and number > 1 { pagebreak() }
+    let rows = grid(columns: (1fr,), row-gutter: 2mm, ..statements)
+    let figure = if number == 2 { prism() } else if number == 3 { cube() }
+      else { none }
+    let prompt = if number == 1 { body } else [
+      #body
+      #v(3mm)
+      #if number == 2 or number == 3 {
+        grid(columns: (1fr, if number == 3 { 49mm } else { 49mm }), gutter: 6mm, align: top, rows,
+          align(right, scale(x: if number == 3 { 57% } else { 57% }, y: if number == 3 { 57% } else { 57% }, reflow: true, figure)))
+      } else {
+        rows
+      }
+    ]
+    base-item(number, prompt, source-id: source-id, keep-together: number < 3,
+      writing-single-page: number < 3, writing-keep-prompt: number < 3, writing-flow-prompt: number >= 3,
+      statements: if number == 1 { statements } else { () })
+  }
   item(
     1,
     [*(THPT THĂNG LONG – HÀ NỘI 2026–2027)* Trong không gian $O x y z$, cho tam giác $A B C$ biết $A(7;3;3)$, $B(1;2;4)$, $C(2;3;5)$.
@@ -27,7 +46,6 @@
   item(
     2,
     [*(THPT LẠNG GIANG SỐ 1 – BẮC NINH 2025–2026)* Cho hình lăng trụ tam giác đều $A B C.A' B' C'$ có $A B = a$ và $A A' = a sqrt(2)$. Các mệnh đề dưới đây đúng hay sai?
-      #figure-panel(scale(x: 105%, y: 105%, reflow: true, prism()), above: 3mm, below: 3mm)
     ],
     source-id: "question-2",
     statements: (
@@ -40,7 +58,6 @@
   item(
     3,
     [*(THPT CHUYÊN BIÊN HÒA – NINH BÌNH 2025–2026)* Trong không gian, cho hình lập phương $A B C D.A' B' C' D'$ có cạnh bằng $a$. Gọi $I$ là tâm hình vuông $A B C D$, gọi $G$ là trọng tâm của tam giác $A B' C$ (tham khảo hình vẽ).
-      #figure-panel(scale(x: 110.25%, y: 110.25%, reflow: true, cube()), above: 3mm, below: 3mm)
     ],
     source-id: "question-3",
     statements: (
@@ -53,7 +70,6 @@
   item(
     4,
     [*(THPT Đào Duy Từ – Thanh Hóa 2025)* Trong không gian với hệ tọa độ $O x y z$, cho tam giác $A B C$ với $A(4;0;2)$, $B(1;-4;-2)$, $C(2;1;1)$.
-      #figure-panel(scale(x: 110.25%, y: 110.25%, reflow: true, coordinate-triangle(4)), above: 3mm, below: 3mm)
     ],
     source-id: "question-4",
     statements: (
@@ -66,7 +82,6 @@
   item(
     5,
     [*(THPT Triệu Sơn 3 – Thanh Hóa 2025)* Trong không gian với hệ tọa độ $O x y z$, cho $triangle A B C$ với $A(1;-3;3)$, $B(2;-4;5)$, $C(3;-2;1)$.
-      #figure-panel(scale(x: 105%, y: 105%, reflow: true, coordinate-triangle(5)), above: 3mm, below: 3mm)
     ],
     source-id: "question-5",
     statements: (

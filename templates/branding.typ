@@ -140,6 +140,7 @@
   folio: none,
   palette: palette,
   folio-width: footer-style.folio-width,
+  folio-right-inset: none,
   folio-size: footer-style.folio-size,
 ) = layout(size => {
   set text(font: fonts.ui, weight: document-style.weight, fill: palette.paper)
@@ -147,7 +148,8 @@
   let foot = footer-style
   let inset = page-insets(margin)
   let bar-top = foot.height - foot.bar-height
-  let folio-left = size.width - inset.right - folio-width
+  let right-inset = if folio-right-inset == none { inset.right } else { folio-right-inset }
+  let folio-left = size.width - right-inset - folio-width
   let caption-width = folio-left - foot.caption-left - 2 * foot.rule-gap
   let caption-label = fitted-label(caption, caption-width, foot.caption-size)
   let text-x = foot.caption-left
@@ -182,7 +184,7 @@
         height: foot.rule-height,
       ))
     }
-    #place(top + right, dx: -inset.right, dy: bar-top, block(width: folio-width, height: foot.bar-height, align(
+    #place(top + right, dx: -right-inset, dy: bar-top, block(width: folio-width, height: foot.bar-height, align(
       right + horizon,
       text(size: folio-size, top-edge: "bounds", bottom-edge: "bounds", if folio == none {
         [Trang #number/#total]

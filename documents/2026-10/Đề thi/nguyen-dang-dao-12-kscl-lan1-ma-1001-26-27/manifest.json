@@ -286,7 +286,9 @@
       "Thay ảnh III.5 bằng plants.png nguyên bản, rộng 70 mm, căn giữa; thêm v(7mm) ngoài align trước ảnh và 3 mm sau ảnh. Build và kiểm tra đủ 22 câu.",
       "Nhãn xanh đơn vị tăng từ 14 pt lên 17 pt, đệm 9×2,5 mm; build thành công, text giữ đủ tên đơn vị và 22 câu.",
       "Thêm khoảng hở 3 mm trước grid lựa chọn của I.2 và I.10; build thành công, kiểm tra đủ 22 câu.",
-      "Thêm 3 mm trước các ý II.4; heading xanh tăng 19 pt và đệm 10×3 mm. Build và đối chiếu text đủ 22 câu."
+      "Thêm 3 mm trước các ý II.4; heading xanh tăng 19 pt và đệm 10×3 mm. Build và đối chiếu text đủ 22 câu.",
+      "Đường gióng x=4 trong bảng biến thiên đổi từ chấm 0,5 pt sang nét đứt 0,85 pt đỏ đậm, kéo đến sát nhánh hàm; đã build lại.",
+      "Sửa component bảng: viền ngoài header màu viền bảng, vạch chia ô trắng. Footer mã đề–số trang dịch phải 6 mm, cách mép 6 mm; build 6 trang và kiểm tra bbox ngang không vượt trang."
     ],
     "compile": "passed",
     "checks": {
@@ -305,8 +307,8 @@
     "de-dap-an": {
       "pdf": "assets/targets/2026-10/Đề thi/nguyen-dang-dao-12-kscl-lan1-ma-1001-26-27/de-dap-an.pdf",
       "pages": 6,
-      "bytes": 3607506,
-      "sha256": "d169ade7a7ffad29f0bbe8d67228ab37b5d96a78f12b1a63709c68fb344acb05"
+      "bytes": 3607020,
+      "sha256": "88c0a96eec420c8eac5415b74148896988895db3122a3d0b3bf04babee87ccca"
     }
   }
 }

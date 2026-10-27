@@ -53,7 +53,7 @@ Dùng template làm nguồn triển khai, skill làm quy tắc tái sử dụng.
 
 - Thân chữ Times New Roman, đen, regular; FreeSerif dự phòng ký hiệu thiếu. Toán dùng New Computer Modern Math. Không tăng độ đậm toàn bộ thân bài ngoài yêu cầu.
 - Font 9Slide gốc ở `assets/fonts/dxt/`, nạp qua `--font-path assets/fonts`; không làm đậm giả font vốn có nét đậm. Noto Sans dùng cho UI; Arial cho khóa học và tác giả. Kiểm tra font nhúng và dấu tiếng Việt khi đổi font.
-- Header bảng nền đỏ đô `#980D2B` theo token `plot-style.table-fill`, chữ trắng đậm; đường chia các ô header phải nhìn rõ (dùng nét trắng tương phản). Ô dữ liệu giữ chữ đen dễ đọc. Ô mã đề/bảng biến thiên dùng nền hồng nhạt và chữ đậm tương phản khi template quy định.
+- Header bảng nền đỏ đô `#980D2B` theo token `plot-style.table-fill`, chữ trắng đậm; đường chia các ô header phải nhìn rõ (dùng nét trắng tương phản). Viền ngoài hàng header (trên, trái ô đầu, phải ô cuối) phải dùng màu viền bảng; chỉ đường chia nội bộ dùng trắng, không dùng stroke trắng cho toàn bộ cạnh header làm mất khung. Ô dữ liệu giữ chữ đen dễ đọc. Ô mã đề/bảng biến thiên dùng nền hồng nhạt và chữ đậm tương phản khi template quy định.
 - Bảng biến thiên chia các ô cùng vai trò đều nhau; căn giữa dấu, vô cùng và nội dung theo cả hai chiều. Nhãn lựa chọn và công thức dùng cùng trục bắt đầu. Tên trường trích trong câu hỏi in đậm đen.
 - Tăng khoảng cách giữa các câu bằng token riêng, không chỉ tăng leading. Không đặt `set par` giữa nhãn `[DXT]` và câu dẫn làm tách dòng; scope thay đổi quanh cả câu. Phân số inline dùng dạng gọn khi thích hợp, vẫn giữ tử/mẫu rõ và nhịp dòng đều.
 

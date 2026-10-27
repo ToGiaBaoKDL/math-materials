@@ -29,7 +29,7 @@
   #arrow-line(p(27,36),p(42,24),color:red)
   #arrow-line(p(52,24),p(70,34),color:red)
   #arrow-line(p(80,35),p(111,24),color:red)
-  #path((p(92,9),p(92,27)),stroke:(paint:red,thickness:0.5pt,dash:"dotted"))
+  #path((p(92,9),p(92,29)),stroke:(paint:red.darken(20%),thickness:0.85pt,dash:(2.5pt,2pt)))
 ]
 #let park() = box(width:44mm,height:61mm)[
   #let q(x,y)=p(7+1.2*x,57-1.2*y)

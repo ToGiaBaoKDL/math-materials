@@ -156,7 +156,12 @@
 #let exam-table(columns: auto, header: (), ..cells) = table(
   columns: columns, align: center + horizon, inset: 4.5pt, stroke: plot-style.table-stroke,
   fill: (x, y) => if y == 0 { plot-style.table-fill } else { white },
-  table.header(..header.map(it => table.cell(stroke: 0.6pt + white, text(
+  table.header(..header.enumerate().map(((i, it)) => table.cell(stroke: (
+    top: plot-style.table-stroke,
+    bottom: plot-style.table-stroke,
+    left: if i == 0 { plot-style.table-stroke } else { 0.6pt + white },
+    right: if i == header.len() - 1 { plot-style.table-stroke } else { 0.6pt + white },
+  ), text(
     weight: "bold",
     fill: white,
     it,

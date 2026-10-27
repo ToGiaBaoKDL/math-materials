@@ -1,14 +1,14 @@
-#import "/templates/drawing.typ": label, path, solid-path
-#let brown = rgb("#7B3F00")
-#let blue = rgb("#0077C8")
-#let hidden = (paint: brown, thickness: 1.5pt, dash: (2.5pt, 2.5pt))
+#import "/templates/drawing.typ": label, path, solid-path, figure-fill
+#let brown = rgb("#8F0010")
+#let blue = rgb("#B00012")
+#let hidden = (paint: brown, thickness: 0.8pt, dash: (2.5pt, 2.5pt))
 #let pt(v) = (v.at(0) * 1mm, v.at(1) * 1mm)
 #let edge(a, b, dashed: false, color: brown) = {
-  if dashed { path((pt(a), pt(b)), stroke: (paint: color, thickness: 1.5pt, dash: (2.5pt, 2.5pt))) } else {
-    solid-path((pt(a), pt(b)), thickness: 1.5pt, color: color)
+  if dashed { path((pt(a), pt(b)), stroke: (paint: color, thickness: 0.8pt, dash: (2.5pt, 2.5pt))) } else {
+    solid-path((pt(a), pt(b)), thickness: 0.8pt, color: color)
   }
 }
-#let face(v, color) = path(v.map(pt), close: true, stroke: none, fill: color)
+#let face(v, color) = path(v.map(pt), close: true, stroke: none, fill: figure-fill(color))
 #let mark(p, t, dx: 0, dy: 0) = {
   place(top + left, dx: p.at(0) * 1mm - 0.65mm, dy: p.at(1) * 1mm - 0.65mm, circle(
     radius: 0.65mm,
@@ -29,16 +29,16 @@
   #let Dp = (53, 68)
   #let I = (42, 16.5)
   #let G = ((10 + 31 + 74) / 3, (25 + 51 + 8) / 3)
-  #face((A, B, C, D), rgb("#FFDFA0"))
-  #face((A, D, Dp, Ap), rgb("#B5E9DE"))
-  #face((D, C, Cp, Dp), rgb("#55DCE5"))
+  #face((A, B, C, D), rgb("#FADADD"))
+  #face((A, D, Dp, Ap), rgb("#F6B1B8"))
+  #face((D, C, Cp, Dp), rgb("#ECA3AE"))
   #for (a, b) in ((B, Bp), (Bp, Ap), (Bp, Cp)) { edge(a, b, dashed: true) }
   #for (a, b) in ((A, B), (B, C), (C, D), (D, A), (A, Ap), (D, Dp), (C, Cp), (Ap, Dp), (Dp, Cp)) { edge(a, b) }
   #edge(A, C, color: blue)
   #edge(B, D, color: blue)
-  #edge(Bp, I, dashed: true, color: rgb("#C60035"))
-  #edge(A, Bp, dashed: true, color: rgb("#C60035"))
-  #edge(Bp, C, dashed: true, color: rgb("#C60035"))
+  #edge(Bp, I, dashed: true, color: rgb("#B00012"))
+  #edge(A, Bp, dashed: true, color: rgb("#B00012"))
+  #edge(Bp, C, dashed: true, color: rgb("#B00012"))
   #mark(A, $A$, dx: -4) #mark(B, $B$, dy: -4) #mark(C, $C$, dx: 3, dy: -3)
   #mark(D, $D$, dx: 5, dy: 3) #mark(Ap, $A'$, dx: -4, dy: 3)
   #mark(Bp, $B'$, dx: -4, dy: 1) #mark(Cp, $C'$, dx: 4, dy: 1) #mark(Dp, $D'$, dy: 4)
@@ -54,8 +54,8 @@
   #let Bp = project((1, 0, calc.sqrt(2)))
   #let Cp = project((0.5, calc.sqrt(3) / 2, calc.sqrt(2)))
   #let M = ((B.at(0) + C.at(0)) / 2, (B.at(1) + C.at(1)) / 2)
-  #face((A, B, Bp, Ap), rgb("#BFFF36"))
-  #face((Ap, Bp, Cp), rgb("#55DCE5"))
+  #face((A, B, Bp, Ap), rgb("#F6B1B8"))
+  #face((Ap, Bp, Cp), rgb("#ECA3AE"))
   #for (a, b) in ((A, C), (B, C), (C, Cp)) { edge(a, b, dashed: true) }
   #for (a, b) in ((A, B), (A, Ap), (B, Bp), (Ap, Bp), (Bp, Cp), (Cp, Ap)) { edge(a, b) }
   #edge(Ap, M, dashed: true, color: blue)
@@ -82,7 +82,7 @@
       let C = (68, 41)
       let D = (43, 64)
       let G = ((35 + 10 + 68) / 3, 100 / 3)
-      face((A, B, D, C), rgb("#FFC078"))
+      face((A, B, D, C), rgb("#F5BDCA"))
       for (a, b) in ((A, B), (B, D), (D, C), (C, A)) { edge(a, b) }
       edge(B, C, color: blue)
       edge(A, ((10 + 68) / 2, 41), dashed: true, color: blue)
@@ -95,7 +95,7 @@
       // Align geometric bounds: triangle center 26.5 mm, right view center 37 mm.
       move(dy: 10.5mm, {
         let I = ((2 * 35 + 10 + 3 * 68) / 6, (2 * 10 + 43 + 3 * 43) / 6)
-        face((A, B, C), rgb("#FF91A4"))
+        face((A, B, C), rgb("#F6B1B8"))
         for (a, b) in ((A, B), (B, C), (C, A)) { edge(a, b) }
         edge(A, ((10 + 68) / 2, 43), dashed: true, color: blue)
         mark(A, $A$, dy: -4)
@@ -112,13 +112,13 @@
       let E = (42, 43)
       let B = (10, 67)
       let C = (50, 37)
-      face(((10, 30), (60, 30), (73, 52), (23, 52)), rgb("#55DCE5"))
+      face(((10, 30), (60, 30), (73, 52), (23, 52)), rgb("#ECA3AE"))
       for (a, b) in (((10, 30), (60, 30)), ((60, 30), (73, 52)), ((73, 52), (23, 52)), ((23, 52), (10, 30))) {
         edge(a, b)
       }
-      edge(B, (30, 52), color: rgb("#C45A00"))
-      edge((30, 52), E, dashed: true, color: rgb("#C45A00"))
-      edge(E, (58, 31), color: rgb("#C45A00"))
+      edge(B, (30, 52), color: rgb("#8F0010"))
+      edge((30, 52), E, dashed: true, color: rgb("#8F0010"))
+      edge(E, (58, 31), color: rgb("#8F0010"))
       edge(A, E, dashed: true, color: blue)
       mark(A, $A$, dx: -3, dy: -3)
       mark(E, $E$, dx: 4, dy: 2)
@@ -128,12 +128,12 @@
     } else {
       let I = (40, 12)
       let M = (46, 48)
-      face(((10, 38), (62, 38), (74, 62), (22, 62)), rgb("#55DCE5"))
+      face(((10, 38), (62, 38), (74, 62), (22, 62)), rgb("#ECA3AE"))
       for (a, b) in (((10, 38), (62, 38)), ((62, 38), (74, 62)), ((74, 62), (22, 62)), ((22, 62), (10, 38))) {
         edge(a, b)
       }
       // A representative M on the coordinate plane, not a solved optimum.
-      edge(I, M, color: rgb("#C60035"))
+      edge(I, M, color: rgb("#B00012"))
       mark(I, $I$, dx: 4, dy: 0)
       mark(M, $M$, dx: 4, dy: 2)
       label(pt((56, 57)), $(O y z)$, width: 18mm)
@@ -150,13 +150,13 @@
   #let G = (80, 35)
   #let I = (80, 130 / 3)
   #let M = (15, 130 / 3)
-  #face(((5, 18), (27, 8), (27, 67), (5, 77)), rgb("#55DCE5"))
+  #face(((5, 18), (27, 8), (27, 67), (5, 77)), rgb("#ECA3AE"))
   #for (a, b) in (((5, 18), (27, 8)), ((27, 8), (27, 67)), ((27, 67), (5, 77)), ((5, 77), (5, 18))) { edge(a, b) }
-  #face((A, B, C), rgb("#FF91A4"))
+  #face((A, B, C), rgb("#F6B1B8"))
   #for (a, b) in ((A, B), (B, C), (C, A)) { edge(a, b) }
   #edge(A, (95, 35), dashed: true, color: blue)
-  #edge(M, (65, 130 / 3), color: rgb("#C60035"))
-  #edge((65, 130 / 3), I, dashed: true, color: rgb("#C60035"))
+  #edge(M, (65, 130 / 3), color: rgb("#B00012"))
+  #edge((65, 130 / 3), I, dashed: true, color: rgb("#B00012"))
   #mark(A, $A$, dx: -3, dy: -3)
   #mark(B, $B$, dy: -4)
   #mark(C, $C$, dx: 3, dy: 3)
@@ -166,4 +166,7 @@
   #label(pt((16, 66)), $(O y z)$, width: 18mm)
 ]
 
-#let coordinate-triangle(number) = if number == 5 { merged-triangle() } else { split-triangle(number) }
+#let coordinate-triangle(number) = if number == 5 { merged-triangle() } else {
+  // Remove empty top/bottom margins without scaling the geometry or labels.
+  box(width: 165mm, height: 60mm, move(dy: -12mm, split-triangle(number)))
+}

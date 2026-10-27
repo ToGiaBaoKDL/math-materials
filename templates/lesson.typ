@@ -289,6 +289,7 @@
   writing-lines: 6,
   fill-writing-page: true,
   writing-keep-prompt: true,
+  writing-flow-prompt: false,
   writing-single-page: false,
   compact-statements: false,
   statement-gap: lesson-style.statement-gap,
@@ -351,11 +352,11 @@
   if variant == "de-cach" {
     block(
       width: 100%,
-      breakable: not writing-single-page and (statements-table or not writing-keep-prompt),
+      breakable: not writing-single-page and (statements-table or not writing-keep-prompt or writing-flow-prompt),
       above: question-gap,
       below: 0pt,
     )[
-      #block(width: 100%, breakable: statements-table and not writing-keep-prompt, sticky: writing-keep-prompt, prompt)
+      #block(width: 100%, breakable: writing-flow-prompt or (statements-table and not writing-keep-prompt), sticky: writing-keep-prompt, prompt)
       #if not writing-keep-prompt {
         block(width: 100%, breakable: false, writing-space(writing-lines, gap: writing-line-gap))
       } else { writing-space(writing-lines, gap: writing-line-gap) }

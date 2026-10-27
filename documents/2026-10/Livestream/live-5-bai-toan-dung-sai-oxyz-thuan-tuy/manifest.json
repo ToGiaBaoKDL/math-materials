@@ -97,7 +97,9 @@
   "provenance": {
     "math_extraction": "63 MathType formulas; 63 OLE/preview pairs agree; no empty equations. Deliberately false true/false statements retained.",
     "normalization": "Q4 preview WMF EXTTEXTOUT explicitly contains (4;0;2) and A, confirming U+EF07 spacing glyphs may be omitted. Punctuation/year spacing normalized; false assertions preserved.",
-    "figures": "Q4 retains two views. Q5 now one coherent affine view: ABC to right of Oyz, G=(A+B+C)/3, I=(2A+B+3C)/6, M in Oyz. Camera x direction=(30,0), and I-M=(65,0), consistent with x_I=13/6. MI dashed only inside triangular face. Standalone merged figure inspected; uniform 105% scale retained."
+    "figures": "Q4 retains two views. Q5 now one coherent affine view: ABC to right of Oyz, G=(A+B+C)/3, I=(2A+B+3C)/6, M in Oyz. Camera x direction=(30,0), and I-M=(65,0), consistent with x_I=13/6. MI dashed only inside triangular face. Standalone merged figure inspected; uniform 105% scale retained.",
+    "figure_layout": "Chỉ hiển thị hình câu 2 và 3 cạnh các ý. Bỏ hình câu 4 và 5 ở tất cả variant theo yêu cầu người dùng.",
+    "writing_layout": "Theo yêu cầu riêng: bản de-cach mỗi câu một trang, 5 trang; final-writing-space kẻ tiếp phần dư. Bản de giữ bố cục 2 trang."
   },
   "variants": {
     "de": {
@@ -122,26 +124,36 @@
   },
   "qa": {
     "review_status": "pending",
-    "compile": "passed: de 4 pages, de-cach 5 pages",
+    "compile": "passed",
     "content": "All 5 questions and 20 statements in order in both PDFs, no solutions added; 63 OLE/preview pairs checked.",
     "layout": "14.5 pt body, 1.1 em leading, 6 mm statement gap, 9 mm writing gap. Q3/Q4 scale 110.25% (5% larger than previous 105%); Q2/Q5 remain 105%. Both PDF variants passed question/statement counts and text bounds/font checks.",
     "fonts": "Times New Roman and New Computer Modern Math embedded.",
     "figures": "Q4 retains two views. Q5 now one coherent affine view: ABC to right of Oyz, G=(A+B+C)/3, I=(2A+B+3C)/6, M in Oyz. Camera x direction=(30,0), and I-M=(65,0), consistent with x_I=13/6. MI dashed only inside triangular face. Standalone merged figure inspected; uniform 105% scale retained.",
     "visual_review": "Standalone figures reviewed; full-page PDF visual review pending. No page-preview images generated.",
-    "source_integrity": "Archived DOCX checksum matches original."
+    "source_integrity": "Archived DOCX checksum matches original.",
+    "full_page_visual_review": "pending",
+    "notes": [
+      "Đã xem render riêng 4 hình sau đổi màu/nét. Build de 4 trang, de-cach 5 trang; mỗi bản đủ 5 câu; HẾT bản đề cùng trang câu 5.",
+      "Thu gọn bố cục: thân 14 pt, leading 0,6 em, khoảng câu 5 mm; bản đề 3 trang (1–2 / 3–4 / 5), bản cách 4 trang (1 / 2–3 / 4 / 5). Giữ tối thiểu 3 dòng viết 8 mm và final-writing-space lấp phần dư. Đã kiểm tra text đủ 5 câu mỗi bản; chưa duyệt trực quan toàn trang.",
+      "Câu 3 chuyển hình xuống dưới; bản đề câu 3 bắt đầu trang 1, hình tiếp trang 2. Bản cách cho phép prompt câu 3 chảy trang, giữ vùng viết liền khối. Build lại cả hai bản.",
+      "Thu gọn khung hình câu 4 16 mm và giảm khoảng trước hình còn 3 mm; câu 5 bắt đầu trang 2 bản đề, trang 3 bản cách. Đã build và kiểm tra đủ 5 câu ở cả hai bản.",
+      "Thu nhỏ hình câu 3, đặt bên phải; thu gọn câu 2 và khoảng cách để câu 3 trọn trang 1. Kiểm tra text đủ 5 câu mỗi bản, bản đề 2 trang.",
+      "Đã build riêng de-cach và kiểm tra đúng 5 trang, mỗi trang đúng một câu theo thứ tự 1–5.",
+      "Bỏ hình câu 4–5 ở de và de-cach, giữ đủ 5 câu; đã build và xác nhận bản cách 5 trang, mỗi câu một trang."
+    ]
   },
   "outputs": {
     "de": {
       "pdf": "assets/targets/2026-10/Livestream/live-5-bai-toan-dung-sai-oxyz-thuan-tuy/de.pdf",
-      "pages": 4,
-      "bytes": 332274,
-      "sha256": "1d4661c2d48fcd6c33a4a6404a4c228f715500e670e3a88d00aa08af274d1d92"
+      "pages": 2,
+      "bytes": 323211,
+      "sha256": "216e85403f64fbf75db16f8932e4798fec4ef9a958817e9d6f2eb81aece2218e"
     },
     "de-cach": {
       "pdf": "assets/targets/2026-10/Livestream/live-5-bai-toan-dung-sai-oxyz-thuan-tuy/de-cach.pdf",
       "pages": 5,
-      "bytes": 345389,
-      "sha256": "4c2a07902648ca7ee61a1fca59734ac754aa716020c75d26f3e0b36685545760"
+      "bytes": 341309,
+      "sha256": "36b83322d4d3d2aad708a833dcd71b81d9d58bb7f16483bde9ad2ae0a9208458"
     }
   }
 }

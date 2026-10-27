@@ -17,6 +17,6 @@
     border: 0.8pt + palette.heading,
   ),
 )
-#set text(size: 14.5pt)
-#set par(leading: 1.1em, spacing: 4mm, justify: false)
+#set text(size: 14pt)
+#set par(leading: 0.6em, spacing: 2.5mm, justify: false)
 #questions(variant)

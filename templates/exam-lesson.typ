@@ -17,7 +17,7 @@
       style: header-style + (strip-color: palette.primary.lighten(78%),)))
     place(bottom + left, running-foot(lesson-style.branding.footer,
       counter(page).get().first(), counter(page).final().first(),
-      margin: lesson-style.margin, palette: palette, folio-width: 48mm,
+      margin: lesson-style.margin, palette: palette, folio-width: 48mm, folio-right-inset: 6mm,
       folio: [Mã đề #code – Trang #counter(page).display()/#counter(page).final().first()]))
   })
   body
