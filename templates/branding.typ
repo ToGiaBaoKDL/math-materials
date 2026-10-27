@@ -36,6 +36,7 @@
   badge,
   title,
   branded: false,
+  palette: palette,
   title-align: left,
   size-override: none,
   style: header-style,
@@ -137,6 +138,7 @@
   total,
   margin: document-style.margin,
   folio: none,
+  palette: palette,
   folio-width: footer-style.folio-width,
   folio-size: footer-style.folio-size,
 ) = layout(size => {

@@ -4,6 +4,7 @@
 // Curves, guides and labels use the same mathematical coordinate map.
 #let graph(
   f,
+  curve-stroke: plot-style.curve,
   xrange: (-3, 3),
   yrange: (-4, 4),
   width: plot-style.width,
@@ -56,7 +57,7 @@
           active = true
         } else { active = false }
       }
-      place(top + left, curve(..segments, stroke: plot-style.curve))
+      place(top + left, curve(..segments, stroke: curve-stroke))
     }
     #for x in xticks {
       let q = p(x, 0)

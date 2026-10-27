@@ -41,6 +41,8 @@ Quy tắc vận hành liên quan: [document-model](../../docs/document-model.md)
 
 ## Phối màu minh họa
 
+- Đề thi mới từ 27/10/2026: ưu tiên tông đỏ theo ảnh `assets/branding/dxt-red-reference.jpg`, cạnh/đường cong `#B00012`, mặt hồng đỏ nhạt, vàng ấm bổ trợ. Quy tắc này ưu tiên hơn màu đường cong xanh mặc định bên dưới; ảnh thực tế giữ nguyên màu. Các tài liệu đã duyệt giữ màu hiện tại khi chưa được yêu cầu đổi.
+
 - Áp dụng chung cho **đề thi, chuyên đề và livestream**, ở mọi variant: màu tô mặt/vùng minh họa pha **25% trắng** qua `figure-fill(color)` trong `templates/drawing.typ`, dùng token `figure-style.fill-white` trong theme. Gọi đúng một lần ở nơi tô (kể cả ellipse, rect và curve), giữ màu đục để vùng chồng không đậm thêm. Không làm nhạt chữ, nét viền, nét khuất, điểm, đường cong đồ thị hoặc chi tiết tối mang vai trò đường biên. Bảng màu dưới là màu gốc trước khi pha trắng; không pha lại màu đã xử lý.
 - Khối 3D dùng một tông màu; phân biệt mặt và cạnh bằng sắc độ đậm nhạt cùng tông. Giữ nét khuất đủ tương phản và nét đứt theo hình học. Hình khai triển đi kèm dùng sắc độ tương ứng với các mặt của khối.
 

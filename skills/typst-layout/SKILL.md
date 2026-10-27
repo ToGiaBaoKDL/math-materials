@@ -26,11 +26,11 @@ Quy tắc vận hành liên quan: [document-model](../../docs/document-model.md)
 - Rút ra quyết định cụ thể: thứ bậc chữ, chiều rộng cột, khoảng cách công thức, cách tách mục, vị trí hình, tab header và folio. Dựng thiết kế riêng theo palette của repo; không đưa chữ, logo hoặc hình nguồn tham khảo vào đề.
 - Trang trí gắn với khối mà nó nhận diện. Căn huy hiệu với nền và kiểm tra khoảng đệm, góc cắt, giới hạn nền; các thành phần footer dùng cùng trục. Điều chỉnh hình dạng và màu để tạo điểm nhấn, tránh đặt họa tiết ở tọa độ trang cố định không liên quan đến nội dung.
 - Ghi tài liệu và ứng dụng thực tế vào manifest. Chỉ ghi đã xem trang hình khi thật sự đã xem; giữ mẫu tải về ở thư mục tạm nếu không phục vụ build.
-- Tách màu nhận diện trang khỏi màu minh họa. Giữ nhận diện riêng của đề thi và chuyên đề dưới đây; phối màu hình theo [typst-figures](../typst-figures/SKILL.md), không ép mọi hình dùng cạnh đỏ hoặc mặt pastel.
+- Tách màu nhận diện trang khỏi màu minh họa. Dùng nhận diện chuyên đề cho đề thi mới theo convention dưới đây; phối màu hình theo [typst-figures](../typst-figures/SKILL.md), không ép mọi hình dùng cạnh đỏ hoặc mặt pastel.
 - Tập trung độ đậm, cỡ chữ, lề, khoảng cách và kích thước header/footer trong theme. Căn caption/folio theo lề của tài liệu; đo nhãn dài để vừa khung. Main chỉ truyền nội dung, dữ kiện và bố trí; số liệu thuộc bài toán giữ ở model.
 - Đề cần nhịp đọc gọn; bài giảng có thể dùng thêm khung định nghĩa/ví dụ nếu nội dung đã có. Màu nhấn hỗ trợ phân cấp; nội dung chính giữ tương phản tốt cả khi in đen trắng.
 
-Profile Tinh Hoa/Livestream dùng chung template lesson; đề thi dùng exam và mặc định bản gộp. Theo [mô hình tài liệu](../../docs/document-model.md), không suy bộ đầu ra từ category hay sự tồn tại của PDF cũ.
+Profile Tinh Hoa/Livestream dùng template lesson; đề thi mới dùng exam-lesson và mặc định bản gộp (profile vẫn là exam). Theo [mô hình tài liệu](../../docs/document-model.md), không suy bộ đầu ra từ category hay sự tồn tại của PDF cũ.
 
 ## Convention template hiện hành
 
@@ -44,6 +44,8 @@ Dùng template làm nguồn triển khai, skill làm quy tắc tái sử dụng.
 - Câu nhiều bước, chứng minh hoặc nhiều ý được chừa thêm khoảng theo lời giải dự kiến. Không suy độ khó chỉ từ độ dài câu dẫn hoặc việc có hình. Khi chưa chắc, ước lượng các bước giải cần thiết để chọn khoảng phù hợp.
 - Giữ câu hỏi cùng phần đầu vùng viết; cho phép nhiều câu ngắn trên một trang. Ưu tiên đưa câu tiếp theo lên nếu đủ chỗ, với tối thiểu khoảng 3 dòng cho câu dễ. Sau khi phân trang theo số dòng cần thiết, phần cuối trang còn dư trong bản cách phải có dòng viết nối tiếp bằng `final-writing-space`, không để một mảng trắng hoàn toàn. Không dùng `v(1fr)` trống để đẩy HẾT xuống cuối bản cách; dành phần dư cho dòng viết và giữ khoảng an toàn với footer.
 - Với câu có hình, linh hoạt dùng grid hai cột: câu hỏi bên trái, hình bên phải; chọn tỉ lệ cột theo độ dài đề và kích thước hình, không bắt buộc chia đôi bằng nhau. Đáp án hoặc các ý dài có thể trải toàn chiều rộng bên dưới.
+- Ảnh đặt dưới toàn bộ câu hỏi cần khoảng hở thực khoảng 6–8 mm trước ảnh và 3–5 mm sau ảnh. Chèn khoảng cách ở cấp bố cục ngoài `align` để không bị mất do khoảng cách block lồng nhau; kiểm tra mép ảnh so với dòng chữ cuối.
+- Khi đặt hình bên cạnh, giữ toàn bộ câu dẫn liền mạch trong cột chữ, căn đầu cột; không tách nửa câu phía trên và nửa câu vào grid căn giữa gây khoảng hở. Đáp án/ý a–d đặt sát câu dẫn, không căn giữa theo chiều cao hình. Hình căn phải trong cột riêng và dùng khung sát nội dung.
 - Ưu tiên đặt cạnh bên cho hình đơn nhỏ, tránh để hình nhỏ đứng riêng ngay dưới câu hỏi tạo khoảng trống lớn. Hình rộng, nhóm nhiều hình hoặc câu có công thức dài vẫn có thể đặt dưới nếu dễ đọc hơn. Giữ nhãn đủ lớn, không ép hình/câu vào cột hẹp hoặc làm sai thứ tự đọc.
 - Việc có cần dựng thêm hình hay không theo [typst-figures](../typst-figures/SKILL.md): đề thi không có hình gốc thì không tự thêm hình minh họa.
 
@@ -57,18 +59,13 @@ Dùng template làm nguồn triển khai, skill làm quy tắc tái sử dụng.
 
 ### Đề thi
 
-- `templates/exam.typ` và `exam-branding.typ`; A4, lề ngang 12 mm, trên 18 mm, dưới 16 mm. Thân đề và đáp án 13 pt, leading mặc định 1,1 em. Leading theo cấu hình tài liệu; không nhầm mặc định theme với override của bản đã duyệt.
-- Cover khung trắng bo góc 3 mm, viền đỏ 1 pt; cột trái/phải 56%/44%. Hai khối tiêu đề Noto Sans bold cùng cỡ, tối đa 14 pt; nếu không vừa, ngắt ở cụm nghĩa rồi chọn cỡ chung vừa cả hai cột. Không ép ngang chữ. Cho phép trái 2 dòng/phải 3 dòng; căn trên để dòng đầu ngang nhau, chữ căn giữa theo chiều ngang. Không cắt vụn tên riêng hoặc năm học.
-- Tên đơn vị xanh lá tươi bão hòa `palette.section-green` (`#009B19`), bold và stroke 0,12 pt cùng màu; tên kỳ thi đỏ `#C6001D`, cùng độ đậm. Không pha trắng/giảm opacity. Không hiển thị “ĐỀ CHÍNH THỨC”. Đường kẻ nhạt bên trái cách cụm tên đơn vị 1 mm, không hạ theo chiều cao khối phải.
-- Cột phải đệm trái 8 mm. Ba hàng thông tin hai bên cùng cao độ: số trang ↔ môn và lớp gộp thành “Môn: Toán 12”; thời gian ↔ ngày thi nếu có; ghi chú phát đề ↔ mã đề. Không hiển thị hàng Lớp riêng. Ngày thi nằm dưới Môn và trên Mã đề, nhãn “Ngày thi:” in đậm. Cỡ thông tin 12,5 pt, dòng thời gian 12 pt, ghi chú 11,5 pt. Đồng hồ 20 mm, đầy đủ không bị cắt, có khoảng hở với chữ. Họ tên/số báo danh cùng một dòng chia đôi; dưới có đường đỏ nét đứt theo component.
-- Họa tiết góc dưới phải dùng `assets/branding/icons/exam-corner.svg`: tam giác đỏ và hai hình bình hành, cắt gọn theo khung bo góc. Không kéo dài họa tiết hoặc để lấn nội dung.
-- Tiêu đề phần: chỉ nhãn “PHẦN I/II/III” có nền đỏ nhận diện đề thi, chữ trắng đậm. Tên phần phía sau xanh lá `#009B19`, bold + stroke 0,12 pt; hướng dẫn màu đen. Áp dụng mọi phần và variant. **Xanh lá này cho heading/phần đề thi, không thay convention chuyên đề.**
-- Header/footer chữ Noto Sans Regular 11 pt, stroke 0,12 pt cùng màu; nhận diện đỏ đề thi `#C8102E`, icon liên hệ, mã đề nếu có và trang thực. Không dùng dải DXT/logo chuyên đề.
-- Sau khối tiêu đề phần và hướng dẫn, chừa 6 mm trước câu đầu. Khối bọc câu cuối để căn chữ HẾT phải giữ khoảng cách trên 6 mm, không để khoảng cách của câu bên trong bị mất ở đầu khối.
-- Khoảng cách giữa các câu mặc định 6 mm qua `exam-style.question-gap`, dùng chung cho các variant đề thi; chỉ override khi tài liệu có yêu cầu riêng.
-- Câu hỏi được nối qua trang; không bắt buộc nguyên câu trong một trang. `de-dap-an` nối đáp án từ trang mới, dùng chung header/footer và số trang liên tục; không chèn một bộ header/footer đáp án lồng vào. Bản đáp án riêng vẫn có header/footer. Chỉ tạo variant theo phạm vi nguồn/yêu cầu.
-
-- Bảng đáp án in đậm kết quả. Trong lời giải, in đậm kết luận chọn phương án, Đúng/Sai và đáp số cuối cùng (kể cả công thức); giữ diễn giải regular.
+- Từ đề mới nhận ngày 27/10/2026, dùng `templates/exam-lesson.typ`: heading, header và footer tái sử dụng component chuyên đề. Các đề đã duyệt trước đó giữ template cũ đến khi có yêu cầu đổi.
+- A4, lề ngang 12 mm, trên 24 mm, dưới 22 mm; thân chữ 13 pt, leading 0,85 em. Đảm bảo nội dung liền mạch, giữ câu và các lựa chọn cùng trang khi vừa; không tạo khoảng trống để mô phỏng ngắt trang nguồn.
+- Heading dùng `lesson-heading`: tên trường trong nhãn, tên kỳ thi bên dưới, kèm năm học, môn, thời gian, mã đề. Giữ thông tin đơn vị cấp trên nếu nguồn có. Tiêu đề phần dùng `lesson-section`, huy hiệu I/II/III, không thêm chữ DẠNG.
+- Header/footer dùng dải DXT/logo của chuyên đề; footer giữ mã đề và số trang thực. Dùng `exam-lesson-palette`: đỏ `#B00012` ước lượng từ `assets/branding/dxt-red-reference.jpg`. Giữ điểm nhấn xanh lá nguyên bản chuyên đề ở nhãn trường, huy hiệu/viền tiêu đề phần, họa tiết header và dải footer; màu đỏ của hình không thay các điểm nhấn xanh lá này. Không nhập nội dung quảng cáo của ảnh vào đề.
+- Các hình mới của đề thi dùng đỏ làm màu chính: cạnh/đồ thị đỏ rõ, mặt đỏ hồng nhạt pha 25% trắng qua `figure-fill`; vàng ấm làm màu phụ khi cần. Chữ và nhãn vẫn đen. Ảnh thực tế giữ màu gốc.
+- Giữ họ tên và số báo danh; không chép ghi chú biên tập vào PDF. Bảng đáp án dùng dữ liệu đúng mã đề từ nguồn, không tự tạo lời giải.
+- Chữ HẾT nằm cuối trang nội dung, có khoảng an toàn với footer; trong bản cách lấp phần dư bằng dòng viết.
 
 ### Ma trận và bản đặc tả
 

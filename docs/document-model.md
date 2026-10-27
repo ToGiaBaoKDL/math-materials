@@ -11,7 +11,7 @@
 | `tinh-hoa` | `lesson` | `de`, `de-cach`, `dap-an` | Chuyên đề; đề và đề cách cùng dòng, đáp án ngay dưới |
 | `livestream` | `lesson` | `de`, `de-cach` | Livestream; một dòng có hai link |
 | `matrix` | `matrix` (A4 ngang, nhận diện lesson) | `de` → `ma-tran.pdf` | Drive và Sheet: Ma trận; một bản ma trận và đặc tả, chưa có format notify |
-| `exam` | `exam` | `de-dap-an` | Đề thi; một dòng, link bản gộp và tổng số trang |
+| `exam` | `exam` (đề mới dùng template `exam-lesson`, nhận diện chuyên đề đỏ) | `de-dap-an` | Đề thi; một dòng, link bản gộp và tổng số trang |
 
 Build mặc định, upload, Sheet và link tự động của notify cùng dùng `publication_variants`. Notify vẫn độc lập, không tự chạy sau các bước khác.
 

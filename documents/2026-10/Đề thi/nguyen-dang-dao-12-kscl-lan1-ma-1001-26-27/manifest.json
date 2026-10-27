@@ -1,0 +1,312 @@
+{
+  "schema_version": 1,
+  "id": "nguyen-dang-dao-12-kscl-lan1-ma-1001-26-27",
+  "kind": "exam",
+  "received_date": "2026-10-27",
+  "status": "implemented",
+  "metadata": {
+    "title": "ĐỀ KHẢO SÁT CHẤT LƯỢNG LẦN 1 – THPT NGUYỄN ĐĂNG ĐẠO",
+    "subject": "TOÁN 12",
+    "school_year": "2026–2027",
+    "code": "1001",
+    "organization": "SỞ GD-ĐT BẮC NINH – TRƯỜNG THPT NGUYỄN ĐĂNG ĐẠO"
+  },
+  "sources": [
+    {
+      "path": "assets/sources/2026-10/Đề thi/nguyen-dang-dao-12-kscl-lan1-ma-1001-26-27/source.pdf",
+      "original_name": "de-khao-sat-toan-12-lan-1-nam-2026-2027-truong-thpt-nguyen-dang-dao-bac-ninh.pdf",
+      "bytes": 506179,
+      "sha256": "2ed9691a8f3589614ac3198f7f696ea8f48618aecf27ea391e4b5631a8225deb",
+      "pages": 8
+    }
+  ],
+  "scope": {
+    "has_questions": true,
+    "has_solutions": true,
+    "questions": 22,
+    "question_pages": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "answer_pages": [
+      5,
+      6,
+      7,
+      8
+    ],
+    "answers_only": true
+  },
+  "variants": {
+    "de": {
+      "filename": "de.pdf",
+      "inputs": {
+        "variant": "de"
+      }
+    },
+    "dap-an": {
+      "filename": "dap-an.pdf",
+      "inputs": {
+        "variant": "dap-an"
+      }
+    },
+    "de-dap-an": {
+      "filename": "de-dap-an.pdf",
+      "inputs": {
+        "variant": "de-dap-an"
+      }
+    }
+  },
+  "drive": {
+    "folder": "Đề thi",
+    "filenames": {
+      "de": "NGUYEN-DANG-DAO-12-KSCL-LAN1-MA-1001-26-27 - ĐỀ.pdf",
+      "dap-an": "NGUYEN-DANG-DAO-12-KSCL-LAN1-MA-1001-26-27 - ĐÁP ÁN.pdf",
+      "de-dap-an": "NGUYEN-DANG-DAO-12-KSCL-LAN1-MA-1001-26-27 - ĐỀ + ĐÁP ÁN.pdf"
+    }
+  },
+  "content_mapping": [
+    {
+      "id": "I.1",
+      "role": "question",
+      "source": {
+        "index": 0,
+        "page": 1
+      }
+    },
+    {
+      "id": "I.2",
+      "role": "question",
+      "source": {
+        "index": 0,
+        "page": 1
+      }
+    },
+    {
+      "id": "I.3",
+      "role": "question",
+      "source": {
+        "index": 0,
+        "page": 1
+      }
+    },
+    {
+      "id": "I.4",
+      "role": "question",
+      "source": {
+        "index": 0,
+        "page": 1
+      }
+    },
+    {
+      "id": "I.5",
+      "role": "question",
+      "source": {
+        "index": 0,
+        "page": 1
+      }
+    },
+    {
+      "id": "I.6",
+      "role": "question",
+      "source": {
+        "index": 0,
+        "page": 1
+      }
+    },
+    {
+      "id": "I.7",
+      "role": "question",
+      "source": {
+        "index": 0,
+        "page": 1
+      }
+    },
+    {
+      "id": "I.8",
+      "role": "question",
+      "source": {
+        "index": 0,
+        "page": 2
+      }
+    },
+    {
+      "id": "I.9",
+      "role": "question",
+      "source": {
+        "index": 0,
+        "page": 2
+      }
+    },
+    {
+      "id": "I.10",
+      "role": "question",
+      "source": {
+        "index": 0,
+        "page": 2
+      }
+    },
+    {
+      "id": "I.11",
+      "role": "question",
+      "source": {
+        "index": 0,
+        "page": 2
+      }
+    },
+    {
+      "id": "I.12",
+      "role": "question",
+      "source": {
+        "index": 0,
+        "page": 2
+      }
+    },
+    {
+      "id": "II.1",
+      "role": "question",
+      "source": {
+        "index": 0,
+        "page": 2
+      }
+    },
+    {
+      "id": "II.2",
+      "role": "question",
+      "source": {
+        "index": 0,
+        "page": 2
+      }
+    },
+    {
+      "id": "II.3",
+      "role": "question",
+      "source": {
+        "index": 0,
+        "page": 3
+      }
+    },
+    {
+      "id": "II.4",
+      "role": "question",
+      "source": {
+        "index": 0,
+        "page": 3
+      }
+    },
+    {
+      "id": "III.1",
+      "role": "question",
+      "source": {
+        "index": 0,
+        "page": 3
+      }
+    },
+    {
+      "id": "III.2",
+      "role": "question",
+      "source": {
+        "index": 0,
+        "page": 3
+      }
+    },
+    {
+      "id": "III.3",
+      "role": "question",
+      "source": {
+        "index": 0,
+        "page": 3
+      }
+    },
+    {
+      "id": "III.4",
+      "role": "question",
+      "source": {
+        "index": 0,
+        "page": 3
+      }
+    },
+    {
+      "id": "III.5",
+      "role": "question",
+      "source": {
+        "index": 0,
+        "page": 4
+      }
+    },
+    {
+      "id": "III.6",
+      "role": "question",
+      "source": {
+        "index": 0,
+        "page": 4
+      }
+    }
+  ],
+  "provenance": {
+    "answer_scope": "Chỉ bảng đáp án mã 1001; nguồn lặp bảng ở trang 5–8, không có lời giải chi tiết.",
+    "design_reference": {
+      "path": "assets/branding/dxt-red-reference.jpg",
+      "original_name": "2aOboR8QheooIbjx89Rf2TX1qThmF6geAlYnQO3c.jpg",
+      "sha256": "1abb2634437e7f72079d94975a990f5d1911e4773341d143691a201afefbc680",
+      "role": "Màu đỏ cho hình vẽ và màu chính; giữ các điểm nhấn xanh lá của heading/header/footer chuyên đề. Không nhập nội dung quảng cáo."
+    },
+    "figures": {
+      "I.2": "Đồ thị đạo hàm minh họa, giữ ba nghiệm đổi dấu, không thêm số đo.",
+      "I.10": "Hình lập phương vector theo hướng nhìn nguồn.",
+      "II.2": "Bảng biến thiên gồm mốc 0,3,4; f(0)=4, f(3)=-1/2, f(4)=4/3.",
+      "II.3": "Đồ thị y=-x³+2x²−1 khớp các điểm nguồn.",
+      "II.4": "Hình lập phương ABCD.EFGH theo nhãn nguồn.",
+      "III.4": "Parabol y=20−x²/5, tam giác A(0,0), B(0,40), C(20,0).",
+      "III.5": "Ảnh plants.png do người dùng bổ sung, thay ảnh trích nguồn; căn giữa dưới câu hỏi, rộng 70 mm.",
+      "III.6": "Lưới 10 cột × 8 hàng."
+    },
+    "source_issues": [
+      "Giữ cách diễn đạt “song song các với các cạnh” ở III.6 và “hàng phần chục” ở III.5 theo nguồn."
+    ],
+    "supplementary_images": [
+      {
+        "path": "documents/2026-10/Đề thi/nguyen-dang-dao-12-kscl-lan1-ma-1001-26-27/figures/plants.png",
+        "original_name": "plants.png",
+        "question": "III.5",
+        "sha256": "b4c93693d1a10ba41b1d77703a4f636b8017e409eca2443490a4b21764328ba2"
+      }
+    ]
+  },
+  "qa": {
+    "review_status": "pending",
+    "full_page_visual_review": "pending",
+    "notes": [
+      "Đã xem 4 trang đề nguồn và đối chiếu nội dung, hình; đáp án trích cột 1001.",
+      "Bản cuối: 5 trang đề + 1 trang đáp án; kiểm tra text/bbox, font nhúng, đủ 22 câu và HẾT trang 5. Đã xem hình render riêng; chưa duyệt trực quan toàn trang PDF.",
+      "Sửa theo ảnh góp ý: đường gióng/tên đạo hàm, nhãn A/E và −1; grid căn trên, chữ câu III.4–6 liền mạch, bảng cách câu dẫn 4 mm. Đã kiểm tra 22 câu, II.3 cùng trang II.2 và HẾT cùng trang cuối. Đã xem render riêng các hình sửa; full-page visual review vẫn pending.",
+      "Khôi phục xanh lá chuyên đề; giãn ý II.3–4; hình công viên tăng 15% đồng đều, lưới tăng 20% và bỏ lề trắng bên phải. Đã build, đủ 22 câu, II.3 vẫn ở trang 3.",
+      "III.4: thu nhỏ hình công viên khoảng 13%, căn giữa theo chiều cao cột chữ, đã lên trang 4. III.5: toàn bộ đề trải ngang, ảnh căn giữa bên dưới. Kiểm tra đủ 22 câu, 6 trang, HẾT trang 5.",
+      "Thay ảnh III.5 bằng plants.png nguyên bản, rộng 70 mm, căn giữa; thêm v(7mm) ngoài align trước ảnh và 3 mm sau ảnh. Build và kiểm tra đủ 22 câu.",
+      "Nhãn xanh đơn vị tăng từ 14 pt lên 17 pt, đệm 9×2,5 mm; build thành công, text giữ đủ tên đơn vị và 22 câu.",
+      "Thêm khoảng hở 3 mm trước grid lựa chọn của I.2 và I.10; build thành công, kiểm tra đủ 22 câu.",
+      "Thêm 3 mm trước các ý II.4; heading xanh tăng 19 pt và đệm 10×3 mm. Build và đối chiếu text đủ 22 câu."
+    ],
+    "compile": "passed",
+    "checks": {
+      "question_count": 22,
+      "pages": 6,
+      "question_pages": 5,
+      "answer_key_pages": 1,
+      "end_mark_same_page_as_last_question": true,
+      "embedded_fonts": "passed",
+      "source_checksum": "passed",
+      "standalone_figures_visual_review": "passed",
+      "full_page_visual_review": "pending"
+    }
+  },
+  "outputs": {
+    "de-dap-an": {
+      "pdf": "assets/targets/2026-10/Đề thi/nguyen-dang-dao-12-kscl-lan1-ma-1001-26-27/de-dap-an.pdf",
+      "pages": 6,
+      "bytes": 3607506,
+      "sha256": "d169ade7a7ffad29f0bbe8d67228ab37b5d96a78f12b1a63709c68fb344acb05"
+    }
+  }
+}

@@ -198,3 +198,8 @@
   variation-fill: rgb("#F1D8DE"),
   table-stroke: 0.6pt + exam-palette.primary,
 )
+
+// New exams retain lesson green accents; illustration red follows the supplied banner.
+#let exam-lesson-palette = palette + (
+  primary: rgb("#B00012"), heading: rgb("#B00012"),
+)

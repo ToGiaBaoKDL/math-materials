@@ -12,10 +12,12 @@
   horizontal-inset: 5mm,
   title-size: 25pt,
   course-size: 20.5pt,
+  course-inset: (x: 7mm, y: 2mm),
   course-tracking: 0pt,
   title-stroke: none,
   author: [Biên soạn và giảng dạy: Thầy Đỗ Xuân Thắng],
   plain: false,
+  palette: palette,
   border: 0.6pt + palette.primary,
 ) = block(
   width: 100%,
@@ -26,7 +28,7 @@
   #set par(justify: false, leading: 0.5em)
   #align(center)[
     #if not plain and course != none {
-      block(fill: palette.course-green, radius: 2mm, inset: (x: 7mm, y: 2mm))[
+      block(fill: palette.course-green, radius: 2mm, inset: course-inset)[
         #text(font: fonts.course, size: course-size, tracking: course-tracking, weight: "bold", fill: white, course)
       ]
       v(1mm)
@@ -106,7 +108,7 @@
   body
 }
 
-#let lesson-section(title, number: none, badge: none, above: lesson-style.section-above) = block(
+#let lesson-section(title, number: none, badge: none, above: lesson-style.section-above, palette: palette) = block(
   width: 100%,
   sticky: true,
   above: above,
