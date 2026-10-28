@@ -95,4 +95,10 @@
     v(1fr)
     end-mark([])
   }
+  block(width: 100%, breakable: false, above: 3mm, below: 0pt)[
+    #set text(fill: black, size: 12pt, weight: "regular")
+    #set par(justify: false, leading: 0.5em)
+    #move(dy: 7mm, block(width: 100%, align(center)[Xem lại video record buổi học tại YouTube Thầy Đỗ Xuân Thắng (\@toanthaythangdxt)]))
+  ]
+
 }
