@@ -6,7 +6,11 @@
   "status": "implemented",
   "metadata": {
     "title": "BUỔI 18: PHƯƠNG PHÁP TÂM TỶ CỰ GIẢI MIN – MAX OXYZ",
-    "course": "KHÓA TINH HOA TOÀN DIỆN 9+ 2027"
+    "course": "KHÓA TINH HOA TOÀN DIỆN 9+ 2027",
+    "lesson": 18,
+    "topic": "HÌNH TỌA ĐỘ OXYZ",
+    "subject": "Toán – hình tọa độ Oxyz",
+    "homework": true
   },
   "sources": [
     {

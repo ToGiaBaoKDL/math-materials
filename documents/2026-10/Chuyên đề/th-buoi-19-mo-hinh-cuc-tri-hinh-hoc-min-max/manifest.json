@@ -1,0 +1,412 @@
+{
+  "schema_version": 1,
+  "id": "th-buoi-19-mo-hinh-cuc-tri-hinh-hoc-min-max",
+  "kind": "tinh-hoa",
+  "received_date": "2026-10-28",
+  "status": "implemented",
+  "metadata": {
+    "title": "BUỔI 19: CÁC MÔ HÌNH CỰC TRỊ HÌNH HỌC GIẢI BÀI TOÁN MIN – MAX",
+    "course": "KHÓA TINH HOA TOÀN DIỆN 9+ 2027",
+    "lesson": 19,
+    "topic": "HÌNH TỌA ĐỘ OXYZ",
+    "subject": "Toán – hình tọa độ Oxyz",
+    "homework": true
+  },
+  "sources": [
+    {
+      "path": "assets/sources/2026-10/Chuyên đề/th-buoi-19-mo-hinh-cuc-tri-hinh-hoc-min-max/source.docx",
+      "original_name": "BUỔI 19 CÁC MÔ HÌNH CỰC TRỊ HÌNH HỌC GIẢI BÀI TOÁN MIN - MAX.docx",
+      "bytes": 1502651,
+      "sha256": "94741afdf801b07b2535427f5e70d7365b3c63f28900292f104c0fbddce388cd"
+    }
+  ],
+  "scope": {
+    "has_questions": true,
+    "has_solutions": true,
+    "questions": 22,
+    "worked_examples": 9,
+    "practice_questions": 13
+  },
+  "variants": {
+    "de": {
+      "filename": "de.pdf",
+      "inputs": {
+        "variant": "de"
+      }
+    },
+    "de-cach": {
+      "filename": "de-cach.pdf",
+      "inputs": {
+        "variant": "de-cach"
+      }
+    },
+    "dap-an": {
+      "filename": "dap-an.pdf",
+      "inputs": {
+        "variant": "dap-an"
+      }
+    }
+  },
+  "drive": {
+    "folder": "Chuyên đề",
+    "filenames": {
+      "de": "KHÓA TH - BUỔI 19 - MÔ HÌNH CỰC TRỊ HÌNH HỌC MIN MAX - ĐỀ.pdf",
+      "de-cach": "KHÓA TH - BUỔI 19 - MÔ HÌNH CỰC TRỊ HÌNH HỌC MIN MAX - ĐỀ CÁCH.pdf",
+      "dap-an": "KHÓA TH - BUỔI 19 - MÔ HÌNH CỰC TRỊ HÌNH HỌC MIN MAX - ĐÁP ÁN.pdf"
+    }
+  },
+  "content_mapping": [
+    {
+      "id": "mau-1",
+      "role": "question",
+      "source": {
+        "paragraph_start": 35,
+        "paragraph_end": 42,
+        "source_label": "Câu 1:",
+        "output_number": 1
+      }
+    },
+    {
+      "id": "mau-2",
+      "role": "question",
+      "source": {
+        "paragraph_start": 43,
+        "paragraph_end": 59,
+        "source_label": "Câu 10:",
+        "output_number": 2
+      }
+    },
+    {
+      "id": "mau-3",
+      "role": "question",
+      "source": {
+        "paragraph_start": 60,
+        "paragraph_end": 71,
+        "source_label": "Câu 1:",
+        "output_number": 3
+      }
+    },
+    {
+      "id": "mau-4",
+      "role": "question",
+      "source": {
+        "paragraph_start": 72,
+        "paragraph_end": 88,
+        "source_label": "Câu 2:",
+        "output_number": 4
+      }
+    },
+    {
+      "id": "mau-5",
+      "role": "question",
+      "source": {
+        "paragraph_start": 89,
+        "paragraph_end": 98,
+        "source_label": "Câu 5:",
+        "output_number": 5
+      }
+    },
+    {
+      "id": "mau-6",
+      "role": "question",
+      "source": {
+        "paragraph_start": 99,
+        "paragraph_end": 110,
+        "source_label": "Câu 1:",
+        "output_number": 6
+      }
+    },
+    {
+      "id": "mau-7",
+      "role": "question",
+      "source": {
+        "paragraph_start": 111,
+        "paragraph_end": 122,
+        "source_label": "Câu 2:",
+        "output_number": 7
+      }
+    },
+    {
+      "id": "mau-8",
+      "role": "question",
+      "source": {
+        "paragraph_start": 123,
+        "paragraph_end": 134,
+        "source_label": "Câu 3:",
+        "output_number": 8
+      }
+    },
+    {
+      "id": "mau-9",
+      "role": "question",
+      "source": {
+        "paragraph_start": 135,
+        "paragraph_end": 149,
+        "source_label": "Câu 7:",
+        "output_number": 9
+      }
+    },
+    {
+      "id": "tu-luyen-1",
+      "role": "question",
+      "source": {
+        "paragraph_start": 150,
+        "paragraph_end": 159,
+        "source_label": "Câu 1:",
+        "output_number": 1
+      }
+    },
+    {
+      "id": "tu-luyen-2",
+      "role": "question",
+      "source": {
+        "paragraph_start": 160,
+        "paragraph_end": 175,
+        "source_label": "Câu 2:",
+        "output_number": 2
+      }
+    },
+    {
+      "id": "tu-luyen-3",
+      "role": "question",
+      "source": {
+        "paragraph_start": 176,
+        "paragraph_end": 186,
+        "source_label": "Câu 3:",
+        "output_number": 3
+      }
+    },
+    {
+      "id": "tu-luyen-4",
+      "role": "question",
+      "source": {
+        "paragraph_start": 187,
+        "paragraph_end": 211,
+        "source_label": "Câu 4:",
+        "output_number": 4
+      }
+    },
+    {
+      "id": "tu-luyen-5",
+      "role": "question",
+      "source": {
+        "paragraph_start": 212,
+        "paragraph_end": 228,
+        "source_label": "Câu 5:",
+        "output_number": 5
+      }
+    },
+    {
+      "id": "tu-luyen-6",
+      "role": "question",
+      "source": {
+        "paragraph_start": 229,
+        "paragraph_end": 242,
+        "source_label": "Câu 6:",
+        "output_number": 6
+      }
+    },
+    {
+      "id": "tu-luyen-7",
+      "role": "question",
+      "source": {
+        "paragraph_start": 243,
+        "paragraph_end": 266,
+        "source_label": "Câu 7:",
+        "output_number": 7
+      }
+    },
+    {
+      "id": "tu-luyen-8",
+      "role": "question",
+      "source": {
+        "paragraph_start": 267,
+        "paragraph_end": 286,
+        "source_label": "Câu 6:",
+        "output_number": 8
+      }
+    },
+    {
+      "id": "tu-luyen-9",
+      "role": "question",
+      "source": {
+        "paragraph_start": 287,
+        "paragraph_end": 299,
+        "source_label": "Câu 7:",
+        "output_number": 9
+      }
+    },
+    {
+      "id": "tu-luyen-10",
+      "role": "question",
+      "source": {
+        "paragraph_start": 300,
+        "paragraph_end": 315,
+        "source_label": "Câu 8:",
+        "output_number": 10
+      }
+    },
+    {
+      "id": "tu-luyen-11",
+      "role": "question",
+      "source": {
+        "paragraph_start": 316,
+        "paragraph_end": 330,
+        "source_label": "Câu 8:",
+        "output_number": 11
+      }
+    },
+    {
+      "id": "tu-luyen-12",
+      "role": "question",
+      "source": {
+        "paragraph_start": 331,
+        "paragraph_end": 349,
+        "source_label": "Câu 9:",
+        "output_number": 12
+      }
+    },
+    {
+      "id": "tu-luyen-13",
+      "role": "question",
+      "source": {
+        "paragraph_start": 350,
+        "paragraph_end": 363,
+        "source_label": "Câu 10:",
+        "output_number": 13
+      }
+    }
+  ],
+  "provenance": {
+    "math_extraction": {
+      "ole_equations": 661,
+      "preview_pairs_checked": 661,
+      "picture_equations": 83
+    },
+    "source_corrections": [
+      {
+        "paragraph": 14,
+        "before": "= d lr(( A",
+        "after": "= d ^(2) lr(( A"
+      },
+      {
+        "paragraph": 84,
+        "before": "max =",
+        "after": "min ="
+      },
+      {
+        "paragraph": 141,
+        "before": "lr(( 1 \";\" - 2 \";\" 3 ))",
+        "after": "lr(( 1 \";\" - 2 \";\" 2 ))"
+      },
+      {
+        "paragraph": 293,
+        "before": "lr(( 1 \";\" - 2 \";\" 3 ))",
+        "after": "lr(( 1 \";\" - 2 \";\" 2 ))"
+      },
+      {
+        "paragraph": 128,
+        "before": "lr(( P ))",
+        "after": "lr(( O x y ))"
+      },
+      {
+        "paragraph": 178,
+        "before": "frac(x - 2, 1) = frac(y - 2, 1) = frac(z, - 1)",
+        "after": "frac(x - 1, 1) = frac(y - 1, 1) = frac(z - 1, - 1)"
+      },
+      {
+        "paragraph": 195,
+        "before": "lr(( d \",\" lr(( P )) ))",
+        "after": "lr(( d \",\" lr(( Q )) ))"
+      },
+      {
+        "paragraph": 201,
+        "before": "arrow(n _(lr(( Q )))) . arrow(u)",
+        "after": "arrow(n _(lr(( P )))) . arrow(u)"
+      },
+      {
+        "paragraph": 201,
+        "before": "cos lr(( arrow(n) \",\" arrow(n _(lr(( Q )))) ))",
+        "after": "cos lr(( arrow(n) \",\" arrow(n _(lr(( P )))) ))"
+      },
+      {
+        "paragraph": 202,
+        "before": "sqrt(3 lr(( 2 B + C )) ^(2) + B ^(2) + C ^(2))",
+        "after": "sqrt(3 lr(( lr(( 2 B + C )) ^(2) + B ^(2) + C ^(2) )))"
+      },
+      {
+        "paragraph": 210,
+        "before": "( Q )",
+        "after": "( P )"
+      },
+      {
+        "paragraph": 218,
+        "before": "(Q)  (AKI)",
+        "after": "$(Q) equiv (A K I)$"
+      },
+      {
+        "paragraph": 279,
+        "before": "⇒ M ∈",
+        "after": "⇒ N ∈"
+      }
+    ],
+    "authorization": "Người dùng đồng ý sửa lỗi rõ, đánh số liên tục và sửa phương án C tự luyện câu 3; ghi manifest.",
+    "numbering": "9 bài minh họa và 13 tự luyện đánh số liên tục riêng từng nhóm; giữ bài lặp giữa hai nhóm theo nguồn.",
+    "figures": "Chỉ dựng lại hình lý thuyết và lời giải có trong nguồn; không thêm hình cho câu hỏi."
+  },
+  "qa": {
+    "review_status": "pending",
+    "full_page_visual_review": "pending: không tạo ảnh preview trang theo convention repo",
+    "compile": "passed",
+    "checks": {
+      "de": {
+        "pages": 9,
+        "question_sequence": "passed: 9 minh họa + 13 tự luyện",
+        "text_bounds": "passed",
+        "embedded_fonts": "passed",
+        "end_mark_last_page": true
+      },
+      "de-cach": {
+        "pages": 15,
+        "question_sequence": "passed: 9 minh họa + 13 tự luyện",
+        "text_bounds": "passed",
+        "embedded_fonts": "passed",
+        "end_mark_last_page": true
+      },
+      "dap-an": {
+        "pages": 27,
+        "question_sequence": "passed: 9 minh họa + 13 tự luyện",
+        "text_bounds": "passed",
+        "embedded_fonts": "passed",
+        "end_mark_last_page": true
+      }
+    },
+    "source_checksum": "passed",
+    "notes": [
+      "Đã đọc nguồn văn bản/công thức, xem hình PNG nguồn và các hình EMF trên PDF nguồn chuyển đổi.",
+      "Chỉ giữ hình trong lý thuyết/lời giải như nguồn; 22 câu hỏi không bổ sung hình.",
+      "Câu dẫn và A–D giữ cùng khối; lời giải cho phép ngắt giữa công thức. Đề cách cấp 3–8 dòng theo lượng thao tác và kẻ phần dư cuối trang."
+    ],
+    "standalone_figures_visual_review": "Đã xem bản dựng riêng toàn bộ hình, chỉnh điểm K trên giao tuyến, vị trí mặt phẳng cắt và khung hình."
+  },
+  "outputs": {
+    "de": {
+      "pdf": "assets/targets/2026-10/Chuyên đề/th-buoi-19-mo-hinh-cuc-tri-hinh-hoc-min-max/de.pdf",
+      "pages": 9,
+      "bytes": 468400,
+      "sha256": "289243b5899efc934297a09039d38be0198b7606591872726fbca1843ecba9b4"
+    },
+    "de-cach": {
+      "pdf": "assets/targets/2026-10/Chuyên đề/th-buoi-19-mo-hinh-cuc-tri-hinh-hoc-min-max/de-cach.pdf",
+      "pages": 15,
+      "bytes": 494490,
+      "sha256": "6e20242f42baf77c172077254fbc937fa669a2d5ebf3905f5526a4831e5e6bbe"
+    },
+    "dap-an": {
+      "pdf": "assets/targets/2026-10/Chuyên đề/th-buoi-19-mo-hinh-cuc-tri-hinh-hoc-min-max/dap-an.pdf",
+      "pages": 27,
+      "bytes": 775269,
+      "sha256": "97a7ab9bf9f26603ee06cf9f675bf08dc3ce3647156e1e2ed6a95912daac339c"
+    }
+  }
+}

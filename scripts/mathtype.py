@@ -243,6 +243,8 @@ def render(n):
             if v & 8:
                 value += f"_({cs[1]})"
             return value
+        if s == 37 and v == 30 and len(cs) == 1:
+            return "std.box(stroke: #0.5pt, inset: #3pt, " + cs[0] + ")"
         if s == 13:
             return "overline(" + cs[0] + ")"
         if s == 10:
