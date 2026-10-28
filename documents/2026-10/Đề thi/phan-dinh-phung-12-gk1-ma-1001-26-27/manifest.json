@@ -1,0 +1,291 @@
+{
+  "schema_version": 1,
+  "id": "phan-dinh-phung-12-gk1-ma-1001-26-27",
+  "kind": "exam",
+  "received_date": "2026-10-28",
+  "status": "implemented",
+  "metadata": {
+    "title": "ĐỀ KIỂM TRA GIỮA HỌC KỲ I – THPT PHAN ĐÌNH PHÙNG – HÀ NỘI",
+    "subject": "Toán 12",
+    "school_year": "2026–2027",
+    "exam_code": "1001"
+  },
+  "sources": [
+    {
+      "path": "assets/sources/2026-10/Đề thi/phan-dinh-phung-12-gk1-ma-1001-26-27/source.pdf",
+      "original_name": "de-giua-hoc-ky-1-toan-12-nam-2026-2027-truong-thpt-phan-dinh-phung-ha-noi.pdf",
+      "pages": 11,
+      "bytes": 767232,
+      "sha256": "c00a05908bad85ea689863ee49a61cadbc005fdf80342688c22b90ea95472618"
+    }
+  ],
+  "scope": {
+    "has_questions": true,
+    "has_solutions": false,
+    "questions": 22,
+    "source_question_pages": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "source_solution_pages": [
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ]
+  },
+  "variants": {
+    "de": {
+      "filename": "de.pdf",
+      "inputs": {
+        "variant": "de"
+      }
+    }
+  },
+  "drive": {
+    "folder": "Đề thi",
+    "filenames": {
+      "de": "PHAN ĐÌNH PHÙNG - TOÁN 12 - GIỮA HK1 - MÃ 1001 - 2026-2027 - ĐỀ.pdf"
+    }
+  },
+  "content_mapping": [
+    {
+      "id": "I-1",
+      "role": "question",
+      "source": {
+        "page": 1,
+        "part": "I",
+        "number": 1
+      }
+    },
+    {
+      "id": "I-2",
+      "role": "question",
+      "source": {
+        "page": 1,
+        "part": "I",
+        "number": 2
+      }
+    },
+    {
+      "id": "I-3",
+      "role": "question",
+      "source": {
+        "page": 1,
+        "part": "I",
+        "number": 3
+      }
+    },
+    {
+      "id": "I-4",
+      "role": "question",
+      "source": {
+        "page": 2,
+        "part": "I",
+        "number": 4
+      }
+    },
+    {
+      "id": "I-5",
+      "role": "question",
+      "source": {
+        "page": 2,
+        "part": "I",
+        "number": 5
+      }
+    },
+    {
+      "id": "I-6",
+      "role": "question",
+      "source": {
+        "page": 2,
+        "part": "I",
+        "number": 6
+      }
+    },
+    {
+      "id": "I-7",
+      "role": "question",
+      "source": {
+        "page": 2,
+        "part": "I",
+        "number": 7
+      }
+    },
+    {
+      "id": "I-8",
+      "role": "question",
+      "source": {
+        "page": 2,
+        "part": "I",
+        "number": 8
+      }
+    },
+    {
+      "id": "I-9",
+      "role": "question",
+      "source": {
+        "page": 2,
+        "part": "I",
+        "number": 9
+      }
+    },
+    {
+      "id": "I-10",
+      "role": "question",
+      "source": {
+        "page": 3,
+        "part": "I",
+        "number": 10
+      }
+    },
+    {
+      "id": "I-11",
+      "role": "question",
+      "source": {
+        "page": 3,
+        "part": "I",
+        "number": 11
+      }
+    },
+    {
+      "id": "I-12",
+      "role": "question",
+      "source": {
+        "page": 3,
+        "part": "I",
+        "number": 12
+      }
+    },
+    {
+      "id": "II-1",
+      "role": "question",
+      "source": {
+        "page": 3,
+        "part": "II",
+        "number": 1
+      }
+    },
+    {
+      "id": "II-2",
+      "role": "question",
+      "source": {
+        "page": 4,
+        "part": "II",
+        "number": 2
+      }
+    },
+    {
+      "id": "II-3",
+      "role": "question",
+      "source": {
+        "page": 4,
+        "part": "II",
+        "number": 3
+      }
+    },
+    {
+      "id": "II-4",
+      "role": "question",
+      "source": {
+        "page": 4,
+        "part": "II",
+        "number": 4
+      }
+    },
+    {
+      "id": "III-1",
+      "role": "question",
+      "source": {
+        "page": 4,
+        "part": "III",
+        "number": 1
+      }
+    },
+    {
+      "id": "III-2",
+      "role": "question",
+      "source": {
+        "page": 4,
+        "part": "III",
+        "number": 2
+      }
+    },
+    {
+      "id": "III-3",
+      "role": "question",
+      "source": {
+        "page": 5,
+        "part": "III",
+        "number": 3
+      }
+    },
+    {
+      "id": "III-4",
+      "role": "question",
+      "source": {
+        "page": 5,
+        "part": "III",
+        "number": 4
+      }
+    },
+    {
+      "id": "III-5",
+      "role": "question",
+      "source": {
+        "page": 5,
+        "part": "III",
+        "number": 5
+      }
+    },
+    {
+      "id": "III-6",
+      "role": "question",
+      "source": {
+        "page": 5,
+        "part": "III",
+        "number": 6
+      }
+    }
+  ],
+  "provenance": {
+    "template": "exam-lesson: header/footer chuyên đề, đỏ chính và điểm nhấn xanh lá",
+    "figures": "Đồ thị I.1, I.3, I.4, I.7, I.11; bảng I.2, I.12, II.1; hình dây III.1 dựng vector; ảnh bể cá III.6 thay bằng fish_tank.png do người dùng cung cấp. Không thêm hình cho câu không có hình.",
+    "solutions": "Không xuất đáp án và lời giải theo yêu cầu người dùng.",
+    "normalization": [
+      "Bỏ dấu chấm thừa sau nhãn Câu 8 phần I.",
+      "Khôi phục ký hiệu bị lỗi font PDF bằng đối chiếu hình nguồn."
+    ]
+  },
+  "qa": {
+    "review_status": "pending",
+    "compile": "passed",
+    "question_sequence": "passed: 12 + 4 + 6 câu; không xuất đáp án/lời giải",
+    "source_checksum": "passed",
+    "embedded_fonts": "passed",
+    "text_bounds": "passed",
+    "pages": 6,
+    "question_pages": 6,
+    "answer_pages": 0,
+    "standalone_figures_visual_review": "Đã xem bản dựng riêng: ba bảng biến thiên có cao độ phân biệt đúng thứ tự giá trị, dấu và số căn giữa; đồ thị bỏ tên hàm thừa, nhãn tránh nét, I.1 có mốc 3 và trục kéo dài, I.3 tăng kích thước, I.11 tiệm cận nét liền.",
+    "full_page_visual_review": "pending: không tạo ảnh preview trang theo convention repo",
+    "notes": [
+      "Đối chiếu hình 5 trang đề gốc; lời giải từ trang 6–11 của nguồn.",
+      "Câu 1 phần I dùng đường nội suy giữ đúng các điểm và đoạn đơn điệu trong hình nguồn; không gán công thức suy đoán vào đề.",
+      "Bản de.pdf chỉ có đề; phần II bắt đầu ngay trang 3 nối tiếp phần I. Ảnh bể cá dùng fish_tank.png người dùng cung cấp. Kiểm tra văn bản không tràn biên."
+    ]
+  },
+  "outputs": {
+    "de": {
+      "pdf": "assets/targets/2026-10/Đề thi/phan-dinh-phung-12-gk1-ma-1001-26-27/de.pdf",
+      "pages": 6,
+      "bytes": 3835009,
+      "sha256": "d42121cec8d101c0bf77ebebf7892c4e03e949a3e79195041b9467233aee394f"
+    }
+  }
+}

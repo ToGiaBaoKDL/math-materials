@@ -10,6 +10,7 @@
   width: plot-style.width,
   height: plot-style.height,
   breaks: (),
+  domain: auto,
   points: (),
   xticks: (),
   yticks: (),
@@ -43,7 +44,8 @@
     }
     #arrow-line(p(xrange.first(), 0), p(xrange.last(), 0), color: palette.ink, thickness: 0.6pt)
     #arrow-line(p(0, yrange.first()), p(0, yrange.last()), color: palette.ink, thickness: 0.6pt)
-    #let ends = (xrange.first(),) + breaks + (xrange.last(),)
+    #let curve-range = if domain == auto { xrange } else { domain }
+    #let ends = (curve-range.first(),) + breaks + (curve-range.last(),)
     #for j in range(ends.len() - 1) {
       let a = ends.at(j) + 0.015
       let b = ends.at(j + 1) - 0.015
