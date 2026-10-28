@@ -206,6 +206,9 @@ def render(n):
         s = n["selector"]
         v = n["variation"]
         cs = [render(x) for x in c]
+        if s == 9 and v == 18 and len(cs) == 3 and cs[1:] == ["[", ")"]:
+            # Mixed bracket fence: explicit delimiter slots encode [a; b).
+            return "lr([ " + cs[0] + " ))"
         if 0 <= s <= 9:
             if s == 4:
                 return "abs(" + cs[0] + ")"
@@ -227,6 +230,8 @@ def render(n):
                 7: ("ceil.l", "ceil.r"),
             }[s]
             return f"lr({left} {cs[0]} {right})"
+        if s == 23 and v == 16 and len(cs) == 3 and cs[0] == "m i n" and not cs[2]:
+            return "limits(min)_(" + cs[1] + ")"
         if s == 14:
             # MTEF single arrows: direction bits plus optional upper/lower slots.
             if v & ~0x3C or v & 0x30 not in (0x10, 0x20, 0x30) or len(cs) != 3:

@@ -38,6 +38,8 @@ Dùng template làm nguồn triển khai, skill làm quy tắc tái sử dụng.
 
 ### Khoảng viết và bố trí hình — áp dụng cả ba dạng
 
+- Phần lý thuyết bài giảng trình bày tuần tự từ trên xuống: đoạn giải thích rồi hình căn giữa phía dưới, không ép vào grid cạnh chữ. Câu hỏi linh hoạt grid hai cột hoặc hình ngay dưới toàn bộ câu dẫn; tránh ngắt câu dẫn thành hai khối quanh hình.
+
 Áp dụng cho **đề thi, chuyên đề/Tinh Hoa và livestream**, kể cả đề thi xuất thêm bản `de-cach`.
 
 - Với bản cách, đánh giá lượng thao tác cần viết của từng câu trước khi chọn số dòng. Câu nhận biết rất dễ, chỉ chọn đáp án hoặc làm một phép tính nhỏ chỉ chừa ít khoảng trống: giữ tối thiểu khoảng 3 dòng viết. Không cấp khoảng giải dài đồng loạt theo số câu hoặc loại trắc nghiệm.
@@ -86,6 +88,8 @@ Dùng template làm nguồn triển khai, skill làm quy tắc tái sử dụng.
 - Bản không cách đọc liên tục, không ép một câu/trang. Bản cách thêm dòng viết theo độ dài bài, giữ đề dẫn với vùng viết, không thêm dòng sau lý thuyết. Các bộ hiện hành dùng bước dòng 9 mm qua cấu hình tài liệu; mặc định `writing-style.ruled-gap` vẫn 8 mm, cần truyền đúng override khi áp dụng mẫu 9 mm. Có thể bố trí hai câu ngắn/trang; không để dòng viết chạm footer.
 
 ## Công thức và nhịp trang
+
+- Bản đáp án: giãn dòng lời giải thoáng hơn (leading 0,92 em), giữ khoảng đoạn gọn. Nội dung đọc liên tục; chuỗi biến đổi dài gióng dấu quan hệ và cho phép ngắt trang giữa các hàng. Giữ câu dẫn và toàn bộ lựa chọn trắc nghiệm trong cùng khung/cùng trang khi khối vừa một trang; không tách riêng hàng A–D sang trang kế. Chỉ giữ khối đề, không khóa kèm toàn bộ lời giải hoặc nhiều khối công thức gây khoảng trắng lớn cuối trang.
 
 - Đáp án chọn 1/2/4 cột theo chiều rộng đã đo và thứ tự trong nguồn. Căn nhãn lựa chọn với công thức; giữ khoảng cách ngang và dọc qua token/component chung.
 - Công thức inline có thể vượt khung dòng mặc định. Trong ô đáp án, cho Typst tính đầy đủ tử/mẫu và chỉ số bằng `text(top-edge: "bounds", bottom-edge: "bounds")` cho `math.equation`; đo cùng style dùng để vẽ. Chừa khoảng trống giữa giới hạn thực của hai hàng, không chỉ tăng leading của đoạn văn.

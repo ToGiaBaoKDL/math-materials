@@ -1,0 +1,393 @@
+{
+  "schema_version": 1,
+  "id": "th-buoi-18-tam-ty-cu-min-max-oxyz",
+  "kind": "tinh-hoa",
+  "received_date": "2026-10-28",
+  "status": "implemented",
+  "metadata": {
+    "title": "BUỔI 18: PHƯƠNG PHÁP TÂM TỶ CỰ GIẢI MIN – MAX OXYZ",
+    "course": "KHÓA TINH HOA TOÀN DIỆN 9+ 2027"
+  },
+  "sources": [
+    {
+      "path": "assets/sources/2026-10/Chuyên đề/th-buoi-18-tam-ty-cu-min-max-oxyz/source.docx",
+      "original_name": "BUỔI 18 PHƯƠNG PHÁP TÂM TỶ CỰ GIẢI MIN - MAX OXYZ.docx",
+      "bytes": 1108776,
+      "sha256": "df8a7b9de381f0a12545317a36d9297365e85faca1f8b8de2ca9bd833a9adaa6"
+    }
+  ],
+  "scope": {
+    "has_questions": true,
+    "has_solutions": true,
+    "questions": 22,
+    "worked_examples": 8,
+    "practice_questions": 14
+  },
+  "variants": {
+    "de": {
+      "filename": "de.pdf",
+      "inputs": {
+        "variant": "de"
+      }
+    },
+    "de-cach": {
+      "filename": "de-cach.pdf",
+      "inputs": {
+        "variant": "de-cach"
+      }
+    },
+    "dap-an": {
+      "filename": "dap-an.pdf",
+      "inputs": {
+        "variant": "dap-an"
+      }
+    }
+  },
+  "drive": {
+    "folder": "Chuyên đề",
+    "filenames": {
+      "de": "KHÓA TH - BUỔI 18 - TÂM TỶ CỰ GIẢI MIN MAX OXYZ - ĐỀ.pdf",
+      "de-cach": "KHÓA TH - BUỔI 18 - TÂM TỶ CỰ GIẢI MIN MAX OXYZ - ĐỀ CÁCH.pdf",
+      "dap-an": "KHÓA TH - BUỔI 18 - TÂM TỶ CỰ GIẢI MIN MAX OXYZ - ĐÁP ÁN.pdf"
+    }
+  },
+  "content_mapping": [
+    {
+      "id": "mau-1",
+      "role": "question",
+      "source": {
+        "paragraph_start": 48,
+        "paragraph_end": 63,
+        "source_label": "Câu 1:",
+        "output_number": 1
+      }
+    },
+    {
+      "id": "mau-2",
+      "role": "question",
+      "source": {
+        "paragraph_start": 64,
+        "paragraph_end": 81,
+        "source_label": "Câu 2:",
+        "output_number": 2
+      }
+    },
+    {
+      "id": "mau-3",
+      "role": "question",
+      "source": {
+        "paragraph_start": 82,
+        "paragraph_end": 97,
+        "source_label": "Câu 3:",
+        "output_number": 3
+      }
+    },
+    {
+      "id": "mau-4",
+      "role": "question",
+      "source": {
+        "paragraph_start": 98,
+        "paragraph_end": 105,
+        "source_label": "Câu 4:",
+        "output_number": 4
+      }
+    },
+    {
+      "id": "mau-5",
+      "role": "question",
+      "source": {
+        "paragraph_start": 106,
+        "paragraph_end": 120,
+        "source_label": "Câu 5:",
+        "output_number": 5
+      }
+    },
+    {
+      "id": "mau-6",
+      "role": "question",
+      "source": {
+        "paragraph_start": 121,
+        "paragraph_end": 132,
+        "source_label": "Câu 6:",
+        "output_number": 6
+      }
+    },
+    {
+      "id": "mau-7",
+      "role": "question",
+      "source": {
+        "paragraph_start": 133,
+        "paragraph_end": 141,
+        "source_label": "Câu 7:",
+        "output_number": 7
+      }
+    },
+    {
+      "id": "mau-8",
+      "role": "question",
+      "source": {
+        "paragraph_start": 142,
+        "paragraph_end": 152,
+        "source_label": "Câu 8:",
+        "output_number": 8
+      }
+    },
+    {
+      "id": "tu-luyen-1",
+      "role": "question",
+      "source": {
+        "paragraph_start": 153,
+        "paragraph_end": 158,
+        "source_label": "Không đánh số",
+        "output_number": 1
+      }
+    },
+    {
+      "id": "tu-luyen-2",
+      "role": "question",
+      "source": {
+        "paragraph_start": 159,
+        "paragraph_end": 168,
+        "source_label": "Câu 1:",
+        "output_number": 2
+      }
+    },
+    {
+      "id": "tu-luyen-3",
+      "role": "question",
+      "source": {
+        "paragraph_start": 169,
+        "paragraph_end": 190,
+        "source_label": "Câu 2:",
+        "output_number": 3
+      }
+    },
+    {
+      "id": "tu-luyen-4",
+      "role": "question",
+      "source": {
+        "paragraph_start": 191,
+        "paragraph_end": 205,
+        "source_label": "Câu 3:",
+        "output_number": 4
+      }
+    },
+    {
+      "id": "tu-luyen-5",
+      "role": "question",
+      "source": {
+        "paragraph_start": 206,
+        "paragraph_end": 214,
+        "source_label": "Không đánh số",
+        "output_number": 5
+      }
+    },
+    {
+      "id": "tu-luyen-6",
+      "role": "question",
+      "source": {
+        "paragraph_start": 215,
+        "paragraph_end": 224,
+        "source_label": "Câu 5:",
+        "output_number": 6
+      }
+    },
+    {
+      "id": "tu-luyen-7",
+      "role": "question",
+      "source": {
+        "paragraph_start": 225,
+        "paragraph_end": 236,
+        "source_label": "Câu 6:",
+        "output_number": 7
+      }
+    },
+    {
+      "id": "tu-luyen-8",
+      "role": "question",
+      "source": {
+        "paragraph_start": 237,
+        "paragraph_end": 248,
+        "source_label": "Câu 7:",
+        "output_number": 8
+      }
+    },
+    {
+      "id": "tu-luyen-9",
+      "role": "question",
+      "source": {
+        "paragraph_start": 249,
+        "paragraph_end": 258,
+        "source_label": "Câu 8:",
+        "output_number": 9
+      }
+    },
+    {
+      "id": "tu-luyen-10",
+      "role": "question",
+      "source": {
+        "paragraph_start": 259,
+        "paragraph_end": 269,
+        "source_label": "Câu 8:",
+        "output_number": 10
+      }
+    },
+    {
+      "id": "tu-luyen-11",
+      "role": "question",
+      "source": {
+        "paragraph_start": 270,
+        "paragraph_end": 278,
+        "source_label": "Câu 11:",
+        "output_number": 11
+      }
+    },
+    {
+      "id": "tu-luyen-12",
+      "role": "question",
+      "source": {
+        "paragraph_start": 279,
+        "paragraph_end": 291,
+        "source_label": "Câu 12:",
+        "output_number": 12
+      }
+    },
+    {
+      "id": "tu-luyen-13",
+      "role": "question",
+      "source": {
+        "paragraph_start": 292,
+        "paragraph_end": 301,
+        "source_label": "Không đánh số",
+        "output_number": 13
+      }
+    },
+    {
+      "id": "tu-luyen-14",
+      "role": "question",
+      "source": {
+        "paragraph_start": 302,
+        "paragraph_end": 315,
+        "source_label": "Không đánh số",
+        "output_number": 14
+      }
+    }
+  ],
+  "provenance": {
+    "math_extraction": {
+      "equations": 688,
+      "preview_pairs_checked": 688,
+      "empty_equations": 0
+    },
+    "source_corrections": [
+      {
+        "paragraph": 77,
+        "before": "9 t ^(2) + 9",
+        "after": "9 t + 9"
+      },
+      {
+        "paragraph": 125,
+        "before": "2 lr(( I A ^(2) + 3 I B ^(2) ))",
+        "after": "2 I A ^(2) + 3 I B ^(2)"
+      },
+      {
+        "paragraph": 157,
+        "before": "= 2 arrow(M I) ^(2) = 2 M I ^(2)",
+        "after": "= 2 arrow(M I) ^(2) + I A ^(2) + I B ^(2) = 2 M I ^(2) + I A ^(2) + I B ^(2)"
+      },
+      {
+        "paragraph": 285,
+        "before": "= M I ^(2) + 6",
+        "after": "= 2 M I ^(2) + 6"
+      },
+      {
+        "paragraph": 288,
+        "before": "2 . lr(( y - 4 ))",
+        "after": "2 . lr(( z - 4 ))"
+      },
+      {
+        "paragraph": 149,
+        "before": "S _(min) = N I _(min)",
+        "after": "S text(\" đạt GTNN\") ⇔ N I text(\" nhỏ nhất\")"
+      },
+      {
+        "issue": "Tiêu đề OXZ sửa OXYZ theo nội dung và tên file."
+      },
+      {
+        "issue": "Tự luyện đánh số liên tục 1–14; nguồn có câu không số, trùng câu 8 và nhảy số."
+      },
+      {
+        "paragraph": 92,
+        "issue": "Sửa ngoặc thiếu trong tích f(A)f(B), trình bày giá trị (−34)(−68)=2312."
+      },
+      {
+        "issue": "Lý thuyết hiệu khoảng cách: bổ sung điều kiện đường thẳng có giao với mặt phẳng cho trường hợp đạt dấu bằng."
+      }
+    ],
+    "authorization": "Người dùng đồng ý sửa lỗi rõ ràng và ghi manifest.",
+    "normalization": "Loại bỏ ký tự giãn cách MathType U+EF04/U+EF08; tách công thức dài theo dấu quan hệ; giữ đáp án nguồn.",
+    "theory_layout": "Trình bày tuần tự từ trên xuống, hai trường hợp đối xứng mỗi hình dưới đoạn giải thích; viết các tổng nhiều hạng bằng sigma tương đương để tránh công thức quá dài.",
+    "figures": {
+      "theory": "Hai hình đối xứng dựng lại, phân nét khuất tại mặt phẳng và biên che khuất; nhãn (P) có cung nhỏ góc trái.",
+      "mau-2": "Hình phản xạ B qua (P) chỉ xuất trong đáp án.",
+      "tu-luyen-8": "Hình trung điểm I và hình chiếu H trên (alpha) chỉ xuất trong đáp án."
+    }
+  },
+  "qa": {
+    "review_status": "pending",
+    "full_page_visual_review": "pending: không tạo ảnh preview trang theo convention repo",
+    "compile": "passed",
+    "checks": {
+      "de": {
+        "pages": 8,
+        "question_sequence": "passed: 8 bài mẫu + 14 tự luyện",
+        "text_bounds": "passed",
+        "end_mark_last_page": true
+      },
+      "de-cach": {
+        "pages": 15,
+        "question_sequence": "passed: 8 bài mẫu + 14 tự luyện",
+        "text_bounds": "passed",
+        "end_mark_last_page": true
+      },
+      "dap-an": {
+        "pages": 24,
+        "question_sequence": "passed: 8 bài mẫu + 14 tự luyện",
+        "text_bounds": "passed",
+        "end_mark_last_page": true
+      }
+    },
+    "standalone_figures_visual_review": "passed",
+    "source_checksum": "passed",
+    "notes": [
+      "Đã đối chiếu 688 cặp OLE/WMF, kiểm tra text và bbox của ba bản, font nhúng, đủ 22 câu.",
+      "Đã xem 3 ảnh nhúng nguồn và render riêng 4 hình vector. PDF chuyển từ DOCX chỉ dùng đối chiếu bố cục vì LibreOffice hiển thị một số font MathType sai.",
+      "Bản cách nối câu theo lượng viết: 3 dòng cho câu đơn giản, 4–6 dòng cho câu nhiều bước, 9 dòng cho tự luyện 14; kẻ tiếp phần dư cuối trang.",
+      "Đóng khung hai kết luận tâm tỷ cự và công thức tọa độ; thu gọn khoảng trên hình TH1, giảm hình lý thuyết đồng đều 10%, giữ hai trường hợp tổng khoảng cách cùng trang. Build lại ba variant, kiểm tra đủ 22 câu.",
+      "Rà bố cục theo phản hồi: gióng các chuỗi đẳng thức, bôi đậm dòng chọn đáp án/đáp số, bỏ dấu sao và dấu cộng gây danh sách tự động; cắt khung trắng hình chiếu; cho lý thuyết chảy liên tục qua trang. Kiểm tra 22 câu và biên chữ cả ba bản sau build.",
+      "Tăng leading lời giải lên 0,92 em theo convention chung; công thức nhiều hàng cho ngắt giữa hàng, tăng khoảng hàng; bỏ sticky ghép cả khung câu hỏi với đầu lời giải. Đã build và kiểm tra 22 câu, biên chữ ba PDF.",
+      "Giữ nguyên khối câu hỏi và lựa chọn trong bản đáp án, không ghép lời giải vào khối giữ trang. Kiểm tra tự luyện câu 9 có đủ A–D cùng trang; đủ 22 câu.",
+      "Sửa chiều cao nội tại hình projection từ 74mm xuống 51mm thay vì bọc khung ngoài; giữ nguyên kích thước hình học. Kiểm tra câu 9 và cả A–D đã lên trang 19 ngay sau lời giải câu 8."
+    ]
+  },
+  "outputs": {
+    "de": {
+      "pdf": "assets/targets/2026-10/Chuyên đề/th-buoi-18-tam-ty-cu-min-max-oxyz/de.pdf",
+      "pages": 8,
+      "bytes": 476460,
+      "sha256": "af152defa785fb72b8cd73f74d737bc7fb9a32313022ffb1dce2ef087e2d4d7a"
+    },
+    "de-cach": {
+      "pdf": "assets/targets/2026-10/Chuyên đề/th-buoi-18-tam-ty-cu-min-max-oxyz/de-cach.pdf",
+      "pages": 15,
+      "bytes": 504267,
+      "sha256": "0f987ed9804f4e5ba468e47a423c138c9d55ce2bf90889d5e71bec5e4428c58b"
+    },
+    "dap-an": {
+      "pdf": "assets/targets/2026-10/Chuyên đề/th-buoi-18-tam-ty-cu-min-max-oxyz/dap-an.pdf",
+      "pages": 24,
+      "bytes": 760393,
+      "sha256": "9381a7abb90de2d1676a30957faa2d41684e81e402c64dfed2741e1272a05547"
+    }
+  }
+}

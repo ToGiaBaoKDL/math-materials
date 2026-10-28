@@ -1,6 +1,6 @@
 #import "/templates/lesson.typ": exercise
 #import "/templates/components.typ": end-mark, figure-panel
-#import "../figures.typ": cube, prism
+#import "../figures.typ": cube
 #let questions(variant) = {
   let base-item = exercise.with(
     variant: variant,
@@ -15,12 +15,12 @@
   let item(number, body, source-id: none, statements: ()) = {
     if variant == "de-cach" and number > 1 { pagebreak() }
     let rows = grid(columns: (1fr,), row-gutter: 2mm, ..statements)
-    let figure = if number == 2 { prism() } else if number == 3 { cube() }
+    let figure = if number == 3 { cube() }
       else { none }
     let prompt = if number == 1 { body } else [
       #body
       #v(3mm)
-      #if number == 2 or number == 3 {
+      #if number == 3 {
         grid(columns: (1fr, if number == 3 { 49mm } else { 49mm }), gutter: 6mm, align: top, rows,
           align(right, scale(x: if number == 3 { 57% } else { 57% }, y: if number == 3 { 57% } else { 57% }, reflow: true, figure)))
       } else {

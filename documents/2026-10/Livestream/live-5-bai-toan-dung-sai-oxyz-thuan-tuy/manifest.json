@@ -139,21 +139,22 @@
       "Thu gọn khung hình câu 4 16 mm và giảm khoảng trước hình còn 3 mm; câu 5 bắt đầu trang 2 bản đề, trang 3 bản cách. Đã build và kiểm tra đủ 5 câu ở cả hai bản.",
       "Thu nhỏ hình câu 3, đặt bên phải; thu gọn câu 2 và khoảng cách để câu 3 trọn trang 1. Kiểm tra text đủ 5 câu mỗi bản, bản đề 2 trang.",
       "Đã build riêng de-cach và kiểm tra đúng 5 trang, mỗi trang đúng một câu theo thứ tự 1–5.",
-      "Bỏ hình câu 4–5 ở de và de-cach, giữ đủ 5 câu; đã build và xác nhận bản cách 5 trang, mỗi câu một trang."
+      "Bỏ hình câu 4–5 ở de và de-cach, giữ đủ 5 câu; đã build và xác nhận bản cách 5 trang, mỗi câu một trang.",
+      "Bỏ hình câu 2; hình câu 3 thay B′C bằng B′D, thêm đường B–G–D′ (G nằm tại 1/3 đường chéo BD′). Build hai bản, kiểm tra đủ 5 câu; bản cách giữ mỗi câu một trang."
     ]
   },
   "outputs": {
     "de": {
       "pdf": "assets/targets/2026-10/Livestream/live-5-bai-toan-dung-sai-oxyz-thuan-tuy/de.pdf",
       "pages": 2,
-      "bytes": 323211,
-      "sha256": "216e85403f64fbf75db16f8932e4798fec4ef9a958817e9d6f2eb81aece2218e"
+      "bytes": 320918,
+      "sha256": "e626fad01b3fab08b0b1215e11d2b245907c9edc047031a890d2d2ee642e6a33"
     },
     "de-cach": {
       "pdf": "assets/targets/2026-10/Livestream/live-5-bai-toan-dung-sai-oxyz-thuan-tuy/de-cach.pdf",
       "pages": 5,
-      "bytes": 341309,
-      "sha256": "36b83322d4d3d2aad708a833dcd71b81d9d58bb7f16483bde9ad2ae0a9208458"
+      "bytes": 338872,
+      "sha256": "48d5e36c6103a5362a3fb72857c86903ca048ca6eab1743f724ef698562ee9da"
     }
   }
 }

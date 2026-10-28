@@ -381,6 +381,9 @@
       above: lesson-style.solution-gap,
       below: lesson-style.solution-heading-gap,
     )
-    solution
+    [
+      #set par(leading: lesson-style.leading, spacing: 3mm)
+      #solution
+    ]
   }
 }
