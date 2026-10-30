@@ -12,7 +12,7 @@
   if current != [] { rows.push(current) }
   show math.equation.where(block:true): set block(above:0pt,below:0pt,breakable:true)
   set align(left)
-  grid(columns:(1fr,),row-gutter:3mm,..rows.map(row => math.equation(block:true,numbering:none,row)))
+  grid(columns:(1fr,),row-gutter:1.5mm,..rows.map(row => math.equation(block:true,numbering:none,row)))
 }))
 #let aligned-math(body) = block(width:100%,breakable:true,above:2mm,below:2mm)[
   #show math.equation.where(block:true): set block(breakable:true,above:0pt,below:0pt)

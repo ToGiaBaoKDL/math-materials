@@ -387,26 +387,28 @@
       "Chỉ giữ hình trong lý thuyết/lời giải như nguồn; 22 câu hỏi không bổ sung hình.",
       "Câu dẫn và A–D giữ cùng khối; lời giải cho phép ngắt giữa công thức. Đề cách cấp 3–8 dòng theo lượng thao tác và kẻ phần dư cuối trang."
     ],
-    "standalone_figures_visual_review": "Đã xem bản dựng riêng toàn bộ hình, chỉnh điểm K trên giao tuyến, vị trí mặt phẳng cắt và khung hình."
+    "standalone_figures_visual_review": "Câu 13 đối chiếu image669.png: I/F/E/A thẳng hàng, B/M/F thẳng hàng, MI/MA nối đúng nguồn, vòng ellipse phía trên nét khuất. Tỷ lệ xuất hình tăng từ 75% lên 82,5% (+10%).",
+    "text_bounds": "passed: all three variants",
+    "layout_review": "Bản đáp án: toàn bộ đề và A–D tự luyện câu 2 đã lên cùng trang 11 ngay sau lời giải câu 1. Giữ cỡ chữ 14pt; thu gọn khoảng đoạn lời giải câu 1. Hình mẫu 6 tăng tỷ lệ từ 75% lên 95%."
   },
   "outputs": {
     "de": {
       "pdf": "assets/targets/2026-10/Chuyên đề/th-buoi-19-mo-hinh-cuc-tri-hinh-hoc-min-max/de.pdf",
-      "pages": 9,
-      "bytes": 468400,
-      "sha256": "289243b5899efc934297a09039d38be0198b7606591872726fbca1843ecba9b4"
+      "pages": 8,
+      "bytes": 469990,
+      "sha256": "8e4a3227b37ddd6cf4117f5dfcae36b9b8d2ecb2d206f8efa638c9722aa9380e"
     },
     "de-cach": {
       "pdf": "assets/targets/2026-10/Chuyên đề/th-buoi-19-mo-hinh-cuc-tri-hinh-hoc-min-max/de-cach.pdf",
       "pages": 15,
-      "bytes": 494490,
-      "sha256": "6e20242f42baf77c172077254fbc937fa669a2d5ebf3905f5526a4831e5e6bbe"
+      "bytes": 497102,
+      "sha256": "0cbef76baf5c49705b764e5a490dbaafcd9fa6fbab2a54fa7fb041cc8d909547"
     },
     "dap-an": {
       "pdf": "assets/targets/2026-10/Chuyên đề/th-buoi-19-mo-hinh-cuc-tri-hinh-hoc-min-max/dap-an.pdf",
-      "pages": 27,
-      "bytes": 775269,
-      "sha256": "97a7ab9bf9f26603ee06cf9f675bf08dc3ce3647156e1e2ed6a95912daac339c"
+      "pages": 25,
+      "bytes": 781562,
+      "sha256": "1fa6904e15c581956b3e8c7fddbddaec1b6b21f672033c14cd3dc98590afaab4"
     }
   }
 }

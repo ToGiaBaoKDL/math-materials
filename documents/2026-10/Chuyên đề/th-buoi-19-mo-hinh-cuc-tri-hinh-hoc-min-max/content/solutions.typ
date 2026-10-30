@@ -192,47 +192,48 @@ $⇒ M N _(max) = sqrt(2) . N H _(max) = 3 sqrt(2)$.
 *Chọn C.*
 ],
 "tu-luyen-1": [
+#set par(leading:0.92em,spacing:2mm)
 *Chọn C*
 
-Ta có: $d lr(( M "," lr(( P )) )) ≤ M A$
+Ta có $d(M;(P)) ≤ M A ⇒ d(M;(P))_(max)=M A$ khi $M A perp (P)$.
 
-Nên $d lr(( M "," lr(( P )) )) _(max) = M A$ khi $A$ là hình chiếu của $M$ trên mặt phẳng $lr(( P ))$ .
+Suy ra $arrow(A M)=(-3;-3;-3)$ là vectơ pháp tuyến của $(P)$.
 
-Suy ra $A M ⊥ lr(( P )) ⇒ arrow(A M) = lr(( - 3 ";" - 3 ";" - 3 ))$ là vectơ pháp tuyến của $lr(( P ))$ .
+Qua $A(1;7;2)$, mặt phẳng $(P)$ có phương trình:
 
-$lr(( P ))$ đi qua $A lr(( 1 ";" 7 ";" 2 ))$ và nhận $arrow(A M) = lr(( - 3 ";" - 3 ";" - 3 ))$ là vectơ pháp tuyến nên có phương trình
-
-$- 3 lr(( x - 1 )) - 3 lr(( y - 7 )) - 3 lr(( z - 2 )) = 0 ⇔ x + y + z - 10 = 0$ .
+#aligned-math[$ -3(x-1)-3(y-7)-3(z-2)=0 ⇔ x+y+z-10=0. $]
 ],
 "tu-luyen-2": [
 *Chọn D*
 
 #solution-figure("angle-practice")
 
-Đường thẳng $Δ : frac(x, 2) = frac(y, 2) = frac(z, 1)$ được viết lại dưới dạng tham số 
-#math-flow(([$Δ : cases(display(x = 2 t), display(y = 2 t), display(z = t))$],))
+Đường thẳng $Delta$ có phương trình tham số:
+#aligned-math[$ Delta: cases(x=2t, y=2t, z=t). $]
 
-Xét hệ phương trình 
-#math-flow(([$cases(display(x = 2 t), display(y = 2 t), display(z = t), display(x + 2 y - 2 z = 0))$],[$⇔ cases(display(t = 0), display(x = 0), display(y = 0), display(z = 0))$],))
-. Do đó $Δ$ cắt $lr(( P ))$ tại điểm $A lr(( 0 ";" 0 ";" 0 )) ≡ "O"$.
+Thay vào phương trình $(P)$, ta được $2t+4t-2t=0 ⇒ t=0$. Do đó $Delta$ cắt $(P)$ tại $A(0;0;0) equiv O$.
 
-Lại có $Δ$ và $lr(( P ))$ không vuông góc nhau nên ta đi chứng minh góc nhỏ nhất giữa $lr(( P ))$ và $lr(( Q ))$ là góc giữa $Δ$ và $lr(( P ))$. Thật vậy trên $Δ$ lấy $B$ khác $A$, kẻ $B H$ vuông góc với $lr(( P ))$ tại $H$ và $B K$ vuông góc $d$ tại $K$ ($d$ là giao tuyến của $lr(( P ))$ và $lr(( Q ))$) tại $K$. Khi đó góc giữa $lr(( Q ))$ và $lr(( P ))$ là góc $hat(B K H)$.
+Gọi $d=(P) ∩ (Q)$. Trên $Delta$ lấy $B != A$, kẻ $B H perp (P)$ tại $H$ và $B K perp d$ tại $K$. Khi đó $H K perp d$, nên góc giữa $(P)$ và $(Q)$ là $hat(B K H)$.
 
-$H A ≥ H K ⇒tan hat(B K H) = frac(B H, H K) ≥ frac(B H, H A) = tan hat(B A H)$
+Vì $A in d$ nên $H K ≤ H A$. Suy ra:
+#aligned-math[$ tan hat(B K H) = frac(B H,H K) ≥ frac(B H,H A) = tan hat(B A H). $]
 
-#math-flow(([$cases(display(hat(B K H) "," hat(B A H) < 90 degree), display(tan hat(B K H) ≥ tan hat(B A H)))$],[$⇒ hat(B K H)$],[$≥ hat(B A H)$],[$= lr(( hat(Δ "," lr(( P ))) ))$],[$= arcsin frac(4, 9)$],))
+Hai góc trên đều nhọn nên
+#aligned-math[$ hat(B K H) ≥ hat(B A H) = angle(Delta,(P)) = arcsin frac(4,9). $]
 
-Đẳng thức xảy ra $⇔ K ≡ A ⇔ Δ ⊥ d .$
+Đẳng thức xảy ra khi $K equiv A$, tức là $Delta perp d$. Vậy góc giữa $(P)$ và $(Q)$ nhỏ nhất khi $(Q)$ chứa $Delta$ và giao tuyến $d$ vuông góc với $Delta$.
 
-Do đó, góc giữa hai mặt phẳng $lr(( P ))$ và $lr(( Q ))$ là nhỏ nhất khi và chỉ khi $lr(( Q ))$ chứa $lr(( Δ ))$ và cắt $lr(( P ))$ theo một giao tuyến vuông góc $Δ$.
+*Viết phương trình mặt phẳng $(Q)$.*
 
-) Viết phương trình của $lr(( Q ))$
+Đường thẳng $Delta$ có vectơ chỉ phương $arrow(u_1)=(2;2;1)$; mặt phẳng $(P)$ có vectơ pháp tuyến $arrow(n_1)=(1;2;-2)$. Do đó $d$ có vectơ chỉ phương:
+#aligned-math[$ arrow(u_2) = [arrow(u_1),arrow(n_1)] = (-6;5;2). $]
 
-Đường thẳng $Δ$ có vectơ chỉ phương $arrow(u _(1)) = lr(( 2 ";" 2 ";" 1 ))$, $lr(( P ))$ có vectơ pháp tuyến $arrow(n _(1)) = lr(( 1 ";" 2 ";" - 2 ))$ nên $d$ có vectơ chỉ phương $arrow(u _(2)) = lr([ arrow(u _(1)) "," arrow(n _(1)) ]) = lr(( - 6 ";" 5 ";" 2 ))$.
+Mặt phẳng $(Q)$ chứa $Delta$ và $d$ nên nhận vectơ pháp tuyến:
+#aligned-math[$ arrow(n_2) = [arrow(u_2),arrow(u_1)] = (1;10;-22). $]
 
-$lr(( Q ))$ chứa $Δ$ và d nên nhận $arrow(n _(2)) = lr([ arrow(u _(2)) ";" arrow(u _(1)) ]) = lr(( 1 ";" 10 ";" - 22 ))$ làm vectơ pháp tuyến.
+Qua $A(0;0;0)$, mặt phẳng $(Q)$ có phương trình:
+#aligned-math[$ x+10y-22z=0. $]
 
-Vậy mặt phẳng $lr(( Q ))$ đi qua $A lr(( 0 ";" 0 ";" 0 ))$ và nhận $arrow(n _(2)) = lr(( 1 ";" 10 ";" - 22 ))$ làm vectơ pháp tuyến nên có phương trình $x + 10 y - 22 z = 0$.
 ],
 "tu-luyen-3": [
 *Chọn C*

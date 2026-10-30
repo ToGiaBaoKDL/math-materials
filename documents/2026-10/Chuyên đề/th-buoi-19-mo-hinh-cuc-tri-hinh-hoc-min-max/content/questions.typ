@@ -2,7 +2,7 @@
 #import "theory.typ": theory
 #import "solutions.typ": solutions
 #let questions(variant) = {
- let item=exercise.with(variant:variant, question-gap:5mm, statement-gap:3mm, keep-together:variant != "de-cach", flow-stem:true, keep-solution-start:false, writing-lines:3, writing-line-gap:8mm, writing-single-page:true, fill-writing-page:true)
+ let item=exercise.with(variant:variant, question-gap:5mm, statement-gap:3mm, keep-together:variant == "dap-an", flow-stem:true, keep-solution-start:false, writing-lines:3, writing-line-gap:9mm, writing-single-page:false, fill-writing-page:true)
  theory()
  lesson-section([BÀI TẬP MINH HỌA],badge:"2")
  [
@@ -28,6 +28,6 @@
 #item("10",[Trong không gian $O x y z$, cho điểm $E lr(( 2 ";" 1 ";" 3 ))$ và mặt phẳng $lr(( P )) : 2 x + 2 y - z - 3 = 0$ và mặt cầu $lr(( S )) : lr(( x - 3 )) ^(2) + lr(( y - 2 )) ^(2) + lr(( z - 5 )) ^(2) = 36$. Gọi $Δ$ là đường thẳng đi qua $E$, nằm trong mặt phẳng $lr(( P ))$ và cắt $lr(( S ))$ tại hai điểm có khoảng cách nhỏ nhất, biết $Δ$ có một vecto chỉ phương là $arrow(u) = lr(( - 2 ";" a ";" b ))$. Tính $S = a - b$?],answers:([$2$],[$- 2$],[$3$],[$- 3$],),writing-lines:6,source-id:"tu-luyen-10",solution:solutions.at("tu-luyen-10"))
 #item("11",[Trong không gian với hệ tọa độ $O x y z$ cho bốn điểm $A ( 1 ";" 0 ";" 0 )$ , $B ( 2 ";" 1 ";" 3 )$ , $C ( 0 ";" 2 ";" - 3 )$ , $D ( 2 ";" 0 ";" sqrt(7) )$ . Gọi $M$ là điểm thuộc mặt cầu $( S ) : ( x + 2 ) ^(2) + ( y - 4 ) ^(2) + z ^(2) = 39$ thỏa mãn: $M A ^(2) + 2 arrow(M B) . arrow(M C) = 8$ . Biết độ dài đoạn thẳng $M D$ đạt giá trị lớn nhất. Tính giá trị lớn nhất đó.],answers:([$2 sqrt(7)$ .],[$sqrt(7)$ .],[$3 sqrt(7)$ .],[$4 sqrt(7)$ .],),writing-lines:7,source-id:"tu-luyen-11",solution:solutions.at("tu-luyen-11"))
 #item("12",[Trong không gian $O x y z$ cho mặt cầu $( S ) : lr(( x - 1 )) ^(2) + lr(( y + 2 )) ^(2) + lr(( z - 3 )) ^(2) = 27$. Gọi $lr(( α ))$ là mặt phẳng đi qua 2 điểm $A lr(( 0 ";" 0 ";" - 4 ))$,$B lr(( 2 ";" 0 ";" 0 ))$ và cắt $lr(( S ))$ theo giao tuyến là đường tròn $lr(( C ))$ sao cho khối nón có đỉnh là tâm của $lr(( S ))$, đáy là hình tròn $lr(( C ))$ có thể tích lớn nhất. Biết mặt phẳng $lr(( α ))$ có phương trình dạng $a x + b y - z + c = 0$, khi đó $a - b + c$ bằng:],answers:([8.],[0.],[2.],[-4.],),writing-lines:8,source-id:"tu-luyen-12",solution:solutions.at("tu-luyen-12"))
-#item("13",[Trong không gian với hệ trục $O x y z$, cho mặt cầu $lr(( S )) : lr(( x + 1 )) ^(2) + lr(( y - 4 )) ^(2) + z ^(2) = 8$ và điểm $A lr(( 3 ";" 0 ";" 0 )) ";" B lr(( 4 ";" 2 ";" 1 ))$. Điểm $M$ thay đổi nằm trên mặt cầu, tìm giá trị nhỏ nhất của biểu thức $P = M A + 2 M B$.],answers:([$P = 2 sqrt(2)$.],[$P = 3 sqrt(2)$.],[$P = 4 sqrt(2)$.],[$P = 6 sqrt(2)$.],),writing-lines:7,source-id:"tu-luyen-13",solution:solutions.at("tu-luyen-13"))
+#item("13",[Trong không gian với hệ trục $O x y z$, cho mặt cầu $lr(( S )) : lr(( x + 1 )) ^(2) + lr(( y - 4 )) ^(2) + z ^(2) = 8$ và điểm $A lr(( 3 ";" 0 ";" 0 )) ";" B lr(( 4 ";" 2 ";" 1 ))$. Điểm $M$ thay đổi nằm trên mặt cầu, tìm giá trị nhỏ nhất của biểu thức $P = M A + 2 M B$.],answers:([$P = 2 sqrt(2)$.],[$P = 3 sqrt(2)$.],[$P = 4 sqrt(2)$.],[$P = 6 sqrt(2)$.],),writing-lines:6,fill-writing-page:false,source-id:"tu-luyen-13",solution:solutions.at("tu-luyen-13"))
 ]
 }
