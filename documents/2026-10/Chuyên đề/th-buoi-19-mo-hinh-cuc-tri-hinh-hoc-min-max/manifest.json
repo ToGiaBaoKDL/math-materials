@@ -395,20 +395,20 @@
     "de": {
       "pdf": "assets/targets/2026-10/Chuyên đề/th-buoi-19-mo-hinh-cuc-tri-hinh-hoc-min-max/de.pdf",
       "pages": 8,
-      "bytes": 469990,
-      "sha256": "8e4a3227b37ddd6cf4117f5dfcae36b9b8d2ecb2d206f8efa638c9722aa9380e"
+      "bytes": 469754,
+      "sha256": "8a263b03830c7ff4b82cc2c577471c09f627d33702488949f236619da0eeeee1"
     },
     "de-cach": {
       "pdf": "assets/targets/2026-10/Chuyên đề/th-buoi-19-mo-hinh-cuc-tri-hinh-hoc-min-max/de-cach.pdf",
       "pages": 15,
-      "bytes": 497102,
-      "sha256": "0cbef76baf5c49705b764e5a490dbaafcd9fa6fbab2a54fa7fb041cc8d909547"
+      "bytes": 496884,
+      "sha256": "530329101ec4ceb3ed436df79a4b0d98e4edcb2e4b1057d811c0bec29778aceb"
     },
     "dap-an": {
       "pdf": "assets/targets/2026-10/Chuyên đề/th-buoi-19-mo-hinh-cuc-tri-hinh-hoc-min-max/dap-an.pdf",
       "pages": 25,
-      "bytes": 781562,
-      "sha256": "1fa6904e15c581956b3e8c7fddbddaec1b6b21f672033c14cd3dc98590afaab4"
+      "bytes": 781278,
+      "sha256": "05e3abddacb7cb31a01b786a0e091724ba17b0f821b5455bb1011d61ec40425c"
     }
   }
 }
