@@ -16,7 +16,7 @@
   footer-rule:false,
   header-x-offset:0mm,
   header-align:right,
-  header-offset:0.8mm,
+  header-offset:0mm,
   header:lesson-style.branding.header,
  ),
  heading-content:lesson-heading(
