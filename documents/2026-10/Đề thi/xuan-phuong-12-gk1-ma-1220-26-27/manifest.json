@@ -273,14 +273,14 @@
     "de": {
       "pdf": "assets/targets/2026-10/Đề thi/xuan-phuong-12-gk1-ma-1220-26-27/de.pdf",
       "pages": 6,
-      "bytes": 431986,
-      "sha256": "c43ce59ba44be5bf8a15d2ef949b6017a25a4fc20c9f4dcd90b87a1261af5f8f"
+      "bytes": 431993,
+      "sha256": "ebe78fb3abab16fd9bf43aa6d200ec45da61e90d59465b0b1db3b72cf14de953"
     },
     "de-cach": {
       "pdf": "assets/targets/2026-10/Đề thi/xuan-phuong-12-gk1-ma-1220-26-27/de-cach.pdf",
       "pages": 16,
-      "bytes": 464961,
-      "sha256": "038401757fcb838a83460b4218e68bb103957407bbd47b5be4edfa1ea59671d7"
+      "bytes": 464981,
+      "sha256": "abb7a012150d21fa385c67f60201f947bede9d75bfb6e8679329adfb70888550"
     }
   }
 }
