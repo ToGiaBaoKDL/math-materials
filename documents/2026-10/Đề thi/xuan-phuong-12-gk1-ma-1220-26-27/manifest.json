@@ -9,7 +9,8 @@
     "subject": "Toán 12",
     "school_year": "2026–2027",
     "exam_code": "1220",
-    "duration_minutes": 90
+    "duration_minutes": 90,
+    "announcement_template": "livestream"
   },
   "sources": [
     {

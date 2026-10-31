@@ -2,7 +2,7 @@
 
 [README](../README.md) · [Xuất bản Drive/Sheet](publishing.md)
 
-Thông báo là tác vụ độc lập, không tự chạy sau build, upload hoặc Sheet. `DOC` chọn đúng một tài liệu; `kind` từ manifest quyết định template. Không có config announcements, tham số CONFIG hay link file nhập thủ công.
+Thông báo là tác vụ độc lập, không tự chạy sau build, upload hoặc Sheet. `DOC` chọn đúng một tài liệu; Template được chọn theo thứ tự: `TEMPLATE` trên lệnh → `metadata.announcement_template` trong manifest → `kind`. Việc chọn mẫu thông báo không đổi loại tài liệu, PDF, thư mục Drive hay Sheet. Không có config announcements, tham số CONFIG hay link file nhập thủ công.
 
 ## Nguồn dữ liệu
 
@@ -16,6 +16,7 @@ Thông báo là tác vụ độc lập, không tự chạy sau build, upload ho�
 
 ```sh
 make notify DOC=buoi-13 STARTS_AT=2026-10-22T20:00
+make notify DOC=xuan-phuong TEMPLATE=livestream
 make notify DOC=nguyen-khuyen
 make notify DOC=th-on-tap-gk1-toan-12-thuc-te-ham-so
 # Sau khi kiểm tra nội dung và chat đích:
@@ -39,3 +40,5 @@ chat_id = "@your_channel"
 Bot cần quyền gửi vào chat/channel. Token Telegram tách khỏi OAuth Google. `TELEGRAM_BOT_TOKEN`, `TELEGRAM_CHAT_ID` ghi đè secret; Dùng `SECRET=path/to/credentials.toml` qua Make hoặc `--secret` qua CLI để chọn file khác. Không truyền token qua command line.
 
 `SEND=1` gửi một tin mới và in `message_id`. Không retry tự động vì Telegram có thể đã nhận trước khi timeout; kiểm tra chat trước khi gửi lại. Không tự đăng lịch hoặc chống gửi lặp.
+
+Đề thi dùng cho livestream có thể đặt `metadata.announcement_template: "livestream"` để lưu mặc định (đã áp dụng cho Xuân Phương). Dùng `TEMPLATE=exam` để chọn lại mẫu đề thi cho một lần chạy. Mẫu livestream chỉ nhận link đề và đề cách; nếu kế hoạch xuất bản có đáp án, preview sẽ báo lỗi thay vì tự bỏ link.

@@ -13,10 +13,12 @@ LABELS = {
 
 
 def announcement_config(
-    manifest: dict[str, Any], starts_at: str | None = None, location: str = "Lớp Zoom"
+    manifest: dict[str, Any], starts_at: str | None = None, location: str = "Lớp Zoom", template: str | None = None
 ) -> dict[str, Any]:
-    kind = manifest["kind"]
     metadata = manifest["metadata"]
+    kind = template or metadata.get("announcement_template", manifest["kind"])
+    if kind not in ("tinh-hoa", "livestream", "exam"):
+        raise ValueError(f"Unknown announcement template: {kind}")
     config: dict[str, Any] = {"kind": kind}
     if kind == "tinh-hoa":
         for field in ("title", "topic"):
