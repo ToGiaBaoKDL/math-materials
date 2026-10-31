@@ -107,3 +107,5 @@ Dùng template làm nguồn triển khai, skill làm quy tắc tái sử dụng.
 Xuất template và bố cục Typst tái sử dụng, giữ style trong component thay vì vá từng câu. Build/render, xem mọi trang bị ảnh hưởng và phóng các công thức nhiều tầng. Giao kiểm tra nguồn và bản PDF cuối cho `typst-review`; chỉ thêm script hoặc file phụ khi nhu cầu cụ thể đã xuất hiện.
 
 Tham chiếu kỹ thuật: [Typst text edges](https://typst.app/docs/reference/text/text/#parameters-top-edge).
+
+- Nhãn A–D căn theo baseline của công thức, đặc biệt ngang chữ max/min; khoảng xét đặt bên dưới toán tử. Không căn nhãn vào tâm chiều cao toàn công thức có giới hạn dưới.

@@ -76,3 +76,7 @@ Quy tắc vận hành liên quan: [document-model](../../docs/document-model.md)
 ## Đầu ra và kiểm tra
 
 Xuất hàm/component hình vector và thông tin kích thước đủ để layout bố trí. Build và phóng preview để kiểm tra nhãn, nét, đối xứng, tiếp tuyến, miền cắt và quan hệ giữa hình khai triển với khối dựng. Khi quan hệ hình học nhạy với phép chiếu, kiểm tra cả mô hình và tọa độ vector đã xuất; giới hạn khung bằng nhau chưa chứng minh hai hình đã căn nhau.
+
+## Bảng biến thiên và bảng xét dấu
+
+- Theo convention cập nhật 31/10/2026: vẽ theo bảng nguồn, không thêm hai cạnh viền ngoài bên trái/phải. Giữ các đường phân hàng/cột và vạch kép có ý nghĩa toán học. Dấu, số căn giữa ô; giá trị lớn đặt cao hơn giá trị nhỏ.

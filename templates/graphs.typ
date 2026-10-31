@@ -20,6 +20,7 @@
   origin-offset: (-1.5mm, 1.5mm),
   y-label-side: auto,
   y-label-offsets: (:),
+  x-label-offsets: (:),
   name: none,
 ) = {
   let pad = 6mm
@@ -96,6 +97,12 @@
       backing: none,
     )
     #for x in xticks {
+      if x-label-offsets.keys().contains(str(x).replace("−", "-")) {
+        let offset = x-label-offsets.at(str(x).replace("−", "-"))
+        label((p(x, 0).at(0) + offset.at(0), origin.at(1) + offset.at(1)), str(x),
+          horizontal: center, vertical: if offset.at(1) < 0mm { bottom } else { top }, backing: none)
+        continue
+      }
       let at-break = breaks.contains(x)
       let above = if at-break { true } else { f(x) < 0 }
       let near-curve = not at-break and calc.abs(p(x, f(x)).at(1) - origin.at(1)) < 3mm

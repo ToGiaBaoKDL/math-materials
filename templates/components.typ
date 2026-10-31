@@ -21,12 +21,10 @@
     align: left + horizon,
     ..values
       .enumerate()
-      .map(((index, value)) => grid(
-        columns: (content-style.answer-label-width, 1fr),
-        column-gutter: content-style.answer-label-gap,
-        align: left + horizon,
-        text(weight: document-style.emphasis, fill: label-color)[#("ABCD".at(index)).], format(value),
-      )),
+      .map(((index, value)) => block(width: 100%)[
+        #set par(hanging-indent: content-style.answer-label-width + content-style.answer-label-gap)
+        #box(width: content-style.answer-label-width, text(weight: document-style.emphasis, fill: label-color)[#("ABCD".at(index)).])#h(content-style.answer-label-gap)#format(value)
+      ]),
   )
 })
 

@@ -1,0 +1,285 @@
+{
+  "schema_version": 1,
+  "id": "xuan-phuong-12-gk1-ma-1220-26-27",
+  "kind": "exam",
+  "received_date": "2026-10-31",
+  "status": "implemented",
+  "metadata": {
+    "title": "KIỂM TRA GIỮA HỌC KÌ I – THPT XUÂN PHƯƠNG – TOÁN 12",
+    "subject": "Toán 12",
+    "school_year": "2026–2027",
+    "exam_code": "1220",
+    "duration_minutes": 90
+  },
+  "sources": [
+    {
+      "path": "assets/sources/2026-10/Đề thi/xuan-phuong-12-gk1-ma-1220-26-27/source.pdf",
+      "original_name": "de-giua-hoc-ki-1-toan-12-nam-2026-2027-truong-thpt-xuan-phuong-ha-noi (1).pdf",
+      "bytes": 1636442,
+      "sha256": "6413e954c41ef24ceb4c20f360daf84b2ab9da66d152b6ed6331ed578a0d43e9",
+      "pages": 9
+    }
+  ],
+  "scope": {
+    "has_questions": true,
+    "has_solutions": false,
+    "questions": 22,
+    "question_pages": [
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  "variants": {
+    "de": {
+      "filename": "de.pdf",
+      "inputs": {
+        "variant": "de"
+      }
+    },
+    "de-cach": {
+      "filename": "de-cach.pdf",
+      "inputs": {
+        "variant": "de-cach"
+      }
+    }
+  },
+  "drive": {
+    "folder": "Đề thi",
+    "filenames": {
+      "de": "XUÂN PHƯƠNG - TOÁN 12 - GIỮA HK1 - MÃ 1220 - 2026-2027 - ĐỀ.pdf",
+      "de-cach": "XUÂN PHƯƠNG - TOÁN 12 - GIỮA HK1 - MÃ 1220 - 2026-2027 - ĐỀ CÁCH.pdf"
+    }
+  },
+  "publication": {
+    "include_writing": true,
+    "combine_answers": false
+  },
+  "content_mapping": [
+    {
+      "id": "I-1",
+      "role": "question",
+      "source": {
+        "page": 1,
+        "part": "I",
+        "number": 1
+      }
+    },
+    {
+      "id": "I-2",
+      "role": "question",
+      "source": {
+        "page": 1,
+        "part": "I",
+        "number": 2
+      }
+    },
+    {
+      "id": "I-3",
+      "role": "question",
+      "source": {
+        "page": 1,
+        "part": "I",
+        "number": 3
+      }
+    },
+    {
+      "id": "I-4",
+      "role": "question",
+      "source": {
+        "page": 1,
+        "part": "I",
+        "number": 4
+      }
+    },
+    {
+      "id": "I-5",
+      "role": "question",
+      "source": {
+        "page": 2,
+        "part": "I",
+        "number": 5
+      }
+    },
+    {
+      "id": "I-6",
+      "role": "question",
+      "source": {
+        "page": 2,
+        "part": "I",
+        "number": 6
+      }
+    },
+    {
+      "id": "I-7",
+      "role": "question",
+      "source": {
+        "page": 2,
+        "part": "I",
+        "number": 7
+      }
+    },
+    {
+      "id": "I-8",
+      "role": "question",
+      "source": {
+        "page": 2,
+        "part": "I",
+        "number": 8
+      }
+    },
+    {
+      "id": "I-9",
+      "role": "question",
+      "source": {
+        "page": 2,
+        "part": "I",
+        "number": 9
+      }
+    },
+    {
+      "id": "I-10",
+      "role": "question",
+      "source": {
+        "page": 2,
+        "part": "I",
+        "number": 10
+      }
+    },
+    {
+      "id": "I-11",
+      "role": "question",
+      "source": {
+        "page": 2,
+        "part": "I",
+        "number": 11
+      }
+    },
+    {
+      "id": "I-12",
+      "role": "question",
+      "source": {
+        "page": 2,
+        "part": "I",
+        "number": 12
+      }
+    },
+    {
+      "id": "II-1",
+      "role": "question",
+      "source": {
+        "page": 3,
+        "part": "II",
+        "number": 1
+      }
+    },
+    {
+      "id": "II-2",
+      "role": "question",
+      "source": {
+        "page": 3,
+        "part": "II",
+        "number": 2
+      }
+    },
+    {
+      "id": "II-3",
+      "role": "question",
+      "source": {
+        "page": 3,
+        "part": "II",
+        "number": 3
+      }
+    },
+    {
+      "id": "II-4",
+      "role": "question",
+      "source": {
+        "page": 3,
+        "part": "II",
+        "number": 4
+      }
+    },
+    {
+      "id": "III-1",
+      "role": "question",
+      "source": {
+        "page": 3,
+        "part": "III",
+        "number": 1
+      }
+    },
+    {
+      "id": "III-2",
+      "role": "question",
+      "source": {
+        "page": 4,
+        "part": "III",
+        "number": 2
+      }
+    },
+    {
+      "id": "III-3",
+      "role": "question",
+      "source": {
+        "page": 4,
+        "part": "III",
+        "number": 3
+      }
+    },
+    {
+      "id": "III-4",
+      "role": "question",
+      "source": {
+        "page": 4,
+        "part": "III",
+        "number": 4
+      }
+    },
+    {
+      "id": "III-5",
+      "role": "question",
+      "source": {
+        "page": 4,
+        "part": "III",
+        "number": 5
+      }
+    },
+    {
+      "id": "III-6",
+      "role": "question",
+      "source": {
+        "page": 4,
+        "part": "III",
+        "number": 6
+      }
+    }
+  ],
+  "provenance": {
+    "layout": "Livestream edition based on bac-ninh-12-kscl-lan1-ma-1006-26-27; lesson heading and contact footer.",
+    "figures": "Only source figures; native Typst vectors, red palette.",
+    "scope": "Transcribe the four source question pages only. Exclude appended reference solutions."
+  },
+  "qa": {
+    "review_status": "pending",
+    "compile": "passed",
+    "text_check": "passed: 22 questions in each variant; no solutions included; end mark on final question page",
+    "figure_review": "standalone native figure sheet reviewed against source",
+    "full_page_visual_review": "pending"
+  },
+  "outputs": {
+    "de": {
+      "pdf": "assets/targets/2026-10/Đề thi/xuan-phuong-12-gk1-ma-1220-26-27/de.pdf",
+      "pages": 6,
+      "bytes": 429834,
+      "sha256": "996e7894364c666a908c60fb966bf078690c1fde979fb2c1de3d3a13a752f266"
+    },
+    "de-cach": {
+      "pdf": "assets/targets/2026-10/Đề thi/xuan-phuong-12-gk1-ma-1220-26-27/de-cach.pdf",
+      "pages": 15,
+      "bytes": 464942,
+      "sha256": "e4cf90d3a5404861f1b425d733ff93e63c52e763cb250851751df703619620a7"
+    }
+  }
+}
