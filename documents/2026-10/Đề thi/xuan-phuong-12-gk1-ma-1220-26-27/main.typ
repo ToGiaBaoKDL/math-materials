@@ -8,16 +8,19 @@
  [Kiểm tra giữa học kì I — THPT Xuân Phương — Toán 12 — Mã 1220],
  variant:variant,
  branding:lesson-style.branding + (
-  footer:contact-links(color:white,tracking:0.35pt,text-offset:0.4mm),
+  footer:[],
+  header-align:center,
+  header-offset:0.8mm,
+  header:[Lớp VIPDXT Toàn Diện Luyện thi 9+ Toán 2027: IB Z.a.l.o 0833.281.128],
  ),
  heading-content:lesson-heading(
-  [ÔN THI GIỮA HK1 TOÁN 12],
-  [ĐỀ GIỮA HỌC KÌ I — THPT XUÂN PHƯƠNG],
-  title-size:24pt,
+  [ĐỀ KIỂM TRA GIỮA HK1 TOÁN 12],
+  [TRƯỜNG THPT XUÂN PHƯƠNG | SỞ GD & DT HÀ NỘI],
+  title-size:26pt,
   course-size:20.5pt,
-  subtitle:[#set text(size:13pt)
+  subtitle:[#set text(size:11pt)
    #set par(leading:0.8em)
-   Năm học 2026–2027 · Mã đề 1220\ Thời gian làm bài: 90 phút
+   Năm học 2026 - 2027 | Mã đề: 1220
   ],
  ),
 )

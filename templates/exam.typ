@@ -180,6 +180,8 @@
   ending: none,
   keep-together: false,
   keep-body: false,
+  question-label-color: palette.primary,
+  question-tag: none,
   statements-table: false,
   question-gap: none,
   statement-gap: exam-style.statement-gap,
@@ -187,8 +189,8 @@
 ) = {
   let prompt = [
     #if keep-body {
-      block(width: 100%, breakable: false)[#text(weight: "bold", fill: palette.primary)[Câu #number.] #body]
-    } else { [#text(weight: "bold", fill: palette.primary)[Câu #number.] #body] }
+      block(width: 100%, breakable: false)[#text(weight: "bold", fill: question-label-color)[Câu #number.] #if question-tag != none {text(weight: "bold", fill: palette.primary)[#question-tag] + h(1.5mm)}#body]
+    } else { [#text(weight: "bold", fill: question-label-color)[Câu #number.] #if question-tag != none {text(weight: "bold", fill: palette.primary)[#question-tag] + h(1.5mm)}#body] }
     #if statements.len() > 0 {
       if statements-table {
         block(above: 3mm, below: 0pt, exam-table(

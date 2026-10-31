@@ -18,7 +18,7 @@
  let xx(i)=24+i*100/(n - 1)
  box(width:135mm,height:50mm)[
   #path((p(1,1),p(134,1),p(134,10),p(1,10)),close:true,fill:pink,stroke:none)
-  #seg((1,1),(134,1)) #seg((1,49),(134,49))
+  #path((p(1,1),p(134,1),p(134,49),p(1,49)),close:true,stroke:edge)
   #seg((15,1),(15,49)) #seg((1,10),(134,10)) #seg((1,20),(134,20))
   #label(8,5.5,[$x$]) #label(8,15,if kind=="v1" or kind=="v12" {[$f'(x)$]}else{[$y'$]})
   #label(8,34,if kind=="v1" or kind=="v12" {[$f(x)$]}else{[$y$]})
@@ -40,7 +40,7 @@
 }
 #let sign-table()=box(width:125mm,height:21mm)[
  #path((p(1,1),p(124,1),p(124,10),p(1,10)),close:true,fill:pink,stroke:none)
- #seg((1,1),(124,1)) #seg((1,20),(124,20))
+ #path((p(1,1),p(124,1),p(124,20),p(1,20)),close:true,stroke:edge)
  #seg((15,1),(15,20)) #seg((1,10),(124,10))
  #label(8,5.5,[$x$]) #label(8,15,[$f'(x)$])
  #for (x,t) in ((24,[$-infinity$]),(47,[$3$]),(70,[$7$]),(93,[$11$]),(116,[$+infinity$])){label(x,5.5,t)}

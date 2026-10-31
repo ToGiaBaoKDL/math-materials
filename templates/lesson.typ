@@ -79,7 +79,9 @@
   set page(paper: document-style.paper, margin: lesson-style.margin, fill: palette.paper, background: context {
     let number = counter(page).get().first()
     let total = counter(page).final().first()
-    place(top + left, running-head(branding.badge, branding.header, branded: true, margin: lesson-style.margin))
+    place(top + left, running-head(branding.badge, branding.header, branded: true, margin: lesson-style.margin,
+      title-align: branding.at("header-align", default: left),
+      title-offset: branding.at("header-offset", default: 0mm)))
     place(bottom + left, running-foot(branding.footer, number, total, margin: lesson-style.margin))
   })
   block(width: 100%, below: if heading-image == none { lesson-style.title-gap } else { 0pt })[

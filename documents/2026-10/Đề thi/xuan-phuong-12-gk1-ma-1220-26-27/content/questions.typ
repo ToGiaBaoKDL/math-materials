@@ -1,9 +1,10 @@
 #import "/templates/exam.typ": exam-question, exam-section, exam-end
 #import "/templates/writing.typ": writing-space, final-writing-space
 #import "../figures.typ": fig
+#import "/templates/contacts.typ": contact-links
 #let below(name)=block(width:100%,above:3mm,below:3mm,breakable:false,align(center,fig(name)))
 #let questions(variant:"de")={
- let base=exam-question.with(statement-gap:5.5mm,answer-gap:3.5mm,question-gap:6.5mm)
+ let base=exam-question.with(question-label-color:black,question-tag:[\[DXT\]],statement-gap:5.5mm,answer-gap:3.5mm,question-gap:6.5mm)
  let q(n,body,answers:(),statements:(),lines:auto,last:false,visual:none,..args)={
   let render()=if visual==none {base(n,body,answers:answers,statements:statements,..args)}else{grid(columns:(1fr,if visual=="tank" {50mm}else{67mm}),gutter:5mm,align:horizon,base(n,body,answers:answers,statements:statements,..args),if visual=="tank" {scale(x:75%,y:75%,reflow:true,fig(visual))}else{fig(visual)})}
   if variant=="de-cach" {context {
@@ -12,7 +13,7 @@
    let available=210mm - measure(prompt,width:186mm).height - measure(writing-space(0,gap:9mm),width:186mm).height
    let count=calc.min(desired,calc.max(2,calc.floor(available/9mm)))
    block(breakable:false)[#prompt #writing-space(count,gap:9mm)]
-   final-writing-space(gap:9mm)
+   if not last {final-writing-space(gap:9mm)}
    if not last {v(6mm)}
   }}else{block(width:100%,breakable:visual==none,render())}
  }
@@ -51,13 +52,15 @@
  q(6,[Cho hàm số $y=(-x^2+a x+b)/(x+c)$ có bảng biến thiên như hình vẽ
  #below("last")
  Tính $a+b+c$.],lines:10,last:true,keep-together:true)
- if variant=="de" {v(1fr)}
- block(width:100%,breakable:false)[
-  #exam-end()
-  #block(width:100%,above:3mm,below:0pt)[
-   #set text(fill:black,size:12pt,weight:"regular")
-   #set par(justify:false,leading:0.5em)
-   #move(dy:7mm,block(width:100%,align(center)[Xem lại video record buổi học tại YouTube Thầy Đỗ Xuân Thắng (\@toanthaythangdxt)]))
-  ]
+ exam-end()
+ if variant=="de-cach" {final-writing-space(gap:9mm)} else {v(1fr)}
+ block(width:100%,breakable:false,above:3mm,below:0pt)[
+  #set text(fill:black,size:12pt,weight:"regular")
+  #set par(justify:false,leading:0.5em)
+  #move(dy:5mm,block(width:100%)[
+   #align(center)[Xem lại video record buổi học tại YouTube Thầy Đỗ Xuân Thắng (\@toanthaythangdxt)]
+   #v(1mm)
+   #align(center,text(fill:rgb("#B00012"),contact-links(color:rgb("#B00012"))))
+  ])
  ]
 }

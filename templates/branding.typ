@@ -38,6 +38,7 @@
   branded: false,
   palette: palette,
   title-align: left,
+  title-offset: 0mm,
   size-override: none,
   style: header-style,
   margin: document-style.margin,
@@ -108,7 +109,7 @@
       ])
     }
     #place(top + left, dx: badge-left, dy: badge-top, badge-display)
-    #place(top + left, dx: title-left, block(width: title-width, height: head.bar-height, align(
+    #place(top + left, dx: title-left, dy: title-offset, block(width: title-width, height: head.bar-height, align(
       title-align + horizon,
       text(top-edge: "bounds", bottom-edge: "bounds", fitted-label(title, title-width, title-size)),
     )))
