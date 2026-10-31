@@ -9,6 +9,7 @@
   title,
   subtitle: none,
   title-tracking: 0pt,
+  title-stretch: false,
   horizontal-inset: 5mm,
   title-size: 25pt,
   course-size: 20.5pt,
@@ -42,7 +43,10 @@
           break
         }
       }
-      text(font: chosen, size: title-size, tracking: title-tracking, weight: "bold", fill: palette.heading, stroke: title-stroke, title)
+      let tracking = if title-stretch and type(title) == str {
+        title-tracking + calc.max(0pt, (size.width - measure(text(font: chosen, size: title-size, tracking: title-tracking, weight: "bold", title)).width) / calc.max(1, title.len() - 1))
+      } else { title-tracking }
+      text(font: chosen, size: title-size, tracking: tracking, weight: "bold", fill: palette.heading, stroke: title-stroke, title)
     })
     #if subtitle != none {
       v(1mm)
@@ -81,8 +85,14 @@
     let total = counter(page).final().first()
     place(top + left, running-head(branding.badge, branding.header, branded: true, margin: lesson-style.margin,
       title-align: branding.at("header-align", default: left),
-      title-offset: branding.at("header-offset", default: 0mm)))
-    place(bottom + left, running-foot(branding.footer, number, total, margin: lesson-style.margin))
+      title-offset: branding.at("header-offset", default: 0mm),
+      title-x-offset: branding.at("header-x-offset", default: 0mm)))
+    place(bottom + left, running-foot(branding.footer, number, total, margin: lesson-style.margin,
+      caption-align: branding.at("footer-align", default: left),
+      caption-page-center: branding.at("footer-page-center", default: false),
+      caption-offset: branding.at("footer-offset", default: 0mm),
+      caption-x-offset: branding.at("footer-x-offset", default: 0mm),
+      show-rule: branding.at("footer-rule", default: true)))
   })
   block(width: 100%, below: if heading-image == none { lesson-style.title-gap } else { 0pt })[
     #if heading-content != none {

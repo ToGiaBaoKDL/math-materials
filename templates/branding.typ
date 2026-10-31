@@ -39,6 +39,7 @@
   palette: palette,
   title-align: left,
   title-offset: 0mm,
+  title-x-offset: 0mm,
   size-override: none,
   style: header-style,
   margin: document-style.margin,
@@ -50,7 +51,7 @@
   let cut = head.tab-width - head.tab-bottom
   let badge-top = (head.height - head.badge-diameter) / 2
   let badge-left = head.badge-left
-  let title-left = head.tab-width + head.title-gap
+  let title-left = head.tab-width + head.title-gap + title-x-offset
   let title-width = size.width - title-left - if branded { 4mm } else { inset.right }
   let title-size = if size-override != none { size-override } else if branded { head.title-size } else {
     head.subject-title-size
@@ -143,6 +144,11 @@
   folio-width: footer-style.folio-width,
   folio-right-inset: none,
   folio-size: footer-style.folio-size,
+  caption-align: left,
+  caption-page-center: false,
+  caption-offset: 0mm,
+  caption-x-offset: 0mm,
+  show-rule: true,
 ) = layout(size => {
   set text(font: fonts.ui, weight: document-style.weight, fill: palette.paper)
   set par(justify: false)
@@ -153,7 +159,7 @@
   let folio-left = size.width - right-inset - folio-width
   let caption-width = folio-left - foot.caption-left - 2 * foot.rule-gap
   let caption-label = fitted-label(caption, caption-width, foot.caption-size)
-  let text-x = foot.caption-left
+  let text-x = if caption-page-center { (size.width - caption-width) / 2 } else { foot.caption-left }
   let rule-left = text-x + measure(caption-label).width + foot.rule-gap
   let rule-right = folio-left - foot.rule-gap
   block(width: 100%, height: foot.height)[
@@ -173,19 +179,19 @@
       fill: palette.primary,
       stroke: none,
     ))
-    #place(top + left, dx: text-x, dy: bar-top, block(height: foot.bar-height, align(horizon, text(
+    #place(top + left, dx: text-x + caption-x-offset, dy: bar-top + caption-offset, block(width: caption-width, height: foot.bar-height, align(caption-align + horizon, text(
       top-edge: "bounds",
       bottom-edge: "bounds",
       caption-label,
     ))))
-    #if rule-right > rule-left {
+    #if show-rule and rule-right > rule-left {
       place(top + left, dx: rule-left, dy: bar-top + (foot.bar-height - foot.rule-height) / 2, fading-rule(
         rule-right - rule-left,
         palette.paper,
         height: foot.rule-height,
       ))
     }
-    #place(top + right, dx: -right-inset, dy: bar-top, block(width: folio-width, height: foot.bar-height, align(
+    #place(top + right, dx: -right-inset, dy: bar-top + caption-offset, block(width: folio-width, height: foot.bar-height, align(
       right + horizon,
       text(size: folio-size, top-edge: "bounds", bottom-edge: "bounds", if folio == none {
         [Trang #number/#total]
