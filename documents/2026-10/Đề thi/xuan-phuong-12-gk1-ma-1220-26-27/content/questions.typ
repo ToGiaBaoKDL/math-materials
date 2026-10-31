@@ -52,8 +52,9 @@
  q(6,[Cho hàm số $y=(-x^2+a x+b)/(x+c)$ có bảng biến thiên như hình vẽ
  #below("last")
  Tính $a+b+c$.],lines:10,last:true,keep-together:true)
+ if variant=="de-cach" {final-writing-space(gap:9mm)}
  exam-end()
- if variant=="de-cach" {final-writing-space(gap:9mm)} else {v(1fr)}
+ if variant=="de" {v(1fr)}
  block(width:100%,breakable:false,above:3mm,below:0pt)[
   #set text(fill:black,size:12pt,weight:"regular")
   #set par(justify:false,leading:0.5em)
