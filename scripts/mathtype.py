@@ -245,6 +245,8 @@ def render(n):
             return value
         if s == 37 and v == 30 and len(cs) == 1:
             return "std.box(stroke: #0.5pt, inset: #3pt, " + cs[0] + ")"
+        if s == 15 and v == 1 and len(cs) == 4 and cs[1:3] == ["", ""] and cs[3] == "∫":
+            return "integral " + cs[0]
         if s == 13:
             return "overline(" + cs[0] + ")"
         if s == 10:

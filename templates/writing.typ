@@ -1,13 +1,13 @@
 #import "components.typ": solution-heading
 #import "theme.typ": palette, writing-style
 
-#let writing-space(lines, gap: writing-style.ruled-gap) = block(
+#let writing-space(lines, gap: writing-style.ruled-gap, heading-gap: 3mm) = block(
   width: 100%,
   breakable: true,
   above: writing-style.solution-gap,
   below: 0pt,
 )[
-  #solution-heading()
+  #solution-heading(below: heading-gap)
   #for _ in range(lines) {
     block(width: 100%, height: gap, above: 0pt, below: 0pt, align(bottom, line(
       length: 100%,
@@ -17,7 +17,7 @@
 ]
 
 // Share unused page height between the solution areas on that page.
-#let final-writing-space(gap: writing-style.ruled-gap) = block(
+#let ruled-page-remainder(gap: writing-style.ruled-gap) = block(
   width: 100%,
   height: 1fr,
   clip: true,
@@ -34,4 +34,14 @@
     }
   })
 ]
+
+
+#let final-writing-space(gap: writing-style.ruled-gap, only-page-end: false) = context {
+  let current = here()
+  let following = query(selector(<exercise-location>).after(current))
+  let has-next-on-page = following.any(it => it.location().page() == current.page())
+  if not only-page-end or not has-next-on-page {
+    ruled-page-remainder(gap: gap)
+  }
+}
 

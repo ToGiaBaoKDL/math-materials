@@ -299,7 +299,14 @@
   variant: "de",
   question-gap: rhythm.question,
   writing-lines: 6,
+  answer-columns: auto,
+  answer-column-gap: none,
+  answer-row-gap: none,
+  writing-heading-gap: 3mm,
+  solution-title-above: lesson-style.solution-gap,
+  solution-title-below: lesson-style.solution-heading-gap,
   fill-writing-page: true,
+  writing-fill-page-end: false,
   writing-keep-prompt: true,
   writing-flow-prompt: false,
   writing-single-page: false,
@@ -309,6 +316,7 @@
   source-id: none,
   keep-together: true,
   keep-solution-start: false,
+  solution-leading: lesson-style.leading,
   flow-stem: false,
   statements-table: false,
 ) = {
@@ -320,7 +328,7 @@
     #text(weight: document-style.emphasis, fill: palette.question-tag)[\[DXT\]] #body
     #if answers.len() > 0 {
       v(rhythm.answers)
-      choices(answers)
+      choices(answers, columns: answer-columns, column-gap: answer-column-gap, row-gap: answer-row-gap)
     }
   ]
   let prompt = [
@@ -370,10 +378,10 @@
     )[
       #block(width: 100%, breakable: writing-flow-prompt or (statements-table and not writing-keep-prompt), sticky: writing-keep-prompt, prompt)
       #if not writing-keep-prompt {
-        block(width: 100%, breakable: false, writing-space(writing-lines, gap: writing-line-gap))
-      } else { writing-space(writing-lines, gap: writing-line-gap) }
+        block(width: 100%, breakable: false, writing-space(writing-lines, gap: writing-line-gap, heading-gap: writing-heading-gap))
+      } else { writing-space(writing-lines, gap: writing-line-gap, heading-gap: writing-heading-gap) }
     ]
-    if fill-writing-page { final-writing-space(gap: writing-line-gap) }
+    if fill-writing-page { final-writing-space(gap: writing-line-gap, only-page-end: writing-fill-page-end) }
   } else {
     block(
       width: 100%,
@@ -390,11 +398,11 @@
   }
   if variant == "dap-an" {
     solution-heading(
-      above: lesson-style.solution-gap,
-      below: lesson-style.solution-heading-gap,
+      above: solution-title-above,
+      below: solution-title-below,
     )
     [
-      #set par(leading: lesson-style.leading, spacing: 3mm)
+      #set par(leading: solution-leading, spacing: 3.5mm)
       #solution
     ]
   }

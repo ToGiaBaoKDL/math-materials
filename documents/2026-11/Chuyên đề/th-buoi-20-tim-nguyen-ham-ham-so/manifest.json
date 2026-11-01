@@ -1,0 +1,638 @@
+{
+  "schema_version": 1,
+  "id": "th-buoi-20-tim-nguyen-ham-ham-so",
+  "kind": "tinh-hoa",
+  "received_date": "2026-11-01",
+  "status": "implemented",
+  "metadata": {
+    "title": "BUỔI 20: TÌM NGUYÊN HÀM CỦA HÀM SỐ",
+    "course": "KHÓA TINH HOA TOÀN DIỆN 9+ 2027",
+    "lesson": 20,
+    "topic": "NGUYÊN HÀM – TÍCH PHÂN – ỨNG DỤNG",
+    "subject": "Toán 12",
+    "homework": true
+  },
+  "sources": [
+    {
+      "path": "assets/sources/2026-11/Chuyên đề/th-buoi-20-tim-nguyen-ham-ham-so/source.docx",
+      "original_name": "BUỔI 20 TÌM NGUYÊN HÀM HÀM SỐ.docx",
+      "bytes": 1003391,
+      "sha256": "4e39617234821a92e7b05ecb412702724302dc5f690c770c942f738534400cb4"
+    }
+  ],
+  "scope": {
+    "has_questions": true,
+    "has_solutions": true,
+    "questions": 52,
+    "worked_examples": 20,
+    "practice_questions": 32
+  },
+  "variants": {
+    "de": {
+      "filename": "de.pdf",
+      "inputs": {
+        "variant": "de"
+      }
+    },
+    "de-cach": {
+      "filename": "de-cach.pdf",
+      "inputs": {
+        "variant": "de-cach"
+      }
+    },
+    "dap-an": {
+      "filename": "dap-an.pdf",
+      "inputs": {
+        "variant": "dap-an"
+      }
+    }
+  },
+  "drive": {
+    "folder": "Chuyên đề",
+    "filenames": {
+      "de": "KHÓA TH - BUỔI 20 - TÌM NGUYÊN HÀM HÀM SỐ - ĐỀ.pdf",
+      "de-cach": "KHÓA TH - BUỔI 20 - TÌM NGUYÊN HÀM HÀM SỐ - ĐỀ CÁCH.pdf",
+      "dap-an": "KHÓA TH - BUỔI 20 - TÌM NGUYÊN HÀM HÀM SỐ - ĐÁP ÁN.pdf"
+    }
+  },
+  "content_mapping": [
+    {
+      "id": "bai-hoc-1",
+      "role": "question",
+      "source": {
+        "body_block": 26,
+        "number": 1,
+        "group": "Bài học"
+      }
+    },
+    {
+      "id": "bai-hoc-2",
+      "role": "question",
+      "source": {
+        "body_block": 37,
+        "number": 2,
+        "group": "Bài học"
+      }
+    },
+    {
+      "id": "bai-hoc-3",
+      "role": "question",
+      "source": {
+        "body_block": 44,
+        "number": 3,
+        "group": "Bài học"
+      }
+    },
+    {
+      "id": "bai-hoc-4",
+      "role": "question",
+      "source": {
+        "body_block": 48,
+        "number": 4,
+        "group": "Bài học"
+      }
+    },
+    {
+      "id": "bai-hoc-5",
+      "role": "question",
+      "source": {
+        "body_block": 63,
+        "number": 5,
+        "group": "Bài học"
+      }
+    },
+    {
+      "id": "bai-hoc-6",
+      "role": "question",
+      "source": {
+        "body_block": 76,
+        "number": 6,
+        "group": "Bài học"
+      }
+    },
+    {
+      "id": "bai-hoc-7",
+      "role": "question",
+      "source": {
+        "body_block": 87,
+        "number": 7,
+        "group": "Bài học"
+      }
+    },
+    {
+      "id": "bai-hoc-8",
+      "role": "question",
+      "source": {
+        "body_block": 102,
+        "number": 8,
+        "group": "Bài học"
+      }
+    },
+    {
+      "id": "bai-hoc-9",
+      "role": "question",
+      "source": {
+        "body_block": 109,
+        "number": 9,
+        "group": "Bài học"
+      }
+    },
+    {
+      "id": "bai-hoc-10",
+      "role": "question",
+      "source": {
+        "body_block": 115,
+        "number": 10,
+        "group": "Bài học"
+      }
+    },
+    {
+      "id": "bai-hoc-11",
+      "role": "question",
+      "source": {
+        "body_block": 119,
+        "number": 11,
+        "group": "Bài học"
+      }
+    },
+    {
+      "id": "bai-hoc-12",
+      "role": "question",
+      "source": {
+        "body_block": 125,
+        "number": 12,
+        "group": "Bài học"
+      }
+    },
+    {
+      "id": "bai-hoc-13",
+      "role": "question",
+      "source": {
+        "body_block": 130,
+        "number": 13,
+        "group": "Bài học"
+      }
+    },
+    {
+      "id": "bai-hoc-14",
+      "role": "question",
+      "source": {
+        "body_block": 134,
+        "number": 14,
+        "group": "Bài học"
+      }
+    },
+    {
+      "id": "bai-hoc-15",
+      "role": "question",
+      "source": {
+        "body_block": 141,
+        "number": 15,
+        "group": "Bài học"
+      }
+    },
+    {
+      "id": "bai-hoc-16",
+      "role": "question",
+      "source": {
+        "body_block": 146,
+        "number": 16,
+        "group": "Bài học"
+      }
+    },
+    {
+      "id": "bai-hoc-17",
+      "role": "question",
+      "source": {
+        "body_block": 153,
+        "number": 17,
+        "group": "Bài học"
+      }
+    },
+    {
+      "id": "bai-hoc-18",
+      "role": "question",
+      "source": {
+        "body_block": 158,
+        "number": 18,
+        "group": "Bài học"
+      }
+    },
+    {
+      "id": "bai-hoc-19",
+      "role": "question",
+      "source": {
+        "body_block": 163,
+        "number": 19,
+        "group": "Bài học"
+      }
+    },
+    {
+      "id": "bai-hoc-20",
+      "role": "question",
+      "source": {
+        "body_block": 171,
+        "number": 20,
+        "group": "Bài học"
+      }
+    },
+    {
+      "id": "tu-luyen-1",
+      "role": "question",
+      "source": {
+        "body_block": 181,
+        "number": 1,
+        "group": "Tự luyện"
+      }
+    },
+    {
+      "id": "tu-luyen-2",
+      "role": "question",
+      "source": {
+        "body_block": 187,
+        "number": 2,
+        "group": "Tự luyện"
+      }
+    },
+    {
+      "id": "tu-luyen-3",
+      "role": "question",
+      "source": {
+        "body_block": 194,
+        "number": 3,
+        "group": "Tự luyện"
+      }
+    },
+    {
+      "id": "tu-luyen-4",
+      "role": "question",
+      "source": {
+        "body_block": 200,
+        "number": 4,
+        "group": "Tự luyện"
+      }
+    },
+    {
+      "id": "tu-luyen-5",
+      "role": "question",
+      "source": {
+        "body_block": 206,
+        "number": 5,
+        "group": "Tự luyện"
+      }
+    },
+    {
+      "id": "tu-luyen-6",
+      "role": "question",
+      "source": {
+        "body_block": 213,
+        "number": 6,
+        "group": "Tự luyện"
+      }
+    },
+    {
+      "id": "tu-luyen-7",
+      "role": "question",
+      "source": {
+        "body_block": 220,
+        "number": 7,
+        "group": "Tự luyện"
+      }
+    },
+    {
+      "id": "tu-luyen-8",
+      "role": "question",
+      "source": {
+        "body_block": 225,
+        "number": 8,
+        "group": "Tự luyện"
+      }
+    },
+    {
+      "id": "tu-luyen-9",
+      "role": "question",
+      "source": {
+        "body_block": 230,
+        "number": 9,
+        "group": "Tự luyện"
+      }
+    },
+    {
+      "id": "tu-luyen-10",
+      "role": "question",
+      "source": {
+        "body_block": 235,
+        "number": 10,
+        "group": "Tự luyện"
+      }
+    },
+    {
+      "id": "tu-luyen-11",
+      "role": "question",
+      "source": {
+        "body_block": 240,
+        "number": 11,
+        "group": "Tự luyện"
+      }
+    },
+    {
+      "id": "tu-luyen-12",
+      "role": "question",
+      "source": {
+        "body_block": 245,
+        "number": 12,
+        "group": "Tự luyện"
+      }
+    },
+    {
+      "id": "tu-luyen-13",
+      "role": "question",
+      "source": {
+        "body_block": 249,
+        "number": 13,
+        "group": "Tự luyện"
+      }
+    },
+    {
+      "id": "tu-luyen-14",
+      "role": "question",
+      "source": {
+        "body_block": 254,
+        "number": 14,
+        "group": "Tự luyện"
+      }
+    },
+    {
+      "id": "tu-luyen-15",
+      "role": "question",
+      "source": {
+        "body_block": 259,
+        "number": 15,
+        "group": "Tự luyện"
+      }
+    },
+    {
+      "id": "tu-luyen-16",
+      "role": "question",
+      "source": {
+        "body_block": 264,
+        "number": 16,
+        "group": "Tự luyện"
+      }
+    },
+    {
+      "id": "tu-luyen-17",
+      "role": "question",
+      "source": {
+        "body_block": 271,
+        "number": 17,
+        "group": "Tự luyện"
+      }
+    },
+    {
+      "id": "tu-luyen-18",
+      "role": "question",
+      "source": {
+        "body_block": 276,
+        "number": 18,
+        "group": "Tự luyện"
+      }
+    },
+    {
+      "id": "tu-luyen-19",
+      "role": "question",
+      "source": {
+        "body_block": 281,
+        "number": 19,
+        "group": "Tự luyện"
+      }
+    },
+    {
+      "id": "tu-luyen-20",
+      "role": "question",
+      "source": {
+        "body_block": 288,
+        "number": 20,
+        "group": "Tự luyện"
+      }
+    },
+    {
+      "id": "tu-luyen-21",
+      "role": "question",
+      "source": {
+        "body_block": 299,
+        "number": 21,
+        "group": "Tự luyện"
+      }
+    },
+    {
+      "id": "tu-luyen-22",
+      "role": "question",
+      "source": {
+        "body_block": 303,
+        "number": 22,
+        "group": "Tự luyện"
+      }
+    },
+    {
+      "id": "tu-luyen-23",
+      "role": "question",
+      "source": {
+        "body_block": 310,
+        "number": 23,
+        "group": "Tự luyện"
+      }
+    },
+    {
+      "id": "tu-luyen-24",
+      "role": "question",
+      "source": {
+        "body_block": 315,
+        "number": 24,
+        "group": "Tự luyện"
+      }
+    },
+    {
+      "id": "tu-luyen-25",
+      "role": "question",
+      "source": {
+        "body_block": 320,
+        "number": 25,
+        "group": "Tự luyện"
+      }
+    },
+    {
+      "id": "tu-luyen-26",
+      "role": "question",
+      "source": {
+        "body_block": 324,
+        "number": 26,
+        "group": "Tự luyện"
+      }
+    },
+    {
+      "id": "tu-luyen-27",
+      "role": "question",
+      "source": {
+        "body_block": 328,
+        "number": 27,
+        "group": "Tự luyện"
+      }
+    },
+    {
+      "id": "tu-luyen-28",
+      "role": "question",
+      "source": {
+        "body_block": 334,
+        "number": 28,
+        "group": "Tự luyện"
+      }
+    },
+    {
+      "id": "tu-luyen-29",
+      "role": "question",
+      "source": {
+        "body_block": 339,
+        "number": 29,
+        "group": "Tự luyện"
+      }
+    },
+    {
+      "id": "tu-luyen-30",
+      "role": "question",
+      "source": {
+        "body_block": 347,
+        "number": 30,
+        "group": "Tự luyện"
+      }
+    },
+    {
+      "id": "tu-luyen-31",
+      "role": "question",
+      "source": {
+        "body_block": 353,
+        "number": 31,
+        "group": "Tự luyện"
+      }
+    },
+    {
+      "id": "tu-luyen-32",
+      "role": "question",
+      "source": {
+        "body_block": 359,
+        "number": 32,
+        "group": "Tự luyện"
+      }
+    }
+  ],
+  "provenance": {
+    "layout": "Convention chuyên đề: 14 pt, leading 0.92 em, continuous question flow; shared content for three variants. Revision: native dif x throughout; power identities in a 4-column/2-row grid; trigonometric identities in a 2-column/4-row grid with original circled-plus markers; de leading 0.82 em and question gap 4.5 mm to keep target adjacent questions on the same pages; end mark above gap 6 mm.",
+    "transcription": "610 MathType equations decoded and matched to 610 embedded preview MTEF records. Source has four formula tables, no non-equation illustrations. One source equation is empty (trailing object after practice question 19 solution); omitted from output.",
+    "numbering": "Bài học 1–20; tự luyện numbered continuously 1–32 from source sequence; source Word automatic numbering and stray Bài tập labels normalized.",
+    "source_notes": [
+      "Source title missing word HÀM restored from filename and lesson content.",
+      "Source DOCX app metadata says 19 pages; temporary LibreOffice reference export has 21 pages."
+    ],
+    "corrections": [
+      {
+        "item": "bai-hoc-1e",
+        "change": "Restore parentheses around the full integrand in solution."
+      },
+      {
+        "item": "bai-hoc-5c",
+        "change": "Replace (1+sin x)/2+C with (x+sin x)/2+C."
+      },
+      {
+        "item": "bai-hoc-7h",
+        "change": "Align solution with source question coefficients 2017 and 2018; final term 504.5/x^4."
+      },
+      {
+        "item": "bai-hoc-12",
+        "change": "User approved option D: integral 1/sin²x dx = -cot x+C; correct solution and select B."
+      },
+      {
+        "item": "bai-hoc-16",
+        "change": "Remove stray leading equals sign in option C; mathematical option unchanged."
+      },
+      {
+        "item": "bai-hoc-18",
+        "change": "Normalize superscript slash used as derivative mark to prime."
+      },
+      {
+        "item": "bai-hoc-19;tu-luyen-29",
+        "change": "Remove duplicate plus sign in solution."
+      },
+      {
+        "item": "tu-luyen-15",
+        "change": "Replace broken duplicated integral with integration and initial-condition calculation, giving 2x√x+3∛(x²)-4."
+      },
+      {
+        "item": "tu-luyen-17",
+        "change": "Derivative of mx³ is 3mx², not 3mx³; reformat coefficient system."
+      },
+      {
+        "item": "tu-luyen-27;tu-luyen-31",
+        "change": "Normalize malformed formula text and nested systems without changing values."
+      }
+    ],
+    "correction_authorization": "User approved clear mathematical corrections and specifically option D + solution of reaction question 12."
+  },
+  "qa": {
+    "review_status": "pending",
+    "math_type_pairs_checked": 610,
+    "compile": "passed",
+    "correct_choice_labels": 38,
+    "content_check": "52 questions and four formula tables compared with decoded source; authorized corrections recorded",
+    "source_checksum": "passed",
+    "variants": {
+      "de": {
+        "pages": 12,
+        "questions": 52,
+        "choice_labels": 0,
+        "body_text_bounds": "passed",
+        "fonts_embedded": "passed",
+        "end_mark_with_last_question": "passed"
+      },
+      "de-cach": {
+        "pages": 23,
+        "questions": 52,
+        "choice_labels": 0,
+        "body_text_bounds": "passed",
+        "fonts_embedded": "passed",
+        "end_mark_with_last_question": "passed"
+      },
+      "dap-an": {
+        "pages": 25,
+        "questions": 52,
+        "choice_labels": 38,
+        "body_text_bounds": "passed",
+        "fonts_embedded": "passed",
+        "end_mark_with_last_question": "passed"
+      }
+    },
+    "python_checks": "ruff and pyright passed",
+    "full_page_visual_review": "pending; no generated page preview images",
+    "empty_source_equations": 1,
+    "layout_revision": "Confirmed bai-hoc-8 and 9 share page 5; tu-luyen-4 and 5 share page 8 in de; all variants retain 52 questions and end mark with final question. Question 18 uses four answer columns with 2.5 mm gutters in de; questions 17 and 18 share page 6. Question 7 solution now packs consecutive steps to measured line width, keeps each letter with the first equation row, and permits page breaks between continuation rows. Latest: fixed writing-area spacing (no fractional fillers between exercises; zero heading-to-rule extra gap), answer headings 4/3 mm, answer choice row gap 2.5 mm, chosen-answer/body gap 5.5 mm and solution leading 1.02 em. Q7g continuation includes relation spacing for aligned equals. Answer page ending Q26 now reaches y=755.8 pt. All three variants retain 52 questions, embedded fonts and end mark with final question. Bai-hoc-15 solution explicitly uses two aligned equation rows, kept together on page 10; answer remains 26 pages. Tu-luyen-4 has two aligned equation rows kept on page 14. Tu-luyen-8 equation is inline with Ta có; tu-luyen-9 prompt can split in dap-an and now starts on page 16 after question 8. Verified 52 questions, 26 pages and no horizontal text overflow. Tu-luyen-8 now ends inline with bold Chọn B, as requested. Tu-luyen-9 restored to an unbroken prompt: full stem and all four choices fit on page 16; solution follows on page 17. Final revision: condensed solutions 30–32 without omitting mathematical steps; coefficient comparison in 31 is inline. Answer PDF verified 25 pages, 52 questions, no horizontal overflow, complete solution 32 and HẾT on page 25. Writing variant now fills only after the last exercise on each page, determined by following exercise metadata page numbers; between-question gaps remain fixed. Compilation converges without warnings; 52 questions, 23 pages and HẾT with final question verified. Bai-hoc-7 now reserves 14 minimum writing lines for eight parts, with reflex section starting next page. Final question uses five lines to retain HẾT on the same page. Verified 52 questions and 23 pages."
+  },
+  "outputs": {
+    "de": {
+      "pdf": "assets/targets/2026-11/Chuyên đề/th-buoi-20-tim-nguyen-ham-ham-so/de.pdf",
+      "pages": 12,
+      "bytes": 581887,
+      "sha256": "5c8fae7d0eaf3b38ee5be539acb051146efdd542aa3a79bfc80367a557f7ec47"
+    },
+    "de-cach": {
+      "pdf": "assets/targets/2026-11/Chuyên đề/th-buoi-20-tim-nguyen-ham-ham-so/de-cach.pdf",
+      "pages": 23,
+      "bytes": 620039,
+      "sha256": "671d760b3c2ab18178fbe998f6bbfbca0671bb96671a58df383139644ec04070"
+    },
+    "dap-an": {
+      "pdf": "assets/targets/2026-11/Chuyên đề/th-buoi-20-tim-nguyen-ham-ham-so/dap-an.pdf",
+      "pages": 25,
+      "bytes": 808634,
+      "sha256": "047c06e06b002ce3f8705227806e19dd8121d26bf8054aa38020478d9ee3fe0b"
+    }
+  }
+}
