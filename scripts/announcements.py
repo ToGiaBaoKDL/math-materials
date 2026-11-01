@@ -17,7 +17,7 @@ def announcement_config(
 ) -> dict[str, Any]:
     metadata = manifest["metadata"]
     kind = template or metadata.get("announcement_template", manifest["kind"])
-    if kind not in ("tinh-hoa", "livestream", "exam"):
+    if kind not in ("tinh-hoa", "livestream", "exam", "exam-livestream"):
         raise ValueError(f"Unknown announcement template: {kind}")
     config: dict[str, Any] = {"kind": kind}
     if kind == "tinh-hoa":
@@ -36,6 +36,13 @@ def announcement_config(
             homework=metadata.get("homework", False),
             closing="Video record + File tài liệu sẽ có trên Website thầy trước 19h ngày hôm sau buổi học, có anh Khoa sẽ thông báo cho các em nhé. @All",
         )
+    elif kind == "exam-livestream":
+        for field in ("title", "school_year"):
+            validate_text(metadata, field)
+            config[field] = metadata[field]
+        if not starts_at:
+            raise ValueError("Set STARTS_AT=YYYY-MM-DDTHH:MM for the livestream")
+        config["starts_at"] = starts_at
     elif kind == "exam":
         for field in ("title", "subject", "school_year"):
             validate_text(metadata, field)
@@ -121,20 +128,49 @@ def exam_blocks(config: dict[str, Any], links: dict[str, str]) -> list[str]:
     ]
 
 
+def exam_livestream_blocks(config: dict[str, Any], links: dict[str, str]) -> list[str]:
+    starts = datetime.strptime(config["starts_at"], "%Y-%m-%dT%H:%M")
+    weekday = "Chủ nhật" if starts.weekday() == 6 else f"Thứ {starts.weekday() + 2}"
+    period = "sáng" if starts.hour < 12 else "chiều" if starts.hour < 18 else "tối"
+    year = config["school_year"].replace("–", "-").split("-")[-1].strip()
+    return [
+        f"<b>[PHÁT ĐỀ] {escape(config['title'])} | THẦY DXT</b>",
+        f"⏰ Chữa đề: {starts:%H:%M} {period} {weekday} {starts:%d/%m/%Y}\n📌 Mukbang tại Tiktok thầy toanthaythangdxt",
+        "\n".join(
+            f"📍File {label}: {escape(links[variant])}"
+            for variant, label in (("de", "không cách"), ("de-cach", "cách"))
+            if variant in links
+        ),
+        f"🔥Cộng đồng học tập miễn phí cùng nhau Mukbang Toán Thực Tế &amp; Xác Suất {escape(year)}: "
+        "https://zalo.me/g/n2me9hw5l29ahqe8idlx",
+    ]
+
+
 REQUIRED_FIELDS = {
     "tinh-hoa": {"title", "starts_at", "location", "intro"},
     "livestream": {"intro"},
+    "exam-livestream": {"title", "starts_at", "school_year"},
     "exam": {"title", "subject", "school_year", "group_url", "closing"},
 }
-OPTIONAL_FIELDS = {"tinh-hoa": {"homework", "closing"}, "livestream": set(), "exam": set()}
-LINK_VARIANTS = {"tinh-hoa": set(LABELS), "livestream": {"de", "de-cach"}, "exam": set(LABELS)}
-RENDERERS = {"tinh-hoa": lesson_blocks, "livestream": livestream_blocks, "exam": exam_blocks}
+OPTIONAL_FIELDS = {"tinh-hoa": {"homework", "closing"}, "livestream": set(), "exam": set(), "exam-livestream": set()}
+LINK_VARIANTS = {
+    "tinh-hoa": set(LABELS),
+    "livestream": {"de", "de-cach"},
+    "exam": set(LABELS),
+    "exam-livestream": {"de", "de-cach"},
+}
+RENDERERS = {
+    "tinh-hoa": lesson_blocks,
+    "livestream": livestream_blocks,
+    "exam": exam_blocks,
+    "exam-livestream": exam_livestream_blocks,
+}
 
 
 def render(config: dict[str, Any], links: dict[str, str]) -> str:
     kind = config.get("kind")
     if not isinstance(kind, str) or kind not in RENDERERS:
-        raise ValueError("kind is required: tinh-hoa, livestream or exam")
+        raise ValueError("kind is required: tinh-hoa, livestream, exam or exam-livestream")
     allowed = REQUIRED_FIELDS[kind] | OPTIONAL_FIELDS[kind] | {"kind", "drive_month"}
     if extra := config.keys() - allowed:
         raise ValueError(f"Unknown announcement fields: {', '.join(sorted(extra))}")

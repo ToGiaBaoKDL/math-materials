@@ -40,7 +40,7 @@ def main():
     parser.add_argument("--secret", type=Path, default=ROOT / ".secret/telegram-credentials.toml")
     parser.add_argument("--credentials", type=Path)
     parser.add_argument("--starts-at")
-    parser.add_argument("--template", choices=("tinh-hoa", "livestream", "exam"))
+    parser.add_argument("--template", choices=("tinh-hoa", "livestream", "exam", "exam-livestream"))
     parser.add_argument("--location", default="Lớp Zoom")
     parser.add_argument("--drive-month")
     parser.add_argument("--send", action="store_true", help="Send; default only renders HTML locally")

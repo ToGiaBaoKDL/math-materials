@@ -5,12 +5,12 @@
   "received_date": "2026-10-31",
   "status": "implemented",
   "metadata": {
-    "title": "KIỂM TRA GIỮA HỌC KÌ I – THPT XUÂN PHƯƠNG – TOÁN 12",
+    "title": "KIỂM TRA GIỮA HK1 TOÁN 12 | TRƯỜNG THPT XUÂN PHƯƠNG - HÀ NỘI",
     "subject": "Toán 12",
     "school_year": "2026–2027",
     "exam_code": "1220",
     "duration_minutes": 90,
-    "announcement_template": "livestream"
+    "announcement_template": "exam-livestream"
   },
   "sources": [
     {

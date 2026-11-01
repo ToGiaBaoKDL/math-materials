@@ -16,7 +16,7 @@ Thông báo là tác vụ độc lập, không tự chạy sau build, upload ho�
 
 ```sh
 make notify DOC=buoi-13 STARTS_AT=2026-10-22T20:00
-make notify DOC=xuan-phuong TEMPLATE=livestream
+make notify DOC=xuan-phuong STARTS_AT=2026-11-01T22:00
 make notify DOC=nguyen-khuyen
 make notify DOC=th-on-tap-gk1-toan-12-thuc-te-ham-so
 # Sau khi kiểm tra nội dung và chat đích:
@@ -41,4 +41,8 @@ Bot cần quyền gửi vào chat/channel. Token Telegram tách khỏi OAuth Goo
 
 `SEND=1` gửi một tin mới và in `message_id`. Không retry tự động vì Telegram có thể đã nhận trước khi timeout; kiểm tra chat trước khi gửi lại. Không tự đăng lịch hoặc chống gửi lặp.
 
-Đề thi dùng cho livestream có thể đặt `metadata.announcement_template: "livestream"` để lưu mặc định (đã áp dụng cho Xuân Phương). Dùng `TEMPLATE=exam` để chọn lại mẫu đề thi cho một lần chạy. Mẫu livestream chỉ nhận link đề và đề cách; nếu kế hoạch xuất bản có đáp án, preview sẽ báo lỗi thay vì tự bỏ link.
+Đề thi dùng cho livestream có thể đặt `metadata.announcement_template: "livestream"` để lưu mặc định (mẫu livestream chung). Dùng `TEMPLATE=exam` để chọn lại mẫu đề thi cho một lần chạy. Mẫu livestream chỉ nhận link đề và đề cách; nếu kế hoạch xuất bản có đáp án, preview sẽ báo lỗi thay vì tự bỏ link.
+
+## Đề thi dùng livestream
+
+Giữ `kind: "exam"`, đặt `metadata.announcement_template: "exam-livestream"` (Xuân Phương đã dùng). Mẫu lấy tiêu đề và năm học từ metadata, lịch chữa từ `STARTS_AT`; tự tính thứ và buổi. Dùng đúng hai link đề/đề cách từ Drive. Nội dung kênh TikTok, nhóm học và chữ ký THẦY DXT theo convention chung, không thêm biến cấu hình. Có thể chọn một lần bằng `TEMPLATE=exam-livestream`. Không đổi PDF hoặc cách xuất bản.
