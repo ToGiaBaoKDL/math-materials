@@ -64,6 +64,7 @@ Dùng template làm nguồn triển khai, skill làm quy tắc tái sử dụng.
 - Từ đề mới nhận ngày 27/10/2026, dùng `templates/exam-lesson.typ`: heading, header và footer tái sử dụng component chuyên đề. Các đề đã duyệt trước đó giữ template cũ đến khi có yêu cầu đổi.
 - A4, lề ngang 12 mm, trên 24 mm, dưới 22 mm; thân chữ 13 pt, leading 0,85 em. Đảm bảo nội dung liền mạch, giữ câu và các lựa chọn cùng trang khi vừa; không tạo khoảng trống để mô phỏng ngắt trang nguồn.
 - Heading dùng `lesson-heading`: tên trường trong nhãn, tên kỳ thi bên dưới, kèm năm học, môn, thời gian, mã đề. Giữ thông tin đơn vị cấp trên nếu nguồn có. Tiêu đề phần dùng `lesson-section`, huy hiệu I/II/III, không thêm chữ DẠNG.
+- Footer đề thi thường dùng thông tin ba nền tảng từ `contact-links`: website toanthaythang.vn, Facebook và TikTok toanthaythangdxt. Đề thi livestream dùng dòng VIPDXT và số Zalo 0833.281.128. Header giữ dòng giới thiệu thầy như cũ.
 - Header/footer dùng dải DXT/logo của chuyên đề; footer giữ mã đề và số trang thực. Dùng `exam-lesson-palette`: đỏ `#B00012` ước lượng từ `assets/branding/dxt-red-reference.jpg`. Giữ điểm nhấn xanh lá nguyên bản chuyên đề ở nhãn trường, huy hiệu/viền tiêu đề phần, họa tiết header và dải footer; màu đỏ của hình không thay các điểm nhấn xanh lá này. Không nhập nội dung quảng cáo của ảnh vào đề.
 - Các hình mới của đề thi dùng đỏ làm màu chính: cạnh/đồ thị đỏ rõ, mặt đỏ hồng nhạt pha 25% trắng qua `figure-fill`; vàng ấm làm màu phụ khi cần. Chữ và nhãn vẫn đen. Ảnh thực tế giữ màu gốc.
 - Giữ họ tên và số báo danh; không chép ghi chú biên tập vào PDF. Bảng đáp án dùng dữ liệu đúng mã đề từ nguồn, không tự tạo lời giải.
@@ -110,6 +111,6 @@ Tham chiếu kỹ thuật: [Typst text edges](https://typst.app/docs/reference/t
 
 - Nhãn A–D căn theo baseline của công thức, đặc biệt ngang chữ max/min; khoảng xét đặt bên dưới toán tử. Không căn nhãn vào tâm chiều cao toàn công thức có giới hạn dưới.
 
-- Đề livestream: nhãn Câu màu đen, tiếp theo [DXT] đỏ; HẾT ngay sau nội dung kết thúc, không đẩy xuống footer. Header dùng nội dung giới thiệu thầy ban đầu, căn giữa, sát viền dưới và dịch nhẹ phải. Footer dùng “Lớp VIPDXT Toàn Diện Luyện thi 9+ Toán 2027: IB Z.a.l.o 0833.281.128”, căn giữa phần caption, bỏ vạch trắng fade. Thông tin ba nền tảng màu đỏ, căn giữa dưới dòng xem lại video cuối trang, không nằm trong footer.
+- Đề livestream: nhãn Câu màu đen, tiếp theo [DXT] đỏ; HẾT ngay sau nội dung kết thúc, không đẩy xuống footer. Header dùng nội dung giới thiệu thầy ban đầu, căn phải và căn giữa theo chiều dọc. Footer dùng “Lớp VIPDXT Toàn Diện Luyện thi 9+ Toán 2027: IB Z.a.l.o 0833.281.128”, căn giữa phần caption, bỏ vạch trắng fade. Thông tin ba nền tảng màu đỏ, căn giữa dưới dòng xem lại video cuối trang, không nằm trong footer.
 
 - Cận tích phân dạng phân số dùng dạng gọn a/b (ví dụ −1/2, π/3), không xếp chồng tử/mẫu theo displaystyle. Trong Typst dùng dấu gạch chéo dạng ký tự để tránh tự chuyển thành phân số; áp dụng tương tự cho cận của biểu thức thế giá trị.

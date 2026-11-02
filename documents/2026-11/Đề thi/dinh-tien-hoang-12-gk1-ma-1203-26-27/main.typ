@@ -2,7 +2,6 @@
 #import "/templates/lesson.typ": lesson-heading
 #import "/templates/theme.typ": exam-lesson-palette as palette
 #import "/templates/components.typ": end-mark
-#import "/templates/exam.typ": exam-source
 #import "content/questions.typ": questions
 #show: exam.with([ĐỀ KIỂM TRA GIỮA KỲ I – THPT ĐINH TIÊN HOÀNG – TOÁN 12 – 2026–2027],"1203",variant:"de")
 #set par(justify:false,leading:0.95em)
@@ -16,4 +15,3 @@
 )
 #questions()
 #end-mark([],above:6mm,note-gap:0pt)
-#exam-source()

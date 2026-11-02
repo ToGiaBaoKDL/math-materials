@@ -1,10 +1,11 @@
 #import "theme.typ": exam-lesson-palette as palette, lesson-style, fonts, header-style
 #import "branding.typ": running-head, running-foot
+#import "contacts.typ": contact-links
 #import "lesson.typ": lesson-heading, lesson-section
 #import "exam.typ": exam-end, exam-table
 
 // New exam identity reuses lesson components, with the source exam code in the folio.
-#let exam(title, code, body, variant: "de-dap-an") = {
+#let exam(title, code, body, variant: "de-dap-an", footer: move(dy: 0.6mm, contact-links(color: white))) = {
   set document(title: title)
   set text(font: fonts.body, size: 13pt, lang: "vi", fill: palette.ink, overhang: false)
   show math.equation: set text(font: fonts.math, top-edge: "bounds", bottom-edge: "bounds")
@@ -15,7 +16,7 @@
     place(top + left, running-head([DXT], lesson-style.branding.header, branded: true,
       margin: lesson-style.margin, palette: palette,
       style: header-style + (strip-color: palette.primary.lighten(78%),)))
-    place(bottom + left, running-foot(lesson-style.branding.footer,
+    place(bottom + left, running-foot(footer,
       counter(page).get().first(), counter(page).final().first(),
       margin: lesson-style.margin, palette: palette, folio-width: 48mm, folio-right-inset: 6mm,
       folio: [Mã đề #code – Trang #counter(page).display()/#counter(page).final().first()]))

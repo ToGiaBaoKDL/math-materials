@@ -23,6 +23,8 @@ Ma trận dùng profile `matrix`, lưu trong thư mục `Ma trận`; không gi�
 
 `publication.combine_answers` là override boolean tùy chọn: mặc định bật cho `exam`, tắt cho hai loại bài giảng. Bật gộp cần variant `de-dap-an` đã triển khai trong Typst; flag không ghép máy móc hai PDF hoặc tạo nội dung thiếu. Các override phải đi kèm variant phù hợp, không khai báo chỉ để lặp lại mặc định. `publication.category` chỉ dùng khi cần đổi đích xuất bản; không đổi thư mục phân loại local.
 
+Footer đề thi thường dùng ba nền tảng (website, Facebook, TikTok) qua `contact-links`; đề thi dùng livestream thay bằng “Lớp VIPDXT Toàn Diện Luyện thi 9+ Toán 2027: IB Z.a.l.o 0833.281.128”. Đây là khác biệt trình bày, không đổi `kind: exam`.
+
 ## Cấu trúc lưu trữ
 
 ```text

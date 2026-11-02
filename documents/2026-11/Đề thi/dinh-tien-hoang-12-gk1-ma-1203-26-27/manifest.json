@@ -296,14 +296,15 @@
     "III-1_alignment": "Removed grid. Section III, instructions and entire question 1 text follow section II on page 4; centered graph continues on page 5, as requested. Checked final extracted layout; output remains 6 pages.",
     "I-10_pagination": "Question 10 allowed to break naturally; prompt moved onto page 2 to use remaining space, verified in rebuilt PDF text.",
     "box_edges": "All 28 red edge segments in box-net.svg use stroke-width 0.42, butt caps and miter joins; solid and dashed edges share identical width (50% thicker than previous 0.28). PDF rebuilt.",
-    "variation_edges": "Outer border replaced by a single closed rectangle; border and dividers all stroke-width 0.42. Rebuilt PDF. Full-page visual review remains pending."
+    "variation_edges": "Outer border replaced by a single closed rectangle; border and dividers all stroke-width 0.42. Rebuilt PDF. Full-page visual review remains pending.",
+    "branding": "Original teacher introduction header restored. All 6 pages have website/Facebook/TikTok footer plus code/page number. TOANMATH source line removed at user request; provenance and HẾT retained."
   },
   "outputs": {
     "de": {
       "pdf": "assets/targets/2026-11/Đề thi/dinh-tien-hoang-12-gk1-ma-1203-26-27/de.pdf",
       "pages": 6,
-      "bytes": 916332,
-      "sha256": "d3d6abcc5e0d1b50d4a1e83e4b45d02faed92afc6d252692e30d06ee3b11c028"
+      "bytes": 919178,
+      "sha256": "09454182e6a65f7cf2b93a2f8784c4d1c56a63563076a46ce196da10e20ffbcb"
     }
   }
 }
