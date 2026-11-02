@@ -295,7 +295,8 @@
     "fonts": "All PDF fonts embedded; selectable question text",
     "III-1_alignment": "Removed grid. Section III, instructions and entire question 1 text follow section II on page 4; centered graph continues on page 5, as requested. Checked final extracted layout; output remains 6 pages.",
     "I-10_pagination": "Question 10 allowed to break naturally; prompt moved onto page 2 to use remaining space, verified in rebuilt PDF text.",
-    "box_edges": "All 28 red edge segments in box-net.svg use stroke-width 0.42, butt caps and miter joins; solid and dashed edges share identical width (50% thicker than previous 0.28). PDF rebuilt."
+    "box_edges": "All 28 red edge segments in box-net.svg use stroke-width 0.42, butt caps and miter joins; solid and dashed edges share identical width (50% thicker than previous 0.28). PDF rebuilt.",
+    "variation_edges": "Outer border replaced by a single closed rectangle; border and dividers all stroke-width 0.42. Rebuilt PDF. Full-page visual review remains pending."
   },
   "outputs": {
     "de": {
