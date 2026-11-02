@@ -1,0 +1,308 @@
+{
+  "schema_version": 1,
+  "id": "dinh-tien-hoang-12-gk1-ma-1203-26-27",
+  "kind": "exam",
+  "received_date": "2026-11-02",
+  "status": "implemented",
+  "metadata": {
+    "title": "ĐỀ KIỂM TRA GIỮA KỲ I – THPT ĐINH TIÊN HOÀNG – TOÁN 12",
+    "subject": "Toán 12",
+    "school_year": "2026–2027",
+    "exam_code": "1203",
+    "duration_minutes": 90,
+    "school": "THPT Đinh Tiên Hoàng",
+    "department": "Sở Giáo dục và Đào tạo Ninh Bình"
+  },
+  "sources": [
+    {
+      "path": "assets/sources/2026-11/Đề thi/dinh-tien-hoang-12-gk1-ma-1203-26-27/source.pdf",
+      "original_name": "de-giua-ky-1-toan-12-nam-2026-2027-truong-thpt-dinh-tien-hoang-ninh-binh.pdf",
+      "bytes": 1979094,
+      "sha256": "54d6cf640cc0ee1d9b343c5cd084c1fa358d6757cc223dde766aa0582804390d",
+      "pages": 9
+    }
+  ],
+  "scope": {
+    "has_questions": true,
+    "has_solutions": false,
+    "questions": 22,
+    "question_pages": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "excluded_source_pages": [
+      5,
+      6,
+      7,
+      8,
+      9
+    ]
+  },
+  "variants": {
+    "de": {
+      "filename": "de.pdf",
+      "inputs": {
+        "variant": "de"
+      }
+    }
+  },
+  "drive": {
+    "folder": "Đề thi",
+    "filenames": {
+      "de": "ĐỀ GIỮA KỲ I TOÁN 12 - THPT ĐINH TIÊN HOÀNG - MÃ 1203 - 2026-2027.pdf"
+    }
+  },
+  "content_mapping": [
+    {
+      "id": "I-1",
+      "role": "question",
+      "source": {
+        "page": 1,
+        "section": "I",
+        "number": 1
+      }
+    },
+    {
+      "id": "I-2",
+      "role": "question",
+      "source": {
+        "page": 1,
+        "section": "I",
+        "number": 2
+      }
+    },
+    {
+      "id": "I-3",
+      "role": "question",
+      "source": {
+        "page": 1,
+        "section": "I",
+        "number": 3
+      }
+    },
+    {
+      "id": "I-4",
+      "role": "question",
+      "source": {
+        "page": 1,
+        "section": "I",
+        "number": 4
+      }
+    },
+    {
+      "id": "I-5",
+      "role": "question",
+      "source": {
+        "page": 1,
+        "section": "I",
+        "number": 5
+      }
+    },
+    {
+      "id": "I-6",
+      "role": "question",
+      "source": {
+        "page": 1,
+        "section": "I",
+        "number": 6
+      }
+    },
+    {
+      "id": "I-7",
+      "role": "question",
+      "source": {
+        "page": 1,
+        "section": "I",
+        "number": 7
+      }
+    },
+    {
+      "id": "I-8",
+      "role": "question",
+      "source": {
+        "page": 2,
+        "section": "I",
+        "number": 8
+      }
+    },
+    {
+      "id": "I-9",
+      "role": "question",
+      "source": {
+        "page": 2,
+        "section": "I",
+        "number": 9
+      }
+    },
+    {
+      "id": "I-10",
+      "role": "question",
+      "source": {
+        "page": 2,
+        "section": "I",
+        "number": 10
+      }
+    },
+    {
+      "id": "I-11",
+      "role": "question",
+      "source": {
+        "page": 2,
+        "section": "I",
+        "number": 11
+      }
+    },
+    {
+      "id": "I-12",
+      "role": "question",
+      "source": {
+        "page": 2,
+        "section": "I",
+        "number": 12
+      }
+    },
+    {
+      "id": "II-1",
+      "role": "question",
+      "source": {
+        "page": 2,
+        "section": "II",
+        "number": 1
+      }
+    },
+    {
+      "id": "II-2",
+      "role": "question",
+      "source": {
+        "page": 2,
+        "section": "II",
+        "number": 2,
+        "pages": [
+          2,
+          3
+        ]
+      }
+    },
+    {
+      "id": "II-3",
+      "role": "question",
+      "source": {
+        "page": 3,
+        "section": "II",
+        "number": 3
+      }
+    },
+    {
+      "id": "II-4",
+      "role": "question",
+      "source": {
+        "page": 3,
+        "section": "II",
+        "number": 4
+      }
+    },
+    {
+      "id": "III-1",
+      "role": "question",
+      "source": {
+        "page": 3,
+        "section": "III",
+        "number": 1
+      }
+    },
+    {
+      "id": "III-2",
+      "role": "question",
+      "source": {
+        "page": 3,
+        "section": "III",
+        "number": 2
+      }
+    },
+    {
+      "id": "III-3",
+      "role": "question",
+      "source": {
+        "page": 3,
+        "section": "III",
+        "number": 3,
+        "pages": [
+          3,
+          4
+        ]
+      }
+    },
+    {
+      "id": "III-4",
+      "role": "question",
+      "source": {
+        "page": 4,
+        "section": "III",
+        "number": 4
+      }
+    },
+    {
+      "id": "III-5",
+      "role": "question",
+      "source": {
+        "page": 4,
+        "section": "III",
+        "number": 5
+      }
+    },
+    {
+      "id": "III-6",
+      "role": "question",
+      "source": {
+        "page": 4,
+        "section": "III",
+        "number": 6
+      }
+    }
+  ],
+  "provenance": {
+    "template": "Exam-lesson with green exam-title banner, stretched red school/department line and year/code subtitle; no duration/name fields or DXT question tags, as requested.",
+    "source_review": "Original embedded page images 1–4 extracted and read. Source includes supplementary AI answers on pages 5–9, excluded from output.",
+    "figures": "Six vector SVG diagrams; variation table red header and stronger hatching; graph I-5 enlarged 15%, II-2 enlarged 20%, III-1 enlarged 15%; I-11 and III-1 use two-column layout. Final bridge image replaced with user-supplied bridge.jpeg unchanged.",
+    "source_issues": [
+      {
+        "id": "I-3",
+        "issue": "Options C (4,+∞) and D (3,+∞) are both intervals of increasing velocity. Kept unchanged at the user’s explicit request on 2026-11-02."
+      }
+    ],
+    "graph_models": {
+      "I-5": "-x^3+3x^2-1 matches extrema and labeled points",
+      "I-11": "(x+1)(x-1)^2(x-2) matches zeros/tangency and y intercept",
+      "III-1": "-1+1/(x-1) matches asymptotes and intercepts"
+    },
+    "bridge_image": {
+      "path": "documents/2026-11/Đề thi/dinh-tien-hoang-12-gk1-ma-1203-26-27/figures/bridge.jpeg",
+      "original_name": "bridge.jpeg",
+      "sha256": "676d126a3df672051785cdbb772af92db54953b3bfde81d424df2e71c9a1353e",
+      "note": "User-supplied replacement image retained without retouching; its embedded annotations are independent of the unchanged question text."
+    },
+    "layout_revision": "Red question labels; paragraph leading 0.95em; rational graph 68.77mm below the full-width left-aligned question; variation table 126mm with convention #F1D8DE header; bridge photo 93.6mm; box net edge segments drawn once to avoid inconsistent overdraw."
+  },
+  "qa": {
+    "review_status": "pending",
+    "full_page_visual_review": "pending; no generated page-preview images",
+    "compile": "passed",
+    "content": "22 questions in source order; original pages 1–4 transcribed; source issue I-3 retained by user instruction; no answers or writing variant",
+    "figures": "Updated standalone SVG composite visually checked: pink variation header and consistent net edges; prior label fixes retained.",
+    "pagination": "6 pages. II-2 prompt follows II-1 on page 3, figure and statements continue on page 4. III-3 entirely on page 5; III-6, bridge image and HẾT on page 6. All 22 question labels verified.",
+    "fonts": "All PDF fonts embedded; selectable question text",
+    "III-1_alignment": "Removed grid. Section III, instructions and entire question 1 text follow section II on page 4; centered graph continues on page 5, as requested. Checked final extracted layout; output remains 6 pages.",
+    "I-10_pagination": "Question 10 allowed to break naturally; prompt moved onto page 2 to use remaining space, verified in rebuilt PDF text.",
+    "box_edges": "All 28 red edge segments in box-net.svg use stroke-width 0.42, butt caps and miter joins; solid and dashed edges share identical width (50% thicker than previous 0.28). PDF rebuilt."
+  },
+  "outputs": {
+    "de": {
+      "pdf": "assets/targets/2026-11/Đề thi/dinh-tien-hoang-12-gk1-ma-1203-26-27/de.pdf",
+      "pages": 6,
+      "bytes": 916334,
+      "sha256": "d21f6fb56abb336b90389b6cbd0cc2b7726241956ef38a1b58857fc671eabed9"
+    }
+  }
+}
