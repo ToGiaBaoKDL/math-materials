@@ -111,3 +111,5 @@ Tham chiếu kỹ thuật: [Typst text edges](https://typst.app/docs/reference/t
 - Nhãn A–D căn theo baseline của công thức, đặc biệt ngang chữ max/min; khoảng xét đặt bên dưới toán tử. Không căn nhãn vào tâm chiều cao toàn công thức có giới hạn dưới.
 
 - Đề livestream: nhãn Câu màu đen, tiếp theo [DXT] đỏ; HẾT ngay sau nội dung kết thúc, không đẩy xuống footer. Header dùng nội dung giới thiệu thầy ban đầu, căn giữa, sát viền dưới và dịch nhẹ phải. Footer dùng “Lớp VIPDXT Toàn Diện Luyện thi 9+ Toán 2027: IB Z.a.l.o 0833.281.128”, căn giữa phần caption, bỏ vạch trắng fade. Thông tin ba nền tảng màu đỏ, căn giữa dưới dòng xem lại video cuối trang, không nằm trong footer.
+
+- Cận tích phân dạng phân số dùng dạng gọn a/b (ví dụ −1/2, π/3), không xếp chồng tử/mẫu theo displaystyle. Trong Typst dùng dấu gạch chéo dạng ký tự để tránh tự chuyển thành phân số; áp dụng tương tự cho cận của biểu thức thế giá trị.

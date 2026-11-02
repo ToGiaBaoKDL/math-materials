@@ -247,6 +247,10 @@ def render(n):
             return "std.box(stroke: #0.5pt, inset: #3pt, " + cs[0] + ")"
         if s == 15 and v == 1 and len(cs) == 4 and cs[1:3] == ["", ""] and cs[3] == "∫":
             return "integral " + cs[0]
+        if s == 15 and v in (49, 113) and len(cs) == 4 and cs[3] == "∫":
+            return "integral_(" + cs[1] + ")^(" + cs[2] + ") " + cs[0]
+        if s == 21 and v == 48 and len(cs) == 4 and cs[3] == "|":
+            return cs[0] + " bar.v_(" + cs[1] + ")^(" + cs[2] + ")"
         if s == 13:
             return "overline(" + cs[0] + ")"
         if s == 10:

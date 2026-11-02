@@ -1,0 +1,622 @@
+{
+  "schema_version": 1,
+  "id": "th-buoi-21-tich-phan",
+  "kind": "tinh-hoa",
+  "received_date": "2026-11-01",
+  "status": "implemented",
+  "metadata": {
+    "title": "BUỔI 21: TÍCH PHÂN CƠ BẢN",
+    "lesson": 21,
+    "course": "KHÓA TINH HOA TOÀN DIỆN 9+ 2027",
+    "subject": "Toán 12",
+    "topic": "NGUYÊN HÀM – TÍCH PHÂN – ỨNG DỤNG"
+  },
+  "sources": [
+    {
+      "path": "assets/sources/2026-11/Chuyên đề/th-buoi-21-tich-phan/source.docx",
+      "original_name": "BUỔI 21 TÍCH PHÂN.docx",
+      "bytes": 802955,
+      "sha256": "15b6ceff383b4dcc67bfa2cf17f02d1ebbae71bf233ca5447c0330064ee19c64",
+      "app_metadata_pages": 15
+    }
+  ],
+  "scope": {
+    "has_questions": true,
+    "has_solutions": true,
+    "questions": 45,
+    "worked_examples": 17,
+    "practice_questions": 28
+  },
+  "variants": {
+    "de": {
+      "filename": "de.pdf",
+      "inputs": {
+        "variant": "de"
+      }
+    },
+    "de-cach": {
+      "filename": "de-cach.pdf",
+      "inputs": {
+        "variant": "de-cach"
+      }
+    },
+    "dap-an": {
+      "filename": "dap-an.pdf",
+      "inputs": {
+        "variant": "dap-an"
+      }
+    }
+  },
+  "drive": {
+    "folder": "Chuyên đề",
+    "filenames": {
+      "de": "KHÓA TH - BUỔI 21 - TÍCH PHÂN CƠ BẢN - ĐỀ.pdf",
+      "de-cach": "KHÓA TH - BUỔI 21 - TÍCH PHÂN CƠ BẢN - ĐỀ CÁCH.pdf",
+      "dap-an": "KHÓA TH - BUỔI 21 - TÍCH PHÂN CƠ BẢN - ĐÁP ÁN.pdf"
+    }
+  },
+  "content_mapping": [
+    {
+      "id": "bai-hoc-1",
+      "role": "question",
+      "source": {
+        "body_block": 7,
+        "end_block_exclusive": 11,
+        "group": "bai-hoc"
+      }
+    },
+    {
+      "id": "bai-hoc-2",
+      "role": "question",
+      "source": {
+        "body_block": 11,
+        "end_block_exclusive": 15,
+        "group": "bai-hoc"
+      }
+    },
+    {
+      "id": "bai-hoc-3",
+      "role": "question",
+      "source": {
+        "body_block": 15,
+        "end_block_exclusive": 20,
+        "group": "bai-hoc"
+      }
+    },
+    {
+      "id": "bai-hoc-4",
+      "role": "question",
+      "source": {
+        "body_block": 20,
+        "end_block_exclusive": 28,
+        "group": "bai-hoc"
+      }
+    },
+    {
+      "id": "bai-hoc-5",
+      "role": "question",
+      "source": {
+        "body_block": 28,
+        "end_block_exclusive": 35,
+        "group": "bai-hoc"
+      }
+    },
+    {
+      "id": "bai-hoc-6",
+      "role": "question",
+      "source": {
+        "body_block": 35,
+        "end_block_exclusive": 43,
+        "group": "bai-hoc"
+      }
+    },
+    {
+      "id": "bai-hoc-7",
+      "role": "question",
+      "source": {
+        "body_block": 43,
+        "end_block_exclusive": 47,
+        "group": "bai-hoc"
+      }
+    },
+    {
+      "id": "bai-hoc-8",
+      "role": "question",
+      "source": {
+        "body_block": 47,
+        "end_block_exclusive": 51,
+        "group": "bai-hoc"
+      }
+    },
+    {
+      "id": "bai-hoc-9",
+      "role": "question",
+      "source": {
+        "body_block": 51,
+        "end_block_exclusive": 55,
+        "group": "bai-hoc"
+      }
+    },
+    {
+      "id": "bai-hoc-10",
+      "role": "question",
+      "source": {
+        "body_block": 55,
+        "end_block_exclusive": 59,
+        "group": "bai-hoc"
+      }
+    },
+    {
+      "id": "bai-hoc-11",
+      "role": "question",
+      "source": {
+        "body_block": 59,
+        "end_block_exclusive": 63,
+        "group": "bai-hoc"
+      }
+    },
+    {
+      "id": "bai-hoc-12",
+      "role": "question",
+      "source": {
+        "body_block": 63,
+        "end_block_exclusive": 67,
+        "group": "bai-hoc"
+      }
+    },
+    {
+      "id": "bai-hoc-13",
+      "role": "question",
+      "source": {
+        "body_block": 67,
+        "end_block_exclusive": 71,
+        "group": "bai-hoc"
+      }
+    },
+    {
+      "id": "bai-hoc-14",
+      "role": "question",
+      "source": {
+        "body_block": 71,
+        "end_block_exclusive": 76,
+        "group": "bai-hoc"
+      }
+    },
+    {
+      "id": "bai-hoc-15",
+      "role": "question",
+      "source": {
+        "body_block": 76,
+        "end_block_exclusive": 80,
+        "group": "bai-hoc"
+      }
+    },
+    {
+      "id": "bai-hoc-16",
+      "role": "question",
+      "source": {
+        "body_block": 80,
+        "end_block_exclusive": 85,
+        "group": "bai-hoc"
+      }
+    },
+    {
+      "id": "bai-hoc-17",
+      "role": "question",
+      "source": {
+        "body_block": 85,
+        "end_block_exclusive": 90,
+        "group": "bai-hoc"
+      }
+    },
+    {
+      "id": "tu-luyen-1",
+      "role": "question",
+      "source": {
+        "body_block": 92,
+        "end_block_exclusive": 98,
+        "group": "tu-luyen"
+      }
+    },
+    {
+      "id": "tu-luyen-2",
+      "role": "question",
+      "source": {
+        "body_block": 98,
+        "end_block_exclusive": 104,
+        "group": "tu-luyen"
+      }
+    },
+    {
+      "id": "tu-luyen-3",
+      "role": "question",
+      "source": {
+        "body_block": 104,
+        "end_block_exclusive": 110,
+        "group": "tu-luyen"
+      }
+    },
+    {
+      "id": "tu-luyen-4",
+      "role": "question",
+      "source": {
+        "body_block": 110,
+        "end_block_exclusive": 115,
+        "group": "tu-luyen"
+      }
+    },
+    {
+      "id": "tu-luyen-5",
+      "role": "question",
+      "source": {
+        "body_block": 115,
+        "end_block_exclusive": 120,
+        "group": "tu-luyen"
+      }
+    },
+    {
+      "id": "tu-luyen-6",
+      "role": "question",
+      "source": {
+        "body_block": 120,
+        "end_block_exclusive": 125,
+        "group": "tu-luyen"
+      }
+    },
+    {
+      "id": "tu-luyen-7",
+      "role": "question",
+      "source": {
+        "body_block": 125,
+        "end_block_exclusive": 130,
+        "group": "tu-luyen"
+      }
+    },
+    {
+      "id": "tu-luyen-8",
+      "role": "question",
+      "source": {
+        "body_block": 130,
+        "end_block_exclusive": 135,
+        "group": "tu-luyen"
+      }
+    },
+    {
+      "id": "tu-luyen-9",
+      "role": "question",
+      "source": {
+        "body_block": 135,
+        "end_block_exclusive": 139,
+        "group": "tu-luyen"
+      }
+    },
+    {
+      "id": "tu-luyen-10",
+      "role": "question",
+      "source": {
+        "body_block": 139,
+        "end_block_exclusive": 143,
+        "group": "tu-luyen"
+      }
+    },
+    {
+      "id": "tu-luyen-11",
+      "role": "question",
+      "source": {
+        "body_block": 143,
+        "end_block_exclusive": 147,
+        "group": "tu-luyen"
+      }
+    },
+    {
+      "id": "tu-luyen-12",
+      "role": "question",
+      "source": {
+        "body_block": 147,
+        "end_block_exclusive": 152,
+        "group": "tu-luyen"
+      }
+    },
+    {
+      "id": "tu-luyen-13",
+      "role": "question",
+      "source": {
+        "body_block": 152,
+        "end_block_exclusive": 157,
+        "group": "tu-luyen"
+      }
+    },
+    {
+      "id": "tu-luyen-14",
+      "role": "question",
+      "source": {
+        "body_block": 157,
+        "end_block_exclusive": 164,
+        "group": "tu-luyen"
+      }
+    },
+    {
+      "id": "tu-luyen-15",
+      "role": "question",
+      "source": {
+        "body_block": 164,
+        "end_block_exclusive": 169,
+        "group": "tu-luyen"
+      }
+    },
+    {
+      "id": "tu-luyen-16",
+      "role": "question",
+      "source": {
+        "body_block": 169,
+        "end_block_exclusive": 174,
+        "group": "tu-luyen"
+      }
+    },
+    {
+      "id": "tu-luyen-17",
+      "role": "question",
+      "source": {
+        "body_block": 174,
+        "end_block_exclusive": 178,
+        "group": "tu-luyen"
+      }
+    },
+    {
+      "id": "tu-luyen-18",
+      "role": "question",
+      "source": {
+        "body_block": 178,
+        "end_block_exclusive": 183,
+        "group": "tu-luyen"
+      }
+    },
+    {
+      "id": "tu-luyen-19",
+      "role": "question",
+      "source": {
+        "body_block": 183,
+        "end_block_exclusive": 188,
+        "group": "tu-luyen"
+      }
+    },
+    {
+      "id": "tu-luyen-20",
+      "role": "question",
+      "source": {
+        "body_block": 188,
+        "end_block_exclusive": 195,
+        "group": "tu-luyen"
+      }
+    },
+    {
+      "id": "tu-luyen-21",
+      "role": "question",
+      "source": {
+        "body_block": 195,
+        "end_block_exclusive": 199,
+        "group": "tu-luyen"
+      }
+    },
+    {
+      "id": "tu-luyen-22",
+      "role": "question",
+      "source": {
+        "body_block": 199,
+        "end_block_exclusive": 204,
+        "group": "tu-luyen"
+      }
+    },
+    {
+      "id": "tu-luyen-23",
+      "role": "question",
+      "source": {
+        "body_block": 204,
+        "end_block_exclusive": 214,
+        "group": "tu-luyen"
+      }
+    },
+    {
+      "id": "tu-luyen-24",
+      "role": "question",
+      "source": {
+        "body_block": 214,
+        "end_block_exclusive": 218,
+        "group": "tu-luyen"
+      }
+    },
+    {
+      "id": "tu-luyen-25",
+      "role": "question",
+      "source": {
+        "body_block": 218,
+        "end_block_exclusive": 223,
+        "group": "tu-luyen"
+      }
+    },
+    {
+      "id": "tu-luyen-26",
+      "role": "question",
+      "source": {
+        "body_block": 223,
+        "end_block_exclusive": 239,
+        "group": "tu-luyen"
+      }
+    },
+    {
+      "id": "tu-luyen-27",
+      "role": "question",
+      "source": {
+        "body_block": 239,
+        "end_block_exclusive": 250,
+        "group": "tu-luyen"
+      }
+    },
+    {
+      "id": "tu-luyen-28",
+      "role": "question",
+      "source": {
+        "body_block": 250,
+        "end_block_exclusive": 265,
+        "group": "tu-luyen"
+      }
+    }
+  ],
+  "provenance": {
+    "transcription": "466 OLE equations decoded with full byte consumption and matched to WMF MTEF previews; 17 additional standalone WMF formulas decoded for source Câu 24. No non-equation illustrations.",
+    "numbering": "17 worked examples, 28 practice questions in source order. Repeated source Câu 16 retained as practice 5 and 6; repeated trigonometric question retained as practice 8 and 15.",
+    "template": "Lesson convention matching approved Buổi 20. Shared questions for three variants; writing allocations based on worked steps.",
+    "source_corrections": [
+      {
+        "ids": [
+          "tu-luyen-8",
+          "tu-luyen-15"
+        ],
+        "change": "Question integration bounds corrected from 0→π/4 (divergent) to π/4→π/3, matching source solution and answer B.",
+        "authorization": "User approved clear errors, manifest recording."
+      },
+      {
+        "ids": [
+          "tu-luyen-16"
+        ],
+        "change": "Replaced invalid intermediate x−(sin 2x)/2 with x−sin x+sin x cos x. Integral remains π²/8−1/2 and answer D=69.",
+        "authorization": "User approved."
+      },
+      {
+        "ids": [
+          "tu-luyen-25"
+        ],
+        "change": "Duplicate correct option C changed from 16/3 to −16/3; A remains the only correct option.",
+        "authorization": "User explicitly approved."
+      },
+      {
+        "ids": [
+          "tu-luyen-27"
+        ],
+        "change": "Part d solution uses source RHS20 instead of erroneous −19; −7(m+n)=−31, m+n=31/7. Statement remains false.",
+        "authorization": "User explicitly approved."
+      },
+      {
+        "ids": [
+          "theory"
+        ],
+        "change": "Normalized integral evaluation notation as [F(x)] lower/upper rather than absolute-value fences from equation encoding; removed repeated word của."
+      }
+    ],
+    "writing_lines": {
+      "bai-hoc-1": 3,
+      "bai-hoc-2": 3,
+      "bai-hoc-3": 3,
+      "bai-hoc-4": 4,
+      "bai-hoc-5": 4,
+      "bai-hoc-6": 4,
+      "bai-hoc-7": 3,
+      "bai-hoc-8": 3,
+      "bai-hoc-9": 3,
+      "bai-hoc-10": 3,
+      "bai-hoc-11": 3,
+      "bai-hoc-12": 3,
+      "bai-hoc-13": 4,
+      "bai-hoc-14": 4,
+      "bai-hoc-15": 4,
+      "bai-hoc-16": 3,
+      "bai-hoc-17": 6,
+      "tu-luyen-1": 3,
+      "tu-luyen-2": 3,
+      "tu-luyen-3": 3,
+      "tu-luyen-4": 3,
+      "tu-luyen-5": 3,
+      "tu-luyen-6": 4,
+      "tu-luyen-7": 4,
+      "tu-luyen-8": 4,
+      "tu-luyen-9": 3,
+      "tu-luyen-10": 3,
+      "tu-luyen-11": 3,
+      "tu-luyen-12": 4,
+      "tu-luyen-13": 4,
+      "tu-luyen-14": 4,
+      "tu-luyen-15": 6,
+      "tu-luyen-16": 7,
+      "tu-luyen-17": 3,
+      "tu-luyen-18": 3,
+      "tu-luyen-19": 3,
+      "tu-luyen-20": 3,
+      "tu-luyen-21": 3,
+      "tu-luyen-22": 3,
+      "tu-luyen-23": 6,
+      "tu-luyen-24": 4,
+      "tu-luyen-25": 6,
+      "tu-luyen-26": 9,
+      "tu-luyen-27": 11,
+      "tu-luyen-28": 11
+    },
+    "solution_presentation": "Source solutions re-typeset and condensed into mathematical steps; short equalities kept inline, longer chains wrapped at relations. Correct-choice labels inferred from source calculation where not explicitly printed.",
+    "writing_balance": "For the current three-question page groups, equal minimum line counts and equal fractional ruled remainder per exercise; other pages retain step-based budgets and end-page fill.",
+    "fractional_bounds": "User requested compact slash-form fractional integral limits; all fractional integral and evaluation limits use a/b rather than stacked fractions. Integrands and other fractions retain normal fraction notation."
+  },
+  "qa": {
+    "review_status": "pending",
+    "full_page_visual_review": "pending; no generated page-preview images",
+    "compile": "passed",
+    "variants": {
+      "de": {
+        "pages": 9,
+        "questions": 45,
+        "correct_choice_labels": 0,
+        "body_text_bounds": "passed",
+        "fonts_embedded": "passed",
+        "question_order": "passed",
+        "end_mark_with_last_question": "passed"
+      },
+      "de-cach": {
+        "pages": 19,
+        "questions": 45,
+        "correct_choice_labels": 0,
+        "body_text_bounds": "passed",
+        "fonts_embedded": "passed",
+        "question_order": "passed",
+        "end_mark_with_last_question": "passed"
+      },
+      "dap-an": {
+        "pages": 17,
+        "questions": 45,
+        "correct_choice_labels": 39,
+        "body_text_bounds": "passed",
+        "fonts_embedded": "passed",
+        "question_order": "passed",
+        "end_mark_with_last_question": "passed"
+      }
+    },
+    "content_check": "45 source questions: 17 worked examples and 28 practice. All 39 multiple-choice results checked; three true/false questions and three short answers preserved. Authorized source corrections applied.",
+    "math_type_pairs_checked": 466,
+    "standalone_wmf_equations_decoded": 17,
+    "empty_source_equations": {
+      "count": 2,
+      "handling": "Empty formula objects at practice 23 stem and solution omitted; no mathematical content present."
+    },
+    "source_checksum": "passed",
+    "python_checks": "make check passed: ruff and pyright",
+    "parser_regression": "Buổi 20: all 610 decoded equations and preview comparisons unchanged.",
+    "layout_checks": "Whole answer PDF pagination rechecked after changes: 17 pages, 45 questions in source order, 39 correct-choice labels, no horizontal text overflow or isolated punctuation; full practice 9 and its solution on page 10, practice 15 and its solution on page 12, complete question 28 and HẾT on page 17. Body text ending positions audited on every page. Writing PDF remains 19 pages with 11 balanced three-question groups. After compact fractional bounds: all three PDFs rebuilt and checked, pages remain 9/19/17, 45 questions each, no horizontal overflow and HẾT with final question."
+  },
+  "outputs": {
+    "de": {
+      "pdf": "assets/targets/2026-11/Chuyên đề/th-buoi-21-tich-phan/de.pdf",
+      "pages": 9,
+      "bytes": 486567,
+      "sha256": "6a043bf8210cb7942385cfbaab065b3829a88f6b569cd513e7dcb5db1cec3c65"
+    },
+    "de-cach": {
+      "pdf": "assets/targets/2026-11/Chuyên đề/th-buoi-21-tich-phan/de-cach.pdf",
+      "pages": 19,
+      "bytes": 522720,
+      "sha256": "957a9d7ec0f1a8190e4b5277edeac8da37272ed84f2850daf90e7be8c5541f57"
+    },
+    "dap-an": {
+      "pdf": "assets/targets/2026-11/Chuyên đề/th-buoi-21-tich-phan/dap-an.pdf",
+      "pages": 17,
+      "bytes": 614663,
+      "sha256": "ec065a83f079ae85389d8b8ec966445fe6bc606fb17e2b3d40329ea361654a43"
+    }
+  }
+}
