@@ -1,0 +1,294 @@
+{
+  "schema_version": 1,
+  "id": "chu-van-an-12-gk1-ma-0112-26-27",
+  "kind": "exam",
+  "received_date": "2026-11-03",
+  "status": "implemented",
+  "metadata": {
+    "title": "ĐỀ KIỂM TRA GIỮA HỌC KÌ I – THPT CHUYÊN CHU VĂN AN – TOÁN 12 – 2026–2027",
+    "subject": "Toán 12",
+    "school_year": "2026–2027",
+    "exam_code": "0112",
+    "duration_minutes": 90,
+    "exam_date": "2026-10-26",
+    "school": "THPT Chuyên Chu Văn An",
+    "department": "Sở Giáo dục và Đào tạo Hà Nội"
+  },
+  "sources": [
+    {
+      "path": "assets/sources/2026-11/Đề thi/chu-van-an-12-gk1-ma-0112-26-27/source.pdf",
+      "original_name": "source.pdf",
+      "bytes": 1236923,
+      "sha256": "690dc9609a925e8e924e8cab940be507e152072acaa4bd5618bb3cf71283d695",
+      "pages": 5
+    }
+  ],
+  "scope": {
+    "has_questions": true,
+    "has_solutions": false,
+    "questions": 22,
+    "question_pages": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ]
+  },
+  "variants": {
+    "de": {
+      "filename": "de.pdf",
+      "inputs": {
+        "variant": "de"
+      }
+    }
+  },
+  "drive": {
+    "folder": "Đề thi",
+    "filenames": {
+      "de": "CHU-VAN-AN-12-GK1-MA-0112-26-27 - ĐỀ.pdf"
+    }
+  },
+  "content_mapping": [
+    {
+      "id": "I-1",
+      "role": "question",
+      "source": {
+        "page": 1,
+        "section": "I",
+        "number": 1
+      }
+    },
+    {
+      "id": "I-2",
+      "role": "question",
+      "source": {
+        "page": 1,
+        "section": "I",
+        "number": 2
+      }
+    },
+    {
+      "id": "I-3",
+      "role": "question",
+      "source": {
+        "page": 1,
+        "section": "I",
+        "number": 3
+      }
+    },
+    {
+      "id": "I-4",
+      "role": "question",
+      "source": {
+        "page": 1,
+        "section": "I",
+        "number": 4
+      }
+    },
+    {
+      "id": "I-5",
+      "role": "question",
+      "source": {
+        "page": 1,
+        "section": "I",
+        "number": 5,
+        "pages": [
+          1,
+          2
+        ]
+      }
+    },
+    {
+      "id": "I-6",
+      "role": "question",
+      "source": {
+        "page": 2,
+        "section": "I",
+        "number": 6
+      }
+    },
+    {
+      "id": "I-7",
+      "role": "question",
+      "source": {
+        "page": 2,
+        "section": "I",
+        "number": 7
+      }
+    },
+    {
+      "id": "I-8",
+      "role": "question",
+      "source": {
+        "page": 2,
+        "section": "I",
+        "number": 8
+      }
+    },
+    {
+      "id": "I-9",
+      "role": "question",
+      "source": {
+        "page": 2,
+        "section": "I",
+        "number": 9
+      }
+    },
+    {
+      "id": "I-10",
+      "role": "question",
+      "source": {
+        "page": 3,
+        "section": "I",
+        "number": 10
+      }
+    },
+    {
+      "id": "I-11",
+      "role": "question",
+      "source": {
+        "page": 3,
+        "section": "I",
+        "number": 11
+      }
+    },
+    {
+      "id": "I-12",
+      "role": "question",
+      "source": {
+        "page": 3,
+        "section": "I",
+        "number": 12
+      }
+    },
+    {
+      "id": "II-1",
+      "role": "question",
+      "source": {
+        "page": 3,
+        "section": "II",
+        "number": 1
+      }
+    },
+    {
+      "id": "II-2",
+      "role": "question",
+      "source": {
+        "page": 3,
+        "section": "II",
+        "number": 2
+      }
+    },
+    {
+      "id": "II-3",
+      "role": "question",
+      "source": {
+        "page": 4,
+        "section": "II",
+        "number": 3
+      }
+    },
+    {
+      "id": "II-4",
+      "role": "question",
+      "source": {
+        "page": 4,
+        "section": "II",
+        "number": 4
+      }
+    },
+    {
+      "id": "III-1",
+      "role": "question",
+      "source": {
+        "page": 4,
+        "section": "III",
+        "number": 1
+      }
+    },
+    {
+      "id": "III-2",
+      "role": "question",
+      "source": {
+        "page": 4,
+        "section": "III",
+        "number": 2
+      }
+    },
+    {
+      "id": "III-3",
+      "role": "question",
+      "source": {
+        "page": 4,
+        "section": "III",
+        "number": 3
+      }
+    },
+    {
+      "id": "III-4",
+      "role": "question",
+      "source": {
+        "page": 4,
+        "section": "III",
+        "number": 4
+      }
+    },
+    {
+      "id": "III-5",
+      "role": "question",
+      "source": {
+        "page": 5,
+        "section": "III",
+        "number": 5
+      }
+    },
+    {
+      "id": "III-6",
+      "role": "question",
+      "source": {
+        "page": 5,
+        "section": "III",
+        "number": 6
+      }
+    }
+  ],
+  "provenance": {
+    "template": "Green exam title, stretched red school/department, year/code subtitle and author; no date/duration/name fields. 13pt body, leading 0.95em, red question labels; three-platform footer.",
+    "source_notes": [
+      "Five photographed pages in source order; page 1 is lower resolution (618x800) than pages 2-5 (1583x2048). Contents were checked against enlarged crops of every question and diagram.",
+      "The source contains only the question paper: 12 multiple-choice, 4 true/false and 6 short-answer questions. No answer key or solutions were supplied, so no solution content was generated.",
+      "Printed exam date is 26/10/2026; the source states the paper has 05 pages."
+    ],
+    "figures": "First two source geometry figures redrawn with correct labels and hidden edges. Variation tables rebuilt without spurious vertical lines; smooth derivative quartic through source marked points; corner apparatus rebuilt to source perspective.",
+    "content_notes": [
+      "I-3 is printed as y = 2x + 1 + 3/(x + 3), not a single rational fraction; the oblique asymptote is requested.",
+      "I-5 asks for the vertical asymptote; its table continues from page 1 to page 2.",
+      "II-3 retains the printed statement y' > 0, forall x in RR exactly as a true/false assertion.",
+      "II-4 keeps the printed force magnitudes and the 120-degree angle between the two in-plane forces."
+    ]
+  },
+  "qa": {
+    "review_status": "pending",
+    "full_page_visual_review": "pending; no generated page-preview images",
+    "compile": "passed",
+    "content": "22 questions in source order; all sections I-III transcribed from pages 1-5; no answers or writing variant",
+    "figures": "Standalone composite inspected against all five extracted source pages; first two geometry figures, four variation tables, derivative graph and apparatus corrected. Full-page visual review remains pending.",
+    "pagination": "5 pages verified. II-4 full-width prompt followed by a–d left / force figure right grid; all four statements on page 4. III-5 figure, III-6 and HẾT together on page 5.",
+    "fonts": "All fonts embedded (pdffonts). Body 13pt and paragraph leading 0.95em.",
+    "publication": "make upload DOC=chu-van-an DRY_RUN=1 passed for question PDF and original source; no upload performed.",
+    "figure_revision": "I-6/I-7 enlarged 30% with single-column choices; II-2 enlarged 10%; II-4 and III-5 enlarged 20%; II-4 and III-5 centered below full-width prompts. Graph labels drawn above curves with white backing. All variation tables 118mm, uniform 0.42 stroke and #F2B8C5 header; forces/apparatus strokes 0.55.",
+    "latest_figures": "Force diagram redrawn in a wider compact projection at 82mm with alpha inside the lower-right corner and readable labels. I-7 enlarged to 68mm, minimum positioned at x=0 and negative-one labels offset from curve.",
+    "spacing": "Body 13pt, leading 0.90em; question gap increased from 3mm to 4mm. II-1 statement gap 4.5mm, other statement gaps unchanged. Rebuilt and verified 5 pages with HẾT after III-6 on page 5.",
+    "latest_revision": "II-1 statement gap increased to 4.5mm. All four variation tables use one filled outer rectangular ring of uniform 0.5-unit thickness and 0.5-unit separators. Rebuilt; five pages retained, II-1 a–d on page 3 and HẾT on final page.",
+    "choice_layout": "I-7 and I-8 choices changed to two columns/two rows; I-7 retains right-hand figure. Rebuilt and checked extracted layout; five pages retained."
+  },
+  "outputs": {
+    "de": {
+      "pdf": "assets/targets/2026-11/Đề thi/chu-van-an-12-gk1-ma-0112-26-27/de.pdf",
+      "pages": 5,
+      "bytes": 421367,
+      "sha256": "dd71fbe4f22369180a382c63ab272edfef43bc797c6f18536f6c38f309630e7a"
+    }
+  }
+}

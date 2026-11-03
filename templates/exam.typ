@@ -186,30 +186,46 @@
   question-gap: none,
   statement-gap: exam-style.statement-gap,
   answer-gap: none,
+  figure: none,
+  figure-gap: 5mm,
+  figure-align: top,
 ) = {
-  let prompt = [
+  let head = [#text(weight: "bold", fill: question-label-color)[Câu #number.] #if question-tag != none {text(weight: "bold", fill: palette.primary)[#question-tag] + h(1.5mm)}#body]
+  let statements-block = if statements.len() > 0 {
+    if statements-table {
+      block(above: 3mm, below: 0pt, exam-table(
+        columns: (1fr, 13mm, 13mm),
+        header: ([Mệnh đề], [Đúng], [Sai]),
+        ..statements.enumerate().map(((i, it)) => (align(left)[#("abcd".at(i))) #it], [], [])).flatten(),
+      ))
+    } else {
+      block(above: 5mm, below: 0pt, grid(
+        columns: (1fr,), row-gutter: statement-gap,
+        ..statements.enumerate().map(((i, it)) => [#("abcd".at(i))) #it])
+      ))
+    }
+  } else { none }
+  let answers-block = if answers.len() > 0 {
+    [#v(3mm) #choices(answers, columns: columns, label-color: palette.exam-blue, row-gap: answer-gap)]
+  } else { none }
+  let question-body = [
     #if keep-body {
-      block(width: 100%, breakable: false)[#text(weight: "bold", fill: question-label-color)[Câu #number.] #if question-tag != none {text(weight: "bold", fill: palette.primary)[#question-tag] + h(1.5mm)}#body]
-    } else { [#text(weight: "bold", fill: question-label-color)[Câu #number.] #if question-tag != none {text(weight: "bold", fill: palette.primary)[#question-tag] + h(1.5mm)}#body] }
-    #if statements.len() > 0 {
-      if statements-table {
-        block(above: 3mm, below: 0pt, exam-table(
-          columns: (1fr, 13mm, 13mm),
-          header: ([Mệnh đề], [Đúng], [Sai]),
-          ..statements.enumerate().map(((i, it)) => (align(left)[#("abcd".at(i))) #it], [], [])).flatten(),
-        ))
-      } else {
-        block(above: 5mm, below: 0pt, grid(
-          columns: (1fr,), row-gutter: statement-gap,
-          ..statements.enumerate().map(((i, it)) => [#("abcd".at(i))) #it])
-        ))
-      }
-    }
-    #if answers.len() > 0 {
-      v(3mm)
-      choices(answers, columns: columns, label-color: palette.exam-blue, row-gap: answer-gap)
-    }
+      block(width: 100%, breakable: false)[#head]
+    } else { head }
+    #statements-block
+    #answers-block
   ]
+  let prompt = if figure != none {
+    grid(
+      columns: (1fr, auto),
+      column-gutter: figure-gap,
+      align: figure-align,
+      question-body,
+      align(center, figure),
+    )
+  } else {
+    question-body
+  }
   block(
     width: 100%,
     breakable: variant != "dap-an" and not keep-together and (ending == none or variant != "de-cach"),

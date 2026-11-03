@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="88mm" height="43mm" viewBox="0 0 88 43">
+<defs><marker id="arrow" markerWidth="4" markerHeight="4" refX="3.8" refY="2" orient="auto"><path d="M0,0 L4,2 L0,4 Z" fill="#B00012"/></marker></defs>
+<path d="M31,24 L73,24 L59,39 L17,39 Z" fill="#FBE1E7"/>
+<path d="M17,39 L59,39 L73,24" fill="none" stroke="#B00012" stroke-width=".45" stroke-dasharray="1.4 1"/>
+<g fill="none" stroke="#B00012" stroke-width=".55" marker-end="url(#arrow)"><path d="M31,24 L17,39"/><path d="M31,24 L73,24"/><path d="M31,24 L31,3"/></g>
+<path d="M31,20 L35,20 L35,24 M41,24 Q42,32 25,31" fill="none" stroke="#222" stroke-width=".35"/>
+<g font-family="Times New Roman" font-style="italic" font-size="3.6" fill="#111"><text x="26" y="23">A</text><text x="10" y="40">F₁</text><text x="76" y="25">F₂</text><text x="33" y="5">F₃</text><text x="53" y="37.5">(α)</text></g>
+<text x="37" y="34" font-family="Times New Roman" font-size="3.4">120°</text>
+</svg>
