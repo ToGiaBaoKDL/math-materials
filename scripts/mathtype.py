@@ -230,8 +230,9 @@ def render(n):
                 7: ("ceil.l", "ceil.r"),
             }[s]
             return f"lr({left} {cs[0]} {right})"
-        if s == 23 and v == 16 and len(cs) == 3 and cs[0] == "m i n" and not cs[2]:
-            return "limits(min)_(" + cs[1] + ")"
+        if s == 23 and v == 16 and len(cs) == 3 and cs[0] in ("m i n", "l i m") and not cs[2]:
+            operator = {"m i n": "min", "l i m": "lim"}[cs[0]]
+            return "limits(" + operator + ")_(" + cs[1] + ")"
         if s == 14:
             # MTEF single arrows: direction bits plus optional upper/lower slots.
             if v & ~0x3C or v & 0x30 not in (0x10, 0x20, 0x30) or len(cs) != 3:

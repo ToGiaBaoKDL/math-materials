@@ -1,0 +1,281 @@
+{
+  "schema_version": 1,
+  "id": "th-buoi-22-tich-phan-ham-nhieu-cong-thuc",
+  "kind": "tinh-hoa",
+  "received_date": "2026-11-04",
+  "status": "implemented",
+  "metadata": {
+    "title": "BUỔI 22: TÍCH PHÂN HÀM CHO BỞI NHIỀU CÔNG THỨC",
+    "lesson": 22,
+    "subject": "Toán 12",
+    "course": "KHÓA TINH HOA TOÀN DIỆN 9+ 2027",
+    "topic": "NGUYÊN HÀM – TÍCH PHÂN – ỨNG DỤNG"
+  },
+  "sources": [
+    {
+      "path": "assets/sources/2026-11/Chuyên đề/th-buoi-22-tich-phan-ham-nhieu-cong-thuc/source.docx",
+      "original_name": "BUỔI 22 TÍCH PHÂN HÀM CHO BỞI NHIỀU CÔNG THỨC.docx",
+      "bytes": 535249,
+      "sha256": "671d1e062289aba7afc27d781235a8f08ba04da6ca0c5f0f89defa41b08ea60e",
+      "review_pdf_pages": 12
+    }
+  ],
+  "scope": {
+    "has_questions": true,
+    "has_solutions": true,
+    "questions": 19,
+    "worked_examples": 7,
+    "practice_questions": 12
+  },
+  "variants": {
+    "de": {
+      "filename": "de.pdf",
+      "inputs": {
+        "variant": "de"
+      }
+    },
+    "de-cach": {
+      "filename": "de-cach.pdf",
+      "inputs": {
+        "variant": "de-cach"
+      }
+    },
+    "dap-an": {
+      "filename": "dap-an.pdf",
+      "inputs": {
+        "variant": "dap-an"
+      }
+    }
+  },
+  "drive": {
+    "folder": "Chuyên đề",
+    "filenames": {
+      "de": "KHÓA TH - BUỔI 22 - TÍCH PHÂN HÀM CHO BỞI NHIỀU CÔNG THỨC - ĐỀ.pdf",
+      "de-cach": "KHÓA TH - BUỔI 22 - TÍCH PHÂN HÀM CHO BỞI NHIỀU CÔNG THỨC - ĐỀ CÁCH.pdf",
+      "dap-an": "KHÓA TH - BUỔI 22 - TÍCH PHÂN HÀM CHO BỞI NHIỀU CÔNG THỨC - ĐÁP ÁN.pdf"
+    }
+  },
+  "content_mapping": [
+    {
+      "id": "bai-hoc-1",
+      "role": "question",
+      "source": {
+        "body_block": 2,
+        "end_block_exclusive": 6
+      }
+    },
+    {
+      "id": "bai-hoc-2",
+      "role": "question",
+      "source": {
+        "body_block": 6,
+        "end_block_exclusive": 11
+      }
+    },
+    {
+      "id": "bai-hoc-3",
+      "role": "question",
+      "source": {
+        "body_block": 11,
+        "end_block_exclusive": 17
+      }
+    },
+    {
+      "id": "bai-hoc-4",
+      "role": "question",
+      "source": {
+        "body_block": 17,
+        "end_block_exclusive": 23
+      }
+    },
+    {
+      "id": "bai-hoc-5",
+      "role": "question",
+      "source": {
+        "body_block": 23,
+        "end_block_exclusive": 37
+      }
+    },
+    {
+      "id": "bai-hoc-6",
+      "role": "question",
+      "source": {
+        "body_block": 37,
+        "end_block_exclusive": 49
+      }
+    },
+    {
+      "id": "bai-hoc-7",
+      "role": "question",
+      "source": {
+        "body_block": 49,
+        "end_block_exclusive": 59
+      }
+    },
+    {
+      "id": "tu-luyen-1",
+      "role": "question",
+      "source": {
+        "body_block": 62,
+        "end_block_exclusive": 66
+      }
+    },
+    {
+      "id": "tu-luyen-2",
+      "role": "question",
+      "source": {
+        "body_block": 66,
+        "end_block_exclusive": 70
+      }
+    },
+    {
+      "id": "tu-luyen-3",
+      "role": "question",
+      "source": {
+        "body_block": 70,
+        "end_block_exclusive": 74
+      }
+    },
+    {
+      "id": "tu-luyen-4",
+      "role": "question",
+      "source": {
+        "body_block": 74,
+        "end_block_exclusive": 80
+      }
+    },
+    {
+      "id": "tu-luyen-5",
+      "role": "question",
+      "source": {
+        "body_block": 80,
+        "end_block_exclusive": 87
+      }
+    },
+    {
+      "id": "tu-luyen-6",
+      "role": "question",
+      "source": {
+        "body_block": 87,
+        "end_block_exclusive": 98
+      }
+    },
+    {
+      "id": "tu-luyen-7",
+      "role": "question",
+      "source": {
+        "body_block": 98,
+        "end_block_exclusive": 107
+      }
+    },
+    {
+      "id": "tu-luyen-8",
+      "role": "question",
+      "source": {
+        "body_block": 107,
+        "end_block_exclusive": 114
+      }
+    },
+    {
+      "id": "tu-luyen-9",
+      "role": "question",
+      "source": {
+        "body_block": 114,
+        "end_block_exclusive": 125
+      }
+    },
+    {
+      "id": "tu-luyen-10",
+      "role": "question",
+      "source": {
+        "body_block": 125,
+        "end_block_exclusive": 147
+      }
+    },
+    {
+      "id": "tu-luyen-11",
+      "role": "question",
+      "source": {
+        "body_block": 147,
+        "end_block_exclusive": 162
+      }
+    },
+    {
+      "id": "tu-luyen-12",
+      "role": "question",
+      "source": {
+        "body_block": 162,
+        "end_block_exclusive": 176
+      }
+    }
+  ],
+  "provenance": {
+    "transcription": "297 MathType OLE equations fully decoded and matched to 297 WMF previews; four superscript templates with variation 1 manually confirmed against source-rendered pages. All 12 pages of source DOCX conversion inspected. One non-equation image: sign table in final solution.",
+    "numbering": "Normalize mixed source numbering to 1–7 worked examples and 1–12 practice questions; preserve source order and repeated exercise.",
+    "source_corrections": [
+      {
+        "approval": "User approved clear errors and manifest on 2026-11-04",
+        "changes": [
+          "Bài học 3: replace contradictory differentiability on R by defined on R.",
+          "Bài học 5: correct C2=1 in cosine branch and lower bound π/6 instead of π/2 in method 2.",
+          "Bài học 7: primitive uses ln|x|.",
+          "Tự luyện 1: supply missing f(x)= in definition.",
+          "Tự luyện 5: minimal fraction b/c rather than a/b; correct lower-branch integral bounds to -1→0 and limit notation.",
+          "Tự luyện 6: add continuity hypothesis needed for unique a,b; replace invalid claim that integrability implies continuity.",
+          "Tự luyện 10b: specify positive interval for primitive determined by F(1); retain other intentionally false statements.",
+          "Normalize title typo NHIỂU to NHIỀU, duplicated source formulas and notation for evaluation bounds; no false true/false assertions silently corrected.",
+          "Tự luyện 10d: retain source statement; explain nonunique coefficients because ln10=ln2+ln5, rather than repeat the source's unjustified false verdict."
+        ]
+      }
+    ],
+    "writing_lines": {
+      "bai-hoc-1": 3,
+      "bai-hoc-2": 4,
+      "bai-hoc-3": 4,
+      "bai-hoc-4": 5,
+      "bai-hoc-5": 12,
+      "bai-hoc-6": 6,
+      "bai-hoc-7": 6,
+      "tu-luyen-1": 3,
+      "tu-luyen-2": 3,
+      "tu-luyen-3": 5,
+      "tu-luyen-4": 6,
+      "tu-luyen-5": 6,
+      "tu-luyen-6": 5,
+      "tu-luyen-7": 6,
+      "tu-luyen-8": 4,
+      "tu-luyen-9": 10,
+      "tu-luyen-10": 14,
+      "tu-luyen-11": 15,
+      "tu-luyen-12": 11
+    }
+  },
+  "qa": {
+    "review_status": "pending",
+    "full_page_visual_review": "pending; output PDFs have not been visually reviewed as full pages; no output page-preview images generated",
+    "compile": "passed",
+    "content_review": "All 19 questions and solutions compared with 12 source pages; clear errors corrected as approved; ambiguity in practice 10d explicitly noted.",
+    "checks": "make check passed; publication filename dry-run passed; all PDF fonts embedded; no text outside body horizontal bounds; no isolated final HẾT page.",
+    "layout_revision": "Expanded lesson title to available heading width; centered detached integrals in answer prompts; de practice 11 starts with statement a on page 4 and continues on page 5; expanded mathematical steps in practice solutions 9/10 and worked example 5 method 2. Rebuilt all variants: 5/12/12 pages. Text bounds checked on all pages; full-page visual review remains pending."
+  },
+  "outputs": {
+    "de": {
+      "pdf": "assets/targets/2026-11/Chuyên đề/th-buoi-22-tich-phan-ham-nhieu-cong-thuc/de.pdf",
+      "pages": 5,
+      "bytes": 384219,
+      "sha256": "0c86e2401d879a818e4123353293e001be18575f9ea429b96a58aa33f4deb2c8"
+    },
+    "de-cach": {
+      "pdf": "assets/targets/2026-11/Chuyên đề/th-buoi-22-tich-phan-ham-nhieu-cong-thuc/de-cach.pdf",
+      "pages": 12,
+      "bytes": 410637,
+      "sha256": "6114df307ef0870f550fb64c785a6040f452211bfde90a72895b6fe75fd681be"
+    },
+    "dap-an": {
+      "pdf": "assets/targets/2026-11/Chuyên đề/th-buoi-22-tich-phan-ham-nhieu-cong-thuc/dap-an.pdf",
+      "pages": 12,
+      "bytes": 525659,
+      "sha256": "7e17727e7b160f1093c39668faa6e741da6c49f99db3ade88d68c1dafc30ffc8"
+    }
+  }
+}
