@@ -8,7 +8,7 @@ Thông báo là tác vụ độc lập, không tự chạy sau build, upload ho�
 
 - `metadata.title`: tên tài liệu dành cho người đọc, không phải tên file hoặc slug. Đề thi dùng tên kỳ thi và trường đầy đủ.
 - Tinh Hoa thêm `metadata.lesson` (số buổi), `metadata.topic` (tên chuyên đề), `metadata.homework` (có BTVN hay không). Tiêu đề hiển thị `<title> [CĐ <topic>]`; lời mở tự chèn `Buổi <lesson>`.
-- Đề thi thêm `metadata.subject`, `metadata.school_year`.
+- Đề thi thêm `metadata.subject`, `metadata.school_year`; `metadata.department` bổ sung tên Sở nếu chưa có trong tiêu đề. Mẫu lấy tên kỳ thi/trường từ `metadata.title`, viết hoa, rút gọn học kỳ thành HK1/HK2, bỏ môn và năm học bị lặp ở dòng đầu. Không suy tên trường/Sở từ slug.
 - Câu chữ dùng chung của ba format nằm trong `scripts/announcements.py`. Livestream hiển thị File không cách trước File cách; giữ lời mở về 22:00 và kênh Tóp Tóp; đề thi giữ link nhóm và lời chúc đã duyệt.
 - Link PDF luôn đọc từ Drive qua OAuth chung, theo kế hoạch xuất bản; đối chiếu MD5 với PDF local. Không đưa file nguồn vào thông báo, không đổi quyền chia sẻ. Tiêu đề không suy từ tên PDF trên Drive.
 
@@ -46,3 +46,20 @@ Bot cần quyền gửi vào chat/channel. Token Telegram tách khỏi OAuth Goo
 ## Đề thi dùng livestream
 
 Giữ `kind: "exam"`, đặt `metadata.announcement_template: "exam-livestream"` (Xuân Phương đã dùng). Mẫu lấy tiêu đề và năm học từ metadata, lịch chữa từ `STARTS_AT`; tự tính thứ và buổi. Dùng đúng hai link đề/đề cách từ Drive. Nội dung kênh TikTok, nhóm học và chữ ký THẦY DXT theo convention chung, không thêm biến cấu hình. Có thể chọn một lần bằng `TEMPLATE=exam-livestream`. Không đổi PDF hoặc cách xuất bản.
+
+## Convention announcement đề thi
+
+Mẫu `exam` dùng các khối sau; tên kỳ thi, trường/Sở, môn, năm học và link là dữ liệu động:
+
+```text
+🎁 FILE ĐỀ KIỂM TRA GIỮA HK1 - <TRƯỜNG> - SỞ <TỈNH/THÀNH>
+➥ MÔN <MÔN VÀ LỚP>| NĂM HỌC <NĂM HỌC>
+
+📍 File đề: <LINK DRIVE ĐÃ ĐỐI CHIẾU>
+
+🔥 Cộng đồng học tập miễn phí Mukbang Toán Thực Tế & Xác Suất cùng team thầy DXT: https://zalo.me/g/n2me9hw5l29ahqe8idlx
+
+Thầy Thắng chúc em học tập hiệu quả. Đạt 9+ GHK1 nhé!! Siuuuu 🏆🏆
+```
+
+Giữ tên kỳ thi thực tế; không đổi đề khảo sát/định kỳ thành đề giữa kỳ. Nếu không có trường hoặc Sở trong metadata thì không tự thêm. Lời chúc dùng GHK1/GHK2 cho đề giữa kỳ tương ứng, còn kỳ thi khác dùng “Đạt 9+ nhé!!”. Chỉ hiển thị các link thực sự có trong kế hoạch xuất bản; bản cách/đáp án/bản gộp có nhãn riêng. Mẫu `exam-livestream` giữ convention riêng.

@@ -1,3 +1,4 @@
+import re
 from datetime import datetime
 from html import escape
 from pathlib import Path
@@ -10,6 +11,24 @@ LABELS = {
     "dap-an": "File đáp án/ Lời giải chi tiết",
     "de-dap-an": "File đề + đáp án",
 }
+
+
+def exam_title(metadata: dict[str, Any]) -> str:
+    title = metadata["title"].upper()
+    title = re.sub(r"(?<!\w)" + re.escape(metadata["subject"].upper()) + r"(?!\w)", "", title)
+    title = re.sub(r"\b\d{4}\s*[-–—]\s*\d{4}\b", "", title)
+    title = re.sub(r"(?:HỌC\s+)?K[ỲÌ]\s*(II|I|[12])\b", lambda m: "HK" + {"I": "1", "II": "2"}.get(m[1], m[1]), title)
+    title = re.sub(r"HK\s+([12])", r"HK\1", title)
+    department = metadata.get("department")
+    if department:
+        department = re.sub(r"^SỞ\s+(?:GIÁO DỤC VÀ ĐÀO TẠO|GD\s*&\s*ĐT|GD-ĐT)\s+", "SỞ ", department.upper())
+        title = re.sub(r"SỞ\s+(?:GIÁO DỤC VÀ ĐÀO TẠO|GD\s*&\s*ĐT|GD-ĐT)\s+", "SỞ ", title)
+        if department not in title:
+            title = title.strip(" –—-|") + " - " + department
+    title = re.sub(r"\s+[–—|]\s+|\s+-\s+", " - ", title)
+    title = re.sub(r"(?:\s*-\s*){2,}", " - ", title)
+    title = re.sub(r"\s+", " ", title).strip(" -–—|")
+    return title if title.startswith("ĐỀ ") else "ĐỀ " + title
 
 
 def announcement_config(
@@ -47,9 +66,14 @@ def announcement_config(
         for field in ("title", "subject", "school_year"):
             validate_text(metadata, field)
             config[field] = metadata[field]
+        config["title"] = exam_title(metadata)
+        config["subject"] = metadata["subject"].upper()
+        config["school_year"] = re.sub(r"\s*[-–—]\s*", "–", metadata["school_year"])
+        period = re.search(r"GIỮA HK([12])", config["title"])
+        target = f" GHK{period[1]}" if period else ""
         config.update(
             group_url="https://zalo.me/g/n2me9hw5l29ahqe8idlx",
-            closing="Thầy Thắng chúc em học tập hiệu quả. Đạt 9+ GHK1 nhé!! Siuuuu 🏆🏆",
+            closing=f"Thầy Thắng chúc em học tập hiệu quả. Đạt 9+{target} nhé!! Siuuuu 🏆🏆",
         )
     elif kind == "livestream":
         config["intro"] = (
@@ -105,7 +129,6 @@ def livestream_blocks(config: dict[str, Any], links: dict[str, str]) -> list[str
 
 def exam_blocks(config: dict[str, Any], links: dict[str, str]) -> list[str]:
     validate_url(config["group_url"], "group_url")
-    title = "FILE ĐỀ + FILE GIẢI CHI TIẾT THAM KHẢO" if {"de-dap-an", "dap-an"} & links.keys() else "FILE ĐỀ THAM KHẢO"
     labels = {
         "de": "File đề",
         "de-cach": "File đề cách",
@@ -114,15 +137,14 @@ def exam_blocks(config: dict[str, Any], links: dict[str, str]) -> list[str]:
     }
     return [
         "🎁 <b>"
-        + title
-        + ": "
+        + "FILE "
         + escape(config["title"])
-        + "</b>\n➥ MÔN: "
+        + "</b>\n➥ MÔN "
         + escape(config["subject"])
-        + " | NĂM HỌC "
+        + "| NĂM HỌC "
         + escape(config["school_year"]),
         *(f"📍 {label}: {escape(links[variant])}" for variant, label in labels.items() if variant in links),
-        "🔥 Tham gia miễn phí Group Mukbang Toán Thực Tế &amp; Xác Suất cùng đội VIPDXT: "
+        "🔥 Cộng đồng học tập miễn phí Mukbang Toán Thực Tế &amp; Xác Suất cùng team thầy DXT: "
         + escape(config["group_url"]),
         escape(config["closing"]),
     ]
