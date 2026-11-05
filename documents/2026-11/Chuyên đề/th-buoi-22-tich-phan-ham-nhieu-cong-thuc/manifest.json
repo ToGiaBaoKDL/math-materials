@@ -262,20 +262,20 @@
     "de": {
       "pdf": "assets/targets/2026-11/Chuyên đề/th-buoi-22-tich-phan-ham-nhieu-cong-thuc/de.pdf",
       "pages": 5,
-      "bytes": 384219,
-      "sha256": "0c86e2401d879a818e4123353293e001be18575f9ea429b96a58aa33f4deb2c8"
+      "bytes": 1224906,
+      "sha256": "8a3644085a7eef3ef6ad497f9fa8d990aaa67a98e5a8949b2ff8a215e6e0d07f"
     },
     "de-cach": {
       "pdf": "assets/targets/2026-11/Chuyên đề/th-buoi-22-tich-phan-ham-nhieu-cong-thuc/de-cach.pdf",
       "pages": 12,
-      "bytes": 410637,
-      "sha256": "6114df307ef0870f550fb64c785a6040f452211bfde90a72895b6fe75fd681be"
+      "bytes": 1251324,
+      "sha256": "c18ac74b6f48f7fcd115c33fb2114c83e05d6abc34a6322cf40fdfeddc2905d7"
     },
     "dap-an": {
       "pdf": "assets/targets/2026-11/Chuyên đề/th-buoi-22-tich-phan-ham-nhieu-cong-thuc/dap-an.pdf",
       "pages": 12,
-      "bytes": 525659,
-      "sha256": "7e17727e7b160f1093c39668faa6e741da6c49f99db3ade88d68c1dafc30ffc8"
+      "bytes": 1366346,
+      "sha256": "d6e1d5fb3a31bed39f15728ace1be2648bedca14fdda792764d199d176bdbc4c"
     }
   }
 }
