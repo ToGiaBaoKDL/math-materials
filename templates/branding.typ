@@ -89,7 +89,7 @@
     ))
     #let badge-display = if branded {
       image(
-        "/assets/branding/logo-original.png",
+        "/assets/branding/logo-gradient.png",
         width: head.badge-diameter,
         height: head.badge-diameter,
         fit: "contain",

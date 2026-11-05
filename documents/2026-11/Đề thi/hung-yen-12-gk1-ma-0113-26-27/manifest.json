@@ -1,0 +1,179 @@
+{
+  "schema_version": 1,
+  "id": "hung-yen-12-gk1-ma-0113-26-27",
+  "kind": "exam",
+  "received_date": "2026-11-05",
+  "status": "implemented",
+  "metadata": {
+    "title": "KHẢO SÁT CHẤT LƯỢNG GIỮA HỌC KỲ I – SỞ GD&ĐT HƯNG YÊN – TOÁN 12 – 2026–2027",
+    "subject": "Toán 12",
+    "school_year": "2026–2027",
+    "exam_code": "0113",
+    "duration_minutes": 90,
+    "department": "Sở Giáo dục và Đào tạo Hưng Yên"
+  },
+  "sources": [
+    {
+      "path": "assets/sources/2026-11/Đề thi/hung-yen-12-gk1-ma-0113-26-27/trang-1.jpeg",
+      "original_name": "p1.jpeg",
+      "page": 1,
+      "bytes": 139338,
+      "sha256": "f6c0556b2dde8a72629f2f5a24fa6536338ed5346278923b8635abb765ee3a6d"
+    },
+    {
+      "path": "assets/sources/2026-11/Đề thi/hung-yen-12-gk1-ma-0113-26-27/trang-2.jpeg",
+      "original_name": "p2.jpeg",
+      "page": 2,
+      "bytes": 194436,
+      "sha256": "848ed6ca24b624c1e7e8edca3bcf494a03ddabcf64167ae4ae90eb3b95bbdbcd"
+    },
+    {
+      "path": "assets/sources/2026-11/Đề thi/hung-yen-12-gk1-ma-0113-26-27/trang-3.jpeg",
+      "original_name": "p3.jpeg",
+      "page": 3,
+      "bytes": 133008,
+      "sha256": "c21ffd33e1775dafd78e4114e62d26ad07c741e9c448eb6bdd380db674f10080"
+    },
+    {
+      "path": "assets/sources/2026-11/Đề thi/hung-yen-12-gk1-ma-0113-26-27/trang-4.jpeg",
+      "original_name": "p4.jpeg",
+      "page": 4,
+      "bytes": 190915,
+      "sha256": "dbf67994109e800e02f69e199402f8e9042a0cf6871917c38f4a8ca6034e340a"
+    },
+    {
+      "path": "assets/sources/2026-11/Đề thi/hung-yen-12-gk1-ma-0113-26-27/source.pdf",
+      "original_name": "source.pdf",
+      "pages": 4,
+      "bytes": 663952,
+      "sha256": "5f3951f9bcd4c7ce6d47c42525d564c0e489b9b74c3676e0c4febee4aa4ac9c3",
+      "derivation": "Four original JPEGs placed on four A4 pages with preserved aspect ratio; publication source bundle. Original JPEG bytes retained separately."
+    }
+  ],
+  "scope": {
+    "has_questions": true,
+    "has_solutions": false,
+    "questions": 22,
+    "question_pages": [
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  "variants": {
+    "de": {
+      "filename": "de.pdf",
+      "inputs": {
+        "variant": "de"
+      }
+    }
+  },
+  "drive": {
+    "folder": "Đề thi",
+    "filenames": {
+      "de": "HUNG-YEN-12-GK1-MA-0113-26-27 - ĐỀ.pdf"
+    }
+  },
+  "content_mapping": [
+    {
+      "id": "I-4",
+      "role": "question",
+      "source": {
+        "page": 1,
+        "section": "I",
+        "number": 4
+      }
+    },
+    {
+      "id": "II-4",
+      "role": "question",
+      "source": {
+        "page": 3,
+        "section": "II",
+        "number": 4
+      }
+    },
+    {
+      "id": "III-4",
+      "role": "question",
+      "source": {
+        "page": 4,
+        "section": "III",
+        "number": 4
+      }
+    }
+  ],
+  "provenance": {
+    "transcription": "Printed source only; handwritten answer circles, annotations and auxiliary pencil lines excluded.",
+    "figures": {
+      "I-2": "cubic-extrema.svg",
+      "I-3": "cubic-variation.svg",
+      "I-9": "derivative-signs.svg",
+      "I-12": "cubic-intercept.svg",
+      "II-2": "square-pyramid.svg",
+      "III-2": "sensor-grid.svg",
+      "III-5": "number-staircase.svg"
+    },
+    "layout": "exam-lesson; 13pt Times New Roman, 0.9em leading, justified body. Green heading includes KHẢO SÁT CHẤT LƯỢNG GIỮA HK I TOÁN 12; red department #E00018 matching November Đinh Tiên Hoàng.",
+    "layout_adjustments": [
+      "Image-position references shortened to match side-by-side placement; printed mathematical content and all choices unchanged.",
+      "Only de variant; no answers, solutions or writing-space edition.",
+      "Small source figures placed beside prompts; section transitions flow without manual page breaks."
+    ],
+    "figure_models": {
+      "cubic-extrema": "y=x^3-6x^2+9x-2; extrema (1,2) and (3,-2), intercept (0,-2).",
+      "cubic-intercept": "y=x^3-3x+1; extrema (-1,3) and (1,-1), intercept (0,1).",
+      "square-pyramid": "Parallelogram projection of square ABCD; S vertically above A; SA, AB, AD hidden.",
+      "sensor-grid": "Exactly 15 positions in 5 rows and 3 columns at equal spacing; handwritten connecting lines excluded.",
+      "number-staircase": "Rows of 1 through 7 unit squares, total 28; A through G at rightmost cell of each row."
+    },
+    "heading_revision": "Department title reduced from 28pt to 24pt with title-stretch retained. Shared header uses DXT horizontal-gradient logo; 11mm badge size and placement unchanged."
+  },
+  "qa": {
+    "review_status": "pending",
+    "full_page_visual_review": "pending; no output page-preview images generated",
+    "compile": "passed",
+    "content_review": "All four photographed source pages read and compared to selectable PDF text; 12 + 4 + 6 questions, all options and 16 true/false statements retained. Handwriting excluded.",
+    "figure_review": "All seven standalone figure renders inspected; curve tick labels shifted clear of guides and curves, pyramid A label clear of hidden edge; uniform table borders.",
+    "text_bounds": "Passed on all 5 pages; 22 question labels in correct order and one final HẾT.",
+    "fonts": "All fonts embedded; Times New Roman body and New Computer Modern Math.",
+    "publication_filename": "Dry-run passed for de.pdf and bundled source.pdf; no upload performed.",
+    "layout_revision": "5 pages; short-answer question 2 prompt now starts on page 4, figure follows below. Both variation/sign tables and pyramid use 600dpi rendering from vector sources with uniform stroke widths to prevent PDF hairline enhancement differences. Rechecked text bounds on all pages.",
+    "heading_revision": "Rebuilt 5 pages and checked text bounds after 24pt stretched heading and logo update."
+  },
+  "outputs": {
+    "de": {
+      "pdf": "assets/targets/2026-11/Đề thi/hung-yen-12-gk1-ma-0113-26-27/de.pdf",
+      "pages": 5,
+      "bytes": 1605108,
+      "sha256": "64e3cb42318eb37676dcd2534d704646dba95d1ccfc361edee53f8ac946e93f5"
+    }
+  },
+  "figure_renders": [
+    {
+      "entry": "figures/render.typ",
+      "output": "figures/cubic-variation.png",
+      "inputs": {
+        "name": "cubic-variation"
+      },
+      "ppi": 600
+    },
+    {
+      "entry": "figures/render.typ",
+      "output": "figures/derivative-signs.png",
+      "inputs": {
+        "name": "derivative-signs"
+      },
+      "ppi": 600
+    },
+    {
+      "entry": "figures/render.typ",
+      "output": "figures/square-pyramid.png",
+      "inputs": {
+        "name": "square-pyramid"
+      },
+      "ppi": 600
+    }
+  ]
+}
