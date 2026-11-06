@@ -1,0 +1,441 @@
+{
+  "schema_version": 1,
+  "id": "th-buoi-23-dien-tich-hinh-phang",
+  "kind": "tinh-hoa",
+  "received_date": "2026-11-05",
+  "status": "in-progress",
+  "metadata": {
+    "title": "BUỔI 23: ỨNG DỤNG TÍCH PHÂN TÍNH DIỆN TÍCH HÌNH PHẲNG",
+    "lesson": 23,
+    "subject": "Toán 12",
+    "course": "KHÓA TINH HOA TOÀN DIỆN 9+ 2027",
+    "topic": "NGUYÊN HÀM – TÍCH PHÂN – ỨNG DỤNG"
+  },
+  "sources": [
+    {
+      "path": "assets/sources/2026-11/Chuyên đề/th-buoi-23-dien-tich-hinh-phang/source.docx",
+      "original_name": "BUỔI 23 ỨNG DỤNG TÍCH PHÂN TÍNH DIỆN TÍCH HÌNH PHẲNG.docx",
+      "bytes": 1809063,
+      "sha256": "6e7b774efcd59cf9eb61015ee110eef8f2f35114aca6de65b5923906d9660eb0",
+      "review_pdf_pages": 30
+    }
+  ],
+  "scope": {
+    "has_questions": true,
+    "has_solutions": true,
+    "questions": 45,
+    "worked_examples": 16,
+    "practice_questions": 29,
+    "theory_sections": 2
+  },
+  "variants": {
+    "de": {
+      "filename": "de.pdf",
+      "inputs": {
+        "variant": "de"
+      }
+    },
+    "de-cach": {
+      "filename": "de-cach.pdf",
+      "inputs": {
+        "variant": "de-cach"
+      }
+    },
+    "dap-an": {
+      "filename": "dap-an.pdf",
+      "inputs": {
+        "variant": "dap-an"
+      }
+    }
+  },
+  "drive": {
+    "folder": "Chuyên đề",
+    "filenames": {
+      "de": "KHÓA TH - BUỔI 23 - DIỆN TÍCH HÌNH PHẲNG - ĐỀ.pdf",
+      "de-cach": "KHÓA TH - BUỔI 23 - DIỆN TÍCH HÌNH PHẲNG - ĐỀ CÁCH.pdf",
+      "dap-an": "KHÓA TH - BUỔI 23 - DIỆN TÍCH HÌNH PHẲNG - ĐÁP ÁN.pdf"
+    }
+  },
+  "content_mapping": [
+    {
+      "id": "bai-hoc-1",
+      "role": "question",
+      "source": {
+        "body_block": 12,
+        "end_block_exclusive": 18
+      }
+    },
+    {
+      "id": "bai-hoc-2",
+      "role": "question",
+      "source": {
+        "body_block": 18,
+        "end_block_exclusive": 24
+      }
+    },
+    {
+      "id": "bai-hoc-3",
+      "role": "question",
+      "source": {
+        "body_block": 24,
+        "end_block_exclusive": 30
+      }
+    },
+    {
+      "id": "bai-hoc-4",
+      "role": "question",
+      "source": {
+        "body_block": 30,
+        "end_block_exclusive": 35
+      }
+    },
+    {
+      "id": "bai-hoc-5",
+      "role": "question",
+      "source": {
+        "body_block": 35,
+        "end_block_exclusive": 40
+      }
+    },
+    {
+      "id": "bai-hoc-6",
+      "role": "question",
+      "source": {
+        "body_block": 40,
+        "end_block_exclusive": 47
+      }
+    },
+    {
+      "id": "bai-hoc-7",
+      "role": "question",
+      "source": {
+        "body_block": 47,
+        "end_block_exclusive": 75
+      }
+    },
+    {
+      "id": "bai-hoc-8",
+      "role": "question",
+      "source": {
+        "body_block": 75,
+        "end_block_exclusive": 81
+      }
+    },
+    {
+      "id": "bai-hoc-9",
+      "role": "question",
+      "source": {
+        "body_block": 81,
+        "end_block_exclusive": 87
+      }
+    },
+    {
+      "id": "bai-hoc-10",
+      "role": "question",
+      "source": {
+        "body_block": 87,
+        "end_block_exclusive": 93
+      }
+    },
+    {
+      "id": "bai-hoc-11",
+      "role": "question",
+      "source": {
+        "body_block": 93,
+        "end_block_exclusive": 98
+      }
+    },
+    {
+      "id": "bai-hoc-12",
+      "role": "question",
+      "source": {
+        "body_block": 98,
+        "end_block_exclusive": 103
+      }
+    },
+    {
+      "id": "bai-hoc-13",
+      "role": "question",
+      "source": {
+        "body_block": 103,
+        "end_block_exclusive": 109
+      }
+    },
+    {
+      "id": "bai-hoc-14",
+      "role": "question",
+      "source": {
+        "body_block": 109,
+        "end_block_exclusive": 119
+      }
+    },
+    {
+      "id": "bai-hoc-15",
+      "role": "question",
+      "source": {
+        "body_block": 119,
+        "end_block_exclusive": 143
+      }
+    },
+    {
+      "id": "bai-hoc-16",
+      "role": "question",
+      "source": {
+        "body_block": 143,
+        "end_block_exclusive": 158
+      }
+    },
+    {
+      "id": "tu-luyen-1",
+      "role": "question",
+      "source": {
+        "body_block": 158,
+        "end_block_exclusive": 162
+      }
+    },
+    {
+      "id": "tu-luyen-2",
+      "role": "question",
+      "source": {
+        "body_block": 162,
+        "end_block_exclusive": 167
+      }
+    },
+    {
+      "id": "tu-luyen-3",
+      "role": "question",
+      "source": {
+        "body_block": 167,
+        "end_block_exclusive": 174
+      }
+    },
+    {
+      "id": "tu-luyen-4",
+      "role": "question",
+      "source": {
+        "body_block": 174,
+        "end_block_exclusive": 179
+      }
+    },
+    {
+      "id": "tu-luyen-5",
+      "role": "question",
+      "source": {
+        "body_block": 179,
+        "end_block_exclusive": 183
+      }
+    },
+    {
+      "id": "tu-luyen-6",
+      "role": "question",
+      "source": {
+        "body_block": 183,
+        "end_block_exclusive": 188
+      }
+    },
+    {
+      "id": "tu-luyen-7",
+      "role": "question",
+      "source": {
+        "body_block": 188,
+        "end_block_exclusive": 194
+      }
+    },
+    {
+      "id": "tu-luyen-8",
+      "role": "question",
+      "source": {
+        "body_block": 194,
+        "end_block_exclusive": 199
+      }
+    },
+    {
+      "id": "tu-luyen-9",
+      "role": "question",
+      "source": {
+        "body_block": 199,
+        "end_block_exclusive": 203
+      }
+    },
+    {
+      "id": "tu-luyen-10",
+      "role": "question",
+      "source": {
+        "body_block": 203,
+        "end_block_exclusive": 216
+      }
+    },
+    {
+      "id": "tu-luyen-11",
+      "role": "question",
+      "source": {
+        "body_block": 216,
+        "end_block_exclusive": 225
+      }
+    },
+    {
+      "id": "tu-luyen-12",
+      "role": "question",
+      "source": {
+        "body_block": 225,
+        "end_block_exclusive": 233
+      }
+    },
+    {
+      "id": "tu-luyen-13",
+      "role": "question",
+      "source": {
+        "body_block": 233,
+        "end_block_exclusive": 240
+      }
+    },
+    {
+      "id": "tu-luyen-14",
+      "role": "question",
+      "source": {
+        "body_block": 240,
+        "end_block_exclusive": 246
+      }
+    },
+    {
+      "id": "tu-luyen-15",
+      "role": "question",
+      "source": {
+        "body_block": 246,
+        "end_block_exclusive": 251
+      }
+    },
+    {
+      "id": "tu-luyen-16",
+      "role": "question",
+      "source": {
+        "body_block": 251,
+        "end_block_exclusive": 257
+      }
+    },
+    {
+      "id": "tu-luyen-17",
+      "role": "question",
+      "source": {
+        "body_block": 257,
+        "end_block_exclusive": 263
+      }
+    },
+    {
+      "id": "tu-luyen-18",
+      "role": "question",
+      "source": {
+        "body_block": 263,
+        "end_block_exclusive": 272
+      }
+    },
+    {
+      "id": "tu-luyen-19",
+      "role": "question",
+      "source": {
+        "body_block": 272,
+        "end_block_exclusive": 279
+      }
+    },
+    {
+      "id": "tu-luyen-20",
+      "role": "question",
+      "source": {
+        "body_block": 279,
+        "end_block_exclusive": 288
+      }
+    },
+    {
+      "id": "tu-luyen-21",
+      "role": "question",
+      "source": {
+        "body_block": 288,
+        "end_block_exclusive": 305
+      }
+    },
+    {
+      "id": "tu-luyen-22",
+      "role": "question",
+      "source": {
+        "body_block": 305,
+        "end_block_exclusive": 319
+      }
+    },
+    {
+      "id": "tu-luyen-23",
+      "role": "question",
+      "source": {
+        "body_block": 319,
+        "end_block_exclusive": 338
+      }
+    },
+    {
+      "id": "tu-luyen-24",
+      "role": "question",
+      "source": {
+        "body_block": 338,
+        "end_block_exclusive": 358
+      }
+    },
+    {
+      "id": "tu-luyen-25",
+      "role": "question",
+      "source": {
+        "body_block": 358,
+        "end_block_exclusive": 372
+      }
+    },
+    {
+      "id": "tu-luyen-26",
+      "role": "question",
+      "source": {
+        "body_block": 372,
+        "end_block_exclusive": 378
+      }
+    },
+    {
+      "id": "tu-luyen-27",
+      "role": "question",
+      "source": {
+        "body_block": 378,
+        "end_block_exclusive": 391
+      }
+    },
+    {
+      "id": "tu-luyen-28",
+      "role": "question",
+      "source": {
+        "body_block": 391,
+        "end_block_exclusive": 400
+      }
+    },
+    {
+      "id": "tu-luyen-29",
+      "role": "question",
+      "source": {
+        "body_block": 400,
+        "end_block_exclusive": 410
+      }
+    }
+  ],
+  "provenance": {
+    "transcription": "705 OLE equations decoded with complete byte consumption and compared to 705 WMF previews; two unusual endpoint attachment templates manually checked on source page 19. All 30 source pages inspected.",
+    "numbering": "Source has mixed and repeated numbering; normalize to 1–16 worked examples and 1–29 practice questions, preserving order and repeated variants.",
+    "source_corrections": [
+      "Minor spelling, missing differential in worked example 4 choices, missing S in worked example 13.",
+      "Worked example 15 solution b: line y=x+3, not y=x−8.",
+      "Worked example 16: g(2)=−3 rather than g(x)=−3; second area bounds −1→4.",
+      "Practice 10b is true: −∫c→b |f| equals positive area; repair source verdict and reversed bounds in explanation.",
+      "Practice 12 figure: right intersection x=2, not printed 3, as required by both equations and choices.",
+      "Practice 23: specify quartic f (cubic derivative) used by source solution; graph shape alone does not determine polynomial degree.",
+      "Practice 26 source refers to missing figure: reconstruct from given equations.",
+      "Practice 27: restore k>2 from visual source; exclude P=O; area S1=x0³/3, not x0²/3.",
+      "Practice 28 explanation: root −1, not 1; retain displayed correct formula.",
+      "Evaluation brackets rebuilt as evaluation notation, not absolute values; deliberately false true/false assertions remain unchanged."
+    ]
+  },
+  "qa": {
+    "review_status": "pending",
+    "full_page_visual_review": "pending"
+  }
+}
