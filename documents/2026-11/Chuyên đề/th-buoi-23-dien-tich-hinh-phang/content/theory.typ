@@ -1,37 +1,59 @@
 #import "../layout.typ": math-flow
-#let fig(name)=align(center,image("../figures/"+name+".svg",width:90mm))
+#let fig(name)=align(center,image("../figures/"+name+".svg",width:if sys.inputs.at("variant",default:"de")=="de" {105mm} else {85mm}))
+
 #let theory-one()=[
-*1. Công thức.* Cho hàm số $f$ liên tục trên $[a;b]$, $a<b$. Diện tích hình phẳng giới hạn bởi đồ thị $y=f(x)$, trục hoành và hai đường thẳng $x=a$, $x=b$ là:
-$ S=integral_a^b abs(f(x))dif x. $
+*Dạng 1: Tính diện tích hình phẳng giới hạn bởi đồ thị hàm số $y=f(x)$ và trục $O x$, 2 biên $x=a$, $x=b$.*
+
+*a)* Cho $(H): cases(y=f(x), y=0 & quad "(trục" O x ")", x=a ";" x=b & quad (a<b))$.
+
 #fig("theory-signed-area")
-Nếu chưa biết cận, giải phương trình $f(x)=0$ và xác định các giao điểm tạo nên miền cần tính. Với toàn bộ miền hữu hạn giữa đồ thị và trục hoành, lấy hai nghiệm ngoài cùng làm cận.
 
-*2. Cách bỏ dấu giá trị tuyệt đối.*
+Hình phẳng $(H)$ là phần gạch chéo trong hình. Khi đó:
+$ S_((H))=integral_a^b abs(f(x)) dif x. $
 
-*Bước 1.* Tìm các nghiệm $x_1,…,x_n$ của $f(x)=0$ trong $(a;b)$ và sắp xếp $a=x_0<x_1<…<x_n<x_(n+1)=b$.
+*Chú ý:* Nếu đề bài chưa cho cận $a$, $b$ ta cần giải phương trình hoành độ giao điểm $f(x)=0$ để tìm 2 cận $a$, $b$, với $a$ là nghiệm min, $b$ là nghiệm max của phương trình.
 
-*Bước 2.* Chia tích phân tại các nghiệm. Trên mỗi khoảng, $f$ không đổi dấu, nên:
-$ S=sum_(i=0)^n abs(integral_(x_i)^(x_(i+1)) f(x)dif x). $
-Có thể dựa vào đồ thị để xét dấu: phần trên trục hoành lấy tích phân, phần dưới trục hoành lấy đối của tích phân.
+*b)* Để phá bỏ dấu giá trị tuyệt đối ta thường làm như sau:
 
-*Bài tập vận dụng*
+\- Bước 1: Giải $f(x)=0$ tìm nghiệm $x_1,x_2,...,x_n∈(a;b)$ $(a<x_1<x_2<...<x_n<b)$.
+
+\- Bước 2: Tính
+
+#math-flow(($S$, $=integral_a^(x_1) abs(f(x)) dif x$, $+integral_(x_1)^(x_2) abs(f(x)) dif x$, $+...+integral_(x_n)^b abs(f(x)) dif x.$,))
+
+#math-flow(($=$, $abs(integral_a^(x_1) f(x) dif x)$, $+abs(integral_(x_1)^(x_2) f(x) dif x)$, $+...+abs(integral_(x_n)^b f(x) dif x).$,))
+
+*Chú ý:* Ngoài cách trên, ta có thể dựa vào đồ thị để bỏ dấu giá trị tuyệt đối.
 ]
+
 #let theory-two()=[
-*1. Công thức.* Cho $f$, $g$ liên tục trên $[a;b]$, $a<b$. Diện tích hình phẳng giới hạn bởi $y=f(x)$, $y=g(x)$ và hai đường thẳng $x=a$, $x=b$ là:
-$ S=integral_a^b abs(f(x)-g(x))dif x. $
+*Dạng 2: Tính diện tích hình phẳng giới hạn bởi đồ thị hàm số $y=f(x)$ và $y=g(x)$.*
+
 #fig("theory-two-curves")
-Nếu chưa biết cận, giải phương trình $f(x)=g(x)$ để xác định các giao điểm giới hạn miền cần tính.
 
-Ví dụ, hai đồ thị cắt nhau tại ba hoành độ $x_1<x_2<x_3$. Tổng diện tích hai miền giữa chúng là:
-$ S=integral_(x_1)^(x_3)abs(f(x)-g(x))dif x. $
+*a)* Cho $(H): cases(y=f(x), y=g(x), x=a ";" x=b & quad (a<b))$ $⇒ S_((H))=integral_a^b abs(f(x)-g(x)) dif x$.
+
+*Chú ý:* Nếu đề bài chưa cho cận $a$, $b$ thì ta phải đi giải phương trình hoành độ giao điểm $f(x)=g(x)$
+
+$⇒$ cận $a$, $b$ (cận $a$ = nghiệm min, cận $b$ = nghiệm max).
+
+*Ví dụ:* Cho $(H): cases(y=f(x), y=g(x))$.
+
 #fig("theory-intersections")
-*2. Cách bỏ dấu giá trị tuyệt đối.*
 
-*Bước 1.* Giải $f(x)=g(x)$ trên $(a;b)$; sắp xếp các nghiệm $a=x_0<x_1<…<x_n<x_(n+1)=b$.
+- $f(x)=g(x) ⇔ cases(x=x_1,x=x_2,x=x_3)$ $(x_1<x_2<x_3)$.
 
-*Bước 2.* Chia tích phân tại các giao điểm:
-$ S=sum_(i=0)^n abs(integral_(x_i)^(x_(i+1))(f(x)-g(x))dif x). $
-Trên mỗi khoảng, lấy hàm nằm trên trừ hàm nằm dưới. Có thể dùng hình vẽ để xác định thứ tự hai đồ thị.
+- $S_((H))=integral_(x_1)^(x_3) abs(f(x)-g(x)) dif x$.
 
-*Bài tập vận dụng*
+*b)* Để phá bỏ dấu giá trị tuyệt đối ta thường làm như sau:
+
+#block()[\- Bước 1: Giải $f(x)=g(x)$ tìm nghiệm $x_1,x_2,...,x_n∈(a;b)$ $(a<x_1<x_2<...<x_n<b)$.]
+
+#block(sticky:true)[\- Bước 2: Tính]
+
+#math-flow(($S$, $=integral_a^(x_1) abs(f(x)-g(x)) dif x$, $+integral_(x_1)^(x_2) abs(f(x)-g(x)) dif x$, $+...+integral_(x_n)^b abs(f(x)-g(x)) dif x.$,))
+
+#math-flow(($=$, $abs(integral_a^(x_1)(f(x)-g(x)) dif x)$, $+abs(integral_(x_1)^(x_2)(f(x)-g(x)) dif x)$, $+...+abs(integral_(x_n)^(b)(f(x)-g(x)) dif x).$,))
+
+*Chú ý:* Ngoài cách trên, ta có thể dựa vào đồ thị để bỏ dấu giá trị tuyệt đối.
 ]

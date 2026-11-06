@@ -2,7 +2,7 @@
 #let solutions=(
 "bai-hoc-1": [
 #block(sticky:true,above:0pt,below:2mm)[*Chọn A*]
-Trên $[-1;1]$, đồ thị nằm phía trên trục hoành; trên $[1;2]$, đồ thị nằm phía dưới trục hoành. Do đó:
+Dựa vào đồ thị, ta có:
 #math-flow(($S$,$=integral_(-1)^1 f(x) dif x-integral_1^2 f(x) dif x.$,))
 ],
 "bai-hoc-2": [
@@ -24,7 +24,8 @@ Ta có $x^2-x=x(x-1)$ âm trên $(0;1)$ và dương trên $(1;2)$. Vì vậy:
 #block(sticky:true,above:0pt,below:2mm)[*Chọn D*]
 Giải $x^2-4x+3=0$ được $x=1$ hoặc $x=3$. Trên $[0;1]$ hàm số không âm, trên $[1;3]$ hàm số không dương.
 #math-flow(($S$,$=integral_0^1 (x^2-4x+3) dif x-integral_1^3 (x^2-4x+3) dif x.$,))
-#math-flow(($S$,$=lr([frac(x^3,3)-2x^2+3x])_0^1-lr([frac(x^3,3)-2x^2+3x])_1^3$,$=frac(8,3).$,))
+#math-flow(($S$,$=lr([frac(x^3,3)-2x^2+3x])_0^1-lr([frac(x^3,3)-2x^2+3x])_1^3$,))
+#math-flow(($=$,$frac(8,3).$,))
 ],
 "bai-hoc-6": [
 #block(sticky:true,above:0pt,below:2mm)[*Chọn D*]
@@ -33,7 +34,7 @@ Hoành độ giao điểm thỏa mãn $x^2-2x=0$, nên $x=0$ hoặc $x=2$.
 ],
 "bai-hoc-7": [
 Từ đồ thị:
-#math-flow(($f(x)$,$=cases(x+3 & -3≤x≤-1,2 & -1≤x≤1,-2x+4 & 1≤x≤3).$,))
+#math-flow(($f(x)$,$=cases(x+3 & quad -3≤x≤-1,2 & quad -1≤x≤1,-2x+4 & quad 1≤x≤3).$,))
 *a) Sai.* Diện tích phải được tính bằng $S=integral_(-3)^3 abs(f(x)) dif x$.
 
 *b) Đúng.* Trên $[2;3]$, $f(x)≤0$, nên $S_2=-integral_2^3(-2x+4)dif x=1$.
@@ -72,8 +73,8 @@ Hoành độ giao điểm thỏa mãn:
 ],
 "bai-hoc-13": [
 #block(sticky:true,above:0pt,below:2mm)[*Chọn D*]
-Vì $m>0$, các giao điểm có $x≥0$, $y≥0$. Giải hệ $2my=x^2$, $2mx=y^2$ được hai giao điểm $(0;0)$ và $(2m;2m)$.
-#math-flow(($S$,$=integral_0^(2m)(sqrt(2mx)-frac(x^2,2m))dif x$,$=frac(4m^2,3).$,))
+Vì $m>0$, các giao điểm có $x≥0$, $y≥0$. Giải hệ $2m y=x^2$, $2m x=y^2$ được hai giao điểm $(0;0)$ và $(2m;2m)$.
+#math-flow(($S$,$=integral_0^(2m)(sqrt(2m x)-frac(x^2,2m))dif x$,$=frac(4m^2,3).$,))
 Từ $S=3$ và $m>0$, suy ra $m=frac(3,2)$.
 ],
 "bai-hoc-14": [
@@ -141,7 +142,7 @@ Hoành độ giao điểm là nghiệm của $-x^2+x+6=0$, tức $x=-2$ hoặc $
 "tu-luyen-7": [
 #block(sticky:true,above:0pt,below:2mm)[*Chọn A*]
 Đồ thị cắt trục hoành tại $x=-1/3$ và nằm trên trục hoành trong $[-1/3;0]$.
-#math-flow(($S$,$=integral_(-1/3)^0 frac(-3x-1,x-1)dif x.$,))
+#math-flow(($S$,$=integral_(-1"/"3)^0 frac(-3x-1,x-1)dif x.$,))
 #math-flow(($S$,$=lr([-3x-4ln abs(x-1)])_(-1/3)^0$,$=4ln frac(4,3)-1.$,))
 ],
 "tu-luyen-8": [
@@ -201,7 +202,7 @@ Phương trình hoành độ giao điểm $x^3-3x=x$ có các nghiệm $-2$, $0$
 "tu-luyen-17": [
 #block(sticky:true,above:0pt,below:2mm)[*Chọn D*]
 Giải $abs(ln x)=1$ được $x=1/e$ hoặc $x=e$. Trên đoạn này $abs(ln x)≤1$, nên:
-#math-flow(($S$,$=integral_(1/e)^e(1-abs(ln x))dif x.$,))
+#math-flow(($S$,$=integral_(1"/"e)^(e)(1-abs(ln x))dif x.$,))
 ],
 "tu-luyen-18": [
 #block(sticky:true,above:0pt,below:2mm)[*Chọn A*]
@@ -213,11 +214,11 @@ Vì $F$, $G$ là hai nguyên hàm của cùng hàm số trên $RR$, hiệu $G(x)
 "tu-luyen-19": [
 #block(sticky:true,above:0pt,below:2mm)[*Chọn B*]
 Giải $x^3=-2x+3$ được $x=1$. Đường cong cắt trục hoành tại $0$, đường thẳng cắt trục hoành tại $3/2$.
-#math-flow(($S$,$=integral_0^1 x^3 dif x+integral_1^(3/2)(-2x+3)dif x$,$=frac(1,4)+frac(1,4)$,$=frac(1,2).$,))
+#math-flow(($S$,$=integral_0^1 x^3 dif x+integral_1^(3"/"2)(-2x+3)dif x$,$=frac(1,4)+frac(1,4)$,$=frac(1,2).$,))
 ],
 "tu-luyen-20": [
 #block(sticky:true,above:0pt,below:2mm)[*Chọn B*]
-Ta có $f'(x)=6x^2+2ax+b$. Từ đồ thị, $f'(0)=f'(4/3)=0$, suy ra $b=0$, $a=-4$.
+Ta có $f'(x)=6x^2+2a x+b$. Từ đồ thị, $f'(0)=f'(4/3)=0$, suy ra $b=0$, $a=-4$.
 #math-flow(($f(x)-f'(x)$,$=2x^3-10x^2+8x$,$=2x(x-1)(x-4).$,))
 #math-flow(($S$,$=integral_0^1(2x^3-10x^2+8x)dif x-integral_1^4(2x^3-10x^2+8x)dif x$,$=frac(71,3).$,))
 Vậy $m+n=71+3=74$.
@@ -260,7 +261,7 @@ Lấy nguyên hàm:
 Thay $f(-1)=-frac(35,3)$ được $C=0$.
 
 *d) Đúng.* Với $g(x)=-2x^2+16x$, phương trình $f(x)=g(x)$ có nghiệm $0$, $16/3$.
-#math-flow(($S$,$=integral_0^(16/3)(frac(16,3)x^3-x^4)dif x$,$=frac(262144,1215)≈"215,756".$,))
+#math-flow(($S$,$=integral_0^(16"/"3)(frac(16,3)x^3-x^4)dif x$,$=frac(262144,1215)≈"215,756".$,))
 Làm tròn đến hàng đơn vị được $216$.
 ],
 "tu-luyen-24": [
@@ -293,7 +294,7 @@ Hai nhánh của hàm số đoạn thẳng gặp nhau tại $x=1$. Parabol cắt
 ],
 "tu-luyen-27": [
 Đặt $t=abs(x_P)>0$, khi đó $y_P=2t^2$. Nhờ tính đối xứng qua trục tung, có thể tính diện tích ở phía $x≥0$:
-#math-flow(($S_1$,$=integral_0^t(2x^2-x^2)dif x$,$=frac(t^3,3).$,))
+#math-flow(($S_1$,$=integral_0^(t)(2x^2-x^2)dif x$,$=frac(t^3,3).$,))
 Tính miền thứ hai theo biến $y$:
 #math-flow(($S_2$,$=integral_0^(2t^2)(sqrt(frac(y,2))-sqrt(frac(y,k)))dif y$,$=frac(4t^3,3)(1-sqrt(frac(2,k))).$,))
 Từ $S_1=S_2$ và $t>0$:

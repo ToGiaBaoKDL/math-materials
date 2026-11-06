@@ -8,7 +8,7 @@
  "BUỔI 23: ỨNG DỤNG TÍCH PHÂN TÍNH DIỆN TÍCH HÌNH PHẲNG",title-stretch:true,
  subtitle:[CHUYÊN ĐỀ: NGUYÊN HÀM – TÍCH PHÂN – ỨNG DỤNG]))
 #set text(size:14pt)
-#set par(leading:0.88em,spacing:3.5mm,justify:true)
+#set par(leading:0.92em,spacing:3.5mm,justify:false)
 #questions(variant)
 #if variant=="de-cach" {final-writing-space(gap:9mm)}
 #end-mark([],note-gap:0pt,above:6mm)

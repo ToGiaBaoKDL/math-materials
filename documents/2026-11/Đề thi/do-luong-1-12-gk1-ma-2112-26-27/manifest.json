@@ -289,14 +289,15 @@
     "de": {
       "pdf": "assets/targets/2026-11/Đề thi/do-luong-1-12-gk1-ma-2112-26-27/de.pdf",
       "pages": 5,
-      "bytes": 1261844,
-      "sha256": "a6a0703f475b88a4f2a8b9c1624698798cd4b7069fe6ff954eea292d3c8c5d4b"
+      "bytes": 1480149,
+      "sha256": "ff5233530f2890cf0339dcec6780e2b1d9b6ff7f1ae029f7799ecd55882add28"
     }
   },
   "qa": {
     "review_status": "pending",
     "full_page_visual_review": "pending",
     "compile": "passed",
+    "header": "Rebuilt with the shared left-to-right gradient logo; cropped header visually checked, original size and position retained.",
     "content": "22 questions in source order; all sections I-III transcribed from pages 1-4; no answers or writing variant",
     "figures": "I-3 graph enlarged 20% and checked in a cropped PDF view. III-3 net and prism enlarged and recolored red and pink; III-5 pyramid enlarged; I-4 image raised. All mathematical figures remain vector.",
     "pagination": "PDF text checked: 5 pages. Part I Q1-3 on p1 and Q4-9 on p2; Q10-12, Part II Q1 and Q2a on p3; remaining II Q2-4 and III Q1-3 text on p4; III Q3 figure and Q4-6 on p5. Full-page visual review pending.",

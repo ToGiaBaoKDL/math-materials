@@ -309,6 +309,7 @@
   writing-fill-page-end: false,
   writing-keep-prompt: true,
   writing-flow-prompt: false,
+  writing-keep-together: false,
   writing-single-page: false,
   compact-statements: false,
   statement-gap: lesson-style.statement-gap,
@@ -318,14 +319,18 @@
   keep-solution-start: false,
   solution-leading: lesson-style.leading,
   flow-stem: false,
+  figure-side: none,
   statements-table: false,
 ) = {
   let stem = [
     #if source-id != none {
       context [#metadata((id: source-id, page: counter(page).get().first())) <exercise-location>]
     }
-    #text(weight: document-style.emphasis, fill: palette.ink)[Câu #number:]
-    #text(weight: document-style.emphasis, fill: palette.question-tag)[\[DXT\]] #body
+    #let question-label = [#text(weight: document-style.emphasis, fill: palette.ink)[Câu #number:] #text(weight: document-style.emphasis, fill: palette.question-tag)[\[DXT\]]]
+    #if figure-side != none {
+      grid(columns: (58%, 1fr), gutter: 4mm, align: (left+top, center+horizon),
+        [#question-label #body], figure-side)
+    } else { [#question-label #body] }
     #if answers.len() > 0 {
       v(rhythm.answers)
       choices(answers, columns: answer-columns, column-gap: answer-column-gap, row-gap: answer-row-gap)
@@ -363,7 +368,8 @@
         )
       } else {
         grid(
-          columns: (1fr,), row-gutter: statement-gap,
+          columns: (1fr,),
+          row-gutter: statement-gap,
           ..statements.map(statement => block(width: 100%, above: 0pt, below: 0pt, statement))
         )
       })
@@ -377,7 +383,7 @@
       below: 0pt,
     )[
       #block(width: 100%, breakable: writing-flow-prompt or (statements-table and not writing-keep-prompt), sticky: writing-keep-prompt, prompt)
-      #if not writing-keep-prompt {
+      #if not writing-keep-prompt or writing-keep-together {
         block(width: 100%, breakable: false, writing-space(writing-lines, gap: writing-line-gap, heading-gap: writing-heading-gap))
       } else { writing-space(writing-lines, gap: writing-line-gap, heading-gap: writing-heading-gap) }
     ]

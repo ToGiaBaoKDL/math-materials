@@ -3,7 +3,7 @@
   "id": "th-buoi-23-dien-tich-hinh-phang",
   "kind": "tinh-hoa",
   "received_date": "2026-11-05",
-  "status": "in-progress",
+  "status": "implemented",
   "metadata": {
     "title": "BUỔI 23: ỨNG DỤNG TÍCH PHÂN TÍNH DIỆN TÍCH HÌNH PHẲNG",
     "lesson": 23,
@@ -421,8 +421,13 @@
   "provenance": {
     "transcription": "705 OLE equations decoded with complete byte consumption and compared to 705 WMF previews; two unusual endpoint attachment templates manually checked on source page 19. All 30 source pages inspected.",
     "numbering": "Source has mixed and repeated numbering; normalize to 1–16 worked examples and 1–29 practice questions, preserving order and repeated variants.",
+    "source_discrepancies_preserved": [
+      "Theory type 2 example: the original figure shades between a and b, including portions outside x1 to x3, while the accompanying formula integrates only from x1 to x3. Both are reproduced as in the source.",
+      "Practice 11: the source question calls the two regions A and B, while the source figure labels their areas S1 and S2. The source wording and figure labels are retained."
+    ],
     "source_corrections": [
       "Minor spelling, missing differential in worked example 4 choices, missing S in worked example 13.",
+      "Worked example 8: add the two curve equations from the source solution; the source drawing alone does not determine them.",
       "Worked example 15 solution b: line y=x+3, not y=x−8.",
       "Worked example 16: g(2)=−3 rather than g(x)=−3; second area bounds −1→4.",
       "Practice 10b is true: −∫c→b |f| equals positive area; repair source verdict and reversed bounds in explanation.",
@@ -436,6 +441,31 @@
   },
   "qa": {
     "review_status": "pending",
-    "full_page_visual_review": "pending"
+    "full_page_visual_review": "pending",
+    "compile": "passed",
+    "content": "45 questions in each of the three PDFs, including 16 worked examples, 29 practice questions and both theory sections; true/false statements labeled a–d.",
+    "figures": "In de.pdf, worked examples 8 and 9 are enlarged 35%, example 10 is enlarged 25%, and other figures are enlarged 20% relative to the earlier layout. Worked example 16 g(x) label and example 7 dashed guides were adjusted and checked in standalone figure views. Practice 29 endpoint labels were separated. The first Dạng 2 theory figure retains its boundaries continuing to Ox.",
+    "pagination": "Text extraction confirms 45 questions in each variant. In de-cach.pdf, worked examples 1 and 2 share page 3 with two ruled lines each, and worked examples 9 and 10 share page 9; writing areas remain unbreakable across pages. In dap-an.pdf, worked example 8 begins immediately after Dạng 2 theory on page 7 and example 9 follows its solution on page 8; question blocks and solutions flow across page boundaries. The last result of worked example 5 is on a separate line. In de.pdf, practice question 2 begins immediately after question 1 on page 9 and continues on page 10. Full-page visual review remains pending.",
+    "source_integrity": "Archived DOCX SHA-256 matches the recorded source hash."
+  },
+  "outputs": {
+    "de": {
+      "pdf": "assets/targets/2026-11/Chuyên đề/th-buoi-23-dien-tich-hinh-phang/de.pdf",
+      "pages": 19,
+      "bytes": 1709509,
+      "sha256": "d1544253c568a215d8a871178f7fb8486488bf5e3ea505cea1b533b87059cb93"
+    },
+    "de-cach": {
+      "pdf": "assets/targets/2026-11/Chuyên đề/th-buoi-23-dien-tich-hinh-phang/de-cach.pdf",
+      "pages": 29,
+      "bytes": 1750484,
+      "sha256": "1e2c78eb8771ed7f90e9dd054cf3461580d703c598c6698c516c05f0cacf8081"
+    },
+    "dap-an": {
+      "pdf": "assets/targets/2026-11/Chuyên đề/th-buoi-23-dien-tich-hinh-phang/dap-an.pdf",
+      "pages": 30,
+      "bytes": 1912762,
+      "sha256": "add3db89b962faddd83c1f63913c8a1f3ccad53d6a7b34ff79f2ea13f41f4b4a"
+    }
   }
 }
