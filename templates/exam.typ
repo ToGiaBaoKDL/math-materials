@@ -190,7 +190,7 @@
   figure-gap: 5mm,
   figure-align: top,
 ) = {
-  let head = [#text(weight: "bold", fill: question-label-color)[Câu #number.] #if question-tag != none {text(weight: "bold", fill: palette.primary)[#question-tag] + h(1.5mm)}#body]
+  let head = [#if number != none [#text(weight: "bold", fill: question-label-color)[Câu #number.] #if question-tag != none {text(weight: "bold", fill: palette.primary)[#question-tag] + h(1.5mm)}]#body]
   let statements-block = if statements.len() > 0 {
     if statements-table {
       block(above: 3mm, below: 0pt, exam-table(

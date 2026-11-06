@@ -71,7 +71,7 @@
       (head.tab-width, 0mm),
       (head.tab-bottom, head.height),
       (0mm, head.height),
-      fill: palette.primary,
+      fill: gradient.linear(rgb("#E02232"), palette.primary, angle: 0deg),
       stroke: none,
     ))
     #place(top + left, polygon(
@@ -89,7 +89,7 @@
     ))
     #let badge-display = if branded {
       image(
-        "/assets/branding/logo-gradient.png",
+        "/assets/branding/logo-original.png",
         width: head.badge-diameter,
         height: head.badge-diameter,
         fit: "contain",

@@ -67,15 +67,49 @@
       "inputs": {
         "variant": "de"
       }
+    },
+    "de-cach": {
+      "filename": "de-cach.pdf",
+      "inputs": {
+        "variant": "de-cach"
+      }
     }
   },
   "drive": {
     "folder": "Đề thi",
     "filenames": {
-      "de": "HUNG-YEN-12-GK1-MA-0113-26-27 - ĐỀ.pdf"
+      "de": "HUNG-YEN-12-GK1-MA-0113-26-27 - ĐỀ.pdf",
+      "de-cach": "HUNG-YEN-12-GK1-MA-0113-26-27 - ĐỀ CÁCH.pdf"
     }
   },
   "content_mapping": [
+    {
+      "id": "I-1",
+      "role": "question",
+      "source": {
+        "page": 1,
+        "section": "I",
+        "number": 1
+      }
+    },
+    {
+      "id": "I-2",
+      "role": "question",
+      "source": {
+        "page": 1,
+        "section": "I",
+        "number": 2
+      }
+    },
+    {
+      "id": "I-3",
+      "role": "question",
+      "source": {
+        "page": 1,
+        "section": "I",
+        "number": 3
+      }
+    },
     {
       "id": "I-4",
       "role": "question",
@@ -83,6 +117,105 @@
         "page": 1,
         "section": "I",
         "number": 4
+      }
+    },
+    {
+      "id": "I-5",
+      "role": "question",
+      "source": {
+        "page": 1,
+        "section": "I",
+        "number": 5
+      }
+    },
+    {
+      "id": "I-6",
+      "role": "question",
+      "source": {
+        "page": 1,
+        "section": "I",
+        "number": 6
+      }
+    },
+    {
+      "id": "I-7",
+      "role": "question",
+      "source": {
+        "page": 2,
+        "section": "I",
+        "number": 7
+      }
+    },
+    {
+      "id": "I-8",
+      "role": "question",
+      "source": {
+        "page": 2,
+        "section": "I",
+        "number": 8
+      }
+    },
+    {
+      "id": "I-9",
+      "role": "question",
+      "source": {
+        "page": 2,
+        "section": "I",
+        "number": 9
+      }
+    },
+    {
+      "id": "I-10",
+      "role": "question",
+      "source": {
+        "page": 2,
+        "section": "I",
+        "number": 10
+      }
+    },
+    {
+      "id": "I-11",
+      "role": "question",
+      "source": {
+        "page": 2,
+        "section": "I",
+        "number": 11
+      }
+    },
+    {
+      "id": "I-12",
+      "role": "question",
+      "source": {
+        "page": 2,
+        "section": "I",
+        "number": 12
+      }
+    },
+    {
+      "id": "II-1",
+      "role": "question",
+      "source": {
+        "page": 2,
+        "section": "II",
+        "number": 1
+      }
+    },
+    {
+      "id": "II-2",
+      "role": "question",
+      "source": {
+        "page": 3,
+        "section": "II",
+        "number": 2
+      }
+    },
+    {
+      "id": "II-3",
+      "role": "question",
+      "source": {
+        "page": 3,
+        "section": "II",
+        "number": 3
       }
     },
     {
@@ -95,12 +228,57 @@
       }
     },
     {
+      "id": "III-1",
+      "role": "question",
+      "source": {
+        "page": 3,
+        "section": "III",
+        "number": 1
+      }
+    },
+    {
+      "id": "III-2",
+      "role": "question",
+      "source": {
+        "page": 4,
+        "section": "III",
+        "number": 2
+      }
+    },
+    {
+      "id": "III-3",
+      "role": "question",
+      "source": {
+        "page": 4,
+        "section": "III",
+        "number": 3
+      }
+    },
+    {
       "id": "III-4",
       "role": "question",
       "source": {
         "page": 4,
         "section": "III",
         "number": 4
+      }
+    },
+    {
+      "id": "III-5",
+      "role": "question",
+      "source": {
+        "page": 4,
+        "section": "III",
+        "number": 5
+      }
+    },
+    {
+      "id": "III-6",
+      "role": "question",
+      "source": {
+        "page": 4,
+        "section": "III",
+        "number": 6
       }
     }
   ],
@@ -115,11 +293,11 @@
       "III-2": "sensor-grid.svg",
       "III-5": "number-staircase.svg"
     },
-    "layout": "exam-lesson; 13pt Times New Roman, 0.9em leading, justified body. Green heading includes KHẢO SÁT CHẤT LƯỢNG GIỮA HK I TOÁN 12; red department #E00018 matching November Đinh Tiên Hoàng.",
+    "layout": "Livestream edition following xuan-phuong-12-gk1-ma-1220-26-27: lesson heading with gradient DXT header logo, VIPDXT footer, black question labels with red [DXT] tags.",
     "layout_adjustments": [
-      "Image-position references shortened to match side-by-side placement; printed mathematical content and all choices unchanged.",
-      "Only de variant; no answers, solutions or writing-space edition.",
-      "Small source figures placed beside prompts; section transitions flow without manual page breaks."
+      "Two publication variants: de keeps the original five-page exam paper with tighter rhythm and the sensor grid placed below its prompt; de-cach adds Lời giải headings plus 9 mm ruled writing space and fills the page remainder.",
+      "Handwriting annotations omitted; no answer key or invented solutions added.",
+      "Figures placed beside or below their prompts; page 1 uses wider question gaps and extra variation-table spacing, page 2 ends at Question 10, and Section III Question 2 starts on page 4 and continues with its sensor grid on page 5."
     ],
     "figure_models": {
       "cubic-extrema": "y=x^3-6x^2+9x-2; extrema (1,2) and (3,-2), intercept (0,-2).",
@@ -128,26 +306,32 @@
       "sensor-grid": "Exactly 15 positions in 5 rows and 3 columns at equal spacing; handwritten connecting lines excluded.",
       "number-staircase": "Rows of 1 through 7 unit squares, total 28; A through G at rightmost cell of each row."
     },
-    "heading_revision": "Department title reduced from 28pt to 24pt with title-stretch retained. Shared header uses DXT horizontal-gradient logo; 11mm badge size and placement unchanged."
+    "heading_revision": "Department title 28pt stretched red; course banner 19pt to keep KHẢO SÁT CHẤT LƯỢNG GIỮA HK I TOÁN 12 on one line; original DXT logo with right-to-left lightening gradient header tab in header."
   },
   "qa": {
     "review_status": "pending",
-    "full_page_visual_review": "pending; no output page-preview images generated",
     "compile": "passed",
-    "content_review": "All four photographed source pages read and compared to selectable PDF text; 12 + 4 + 6 questions, all options and 16 true/false statements retained. Handwriting excluded.",
-    "figure_review": "All seven standalone figure renders inspected; curve tick labels shifted clear of guides and curves, pyramid A label clear of hidden edge; uniform table borders.",
-    "text_bounds": "Passed on all 5 pages; 22 question labels in correct order and one final HẾT.",
-    "fonts": "All fonts embedded; Times New Roman body and New Computer Modern Math.",
-    "publication_filename": "Dry-run passed for de.pdf and bundled source.pdf; no upload performed.",
-    "layout_revision": "5 pages; short-answer question 2 prompt now starts on page 4, figure follows below. Both variation/sign tables and pyramid use 600dpi rendering from vector sources with uniform stroke widths to prevent PDF hairline enhancement differences. Rechecked text bounds on all pages.",
-    "heading_revision": "Rebuilt 5 pages and checked text bounds after 24pt stretched heading and logo update."
+    "content_review": "All four photographed source pages read and compared to selectable PDF text; 12 + 4 + 6 questions, all options and 16 true/false statements retained in both variants. Handwriting excluded; no answer key or solutions added.",
+    "figure_review": "All seven standalone figure renders inspected; curve tick labels clear of guides and curves, pyramid A label clear of hidden edge; uniform table borders.",
+    "text_bounds": "Passed on all 5 de and 11 de-cach pages; body text within the 12 mm side margins, livestream header and full-width footer placed in the page margins; 22 red [DXT] labels and one final HẾT per variant.",
+    "fonts": "All fonts embedded; Times New Roman body, New Computer Modern Math, Arial course/title, original DXT logo with right-to-left lightening gradient header tab.",
+    "full_page_visual_review": "Passed: all 5 de pages at 100-150 dpi and all 11 de-cach pages inspected (de-cach: I.1-2, I.3-5, I.6-9, I.10-12, II.1, II.2, II.3, II.4, III.1-2, III.3-4, and III.5-6 with HẾT); heading banner one line, DXT tags red, footer aligned, writing lines and HẾT placement clean.",
+    "publication_filename": "Declared for de.pdf and de-cach.pdf; no upload performed.",
+    "layout_revision": "Livestream lesson layout: de keeps the original 5 pages with 1em leading, 2.5 mm paragraph spacing, wider page-1 gaps, extra variation-table spacing, and the 25 mm sensor grid below the prompt; page 2 ends at Question 10 and Section III Question 2 splits across pages 4-5. de-cach runs 11 pages with 1.2em leading, 9 mm ruled writing space, and ruled page-remainder fill before every forced page break; Section I questions grouped 1-2, 3-5, 6-9, 10-12; Section III Question 2 places the 22 mm sensor grid beside the prompt.",
+    "heading_revision": "Course banner reduced to 19pt to fit one line; department title 28pt stretched; header right-aligned and VIPDXT footer left-aligned per Xuân Phương."
   },
   "outputs": {
     "de": {
       "pdf": "assets/targets/2026-11/Đề thi/hung-yen-12-gk1-ma-0113-26-27/de.pdf",
       "pages": 5,
-      "bytes": 1605108,
-      "sha256": "64e3cb42318eb37676dcd2534d704646dba95d1ccfc361edee53f8ac946e93f5"
+      "bytes": 1390373,
+      "sha256": "c3ca5b8d1920ea3f416af1dd6c2c85f8ac6631582e516f05639a7b489998de16"
+    },
+    "de-cach": {
+      "pdf": "assets/targets/2026-11/Đề thi/hung-yen-12-gk1-ma-0113-26-27/de-cach.pdf",
+      "pages": 11,
+      "bytes": 1416061,
+      "sha256": "19db1cc0a8700ef02b1a1aa710955b4839053dca45ce86315947264a285784c5"
     }
   },
   "figure_renders": [
@@ -175,5 +359,9 @@
       },
       "ppi": 600
     }
-  ]
+  ],
+  "publication": {
+    "include_writing": true,
+    "combine_answers": false
+  }
 }
