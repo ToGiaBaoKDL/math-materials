@@ -168,12 +168,12 @@ if variant == "de" {
   q(2,[Một trung tâm logistics lắp đặt hệ thống cảm biến thông minh để giám sát nhà kho. Trong kho có 15 vị trí chờ được thiết kế sẵn trên trần nhà, sắp xếp thành một lưới gồm 5 hàng ngang và 3 hàng dọc #emph[(khoảng cách giữa các hàng kề nhau và các cột kề nhau là bằng nhau)]. Kỹ sư cần chọn ra 3 vị trí trong số 15 vị trí này để lắp đặt ba cảm biến định vị sao cho ba vị trí là ba đỉnh của một tam giác #emph[(vùng giám sát chỉ được thiết lập tối ưu khi ba cảm biến này tạo thành ba đỉnh của một tam giác)]
   #block(breakable: false)[
     #emph[(tham khảo hình vẽ)]. Kỹ sư có bao nhiêu cách lựa chọn ba vị trí lắp đặt thỏa mãn yêu cầu trên?
-    #fig("sensor-grid.svg", 25mm)
+    #fig("sensor-grid.svg", 32mm)
   ]
   ],keep-together:false,keep-body:false,split:true,question-gap: 7mm)
 } else {
   q(2,[Một trung tâm logistics lắp đặt hệ thống cảm biến thông minh để giám sát nhà kho. Trong kho có 15 vị trí chờ được thiết kế sẵn trên trần nhà, sắp xếp thành một lưới gồm 5 hàng ngang và 3 hàng dọc #emph[(khoảng cách giữa các hàng kề nhau và các cột kề nhau là bằng nhau)]. Kỹ sư cần chọn ra 3 vị trí trong số 15 vị trí này để lắp đặt ba cảm biến định vị sao cho ba vị trí là ba đỉnh của một tam giác #emph[(vùng giám sát chỉ được thiết lập tối ưu khi ba cảm biến này tạo thành ba đỉnh của một tam giác)] #emph[(tham khảo hình vẽ)]. Kỹ sư có bao nhiêu cách lựa chọn ba vị trí lắp đặt thỏa mãn yêu cầu trên?
-  ],figure:image("../figures/sensor-grid.svg",width:22mm),figure-gap:8mm,keep-together:false,keep-body:false,lines:4)
+  ],figure:image("../figures/sensor-grid.svg",width:32mm),figure-gap:8mm,keep-together:false,keep-body:false,lines:4)
 }
 
 page-end()

@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="58mm" height="48mm" viewBox="0 0 58 48">
+<!-- hidden dashed edges -->
+<path d="M22,23 L20,8 M22,23 L14,35 M22,23 L44,23" fill="none" stroke="#B00012" stroke-width="0.55" stroke-dasharray="1.5 1" />
+
+<!-- visible solid edges -->
+<!-- top face A'B'C'D' -->
+<path d="M20,8 L12,20 L34,20 L42,8 Z" fill="none" stroke="#B00012" stroke-width="0.55" />
+<!-- bottom face ABCD -->
+<path d="M14,35 L36,35 L44,23" fill="none" stroke="#B00012" stroke-width="0.55" />
+<!-- vertical edges -->
+<path d="M12,20 L14,35 M34,20 L36,35 M42,8 L44,23" fill="none" stroke="#B00012" stroke-width="0.55" />
+
+<!-- labels -->
+<g font-family="Times New Roman" font-style="italic" font-size="3.6" fill="#111" text-anchor="middle">
+  <text x="20" y="4.5">A′</text>
+  <text x="8" y="19">B′</text>
+  <text x="34" y="17">C′</text>
+  <text x="45" y="5">D′</text>
+  <text x="24" y="28">A</text>
+  <text x="12" y="41">B</text>
+  <text x="37" y="41">C</text>
+  <text x="49" y="25.5">D</text>
+</g>
+</svg>

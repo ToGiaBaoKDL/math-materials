@@ -71,7 +71,7 @@
       (head.tab-width, 0mm),
       (head.tab-bottom, head.height),
       (0mm, head.height),
-      fill: gradient.linear(rgb("#E02232"), palette.primary, angle: 0deg),
+      fill: gradient.linear((rgb("#E02232"), 0%), (palette.primary, 33%), (palette.primary, 100%), angle: 0deg),
       stroke: none,
     ))
     #place(top + left, polygon(

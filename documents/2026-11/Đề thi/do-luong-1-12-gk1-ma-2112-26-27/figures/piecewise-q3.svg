@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="58mm" height="49mm" viewBox="0 3 58 49">
+<defs>
+  <marker id="arr" markerWidth="5" markerHeight="5" refX="4.3" refY="2.5" orient="auto">
+    <path d="M0,0 L5,2.5 L0,5 Z" fill="#222" />
+  </marker>
+</defs>
+<!-- dashed lines for (3, 2) -->
+<line x1="12" y1="22.00" x2="45.00" y2="22.00" stroke="#67727A" stroke-width="0.3" stroke-dasharray="1.2 .9" />
+<line x1="45.00" y1="38" x2="45.00" y2="22.00" stroke="#67727A" stroke-width="0.3" stroke-dasharray="1.2 .9" />
+
+<!-- axes -->
+<line x1="5" y1="38" x2="52" y2="38" stroke="#222" stroke-width="0.32" marker-end="url(#arr)" />
+<line x1="12" y1="50" x2="12" y2="5" stroke="#222" stroke-width="0.32" marker-end="url(#arr)" />
+
+<!-- curve -->
+<path d="M 12.00,46.00 C 13.10,23.60 14.20,18.00 15.85,18.00 C 18.05,18.00 19.70,42.00 21.90,42.00 C 24.65,42.00 27.40,27.60 30.70,27.60 C 34.00,27.60 35.65,42.80 38.40,42.80 C 41.15,42.80 43.35,26.00 45.00,22.00" fill="none" stroke="#B00012" stroke-width="0.65" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M45,22 C46.65,18 47.4,12.5 49,8" fill="none" stroke="#B00012" stroke-width="0.65" stroke-linecap="round" />
+<circle cx="12" cy="46" r="0.9" fill="#222" />
+<!-- end dot at (3, 2) -->
+<circle cx="45.00" cy="22.00" r="0.9" fill="#222" />
+
+<!-- labels -->
+<text x="50" y="36" font-family="Times New Roman" font-style="italic" font-size="3.6" fill="#111">x</text>
+<text x="8.5" y="7" font-family="Times New Roman" font-style="italic" font-size="3.6" fill="#111">y</text>
+<text x="9" y="41.5" font-family="Times New Roman" font-style="italic" font-size="3.4" fill="#111">O</text>
+
+<text x="9" y="23.20" text-anchor="end" font-family="Times New Roman" font-size="3.2" fill="#111">2</text>
+<text x="9" y="47.20" text-anchor="end" font-family="Times New Roman" font-size="3.2" fill="#111">−1</text>
+<text x="45.00" y="42.00" text-anchor="middle" font-family="Times New Roman" font-size="3.2" fill="#111">3</text>
+</svg>

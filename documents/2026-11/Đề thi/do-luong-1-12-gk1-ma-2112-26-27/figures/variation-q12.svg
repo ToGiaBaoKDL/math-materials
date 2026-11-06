@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="125mm" height="43mm" viewBox="0 0 125 43">
+<defs>
+  <marker id="arr" markerWidth="4" markerHeight="4" refX="3.8" refY="2" orient="auto">
+    <path d="M0,0 L4,2 L0,4 Z" fill="#222" />
+  </marker>
+</defs>
+<rect x="1" y="1" width="123" height="9" fill="#F2B8C5" />
+<path d="M1,10 L124,10" fill="none" stroke="#222" stroke-width=".5" />
+<path d="M1,19 L124,19" fill="none" stroke="#222" stroke-width=".5" />
+<path d="M12,1 L12,42" fill="none" stroke="#222" stroke-width=".5" />
+<text x="6.5" y="7" text-anchor="middle" font-family="Times New Roman" font-style="italic" font-size="3.8" fill="#111">x</text>
+<text x="6.5" y="16" text-anchor="middle" font-family="Times New Roman" font-style="italic" font-size="3.8" fill="#111">y′</text>
+<text x="6.5" y="32" text-anchor="middle" font-family="Times New Roman" font-style="italic" font-size="3.8" fill="#111">y</text>
+
+<!-- x values -->
+<text x="20.0" y="7" text-anchor="middle" font-family="Times New Roman" font-size="3.8" fill="#111">−∞</text>
+<text x="43.0" y="7" text-anchor="middle" font-family="Times New Roman" font-size="3.8" fill="#111">−10</text>
+<text x="68.0" y="7" text-anchor="middle" font-family="Times New Roman" font-size="3.8" fill="#111">−4</text>
+<text x="94.0" y="7" text-anchor="middle" font-family="Times New Roman" font-size="3.8" fill="#111">2</text>
+<text x="117.0" y="7" text-anchor="middle" font-family="Times New Roman" font-size="3.8" fill="#111">+∞</text>
+
+<!-- y' values -->
+<text x="31.5" y="16" text-anchor="middle" font-family="Times New Roman" font-size="3.8" fill="#111">−</text>
+<text x="43.0" y="16" text-anchor="middle" font-family="Times New Roman" font-size="3.8" fill="#111">0</text>
+<text x="55.5" y="16" text-anchor="middle" font-family="Times New Roman" font-size="3.8" fill="#111">+</text>
+
+<!-- double bar at x = -4 -->
+<path d="M67.6,10 L67.6,42" fill="none" stroke="#222" stroke-width=".5" />
+<path d="M68.4,10 L68.4,42" fill="none" stroke="#222" stroke-width=".5" />
+
+<text x="81.0" y="16" text-anchor="middle" font-family="Times New Roman" font-size="3.8" fill="#111">+</text>
+<text x="94.0" y="16" text-anchor="middle" font-family="Times New Roman" font-size="3.8" fill="#111">0</text>
+<text x="105.5" y="16" text-anchor="middle" font-family="Times New Roman" font-size="3.8" fill="#111">−</text>
+
+<!-- y values & arrows -->
+<!-- -inf to -10: +inf down to 24 -->
+<text x="20.0" y="24" text-anchor="middle" font-family="Times New Roman" font-size="3.8" fill="#111">+∞</text>
+<text x="43.0" y="40" text-anchor="middle" font-family="Times New Roman" font-size="3.8" fill="#111">24</text>
+<path d="M25.0,26 L38.0,38" fill="none" stroke="#222" stroke-width=".42" marker-end="url(#arr)" />
+
+<!-- -10 to -4: 24 up to +inf -->
+<text x="61.0" y="24" text-anchor="middle" font-family="Times New Roman" font-size="3.8" fill="#111">+∞</text>
+<path d="M47.0,38 L57.0,26" fill="none" stroke="#222" stroke-width=".42" marker-end="url(#arr)" />
+
+<!-- -4 to 2: -inf up to 0 -->
+<text x="74.0" y="40" text-anchor="middle" font-family="Times New Roman" font-size="3.8" fill="#111">−∞</text>
+<text x="94.0" y="24" text-anchor="middle" font-family="Times New Roman" font-size="3.8" fill="#111">0</text>
+<path d="M78.0,38 L90.0,26" fill="none" stroke="#222" stroke-width=".42" marker-end="url(#arr)" />
+
+<!-- 2 to +inf: 0 down to -inf -->
+<text x="117.0" y="40" text-anchor="middle" font-family="Times New Roman" font-size="3.8" fill="#111">−∞</text>
+<path d="M98.0,26 L112.0,38" fill="none" stroke="#222" stroke-width=".42" marker-end="url(#arr)" />
+
+<!-- outer border -->
+<rect x="1" y="1" width="123" height="41" fill="none" stroke="#222" stroke-width=".5" />
+</svg>

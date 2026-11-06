@@ -324,14 +324,14 @@
     "de": {
       "pdf": "assets/targets/2026-11/Đề thi/hung-yen-12-gk1-ma-0113-26-27/de.pdf",
       "pages": 5,
-      "bytes": 1390373,
-      "sha256": "c3ca5b8d1920ea3f416af1dd6c2c85f8ac6631582e516f05639a7b489998de16"
+      "bytes": 1390245,
+      "sha256": "4d370d84fe52786a67e44f7c93ea079f27bf84142561a5d05e13b77dbff9ed4d"
     },
     "de-cach": {
       "pdf": "assets/targets/2026-11/Đề thi/hung-yen-12-gk1-ma-0113-26-27/de-cach.pdf",
       "pages": 11,
-      "bytes": 1416061,
-      "sha256": "19db1cc0a8700ef02b1a1aa710955b4839053dca45ce86315947264a285784c5"
+      "bytes": 1415946,
+      "sha256": "dfc11d12ba82be183961e83b4de7b9c71feed4b2bbdc68999462340440061197"
     }
   },
   "figure_renders": [

@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="58mm" height="54mm" viewBox="0 0 58 54">
+<!-- base: A back-left(18,36), B back-right(48,36), C front-right(38,48), D front-left(8,48) -->
+<!-- O center (28, 42), S apex (28, 6) -->
+
+<!-- dashed hidden edges -->
+<path d="M18,36 L48,36" fill="none" stroke="#B00012" stroke-width="0.45" stroke-dasharray="1.5 1" />
+<path d="M18,36 L8,48" fill="none" stroke="#B00012" stroke-width="0.45" stroke-dasharray="1.5 1" />
+<path d="M28,6 L18,36" fill="none" stroke="#B00012" stroke-width="0.45" stroke-dasharray="1.5 1" />
+<!-- diagonals AC and BD -->
+<path d="M18,36 L38,48" fill="none" stroke="#B00012" stroke-width="0.4" stroke-dasharray="1.5 1" />
+<path d="M8,48 L48,36" fill="none" stroke="#B00012" stroke-width="0.4" stroke-dasharray="1.5 1" />
+<!-- height SO -->
+<path d="M28,6 L28,42" fill="none" stroke="#B00012" stroke-width="0.4" stroke-dasharray="1.5 1" />
+
+<!-- visible solid edges -->
+<path d="M8,48 L38,48 L48,36" fill="none" stroke="#B00012" stroke-width="0.45" />
+<path d="M28,6 L8,48 M28,6 L38,48 M28,6 L48,36" fill="none" stroke="#B00012" stroke-width="0.45" />
+
+<!-- labels -->
+<g font-family="Times New Roman" font-style="italic" font-size="3.6" fill="#111" text-anchor="middle">
+  <text x="28" y="4.5">S</text>
+  <text x="15" y="36">A</text>
+  <text x="51" y="37">B</text>
+  <text x="41" y="52">C</text>
+  <text x="5.5" y="50">D</text>
+  <text x="29" y="46">O</text>
+</g>
+</svg>

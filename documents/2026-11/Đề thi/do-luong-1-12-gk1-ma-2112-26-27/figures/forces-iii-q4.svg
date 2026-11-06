@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="54mm" height="45mm" viewBox="2 5 54 45">
+<defs>
+  <marker id="arrF" markerWidth="4" markerHeight="4" refX="3.8" refY="2" orient="auto">
+    <path d="M0,0 L4,2 L0,4 Z" fill="#B00012" />
+  </marker>
+</defs>
+<!-- Plane of F1, F2 (OADB) -->
+<polygon points="26,34 10,44 34,44 50,34" fill="#FBE1E7" stroke="none" opacity="0.6" />
+
+<!-- Parallelogram OADB edges -->
+<line x1="10" y1="44" x2="34" y2="44" stroke="#B00012" stroke-width="0.38" />
+<line x1="50" y1="34" x2="34" y2="44" stroke="#B00012" stroke-width="0.38" />
+<!-- diagonal OD -->
+<line x1="26" y1="34" x2="34" y2="44" stroke="#B00012" stroke-width="0.38" />
+
+<!-- Parallelogram ODEC (OD, OC -> OE) -->
+<line x1="29" y1="11" x2="37" y2="21" stroke="#B00012" stroke-width="0.38" />
+<line x1="34" y1="44" x2="37" y2="21" stroke="#B00012" stroke-width="0.38" />
+
+<!-- Vector arrows from O(26, 34) -->
+<line x1="26" y1="34" x2="10" y2="44" stroke="#B00012" stroke-width="0.55" marker-end="url(#arrF)" />
+<line x1="26" y1="34" x2="50" y2="34" stroke="#B00012" stroke-width="0.55" marker-end="url(#arrF)" />
+<line x1="26" y1="34" x2="29" y2="11" stroke="#B00012" stroke-width="0.55" marker-end="url(#arrF)" />
+<line x1="26" y1="34" x2="37" y2="21" stroke="#B00012" stroke-width="0.55" marker-end="url(#arrF)" />
+
+<!-- angle arc 120 deg between F1 and F2 at O -->
+<path d="M21,37 Q25,38 29,34" fill="none" stroke="#222" stroke-width="0.3" />
+<text x="24" y="40.5" font-family="Times New Roman" font-size="2.8" fill="#111">120°</text>
+
+<!-- Vertex Labels -->
+<g font-family="Times New Roman" font-style="italic" font-size="3.4" fill="#111">
+  <text x="23" y="34">O</text>
+  <text x="6" y="47">A</text>
+  <text x="52" y="35">B</text>
+  <text x="28" y="9">C</text>
+  <text x="35" y="47">D</text>
+  <text x="39" y="21">E</text>
+</g>
+
+<!-- Vector Labels with drawn vector arrow above F -->
+<!-- F1 at (13, 39) -->
+<g transform="translate(12, 36)">
+  <path d="M0,0 L3.2,0 M2.2,-0.7 L3.2,0 L2.2,0.7" fill="none" stroke="#111" stroke-width="0.25" />
+  <text x="0" y="3.2" font-family="Times New Roman" font-style="italic" font-size="3.2" fill="#111">F<tspan font-size="2.4" font-style="normal" dy="1">1</tspan></text>
+</g>
+<!-- F2 at (40, 32) -->
+<g transform="translate(42, 29)">
+  <path d="M0,0 L3.2,0 M2.2,-0.7 L3.2,0 L2.2,0.7" fill="none" stroke="#111" stroke-width="0.25" />
+  <text x="0" y="3.2" font-family="Times New Roman" font-style="italic" font-size="3.2" fill="#111">F<tspan font-size="2.4" font-style="normal" dy="1">2</tspan></text>
+</g>
+<!-- F3 at (23, 20) -->
+<g transform="translate(23, 19)">
+  <path d="M0,0 L3.2,0 M2.2,-0.7 L3.2,0 L2.2,0.7" fill="none" stroke="#111" stroke-width="0.25" />
+  <text x="0" y="3.2" font-family="Times New Roman" font-style="italic" font-size="3.2" fill="#111">F<tspan font-size="2.4" font-style="normal" dy="1">3</tspan></text>
+</g>
+<!-- F at (31, 26) -->
+<g transform="translate(29, 23)">
+  <path d="M0,0 L3.2,0 M2.2,-0.7 L3.2,0 L2.2,0.7" fill="none" stroke="#111" stroke-width="0.25" />
+  <text x="0" y="3.2" font-family="Times New Roman" font-style="italic" font-size="3.2" fill="#111">F</text>
+</g>
+</svg>

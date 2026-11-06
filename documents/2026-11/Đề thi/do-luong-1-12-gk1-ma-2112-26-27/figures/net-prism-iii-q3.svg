@@ -1,0 +1,119 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="140mm" height="72mm" viewBox="0 0 140 72">
+<defs>
+  <marker id="dimArr" markerWidth="4" markerHeight="4" refX="3.5" refY="2" orient="auto">
+    <path d="M0,0 L4,2 L0,4 Z" fill="#222" />
+  </marker>
+  <marker id="dimArrRev" markerWidth="4" markerHeight="4" refX="0.5" refY="2" orient="auto">
+    <path d="M4,0 L0,2 L4,4 Z" fill="#222" />
+  </marker>
+</defs>
+
+<!-- ================= HÌNH 1 ================= -->
+<g transform="translate(10, 7)">
+  <!-- Shaded 4 corner cutouts -->
+  <polygon points="0,0 12,0 7,7 0,7" fill="#F3AAB8" stroke="none" />
+  <polygon points="24,0 12,0 17,7 24,7" fill="#F3AAB8" stroke="none" />
+  <polygon points="0,48 12,48 7,41 0,41" fill="#F3AAB8" stroke="none" />
+  <polygon points="24,48 12,48 17,41 24,41" fill="#F3AAB8" stroke="none" />
+
+  <!-- Outer frame of cardboard -->
+  <rect x="0" y="0" width="24" height="48" fill="none" stroke="#B00012" stroke-width="0.45" />
+
+  <!-- Fold dashed lines -->
+  <line x1="7" y1="7" x2="7" y2="41" stroke="#B00012" stroke-width="0.38" stroke-dasharray="1.2 .9" />
+  <line x1="17" y1="7" x2="17" y2="41" stroke="#B00012" stroke-width="0.38" stroke-dasharray="1.2 .9" />
+  <line x1="7" y1="7" x2="17" y2="7" stroke="#B00012" stroke-width="0.38" stroke-dasharray="1.2 .9" />
+  <line x1="7" y1="41" x2="17" y2="41" stroke="#B00012" stroke-width="0.38" stroke-dasharray="1.2 .9" />
+
+  <!-- Triangle legs -->
+  <line x1="7" y1="7" x2="12" y2="0" stroke="#B00012" stroke-width="0.45" />
+  <line x1="17" y1="7" x2="12" y2="0" stroke="#B00012" stroke-width="0.45" />
+  <line x1="7" y1="41" x2="12" y2="48" stroke="#B00012" stroke-width="0.45" />
+  <line x1="17" y1="41" x2="12" y2="48" stroke="#B00012" stroke-width="0.45" />
+
+  <!-- Triangle height dashed line -->
+  <line x1="12" y1="0" x2="12" y2="7" stroke="#B00012" stroke-width="0.3" stroke-dasharray="1 .8" />
+  <line x1="12" y1="41" x2="12" y2="48" stroke="#B00012" stroke-width="0.3" stroke-dasharray="1 .8" />
+
+  <!-- dimension indicators -->
+  <text x="-3.5" y="4.5" font-family="Times New Roman" font-style="italic" font-size="3.2" fill="#111">h</text>
+  <text x="-3.5" y="45.5" font-family="Times New Roman" font-style="italic" font-size="3.2" fill="#111">h</text>
+  <text x="-3.5" y="25" font-family="Times New Roman" font-size="3.4" fill="#111">8</text>
+  <text x="12" y="-2" text-anchor="middle" font-family="Times New Roman" font-size="3.4" fill="#111">4 m</text>
+  <text x="26" y="25" font-family="Times New Roman" font-style="italic" font-size="3.4" fill="#111">y</text>
+
+  <text x="12" y="56" text-anchor="middle" font-family="Times New Roman" font-style="italic" font-size="3.8" font-weight="bold" fill="#111">Hình 1</text>
+</g>
+
+<!-- ================= HÌNH 2 ================= -->
+<g transform="translate(56, 7)">
+  <!-- The net after cut -->
+  <!-- Middle rectangle dark gray -->
+  <rect x="7" y="7" width="10" height="34" fill="#F3AAB8" stroke="none" />
+  <!-- Side rectangles lighter gray -->
+  <rect x="0" y="7" width="7" height="34" fill="#FBE1E7" stroke="none" />
+  <rect x="17" y="7" width="7" height="34" fill="#FBE1E7" stroke="none" />
+  <!-- Triangles -->
+  <polygon points="7,7 17,7 12,0" fill="#F3AAB8" stroke="none" />
+  <polygon points="7,41 17,41 12,48" fill="#F3AAB8" stroke="none" />
+
+  <!-- Boundary of cut net -->
+  <path d="M0,7 L7,7 L12,0 L17,7 L24,7 L24,41 L17,41 L12,48 L7,41 L0,41 Z" fill="none" stroke="#B00012" stroke-width="0.45" />
+
+  <!-- Fold dashed lines -->
+  <line x1="7" y1="7" x2="7" y2="41" stroke="#B00012" stroke-width="0.38" stroke-dasharray="1.2 .9" />
+  <line x1="17" y1="7" x2="17" y2="41" stroke="#B00012" stroke-width="0.38" stroke-dasharray="1.2 .9" />
+  <line x1="7" y1="7" x2="17" y2="7" stroke="#B00012" stroke-width="0.38" stroke-dasharray="1.2 .9" />
+  <line x1="7" y1="41" x2="17" y2="41" stroke="#B00012" stroke-width="0.38" stroke-dasharray="1.2 .9" />
+
+  <!-- Triangle height dashed -->
+  <line x1="12" y1="0" x2="12" y2="7" stroke="#B00012" stroke-width="0.3" stroke-dasharray="1 .8" />
+  <line x1="12" y1="41" x2="12" y2="48" stroke="#B00012" stroke-width="0.3" stroke-dasharray="1 .8" />
+
+  <!-- Labels -->
+  <text x="3.5" y="5" text-anchor="middle" font-family="Times New Roman" font-style="italic" font-size="3.2" fill="#111">x</text>
+  <text x="20.5" y="5" text-anchor="middle" font-family="Times New Roman" font-style="italic" font-size="3.2" fill="#111">x</text>
+  <text x="6.5" y="-0.5" font-family="Times New Roman" font-style="italic" font-size="3.0" fill="#111">x</text>
+  <text x="16.5" y="-0.5" font-family="Times New Roman" font-style="italic" font-size="3.0" fill="#111">x</text>
+
+  <!-- height dimension arrows -->
+  <line x1="26" y1="0" x2="26" y2="7" stroke="#B00012" stroke-width="0.25" marker-start="url(#dimArrRev)" marker-end="url(#dimArr)" />
+  <text x="28" y="4.5" font-family="Times New Roman" font-style="italic" font-size="3.0" fill="#111">h</text>
+  <line x1="26" y1="41" x2="26" y2="48" stroke="#B00012" stroke-width="0.25" marker-start="url(#dimArrRev)" marker-end="url(#dimArr)" />
+  <text x="28" y="45.5" font-family="Times New Roman" font-style="italic" font-size="3.0" fill="#111">h</text>
+
+  <text x="-2.5" y="25" font-family="Times New Roman" font-style="italic" font-size="3.4" fill="#111">y</text>
+  <text x="25.5" y="25" font-family="Times New Roman" font-style="italic" font-size="3.4" fill="#111">y</text>
+
+  <text x="12" y="56" text-anchor="middle" font-family="Times New Roman" font-style="italic" font-size="3.8" font-weight="bold" fill="#111">Hình 2</text>
+</g>
+
+<!-- ================= HÌNH 3 ================= -->
+<g transform="translate(98, 16)">
+  <!-- 3D Triangular prism -->
+  <polygon points="11,28 33,8 40,18 18,38" fill="#F3AAB8" stroke="none" />
+  <polygon points="4,38 18,38 11,28" fill="#FBE1E7" stroke="none" />
+
+  <!-- Hidden edges -->
+  <line x1="4" y1="38" x2="26" y2="18" stroke="#B00012" stroke-width="0.4" stroke-dasharray="1.5 1" />
+  <line x1="26" y1="18" x2="40" y2="18" stroke="#B00012" stroke-width="0.4" stroke-dasharray="1.5 1" />
+  <line x1="26" y1="18" x2="33" y2="8" stroke="#B00012" stroke-width="0.4" stroke-dasharray="1.5 1" />
+
+  <!-- Visible edges -->
+  <polygon points="4,38 18,38 11,28" fill="none" stroke="#B00012" stroke-width="0.45" />
+  <line x1="11" y1="28" x2="33" y2="8" stroke="#B00012" stroke-width="0.45" />
+  <line x1="18" y1="38" x2="40" y2="18" stroke="#B00012" stroke-width="0.45" />
+  <line x1="33" y1="8" x2="40" y2="18" stroke="#B00012" stroke-width="0.45" />
+
+  <!-- Height h in front triangle -->
+  <line x1="11" y1="28" x2="11" y2="38" stroke="#B00012" stroke-width="0.3" stroke-dasharray="1 .8" />
+  <line x1="0" y1="28" x2="0" y2="38" stroke="#B00012" stroke-width="0.25" marker-start="url(#dimArrRev)" marker-end="url(#dimArr)" />
+  <text x="-2" y="34" text-anchor="end" font-family="Times New Roman" font-style="italic" font-size="3.2" fill="#111">h</text>
+
+  <!-- length y arrow -->
+  <line x1="21" y1="41" x2="43" y2="21" stroke="#B00012" stroke-width="0.25" marker-start="url(#dimArrRev)" marker-end="url(#dimArr)" />
+  <text x="33" y="34" font-family="Times New Roman" font-style="italic" font-size="3.4" fill="#111">y</text>
+
+  <text x="22" y="47" text-anchor="middle" font-family="Times New Roman" font-style="italic" font-size="3.8" font-weight="bold" fill="#111">Hình 3</text>
+</g>
+</svg>

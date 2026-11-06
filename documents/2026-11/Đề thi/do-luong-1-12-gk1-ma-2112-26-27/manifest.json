@@ -1,0 +1,305 @@
+{
+  "schema_version": 1,
+  "id": "do-luong-1-12-gk1-ma-2112-26-27",
+  "kind": "exam",
+  "received_date": "2026-11-06",
+  "status": "implemented",
+  "metadata": {
+    "title": "ĐỀ KIỂM TRA GIỮA HỌC KÌ I – THPT ĐÔ LƯƠNG 1 – TOÁN 12 – 2026–2027",
+    "subject": "Toán 12",
+    "school_year": "2026–2027",
+    "exam_code": "2112",
+    "duration_minutes": 90,
+    "school": "THPT Đô Lương 1",
+    "department": "Sở Giáo dục và Đào tạo Nghệ An"
+  },
+  "sources": [
+    {
+      "path": "assets/sources/2026-11/Đề thi/do-luong-1-12-gk1-ma-2112-26-27/trang-1.jpeg",
+      "original_name": "p1.jpeg",
+      "page": 1,
+      "bytes": 772934,
+      "sha256": "5b1d289a6d6289c7b9e8acd83edee45e4f0f420c82b83ce516c79174c353f73c"
+    },
+    {
+      "path": "assets/sources/2026-11/Đề thi/do-luong-1-12-gk1-ma-2112-26-27/trang-2.jpeg",
+      "original_name": "p2.jpeg",
+      "page": 2,
+      "bytes": 711512,
+      "sha256": "35cc918cf471f4bb7cb9641df251f4f7c6183cefff2e25564c910c15ab09642c"
+    },
+    {
+      "path": "assets/sources/2026-11/Đề thi/do-luong-1-12-gk1-ma-2112-26-27/trang-3.jpeg",
+      "original_name": "p3.jpeg",
+      "page": 3,
+      "bytes": 963782,
+      "sha256": "b8ed5aa70bb0cb28d19ecd935f024c1152abd91ee59c0233037e8d545f8b7d3b"
+    },
+    {
+      "path": "assets/sources/2026-11/Đề thi/do-luong-1-12-gk1-ma-2112-26-27/trang-4.jpeg",
+      "original_name": "p4.jpeg",
+      "page": 4,
+      "bytes": 812719,
+      "sha256": "ccbc775cfd003cc1a694aabd28d3cd59baf768e22599e0487c15349350694df2"
+    },
+    {
+      "path": "assets/sources/2026-11/Đề thi/do-luong-1-12-gk1-ma-2112-26-27/source.pdf",
+      "original_name": "source.pdf",
+      "pages": 4,
+      "bytes": 3043616,
+      "sha256": "27289a77dc3c61a08e3572848f4d50b455554189c60b95d08ad1a14983296731",
+      "derivation": "Four photographed pages assembled into multi-page source PDF."
+    }
+  ],
+  "scope": {
+    "has_questions": true,
+    "has_solutions": false,
+    "questions": 22,
+    "question_pages": [
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  "variants": {
+    "de": {
+      "filename": "de.pdf",
+      "inputs": {
+        "variant": "de"
+      }
+    }
+  },
+  "drive": {
+    "folder": "Đề thi",
+    "filenames": {
+      "de": "DO-LUONG-1-12-GK1-MA-2112-26-27 - ĐỀ.pdf"
+    }
+  },
+  "content_mapping": [
+    {
+      "id": "I-1",
+      "role": "question",
+      "source": {
+        "page": 1,
+        "section": "I",
+        "number": 1
+      }
+    },
+    {
+      "id": "I-2",
+      "role": "question",
+      "source": {
+        "page": 1,
+        "section": "I",
+        "number": 2
+      }
+    },
+    {
+      "id": "I-3",
+      "role": "question",
+      "source": {
+        "page": 1,
+        "section": "I",
+        "number": 3
+      }
+    },
+    {
+      "id": "I-4",
+      "role": "question",
+      "source": {
+        "page": 1,
+        "section": "I",
+        "number": 4
+      }
+    },
+    {
+      "id": "I-5",
+      "role": "question",
+      "source": {
+        "page": 2,
+        "section": "I",
+        "number": 5
+      }
+    },
+    {
+      "id": "I-6",
+      "role": "question",
+      "source": {
+        "page": 2,
+        "section": "I",
+        "number": 6
+      }
+    },
+    {
+      "id": "I-7",
+      "role": "question",
+      "source": {
+        "page": 2,
+        "section": "I",
+        "number": 7
+      }
+    },
+    {
+      "id": "I-8",
+      "role": "question",
+      "source": {
+        "page": 2,
+        "section": "I",
+        "number": 8
+      }
+    },
+    {
+      "id": "I-9",
+      "role": "question",
+      "source": {
+        "page": 2,
+        "section": "I",
+        "number": 9
+      }
+    },
+    {
+      "id": "I-10",
+      "role": "question",
+      "source": {
+        "page": 2,
+        "section": "I",
+        "number": 10
+      }
+    },
+    {
+      "id": "I-11",
+      "role": "question",
+      "source": {
+        "page": 2,
+        "section": "I",
+        "number": 11
+      }
+    },
+    {
+      "id": "I-12",
+      "role": "question",
+      "source": {
+        "page": 2,
+        "section": "I",
+        "number": 12
+      }
+    },
+    {
+      "id": "II-1",
+      "role": "question",
+      "source": {
+        "page": 3,
+        "section": "II",
+        "number": 1
+      }
+    },
+    {
+      "id": "II-2",
+      "role": "question",
+      "source": {
+        "page": 3,
+        "section": "II",
+        "number": 2
+      }
+    },
+    {
+      "id": "II-3",
+      "role": "question",
+      "source": {
+        "page": 3,
+        "section": "II",
+        "number": 3
+      }
+    },
+    {
+      "id": "II-4",
+      "role": "question",
+      "source": {
+        "page": 3,
+        "section": "II",
+        "number": 4
+      }
+    },
+    {
+      "id": "III-1",
+      "role": "question",
+      "source": {
+        "page": 3,
+        "section": "III",
+        "number": 1
+      }
+    },
+    {
+      "id": "III-2",
+      "role": "question",
+      "source": {
+        "page": 3,
+        "section": "III",
+        "number": 2
+      }
+    },
+    {
+      "id": "III-3",
+      "role": "question",
+      "source": {
+        "page": 3,
+        "section": "III",
+        "number": 3
+      }
+    },
+    {
+      "id": "III-4",
+      "role": "question",
+      "source": {
+        "page": 4,
+        "section": "III",
+        "number": 4
+      }
+    },
+    {
+      "id": "III-5",
+      "role": "question",
+      "source": {
+        "page": 4,
+        "section": "III",
+        "number": 5
+      }
+    },
+    {
+      "id": "III-6",
+      "role": "question",
+      "source": {
+        "page": 4,
+        "section": "III",
+        "number": 6
+      }
+    }
+  ],
+  "provenance": {
+    "template": "Standard exam-lesson template; red theme #B00012, three-platform contact-links footer, header branding, 13pt body, leading 0.9em.",
+    "source_notes": [
+      "Four photographed pages (p1.jpeg - p4.jpeg), 1920x2560 each, containing full 22 questions across three parts.",
+      "The source paper is from Sở GD&ĐT Nghệ An - THPT Đô Lương 1, exam code 2112, 90 minutes.",
+      "Only question paper was provided; no solutions were included in the source."
+    ],
+    "figures": "12 figures drawn as vector SVGs: 3 variation tables, 2 function graphs, 2 parallelepipeds, 2 regular pyramids, net and 3D folding prism diagrams, and 3D force equilibrium vectors."
+  },
+  "outputs": {
+    "de": {
+      "pdf": "assets/targets/2026-11/Đề thi/do-luong-1-12-gk1-ma-2112-26-27/de.pdf",
+      "pages": 5,
+      "bytes": 1261844,
+      "sha256": "a6a0703f475b88a4f2a8b9c1624698798cd4b7069fe6ff954eea292d3c8c5d4b"
+    }
+  },
+  "qa": {
+    "review_status": "pending",
+    "full_page_visual_review": "pending",
+    "compile": "passed",
+    "content": "22 questions in source order; all sections I-III transcribed from pages 1-4; no answers or writing variant",
+    "figures": "I-3 graph enlarged 20% and checked in a cropped PDF view. III-3 net and prism enlarged and recolored red and pink; III-5 pyramid enlarged; I-4 image raised. All mathematical figures remain vector.",
+    "pagination": "PDF text checked: 5 pages. Part I Q1-3 on p1 and Q4-9 on p2; Q10-12, Part II Q1 and Q2a on p3; remaining II Q2-4 and III Q1-3 text on p4; III Q3 figure and Q4-6 on p5. Full-page visual review pending.",
+    "fonts": "Times New Roman, New Computer Modern Math, Arial."
+  }
+}
