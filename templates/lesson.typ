@@ -120,11 +120,11 @@
   body
 }
 
-#let lesson-section(title, number: none, badge: none, above: lesson-style.section-above, palette: palette) = block(
+#let lesson-section(title, number: none, badge: none, above: lesson-style.section-above, below: 5mm, palette: palette) = block(
   width: 100%,
   sticky: true,
   above: above,
-  below: 5mm,
+  below: below,
 )[
   #set par(justify: false)
   #layout(size => {
@@ -299,6 +299,7 @@
   variant: "de",
   question-gap: rhythm.question,
   writing-lines: 6,
+  answer-gap: rhythm.answers,
   answer-columns: auto,
   answer-column-gap: none,
   answer-row-gap: none,
@@ -320,6 +321,7 @@
   solution-leading: lesson-style.leading,
   flow-stem: false,
   figure-side: none,
+  figure-columns: (58%, 1fr),
   statements-table: false,
 ) = {
   let stem = [
@@ -328,11 +330,11 @@
     }
     #let question-label = [#text(weight: document-style.emphasis, fill: palette.ink)[Câu #number:] #text(weight: document-style.emphasis, fill: palette.question-tag)[\[DXT\]]]
     #if figure-side != none {
-      grid(columns: (58%, 1fr), gutter: 4mm, align: (left+top, center+horizon),
+      grid(columns: figure-columns, gutter: 4mm, align: (left+top, center+horizon),
         [#question-label #body], figure-side)
     } else { [#question-label #body] }
     #if answers.len() > 0 {
-      v(rhythm.answers)
+      v(answer-gap)
       choices(answers, columns: answer-columns, column-gap: answer-column-gap, row-gap: answer-row-gap)
     }
   ]

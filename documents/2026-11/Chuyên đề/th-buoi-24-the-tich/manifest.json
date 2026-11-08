@@ -1,0 +1,396 @@
+{
+  "schema_version": 1,
+  "id": "th-buoi-24-the-tich",
+  "kind": "tinh-hoa",
+  "received_date": "2026-11-07",
+  "status": "implemented",
+  "metadata": {
+    "title": "BUỔI 24: ỨNG DỤNG TÍCH PHÂN TÍNH THỂ TÍCH",
+    "lesson": 24,
+    "subject": "Toán 12",
+    "course": "KHÓA TINH HOA TOÀN DIỆN 9+ 2027",
+    "topic": "NGUYÊN HÀM – TÍCH PHÂN – ỨNG DỤNG"
+  },
+  "sources": [
+    {
+      "path": "assets/sources/2026-11/Chuyên đề/th-buoi-24-the-tich/source.docx",
+      "original_name": "BUỔI 24 ỨNG DỤNG TÍCH PHÂN TÍNH THỂ TÍCH.docx",
+      "bytes": 1418588,
+      "sha256": "51c6acbbc71f6bfa2a966409bba36769ed64ff3fa7fc8235d1c81c098681ca65",
+      "review_pdf_pages": 21
+    }
+  ],
+  "scope": {
+    "has_questions": true,
+    "has_solutions": true,
+    "questions": 36,
+    "worked_examples": 12,
+    "practice_questions": 24,
+    "theory_sections": 3
+  },
+  "variants": {
+    "de": {
+      "filename": "de.pdf",
+      "inputs": {
+        "variant": "de"
+      }
+    },
+    "de-cach": {
+      "filename": "de-cach.pdf",
+      "inputs": {
+        "variant": "de-cach"
+      }
+    },
+    "dap-an": {
+      "filename": "dap-an.pdf",
+      "inputs": {
+        "variant": "dap-an"
+      }
+    }
+  },
+  "drive": {
+    "folder": "Chuyên đề",
+    "filenames": {
+      "de": "KHÓA TH - BUỔI 24 - THỂ TÍCH - ĐỀ.pdf",
+      "de-cach": "KHÓA TH - BUỔI 24 - THỂ TÍCH - ĐỀ CÁCH.pdf",
+      "dap-an": "KHÓA TH - BUỔI 24 - THỂ TÍCH - ĐÁP ÁN.pdf"
+    }
+  },
+  "content_mapping": [
+    {
+      "id": "bai-hoc-1",
+      "role": "question",
+      "source": {
+        "body_block": 7,
+        "end_block_exclusive": 14
+      }
+    },
+    {
+      "id": "bai-hoc-2",
+      "role": "question",
+      "source": {
+        "body_block": 14,
+        "end_block_exclusive": 20
+      }
+    },
+    {
+      "id": "bai-hoc-3",
+      "role": "question",
+      "source": {
+        "body_block": 20,
+        "end_block_exclusive": 24
+      }
+    },
+    {
+      "id": "bai-hoc-4",
+      "role": "question",
+      "source": {
+        "body_block": 28,
+        "end_block_exclusive": 33
+      }
+    },
+    {
+      "id": "bai-hoc-5",
+      "role": "question",
+      "source": {
+        "body_block": 33,
+        "end_block_exclusive": 41
+      }
+    },
+    {
+      "id": "bai-hoc-6",
+      "role": "question",
+      "source": {
+        "body_block": 41,
+        "end_block_exclusive": 46
+      }
+    },
+    {
+      "id": "bai-hoc-7",
+      "role": "question",
+      "source": {
+        "body_block": 46,
+        "end_block_exclusive": 52
+      }
+    },
+    {
+      "id": "bai-hoc-8",
+      "role": "question",
+      "source": {
+        "body_block": 52,
+        "end_block_exclusive": 57
+      }
+    },
+    {
+      "id": "bai-hoc-9",
+      "role": "question",
+      "source": {
+        "body_block": 57,
+        "end_block_exclusive": 70
+      }
+    },
+    {
+      "id": "bai-hoc-10",
+      "role": "question",
+      "source": {
+        "body_block": 75,
+        "end_block_exclusive": 83
+      }
+    },
+    {
+      "id": "bai-hoc-11",
+      "role": "question",
+      "source": {
+        "body_block": 83,
+        "end_block_exclusive": 93
+      }
+    },
+    {
+      "id": "bai-hoc-12",
+      "role": "question",
+      "source": {
+        "body_block": 93,
+        "end_block_exclusive": 103
+      }
+    },
+    {
+      "id": "tu-luyen-1",
+      "role": "question",
+      "source": {
+        "body_block": 104,
+        "end_block_exclusive": 109
+      }
+    },
+    {
+      "id": "tu-luyen-2",
+      "role": "question",
+      "source": {
+        "body_block": 109,
+        "end_block_exclusive": 114
+      }
+    },
+    {
+      "id": "tu-luyen-3",
+      "role": "question",
+      "source": {
+        "body_block": 114,
+        "end_block_exclusive": 120
+      }
+    },
+    {
+      "id": "tu-luyen-4",
+      "role": "question",
+      "source": {
+        "body_block": 120,
+        "end_block_exclusive": 125
+      }
+    },
+    {
+      "id": "tu-luyen-5",
+      "role": "question",
+      "source": {
+        "body_block": 125,
+        "end_block_exclusive": 128
+      }
+    },
+    {
+      "id": "tu-luyen-6",
+      "role": "question",
+      "source": {
+        "body_block": 128,
+        "end_block_exclusive": 132
+      }
+    },
+    {
+      "id": "tu-luyen-7",
+      "role": "question",
+      "source": {
+        "body_block": 132,
+        "end_block_exclusive": 137
+      }
+    },
+    {
+      "id": "tu-luyen-8",
+      "role": "question",
+      "source": {
+        "body_block": 137,
+        "end_block_exclusive": 145
+      }
+    },
+    {
+      "id": "tu-luyen-9",
+      "role": "question",
+      "source": {
+        "body_block": 145,
+        "end_block_exclusive": 149
+      }
+    },
+    {
+      "id": "tu-luyen-10",
+      "role": "question",
+      "source": {
+        "body_block": 149,
+        "end_block_exclusive": 154
+      }
+    },
+    {
+      "id": "tu-luyen-11",
+      "role": "question",
+      "source": {
+        "body_block": 154,
+        "end_block_exclusive": 158
+      }
+    },
+    {
+      "id": "tu-luyen-12",
+      "role": "question",
+      "source": {
+        "body_block": 158,
+        "end_block_exclusive": 164
+      }
+    },
+    {
+      "id": "tu-luyen-13",
+      "role": "question",
+      "source": {
+        "body_block": 164,
+        "end_block_exclusive": 169
+      }
+    },
+    {
+      "id": "tu-luyen-14",
+      "role": "question",
+      "source": {
+        "body_block": 169,
+        "end_block_exclusive": 173
+      }
+    },
+    {
+      "id": "tu-luyen-15",
+      "role": "question",
+      "source": {
+        "body_block": 173,
+        "end_block_exclusive": 179
+      }
+    },
+    {
+      "id": "tu-luyen-16",
+      "role": "question",
+      "source": {
+        "body_block": 179,
+        "end_block_exclusive": 185
+      }
+    },
+    {
+      "id": "tu-luyen-17",
+      "role": "question",
+      "source": {
+        "body_block": 185,
+        "end_block_exclusive": 193
+      }
+    },
+    {
+      "id": "tu-luyen-18",
+      "role": "question",
+      "source": {
+        "body_block": 193,
+        "end_block_exclusive": 202
+      }
+    },
+    {
+      "id": "tu-luyen-19",
+      "role": "question",
+      "source": {
+        "body_block": 202,
+        "end_block_exclusive": 207
+      }
+    },
+    {
+      "id": "tu-luyen-20",
+      "role": "question",
+      "source": {
+        "body_block": 207,
+        "end_block_exclusive": 212
+      }
+    },
+    {
+      "id": "tu-luyen-21",
+      "role": "question",
+      "source": {
+        "body_block": 212,
+        "end_block_exclusive": 228
+      }
+    },
+    {
+      "id": "tu-luyen-22",
+      "role": "question",
+      "source": {
+        "body_block": 228,
+        "end_block_exclusive": 246
+      }
+    },
+    {
+      "id": "tu-luyen-23",
+      "role": "question",
+      "source": {
+        "body_block": 246,
+        "end_block_exclusive": 260
+      }
+    },
+    {
+      "id": "tu-luyen-24",
+      "role": "question",
+      "source": {
+        "body_block": 260,
+        "end_block_exclusive": 279
+      }
+    }
+  ],
+  "provenance": {
+    "transcription": "503 OLE equations decoded and matched against 503 WMF previews; source numbering normalized to worked examples 1–12 and practice 1–24.",
+    "figures": "21 editable SVG illustrations generated by figures/generate.py and compared individually with the archived source illustrations. Revisions restore source projection and visibility for the square-section vessel and pyramid, plane sections, cap equator and ellipse halves, revolution direction, reflected boundaries, and the hollow toy rim/axis. Function curves and circular angles are computed from the stated equations. Original source images remain archived in the DOCX only.",
+    "source_corrections": [
+      "Worked example 2 solution: correct upper integration bound from 2 to 1.",
+      "Practice 9 solution: correct the antiderivative of x+2 to x²/2+2x.",
+      "Practice 12 solution: on [0,1] the two curves lie on the same side of the x-axis, not opposite sides.",
+      "Practice 15 solution: add the missing square to the integrand for the volume of revolution.",
+      "Practice 23(c) solution: the absolute-value integral is 1, not 1/12; the source false verdict is unchanged.",
+      "Evaluation bars and differentials normalized to native Typst notation; intentionally false statements remain unchanged."
+    ],
+    "source_discrepancies_preserved": [
+      "Worked example 11: the source gives a,b as positive integers but does not require a/b to be in lowest terms. The question is preserved; the solution explains why P is not unique without that condition and identifies the interpretation behind source answer 73."
+    ]
+  },
+  "qa": {
+    "review_status": "pending",
+    "full_page_visual_review": "pending",
+    "compile": "passed",
+    "content_review": "36 exercises (12 worked and 24 practice), all 503 MathType OLE equations decoded and matched to their WMF previews; corrections and unresolved source ambiguity recorded separately. Complete page-by-page source proofing remains pending.",
+    "figure_review": "Square-section model: right-angle marker endpoints recalculated from the projected x/depth rays at their vertices; dimension leader now points to the vertical side of the square section rather than its base edge. Render inspected individually. Other earlier figure checks retained; full-page visual review pending.",
+    "figures": "Vector figure geometry retained except the corrected square-section markers/leader. Layout overrides: question-only toy 72 mm and pyramid 90 mm, solution graph of worked example 10 68 mm. Earlier variant-specific compact cap and sphere pair retained. Answer-only practice 13 illustration is now 64 mm wide; geometry and labels unchanged. Answer-only practice 19 pair height reduced to 50 mm; other variants unchanged. Answer-only practice 22 pyramid width is 78 mm; geometry and the other variants unchanged. Final answer compaction: solution pyramid 80 mm, toy 80 mm, intersecting-spheres diagram 64 mm; vector geometry unchanged.",
+    "pagination": "Answer PDF now 21 pages, with complete practice 24(d), final volume calculation, verdict and HẾT on page 21. It retains 36 questions and 36 solution headings. Question-only and writing PDFs remain unchanged at 11 and 20 pages. Compaction is local to the final exercises: smaller solution pyramid and toy illustrations, narrower final figure/text grid, and tighter paragraph/statement/title gaps; body font size and line leading unchanged.",
+    "header": "Shared DXT header uses the original logo and a tab gradient lightening from right to left.",
+    "text_bounds": "Final answer PDF bbox check finds no body words outside x=30–570 pt; 36 question labels and 36 solution headings verified. Full-page visual review remains pending.",
+    "writing_balance": "Equal minimum 3 lines and shared fractional remainder retained. First question now shares page 1 with theory and its complete ruled area; no writing lines from that question spill onto page 2. Overall writing variant reduced from 21 to 20 pages."
+  },
+  "outputs": {
+    "de": {
+      "pdf": "assets/targets/2026-11/Chuyên đề/th-buoi-24-the-tich/de.pdf",
+      "pages": 11,
+      "bytes": 1425585,
+      "sha256": "a704ccf289a40177320d56940bf10fb2f48660c33dbe6543e26ecbd9e4c8cef4"
+    },
+    "de-cach": {
+      "pdf": "assets/targets/2026-11/Chuyên đề/th-buoi-24-the-tich/de-cach.pdf",
+      "pages": 20,
+      "bytes": 1459195,
+      "sha256": "63a8d28ef6d8f3bcca5dcbc4870ff0c79b7d9556ad9326c3320bddfd69dfc424"
+    },
+    "dap-an": {
+      "pdf": "assets/targets/2026-11/Chuyên đề/th-buoi-24-the-tich/dap-an.pdf",
+      "pages": 21,
+      "bytes": 1627964,
+      "sha256": "25999b11fe3cd57614277f5af19a89cf56191c165ef9bacf7c4a2fcb6d72cd07"
+    }
+  }
+}
