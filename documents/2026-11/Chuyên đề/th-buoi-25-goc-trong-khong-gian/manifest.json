@@ -1,0 +1,309 @@
+{
+  "schema_version": 1,
+  "id": "th-buoi-25-goc-trong-khong-gian",
+  "kind": "tinh-hoa",
+  "received_date": "2026-11-11",
+  "status": "implemented",
+  "metadata": {
+    "title": "BUỔI 25: GÓC GIỮA HAI ĐƯỜNG THẲNG CHÉO NHAU – GÓC GIỮA ĐƯỜNG THẲNG VÀ MẶT PHẲNG",
+    "lesson": 25,
+    "subject": "Toán 12",
+    "course": "KHÓA TINH HOA TOÀN DIỆN 9+ 2027",
+    "topic": "HÌNH HỌC KHÔNG GIAN THUẦN TÚY"
+  },
+  "sources": [
+    {
+      "path": "assets/sources/2026-11/Chuyên đề/th-buoi-25-goc-trong-khong-gian/source.docx",
+      "original_name": "BUỔI 25 GÓC GIỮA 2 ĐƯỜNG THẲNG CHÉO NHAU - GÓC GIỮA ĐƯỜNG THẲNG VÀ MẶT PHẲNG.docx",
+      "bytes": 1533153,
+      "sha256": "e063221e4881e001da19eada3a876869896adcfbd889551cfd57dcd802228383",
+      "review_pdf_pages": 20
+    }
+  ],
+  "scope": {
+    "has_questions": true,
+    "has_solutions": true,
+    "questions": 25,
+    "worked_examples": 9,
+    "practice_questions": 16,
+    "theory_sections": 2
+  },
+  "variants": {
+    "de": {
+      "filename": "de.pdf",
+      "inputs": {
+        "variant": "de"
+      }
+    },
+    "de-cach": {
+      "filename": "de-cach.pdf",
+      "inputs": {
+        "variant": "de-cach"
+      }
+    },
+    "dap-an": {
+      "filename": "dap-an.pdf",
+      "inputs": {
+        "variant": "dap-an"
+      }
+    }
+  },
+  "content_mapping": [
+    {
+      "id": "bai-hoc-1",
+      "source": {
+        "body_block": 10,
+        "end_block_exclusive": 17
+      },
+      "role": "question"
+    },
+    {
+      "id": "bai-hoc-2",
+      "source": {
+        "body_block": 17,
+        "end_block_exclusive": 24
+      },
+      "role": "question"
+    },
+    {
+      "id": "bai-hoc-3",
+      "source": {
+        "body_block": 24,
+        "end_block_exclusive": 33
+      },
+      "role": "question"
+    },
+    {
+      "id": "bai-hoc-4",
+      "source": {
+        "body_block": 33,
+        "end_block_exclusive": 43
+      },
+      "role": "question"
+    },
+    {
+      "id": "bai-hoc-5",
+      "source": {
+        "body_block": 43,
+        "end_block_exclusive": 57
+      },
+      "role": "question"
+    },
+    {
+      "id": "bai-hoc-6",
+      "source": {
+        "body_block": 70,
+        "end_block_exclusive": 76
+      },
+      "role": "question"
+    },
+    {
+      "id": "bai-hoc-7",
+      "source": {
+        "body_block": 76,
+        "end_block_exclusive": 84
+      },
+      "role": "question"
+    },
+    {
+      "id": "bai-hoc-8",
+      "source": {
+        "body_block": 84,
+        "end_block_exclusive": 93
+      },
+      "role": "question"
+    },
+    {
+      "id": "bai-hoc-9",
+      "source": {
+        "body_block": 93,
+        "end_block_exclusive": 103
+      },
+      "role": "question"
+    },
+    {
+      "id": "tu-luyen-1",
+      "source": {
+        "body_block": 104,
+        "end_block_exclusive": 111
+      },
+      "role": "question"
+    },
+    {
+      "id": "tu-luyen-2",
+      "source": {
+        "body_block": 111,
+        "end_block_exclusive": 117
+      },
+      "role": "question"
+    },
+    {
+      "id": "tu-luyen-3",
+      "source": {
+        "body_block": 117,
+        "end_block_exclusive": 125
+      },
+      "role": "question"
+    },
+    {
+      "id": "tu-luyen-4",
+      "source": {
+        "body_block": 125,
+        "end_block_exclusive": 137
+      },
+      "role": "question"
+    },
+    {
+      "id": "tu-luyen-5",
+      "source": {
+        "body_block": 137,
+        "end_block_exclusive": 147
+      },
+      "role": "question"
+    },
+    {
+      "id": "tu-luyen-6",
+      "source": {
+        "body_block": 147,
+        "end_block_exclusive": 158
+      },
+      "role": "question"
+    },
+    {
+      "id": "tu-luyen-7",
+      "source": {
+        "body_block": 158,
+        "end_block_exclusive": 170
+      },
+      "role": "question"
+    },
+    {
+      "id": "tu-luyen-8",
+      "source": {
+        "body_block": 170,
+        "end_block_exclusive": 186
+      },
+      "role": "question"
+    },
+    {
+      "id": "tu-luyen-9",
+      "source": {
+        "body_block": 186,
+        "end_block_exclusive": 197
+      },
+      "role": "question"
+    },
+    {
+      "id": "tu-luyen-10",
+      "source": {
+        "body_block": 197,
+        "end_block_exclusive": 203
+      },
+      "role": "question"
+    },
+    {
+      "id": "tu-luyen-11",
+      "source": {
+        "body_block": 203,
+        "end_block_exclusive": 209
+      },
+      "role": "question"
+    },
+    {
+      "id": "tu-luyen-12",
+      "source": {
+        "body_block": 209,
+        "end_block_exclusive": 217
+      },
+      "role": "question"
+    },
+    {
+      "id": "tu-luyen-13",
+      "source": {
+        "body_block": 217,
+        "end_block_exclusive": 223
+      },
+      "role": "question"
+    },
+    {
+      "id": "tu-luyen-14",
+      "source": {
+        "body_block": 223,
+        "end_block_exclusive": 232
+      },
+      "role": "question"
+    },
+    {
+      "id": "tu-luyen-15",
+      "source": {
+        "body_block": 232,
+        "end_block_exclusive": 241
+      },
+      "role": "question"
+    },
+    {
+      "id": "tu-luyen-16",
+      "source": {
+        "body_block": 241,
+        "end_block_exclusive": 251
+      },
+      "role": "question"
+    }
+  ],
+  "provenance": {
+    "transcription": "535 MathType OLE equations matched with 535 WMF previews; eight standalone WMF equations also decoded. Numbering normalized within worked and practice groups.",
+    "figures": "Editable SVG reconstructions; exercise edges uniformly red #B00012 per latest user request; theory lines black and strengthened; labels black. Visible solid faces filled with three opaque red tints according to top/left/right viewing orientation; fills rendered behind visible/hidden edges and labels.",
+    "source_discrepancies_preserved": [],
+    "source_corrections": [
+      "Worked example 3: append cos of the requested line angle = 1/2 to the source calculation ending at 60 degrees.",
+      "Worked example 4: replace the stray implication arrow before AE=CM by a conjunction.",
+      "Worked example 5: cosine-rule denominator is 2·EO·OB, not 2·EO·OE.",
+      "Worked example 6: HB²=AB²+AH²=5a²/4 because ABC is right at A; hence HB=a√5/2 and tan(SB,(ABC))=√15/5, not 1.",
+      "Practice 7: SA=AB·sin30°, not SA·sin30°.",
+      "Practice 8: substitute SF²=17a²/4, not 9a²/4, in the median formula; the final source answer is unchanged.",
+      "MathType degree marks and prime notation normalized; malformed source angle accent C′AC rebuilt as a native angle hat.",
+      "Source spelling and missing inter-word spaces normalized (Tín tang → Tính tang, khi dó → khi đó, xác đinh → xác định); isolated punctuation joined to formulas.",
+      "Practice 13: restore the missing sentence separator between tan(MBK)=MK/BK and BK=BO+OK."
+    ],
+    "layout": "Shared lesson template; original DXT logo and left-light/right-dark header tab; justified 14pt body; compact prompts and side-by-side solution figures. Writing minima 3 or 5 lines at 9mm according to solution steps, with shared page remainder. Updated question gap to 4mm; practice 9 options in 2×2 beside figure; theory method labels consistent and perpendicular-relations heading separated by 3mm. Body and solution leading increased from 0.92em to 1.02em per user request. Final writing layout: practice 13 has a four-line minimum; all other minima retained. This keeps the writing edition at 10 pages without reducing text leading. Latest: complete title on one red line; solution figures follow solution text, no solution side grids; worked example 2 left aligned; writing edition grouped at most three exercises per page. Practice question 4 subparts a/b placed in separate blocks with 2mm spacing. Question/solution leading 1.08em, question gap 4.5mm, subparts indented 6mm; compact theory whitespace and 55mm side figures. Question edition vertical margins 22/20mm. Final accepted layout: leading 1.04em (was 1.02em), question gap 4.5mm (was 4mm), a/b indent 6mm; original page margins retained. Red full title fits one line at 20pt; theory whitespace compacted. Question PDF confirmed 5 pages. Latest user-approved 6-page question edition: title 25pt with explicit two-line break; body/theory/solution leading 1.08em; theory paragraphs 3mm and display gaps 3mm; theory figures enlarged to 80/85mm; question gap 5mm. Previous compact 5-page layout superseded. Heading updated to 29pt; both explicit title lines independently stretched to available width. Both title lines now share the same font chosen to fit the longer line, at 29pt; only letter spacing varies for stretch. Writing-edition practice-section page break moved before its heading, keeping the heading with question 1. Latest answer layout: figures immediately below Lời giải, before explanation; second figure in two-part exercise remains at part b. Figure width 60mm, question 2 diagrams 50mm; worked questions 1–2 share page 2. Worked figures 7 and 8 reduced to 48mm so question 8, Lời giải and its figure share page 7; answer edition reduced to 20 pages. Practice 4 solution: restored a) label; a/b labels indented 6mm and kept with their respective figures. Practice 6 prompt left aligned; local solution formula gaps 1.5mm and diagram 45mm; practice 7 prompt now follows on page 12, verified in PDF text. Practice 6 figure enlarged exactly 5% (45→47.25mm); B label moved below vertex clear of edges; display gaps 1mm keep practice 7 on page 12."
+  },
+  "qa": {
+    "review_status": "pending",
+    "full_page_visual_review": "pending — no page preview images generated, per repository convention",
+    "compile": "passed",
+    "content_counts": "Verified all 25 questions in rebuilt answer PDF; question/writing PDFs unchanged.",
+    "source_integrity": "passed — original DOCX preserved; SHA-256 verified",
+    "figure_review": "All three individual figure sheets inspected after red face shading; fills behind edges and labels; full-page visual review remains pending.",
+    "pdf_checks": "passed — body text within horizontal margins, embedded fonts, selectable mathematics; only original logo is bitmap",
+    "writing_layout": "Verified extracted per-page question counts: maximum 3.",
+    "source_corrections": "Approved by user: Sửa lỗi rõ, ghi manifest; details in provenance.source_corrections"
+  },
+  "drive": {
+    "folder": "Chuyên đề",
+    "filenames": {
+      "de": "KHÓA TH - BUỔI 25 - GÓC GIỮA HAI ĐƯỜNG THẲNG CHÉO NHAU - GÓC GIỮA ĐƯỜNG THẲNG VÀ MẶT PHẲNG - ĐỀ.pdf",
+      "de-cach": "KHÓA TH - BUỔI 25 - GÓC GIỮA HAI ĐƯỜNG THẲNG CHÉO NHAU - GÓC GIỮA ĐƯỜNG THẲNG VÀ MẶT PHẲNG - ĐỀ CÁCH.pdf",
+      "dap-an": "KHÓA TH - BUỔI 25 - GÓC GIỮA HAI ĐƯỜNG THẲNG CHÉO NHAU - GÓC GIỮA ĐƯỜNG THẲNG VÀ MẶT PHẲNG - ĐÁP ÁN.pdf"
+    }
+  },
+  "outputs": {
+    "de": {
+      "pdf": "assets/targets/2026-11/Chuyên đề/th-buoi-25-goc-trong-khong-gian/de.pdf",
+      "pages": 6,
+      "bytes": 1270625,
+      "sha256": "e04e4a3cf858c7a012b4582e1e65ee539a9d9c26d0f3e013e442a1d335f9c359"
+    },
+    "de-cach": {
+      "pdf": "assets/targets/2026-11/Chuyên đề/th-buoi-25-goc-trong-khong-gian/de-cach.pdf",
+      "pages": 12,
+      "bytes": 1295487,
+      "sha256": "8dc5e0b6b7e001fcacf54b4763fcef93d26ad72e155ad5b95e1d2d1f8dbe46f0"
+    },
+    "dap-an": {
+      "pdf": "assets/targets/2026-11/Chuyên đề/th-buoi-25-goc-trong-khong-gian/dap-an.pdf",
+      "pages": 20,
+      "bytes": 1480897,
+      "sha256": "70c211360f93d0e739c044ae052c010eb0a1f087cf0e1443fdb8d02b6925ee3e"
+    }
+  }
+}

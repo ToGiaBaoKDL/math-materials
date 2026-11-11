@@ -35,18 +35,22 @@
       v(1mm)
     }
     #layout(size => {
+      let lines = if type(title) == array { title } else { (title,) }
       let candidates = (fonts.lesson-title, fonts.lesson-title-long, fonts.lesson-title-longer)
       let chosen = candidates.last()
       for candidate in candidates {
-        if measure(text(font: candidate, size: title-size, tracking: title-tracking, weight: "bold", title)).width <= size.width {
+        if lines.all(line => measure(text(font: candidate, size: title-size, tracking: title-tracking, weight: "bold", line)).width <= size.width) {
           chosen = candidate
           break
         }
       }
-      let tracking = if title-stretch and type(title) == str {
-        title-tracking + calc.max(0pt, (size.width - measure(text(font: chosen, size: title-size, tracking: title-tracking, weight: "bold", title)).width) / calc.max(1, title.len() - 1))
-      } else { title-tracking }
-      text(font: chosen, size: title-size, tracking: tracking, weight: "bold", fill: palette.heading, stroke: title-stroke, title)
+      for (index, title) in lines.enumerate() {
+        let tracking = if title-stretch and type(title) == str {
+          title-tracking + calc.max(0pt, (size.width - measure(text(font: chosen, size: title-size, tracking: title-tracking, weight: "bold", title)).width) / calc.max(1, title.len() - 1))
+        } else { title-tracking }
+        text(font: chosen, size: title-size, tracking: tracking, weight: "bold", fill: palette.heading, stroke: title-stroke, title)
+        if index < lines.len() - 1 { linebreak() }
+      }
     })
     #if subtitle != none {
       v(1mm)
