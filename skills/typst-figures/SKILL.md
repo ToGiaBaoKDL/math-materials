@@ -80,3 +80,5 @@ Xuất hàm/component hình vector và thông tin kích thước đủ để lay
 ## Bảng biến thiên và bảng xét dấu
 
 - Theo convention cập nhật 31/10/2026: vẽ theo bảng nguồn, có đủ hai cạnh viền ngoài bên trái/phải; toàn bộ viền và đường phân ô có độ đậm nhất quán. Giữ các đường phân hàng/cột và vạch kép có ý nghĩa toán học. Dấu, số căn giữa ô; giá trị lớn đặt cao hơn giá trị nhỏ.
+
+- BBT dùng component `variation` trong `templates/graphs.typ` khi mô hình phù hợp: nền hồng đỏ nhạt theo `plot-style.variation-fill`, nhãn và mũi tên đỏ, dấu nằm giữa các mốc x, mũi tên dài nối các mức cao/thấp. Không thay BBT bằng bảng dữ liệu chia ô dọc ở mọi mốc; chỉ vẽ vạch dọc có ý nghĩa trong nguồn (cột nhãn, tiệm cận hoặc biên miền). Đối chiếu cấu trúc nguồn trước khi chọn component; màu header đỏ đô của bảng dữ liệu không thay thế convention riêng của BBT.

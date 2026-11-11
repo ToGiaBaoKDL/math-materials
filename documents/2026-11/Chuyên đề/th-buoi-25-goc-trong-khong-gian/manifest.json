@@ -276,7 +276,8 @@
     "figure_review": "All three individual figure sheets inspected after red face shading; fills behind edges and labels; full-page visual review remains pending.",
     "pdf_checks": "passed — body text within horizontal margins, embedded fonts, selectable mathematics; only original logo is bitmap",
     "writing_layout": "Verified extracted per-page question counts: maximum 3.",
-    "source_corrections": "Approved by user: Sửa lỗi rõ, ghi manifest; details in provenance.source_corrections"
+    "source_corrections": "Approved by user: Sửa lỗi rõ, ghi manifest; details in provenance.source_corrections",
+    "heading_spacing": "Red heading: natural spacing with 0.2pt tracking, stretching disabled; both lines retain 29pt. All three PDFs rebuilt."
   },
   "drive": {
     "folder": "Chuyên đề",
@@ -290,20 +291,20 @@
     "de": {
       "pdf": "assets/targets/2026-11/Chuyên đề/th-buoi-25-goc-trong-khong-gian/de.pdf",
       "pages": 6,
-      "bytes": 1270625,
-      "sha256": "e04e4a3cf858c7a012b4582e1e65ee539a9d9c26d0f3e013e442a1d335f9c359"
+      "bytes": 1270577,
+      "sha256": "2f2b1de6bca692beb758aa1a762d2611f1602a0973c26dba6e0be6b24a0bfbd9"
     },
     "de-cach": {
       "pdf": "assets/targets/2026-11/Chuyên đề/th-buoi-25-goc-trong-khong-gian/de-cach.pdf",
       "pages": 12,
-      "bytes": 1295487,
-      "sha256": "8dc5e0b6b7e001fcacf54b4763fcef93d26ad72e155ad5b95e1d2d1f8dbe46f0"
+      "bytes": 1295439,
+      "sha256": "9bb62b24955e533aac33f983fe12739937f30218a0f9bb13bba23d08d8e0a51f"
     },
     "dap-an": {
       "pdf": "assets/targets/2026-11/Chuyên đề/th-buoi-25-goc-trong-khong-gian/dap-an.pdf",
       "pages": 20,
-      "bytes": 1480897,
-      "sha256": "70c211360f93d0e739c044ae052c010eb0a1f087cf0e1443fdb8d02b6925ee3e"
+      "bytes": 1480849,
+      "sha256": "855c1acc2e088e1a1b22064e03870ba43ca91c19bc5ae05fcad6dfec22c9b1c9"
     }
   }
 }

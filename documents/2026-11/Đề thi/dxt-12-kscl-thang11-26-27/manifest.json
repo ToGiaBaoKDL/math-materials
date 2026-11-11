@@ -1,0 +1,883 @@
+{
+  "schema_version": 1,
+  "id": "dxt-12-kscl-thang11-26-27",
+  "kind": "exam",
+  "received_date": "2026-11-11",
+  "status": "implemented",
+  "metadata": {
+    "title": "ĐỀ THI THỬ THÁNG 11",
+    "subject": "Toán 12",
+    "school_year": "2026-2027"
+  },
+  "sources": [
+    {
+      "path": "assets/sources/2026-11/Đề thi/dxt-12-kscl-thang11-26-27/source.docx",
+      "original_name": "ĐỀ THI THỬ THÁNG 11.docx",
+      "bytes": 1009577,
+      "sha256": "67d9b87d86f32e7368abcfe9f365cc841cc48c9eb474974eb82216e369f14d42"
+    }
+  ],
+  "scope": {
+    "has_questions": true,
+    "has_solutions": true,
+    "questions": 22
+  },
+  "publication": {
+    "combine_answers": false,
+    "include_writing": true
+  },
+  "variants": {
+    "de": {
+      "filename": "de.pdf",
+      "inputs": {
+        "variant": "de"
+      }
+    },
+    "de-cach": {
+      "filename": "de-cach.pdf",
+      "inputs": {
+        "variant": "de-cach"
+      }
+    },
+    "dap-an": {
+      "filename": "dap-an.pdf",
+      "inputs": {
+        "variant": "dap-an"
+      }
+    }
+  },
+  "drive": {
+    "folder": "Đề thi",
+    "filenames": {
+      "de": "DXT-12-KSCL-THANG11-26-27 - ĐỀ.pdf",
+      "de-cach": "DXT-12-KSCL-THANG11-26-27 - ĐỀ CÁCH.pdf",
+      "dap-an": "DXT-12-KSCL-THANG11-26-27 - ĐÁP ÁN.pdf"
+    }
+  },
+  "content_mapping": [
+    {
+      "id": "I-1",
+      "role": "question",
+      "source": {
+        "file": "assets/sources/2026-11/Đề thi/dxt-12-kscl-thang11-26-27/source.docx",
+        "section": "I",
+        "normalized_number": 1,
+        "extracted_block_range_zero_based": [
+          2,
+          7
+        ]
+      }
+    },
+    {
+      "id": "I-1-solution",
+      "role": "solution",
+      "source": {
+        "file": "assets/sources/2026-11/Đề thi/dxt-12-kscl-thang11-26-27/source.docx",
+        "section": "I",
+        "normalized_number": 1,
+        "extracted_block_range_zero_based": [
+          2,
+          7
+        ]
+      }
+    },
+    {
+      "id": "I-2",
+      "role": "question",
+      "source": {
+        "file": "assets/sources/2026-11/Đề thi/dxt-12-kscl-thang11-26-27/source.docx",
+        "section": "I",
+        "normalized_number": 2,
+        "extracted_block_range_zero_based": [
+          8,
+          11
+        ]
+      }
+    },
+    {
+      "id": "I-2-solution",
+      "role": "solution",
+      "source": {
+        "file": "assets/sources/2026-11/Đề thi/dxt-12-kscl-thang11-26-27/source.docx",
+        "section": "I",
+        "normalized_number": 2,
+        "extracted_block_range_zero_based": [
+          8,
+          11
+        ]
+      }
+    },
+    {
+      "id": "I-3",
+      "role": "question",
+      "source": {
+        "file": "assets/sources/2026-11/Đề thi/dxt-12-kscl-thang11-26-27/source.docx",
+        "section": "I",
+        "normalized_number": 3,
+        "extracted_block_range_zero_based": [
+          12,
+          18
+        ]
+      }
+    },
+    {
+      "id": "I-3-solution",
+      "role": "solution",
+      "source": {
+        "file": "assets/sources/2026-11/Đề thi/dxt-12-kscl-thang11-26-27/source.docx",
+        "section": "I",
+        "normalized_number": 3,
+        "extracted_block_range_zero_based": [
+          12,
+          18
+        ]
+      }
+    },
+    {
+      "id": "I-4",
+      "role": "question",
+      "source": {
+        "file": "assets/sources/2026-11/Đề thi/dxt-12-kscl-thang11-26-27/source.docx",
+        "section": "I",
+        "normalized_number": 4,
+        "extracted_block_range_zero_based": [
+          19,
+          24
+        ]
+      }
+    },
+    {
+      "id": "I-4-solution",
+      "role": "solution",
+      "source": {
+        "file": "assets/sources/2026-11/Đề thi/dxt-12-kscl-thang11-26-27/source.docx",
+        "section": "I",
+        "normalized_number": 4,
+        "extracted_block_range_zero_based": [
+          19,
+          24
+        ]
+      }
+    },
+    {
+      "id": "I-5",
+      "role": "question",
+      "source": {
+        "file": "assets/sources/2026-11/Đề thi/dxt-12-kscl-thang11-26-27/source.docx",
+        "section": "I",
+        "normalized_number": 5,
+        "extracted_block_range_zero_based": [
+          25,
+          29
+        ]
+      }
+    },
+    {
+      "id": "I-5-solution",
+      "role": "solution",
+      "source": {
+        "file": "assets/sources/2026-11/Đề thi/dxt-12-kscl-thang11-26-27/source.docx",
+        "section": "I",
+        "normalized_number": 5,
+        "extracted_block_range_zero_based": [
+          25,
+          29
+        ]
+      }
+    },
+    {
+      "id": "I-6",
+      "role": "question",
+      "source": {
+        "file": "assets/sources/2026-11/Đề thi/dxt-12-kscl-thang11-26-27/source.docx",
+        "section": "I",
+        "normalized_number": 6,
+        "extracted_block_range_zero_based": [
+          30,
+          35
+        ]
+      }
+    },
+    {
+      "id": "I-6-solution",
+      "role": "solution",
+      "source": {
+        "file": "assets/sources/2026-11/Đề thi/dxt-12-kscl-thang11-26-27/source.docx",
+        "section": "I",
+        "normalized_number": 6,
+        "extracted_block_range_zero_based": [
+          30,
+          35
+        ]
+      }
+    },
+    {
+      "id": "I-7",
+      "role": "question",
+      "source": {
+        "file": "assets/sources/2026-11/Đề thi/dxt-12-kscl-thang11-26-27/source.docx",
+        "section": "I",
+        "normalized_number": 7,
+        "extracted_block_range_zero_based": [
+          36,
+          44
+        ]
+      }
+    },
+    {
+      "id": "I-7-solution",
+      "role": "solution",
+      "source": {
+        "file": "assets/sources/2026-11/Đề thi/dxt-12-kscl-thang11-26-27/source.docx",
+        "section": "I",
+        "normalized_number": 7,
+        "extracted_block_range_zero_based": [
+          36,
+          44
+        ]
+      }
+    },
+    {
+      "id": "I-8",
+      "role": "question",
+      "source": {
+        "file": "assets/sources/2026-11/Đề thi/dxt-12-kscl-thang11-26-27/source.docx",
+        "section": "I",
+        "normalized_number": 8,
+        "extracted_block_range_zero_based": [
+          45,
+          49
+        ]
+      }
+    },
+    {
+      "id": "I-8-solution",
+      "role": "solution",
+      "source": {
+        "file": "assets/sources/2026-11/Đề thi/dxt-12-kscl-thang11-26-27/source.docx",
+        "section": "I",
+        "normalized_number": 8,
+        "extracted_block_range_zero_based": [
+          45,
+          49
+        ]
+      }
+    },
+    {
+      "id": "I-9",
+      "role": "question",
+      "source": {
+        "file": "assets/sources/2026-11/Đề thi/dxt-12-kscl-thang11-26-27/source.docx",
+        "section": "I",
+        "normalized_number": 9,
+        "extracted_block_range_zero_based": [
+          50,
+          56
+        ]
+      }
+    },
+    {
+      "id": "I-9-solution",
+      "role": "solution",
+      "source": {
+        "file": "assets/sources/2026-11/Đề thi/dxt-12-kscl-thang11-26-27/source.docx",
+        "section": "I",
+        "normalized_number": 9,
+        "extracted_block_range_zero_based": [
+          50,
+          56
+        ]
+      }
+    },
+    {
+      "id": "I-10",
+      "role": "question",
+      "source": {
+        "file": "assets/sources/2026-11/Đề thi/dxt-12-kscl-thang11-26-27/source.docx",
+        "section": "I",
+        "normalized_number": 10,
+        "extracted_block_range_zero_based": [
+          57,
+          63
+        ]
+      }
+    },
+    {
+      "id": "I-10-solution",
+      "role": "solution",
+      "source": {
+        "file": "assets/sources/2026-11/Đề thi/dxt-12-kscl-thang11-26-27/source.docx",
+        "section": "I",
+        "normalized_number": 10,
+        "extracted_block_range_zero_based": [
+          57,
+          63
+        ]
+      }
+    },
+    {
+      "id": "I-11",
+      "role": "question",
+      "source": {
+        "file": "assets/sources/2026-11/Đề thi/dxt-12-kscl-thang11-26-27/source.docx",
+        "section": "I",
+        "normalized_number": 11,
+        "extracted_block_range_zero_based": [
+          64,
+          69
+        ]
+      }
+    },
+    {
+      "id": "I-11-solution",
+      "role": "solution",
+      "source": {
+        "file": "assets/sources/2026-11/Đề thi/dxt-12-kscl-thang11-26-27/source.docx",
+        "section": "I",
+        "normalized_number": 11,
+        "extracted_block_range_zero_based": [
+          64,
+          69
+        ]
+      }
+    },
+    {
+      "id": "I-12",
+      "role": "question",
+      "source": {
+        "file": "assets/sources/2026-11/Đề thi/dxt-12-kscl-thang11-26-27/source.docx",
+        "section": "I",
+        "normalized_number": 12,
+        "extracted_block_range_zero_based": [
+          70,
+          82
+        ]
+      }
+    },
+    {
+      "id": "I-12-solution",
+      "role": "solution",
+      "source": {
+        "file": "assets/sources/2026-11/Đề thi/dxt-12-kscl-thang11-26-27/source.docx",
+        "section": "I",
+        "normalized_number": 12,
+        "extracted_block_range_zero_based": [
+          70,
+          82
+        ]
+      }
+    },
+    {
+      "id": "II-1",
+      "role": "question",
+      "source": {
+        "file": "assets/sources/2026-11/Đề thi/dxt-12-kscl-thang11-26-27/source.docx",
+        "section": "II",
+        "normalized_number": 1,
+        "extracted_block_range_zero_based": [
+          84,
+          101
+        ]
+      }
+    },
+    {
+      "id": "II-1-solution",
+      "role": "solution",
+      "source": {
+        "file": "assets/sources/2026-11/Đề thi/dxt-12-kscl-thang11-26-27/source.docx",
+        "section": "II",
+        "normalized_number": 1,
+        "extracted_block_range_zero_based": [
+          84,
+          101
+        ]
+      }
+    },
+    {
+      "id": "II-2",
+      "role": "question",
+      "source": {
+        "file": "assets/sources/2026-11/Đề thi/dxt-12-kscl-thang11-26-27/source.docx",
+        "section": "II",
+        "normalized_number": 2,
+        "extracted_block_range_zero_based": [
+          102,
+          125
+        ]
+      }
+    },
+    {
+      "id": "II-2-solution",
+      "role": "solution",
+      "source": {
+        "file": "assets/sources/2026-11/Đề thi/dxt-12-kscl-thang11-26-27/source.docx",
+        "section": "II",
+        "normalized_number": 2,
+        "extracted_block_range_zero_based": [
+          102,
+          125
+        ]
+      }
+    },
+    {
+      "id": "II-3",
+      "role": "question",
+      "source": {
+        "file": "assets/sources/2026-11/Đề thi/dxt-12-kscl-thang11-26-27/source.docx",
+        "section": "II",
+        "normalized_number": 3,
+        "extracted_block_range_zero_based": [
+          126,
+          163
+        ]
+      }
+    },
+    {
+      "id": "II-3-solution",
+      "role": "solution",
+      "source": {
+        "file": "assets/sources/2026-11/Đề thi/dxt-12-kscl-thang11-26-27/source.docx",
+        "section": "II",
+        "normalized_number": 3,
+        "extracted_block_range_zero_based": [
+          126,
+          163
+        ]
+      }
+    },
+    {
+      "id": "II-4",
+      "role": "question",
+      "source": {
+        "file": "assets/sources/2026-11/Đề thi/dxt-12-kscl-thang11-26-27/source.docx",
+        "section": "II",
+        "normalized_number": 4,
+        "extracted_block_range_zero_based": [
+          164,
+          186
+        ]
+      }
+    },
+    {
+      "id": "II-4-solution",
+      "role": "solution",
+      "source": {
+        "file": "assets/sources/2026-11/Đề thi/dxt-12-kscl-thang11-26-27/source.docx",
+        "section": "II",
+        "normalized_number": 4,
+        "extracted_block_range_zero_based": [
+          164,
+          186
+        ]
+      }
+    },
+    {
+      "id": "III-1",
+      "role": "question",
+      "source": {
+        "file": "assets/sources/2026-11/Đề thi/dxt-12-kscl-thang11-26-27/source.docx",
+        "section": "III",
+        "normalized_number": 1,
+        "extracted_block_range_zero_based": [
+          189,
+          198
+        ]
+      }
+    },
+    {
+      "id": "III-1-solution",
+      "role": "solution",
+      "source": {
+        "file": "assets/sources/2026-11/Đề thi/dxt-12-kscl-thang11-26-27/source.docx",
+        "section": "III",
+        "normalized_number": 1,
+        "extracted_block_range_zero_based": [
+          189,
+          198
+        ]
+      }
+    },
+    {
+      "id": "III-2",
+      "role": "question",
+      "source": {
+        "file": "assets/sources/2026-11/Đề thi/dxt-12-kscl-thang11-26-27/source.docx",
+        "section": "III",
+        "normalized_number": 2,
+        "extracted_block_range_zero_based": [
+          199,
+          214
+        ]
+      }
+    },
+    {
+      "id": "III-2-solution",
+      "role": "solution",
+      "source": {
+        "file": "assets/sources/2026-11/Đề thi/dxt-12-kscl-thang11-26-27/source.docx",
+        "section": "III",
+        "normalized_number": 2,
+        "extracted_block_range_zero_based": [
+          199,
+          214
+        ]
+      }
+    },
+    {
+      "id": "III-3",
+      "role": "question",
+      "source": {
+        "file": "assets/sources/2026-11/Đề thi/dxt-12-kscl-thang11-26-27/source.docx",
+        "section": "III",
+        "normalized_number": 3,
+        "extracted_block_range_zero_based": [
+          215,
+          221
+        ]
+      }
+    },
+    {
+      "id": "III-3-solution",
+      "role": "solution",
+      "source": {
+        "file": "assets/sources/2026-11/Đề thi/dxt-12-kscl-thang11-26-27/source.docx",
+        "section": "III",
+        "normalized_number": 3,
+        "extracted_block_range_zero_based": [
+          215,
+          221
+        ]
+      }
+    },
+    {
+      "id": "III-4",
+      "role": "question",
+      "source": {
+        "file": "assets/sources/2026-11/Đề thi/dxt-12-kscl-thang11-26-27/source.docx",
+        "section": "III",
+        "normalized_number": 4,
+        "extracted_block_range_zero_based": [
+          222,
+          230
+        ]
+      }
+    },
+    {
+      "id": "III-4-solution",
+      "role": "solution",
+      "source": {
+        "file": "assets/sources/2026-11/Đề thi/dxt-12-kscl-thang11-26-27/source.docx",
+        "section": "III",
+        "normalized_number": 4,
+        "extracted_block_range_zero_based": [
+          222,
+          230
+        ]
+      }
+    },
+    {
+      "id": "III-5",
+      "role": "question",
+      "source": {
+        "file": "assets/sources/2026-11/Đề thi/dxt-12-kscl-thang11-26-27/source.docx",
+        "section": "III",
+        "normalized_number": 5,
+        "extracted_block_range_zero_based": [
+          231,
+          239
+        ]
+      }
+    },
+    {
+      "id": "III-5-solution",
+      "role": "solution",
+      "source": {
+        "file": "assets/sources/2026-11/Đề thi/dxt-12-kscl-thang11-26-27/source.docx",
+        "section": "III",
+        "normalized_number": 5,
+        "extracted_block_range_zero_based": [
+          231,
+          239
+        ]
+      }
+    },
+    {
+      "id": "III-6",
+      "role": "question",
+      "source": {
+        "file": "assets/sources/2026-11/Đề thi/dxt-12-kscl-thang11-26-27/source.docx",
+        "section": "III",
+        "normalized_number": 6,
+        "extracted_block_range_zero_based": [
+          240,
+          257
+        ]
+      }
+    },
+    {
+      "id": "III-6-solution",
+      "role": "solution",
+      "source": {
+        "file": "assets/sources/2026-11/Đề thi/dxt-12-kscl-thang11-26-27/source.docx",
+        "section": "III",
+        "normalized_number": 6,
+        "extracted_block_range_zero_based": [
+          240,
+          257
+        ]
+      }
+    },
+    {
+      "id": "I-3-question-figure",
+      "role": "figure",
+      "source": {
+        "document": "assets/sources/2026-11/Đề thi/dxt-12-kscl-thang11-26-27/source.docx",
+        "question_key": "I-3",
+        "placement": "question",
+        "embedded_media": "image15.jpg",
+        "reconstruction": "cube"
+      }
+    },
+    {
+      "id": "I-4-solution-figure",
+      "role": "figure",
+      "source": {
+        "document": "assets/sources/2026-11/Đề thi/dxt-12-kscl-thang11-26-27/source.docx",
+        "question_key": "I-4",
+        "placement": "solution",
+        "embedded_media": "image32.png",
+        "reconstruction": "prism"
+      }
+    },
+    {
+      "id": "I-6-question-figure",
+      "role": "figure",
+      "source": {
+        "document": "assets/sources/2026-11/Đề thi/dxt-12-kscl-thang11-26-27/source.docx",
+        "question_key": "I-6",
+        "placement": "question",
+        "embedded_media": "Word drawing in block 31, labels image49–56.wmf",
+        "reconstruction": "graph(range)"
+      }
+    },
+    {
+      "id": "I-9-question-figure",
+      "role": "figure",
+      "source": {
+        "document": "assets/sources/2026-11/Đề thi/dxt-12-kscl-thang11-26-27/source.docx",
+        "question_key": "I-9",
+        "placement": "question",
+        "embedded_media": "image83.jpg",
+        "reconstruction": "graph(cubic)"
+      }
+    },
+    {
+      "id": "I-12-solution-figure",
+      "role": "figure",
+      "source": {
+        "document": "assets/sources/2026-11/Đề thi/dxt-12-kscl-thang11-26-27/source.docx",
+        "question_key": "I-12",
+        "placement": "solution",
+        "embedded_media": "image117.jpg",
+        "reconstruction": "pyramid(angle:true)"
+      }
+    },
+    {
+      "id": "II-1-question-figure",
+      "role": "figure",
+      "source": {
+        "document": "assets/sources/2026-11/Đề thi/dxt-12-kscl-thang11-26-27/source.docx",
+        "question_key": "II-1",
+        "placement": "question",
+        "embedded_media": "image127.png",
+        "reconstruction": "graph(rational)"
+      }
+    },
+    {
+      "id": "II-2-question-figure",
+      "role": "figure",
+      "source": {
+        "document": "assets/sources/2026-11/Đề thi/dxt-12-kscl-thang11-26-27/source.docx",
+        "question_key": "II-2",
+        "placement": "question",
+        "embedded_media": "image145.png",
+        "reconstruction": "tank"
+      }
+    },
+    {
+      "id": "II-2-solution-figure",
+      "role": "figure",
+      "source": {
+        "document": "assets/sources/2026-11/Đề thi/dxt-12-kscl-thang11-26-27/source.docx",
+        "question_key": "II-2",
+        "placement": "solution",
+        "embedded_media": "image163.png",
+        "reconstruction": "tank-variation"
+      }
+    },
+    {
+      "id": "II-3-question-figure",
+      "role": "figure",
+      "source": {
+        "document": "assets/sources/2026-11/Đề thi/dxt-12-kscl-thang11-26-27/source.docx",
+        "question_key": "II-3",
+        "placement": "question",
+        "embedded_media": "image171.jpg",
+        "reconstruction": "laser"
+      }
+    },
+    {
+      "id": "II-3-solution-figure",
+      "role": "figure",
+      "source": {
+        "document": "assets/sources/2026-11/Đề thi/dxt-12-kscl-thang11-26-27/source.docx",
+        "question_key": "II-3",
+        "placement": "solution",
+        "embedded_media": "image191.jpg",
+        "reconstruction": "laser(detail:true)"
+      }
+    },
+    {
+      "id": "III-4-question-figure",
+      "role": "figure",
+      "source": {
+        "document": "assets/sources/2026-11/Đề thi/dxt-12-kscl-thang11-26-27/source.docx",
+        "question_key": "III-4",
+        "placement": "question",
+        "embedded_media": "image303.png",
+        "reconstruction": "pyramid"
+      }
+    },
+    {
+      "id": "III-4-solution-figure",
+      "role": "figure",
+      "source": {
+        "document": "assets/sources/2026-11/Đề thi/dxt-12-kscl-thang11-26-27/source.docx",
+        "question_key": "III-4",
+        "placement": "solution",
+        "embedded_media": "image304.png",
+        "reconstruction": "pyramid(detail:true)"
+      }
+    },
+    {
+      "id": "III-5-question-figure",
+      "role": "figure",
+      "source": {
+        "document": "assets/sources/2026-11/Đề thi/dxt-12-kscl-thang11-26-27/source.docx",
+        "question_key": "III-5",
+        "placement": "question",
+        "embedded_media": "image310.png",
+        "reconstruction": "park"
+      }
+    },
+    {
+      "id": "III-5-solution-figure",
+      "role": "figure",
+      "source": {
+        "document": "assets/sources/2026-11/Đề thi/dxt-12-kscl-thang11-26-27/source.docx",
+        "question_key": "III-5",
+        "placement": "solution",
+        "embedded_media": "image311.png",
+        "reconstruction": "park(detail:true)"
+      }
+    }
+  ],
+  "provenance": {
+    "source_structure": "12 multiple choice + 4 true/false + 6 short answer; source numbering normalized within each section.",
+    "metadata_note": "Source specifies only title; no invented school, code, duration or academic year printed. ID uses DXT workspace/2026 intake context.",
+    "math_extraction": {
+      "ole_equations": 378,
+      "preview_pairs_checked": 368,
+      "source_render_pages": 17,
+      "method": "scripts/mathtype.py with temporary handlers for complement overbar and relation-condition template; native Typst equations, not preview images."
+    },
+    "corrections": [
+      {
+        "location": "II-2 solution b",
+        "source": "Height 2 m when width 1 m",
+        "corrected": "Length 2 m; height 3/(1×2)=1.5 m; statement remains false."
+      },
+      {
+        "location": "II-2 solution c",
+        "source": "Sai",
+        "corrected": "Đúng: lateral area 9/x."
+      },
+      {
+        "location": "II-3 solution c",
+        "source": "C′, B, A collinear",
+        "corrected": "K, B, A collinear; K is reflection of C across floor."
+      },
+      {
+        "location": "I-12 solution",
+        "source": "Triangle SAD is isosceles at A",
+        "corrected": "Right isosceles at A."
+      },
+      {
+        "location": "I-7 solution",
+        "source": "Decimal dots ambiguous as products",
+        "corrected": "21,5 and 51,54 formatted as decimals."
+      },
+      {
+        "location": "III-6 solution",
+        "source": "Giữa hai số 1 bất kỳ",
+        "corrected": "Giữa hai số 1 liên tiếp; joined case x5=2 separated into paragraph."
+      },
+      {
+        "location": "II-4 and III-3",
+        "source": "Stray strings fJT|, og3|, 9C7|",
+        "corrected": "Removed Word corruption artifacts; mathematical content preserved."
+      },
+      {
+        "location": "III-6 solution, row of ones",
+        "source": "14 ones although surrounding text says 12",
+        "corrected": "Exactly 12 ones, matching 11 gaps and C(11,4)."
+      }
+    ],
+    "permission": "User explicitly authorized correction of clear mathematical errors and recording each change in manifest.",
+    "figure_policy": "Red vector reconstructions of original figures only; solution-only figures remain in solutions.",
+    "answer_instructions": "Candidate instructions remain in question and writing editions; answer edition keeps section titles and all questions/solutions without repeated candidate instructions."
+  },
+  "qa": {
+    "review": "pending",
+    "compile": "passed",
+    "review_status": "pending",
+    "source_integrity": "Original root DOCX and archived source have identical SHA-256.",
+    "content": "22 questions in normalized order 12+4+6 in all variants; 12 four-option MCQs; all four statements in each of four TF questions.",
+    "math": "All OLE formulas nonempty; 368 OLE/WMF pairs checked. Independent calculations checked answer keys, 800/1140=40/57, 736 arrangements, tank minimum 4439.1817 thousand, park path 17.74355 m, pyramid distance 1.279204.",
+    "figures": "Individual vector figures rendered and visually checked against embedded originals; no added question illustrations.",
+    "layout_checks": "PDF text bounding boxes within body margins; no blank writing pages; maximum three questions and at least three ruled lines per writing question.",
+    "fonts": "All PDF fonts embedded, including Times New Roman and New Computer Modern Math; selectable mathematical text.",
+    "publication_names": "upload.py --dry-run passed for all three PDFs and original DOCX; no upload performed.",
+    "full_page_visual_review": "pending; no page preview images generated per repository convention.",
+    "checked_output_sha256": {
+      "de": "5da12ba805ad51b773616889c8c30e958038cd80a7580bb46ecebbb6bb6dfbe7",
+      "de-cach": "4c77dc12d358fc94948bf01f670c5eb6dcc21c249d053bc02d16e221126988c4",
+      "dap-an": "c847cc5f7b6d08022869e23b4ac33dfaad7ff29d448b05cb37773875a2585447"
+    },
+    "answer_grouping": "Continuous answer flow takes precedence over keeping a question and solution together. No whole-question wrapper or sticky prompt/image chain. I-6 prompt and 49.5 mm figure on page 2, key and reasoning continue on page 3. Part II starts on page 4 after I-12. Answers retain 1.12em leading.",
+    "variation_table": "Source image163.png compared with existing exam tables and templates/graphs.typ variation component; centered table uses continuous rows, interval signs, long slope arrows and pink/red convention. Standalone table visually checked.",
+    "ray_arrows": "Compared with source image171.jpg and image191.jpg: separate parallel direction arrows A to B and B to C, offset from rays and point labels.",
+    "heading": "Green banner: ÔN TẬP GIỮA HK I. Red title preserved with 28pt natural spacing, tracking 0.2pt, no stretch; existing red palette retained.",
+    "question_page_flow": "Question edition allows question blocks to break across pages. Verified II-3 full stem now fills page 3, figure and statements continue on page 4. All 22 questions preserved; de 5 pages, de-cach and dap-an 13 pages each."
+  },
+  "outputs": {
+    "de": {
+      "pdf": "assets/targets/2026-11/Đề thi/dxt-12-kscl-thang11-26-27/de.pdf",
+      "pages": 5,
+      "bytes": 1232585,
+      "sha256": "5da12ba805ad51b773616889c8c30e958038cd80a7580bb46ecebbb6bb6dfbe7"
+    },
+    "de-cach": {
+      "pdf": "assets/targets/2026-11/Đề thi/dxt-12-kscl-thang11-26-27/de-cach.pdf",
+      "pages": 13,
+      "bytes": 1269922,
+      "sha256": "4c77dc12d358fc94948bf01f670c5eb6dcc21c249d053bc02d16e221126988c4"
+    },
+    "dap-an": {
+      "pdf": "assets/targets/2026-11/Đề thi/dxt-12-kscl-thang11-26-27/dap-an.pdf",
+      "pages": 13,
+      "bytes": 1394982,
+      "sha256": "c847cc5f7b6d08022869e23b4ac33dfaad7ff29d448b05cb37773875a2585447"
+    }
+  }
+}
