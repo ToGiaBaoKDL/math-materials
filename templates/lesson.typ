@@ -17,6 +17,7 @@
   course-tracking: 0pt,
   title-stroke: none,
   author: [Biên soạn và giảng dạy: Thầy Đỗ Xuân Thắng],
+  author-color: none,
   plain: false,
   palette: palette,
   border: 0.6pt + palette.primary,
@@ -59,7 +60,7 @@
   ]
   #if author != none {
     v(1mm)
-    align(right, text(font: fonts.course, size: 11pt, style: "italic", fill: if plain { palette.heading } else {
+    align(right, text(font: fonts.course, size: 11pt, style: "italic", fill: if author-color != none { author-color } else if plain { palette.heading } else {
     palette.ink
   })[\- #author -])
   }

@@ -1,0 +1,211 @@
+{
+  "schema_version": 1,
+  "id": "th-xs-buoi-1-hoan-vi",
+  "kind": "tinh-hoa",
+  "received_date": "2026-11-12",
+  "status": "implemented",
+  "metadata": {
+    "title": "BUỔI 1: HOÁN VỊ",
+    "lesson": 1,
+    "topic": "TỔ HỢP – XÁC SUẤT",
+    "course": "4 BUỔI MỞ KHÓA NỀN TẢNG",
+    "branch": "Xác suất"
+  },
+  "sources": [
+    {
+      "path": "assets/sources/2026-11/Chuyên đề/th-xs-buoi-1-hoan-vi/source.docx",
+      "original_name": "B01 - HOÁN VỊ.docx",
+      "bytes": 139961,
+      "sha256": "b62d4807d6c806ee7d5b3a1d99e6b0978fae1a3ffeb37e79bcc23cbc981624ba",
+      "review_pdf_pages": 3
+    }
+  ],
+  "scope": {
+    "has_questions": true,
+    "has_solutions": false,
+    "questions": 12,
+    "theory_sections": 2
+  },
+  "variants": {
+    "de": {
+      "filename": "de.pdf",
+      "inputs": {
+        "variant": "de"
+      }
+    },
+    "de-cach": {
+      "filename": "de-cach.pdf",
+      "inputs": {
+        "variant": "de-cach"
+      }
+    }
+  },
+  "content_mapping": [
+    {
+      "id": "ly-thuyet",
+      "role": "source",
+      "source": {
+        "body_block": 3,
+        "end_block_exclusive": 9
+      }
+    },
+    {
+      "id": "cau-1",
+      "role": "question",
+      "source": {
+        "body_block": 9,
+        "end_block_exclusive": 11
+      }
+    },
+    {
+      "id": "cau-2",
+      "role": "question",
+      "source": {
+        "body_block": 11,
+        "end_block_exclusive": 13
+      }
+    },
+    {
+      "id": "cau-3",
+      "role": "question",
+      "source": {
+        "body_block": 13,
+        "end_block_exclusive": 15
+      }
+    },
+    {
+      "id": "cau-4",
+      "role": "question",
+      "source": {
+        "body_block": 15,
+        "end_block_exclusive": 17
+      }
+    },
+    {
+      "id": "cau-5",
+      "role": "question",
+      "source": {
+        "body_block": 17,
+        "end_block_exclusive": 20
+      }
+    },
+    {
+      "id": "cau-6",
+      "role": "question",
+      "source": {
+        "body_block": 20,
+        "end_block_exclusive": 22
+      }
+    },
+    {
+      "id": "cau-7",
+      "role": "question",
+      "source": {
+        "body_block": 22,
+        "end_block_exclusive": 25
+      }
+    },
+    {
+      "id": "cau-8",
+      "role": "question",
+      "source": {
+        "body_block": 25,
+        "end_block_exclusive": 27
+      }
+    },
+    {
+      "id": "cau-9",
+      "role": "question",
+      "source": {
+        "body_block": 27,
+        "end_block_exclusive": 29
+      }
+    },
+    {
+      "id": "cau-10",
+      "role": "question",
+      "source": {
+        "body_block": 29,
+        "end_block_exclusive": 31
+      }
+    },
+    {
+      "id": "cau-11",
+      "role": "question",
+      "source": {
+        "body_block": 31,
+        "end_block_exclusive": 33
+      }
+    },
+    {
+      "id": "cau-12",
+      "role": "question",
+      "source": {
+        "body_block": 33,
+        "end_block_exclusive": 34
+      }
+    }
+  ],
+  "provenance": {
+    "equations": {
+      "decoded": 70,
+      "preview_pairs_checked": 70,
+      "empty": 0
+    },
+    "source_corrections": [
+      {
+        "location": "Lý thuyết 2",
+        "original": "n₁! n₂! … ! nₖ!",
+        "corrected": "n₁! n₂! … nₖ!",
+        "reason": "Removed redundant factorial after ellipsis; corrected missing word vị in prose."
+      }
+    ],
+    "scope_note": "Source contains theory and 12 exercises, no answer key or solutions. Only de and de-cach implemented."
+  },
+  "drive": {
+    "folder": "Chuyên đề",
+    "filenames": {
+      "de": "BUỔI 1 - HOÁN VỊ - ĐỀ.pdf",
+      "de-cach": "BUỔI 1 - HOÁN VỊ - ĐỀ CÁCH.pdf"
+    }
+  },
+  "outputs": {
+    "de": {
+      "pdf": "assets/targets/2026-11/Chuyên đề/th-xs-buoi-1-hoan-vi/de.pdf",
+      "pages": 2,
+      "bytes": 1164176,
+      "sha256": "7d2bd977ace8934d3d82b7a01bbdf966e03245ce8129e509048df6e567346700"
+    },
+    "de-cach": {
+      "pdf": "assets/targets/2026-11/Chuyên đề/th-xs-buoi-1-hoan-vi/de-cach.pdf",
+      "pages": 5,
+      "bytes": 1181655,
+      "sha256": "8e772c969339397d401fdcf1560ac693177026d2c4591607bd1813d68fe7bc67"
+    }
+  },
+  "qa": {
+    "review_status": "pending",
+    "compile": "passed",
+    "content_counts": "12 questions in order in both variants; both theory sections preserved; 70 MathType equations verified against WMF previews.",
+    "source_integrity": "passed",
+    "layout_checks": {
+      "de": {
+        "pages": 2
+      },
+      "de-cach": {
+        "pages": 5
+      }
+    },
+    "writing_layout": "Maximum 3 questions/page; at least 3 ruled lines per question; 9mm line pitch.",
+    "pdf_checks": "Selectable text; horizontal body bounds checked; publication filenames validated.",
+    "full_page_visual_review": "pending — no page preview images generated per repository convention",
+    "checked_output_sha256": {
+      "de": "7d2bd977ace8934d3d82b7a01bbdf966e03245ce8129e509048df6e567346700",
+      "de-cach": "8e772c969339397d401fdcf1560ac693177026d2c4591607bd1813d68fe7bc67"
+    },
+    "livestream_checks": "Both variants: original teacher header, user-specified course/ZOLA footer on every page, Fanpage record note once on final page, red author and contact text; 12 questions retained.",
+    "ending_position": "Fanpage record note and red contact links grouped immediately below HẾT, with 3mm note gap, on same page as question 12.",
+    "contact_color": "Final website and social handles verified #C00000 in both PDFs.",
+    "footer_alignment": "Footer offset reset from 0.7mm to 0mm, using native vertical center alignment."
+  }
+}
