@@ -1,0 +1,590 @@
+{
+  "schema_version": 1,
+  "id": "tran-bien-12-gk1-ma-2001-26-27",
+  "kind": "exam",
+  "received_date": "2026-11-13",
+  "status": "implemented",
+  "metadata": {
+    "title": "ĐỀ KIỂM TRA GIỮA KỲ I – THPT TRẤN BIÊN – ĐỒNG NAI",
+    "subject": "Toán 12",
+    "school_year": "2026-2027",
+    "code": "2001",
+    "duration": 90,
+    "school": "THPT Trấn Biên",
+    "department": "SỞ GDĐT TP. ĐỒNG NAI"
+  },
+  "sources": [
+    {
+      "path": "assets/sources/2026-11/Đề thi/tran-bien-12-gk1-ma-2001-26-27/source.pdf",
+      "original_name": "de-giua-ky-1-toan-12-nam-2026-2027-truong-thpt-tran-bien-dong-nai.pdf",
+      "bytes": 748936,
+      "sha256": "0e54018a23e463124dd0cff775091b72eda1871ace2fba87c7edf67923d75b8b",
+      "pages": 7
+    }
+  ],
+  "scope": {
+    "has_questions": true,
+    "has_solutions": true,
+    "questions": 22,
+    "question_pages": [
+      1,
+      2,
+      3
+    ],
+    "solution_pages": [
+      4,
+      5,
+      6,
+      7
+    ]
+  },
+  "publication": {
+    "combine_answers": false
+  },
+  "variants": {
+    "de": {
+      "filename": "de.pdf",
+      "inputs": {
+        "variant": "de"
+      }
+    },
+    "dap-an": {
+      "filename": "dap-an.pdf",
+      "inputs": {
+        "variant": "dap-an"
+      }
+    }
+  },
+  "content_mapping": [
+    {
+      "id": "I-1",
+      "role": "question",
+      "source": {
+        "page": 1,
+        "section": "I",
+        "number": 1
+      }
+    },
+    {
+      "id": "I-1-solution",
+      "role": "solution",
+      "source": {
+        "page": 4,
+        "section": "I",
+        "number": 1
+      }
+    },
+    {
+      "id": "I-2",
+      "role": "question",
+      "source": {
+        "page": 1,
+        "section": "I",
+        "number": 2
+      }
+    },
+    {
+      "id": "I-2-solution",
+      "role": "solution",
+      "source": {
+        "page": 4,
+        "section": "I",
+        "number": 2
+      }
+    },
+    {
+      "id": "I-3",
+      "role": "question",
+      "source": {
+        "page": 1,
+        "section": "I",
+        "number": 3
+      }
+    },
+    {
+      "id": "I-3-solution",
+      "role": "solution",
+      "source": {
+        "page": 4,
+        "section": "I",
+        "number": 3
+      }
+    },
+    {
+      "id": "I-4",
+      "role": "question",
+      "source": {
+        "page": 1,
+        "section": "I",
+        "number": 4
+      }
+    },
+    {
+      "id": "I-4-solution",
+      "role": "solution",
+      "source": {
+        "page": 4,
+        "section": "I",
+        "number": 4
+      }
+    },
+    {
+      "id": "I-5",
+      "role": "question",
+      "source": {
+        "page": 1,
+        "section": "I",
+        "number": 5
+      }
+    },
+    {
+      "id": "I-5-solution",
+      "role": "solution",
+      "source": {
+        "page": 4,
+        "section": "I",
+        "number": 5
+      }
+    },
+    {
+      "id": "I-5-figure",
+      "role": "figure",
+      "source": {
+        "page": 1,
+        "question_key": "I-5",
+        "native_reconstruction": "sign-table()"
+      }
+    },
+    {
+      "id": "I-6",
+      "role": "question",
+      "source": {
+        "page": 1,
+        "section": "I",
+        "number": 6
+      }
+    },
+    {
+      "id": "I-6-solution",
+      "role": "solution",
+      "source": {
+        "page": 4,
+        "section": "I",
+        "number": 6
+      }
+    },
+    {
+      "id": "I-6-figure",
+      "role": "figure",
+      "source": {
+        "page": 1,
+        "question_key": "I-6",
+        "native_reconstruction": "variation-table()"
+      }
+    },
+    {
+      "id": "I-7",
+      "role": "question",
+      "source": {
+        "page": 1,
+        "section": "I",
+        "number": 7
+      }
+    },
+    {
+      "id": "I-7-solution",
+      "role": "solution",
+      "source": {
+        "page": 4,
+        "section": "I",
+        "number": 7
+      }
+    },
+    {
+      "id": "I-7-figure",
+      "role": "figure",
+      "source": {
+        "page": 1,
+        "question_key": "I-7",
+        "native_reconstruction": "curve-plot(7)"
+      }
+    },
+    {
+      "id": "I-8",
+      "role": "question",
+      "source": {
+        "page": 1,
+        "section": "I",
+        "number": 8,
+        "pages": [
+          1,
+          2
+        ]
+      }
+    },
+    {
+      "id": "I-8-solution",
+      "role": "solution",
+      "source": {
+        "page": 4,
+        "section": "I",
+        "number": 8
+      }
+    },
+    {
+      "id": "I-8-figure",
+      "role": "figure",
+      "source": {
+        "page": 1,
+        "question_key": "I-8",
+        "native_reconstruction": "curve-plot(8)"
+      }
+    },
+    {
+      "id": "I-9",
+      "role": "question",
+      "source": {
+        "page": 2,
+        "section": "I",
+        "number": 9
+      }
+    },
+    {
+      "id": "I-9-solution",
+      "role": "solution",
+      "source": {
+        "page": 4,
+        "section": "I",
+        "number": 9
+      }
+    },
+    {
+      "id": "I-9-figure",
+      "role": "figure",
+      "source": {
+        "page": 2,
+        "question_key": "I-9",
+        "native_reconstruction": "curve-plot(9)"
+      }
+    },
+    {
+      "id": "I-10",
+      "role": "question",
+      "source": {
+        "page": 2,
+        "section": "I",
+        "number": 10
+      }
+    },
+    {
+      "id": "I-10-solution",
+      "role": "solution",
+      "source": {
+        "page": 4,
+        "section": "I",
+        "number": 10
+      }
+    },
+    {
+      "id": "I-11",
+      "role": "question",
+      "source": {
+        "page": 2,
+        "section": "I",
+        "number": 11
+      }
+    },
+    {
+      "id": "I-11-solution",
+      "role": "solution",
+      "source": {
+        "page": 4,
+        "section": "I",
+        "number": 11
+      }
+    },
+    {
+      "id": "I-12",
+      "role": "question",
+      "source": {
+        "page": 2,
+        "section": "I",
+        "number": 12
+      }
+    },
+    {
+      "id": "I-12-solution",
+      "role": "solution",
+      "source": {
+        "page": 4,
+        "section": "I",
+        "number": 12
+      }
+    },
+    {
+      "id": "II-1",
+      "role": "question",
+      "source": {
+        "page": 2,
+        "section": "II",
+        "number": 1
+      }
+    },
+    {
+      "id": "II-1-solution",
+      "role": "solution",
+      "source": {
+        "page": 4,
+        "section": "II",
+        "number": 1,
+        "pages": [
+          4,
+          5
+        ]
+      }
+    },
+    {
+      "id": "II-2",
+      "role": "question",
+      "source": {
+        "page": 2,
+        "section": "II",
+        "number": 2
+      }
+    },
+    {
+      "id": "II-2-solution",
+      "role": "solution",
+      "source": {
+        "page": 5,
+        "section": "II",
+        "number": 2
+      }
+    },
+    {
+      "id": "II-3",
+      "role": "question",
+      "source": {
+        "page": 2,
+        "section": "II",
+        "number": 3
+      }
+    },
+    {
+      "id": "II-3-solution",
+      "role": "solution",
+      "source": {
+        "page": 5,
+        "section": "II",
+        "number": 3
+      }
+    },
+    {
+      "id": "II-4",
+      "role": "question",
+      "source": {
+        "page": 2,
+        "section": "II",
+        "number": 4,
+        "pages": [
+          2,
+          3
+        ]
+      }
+    },
+    {
+      "id": "II-4-solution",
+      "role": "solution",
+      "source": {
+        "page": 5,
+        "section": "II",
+        "number": 4,
+        "pages": [
+          5,
+          6
+        ]
+      }
+    },
+    {
+      "id": "II-4-figure",
+      "role": "figure",
+      "source": {
+        "page": 3,
+        "question_key": "II-4",
+        "native_reconstruction": "curve-plot(4)"
+      }
+    },
+    {
+      "id": "III-1",
+      "role": "question",
+      "source": {
+        "page": 3,
+        "section": "III",
+        "number": 1
+      }
+    },
+    {
+      "id": "III-1-solution",
+      "role": "solution",
+      "source": {
+        "page": 6,
+        "section": "III",
+        "number": 1
+      }
+    },
+    {
+      "id": "III-1-figure",
+      "role": "figure",
+      "source": {
+        "page": 3,
+        "question_key": "III-1",
+        "native_reconstruction": "perfume()"
+      }
+    },
+    {
+      "id": "III-2",
+      "role": "question",
+      "source": {
+        "page": 3,
+        "section": "III",
+        "number": 2
+      }
+    },
+    {
+      "id": "III-2-solution",
+      "role": "solution",
+      "source": {
+        "page": 6,
+        "section": "III",
+        "number": 2
+      }
+    },
+    {
+      "id": "III-3",
+      "role": "question",
+      "source": {
+        "page": 3,
+        "section": "III",
+        "number": 3
+      }
+    },
+    {
+      "id": "III-3-solution",
+      "role": "solution",
+      "source": {
+        "page": 6,
+        "section": "III",
+        "number": 3
+      }
+    },
+    {
+      "id": "III-4",
+      "role": "question",
+      "source": {
+        "page": 3,
+        "section": "III",
+        "number": 4
+      }
+    },
+    {
+      "id": "III-4-solution",
+      "role": "solution",
+      "source": {
+        "page": 6,
+        "section": "III",
+        "number": 4
+      }
+    },
+    {
+      "id": "III-5",
+      "role": "question",
+      "source": {
+        "page": 3,
+        "section": "III",
+        "number": 5
+      }
+    },
+    {
+      "id": "III-5-solution",
+      "role": "solution",
+      "source": {
+        "page": 6,
+        "section": "III",
+        "number": 5
+      }
+    },
+    {
+      "id": "III-6",
+      "role": "question",
+      "source": {
+        "page": 3,
+        "section": "III",
+        "number": 6
+      }
+    },
+    {
+      "id": "III-6-solution",
+      "role": "solution",
+      "source": {
+        "page": 7,
+        "section": "III",
+        "number": 6
+      }
+    }
+  ],
+  "provenance": {
+    "solution_origin": "Source pages 4–7: ĐÁP ÁN VÀ LỜI GIẢI THAM KHẢO — Được thực hiện bởi AI & TOANMATH.com. Transcribed source solutions, not newly generated answers.",
+    "figure_source": "Seven source figures: I-5 sign table, I-6 variation table, I-7/I-8/I-9 graphs, II-4 profit graph, III-1 perfume hemisphere. Reconstructed as native Typst vectors. I-8 uses piecewise interpolation through source endpoints/extrema, not an assumed global cubic formula. I-8 uses piecewise interpolation through source endpoints/extrema, not an assumed global cubic formula. I-8 uses piecewise interpolation through source endpoints/extrema, not an assumed global cubic formula.",
+    "source_notes": [
+      "Source department wording SỞ GDĐT TP. ĐỒNG NAI retained in metadata.",
+      "Question III-4 names y then asks f(3); original wording retained."
+    ]
+  },
+  "drive": {
+    "folder": "Đề thi",
+    "filenames": {
+      "de": "TRẤN BIÊN - TOÁN 12 - GIỮA HK1 - MÃ 2001 - 2026-2027 - ĐỀ.pdf",
+      "dap-an": "TRẤN BIÊN - TOÁN 12 - GIỮA HK1 - MÃ 2001 - 2026-2027 - ĐÁP ÁN.pdf"
+    }
+  },
+  "outputs": {
+    "de": {
+      "pdf": "assets/targets/2026-11/Đề thi/tran-bien-12-gk1-ma-2001-26-27/de.pdf",
+      "pages": 6,
+      "bytes": 1227154,
+      "sha256": "265e82b1dec420f584f27d490c4a2250c62094e68103e12d4141b872c8f9971a"
+    },
+    "dap-an": {
+      "pdf": "assets/targets/2026-11/Đề thi/tran-bien-12-gk1-ma-2001-26-27/dap-an.pdf",
+      "pages": 10,
+      "bytes": 1350766,
+      "sha256": "065d83802d312781e31c3558640ccfadd3c6c6054737af6a74a5f782d1400537"
+    }
+  },
+  "qa": {
+    "review_status": "pending",
+    "compile": "passed",
+    "content_checks": {
+      "de": {
+        "pages": 6,
+        "questions": 22,
+        "body_horizontal_bounds": "passed"
+      },
+      "dap-an": {
+        "pages": 10,
+        "questions": 22,
+        "body_horizontal_bounds": "passed"
+      }
+    },
+    "source_integrity": "passed — source PDF hash unchanged",
+    "figure_review": "Seven original source images inspected. Four native graphs and two tables rendered separately and inspected; perfume model uses a single orthographic projection, top vertices on radius-10 sphere.",
+    "answer_checks": "12 MCQ choices match source: A A C C A A B C B B A B; TF DSDD/DDDS/DSDD/DDSS; short answers 616, 5, -8, 3.5, 28, 600.",
+    "publication": "Only separate de and dap-an; filenames pass shared publication validation.",
+    "full_page_visual_review": "pending — no page preview images generated, per repository convention",
+    "checked_output_sha256": {
+      "de": "265e82b1dec420f584f27d490c4a2250c62094e68103e12d4141b872c8f9971a",
+      "dap-an": "065d83802d312781e31c3558640ccfadd3c6c6054737af6a74a5f782d1400537"
+    },
+    "question7_layout": "Answer edition only: stem and 2x2 options left, graph right; explanation follows full width, with no duplicate graph."
+  }
+}
