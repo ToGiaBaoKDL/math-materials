@@ -551,14 +551,14 @@
     "de": {
       "pdf": "assets/targets/2026-11/Đề thi/tran-bien-12-gk1-ma-2001-26-27/de.pdf",
       "pages": 6,
-      "bytes": 1227154,
-      "sha256": "265e82b1dec420f584f27d490c4a2250c62094e68103e12d4141b872c8f9971a"
+      "bytes": 1225831,
+      "sha256": "5001d95195b1e090696988f27ab87b7e3e98c0fecb518212adfe169a11d02691"
     },
     "dap-an": {
       "pdf": "assets/targets/2026-11/Đề thi/tran-bien-12-gk1-ma-2001-26-27/dap-an.pdf",
-      "pages": 10,
-      "bytes": 1350766,
-      "sha256": "065d83802d312781e31c3558640ccfadd3c6c6054737af6a74a5f782d1400537"
+      "pages": 9,
+      "bytes": 1345724,
+      "sha256": "7163c7107367a80cb9bd39d499a7e329eff88a48df6645107c7eae5640b51101"
     }
   },
   "qa": {
@@ -585,6 +585,9 @@
       "de": "265e82b1dec420f584f27d490c4a2250c62094e68103e12d4141b872c8f9971a",
       "dap-an": "065d83802d312781e31c3558640ccfadd3c6c6054737af6a74a5f782d1400537"
     },
-    "question7_layout": "Answer edition only: stem and 2x2 options left, graph right; explanation follows full width, with no duplicate graph."
+    "question7_layout": "Answer edition only: stem and 2x2 options left, graph right; explanation follows full width, with no duplicate graph.",
+    "source_note_placement": "Verified source attribution appears once after HẾT on final answer page, removed from first page.",
+    "nine_page_revision": "Answer PDF: 9 pages, all 22 questions retained; 1.12em leading and 4mm/2mm question spacing. Metre unit moved inside distance display equation. Attribution remains after HẾT. Text bounds checked; full-page visual review pending.",
+    "heading_revision": "Both PDFs rebuilt and first-page text checked: subtitle contains only school year 2026–2027 and exam code 2001."
   }
 }

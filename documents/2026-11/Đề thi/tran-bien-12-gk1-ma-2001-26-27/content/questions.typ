@@ -71,7 +71,7 @@ Hàm số đạt cực đại tại $x=-2$, $a=y(-2)=-2-2-2=-6$; đạt cực ti
 (section:"III",number:5,key:"III-5",stem:[Một hạt chuyển động dọc theo trục tọa độ với phương trình chuyển động là $s(t)=t^3-9t^2+24t$, trong đó $s$ (mét) và thời gian $t$ (giây) tính từ lúc bắt đầu chuyển động. Tính tổng quãng đường hạt đó đã di chuyển được trong 5 giây đầu tiên kể từ lúc bắt đầu chuyển động.],options:(),statements:(),answer:[28],solution:[Vận tốc của hạt là $v(t)=s'(t)=3t^2-18t+24=3(t-2)(t-4)$. Trên đoạn $[0;5]$, $v(t)$ đổi dấu tại $t=2$ và $t=4$ nên hạt đổi chiều chuyển động tại các thời điểm này.
 
 Ta có $s(0)=0$, $s(2)=20$, $s(4)=16$, $s(5)=20$. Tổng quãng đường hạt đi được trong 5 giây đầu là
-$ abs(s(2)-s(0))+abs(s(4)-s(2))+abs(s(5)-s(4))=20+4+4=28 $ (m).],figure:none,width:60mm),
+$ abs(s(2)-s(0))+abs(s(4)-s(2))+abs(s(5)-s(4))=20+4+4=28 quad ("m"). $],figure:none,width:60mm),
 (section:"III",number:6,key:"III-6",stem:[Một công ty logistics cần vận chuyển một chuyến hàng đến đối tác ở khoảng cách 150 km. Chi phí cho chuyến đi bao gồm tiền nhiên liệu và tiền công trả cho tài xế. Biết rằng nếu xe di chuyển với tốc độ $x$ (km/h) thì chi phí nhiên liệu cho mỗi kilômét đường đi được tính theo công thức $C(x)=x/30+40/x$ (đơn vị: nghìn đồng). Tiền công thuê tài xế là 80 nghìn đồng cho mỗi giờ lái xe. Do quy định an toàn giao thông, tốc độ của xe tải không được vượt quá 70 km/h. Hỏi tổng chi phí nhỏ nhất mà công ty phải trả cho chuyến đi này là bao nhiêu nghìn đồng?],options:(),statements:(),answer:[600],solution:[Gọi tốc độ của xe là $x$ (km/h), $0<x<=70$. Thời gian đi hết quãng đường là $150/x$ (giờ).
 
 Chi phí nhiên liệu là $150(x/30+40/x)=5x+6000/x$ (nghìn đồng). Tiền công tài xế là $80 dot 150/x=12000/x$ (nghìn đồng).

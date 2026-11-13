@@ -1,0 +1,871 @@
+{
+  "schema_version": 1,
+  "id": "th-buoi-26-goc-giua-hai-mat-phang-goc-nhi-dien",
+  "kind": "tinh-hoa",
+  "received_date": "2026-11-12",
+  "status": "implemented",
+  "metadata": {
+    "title": "BUỔI 26: GÓC GIỮA HAI MẶT PHẲNG – GÓC NHỊ DIỆN",
+    "lesson": 26,
+    "subject": "Toán 12",
+    "course": "KHÓA TINH HOA TOÀN DIỆN 9+ 2027",
+    "topic": "HÌNH HỌC KHÔNG GIAN THUẦN TÚY"
+  },
+  "sources": [
+    {
+      "path": "assets/sources/2026-11/Chuyên đề/th-buoi-26-goc-giua-hai-mat-phang-goc-nhi-dien/source.docx",
+      "original_name": "BUỔI 26 GÓC GIỮA 2 MẶT PHẲNG - GÓC NHỊ DIỆN.docx",
+      "bytes": 1559975,
+      "sha256": "4a642b7b3ff865f9da41e87fe8ce10fd6ceee6390e4182b712025a2769955cd5",
+      "review_pdf_pages": 28
+    }
+  ],
+  "scope": {
+    "has_questions": true,
+    "has_solutions": true,
+    "questions": 18,
+    "worked_examples": 5,
+    "practice_questions": 13,
+    "theory_sections": 2
+  },
+  "variants": {
+    "de": {
+      "filename": "de.pdf",
+      "inputs": {
+        "variant": "de"
+      }
+    },
+    "de-cach": {
+      "filename": "de-cach.pdf",
+      "inputs": {
+        "variant": "de-cach"
+      }
+    },
+    "dap-an": {
+      "filename": "dap-an.pdf",
+      "inputs": {
+        "variant": "dap-an"
+      }
+    }
+  },
+  "content_mapping": [
+    {
+      "id": "theory",
+      "role": "source",
+      "source": {
+        "body_block": 2,
+        "end_block_exclusive": 18
+      }
+    },
+    {
+      "id": "bai-hoc-1",
+      "role": "question",
+      "source": {
+        "body_block": 18,
+        "end_block_exclusive": 23,
+        "original_label": "Bài 1"
+      }
+    },
+    {
+      "id": "bai-hoc-1-solution",
+      "role": "solution",
+      "source": {
+        "body_block": 23,
+        "end_block_exclusive": 60
+      }
+    },
+    {
+      "id": "bai-hoc-2",
+      "role": "question",
+      "source": {
+        "body_block": 60,
+        "end_block_exclusive": 63,
+        "original_label": "Bài 3"
+      }
+    },
+    {
+      "id": "bai-hoc-2-solution",
+      "role": "solution",
+      "source": {
+        "body_block": 63,
+        "end_block_exclusive": 77
+      }
+    },
+    {
+      "id": "bai-hoc-3",
+      "role": "question",
+      "source": {
+        "body_block": 77,
+        "end_block_exclusive": 78,
+        "original_label": "Ví dụ 25"
+      }
+    },
+    {
+      "id": "bai-hoc-3-solution",
+      "role": "solution",
+      "source": {
+        "body_block": 78,
+        "end_block_exclusive": 86
+      }
+    },
+    {
+      "id": "bai-hoc-4",
+      "role": "question",
+      "source": {
+        "body_block": 86,
+        "end_block_exclusive": 88,
+        "original_label": "Cho hình hộp chữ nhật $A B C D . A' B' C"
+      }
+    },
+    {
+      "id": "bai-hoc-4-solution",
+      "role": "solution",
+      "source": {
+        "body_block": 88,
+        "end_block_exclusive": 96
+      }
+    },
+    {
+      "id": "bai-hoc-5",
+      "role": "question",
+      "source": {
+        "body_block": 96,
+        "end_block_exclusive": 98,
+        "original_label": "Kim tự tháp Giza, một trong bảy kì quan "
+      }
+    },
+    {
+      "id": "bai-hoc-5-solution",
+      "role": "solution",
+      "source": {
+        "body_block": 98,
+        "end_block_exclusive": 109
+      }
+    },
+    {
+      "id": "tu-luyen-1",
+      "role": "question",
+      "source": {
+        "body_block": 111,
+        "end_block_exclusive": 114,
+        "original_label": "Câu 2"
+      }
+    },
+    {
+      "id": "tu-luyen-1-solution",
+      "role": "solution",
+      "source": {
+        "body_block": 114,
+        "end_block_exclusive": 145
+      }
+    },
+    {
+      "id": "tu-luyen-2",
+      "role": "question",
+      "source": {
+        "body_block": 145,
+        "end_block_exclusive": 148,
+        "original_label": "Câu 3"
+      }
+    },
+    {
+      "id": "tu-luyen-2-solution",
+      "role": "solution",
+      "source": {
+        "body_block": 148,
+        "end_block_exclusive": 178
+      }
+    },
+    {
+      "id": "tu-luyen-3",
+      "role": "question",
+      "source": {
+        "body_block": 178,
+        "end_block_exclusive": 179,
+        "original_label": "Câu 4"
+      }
+    },
+    {
+      "id": "tu-luyen-3-solution",
+      "role": "solution",
+      "source": {
+        "body_block": 179,
+        "end_block_exclusive": 195
+      }
+    },
+    {
+      "id": "tu-luyen-4",
+      "role": "question",
+      "source": {
+        "body_block": 195,
+        "end_block_exclusive": 199,
+        "original_label": "Câu 5"
+      }
+    },
+    {
+      "id": "tu-luyen-4-solution",
+      "role": "solution",
+      "source": {
+        "body_block": 199,
+        "end_block_exclusive": 239
+      }
+    },
+    {
+      "id": "tu-luyen-5",
+      "role": "question",
+      "source": {
+        "body_block": 239,
+        "end_block_exclusive": 241,
+        "original_label": "Câu 6"
+      }
+    },
+    {
+      "id": "tu-luyen-5-solution",
+      "role": "solution",
+      "source": {
+        "body_block": 241,
+        "end_block_exclusive": 259
+      }
+    },
+    {
+      "id": "tu-luyen-6",
+      "role": "question",
+      "source": {
+        "body_block": 259,
+        "end_block_exclusive": 261,
+        "original_label": "Câu 7"
+      }
+    },
+    {
+      "id": "tu-luyen-6-solution",
+      "role": "solution",
+      "source": {
+        "body_block": 261,
+        "end_block_exclusive": 282
+      }
+    },
+    {
+      "id": "tu-luyen-7",
+      "role": "question",
+      "source": {
+        "body_block": 282,
+        "end_block_exclusive": 283,
+        "original_label": "Câu 8 (VD)"
+      }
+    },
+    {
+      "id": "tu-luyen-7-solution",
+      "role": "solution",
+      "source": {
+        "body_block": 283,
+        "end_block_exclusive": 302
+      }
+    },
+    {
+      "id": "tu-luyen-8",
+      "role": "question",
+      "source": {
+        "body_block": 302,
+        "end_block_exclusive": 303,
+        "original_label": "Ví dụ 22"
+      }
+    },
+    {
+      "id": "tu-luyen-8-solution",
+      "role": "solution",
+      "source": {
+        "body_block": 303,
+        "end_block_exclusive": 309
+      }
+    },
+    {
+      "id": "tu-luyen-9",
+      "role": "question",
+      "source": {
+        "body_block": 309,
+        "end_block_exclusive": 310,
+        "original_label": "Ví dụ 23"
+      }
+    },
+    {
+      "id": "tu-luyen-9-solution",
+      "role": "solution",
+      "source": {
+        "body_block": 310,
+        "end_block_exclusive": 316
+      }
+    },
+    {
+      "id": "tu-luyen-10",
+      "role": "question",
+      "source": {
+        "body_block": 316,
+        "end_block_exclusive": 319,
+        "original_label": "Ví dụ 27"
+      }
+    },
+    {
+      "id": "tu-luyen-10-solution",
+      "role": "solution",
+      "source": {
+        "body_block": 319,
+        "end_block_exclusive": 329
+      }
+    },
+    {
+      "id": "tu-luyen-11",
+      "role": "question",
+      "source": {
+        "body_block": 329,
+        "end_block_exclusive": 331,
+        "original_label": "[TH] Lăng trụ tam giác đều $A B C . A' B"
+      }
+    },
+    {
+      "id": "tu-luyen-11-solution",
+      "role": "solution",
+      "source": {
+        "body_block": 331,
+        "end_block_exclusive": 338
+      }
+    },
+    {
+      "id": "tu-luyen-12",
+      "role": "question",
+      "source": {
+        "body_block": 338,
+        "end_block_exclusive": 339,
+        "original_label": "Cho hình chóp $S . A B C$ có $S A ⊥ ( A "
+      }
+    },
+    {
+      "id": "tu-luyen-12-solution",
+      "role": "solution",
+      "source": {
+        "body_block": 339,
+        "end_block_exclusive": 347
+      }
+    },
+    {
+      "id": "tu-luyen-13",
+      "role": "question",
+      "source": {
+        "body_block": 347,
+        "end_block_exclusive": 348,
+        "original_label": "Cho hình lập phương $A B C D . A _(1) B "
+      }
+    },
+    {
+      "id": "tu-luyen-13-solution",
+      "role": "solution",
+      "source": {
+        "body_block": 348,
+        "end_block_exclusive": 355
+      }
+    },
+    {
+      "id": "figure-9",
+      "role": "figure",
+      "source": {
+        "embedded_media": "image9.png",
+        "output": "figures/image9.svg"
+      }
+    },
+    {
+      "id": "figure-36",
+      "role": "figure",
+      "source": {
+        "embedded_media": "image36.png",
+        "output": "figures/image36.svg"
+      }
+    },
+    {
+      "id": "figure-54",
+      "role": "figure",
+      "source": {
+        "embedded_media": "image54.png",
+        "output": "figures/image54.svg"
+      }
+    },
+    {
+      "id": "figure-86",
+      "role": "figure",
+      "source": {
+        "embedded_media": "image86.png",
+        "output": "figures/image86.svg"
+      }
+    },
+    {
+      "id": "figure-109",
+      "role": "figure",
+      "source": {
+        "embedded_media": "image109.png",
+        "output": "figures/image109.svg"
+      }
+    },
+    {
+      "id": "figure-135",
+      "role": "figure",
+      "source": {
+        "embedded_media": "image135.png",
+        "output": "figures/image135.svg"
+      }
+    },
+    {
+      "id": "figure-154",
+      "role": "figure",
+      "source": {
+        "embedded_media": "image154.png",
+        "output": "figures/image154.svg"
+      }
+    },
+    {
+      "id": "figure-192",
+      "role": "figure",
+      "source": {
+        "embedded_media": "image192.png",
+        "output": "figures/image192.svg"
+      }
+    },
+    {
+      "id": "figure-234",
+      "role": "figure",
+      "source": {
+        "embedded_media": "image234.png",
+        "output": "figures/image234.svg"
+      }
+    },
+    {
+      "id": "figure-250",
+      "role": "figure",
+      "source": {
+        "embedded_media": "image250.png",
+        "output": "figures/image250.svg"
+      }
+    },
+    {
+      "id": "figure-268",
+      "role": "figure",
+      "source": {
+        "embedded_media": "image268.png",
+        "output": "figures/image268.svg"
+      }
+    },
+    {
+      "id": "figure-294",
+      "role": "figure",
+      "source": {
+        "embedded_media": "image294.png",
+        "output": "figures/image294.svg"
+      }
+    },
+    {
+      "id": "figure-340",
+      "role": "figure",
+      "source": {
+        "embedded_media": "image340.png",
+        "output": "figures/image340.svg"
+      }
+    },
+    {
+      "id": "figure-354",
+      "role": "figure",
+      "source": {
+        "embedded_media": "image354.png",
+        "output": "figures/image354.svg"
+      }
+    },
+    {
+      "id": "figure-374",
+      "role": "figure",
+      "source": {
+        "embedded_media": "image374.png",
+        "output": "figures/image374.svg"
+      }
+    },
+    {
+      "id": "figure-380",
+      "role": "figure",
+      "source": {
+        "embedded_media": "image380.png",
+        "output": "figures/image380.svg"
+      }
+    },
+    {
+      "id": "figure-411",
+      "role": "figure",
+      "source": {
+        "embedded_media": "image411.png",
+        "output": "figures/image411.svg"
+      }
+    },
+    {
+      "id": "figure-412",
+      "role": "figure",
+      "source": {
+        "embedded_media": "image412.png",
+        "output": "figures/image412.svg"
+      }
+    },
+    {
+      "id": "figure-435",
+      "role": "figure",
+      "source": {
+        "embedded_media": "image435.png",
+        "output": "figures/image435.svg"
+      }
+    },
+    {
+      "id": "figure-461",
+      "role": "figure",
+      "source": {
+        "embedded_media": "image461.png",
+        "output": "figures/image461.svg"
+      }
+    },
+    {
+      "id": "figure-487",
+      "role": "figure",
+      "source": {
+        "embedded_media": "image487.jpeg",
+        "output": "figures/image487.svg"
+      }
+    },
+    {
+      "id": "figure-520",
+      "role": "figure",
+      "source": {
+        "embedded_media": "image520.png",
+        "output": "figures/image520.svg"
+      }
+    },
+    {
+      "id": "figure-538",
+      "role": "figure",
+      "source": {
+        "embedded_media": "image538.emf",
+        "output": "figures/image538.svg"
+      }
+    },
+    {
+      "id": "figure-556",
+      "role": "figure",
+      "source": {
+        "embedded_media": "image556.png",
+        "output": "figures/image556.svg"
+      }
+    }
+  ],
+  "provenance": {
+    "equations": {
+      "decoded": 567,
+      "preview_pairs_checked": 567,
+      "extra_wmf_equations": 10,
+      "empty": 0,
+      "parser_note": "MTEF template 27 variation 1 interpreted as standalone subscript; checked against paired preview."
+    },
+    "source_corrections": [
+      {
+        "body_block": 11,
+        "original": "+) Hai mặt phẳng cùng vuông góc với mặt phẳng thứ 3 thì giao tuyến của chúng vuông góc với mặt thứ 3.",
+        "corrected": "+) Hai mặt phẳng cắt nhau và cùng vuông góc với mặt phẳng thứ ba thì giao tuyến của chúng vuông góc với mặt phẳng thứ ba.",
+        "reason": "Explicit intersection hypothesis required for the common line."
+      },
+      {
+        "body_block": 31,
+        "original": "$⇒ ∠ lr(( lr(( S A D )) \";\" lr(( A B C D )) )) = ∠ lr(( S D \";\" A D )) = ∠ S D A$",
+        "corrected": "$⇒ ∠((S C D);(A B C D))=∠(S D;A D)=hat(S D A)$. Trong tam giác $S A D$ vuông tại $A$, $tan hat(S D A)=S A/(A D)=sqrt(3)$, nên góc cần tìm bằng $60°$.",
+        "reason": "Correct wrong plane SAD to SCD and complete omitted numerical conclusion."
+      },
+      {
+        "body_block": 35,
+        "original": "B3: $cases(display(lr(( S A C )) ∩ lr(( S B D )) = S O), display(lr(( S A K )) ∩ lr(( A B C D )) = A C))$",
+        "corrected": "$cases((S A C) ∩ (S B D)=S O,(S A C) ∩ (A B C D)=A C)$.",
+        "reason": "SAC is the section plane; source SAK has undefined K in part b."
+      },
+      {
+        "body_block": 74,
+        "original": "$vec(cases(display(A ' limits(stretch(arrow.r))^(c h i e u ⊥)_(lr(( A B B ' A ' ))) A '), display(C limits(stretch(arrow.r))^(c h i e u ⊥)_(lr(( A B B ' A ' ))) E lr(( d o C E ⊥ lr(( A B B ' A ' )) )))), ⇒ A ' C limits(stretch(arrow.r))^(c h i e u ⊥)_(lr(( A B B ' A ' ))) A ' E, ⇒ ∠ lr(( A ' C \";\" lr(( A B B ' A ' )) )) = ∠ lr(( A ' C \";\" A ' E )) = ∠ C A ' E, delim: #none)$",
+        "corrected": "Vì $C E ⊥ (A B B' A')$ nên hình chiếu vuông góc của $C$ lên $(A B B' A')$ là $E$, còn $A'$ thuộc mặt phẳng này. Do đó hình chiếu của $A'C$ là $A'E$, suy ra $∠(A'C;(A B B'A'))=hat(C A'E)$.",
+        "reason": "Render projection diagram as equivalent prose and native math, preserving all statements."
+      },
+      {
+        "body_block": 108,
+        "original": "Xét $Δ B O D$: $cos hat(B M D) = frac(M B ^(2) + M D ^(2) - B D ^(2), 2 M B . M D) ≈ - \"0,382\" ⇒ hat(B M D) ≈ 112 °$",
+        "corrected": "Xét $Δ B M D$: $cos hat(B M D) = frac(M B ^(2) + M D ^(2) - B D ^(2), 2 M B . M D) ≈ - \"0,382\" ⇒ hat(B M D) ≈ 112 °$",
+        "reason": "Cosine rule is applied in triangle BMD, not BOD."
+      },
+      {
+        "body_block": 154,
+        "original": "Xác định góc giữa hai mặt phẳng là góc giữa hai đường thẳng lần lượt vuông góc với hai mặt phẳng đó.",
+        "corrected": "Xác định góc giữa hai mặt phẳng bằng góc giữa hai đường thẳng lần lượt nằm trong hai mặt phẳng và cùng vuông góc với giao tuyến.",
+        "reason": "Correct the section-method description; source incorrectly says perpendicular to the planes."
+      },
+      {
+        "body_block": 229,
+        "original": "- Bước 3: Xác định góc giữa hai mặt phẳng đó là góc giữa hai đường thẳng lần lượt vuông góc với mặt phẳng đó.",
+        "corrected": "Xác định góc giữa hai mặt phẳng bằng góc giữa hai đường thẳng lần lượt nằm trong hai mặt phẳng và cùng vuông góc với giao tuyến.",
+        "reason": "Correct the section-method description; source incorrectly says perpendicular to the planes."
+      },
+      {
+        "body_block": 244,
+        "original": "- Bước 3: Xác định góc giữa hai mặt phẳng đó là góc giữa hai đường thẳng lần lượt vuông góc với mặt phẳng đó.",
+        "corrected": "Xác định góc giữa hai mặt phẳng bằng góc giữa hai đường thẳng lần lượt nằm trong hai mặt phẳng và cùng vuông góc với giao tuyến.",
+        "reason": "Correct the section-method description; source incorrectly says perpendicular to the planes."
+      },
+      {
+        "body_block": 264,
+        "original": "- Bước 3: Xác định góc giữa hai mặt phẳng đó là góc giữa hai đường thẳng lần lượt vuông góc với mặt phẳng đó.",
+        "corrected": "Xác định góc giữa hai mặt phẳng bằng góc giữa hai đường thẳng lần lượt nằm trong hai mặt phẳng và cùng vuông góc với giao tuyến.",
+        "reason": "Correct the section-method description; source incorrectly says perpendicular to the planes."
+      },
+      {
+        "body_block": 288,
+        "original": "- Xác định góc giữa hai mặt phẳng đó là góc giữa hai đường thẳng lần lượt vuông góc với mặt phẳng đó.",
+        "corrected": "Xác định góc giữa hai mặt phẳng bằng góc giữa hai đường thẳng lần lượt nằm trong hai mặt phẳng và cùng vuông góc với giao tuyến.",
+        "reason": "Correct the section-method description; source incorrectly says perpendicular to the planes."
+      },
+      {
+        "body_block": 166,
+        "original": "$⇒ tan ∠ A ' K A = frac(A A ', A K) = frac(a sqrt(3), frac(a sqrt(3), 2)) = 22$",
+        "corrected": "\t\t\t\t$⇒ tan ∠ A ' K A = frac(A A ', A K) = frac(a sqrt(3), frac(a sqrt(3), 2)) = 2$ ",
+        "reason": "sqrt(3)/(sqrt(3)/2)=2; duplicated digit in source."
+      },
+      {
+        "body_block": 221,
+        "original": "$⇒ ∠ lr(( S D \";\" S A D )) = ∠ lr(( S D \";\" S C )) = ∠ D S C$",
+        "corrected": "$⇒ ∠(S D;(S A C))=∠(S D;S C)=hat(D S C)$.",
+        "reason": "The requested plane is SAC, not SAD."
+      },
+      {
+        "body_block": 254,
+        "original": "$cases(display(A K = frac(S A . S B, sqrt(S A ^(2) + S B ^(2))) = frac(a . a, sqrt(a ^(2) + a ^(2))) = frac(a sqrt(2), 2)), display(A E = frac(S A . A C, sqrt(S A ^(2) + A C ^(2))) = frac(a . a sqrt(2), sqrt(a ^(2) + lr(( a sqrt(2) )) ^(2))) = frac(sqrt(6), 3) a))$",
+        "corrected": "Trong tam giác $S A B$ vuông tại $A$, đường cao $A K$ thỏa mãn:\n$ A K=(S A dot A B)/sqrt(S A^2+A B^2)=(a dot a)/sqrt(a^2+a^2)=(a sqrt(2))/2. $\nTrong tam giác $S A C$ vuông tại $A$:\n$ A E=(S A dot A C)/sqrt(S A^2+A C^2)=(a dot a sqrt(2))/sqrt(a^2+(a sqrt(2))^2)=(a sqrt(6))/3. $",
+        "reason": "Correct SA·SB and SB² to SA·AB and AB² in the altitude formula."
+      },
+      {
+        "body_block": 278,
+        "original": "$⇒ H K = 2 . frac(5 a ^(2) - frac(4, 3) a ^(2) - a ^(2), a sqrt(5)) = frac(16 sqrt(15), 15)$",
+        "corrected": "$⇒ H K=2 dot (5a^2-4/3 a^2-a^2)/(a sqrt(5))=(16 sqrt(5))/15 a$.",
+        "reason": "Correct sqrt(15) to sqrt(5) and restore the factor a; consistent with next ratio and geometry."
+      },
+      {
+        "body_block": 306,
+        "original": "Suy ra $cases(display(S A ⊥ S B), display(S A ⊥ S C)) ⇒ S A ⊥ lr(( S B C ))$$⇒ S A ⊥ B C$ và $S D ⊥ B C$ $⇒ B C ⊥ lr(( S A D )) ⇒ B C ⊥ S D$.",
+        "corrected": "Suy ra $cases(display(S A ⊥ S B), display(S A ⊥ S C)) ⇒ S A ⊥ lr(( S B C ))$$⇒ S A ⊥ B C$ và $S D ⊥ B C$ $⇒ B C ⊥ lr(( S A D )) ⇒ B C ⊥ A D$.",
+        "reason": "Final consequence needed is BC perpendicular AD; SD already established."
+      },
+      {
+        "body_block": 347,
+        "original": "Cho hình lập phương $A B C D . A _(1) B _(1) C _(1) D _(1)$ có cạnh bằng $2 a$, $O$ là tâm của hình vuông $A B C D$. Khi đó số đo của góc nhị diện $lr([ A \",\" B D \",\" C _(1) ])$ là $a °$. Giá trị của $a$ bằng (làm tròn kết quả đến hàng đơn vị).",
+        "corrected": "\tCho hình lập phương $A B C D . A _(1) B _(1) C _(1) D _(1)$ có cạnh bằng $2 a$, $O$ là tâm của hình vuông $A B C D$. Khi đó số đo của góc nhị diện $lr([ A \",\" B D \",\" C _(1) ])$ là $α °$. Giá trị của $α$ bằng (làm tròn kết quả đến hàng đơn vị).",
+        "reason": "Distinguish requested angle α from positive edge parameter a."
+      },
+      {
+        "body_block": 353,
+        "original": "$Δ C _(1) O C$ vuông tại $C$, ta có $tan hat(C O C) = frac(C C _(1), O C) = frac(2 a, frac(2 a sqrt(2), 2)) = sqrt(2)$.",
+        "corrected": "$Δ C _(1) O C$ vuông tại $C$, ta có $tan hat(C _(1) O C) = frac(C C _(1), O C) = frac(2 a, frac(2 a sqrt(2), 2)) = sqrt(2)$.",
+        "reason": "Restore missing subscript 1 on the angle vertex ray."
+      },
+      {
+        "body_block": 38,
+        "original": "$vec(⇒ tan ∠ S O A = frac(S A, O A) = frac(a sqrt(3), frac(a sqrt(2), 2)) = sqrt(6), ⇒ ∠ S O A ≈ 67 ^(o) 47 ', ⇒ ∠ lr(( lr(( S B D )) \";\" lr(( A B C D )) )) ≈ 67 ^(o) 47 ', delim: #none)$",
+        "corrected": "\t\t\t\t$vec(⇒ tan ∠ S O A = frac(S A, O A) = frac(a sqrt(3), frac(a sqrt(2), 2)) = sqrt(6), ⇒ ∠ S O A ≈ 67 ° 48 ', ⇒ ∠ lr(( lr(( S B D )) \";\" lr(( A B C D )) )) ≈ 67 ° 48 ', delim: #none)$",
+        "reason": "Round the inverse-trigonometric result to the nearest minute."
+      },
+      {
+        "body_block": 76,
+        "original": "$vec(⇒ sin ∠ C A ' E = frac(E C, A ' C) = frac(frac(a sqrt(3), 2), frac(a sqrt(13), 2)) = frac(sqrt(39), 13), ⇒ ∠ C A ' E = 28 ^(o) 42 ', delim: #none)$",
+        "corrected": "\t\t\t\t$vec(⇒ sin ∠ C A ' E = frac(E C, A ' C) = frac(frac(a sqrt(3), 2), frac(a sqrt(13), 2)) = frac(sqrt(39), 13), ⇒ ∠ C A ' E = 28 ° 43 ', delim: #none)$",
+        "reason": "Round the inverse-trigonometric result to the nearest minute."
+      },
+      {
+        "body_block": 144,
+        "original": "$vec(⇒ ∠ A S B ≈ 39 ^(0) 13 ', ⇒ ∠ lr(( S B \";\" lr(( S A C )) )) ≈ 39 ^(0) 13 ', delim: #none)$",
+        "corrected": "\t\t\t\t$vec(⇒ ∠ A S B ≈ 39 ° 14 ', ⇒ ∠ lr(( S B \";\" lr(( S A C )) )) ≈ 39 ° 14 ', delim: #none)$ ",
+        "reason": "Round the inverse-trigonometric result to the nearest minute."
+      },
+      {
+        "body_block": 225,
+        "original": "$⇒$ $∠ lr(( S D \";\" lr(( S A C )) )) ≈ 35 ^(0) 15 '$",
+        "corrected": "\t\t\t\t$⇒$ $∠ lr(( S D \";\" lr(( S A C )) )) ≈ 35 ° 16 '$",
+        "reason": "Round the inverse-trigonometric result to the nearest minute."
+      },
+      {
+        "body_block": 300,
+        "original": "$vec(⇒ sin ∠ A K H = frac(frac(sqrt(6) a, 2), frac(2 sqrt(21) a, 7)) = frac(sqrt(14), 4), ⇒ ∠ A K H ≈ 69 ^(0) 17 ', delim: #none)$",
+        "corrected": "\t\t\t\t$vec(⇒ sin ∠ A K H = frac(frac(sqrt(6) a, 2), frac(2 sqrt(21) a, 7)) = frac(sqrt(14), 4), ⇒ ∠ A K H ≈ 69 ° 18 ', delim: #none)$ ",
+        "reason": "Round the inverse-trigonometric result to the nearest minute."
+      },
+      {
+        "body_block": 301,
+        "original": "$⇒$$∠ lr(( lr(( S A D )) \",\" lr(( S B C )) )) ≈ 69 ^(0) 17 '$",
+        "corrected": "\t\t\t\t$⇒$$∠ lr(( lr(( S A D )) \",\" lr(( S B C )) )) ≈ 69 ° 18 '$",
+        "reason": "Round the inverse-trigonometric result to the nearest minute."
+      }
+    ],
+    "numbering": "Source mixes Bài 1/Bài 3/Ví dụ 25/unnumbered and Câu 2–8/Ví dụ22/23/27/unnumbered. Renumbered in original order: worked 1–5, practice 1–13; no questions omitted.",
+    "figure_method": "Native SVG from metric points, exact projections of feet/midpoints, common affine camera; red face shades and matching red edges. Original Giza photo preserved."
+  },
+  "drive": {
+    "folder": "Chuyên đề",
+    "filenames": {
+      "de": "KHÓA TH - BUỔI 26 - GÓC GIỮA HAI MẶT PHẲNG - GÓC NHỊ DIỆN - ĐỀ.pdf",
+      "de-cach": "KHÓA TH - BUỔI 26 - GÓC GIỮA HAI MẶT PHẲNG - GÓC NHỊ DIỆN - ĐỀ CÁCH.pdf",
+      "dap-an": "KHÓA TH - BUỔI 26 - GÓC GIỮA HAI MẶT PHẲNG - GÓC NHỊ DIỆN - ĐÁP ÁN.pdf"
+    }
+  },
+  "outputs": {
+    "de": {
+      "pdf": "assets/targets/2026-11/Chuyên đề/th-buoi-26-goc-giua-hai-mat-phang-goc-nhi-dien/de.pdf",
+      "pages": 4,
+      "bytes": 1380258,
+      "sha256": "3a5213f9e25ea29788bc980ca67c06e08c9d53d4d8b337e7cdcb8eb73aa0ee83"
+    },
+    "de-cach": {
+      "pdf": "assets/targets/2026-11/Chuyên đề/th-buoi-26-goc-giua-hai-mat-phang-goc-nhi-dien/de-cach.pdf",
+      "pages": 13,
+      "bytes": 1409237,
+      "sha256": "09e52a1cc61c0c5c3eaab6aec92920e9bf6e3bb377ce142b861907266ab7ebd3"
+    },
+    "dap-an": {
+      "pdf": "assets/targets/2026-11/Chuyên đề/th-buoi-26-goc-giua-hai-mat-phang-goc-nhi-dien/dap-an.pdf",
+      "pages": 24,
+      "bytes": 1684300,
+      "sha256": "a0b7bbc9ca41a99accb244c36071eef799653ee3f2a1ab98f3c7c46a1af843d1"
+    }
+  },
+  "qa": {
+    "compile": "passed",
+    "review_status": "pending",
+    "content_checks": "passed: 5 worked examples + 13 practice questions, same sequence in all variants; 18 solution headings in answer and writing variants; theory retained.",
+    "pdf_geometry_checks": {
+      "de": {
+        "pages": 4,
+        "question_count": 18,
+        "solutions": 0,
+        "questions_per_page": [
+          0,
+          5,
+          6,
+          7
+        ],
+        "body_last_text_y": [
+          753,
+          743,
+          764,
+          772
+        ],
+        "horizontal_overflow": []
+      },
+      "de-cach": {
+        "pages": 13,
+        "question_count": 18,
+        "solutions": 18,
+        "questions_per_page": [
+          0,
+          1,
+          2,
+          2,
+          1,
+          2,
+          1,
+          1,
+          1,
+          2,
+          2,
+          2,
+          1
+        ],
+        "body_last_text_y": [
+          753,
+          367,
+          471,
+          552,
+          252,
+          424,
+          211,
+          129,
+          208,
+          385,
+          503,
+          410,
+          783
+        ],
+        "horizontal_overflow": []
+      },
+      "dap-an": {
+        "pages": 24,
+        "question_count": 18,
+        "solutions": 18,
+        "questions_per_page": [
+          0,
+          1,
+          0,
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0,
+          1,
+          1,
+          1,
+          0,
+          0,
+          1,
+          1,
+          0,
+          1,
+          1,
+          1,
+          2,
+          1,
+          1
+        ],
+        "body_last_text_y": [
+          753,
+          743,
+          737,
+          743,
+          733,
+          758,
+          748,
+          744,
+          774,
+          740,
+          717,
+          724,
+          761,
+          768,
+          746,
+          734,
+          770,
+          731,
+          768,
+          744,
+          701,
+          668,
+          776,
+          736
+        ],
+        "horizontal_overflow": []
+      }
+    },
+    "source_checksum": "passed",
+    "figure_checks": "24 native SVGs from metric constructions; orthogonality assertions passed. Standalone figures inspected; source photo preserved.",
+    "visual_review": "Full-page PDF visual review not performed; no page preview images generated.",
+    "layout_revision": "Theory spacing adjusted locally; heading and dihedral figure confirmed on page 1. O offset clear of intersection; (Q) centered in corner sector and standalone render inspected. Giza source photo width 77 mm (+10%), above spacing 4 mm. All three PDFs rebuilt.",
+    "final_spacing_checks": {
+      "practice_11_answer_gap_mm": 0,
+      "end_mark_above_mm": 6,
+      "de_last_text_to_end_mark_pt": 12.55,
+      "de_pages": 4,
+      "publication_filenames": "passed",
+      "note": "Text bounding boxes checked; full-page visual review remains pending."
+    },
+    "figure_revision": "Compared source figures 86,109,135,154,234,340,354,374,411,412,520. Individual affine views, equal-length ticks, original cuboid orientation, radical/fraction vector labels, consistent edge strokes, displaced point labels. Removed unintended bold solution calculations. Standalone figure renders checked; no full-page visual review.",
+    "solution_spacing_revision": "Solution subpart blocks now have 3 mm below spacing (previously 1 mm). Practice 4 figure width 50 mm; PDF text verified prompt, solution heading, figure labels and subpart a on page 14. Answer PDF rebuilt: 25 pages. Full-page visual review remains pending."
+  }
+}

@@ -7,24 +7,20 @@
 #let variant=sys.inputs.at("variant",default:"de")
 #let answers=variant=="dap-an"
 #show:exam.with([GIỮA KỲ I – THPT TRẤN BIÊN – TOÁN 12],"2001",variant:variant)
-#set par(leading:if answers {1.18em}else{1.1em},spacing:3mm,justify:true)
+#set par(leading:if answers {1.12em}else{1.1em},spacing:3mm,justify:true)
 #lesson-heading([ĐỀ KIỂM TRA GIỮA HK1 TOÁN 12],"TRƯỜNG THPT TRẤN BIÊN – ĐỒNG NAI",
  title-size:27pt,title-tracking:0.2pt,course-size:20pt,palette:palette,author:none,
- subtitle:[Năm học 2026–2027 · Thời gian: 90 phút · Mã đề: 2001
- #if answers {linebreak();[ĐÁP ÁN VÀ LỜI GIẢI THAM KHẢO]}])
+ subtitle:[Năm học 2026–2027 · Mã đề: 2001])
 #if not answers {
  block(above:3mm,below:4mm)[
  #set par(justify:false)
  #grid(columns:(1fr,1fr),gutter:7mm,[Họ và tên: #box(width:42mm,repeat[.])],[Số báo danh: #box(width:35mm,repeat[.])])
  ]
-} else {
- block(above:1mm,below:3mm)[#set par(justify:false)
- #text(size:10.5pt,style:"italic")[Lời giải tham khảo trong tài liệu nguồn: AI & TOANMATH.com.]]
 }
 #let fig(q)=context block(width:100%,breakable:false,above:2mm,below:2mm,align(center,scale(x:q.width/measure(q.figure).width*100%,y:q.width/measure(q.figure).width*100%,reflow:true,q.figure)))
 #let question(q)={
  let side=answers and q.key=="I-7"
- block(width:100%,breakable:true,above:6mm,below:3mm)[
+ block(width:100%,breakable:true,above:if answers {4mm}else{6mm},below:if answers {2mm}else{3mm})[
   #if side {
    grid(columns:(1fr,60mm),gutter:6mm,align:top,
     [#set par(justify:false)
@@ -54,4 +50,6 @@
  exam-section(sec,title,instruction:if answers {[]}else{guide})
  for q in questions.filter(q=>q.section==sec) {question(q)}
 }
-#exam-end()
+#exam-end(note:if answers {
+  text(size:10.5pt,style:"italic")[Lời giải tham khảo trong tài liệu nguồn: AI & TOANMATH.com.]
+}else{[]})
