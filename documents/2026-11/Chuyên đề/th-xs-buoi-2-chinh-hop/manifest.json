@@ -1,0 +1,260 @@
+{
+  "schema_version": 1,
+  "id": "th-xs-buoi-2-chinh-hop",
+  "kind": "tinh-hoa",
+  "received_date": "2026-11-14",
+  "status": "implemented",
+  "metadata": {
+    "title": "BUỔI 2: CHỈNH HỢP",
+    "lesson": 2,
+    "topic": "TỔ HỢP – XÁC SUẤT",
+    "course": "4 BUỔI MỞ KHÓA NỀN TẢNG",
+    "branch": "Xác suất"
+  },
+  "sources": [
+    {
+      "path": "assets/sources/2026-11/Chuyên đề/th-xs-buoi-2-chinh-hop/source.docx",
+      "original_name": "B02 - CHỈNH HỢP.docx",
+      "bytes": 140977,
+      "sha256": "1ac3606e5ccbe45232c7c44fc84b2bcedd7c86dc01da27b2ed8277897f35b0ee",
+      "review_pdf_pages": 2
+    }
+  ],
+  "scope": {
+    "has_questions": true,
+    "has_solutions": false,
+    "questions": 12,
+    "theory_sections": 1
+  },
+  "variants": {
+    "de": {
+      "filename": "de.pdf",
+      "inputs": {
+        "variant": "de"
+      }
+    },
+    "de-cach": {
+      "filename": "de-cach.pdf",
+      "inputs": {
+        "variant": "de-cach"
+      }
+    }
+  },
+  "content_mapping": [
+    {
+      "id": "ly-thuyet",
+      "role": "source",
+      "source": {
+        "body_block": 3,
+        "end_block_exclusive": 6
+      }
+    },
+    {
+      "id": "cau-1",
+      "role": "question",
+      "source": {
+        "body_block": 6,
+        "end_block_exclusive": 8
+      }
+    },
+    {
+      "id": "cau-2",
+      "role": "question",
+      "source": {
+        "body_block": 8,
+        "end_block_exclusive": 10
+      }
+    },
+    {
+      "id": "cau-3",
+      "role": "question",
+      "source": {
+        "body_block": 10,
+        "end_block_exclusive": 11
+      }
+    },
+    {
+      "id": "cau-4",
+      "role": "question",
+      "source": {
+        "body_block": 11,
+        "end_block_exclusive": 13
+      }
+    },
+    {
+      "id": "cau-5",
+      "role": "question",
+      "source": {
+        "body_block": 13,
+        "end_block_exclusive": 15
+      }
+    },
+    {
+      "id": "cau-6",
+      "role": "question",
+      "source": {
+        "body_block": 15,
+        "end_block_exclusive": 17
+      }
+    },
+    {
+      "id": "cau-7",
+      "role": "question",
+      "source": {
+        "body_block": 17,
+        "end_block_exclusive": 20
+      }
+    },
+    {
+      "id": "cau-8",
+      "role": "question",
+      "source": {
+        "body_block": 20,
+        "end_block_exclusive": 22
+      }
+    },
+    {
+      "id": "cau-9",
+      "role": "question",
+      "source": {
+        "body_block": 22,
+        "end_block_exclusive": 24
+      }
+    },
+    {
+      "id": "cau-10",
+      "role": "question",
+      "source": {
+        "body_block": 24,
+        "end_block_exclusive": 26
+      }
+    },
+    {
+      "id": "cau-11",
+      "role": "question",
+      "source": {
+        "body_block": 26,
+        "end_block_exclusive": 28
+      }
+    },
+    {
+      "id": "cau-12",
+      "role": "question",
+      "source": {
+        "body_block": 28,
+        "end_block_exclusive": 30
+      }
+    }
+  ],
+  "drive": {
+    "folder": "Chuyên đề",
+    "filenames": {
+      "de": "BUỔI 2 - CHỈNH HỢP - ĐỀ.pdf",
+      "de-cach": "BUỔI 2 - CHỈNH HỢP - ĐỀ CÁCH.pdf"
+    }
+  },
+  "qa": {
+    "review_status": "pending",
+    "compile": "passed",
+    "content_counts": "12 questions, same order/options in both variants; 73 MathType equations decoded and verified against previews; theory retained.",
+    "source_integrity": "passed",
+    "layout_checks": {
+      "de": {
+        "pages": 2,
+        "question_counts_by_page": [
+          4,
+          8
+        ],
+        "ruled_lines_by_page": [
+          1,
+          0
+        ],
+        "text_bounds": "passed",
+        "embedded_fonts": "passed"
+      },
+      "de-cach": {
+        "pages": 5,
+        "question_counts_by_page": [
+          1,
+          3,
+          3,
+          3,
+          2
+        ],
+        "ruled_lines_by_page": [
+          8,
+          14,
+          15,
+          15,
+          18
+        ],
+        "text_bounds": "passed",
+        "embedded_fonts": "passed"
+      }
+    },
+    "publication_filenames": "passed",
+    "livestream_checks": "Original teacher header, course/ZOLA footer on every page; red author, red contact links, Fanpage note immediately below HẾT on final page.",
+    "full_page_visual_review": "pending — no page preview images generated per repository convention",
+    "checked_output_sha256": {
+      "de": "d84bf4c6229139692b74230ed0d68735a2f22bd3e3ddb9728a4a6d783f40ebbe",
+      "de-cach": "7e33522987f8e0d7ba721795238ab3cf0016af87f04148bf0665e79f50a4fafe"
+    },
+    "writing_distribution": {
+      "actual_lines_per_question": {
+        "1": 7,
+        "2": 4,
+        "3": 6,
+        "4": 4,
+        "5": 5,
+        "6": 5,
+        "7": 5,
+        "8": 5,
+        "9": 5,
+        "10": 5,
+        "11": 9,
+        "12": 9
+      },
+      "minimum_lines": 5,
+      "direct_formula_exceptions": [
+        1,
+        2,
+        4
+      ],
+      "surplus": "Shared between all writing areas on the same page instead of assigned only to final question."
+    }
+  },
+  "provenance": {
+    "format_reference": "documents/2026-11/Chuyên đề/th-xs-buoi-1-hoan-vi/main.typ",
+    "category_decision": "User requested livestream presentation matching Hoán vị, retained in Chuyên đề with same profile and publication destination as buổi 1. Empty November Livestream directories created for subsequent lessons.",
+    "math_transcription": "73 MathType equations decoded; all 73 checked against WMF preview payloads; source has no diagrams, answer key or solutions.",
+    "normalization": "Joined the source line wrap in question 7; normalized digit-list spacing and redundant punctuation only. No question data or options changed.",
+    "source_ambiguities": [
+      {
+        "question": 3,
+        "note": "Source does not specify whether zero vectors are excluded. Preserved verbatim; no answer invented."
+      },
+      {
+        "question": 10,
+        "note": "Source says 3 even digits and 2 odd digits adjacent without explicitly stating which groups must be consecutive. Preserved verbatim."
+      },
+      {
+        "question": 12,
+        "note": "Source describes a round table with 10 chairs without specifying whether seats are distinguished. Preserved source wording."
+      }
+    ]
+  },
+  "outputs": {
+    "de": {
+      "pdf": "assets/targets/2026-11/Chuyên đề/th-xs-buoi-2-chinh-hop/de.pdf",
+      "pages": 2,
+      "bytes": 1163775,
+      "sha256": "d84bf4c6229139692b74230ed0d68735a2f22bd3e3ddb9728a4a6d783f40ebbe"
+    },
+    "de-cach": {
+      "pdf": "assets/targets/2026-11/Chuyên đề/th-xs-buoi-2-chinh-hop/de-cach.pdf",
+      "pages": 5,
+      "bytes": 1181112,
+      "sha256": "7e33522987f8e0d7ba721795238ab3cf0016af87f04148bf0665e79f50a4fafe"
+    }
+  }
+}
