@@ -1,0 +1,1024 @@
+{
+  "schema_version": 1,
+  "id": "th-buoi-28-khoang-cach-tu-diem-den-mat-phang",
+  "kind": "tinh-hoa",
+  "received_date": "2026-11-15",
+  "status": "implemented",
+  "metadata": {
+    "title": "BUỔI 28: KHOẢNG CÁCH TỪ MỘT ĐIỂM ĐẾN MẶT PHẲNG",
+    "lesson": 28,
+    "topic": "HÌNH HỌC KHÔNG GIAN THUẦN TÚY",
+    "subtitle": "BUỔI 2: PHƯƠNG PHÁP ĐỔI ĐIỂM"
+  },
+  "sources": [
+    {
+      "path": "assets/sources/2026-11/Chuyên đề/th-buoi-28-khoang-cach-tu-diem-den-mat-phang/source.docx",
+      "original_name": "BUỔI 28 KHOẢNG CÁCH TỪ MỘT ĐIỂM ĐẾN 1 MẶT PHẲNG (BUỔI 2).docx",
+      "bytes": 1381508,
+      "sha256": "34d7ff7f213f1af69a8fe504cc927c15593d232f5222f7a3eb5e2e2c2350a53e",
+      "review_pdf_pages": 20
+    }
+  ],
+  "scope": {
+    "has_questions": true,
+    "has_solutions": true,
+    "questions": 17,
+    "worked_examples": 8,
+    "practice_questions": 9,
+    "theory_sections": 2
+  },
+  "variants": {
+    "de": {
+      "filename": "de.pdf",
+      "inputs": {
+        "variant": "de"
+      }
+    },
+    "de-cach": {
+      "filename": "de-cach.pdf",
+      "inputs": {
+        "variant": "de-cach"
+      }
+    },
+    "dap-an": {
+      "filename": "dap-an.pdf",
+      "inputs": {
+        "variant": "dap-an"
+      }
+    }
+  },
+  "content_mapping": [
+    {
+      "id": "theory",
+      "role": "source",
+      "source": {
+        "body_block": 3,
+        "end_block_exclusive": 14
+      }
+    },
+    {
+      "id": "bai-mau-1",
+      "role": "question",
+      "source": {
+        "body_block": 14,
+        "end_block_exclusive": 17
+      }
+    },
+    {
+      "id": "bai-mau-1-solution",
+      "role": "solution",
+      "source": {
+        "body_block": 17,
+        "end_block_exclusive": 32
+      }
+    },
+    {
+      "id": "bai-mau-2",
+      "role": "question",
+      "source": {
+        "body_block": 32,
+        "end_block_exclusive": 34
+      }
+    },
+    {
+      "id": "bai-mau-2-solution",
+      "role": "solution",
+      "source": {
+        "body_block": 34,
+        "end_block_exclusive": 46
+      }
+    },
+    {
+      "id": "bai-mau-3",
+      "role": "question",
+      "source": {
+        "body_block": 46,
+        "end_block_exclusive": 48
+      }
+    },
+    {
+      "id": "bai-mau-3-solution",
+      "role": "solution",
+      "source": {
+        "body_block": 48,
+        "end_block_exclusive": 57
+      }
+    },
+    {
+      "id": "bai-mau-4",
+      "role": "question",
+      "source": {
+        "body_block": 57,
+        "end_block_exclusive": 59
+      }
+    },
+    {
+      "id": "bai-mau-4-solution",
+      "role": "solution",
+      "source": {
+        "body_block": 59,
+        "end_block_exclusive": 67
+      }
+    },
+    {
+      "id": "bai-mau-5",
+      "role": "question",
+      "source": {
+        "body_block": 67,
+        "end_block_exclusive": 69
+      }
+    },
+    {
+      "id": "bai-mau-5-solution",
+      "role": "solution",
+      "source": {
+        "body_block": 69,
+        "end_block_exclusive": 77
+      }
+    },
+    {
+      "id": "bai-mau-6",
+      "role": "question",
+      "source": {
+        "body_block": 77,
+        "end_block_exclusive": 79
+      }
+    },
+    {
+      "id": "bai-mau-6-solution",
+      "role": "solution",
+      "source": {
+        "body_block": 79,
+        "end_block_exclusive": 87
+      }
+    },
+    {
+      "id": "bai-mau-7",
+      "role": "question",
+      "source": {
+        "body_block": 87,
+        "end_block_exclusive": 89
+      }
+    },
+    {
+      "id": "bai-mau-7-solution",
+      "role": "solution",
+      "source": {
+        "body_block": 89,
+        "end_block_exclusive": 97
+      }
+    },
+    {
+      "id": "bai-mau-8",
+      "role": "question",
+      "source": {
+        "body_block": 97,
+        "end_block_exclusive": 99
+      }
+    },
+    {
+      "id": "bai-mau-8-solution",
+      "role": "solution",
+      "source": {
+        "body_block": 99,
+        "end_block_exclusive": 111
+      }
+    },
+    {
+      "id": "tu-luyen-1",
+      "role": "question",
+      "source": {
+        "body_block": 114,
+        "end_block_exclusive": 116
+      }
+    },
+    {
+      "id": "tu-luyen-1-solution",
+      "role": "solution",
+      "source": {
+        "body_block": 116,
+        "end_block_exclusive": 126
+      }
+    },
+    {
+      "id": "tu-luyen-2",
+      "role": "question",
+      "source": {
+        "body_block": 127,
+        "end_block_exclusive": 129
+      }
+    },
+    {
+      "id": "tu-luyen-2-solution",
+      "role": "solution",
+      "source": {
+        "body_block": 129,
+        "end_block_exclusive": 139
+      }
+    },
+    {
+      "id": "tu-luyen-3",
+      "role": "question",
+      "source": {
+        "body_block": 139,
+        "end_block_exclusive": 141
+      }
+    },
+    {
+      "id": "tu-luyen-3-solution",
+      "role": "solution",
+      "source": {
+        "body_block": 141,
+        "end_block_exclusive": 152
+      }
+    },
+    {
+      "id": "tu-luyen-4",
+      "role": "question",
+      "source": {
+        "body_block": 152,
+        "end_block_exclusive": 154
+      }
+    },
+    {
+      "id": "tu-luyen-4-solution",
+      "role": "solution",
+      "source": {
+        "body_block": 154,
+        "end_block_exclusive": 172
+      }
+    },
+    {
+      "id": "tu-luyen-5",
+      "role": "question",
+      "source": {
+        "body_block": 172,
+        "end_block_exclusive": 174
+      }
+    },
+    {
+      "id": "tu-luyen-5-solution",
+      "role": "solution",
+      "source": {
+        "body_block": 174,
+        "end_block_exclusive": 192
+      }
+    },
+    {
+      "id": "tu-luyen-6",
+      "role": "question",
+      "source": {
+        "body_block": 192,
+        "end_block_exclusive": 194
+      }
+    },
+    {
+      "id": "tu-luyen-6-solution",
+      "role": "solution",
+      "source": {
+        "body_block": 194,
+        "end_block_exclusive": 212
+      }
+    },
+    {
+      "id": "tu-luyen-7",
+      "role": "question",
+      "source": {
+        "body_block": 212,
+        "end_block_exclusive": 214
+      }
+    },
+    {
+      "id": "tu-luyen-7-solution",
+      "role": "solution",
+      "source": {
+        "body_block": 214,
+        "end_block_exclusive": 227
+      }
+    },
+    {
+      "id": "tu-luyen-8",
+      "role": "question",
+      "source": {
+        "body_block": 228,
+        "end_block_exclusive": 230
+      }
+    },
+    {
+      "id": "tu-luyen-8-solution",
+      "role": "solution",
+      "source": {
+        "body_block": 230,
+        "end_block_exclusive": 240
+      }
+    },
+    {
+      "id": "tu-luyen-9",
+      "role": "question",
+      "source": {
+        "body_block": 241,
+        "end_block_exclusive": 243
+      }
+    },
+    {
+      "id": "tu-luyen-9-solution",
+      "role": "solution",
+      "source": {
+        "body_block": 243,
+        "end_block_exclusive": 258
+      }
+    },
+    {
+      "id": "figure-10",
+      "role": "figure",
+      "source": {
+        "docx_media": "word/media/image10.png"
+      }
+    },
+    {
+      "id": "figure-14",
+      "role": "figure",
+      "source": {
+        "docx_media": "word/media/image14.png"
+      }
+    },
+    {
+      "id": "figure-25",
+      "role": "figure",
+      "source": {
+        "docx_media": "word/media/image25.png"
+      }
+    },
+    {
+      "id": "figure-51",
+      "role": "figure",
+      "source": {
+        "docx_media": "word/media/image51.png"
+      }
+    },
+    {
+      "id": "figure-70",
+      "role": "figure",
+      "source": {
+        "docx_media": "word/media/image70.png"
+      }
+    },
+    {
+      "id": "figure-88",
+      "role": "figure",
+      "source": {
+        "docx_media": "word/media/image88.png"
+      }
+    },
+    {
+      "id": "figure-112",
+      "role": "figure",
+      "source": {
+        "docx_media": "word/media/image112.png"
+      }
+    },
+    {
+      "id": "figure-126",
+      "role": "figure",
+      "source": {
+        "docx_media": "word/media/image126.png"
+      }
+    },
+    {
+      "id": "figure-145",
+      "role": "figure",
+      "source": {
+        "docx_media": "word/media/image145.png"
+      }
+    },
+    {
+      "id": "figure-167",
+      "role": "figure",
+      "source": {
+        "docx_media": "word/media/image167.png"
+      }
+    },
+    {
+      "id": "figure-192",
+      "role": "figure",
+      "source": {
+        "docx_media": "word/media/image192.png"
+      }
+    },
+    {
+      "id": "figure-220",
+      "role": "figure",
+      "source": {
+        "docx_media": "word/media/image220.png"
+      }
+    },
+    {
+      "id": "figure-240",
+      "role": "figure",
+      "source": {
+        "docx_media": "word/media/image240.png"
+      }
+    },
+    {
+      "id": "figure-271",
+      "role": "figure",
+      "source": {
+        "docx_media": "word/media/image271.png"
+      }
+    },
+    {
+      "id": "figure-301",
+      "role": "figure",
+      "source": {
+        "docx_media": "word/media/image301.png"
+      }
+    },
+    {
+      "id": "figure-334",
+      "role": "figure",
+      "source": {
+        "docx_media": "word/media/image334.png"
+      }
+    },
+    {
+      "id": "figure-363",
+      "role": "figure",
+      "source": {
+        "docx_media": "word/media/image363.png"
+      }
+    },
+    {
+      "id": "figure-385",
+      "role": "figure",
+      "source": {
+        "docx_media": "word/media/image385.png"
+      }
+    },
+    {
+      "id": "figure-413",
+      "role": "figure",
+      "source": {
+        "docx_media": "word/media/image413.png"
+      }
+    }
+  ],
+  "provenance": {
+    "math_equations": {
+      "decoded": 425,
+      "preview_pairs_checked": 425,
+      "empty": 0
+    },
+    "source_corrections": [
+      {
+        "body_block": 26,
+        "original": "Đổi $C → A : A C ∩ lr(( S B D )) = 0$",
+        "corrected": "\t\t\t\tĐổi $C → A : A C ∩ lr(( S B D )) = O$",
+        "reason": "Intersection is point O, not the number zero."
+      },
+      {
+        "body_block": 38,
+        "original": "* Đổi $C → A : A C ∩ lr(( S B D )) = 0$",
+        "corrected": "\t\t\t\t* Đổi $C → A : A C ∩ lr(( S B D )) = O$",
+        "reason": "Intersection is point O, not the number zero."
+      },
+      {
+        "body_block": 62,
+        "original": "* Đổi $B → A \";\" B A | | lr(( S C D ))$ $⇒ d lr(( B \";\" lr(( S C D )) )) = B lr(( A \";\" lr(( S C D )) )) lr(( 1 ))$",
+        "corrected": "\t\t\t\t* Đổi $B → A \";\" B A | | lr(( S C D ))$ $⇒ d lr(( B \";\" lr(( S C D )) ))  = d lr(( A \";\" lr(( S C D )) )) lr(( 1 ))$",
+        "reason": "Distance function d mistyped as B."
+      },
+      {
+        "body_block": 157,
+        "original": "$⇒ Δ A B C$và $Δ B C D$ đều cạnh $2 a .$",
+        "corrected": "\t\t\t\t    $⇒ Δ A B D$và $Δ B C D$ đều cạnh $2 a .$",
+        "reason": "For angle BAD=60°, the equilateral triangles are ABD and BCD."
+      },
+      {
+        "body_block": 169,
+        "original": "$cases(display(S H = frac(sqrt(3), 2) . 2 a = a sqrt(3)), display(H K = frac(a, 2)))$ $⇒ H I = frac(a ^(2) . sqrt(3) . frac(1, 2), a . sqrt(3 + frac(1, 4))) = frac(sqrt(39), 13)$ $⇒ d lr(( H \";\" lr(( S A C )) )) = frac(a sqrt(39), 13)$  (2).",
+        "corrected": "\t\t\t\t$cases(display(S H = frac(sqrt(3), 2) . 2 a = a sqrt(3)), display(H K = frac(a, 2)))$ $⇒ H I = frac(a ^(2) . sqrt(3) . frac(1, 2), a . sqrt(3 + frac(1, 4))) = frac(a sqrt(39), 13)$ $⇒ d lr(( H \";\" lr(( S A C )) )) = frac(a sqrt(39), 13)$  (2).",
+        "reason": "Restore the missing length scale a."
+      },
+      {
+        "body_block": 187,
+        "original": "+) Nét 3: Kẻ $H K ⊥ S D ⇒ d lr(( H \";\" lr(( S A C )) )) = H K = frac(S H . H D, sqrt(S H ^(2) + H D ^(2))) .$",
+        "corrected": "\t\t\t\t+) Nét 3: Kẻ $H K ⊥ S D ⇒ d lr(( H \";\" lr(( S C D )) )) = H K = frac(S H . H D, sqrt(S H ^(2) + H D ^(2))) .$",
+        "reason": "The target plane in this problem is SCD."
+      },
+      {
+        "body_block": 188,
+        "original": "Có: $H I = frac(S H . H K, sqrt(S H ^(2) + H K ^(2))) .$",
+        "corrected": "Có: $H K = frac(S H . H D, sqrt(S H ^(2) + H D ^(2)))$.",
+        "reason": "Use the actual altitude HK in right triangle SHD; source reused unrelated HI/HK formula."
+      },
+      {
+        "body_block": 189,
+        "original": "$cases(display(S H = frac(sqrt(3), 2) . 2 a = a sqrt(3)), display(H K = frac(sqrt(3), 2) . 2 a = a sqrt(3)))$ $⇒ d lr(( H \";\" lr(( S C D )) )) = frac(a ^(2) . sqrt(3) . sqrt(3), a . sqrt(3 + 3)) = frac(3, sqrt(6)) . a = frac(a sqrt(6), 2)$ $⇒ d lr(( H \";\" lr(( S C D )) )) = frac(a sqrt(6), 2)$ (2)",
+        "corrected": "\t\t\t\t$cases(display(S H = frac(sqrt(3), 2) . 2 a = a sqrt(3)), display(H D = frac(sqrt(3), 2) . 2 a = a sqrt(3)))$ $⇒ d lr(( H \";\" lr(( S C D )) )) = frac(a ^(2) . sqrt(3) . sqrt(3), a . sqrt(3 + 3)) = frac(3, sqrt(6)) . a = frac(a sqrt(6), 2)$ $⇒ d lr(( H \";\" lr(( S C D )) )) = frac(a sqrt(6), 2)$ (2)",
+        "reason": "HD, not HK, is the base altitude a√3."
+      },
+      {
+        "body_block": 199,
+        "original": "$⇒ A B = sqrt(S A ^(2) + A B ^(2)) = a sqrt(2)$.",
+        "corrected": "\t\t\t\t$⇒ A B = sqrt(S A ^(2) + S B ^(2)) = a sqrt(2)$.",
+        "reason": "Pythagoras in triangle SAB: AB²=SA²+SB²."
+      },
+      {
+        "body_block": 200,
+        "original": "$⇒ Δ A B C$ đêỳ cạnh $a sqrt(2)$.",
+        "corrected": "\t\t\t\t$⇒ Δ A B C$ đều cạnh $a sqrt(2)$.",
+        "reason": "Clear Vietnamese typo."
+      },
+      {
+        "body_block": 202,
+        "original": "$cases(display(D o i B → H), display(B H ∩ lr(( S A C )))) ⇒$đổi điểm giao cắt $⇒ frac(d lr(( B \";\" lr(( S A C )) )), d lr(( H \";\" lr(( S A C )) ))) = frac(B A, H A) = 2$",
+        "corrected": "\t\t\t\t$cases(display(D o i B → H), display(B H ∩ lr(( S A C )) = A)) ⇒$đổi điểm giao cắt $⇒ frac(d lr(( B \";\" lr(( S A C )) )), d lr(( H \";\" lr(( S A C )) ))) = frac(B A, H A) = 2$",
+        "reason": "Supply intersection A used by the immediately following ratio BA/HA."
+      },
+      {
+        "body_block": 209,
+        "original": "Có: $cases(display(S H = frac(1, 2) . A B = frac(a sqrt(2), 2)), display(H K = frac(sqrt(6), 4) . a = a sqrt(3)))$ $⇒ d lr(( H \";\" lr(( S A C )) )) = frac(a ^(2) . frac(sqrt(2), 2) . frac(sqrt(6), 4), a . sqrt(frac(2, 4) + frac(6, 16))) = frac(sqrt(42), 14) . a$  (2)",
+        "corrected": "\t\t\t\tCó: $cases(display(S H = frac(1, 2) . A B = frac(a sqrt(2), 2)), display(H K = frac(sqrt(6), 4) . a))$ $⇒ d lr(( H \";\" lr(( S A C )) )) = frac(a ^(2) . frac(sqrt(2), 2) . frac(sqrt(6), 4), a . sqrt(frac(2, 4) + frac(6, 16))) = frac(sqrt(42), 14) . a$  (2)",
+        "reason": "Remove false equality √6 a/4 = a√3; retain correct HK."
+      },
+      {
+        "body_block": 245,
+        "original": "Với đáy là hình thang vuông góc tại $A \",\" B$ có $cases(display(A B = a \",\" B C = a), display(A D = 2 a)) ⇒$ ta có một góc vuông là $A D ⊥ C D .$",
+        "corrected": "Với đáy là hình thang vuông góc tại $A \",\" B$ có $cases(display(A B = a \",\" B C = a), display(A D = 2 a)) ⇒$ ta có một góc vuông là $A C ⊥ C D .$",
+        "reason": "The perpendicular base lines are AC and CD, not AD and CD."
+      }
+    ],
+    "figure_outputs": {
+      "10": [
+        "documents/2026-11/Chuyên đề/th-buoi-28-khoang-cach-tu-diem-den-mat-phang/figures/image10.svg"
+      ],
+      "14": [
+        "documents/2026-11/Chuyên đề/th-buoi-28-khoang-cach-tu-diem-den-mat-phang/figures/image14.svg"
+      ],
+      "25": [
+        "documents/2026-11/Chuyên đề/th-buoi-28-khoang-cach-tu-diem-den-mat-phang/figures/image25.svg"
+      ],
+      "51": [
+        "documents/2026-11/Chuyên đề/th-buoi-28-khoang-cach-tu-diem-den-mat-phang/figures/image51.svg"
+      ],
+      "70": [
+        "documents/2026-11/Chuyên đề/th-buoi-28-khoang-cach-tu-diem-den-mat-phang/figures/image70.svg"
+      ],
+      "88": [
+        "documents/2026-11/Chuyên đề/th-buoi-28-khoang-cach-tu-diem-den-mat-phang/figures/image88.svg",
+        "documents/2026-11/Chuyên đề/th-buoi-28-khoang-cach-tu-diem-den-mat-phang/figures/image88-base.svg"
+      ],
+      "112": [
+        "documents/2026-11/Chuyên đề/th-buoi-28-khoang-cach-tu-diem-den-mat-phang/figures/image112.svg"
+      ],
+      "126": [
+        "documents/2026-11/Chuyên đề/th-buoi-28-khoang-cach-tu-diem-den-mat-phang/figures/image126.svg"
+      ],
+      "145": [
+        "documents/2026-11/Chuyên đề/th-buoi-28-khoang-cach-tu-diem-den-mat-phang/figures/image145.svg"
+      ],
+      "167": [
+        "documents/2026-11/Chuyên đề/th-buoi-28-khoang-cach-tu-diem-den-mat-phang/figures/image167.svg"
+      ],
+      "192": [
+        "documents/2026-11/Chuyên đề/th-buoi-28-khoang-cach-tu-diem-den-mat-phang/figures/image192.svg"
+      ],
+      "220": [
+        "documents/2026-11/Chuyên đề/th-buoi-28-khoang-cach-tu-diem-den-mat-phang/figures/image220.svg"
+      ],
+      "240": [
+        "documents/2026-11/Chuyên đề/th-buoi-28-khoang-cach-tu-diem-den-mat-phang/figures/image240.svg"
+      ],
+      "271": [
+        "documents/2026-11/Chuyên đề/th-buoi-28-khoang-cach-tu-diem-den-mat-phang/figures/image271.svg"
+      ],
+      "301": [
+        "documents/2026-11/Chuyên đề/th-buoi-28-khoang-cach-tu-diem-den-mat-phang/figures/image301.svg"
+      ],
+      "334": [
+        "documents/2026-11/Chuyên đề/th-buoi-28-khoang-cach-tu-diem-den-mat-phang/figures/image334.svg"
+      ],
+      "363": [
+        "documents/2026-11/Chuyên đề/th-buoi-28-khoang-cach-tu-diem-den-mat-phang/figures/image363.svg"
+      ],
+      "385": [
+        "documents/2026-11/Chuyên đề/th-buoi-28-khoang-cach-tu-diem-den-mat-phang/figures/image385.svg"
+      ],
+      "413": [
+        "documents/2026-11/Chuyên đề/th-buoi-28-khoang-cach-tu-diem-den-mat-phang/figures/image413.svg"
+      ]
+    },
+    "figures": "19 source figures redrawn as 20 native SVGs, including separate 3D and planar views from source image88. Metric feet/intersections, source-specific views and label clearance checks.",
+    "normalization": "MathType prose normalized to Vietnamese text (Đổi, cân tại, cạnh tam giác đều); degree signs and parallel symbols normalized. Tall cases split into equivalent display rows for page flow. Questions, choices and source solution reasoning retained.",
+    "figure_views": {
+      "image25": "Oblique view with AB projecting to the lower right; separates I and K from SA while retaining exact metric feet. Display width 72 mm.",
+      "image220": "Projection separates H and its perpendicular marker from AD; 65 mm output width, enlarged right-angle mark. Metric geometry unchanged.",
+      "image271": "Wider base projection and 72 mm illustration separate H/I/K/O while preserving metric construction.",
+      "image301": "Wider rhombus projection separates HK from A and SA; displayed at 72 mm. Exact metric geometry retained.",
+      "image413": "Compact oblique projection, width 62 mm; right-angle marker at K drawn toward I to clear AD. Geometry retained; figure now follows question 9 on page 19."
+    },
+    "practice8_presentation": "Same similarity and distance argument, typeset as separate steps with left-aligned prose, aligned AH calculation and reference labels within target equations. Removed redundant nested parentheses around A′BC."
+  },
+  "drive": {
+    "folder": "Chuyên đề",
+    "filenames": {
+      "de": "KHÓA TH - BUỔI 28 - KHOẢNG CÁCH TỪ MỘT ĐIỂM ĐẾN MẶT PHẲNG - ĐỀ.pdf",
+      "de-cach": "KHÓA TH - BUỔI 28 - KHOẢNG CÁCH TỪ MỘT ĐIỂM ĐẾN MẶT PHẲNG - ĐỀ CÁCH.pdf",
+      "dap-an": "KHÓA TH - BUỔI 28 - KHOẢNG CÁCH TỪ MỘT ĐIỂM ĐẾN MẶT PHẲNG - ĐÁP ÁN.pdf"
+    }
+  },
+  "qa": {
+    "review_status": "pending",
+    "compile": "passed",
+    "geometry_checks": {
+      "distance_checks": [
+        {
+          "figure": "image25",
+          "point": "B",
+          "plane": [
+            "S",
+            "C",
+            "D"
+          ],
+          "normalized_distance": 0.8944271909999159,
+          "expected": 0.894427190999916
+        },
+        {
+          "figure": "image25",
+          "point": "C",
+          "plane": [
+            "S",
+            "B",
+            "D"
+          ],
+          "normalized_distance": 0.6666666666666666,
+          "expected": 0.6666666666666666
+        },
+        {
+          "figure": "image51",
+          "point": "M",
+          "plane": [
+            "S",
+            "B",
+            "D"
+          ],
+          "normalized_distance": 0.31622776601683794,
+          "expected": 0.31622776601683794
+        },
+        {
+          "figure": "image70",
+          "point": "B",
+          "plane": [
+            "S",
+            "C",
+            "D"
+          ],
+          "normalized_distance": 0.8660254037844387,
+          "expected": 0.8660254037844386
+        },
+        {
+          "figure": "image88",
+          "point": "B",
+          "plane": [
+            "S",
+            "C",
+            "D"
+          ],
+          "normalized_distance": 0.6546536707079772,
+          "expected": 0.6546536707079771
+        },
+        {
+          "figure": "image112",
+          "point": "A",
+          "plane": [
+            "S",
+            "C",
+            "D"
+          ],
+          "normalized_distance": 0.6324555320336759,
+          "expected": 0.6324555320336759
+        },
+        {
+          "figure": "image126",
+          "point": "A",
+          "plane": [
+            "S",
+            "B",
+            "D"
+          ],
+          "normalized_distance": 0.6546536707079772,
+          "expected": 0.6546536707079771
+        },
+        {
+          "figure": "image145",
+          "point": "M",
+          "plane": [
+            "A′",
+            "B",
+            "C"
+          ],
+          "normalized_distance": 0.3973597071195132,
+          "expected": 0.39735970711951313
+        },
+        {
+          "figure": "image167",
+          "point": "H",
+          "plane": [
+            "S",
+            "C",
+            "D"
+          ],
+          "normalized_distance": 0.20412414523193154,
+          "expected": 0.20412414523193148
+        },
+        {
+          "figure": "image192",
+          "point": "B",
+          "plane": [
+            "S",
+            "C",
+            "D"
+          ],
+          "normalized_distance": 0.9428090415820632,
+          "expected": 0.9428090415820635
+        },
+        {
+          "figure": "image220",
+          "point": "B",
+          "plane": [
+            "S",
+            "C",
+            "D"
+          ],
+          "normalized_distance": 0.7745966692414833,
+          "expected": 0.7745966692414834
+        },
+        {
+          "figure": "image240",
+          "point": "B",
+          "plane": [
+            "S",
+            "A",
+            "C"
+          ],
+          "normalized_distance": 0.9607689228305227,
+          "expected": 0.9607689228305228
+        },
+        {
+          "figure": "image271",
+          "point": "B",
+          "plane": [
+            "S",
+            "A",
+            "C"
+          ],
+          "normalized_distance": 0.9607689228305226,
+          "expected": 0.9607689228305228
+        },
+        {
+          "figure": "image301",
+          "point": "B",
+          "plane": [
+            "S",
+            "C",
+            "D"
+          ],
+          "normalized_distance": 1.224744871391589,
+          "expected": 1.224744871391589
+        },
+        {
+          "figure": "image334",
+          "point": "B",
+          "plane": [
+            "S",
+            "A",
+            "C"
+          ],
+          "normalized_distance": 0.9258200997725515,
+          "expected": 0.9258200997725515
+        },
+        {
+          "figure": "image363",
+          "point": "C",
+          "plane": [
+            "S",
+            "B",
+            "D"
+          ],
+          "normalized_distance": 0.6546536707079772,
+          "expected": 0.6546536707079771
+        },
+        {
+          "figure": "image385",
+          "point": "M",
+          "plane": [
+            "A′",
+            "B",
+            "C"
+          ],
+          "normalized_distance": 0.3273268353539886,
+          "expected": 0.32732683535398854
+        },
+        {
+          "figure": "image413",
+          "point": "B",
+          "plane": [
+            "S",
+            "C",
+            "D"
+          ],
+          "normalized_distance": 0.6123724356957946,
+          "expected": 0.6123724356957945
+        }
+      ],
+      "right_angle_markers": "All model dot-product assertions passed.",
+      "prism_intersections": "Both I points lie in A′BC; MI/AI=1/2."
+    },
+    "content": "17 questions in source order (8 worked + 9 practice), theory retained; all choices and solutions present.",
+    "source_integrity": "passed",
+    "pdf_checks": "Embedded fonts, selectable text, horizontal body bounds and publication names passed.",
+    "layout_checks": {
+      "de": {
+        "pages": 5,
+        "questions_per_page": [
+          0,
+          4,
+          5,
+          6,
+          2
+        ],
+        "last_body_text_y": [
+          703,
+          743,
+          777,
+          765,
+          360
+        ]
+      },
+      "de-cach": {
+        "pages": 11,
+        "questions_per_page": [
+          0,
+          1,
+          2,
+          2,
+          2,
+          1,
+          2,
+          2,
+          2,
+          2,
+          1
+        ],
+        "last_body_text_y": [
+          703,
+          438,
+          565,
+          569,
+          552,
+          233,
+          566,
+          567,
+          564,
+          540,
+          783
+        ],
+        "writing_lines": {
+          "2:1": 13,
+          "3:2": 8,
+          "3:3": 8,
+          "4:4": 7,
+          "4:5": 7,
+          "5:6": 8,
+          "5:7": 8,
+          "6:8": 21,
+          "7:1": 8,
+          "7:2": 8,
+          "8:3": 8,
+          "8:4": 8,
+          "9:5": 8,
+          "9:6": 8,
+          "10:7": 9,
+          "10:8": 9,
+          "11:9": 19
+        }
+      },
+      "dap-an": {
+        "pages": 20,
+        "questions_per_page": [
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0,
+          1,
+          1,
+          1,
+          0
+        ],
+        "last_body_text_y": [
+          703,
+          750,
+          759,
+          765,
+          769,
+          771,
+          705,
+          740,
+          765,
+          768,
+          776,
+          751,
+          771,
+          778,
+          745,
+          754,
+          778,
+          776,
+          776,
+          613
+        ]
+      }
+    },
+    "figure_checks": "20 native SVGs inspected as standalone figure renders. Right-angle dot-product assertions passed; feet/midpoints constructed from metric data.",
+    "full_page_visual_review": "pending — no page preview images generated per repository convention",
+    "checked_output_sha256": {
+      "de": "c1a60b096c23284d09c7376d15afac2e02c7053acec8844419c2ffbcc2797274",
+      "de-cach": "cf8fb92f91bbb3e174519b4e6c19bf281c0bfbd642de38b92b5c470046a10ca2",
+      "dap-an": "2437cac88e049189f7833a18c5f7724095ce859b1239a56dd34101bf53166f82"
+    },
+    "choice_rows": {
+      "de": 16,
+      "de-cach": 16,
+      "dap-an": 16
+    },
+    "latest_review": "Practice 9 standalone figure inspected. Question 9, solution heading and figure on page 19; answer PDF 20 pages. Geometry and PDF checks passed.",
+    "point_markers": {
+      "counts": {
+        "image301.svg": 7,
+        "image192.svg": 8,
+        "image240.svg": 7,
+        "image88-base.svg": 6,
+        "image88.svg": 8,
+        "image385.svg": 10,
+        "image167.svg": 9,
+        "image334.svg": 8,
+        "image363.svg": 9,
+        "image112.svg": 8,
+        "image220.svg": 7,
+        "image14.svg": 5,
+        "image271.svg": 9,
+        "image51.svg": 7,
+        "image25.svg": 9,
+        "image413.svg": 8,
+        "image145.svg": 10,
+        "image10.svg": 4,
+        "image126.svg": 9,
+        "image70.svg": 8
+      },
+      "inspection": "Worked example 2 rendered at final size; M marked on SC with label separated from point and edge."
+    },
+    "isolated_implication_lines": [],
+    "reference_labels": {
+      "attached_labels": 11,
+      "double_star_checks": [
+        {
+          "page": 18,
+          "inline_with_formula": true
+        }
+      ],
+      "source_check": "No separate reference-label paragraphs remain."
+    }
+  },
+  "outputs": {
+    "de": {
+      "pdf": "assets/targets/2026-11/Chuyên đề/th-buoi-28-khoang-cach-tu-diem-den-mat-phang/de.pdf",
+      "pages": 5,
+      "bytes": 1227127,
+      "sha256": "c1a60b096c23284d09c7376d15afac2e02c7053acec8844419c2ffbcc2797274"
+    },
+    "de-cach": {
+      "pdf": "assets/targets/2026-11/Chuyên đề/th-buoi-28-khoang-cach-tu-diem-den-mat-phang/de-cach.pdf",
+      "pages": 11,
+      "bytes": 1252249,
+      "sha256": "cf8fb92f91bbb3e174519b4e6c19bf281c0bfbd642de38b92b5c470046a10ca2"
+    },
+    "dap-an": {
+      "pdf": "assets/targets/2026-11/Chuyên đề/th-buoi-28-khoang-cach-tu-diem-den-mat-phang/dap-an.pdf",
+      "pages": 20,
+      "bytes": 1459956,
+      "sha256": "2437cac88e049189f7833a18c5f7724095ce859b1239a56dd34101bf53166f82"
+    }
+  }
+}

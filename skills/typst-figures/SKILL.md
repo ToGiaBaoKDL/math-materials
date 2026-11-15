@@ -67,6 +67,8 @@ Quy tắc vận hành liên quan: [document-model](../../docs/document-model.md)
 
 ## Nhãn và nhóm hình
 
+- Các điểm hình học có nhãn phải có chấm tròn nhỏ, rõ tại đúng tọa độ (đường kính khoảng 0,6–0,7 mm ở kích thước xuất thông thường). Áp dụng cả đỉnh, trung điểm, giao điểm và chân đường vuông góc; không đánh chấm các góc trang trí hay vị trí đặt tên đường/mặt phẳng. Đặt chấm trên nét và dưới nhãn, giữ chữ tách khỏi chấm và đường vẽ.
+
 - Nhãn mặt phẳng, ví dụ `(Oxy)`, đặt trong góc trống của miền mặt phẳng với một cung nhỏ ở góc bao nhãn; không đặt lơ lửng giữa mặt phẳng. Cung chỉ nhận diện mặt phẳng, không ghi số đo góc.
 
 - Giữ mũi tên trên đoạn/đường theo nguồn; đặt nhãn trục, gốc tọa độ và vạch số gần đúng vị trí, không đè đường. Nhãn góc nằm gần đỉnh trong miền góc khi đủ chỗ; các điểm đánh dấu nhất quán.

@@ -90,6 +90,8 @@ Dùng template làm nguồn triển khai, skill làm quy tắc tái sử dụng.
 
 ## Công thức và nhịp trang
 
+- Nhãn tham chiếu như `(1)`, `(2)`, `(*)`, `(**)` phải nằm ở cuối đúng công thức hoặc mệnh đề được tham chiếu, cùng dòng với phần kết thúc; không đặt thành đoạn riêng hoặc để sang trang một mình. Với Typst, đặt nhãn trong chính biểu thức toán (ví dụ `quad "(**)"`), không gắn ngoài một block công thức. Nếu công thức dài, tách chuỗi biến đổi ở dấu quan hệ và giữ nhãn trên hàng cuối. Khi rà PDF, kiểm tra cả nhãn đích và các chỗ dẫn lại nhãn.
+
 - Bản đề không cách và bản đáp án đều ưu tiên nội dung nối tiếp qua các trang, tránh khoảng trắng lớn cuối trang. Bản đề cho phép tách đề dẫn, hình và các ý qua trang; không khóa toàn bộ một câu thành khối không ngắt trang. Không bắt buộc câu hỏi cùng trang với lời giải, kể cả câu có lời giải ngắn; không khóa cả đề–“Lời giải”–hình–đáp án thành một khối hoặc nối chuỗi `sticky`. Cho phép ngắt giữa đề, các ý và lời giải; giữ riêng hàng lựa chọn hoặc một hình khi cần để đọc rõ. Tiêu đề phần mới nối ngay phần trước khi còn chỗ, không mặc định sang trang mới. Chỉ giữ nhãn “Lời giải” với thành phần đầu tiên khi không tạo khoảng trắng lớn. Giữ giãn dòng thoáng theo bản đã duyệt; tối ưu phân trang bằng cách tháo ràng buộc giữ khối trước khi thu nhỏ hình hoặc nén chữ. Chuỗi biến đổi dài gióng dấu quan hệ và cho phép ngắt trang giữa các hàng.
 
 - Đáp án chọn 1/2/4 cột theo chiều rộng đã đo và thứ tự trong nguồn. Căn nhãn lựa chọn với công thức; giữ khoảng cách ngang và dọc qua token/component chung.
