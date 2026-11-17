@@ -1,0 +1,234 @@
+{
+  "schema_version": 1,
+  "id": "th-xs-buoi-4-xac-suat",
+  "kind": "livestream",
+  "received_date": "2026-11-17",
+  "status": "implemented",
+  "metadata": {
+    "title": "BUỔI 4: XÁC SUẤT",
+    "lesson": 4,
+    "topic": "TỔ HỢP – XÁC SUẤT",
+    "course": "4 BUỔI MỞ KHÓA NỀN TẢNG",
+    "branch": "Xác suất"
+  },
+  "sources": [
+    {
+      "path": "assets/sources/2026-11/Livestream/th-xs-buoi-4-xac-suat/source.docx",
+      "original_name": "B04 - XÁC SUẤT.docx",
+      "bytes": 119430,
+      "sha256": "5a4a0d65261798ea883f8856a362fefa310ad9ee994baae3275c82758104b451",
+      "review_pdf_pages": 2
+    }
+  ],
+  "scope": {
+    "has_questions": true,
+    "has_solutions": false,
+    "questions": 10,
+    "theory_sections": 0
+  },
+  "variants": {
+    "de": {
+      "filename": "de.pdf",
+      "inputs": {
+        "variant": "de"
+      }
+    },
+    "de-cach": {
+      "filename": "de-cach.pdf",
+      "inputs": {
+        "variant": "de-cach"
+      }
+    }
+  },
+  "content_mapping": [
+    {
+      "id": "cau-1",
+      "role": "question",
+      "source": {
+        "body_block": 3,
+        "end_block_exclusive": 6
+      }
+    },
+    {
+      "id": "cau-2",
+      "role": "question",
+      "source": {
+        "body_block": 6,
+        "end_block_exclusive": 7
+      }
+    },
+    {
+      "id": "cau-3",
+      "role": "question",
+      "source": {
+        "body_block": 7,
+        "end_block_exclusive": 9
+      }
+    },
+    {
+      "id": "cau-4",
+      "role": "question",
+      "source": {
+        "body_block": 9,
+        "end_block_exclusive": 11
+      }
+    },
+    {
+      "id": "cau-5",
+      "role": "question",
+      "source": {
+        "body_block": 11,
+        "end_block_exclusive": 13
+      }
+    },
+    {
+      "id": "cau-6",
+      "role": "question",
+      "source": {
+        "body_block": 13,
+        "end_block_exclusive": 15
+      }
+    },
+    {
+      "id": "cau-7",
+      "role": "question",
+      "source": {
+        "body_block": 15,
+        "end_block_exclusive": 17
+      }
+    },
+    {
+      "id": "cau-8",
+      "role": "question",
+      "source": {
+        "body_block": 17,
+        "end_block_exclusive": 19
+      }
+    },
+    {
+      "id": "cau-9",
+      "role": "question",
+      "source": {
+        "body_block": 19,
+        "end_block_exclusive": 21
+      }
+    },
+    {
+      "id": "cau-10",
+      "role": "question",
+      "source": {
+        "body_block": 21,
+        "end_block_exclusive": 23
+      }
+    }
+  ],
+  "provenance": {
+    "math_equations": {
+      "decoded": 54,
+      "preview_pairs_checked": 54,
+      "empty": 0
+    },
+    "category_decision": "Subsequent probability-branch lessons use November Livestream folder; retain presentation approved for Hoán vị/Chỉnh hợp.",
+    "source_scope": "Questions only; no answer PDF or invented solutions. No source figures.",
+    "text_normalization": "NFC Vietnamese, spaces around inline math, readable comma-separated number list; source question 6 punctuation in lesson 3 normalized."
+  },
+  "drive": {
+    "folder": "Livestream",
+    "filenames": {
+      "de": "BUỔI 4 - XÁC SUẤT - ĐỀ.pdf",
+      "de-cach": "BUỔI 4 - XÁC SUẤT - ĐỀ CÁCH.pdf"
+    }
+  },
+  "qa": {
+    "review_status": "pending",
+    "compile": "passed",
+    "source_integrity": "passed",
+    "content_counts": "10 questions in order in both variants; no source solutions or illustrations.",
+    "layout_checks": {
+      "de": {
+        "pages": 2,
+        "questions_per_page": [
+          [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          [
+            7,
+            8,
+            9,
+            10
+          ]
+        ],
+        "writing_lines": {}
+      },
+      "de-cach": {
+        "pages": 5,
+        "questions_per_page": [
+          [
+            1
+          ],
+          [
+            2,
+            3,
+            4
+          ],
+          [
+            5,
+            6,
+            7
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            10
+          ]
+        ],
+        "writing_lines": {
+          "1": 15,
+          "2": 5,
+          "3": 5,
+          "4": 5,
+          "5": 5,
+          "6": 5,
+          "7": 5,
+          "8": 8,
+          "9": 8,
+          "10": 22
+        }
+      }
+    },
+    "pdf_checks": "Embedded fonts, selectable text, horizontal bounds, publication names and course/Fanpage text passed.",
+    "full_page_visual_review": "pending — no page preview images generated per repository convention",
+    "checked_output_sha256": {
+      "de": "c85684ab5e4b0854f1fa3ced0e50e0910b63bf7a9c76a0f2d15c4f464df59d42",
+      "de-cach": "0549473e908c746586cd857201612a699eb91fd14736f004b30f612dcc8bca53"
+    },
+    "answer_rows": {
+      "intact_rows": {
+        "de": 4,
+        "de-cach": 4
+      },
+      "status": "passed — all labels remain with choice expressions"
+    }
+  },
+  "outputs": {
+    "de": {
+      "pdf": "assets/targets/2026-11/Livestream/th-xs-buoi-4-xac-suat/de.pdf",
+      "pages": 2,
+      "bytes": 1148654,
+      "sha256": "c85684ab5e4b0854f1fa3ced0e50e0910b63bf7a9c76a0f2d15c4f464df59d42"
+    },
+    "de-cach": {
+      "pdf": "assets/targets/2026-11/Livestream/th-xs-buoi-4-xac-suat/de-cach.pdf",
+      "pages": 5,
+      "bytes": 1165731,
+      "sha256": "0549473e908c746586cd857201612a699eb91fd14736f004b30f612dcc8bca53"
+    }
+  }
+}
