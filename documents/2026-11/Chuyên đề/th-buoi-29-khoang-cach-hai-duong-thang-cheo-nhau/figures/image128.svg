@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-5.35 -22.00 201.85 230.00">
+<polygon points="53.00,0.00 53.00,122.00 127.00,172.00" fill="#FFE7EB"/>
+<polygon points="53.00,0.00 127.00,172.00 178.00,122.00" fill="#FFC4CF"/>
+<polyline points="53.00,122.00 127.00,172.00" fill="none" stroke="#B00012" stroke-width="1.45" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="4 3"/>
+<polyline points="53.00,122.00 178.00,122.00" fill="none" stroke="#B00012" stroke-width="1.45" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="4 3"/>
+<polyline points="53.00,122.00 152.50,147.00" fill="none" stroke="#B00012" stroke-width="1.45" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="4 3"/>
+<polyline points="53.00,122.00 27.50,147.00" fill="none" stroke="#B00012" stroke-width="1.45" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="4 3"/>
+<polyline points="53.00,122.00 34.64,105.84" fill="none" stroke="#B00012" stroke-width="1.45" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="4 3"/>
+<polyline points="53.00,0.00 127.00,172.00 178.00,122.00 53.00,0.00" fill="none" stroke="#B00012" stroke-width="1.45" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="53.00,0.00 27.50,147.00" fill="none" stroke="#B00012" stroke-width="1.45" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="-2.35,139.50 171.78,183.25" fill="none" stroke="#B00012" stroke-width="1.45" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="53.00,122.00 53.00,0.00" fill="none" stroke="#B00012" stroke-width="1.45" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="39.14,109.80 40.17,103.89 35.67,99.93" fill="none" stroke="#17623E" stroke-width="1" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="31.78,142.80 37.60,144.26 33.32,148.46" fill="none" stroke="#17623E" stroke-width="1" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="141.85,161.64 137.65,157.36" fill="none" stroke="#B00012" stroke-width="1.1" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="167.35,136.64 163.15,132.36" fill="none" stroke="#B00012" stroke-width="1.1" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="166.00" y="197.00" text-anchor="middle" dominant-baseline="central" font-family="Liberation Serif, serif" font-style="italic" font-size="13.5">t</text>
+<circle cx="53.0" cy="122.0" r="1.45" fill="#3E1218"/>
+<text x="53.00" y="139.00" text-anchor="middle" dominant-baseline="central" font-family="Liberation Serif, serif" font-style="italic" font-size="13.5">O</text>
+<circle cx="53.0" cy="0.0" r="1.45" fill="#3E1218"/>
+<text x="53.00" y="-11.00" text-anchor="middle" dominant-baseline="central" font-family="Liberation Serif, serif" font-style="italic" font-size="13.5">C</text>
+<circle cx="127.0" cy="172.0" r="1.45" fill="#3E1218"/>
+<text x="122.79" y="182.16" text-anchor="middle" dominant-baseline="central" font-family="Liberation Serif, serif" font-style="italic" font-size="13.5">A</text>
+<circle cx="178.0" cy="122.0" r="1.45" fill="#3E1218"/>
+<text x="187.90" y="131.90" text-anchor="middle" dominant-baseline="central" font-family="Liberation Serif, serif" font-style="italic" font-size="13.5">B</text>
+<circle cx="152.5" cy="147.0" r="1.45" fill="#3E1218"/>
+<text x="162.40" y="156.90" text-anchor="middle" dominant-baseline="central" font-family="Liberation Serif, serif" font-style="italic" font-size="13.5">M</text>
+<circle cx="27.5" cy="147.0" r="1.45" fill="#3E1218"/>
+<text x="23.29" y="157.16" text-anchor="middle" dominant-baseline="central" font-family="Liberation Serif, serif" font-style="italic" font-size="13.5">K</text>
+<circle cx="34.64" cy="105.83999999999999" r="1.45" fill="#3E1218"/>
+<text x="20.64" y="105.84" text-anchor="middle" dominant-baseline="central" font-family="Liberation Serif, serif" font-style="italic" font-size="13.5">H</text>
+</svg>

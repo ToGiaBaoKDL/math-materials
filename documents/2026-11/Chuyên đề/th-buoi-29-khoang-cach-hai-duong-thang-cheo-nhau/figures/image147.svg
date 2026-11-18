@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-8.60 -22.00 237.10 222.00">
+<polygon points="105.00,0.00 0.00,178.00 152.00,178.00" fill="#FFE7EB"/>
+<polygon points="105.00,0.00 152.00,178.00 210.00,128.00" fill="#FFC4CF"/>
+<polyline points="0.00,178.00 58.00,128.00 210.00,128.00" fill="none" stroke="#B00012" stroke-width="1.45" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="4 3"/>
+<polyline points="105.00,0.00 58.00,128.00" fill="none" stroke="#B00012" stroke-width="1.45" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="4 3"/>
+<polyline points="58.00,128.00 152.00,178.00" fill="none" stroke="#B00012" stroke-width="1.45" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="4 3"/>
+<polyline points="0.00,178.00 210.00,128.00" fill="none" stroke="#B00012" stroke-width="1.45" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="4 3"/>
+<polyline points="105.00,0.00 105.00,153.00" fill="none" stroke="#B00012" stroke-width="1.45" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="4 3"/>
+<polyline points="105.00,153.00 181.00,153.00" fill="none" stroke="#B00012" stroke-width="1.45" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="4 3"/>
+<polyline points="105.00,153.00 153.64,97.92" fill="none" stroke="#B00012" stroke-width="1.45" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="4 3"/>
+<polyline points="105.00,0.00 0.00,178.00 152.00,178.00 210.00,128.00 105.00,0.00" fill="none" stroke="#B00012" stroke-width="1.45" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="105.00,0.00 152.00,178.00" fill="none" stroke="#B00012" stroke-width="1.45" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="105.00,0.00 181.00,153.00" fill="none" stroke="#B00012" stroke-width="1.45" stroke-linejoin="round" stroke-linecap="round"/>
+<polygon points="181.00,153.00 174.33,139.57 173.41,140.06 172.53,140.62 171.70,141.23 170.90,141.91 170.16,142.63 169.47,143.41 168.83,144.23 168.25,145.10 167.73,146.00 167.28,146.94 166.89,147.90 166.57,148.89 166.32,149.90 166.14,150.93 166.04,151.96 166.00,153.00" fill="#D6EADA"/>
+<polyline points="174.33,139.57 173.41,140.06 172.53,140.62 171.70,141.23 170.90,141.91 170.16,142.63 169.47,143.41 168.83,144.23 168.25,145.10 167.73,146.00 167.28,146.94 166.89,147.90 166.57,148.89 166.32,149.90 166.14,150.93 166.04,151.96 166.00,153.00" fill="none" stroke="#17623E" stroke-width="1" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="149.67,102.42 152.34,107.79 156.31,103.29" fill="none" stroke="#17623E" stroke-width="1" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="168.46,167.77 164.54,163.23" fill="none" stroke="#B00012" stroke-width="1.1" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="197.46,142.77 193.54,138.23" fill="none" stroke="#B00012" stroke-width="1.1" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="151.00" y="143.00" text-anchor="middle" dominant-baseline="central" font-family="Liberation Serif, serif" font-style="italic" font-size="13.5">45°</text>
+<circle cx="58.0" cy="128.0" r="1.45" fill="#3E1218"/>
+<text x="58.00" y="145.00" text-anchor="middle" dominant-baseline="central" font-family="Liberation Serif, serif" font-style="italic" font-size="13.5">A</text>
+<circle cx="0.0" cy="178.0" r="1.45" fill="#3E1218"/>
+<text x="0.00" y="189.00" text-anchor="middle" dominant-baseline="central" font-family="Liberation Serif, serif" font-style="italic" font-size="13.5">B</text>
+<circle cx="152.0" cy="178.0" r="1.45" fill="#3E1218"/>
+<text x="152.00" y="189.00" text-anchor="middle" dominant-baseline="central" font-family="Liberation Serif, serif" font-style="italic" font-size="13.5">C</text>
+<circle cx="210.0" cy="128.0" r="1.45" fill="#3E1218"/>
+<text x="219.90" y="137.90" text-anchor="middle" dominant-baseline="central" font-family="Liberation Serif, serif" font-style="italic" font-size="13.5">D</text>
+<circle cx="105.0" cy="153.0" r="1.45" fill="#3E1218"/>
+<text x="105.00" y="167.00" text-anchor="middle" dominant-baseline="central" font-family="Liberation Serif, serif" font-style="italic" font-size="13.5">O</text>
+<circle cx="105.0" cy="0.0" r="1.45" fill="#3E1218"/>
+<text x="105.00" y="-11.00" text-anchor="middle" dominant-baseline="central" font-family="Liberation Serif, serif" font-style="italic" font-size="13.5">S</text>
+<circle cx="181.0" cy="153.0" r="1.45" fill="#3E1218"/>
+<text x="190.90" y="162.90" text-anchor="middle" dominant-baseline="central" font-family="Liberation Serif, serif" font-style="italic" font-size="13.5">K</text>
+<circle cx="153.64" cy="97.92" r="1.45" fill="#3E1218"/>
+<text x="167.64" y="97.92" text-anchor="middle" dominant-baseline="central" font-family="Liberation Serif, serif" font-style="italic" font-size="13.5">H</text>
+</svg>

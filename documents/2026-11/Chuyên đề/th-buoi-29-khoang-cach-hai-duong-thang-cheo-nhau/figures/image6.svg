@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="12.00 -10.00 203.60 187.00">
+<polyline points="15.00,12.00 205.00,12.00" fill="none" stroke="#B00012" stroke-width="1.45" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="65.00,174.00 205.00,84.00" fill="none" stroke="#B00012" stroke-width="1.45" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="89.00,12.00 138.00,127.00" fill="none" stroke="#B00012" stroke-width="1.45" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="83.00,12.00 85.35,17.52 91.35,17.52" fill="none" stroke="#17623E" stroke-width="1" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="135.65,121.48 140.70,118.24 143.05,123.76" fill="none" stroke="#17623E" stroke-width="1" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="199.00" y="2.00" text-anchor="middle" dominant-baseline="central" font-family="Liberation Serif, serif" font-style="italic" font-size="13.5">a</text>
+<text x="207.00" y="96.00" text-anchor="middle" dominant-baseline="central" font-family="Liberation Serif, serif" font-style="italic" font-size="13.5">b</text>
+<circle cx="89.0" cy="12.0" r="1.45" fill="#3E1218"/>
+<text x="89.00" y="1.00" text-anchor="middle" dominant-baseline="central" font-family="Liberation Serif, serif" font-style="italic" font-size="13.5">A</text>
+<circle cx="138.0" cy="127.0" r="1.45" fill="#3E1218"/>
+<text x="147.90" y="136.90" text-anchor="middle" dominant-baseline="central" font-family="Liberation Serif, serif" font-style="italic" font-size="13.5">B</text>
+</svg>

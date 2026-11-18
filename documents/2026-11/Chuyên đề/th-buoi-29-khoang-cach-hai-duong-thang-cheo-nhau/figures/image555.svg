@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -14 315 252">
+  <title>Hình chóp S.ABCD và các đường dựng SH, MK, OM</title>
+  <polygon points="200,8 20,176 150,215" fill="#FFE7EB"/>
+  <polygon points="200,8 150,215 290,142" fill="#FFC4CF"/>
+  <g fill="none" stroke-linejoin="round" stroke-linecap="round">
+    <!-- Hidden base edges, diagonals and the section through A, M and C. -->
+    <path d="M20 176 L160 103 L290 142 M160 103 L200 8
+             M160 103 L150 215 M20 176 L290 142" stroke="#B00012" stroke-width="1.35" stroke-dasharray="5 3.5"/>
+    <path d="M160 103 L245 75 M155 159 L245 75" stroke="#8F213F" stroke-width="1.65" stroke-dasharray="5 3"/>
+    <path d="M200 8 V153.333 M245 75 V147.667" stroke="#17623E" stroke-width="1.7" stroke-dasharray="4 3"/>
+    <path d="M200 146.333 l7 -0.88 v7 M245 140.667 l7 -0.88 v7" stroke="#17623E" stroke-width="1.25"/>
+    <path d="M200 8 L20 176 L150 215 L290 142 Z M200 8 L150 215 L245 75" stroke="#B00012" stroke-width="1.7"/>
+  </g>
+  <g fill="#381218">
+    <circle cx="160" cy="103" r="1.9"/><circle cx="290" cy="142" r="1.9"/>
+    <circle cx="150" cy="215" r="1.9"/><circle cx="20" cy="176" r="1.9"/>
+    <circle cx="200" cy="8" r="1.9"/><circle cx="155" cy="159" r="1.9"/>
+    <circle cx="200" cy="153.333" r="2"/><circle cx="245" cy="147.667" r="2"/>
+    <circle cx="245" cy="75" r="2"/>
+  </g>
+  <g fill="#23151A" font-family="Liberation Serif, serif" font-style="italic" font-size="16" text-anchor="middle">
+    <text x="148" y="100">A</text><text x="302" y="147">B</text>
+    <text x="149" y="232">C</text><text x="10" y="186">D</text>
+    <text x="200" y="2">S</text><text x="145" y="175">O</text>
+    <text x="207" y="171">H</text><text x="234" y="164">K</text>
+    <text x="258" y="73">M</text>
+  </g>
+</svg>

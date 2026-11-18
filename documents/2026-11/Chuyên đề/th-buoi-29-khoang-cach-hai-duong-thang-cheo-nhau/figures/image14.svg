@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-3.00 -4.00 272.00 137.00">
+<polygon points="0.00,130.00 220.00,130.00 266.00,55.00 46.00,55.00" fill="#FFE7EB"/>
+<polyline points="0.00,130.00 220.00,130.00 266.00,55.00 46.00,55.00 0.00,130.00" fill="none" stroke="#B00012" stroke-width="1.45" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="122.00,5.00 122.00,82.00 174.00,94.00" fill="none" stroke="#B00012" stroke-width="1.45" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="155.00,113.00 199.00,68.00" fill="none" stroke="#B00012" stroke-width="1.45" stroke-linejoin="round" stroke-linecap="round"/>
+<polygon points="0.00,130.00 27.00,130.00 26.95,128.28 26.78,126.56 26.51,124.86 26.13,123.19 25.64,121.53 25.05,119.92 24.35,118.34 23.56,116.81 22.67,115.34 21.69,113.92 20.62,112.57 19.47,111.29 18.24,110.09 16.93,108.97 15.55,107.93 14.12,106.98" fill="#D6EADA"/>
+<polyline points="27.00,130.00 26.95,128.28 26.78,126.56 26.51,124.86 26.13,123.19 25.64,121.53 25.05,119.92 24.35,118.34 23.56,116.81 22.67,115.34 21.69,113.92 20.62,112.57 19.47,111.29 18.24,110.09 16.93,108.97 15.55,107.93 14.12,106.98" fill="none" stroke="#17623E" stroke-width="1" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="122.00,76.00 127.85,77.35 127.85,83.35" fill="none" stroke="#17623E" stroke-width="1" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="168.15,92.65 172.31,88.33 178.16,89.68" fill="none" stroke="#17623E" stroke-width="1" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="19.00" y="120.00" text-anchor="middle" dominant-baseline="central" font-family="Liberation Serif, serif" font-style="italic" font-size="13.5">α</text>
+<text x="131.00" y="7.00" text-anchor="middle" dominant-baseline="central" font-family="Liberation Serif, serif" font-style="italic" font-size="13.5">a</text>
+<text x="205.00" y="63.00" text-anchor="middle" dominant-baseline="central" font-family="Liberation Serif, serif" font-style="italic" font-size="13.5">b</text>
+<circle cx="122.0" cy="82.0" r="1.45" fill="#3E1218"/>
+<text x="117.79" y="92.16" text-anchor="middle" dominant-baseline="central" font-family="Liberation Serif, serif" font-style="italic" font-size="13.5">A</text>
+<circle cx="174.0" cy="94.0" r="1.45" fill="#3E1218"/>
+<text x="183.90" y="103.90" text-anchor="middle" dominant-baseline="central" font-family="Liberation Serif, serif" font-style="italic" font-size="13.5">B</text>
+</svg>

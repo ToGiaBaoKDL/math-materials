@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-18.50 -22.00 220.00 211.00">
+<polygon points="0.00,0.00 0.00,115.00 68.00,167.00" fill="#FFE7EB"/>
+<polygon points="0.00,0.00 68.00,167.00 183.00,115.00" fill="#FFC4CF"/>
+<polyline points="0.00,115.00 183.00,115.00" fill="none" stroke="#B00012" stroke-width="1.45" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="4 3"/>
+<polyline points="0.00,115.00 106.33,149.67" fill="none" stroke="#B00012" stroke-width="1.45" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="4 3"/>
+<polyline points="0.00,115.00 0.00,0.00 68.00,167.00 183.00,115.00 0.00,0.00" fill="none" stroke="#B00012" stroke-width="1.45" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="0.00,115.00 68.00,167.00" fill="none" stroke="#B00012" stroke-width="1.45" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="100.63,147.81 106.09,145.34 111.80,147.20" fill="none" stroke="#17623E" stroke-width="1" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="25.00" y="151.00" text-anchor="middle" dominant-baseline="central" font-family="Liberation Serif, serif" font-style="italic" font-size="13.5">a</text>
+<text x="94.00" y="100.00" text-anchor="middle" dominant-baseline="central" font-family="Liberation Serif, serif" font-style="italic" font-size="13.5">√2a</text>
+<circle cx="0.0" cy="115.0" r="1.45" fill="#3E1218"/>
+<text x="-9.90" y="124.90" text-anchor="middle" dominant-baseline="central" font-family="Liberation Serif, serif" font-style="italic" font-size="13.5">A</text>
+<circle cx="0.0" cy="0.0" r="1.45" fill="#3E1218"/>
+<text x="-0.00" y="-11.00" text-anchor="middle" dominant-baseline="central" font-family="Liberation Serif, serif" font-style="italic" font-size="13.5">S</text>
+<circle cx="68.0" cy="167.0" r="1.45" fill="#3E1218"/>
+<text x="68.00" y="178.00" text-anchor="middle" dominant-baseline="central" font-family="Liberation Serif, serif" font-style="italic" font-size="13.5">B</text>
+<circle cx="183.0" cy="115.0" r="1.45" fill="#3E1218"/>
+<text x="192.90" y="124.90" text-anchor="middle" dominant-baseline="central" font-family="Liberation Serif, serif" font-style="italic" font-size="13.5">C</text>
+<circle cx="106.33" cy="149.67" r="1.45" fill="#3E1218"/>
+<text x="116.23" y="159.57" text-anchor="middle" dominant-baseline="central" font-family="Liberation Serif, serif" font-style="italic" font-size="13.5">H</text>
+</svg>

@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-22.60 -22.00 181.20 194.00">
+<polygon points="0.00,150.00 150.00,150.00 150.00,0.00 0.00,0.00" fill="#FFE7EB"/>
+<polyline points="0.00,150.00 150.00,150.00 150.00,0.00 0.00,0.00 0.00,150.00" fill="none" stroke="#B00012" stroke-width="1.45" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="0.00,0.00 75.00,150.00" fill="none" stroke="#B00012" stroke-width="1.45" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="150.00,0.00 0.00,75.00" fill="none" stroke="#B00012" stroke-width="1.45" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="24.63,62.68 21.95,57.32 27.32,54.63" fill="none" stroke="#17623E" stroke-width="1" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="0.00,6.00 6.00,6.00 6.00,0.00" fill="none" stroke="#17623E" stroke-width="1" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="37.50,153.00 37.50,147.00" fill="none" stroke="#B00012" stroke-width="1.1" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="112.50,153.00 112.50,147.00" fill="none" stroke="#B00012" stroke-width="1.1" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="-3.00,37.50 3.00,37.50" fill="none" stroke="#B00012" stroke-width="1.1" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="-3.00,112.50 3.00,112.50" fill="none" stroke="#B00012" stroke-width="1.1" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="0.0" cy="150.0" r="1.45" fill="#3E1218"/>
+<text x="0.00" y="161.00" text-anchor="middle" dominant-baseline="central" font-family="Liberation Serif, serif" font-style="italic" font-size="13.5">A</text>
+<circle cx="150.0" cy="150.0" r="1.45" fill="#3E1218"/>
+<text x="150.00" y="161.00" text-anchor="middle" dominant-baseline="central" font-family="Liberation Serif, serif" font-style="italic" font-size="13.5">B</text>
+<circle cx="150.0" cy="0.0" r="1.45" fill="#3E1218"/>
+<text x="150.00" y="-11.00" text-anchor="middle" dominant-baseline="central" font-family="Liberation Serif, serif" font-style="italic" font-size="13.5">C</text>
+<circle cx="0.0" cy="0.0" r="1.45" fill="#3E1218"/>
+<text x="-0.00" y="-11.00" text-anchor="middle" dominant-baseline="central" font-family="Liberation Serif, serif" font-style="italic" font-size="13.5">D</text>
+<circle cx="75.0" cy="150.0" r="1.45" fill="#3E1218"/>
+<text x="75.00" y="161.00" text-anchor="middle" dominant-baseline="central" font-family="Liberation Serif, serif" font-style="italic" font-size="13.5">M</text>
+<circle cx="0.0" cy="75.0" r="1.45" fill="#3E1218"/>
+<text x="-14.00" y="75.00" text-anchor="middle" dominant-baseline="central" font-family="Liberation Serif, serif" font-style="italic" font-size="13.5">N</text>
+<circle cx="30.0" cy="60.0" r="1.45" fill="#3E1218"/>
+<text x="23.49" y="75.71" text-anchor="middle" dominant-baseline="central" font-family="Liberation Serif, serif" font-style="italic" font-size="13.5">H</text>
+</svg>

@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-108.60 -22.00 239.20 192.00">
+<polygon points="0.00,0.00 122.00,0.00 122.00,122.00 0.00,122.00" fill="#FFE7EB"/>
+<polyline points="0.00,0.00 122.00,0.00 122.00,122.00 0.00,122.00 0.00,0.00" fill="none" stroke="#B00012" stroke-width="1.45" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="0.00,0.00 122.00,122.00" fill="none" stroke="#B00012" stroke-width="1.45" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="122.00,0.00 0.00,122.00" fill="none" stroke="#B00012" stroke-width="1.45" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="-100.00,22.00 45.00,167.00" fill="none" stroke="#B00012" stroke-width="1.45" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="0.00,0.00 -61.00,61.00" fill="none" stroke="#B00012" stroke-width="1.45" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="-56.76,56.76 -52.51,61.00 -56.76,65.24" fill="none" stroke="#17623E" stroke-width="1" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="0.00,116.00 6.00,116.00 6.00,122.00" fill="none" stroke="#17623E" stroke-width="1" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="-100.00" y="11.00" text-anchor="middle" dominant-baseline="central" font-family="Liberation Serif, serif" font-style="italic" font-size="13.5">t</text>
+<circle cx="0.0" cy="0.0" r="1.45" fill="#3E1218"/>
+<text x="-0.00" y="-11.00" text-anchor="middle" dominant-baseline="central" font-family="Liberation Serif, serif" font-style="italic" font-size="13.5">A</text>
+<circle cx="122.0" cy="0.0" r="1.45" fill="#3E1218"/>
+<text x="122.00" y="-11.00" text-anchor="middle" dominant-baseline="central" font-family="Liberation Serif, serif" font-style="italic" font-size="13.5">B</text>
+<circle cx="122.0" cy="122.0" r="1.45" fill="#3E1218"/>
+<text x="122.00" y="133.00" text-anchor="middle" dominant-baseline="central" font-family="Liberation Serif, serif" font-style="italic" font-size="13.5">C</text>
+<circle cx="0.0" cy="122.0" r="1.45" fill="#3E1218"/>
+<text x="-9.90" y="131.90" text-anchor="middle" dominant-baseline="central" font-family="Liberation Serif, serif" font-style="italic" font-size="13.5">D</text>
+<circle cx="-61.0" cy="61.0" r="1.45" fill="#3E1218"/>
+<text x="-70.90" y="70.90" text-anchor="middle" dominant-baseline="central" font-family="Liberation Serif, serif" font-style="italic" font-size="13.5">K</text>
+</svg>
